@@ -29,3 +29,7 @@ NOTE: This will reset ALL settings.
   * Disabled Source sound processing
   * Allows native HRTF
   * Threaded sound
+
+# Benchmarks
+
+Benchmarks and comparisons to Comanglia's config and default will be available soon. For now, just see for yourself!
