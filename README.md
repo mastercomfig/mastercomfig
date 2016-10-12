@@ -26,6 +26,8 @@ NOTE: This will reset ALL settings.
   * Threaded graphics
   * Optimized decals
   * Optimized fog
+  * Optimized LOD and prop fade
+  * Optimized texture caching
 * Better networking
   * Smoother entities
   * More room for player error
