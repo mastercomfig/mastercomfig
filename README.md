@@ -28,6 +28,8 @@ NOTE: This will reset ALL settings.
   * Optimized fog
   * Optimized LOD and prop fade
   * Optimized texture caching
+  * Optimized IO
+  * Optimized lighting
 * Better networking
   * Smoother entities
   * More room for player error
@@ -35,6 +37,7 @@ NOTE: This will reset ALL settings.
   * Disabled Source sound processing
   * Allows native HRTF
   * Threaded sound
+* Easier to control input
 
 # Benchmarks
 
