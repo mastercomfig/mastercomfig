@@ -1,7 +1,9 @@
 # tf2cfg
 My Team Fortress 2 config, also known as the master comfig.
 
-Download ZIP, and extract the `mastercoms` folder to `GAME_FOLDER/tf/custom`.
+Download ZIP, and extract the `mastercoms` folder to `GAME_FOLDER/tf/custom` after [cleaning your config](#clean-up).
+
+To get to the `GAME_FOLDER`, right Team Fortress 2 in the Steam games list, click properties, go to the local files tab, and then click the `browse local files...` button.
 
 Read `mastercoms/cfg/autoexec.cfg` for more instructions.
 
