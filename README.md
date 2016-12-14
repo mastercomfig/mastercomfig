@@ -3,13 +3,11 @@ My Team Fortress 2 config, also known as the master comfig.
 
 Download ZIP, and extract the `mastercoms` folder to `GAME_FOLDER/tf/custom`.
 
-Read the first part at the top of `mastercoms/cfg/autoexec.cfg` for more instructions.
-
-Also, look at the Graphical Downgrades section if you have a weak GPU.
+Read `mastercoms/cfg/autoexec.cfg` for more instructions.
 
 ## Clean up
 
-If you have already have a config, or want to remove mine, delete any configs you may have in `GAME_FOLDER/tf/custom` and then delete the `GAME_FOLDER/tf/cfg` folder. Then, add `-autoconfig` to the launch options and start Team Fortress 2. Now, at the main menu, quit and then remove the `-autoconfig` launch option.
+If you have already have a config, or want to remove mine, delete any configs you may have in `GAME_FOLDER/tf/custom` and then delete the `GAME_FOLDER/tf/cfg` folder. Then, add `-default -autoconfig` to the launch options and start Team Fortress 2. Now, at the main menu, enable console and then enter `host_writeconfig`, quit and then remove the `-default -autoconfig` launch option.
 
 NOTE: This will reset ALL settings.
 
@@ -22,7 +20,6 @@ NOTE: This will reset ALL settings.
   * Optimized and threaded shadows
   * Optimized ragdolls
   * Rendering optimizations
-  * Async model loading
   * Threaded graphics
   * Optimized decals
   * Optimized fog
@@ -34,10 +31,9 @@ NOTE: This will reset ALL settings.
   * Smoother entities
   * More room for player error
 * More accurate sound
-  * Disabled Source sound processing
-  * Allows native HRTF
+  * Enhanced Source sound processing
   * Threaded sound
-* Easier to control input
+* Improved input
 
 # Benchmarks
 
