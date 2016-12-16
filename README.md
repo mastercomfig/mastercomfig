@@ -15,7 +15,7 @@ If you have already have a config, or want to remove mine, delete any configs yo
 
 NOTE: This will reset ALL settings.
 
-**Please do this every config update.**
+**Please do this every major config update.**
 
 ## Features
 
