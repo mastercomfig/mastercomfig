@@ -7,7 +7,7 @@ To get to the `GAME_FOLDER`, right Team Fortress 2 in the Steam games list, clic
 
 Read `mastercoms/cfg/autoexec.cfg` for more instructions.
 
-If you're running on Linux or Mac, check out the `gl/README.md` for cool tips and tricks.
+If you're running on Linux or Mac, check out `gl/README.md` for cool tips and tricks.
 
 ## Clean up
 
