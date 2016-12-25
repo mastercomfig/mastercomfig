@@ -11,11 +11,9 @@ If you're running on Linux or Mac, check out `gl/README.md` for cool tips and tr
 
 ## Clean up
 
-If you have already have a config, or want to remove mine, delete any configs you may have in `GAME_FOLDER/tf/custom` and then delete the `GAME_FOLDER/tf/cfg` folder. Then, add `-default -autoconfig` to the launch options and start Team Fortress 2. Now, at the main menu, enable console and then enter `host_writeconfig`, quit and then remove the `-default -autoconfig` launch option.
+If you have already have a config, or want to remove mine, delete any configs you may have in `GAME_FOLDER/tf/custom` and then delete the `GAME_FOLDER/tf/cfg` folder. Next, disable Steam Cloud sync and then add `-default -autoconfig` to the launch options and start Team Fortress 2. Now, at the main menu, enable console and then enter `host_writeconfig`, quit and then remove the `-default -autoconfig` launch option.
 
 NOTE: This will reset ALL settings.
-
-**Please do this every major config update.**
 
 ## Features
 
