@@ -1,6 +1,11 @@
 # tf2cfg
 My Team Fortress 2 config, also known as the master comfig.
 
+This config focuses mainly on improving the experience of the game through
+performance optimizations that do not remove much from the game. Instructions
+are provided within the config on how to increase or decrease the quality
+if you desire.
+
 Download ZIP, and extract the `mastercoms` folder to `GAME_FOLDER/tf/custom` after [cleaning your config](#clean-up).
 
 To get to the `GAME_FOLDER`, right Team Fortress 2 in the Steam games list, click properties, go to the local files tab, and then click the `browse local files...` button.
@@ -11,16 +16,17 @@ If you're running on Linux or Mac, check out `gl/README.md` for cool tips and tr
 
 ## Clean up
 
-If you have already have a config, or want to remove mine, delete any configs you may have in `GAME_FOLDER/tf/custom` and then delete the `GAME_FOLDER/tf/cfg` folder. Next, disable Steam Cloud sync and then add `-default -autoconfig` to the launch options and start Team Fortress 2. Now, at the main menu, enable console and then enter `host_writeconfig`, quit and then remove the `-default -autoconfig` launch option.
+**NOTE: This will reset ALL settings. Make sure you back up your binds and other
+custom settings before you do this.**
 
-NOTE: This will reset ALL settings.
+If you have already have a config, or want to remove mine, delete any configs you may have in `GAME_FOLDER/tf/custom` and then delete the `GAME_FOLDER/tf/cfg` folder. Next, disable Steam Cloud sync and then verify your game files using Steam.
 
 ## Features
 
 * Faster load times
   * Optimized texture preload list
   * Cleaned up OpenGL shaders list
-* Performance, without sacrificing graphical quality
+* Performance
   * Optimized and threaded shadows
   * Optimized ragdolls
   * Rendering optimizations
@@ -33,7 +39,7 @@ NOTE: This will reset ALL settings.
   * Optimized lighting
 * Better networking
   * Smoother entities
-  * More room for player error
+  * Room for player error
 * More accurate sound
   * Enhanced Source sound processing
   * Threaded sound
