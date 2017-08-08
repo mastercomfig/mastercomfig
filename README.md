@@ -45,6 +45,10 @@ If you have already have a config, or want to remove mine, delete any configs yo
   * Threaded sound
 * Improved input
 
+# Screenshots
+
+![2fort](http://i.imgur.com/eiGH0Ch.jpg)
+
 # Benchmarks
 
 Benchmarks and comparisons to Comanglia's config and default will be available soon. For now, just see for yourself!
