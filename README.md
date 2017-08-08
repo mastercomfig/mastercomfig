@@ -47,7 +47,7 @@ If you have already have a config, or want to remove mine, delete any configs yo
 
 # Screenshots
 
-![2fort](http://i.imgur.com/eiGH0Ch.jpg)
+https://github.com/mastercoms/tf2cfg/wiki/Screenshots
 
 # Benchmarks
 
