@@ -1,10 +1,10 @@
+**Note: These are only for OpenGL based systems: Linux and macOS.**
+
 # Native Libraries
 
 **Warning: it is unknown whether using native libraries is safe to do due to VAC (Valve Anti-Cheat). Continue at your own risk
 of having your account VAC banned, which is a permanent, non-negotiable ban that removes your
 inventory and prevents you from connecting to VAC-secured servers.**
-
-**Note: This is only for OpenGL based systems: Linux and macOS.**
 
 _This has nothing to do with my config. My config is safe, and will not get you VAC banned._
 
