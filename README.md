@@ -88,6 +88,10 @@ using Steam.
 
 https://github.com/mastercoms/tf2cfg/wiki/Screenshots
 
+# Bugs
+
+https://github.com/mastercoms/tf2cfg/wiki/Bugs
+
 # Benchmarks
 
 Benchmarks can be found on the [tf.tv thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/).
