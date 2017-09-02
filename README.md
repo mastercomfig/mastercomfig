@@ -33,7 +33,7 @@ custom settings before you do this.**
 
 If you have already have a config, or want to remove mine, delete any configs you
 may have in `GAME_FOLDER/tf/custom` and then delete the `GAME_FOLDER/tf/cfg` folder.
-Next, disable Steam Cloud sync and then [verify your game files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) using Steam. Finally, launch TF2 with only the -autoconfig launch option. 
+Next, disable Steam Cloud sync and then [verify your game files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) using Steam. Finally, launch TF2 with only the `-autoconfig` launch option. 
 Wait for it to reach the main menu and then quit.
 
 ## Features
