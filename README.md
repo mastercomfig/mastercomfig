@@ -22,6 +22,8 @@ Put `-novid -nojoy -noff -nouserclip -softparticlesdefaultoff -reuse -usetcp` in
 the box and click ok. More information on launch options can be found in
 `mastercoms/cfg/comfig.cfg`.
 
+You can find some presets at the bottom of `comfig.cfg` for max FPS, high quality, etc.
+
 If you're using Linux or macOS, check out `gl/README.md` for some optional instructions.
 
 Having issues? Check out some [bug workarounds](https://github.com/mastercoms/tf2cfg/wiki/Bugs).
