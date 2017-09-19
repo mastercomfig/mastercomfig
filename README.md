@@ -26,7 +26,7 @@ You can find some presets at the bottom of `comfig.cfg` for max FPS, high qualit
 
 If you're using Linux or macOS, check out `gl/README.md` for some optional instructions.
 
-Having issues? Check out some [bug workarounds](https://github.com/mastercoms/tf2cfg/wiki/Bugs).
+Having issues? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
 
 ## Clean up
 
@@ -90,9 +90,9 @@ Wait for it to reach the main menu and then quit.
 
 https://github.com/mastercoms/tf2cfg/wiki/Screenshots
 
-# Bugs
+# Troubleshooting
 
-https://github.com/mastercoms/tf2cfg/wiki/Bugs
+https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting
 
 # Benchmarks
 
