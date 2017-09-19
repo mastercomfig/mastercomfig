@@ -7,7 +7,7 @@ settings to your needs/preferences.
 
 ## Installation
 
-[Download ZIP](https://github.com/mastercoms/tf2cfg/archive/master.zip), open `tf2cfg-master` and extract
+[Download ZIP](https://github.com/mastercoms/tf2cfg/archive/master.zip), open the `tf2cfg` folder and extract
 the `mastercoms` folder to `TF2_FOLDER/tf/custom` after [cleaning your config](#clean-up).
 
 To get to the `TF2_FOLDER`, right click Team Fortress 2 in your library, click
@@ -18,7 +18,7 @@ If you already have your own `autoexec.cfg`, delete `mastercoms/cfg/autoexec.cfg
 add `exec comfig` to your `autoexec.cfg`.
  
 Finally, go to properties again and click set launch options. 
-Put `-novid -nojoy -noff -nouserclip -softparticlesdefaultoff -reuse -usetcp` in
+Put `-novid -nojoy -noff -nohltv -nouserclip -softparticlesdefaultoff -reuse -usetcp -NoQueuedPacketThread -primarysound -snoforceformat` in
 the box and click ok. More information on launch options can be found in
 `mastercoms/cfg/comfig.cfg`.
 
