@@ -2,8 +2,8 @@
 
 This config is by default for modern PCs and aims to disable heavily unoptimized
 features and adjust other settings where it does not affect behavior or visuals
-noticeably. However, the config is documented extensively so that you may adjust
-settings to your needs/preferences.
+noticeably. However, the config is documented extensively and also has presets
+so that you may adjust settings to your needs/preferences.
 
 ## Installation
 
