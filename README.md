@@ -86,11 +86,11 @@ Then [verify your game files](https://support.steampowered.com/kb_article.php?re
 
 # Screenshots
 
-https://github.com/mastercoms/tf2cfg/wiki/Screenshots
+[Screenshots are available on the wiki.](https://github.com/mastercoms/tf2cfg/wiki/Screenshots)
 
 # Troubleshooting
 
-https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting
+[You can find solutions to common problems on the wiki.](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting)
 
 # Benchmarks
 
