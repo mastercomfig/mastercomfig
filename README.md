@@ -39,6 +39,10 @@ Then [verify your game files](https://support.steampowered.com/kb_article.php?re
 
 ## Features
 
+* Customization
+  * Extensive commenting for different options
+  * Presets to easily fit your use case
+  * Extra optional customization settings
 * Rendering
   * Threaded graphics
   * Optimizations for modern systems
@@ -60,18 +64,14 @@ Then [verify your game files](https://support.steampowered.com/kb_article.php?re
   * Cleaned up texture preload list
   * Increased memory for OpenGL shader cache
 * Memory/IO
-  * Increased data and heap memory
   * Persistent LZMA buffer
   * Filesystem optimizations
   * Fully async IO
 * Networking
-  * Fully threaded networking
   * Increased data rate and split rate
   * Reduced choke
-  * Aggressively drop packets
   * Reuses sockets if available
-  * Reduces socket usage for Steam Datagram
-  * Improved error smoothing
+  * Client view smoothing
   * Increased client timeout
   * Increased max file size for extra content
 * Sound
@@ -82,7 +82,6 @@ Then [verify your game files](https://support.steampowered.com/kb_article.php?re
   * Enhanced sound quality and spatialization
 * Input
   * Key time from smoothed frametime
-  * Unfiltered mouse input
   * Optional same sensitivity for scope
 
 # Screenshots
@@ -95,4 +94,4 @@ https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting
 
 # Benchmarks
 
-Benchmarks can be found on the [tf.tv thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/).
+Benchmarks can be found on the [teamfortress.tv thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/).
