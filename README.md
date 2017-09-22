@@ -18,7 +18,7 @@ If you already have your own `autoexec.cfg`, delete `mastercoms/cfg/autoexec.cfg
 add `exec comfig` to your `autoexec.cfg`.
  
 Finally, go to properties again and click set launch options. 
-Put `-novid -nojoy -noff -nohltv -nouserclip -softparticlesdefaultoff -reuse -usetcp -NoQueuedPacketThread -primarysound -snoforceformat` in
+Put `-novid -nojoy -noff -nohltv -nouserclip -softparticlesdefaultoff -reuse -usetcp -NoQueuedPacketThread -primarysound` in
 the box and click ok. More information on launch options can be found in
 `mastercoms/cfg/comfig.cfg`.
 
