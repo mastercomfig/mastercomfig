@@ -7,7 +7,7 @@ so that you may adjust settings to your needs/preferences.
 
 ## Installation
 
-[Download ZIP](https://github.com/mastercoms/tf2cfg/archive/master.zip), open the `tf2cfg` folder and extract
+[Download latest release ZIP](https://github.com/mastercoms/tf2cfg/releases/latest), open the `tf2cfg` folder and extract
 the `mastercoms` folder to `TF2_FOLDER/tf/custom` after [cleaning your config](#clean-up).
 
 To get to the `TF2_FOLDER`, right click Team Fortress 2 in your library, click
