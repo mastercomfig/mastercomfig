@@ -84,7 +84,9 @@ convar 0 // What the command does and a bit about what this default
 //convar 1 // What this alternative does
 ```
 
-As you can see, default ConVar values should be at the beginning, with alternatives coming after. 
+As you can see, default ConVar values should be at the beginning, with alternatives coming after.
+Unlike the launch options, use sentence case. Avoid punctuation unless using multiple sentences.
+
 Add your alternatives uncommented to applicable presets:
 
 * `maxperformance`: The absolute maximum performance you can get without any regards to visual quality
