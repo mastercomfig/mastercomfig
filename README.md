@@ -8,23 +8,23 @@ so that you may adjust settings to your needs/preferences.
 ## Installation
 
 [Download latest release ZIP](https://github.com/mastercoms/tf2cfg/releases/latest), open the `tf2cfg` folder and extract
-the `mastercoms` folder to `TF2_FOLDER/tf/custom` after [cleaning your config](#clean-up).
+the `mastercomfig` folder to `TF2_FOLDER/tf/custom` after [cleaning your config](#clean-up).
 
 To get to the `TF2_FOLDER`, right click Team Fortress 2 in your library, click
 properties, go to the local files tab, and then click the `browse local files...`
 button.
 
-If you already have your own `autoexec.cfg`, delete `mastercoms/cfg/autoexec.cfg` and
+If you already have your own `autoexec.cfg`, delete `mastercomfig/cfg/autoexec.cfg` and
 add `exec comfig` to your `autoexec.cfg`.
- 
-Finally, go to properties again and click set launch options. 
+
+Finally, go to properties again and click set launch options.
 Put `-novid -nojoy -noff -nohltv -nouserclip -softparticlesdefaultoff -reuse -usetcp -NoQueuedPacketThread -primarysound` in
 the box and click ok. More information on launch options can be found in
-`mastercoms/cfg/comfig.cfg`.
+`mastercomfig/cfg/comfig.cfg`.
 
 You can find some presets at the bottom of `comfig.cfg` for max FPS, high quality, etc.
 
-If you're using Linux or macOS, check out `gl/README.md` for some optional instructions.
+If you're using Linux or macOS, check out the wiki for [some optional instructions](https://github.com/mastercoms/tf2cfg/wiki/OpenGL-Systems).
 
 Having issues? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
 
