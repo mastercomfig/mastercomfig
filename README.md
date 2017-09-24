@@ -18,7 +18,7 @@ If you already have your own `autoexec.cfg`, delete `mastercomfig/cfg/autoexec.c
 add `exec comfig` to your `autoexec.cfg`.
 
 Finally, go to properties again and click set launch options.
-Put `-novid -nojoy -noff -nohltv -nouserclip -softparticlesdefaultoff -reuse -usetcp -NoQueuedPacketThread -primarysound` in
+Put `-novid -nojoy -noff -nohltv -nouserclip -softparticlesdefaultoff -reuse -usetcp -primarysound -snoforceformat` in
 the box and click ok. More information on launch options can be found in
 `mastercomfig/cfg/comfig.cfg`.
 
