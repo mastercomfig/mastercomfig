@@ -13,7 +13,7 @@ custom values, your operating system and hardware.
 1. Search [current issues](https://github.com/mastercoms/tf2cfg/issues)
 to see if your feature has already been requested.
 2. If not, [create a feature request](https://github.com/mastercoms/tf2cfg/issues/new).
-3. Title your feature request with somethin descriptive, not "cool idea i had" or "please look at this one".
+3. Title your feature request with something descriptive, not "cool idea i had" or "please look at this one".
 4. Describe the feature you want as much detail as you can, and also explain why the feature should be included.
 
 # Contact the maintainer
