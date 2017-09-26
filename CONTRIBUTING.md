@@ -74,6 +74,10 @@ There are currently 4 categories for launch options:
 Put your launch option in the appropriate section and if it's in the `Launch Options` section, add it to the launch options line
 for easy copying.
 
+Here's [a list](https://gist.github.com/mastercoms/12c51b171e2d3589eedc6bc9905e8f5e) of launch options to help you out.
+
+They were generated using Aveyo's [GetLaunchOptions tool](https://github.com/AveYo/D-OPTIMIZER/blob/master/GetLaunchOptions.bat).
+
 ### Cfg and presets
 
 Add options like this
