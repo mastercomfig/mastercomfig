@@ -22,7 +22,7 @@ Put `-novid -nojoy -nosteamcontroller -noff -nohltv -nouserclip -softparticlesde
 the box and click ok. More information on launch options can be found in
 `mastercomfig/cfg/comfig.cfg`.
 
-You can find some presets at the bottom of `comfig.cfg` for max FPS, high quality, etc.
+You can find some presets at the bottom of `comfig.cfg` to change the config for max FPS, high quality, etc.
 
 If you're using Linux or macOS, check out the wiki for [some optional instructions](https://github.com/mastercoms/tf2cfg/wiki/OpenGL-Systems).
 
@@ -33,8 +33,8 @@ Having issues? Check out some [troubleshooting instructions](https://github.com/
 **NOTE: This will reset ALL settings. Make sure you back up your binds and other
 custom settings before you do this.**
 
-If you have already have a config, or want to remove mine, delete any configs you
-may have in `GAME_FOLDER/tf/custom` and delete the `GAME_FOLDER/tf/cfg` folder.
+If you have already have a config, or want to remove mastercomfig, delete any configs you
+may have in `TF2_FOLDER/tf/custom` and delete the `TF2_FOLDER/tf/cfg` folder.
 Then [verify your game files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) using Steam. Finally, launch TF2 with only the `-default -console` launch options. Enter `host_writeconfig` in the console, and then exit and remove the launch options.
 
 ## Features
