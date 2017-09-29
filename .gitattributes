@@ -1,0 +1,10 @@
+# Make sure all files have CRLF line endings
+* text eol=crlf
+
+# These files are text files
+*.cfg text
+*.md text
+*.txt text
+
+# Cache files are binary
+*.cache binary
