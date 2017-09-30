@@ -1,4 +1,4 @@
-# Make sure all files have CRLF line endings
+# Make sure all text files have CRLF line endings
 * text eol=crlf
 
 # These files are text files
@@ -6,5 +6,5 @@
 *.md text
 *.txt text
 
-# Cache files are binary
+# These files are binary
 *.cache binary
