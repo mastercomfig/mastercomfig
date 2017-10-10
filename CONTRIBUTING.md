@@ -4,16 +4,27 @@
 and [troubleshooting steps](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting)
 to see if your issue is already known.
 2. If not, [create an issue](https://github.com/mastercoms/tf2cfg/issues/new).
-3. Title your issue with something descriptive, not "I need help" or "problem found please fix".
-4. Describe how you encountered your issue and include setup information, including config presets used,
-custom values, your operating system and hardware.
+3. Title your issue with something short but descriptive, like "Missing models on load",
+not "i need help" or "hey problem found in your config please fix, thanks!!"
+4. Include the following information in your report:
+    * How you encountered the issue
+    * Config version
+    * Config preset(s)
+    * Custom values (if any)
+    * DX level
+    * Launch options
+    * Operating system (OS)
+    * Graphics card (GPU)
+    * Processor (CPU)
+    * HDD or SSD
+    * RAM size in MB or GB
 
 # Requesting new features
 
 1. Search [current issues](https://github.com/mastercoms/tf2cfg/issues)
 to see if your feature has already been requested.
 2. If not, [create a feature request](https://github.com/mastercoms/tf2cfg/issues/new).
-3. Title your feature request with something descriptive, not "cool idea i had" or "please look at this one".
+3. Title your feature request with something short but descriptive, not "cool idea i had" or "please look at this one thanks very much".
 4. Describe the feature you want as much detail as you can, and also explain why the feature should be included.
 
 # Contact the maintainer
