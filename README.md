@@ -35,7 +35,11 @@ custom settings before you do this.**
 
 If you have already have a config, or want to remove mastercomfig, delete any configs you
 may have in `TF2_FOLDER/tf/custom` and delete the `TF2_FOLDER/tf/cfg` folder.
-Then [verify your game files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) using Steam. Finally, launch TF2 with only the `-default -console` launch options. Enter `host_writeconfig` in the console, and then exit and remove the launch options.
+Then [verify your game files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) using Steam.
+
+Next, if you have Steam Cloud Synchronization enabled, make all the files in `STEAM_FOLDER/userdata/USER_ID/440/remote/cfg` blank. Do not delete them, or else Steam Cloud will redownload them.
+
+Finally, launch TF2 with only the `-default -autoconfig -console` launch options. Enter `host_writeconfig;mat_savechanges` in the console, and then exit and remove the launch options.
 
 ## Features
 
