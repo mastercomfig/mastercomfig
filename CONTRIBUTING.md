@@ -37,11 +37,11 @@ Mastercomfig is currently maintained by mastercoms. You can contact me on Steam,
 
 Have a screenshot, workaround or anything else interesting you'd like to share? Contribute to the wiki.
 
-## Config
+## Contributing to the Config
 
 Want to contribute to the config itself? Start here!
 
-## Getting started
+### Getting started
 
 This config has a certain standard of quality for references and will not accept changes based on simple hearsay
 or assumptions.
@@ -54,20 +54,20 @@ sure those are available to you before you start contributing. File overrides li
 and `texture_preload_list.txt` must be updated according to changes
 [tracked by Steam Database](https://github.com/SteamDatabase/GameTracking-TF2).
 
-## Find a task
+### Find a task
 
 There might be TODOs within the files that need to be completed, issues that need to be closed or maybe something new
 you came up with. For any of these, make sure you communicate that you're going contribute to resolve that issue or
 implement that feature so that there isn't any duplicated work going on.
 
-## Making changes
+### Making changes
 
 First things first: use spaces and CRLF line endings for configs, and continue the convention in the other file overrides.
-Ensure no trailing spaces at the end of lines. I haven't establish a max column count yet, but a general rule of thumb is
+Ensure no trailing spaces at the end of lines. I haven't established a max column count yet, but a general rule of thumb is
 to follow the general breaks that already happen, and ensure you're able to read without horizontally scrolling on half
 of a 1080p desktop display with 1.00 scaling.
 
-### Launch options
+#### Launch options
 
 Comment launch options like this:
 
@@ -89,7 +89,7 @@ Here's [a list](https://gist.github.com/mastercoms/12c51b171e2d3589eedc6bc9905e8
 
 They were generated using Aveyo's [GetLaunchOptions tool](https://github.com/AveYo/D-OPTIMIZER/blob/master/GetLaunchOptions.bat).
 
-### Cfg and presets
+#### Cfg and presets
 
 Add options like this
 
@@ -110,20 +110,20 @@ Add your alternatives uncommented to applicable presets:
 * `maxquality`: The maximum quality you can get without any regards to performance
 * `iGPU`: Optimizations that do not affect quality that are only optimal on iGPUs or when you are severely GPU bound
 
-### Texture preload list
+#### Texture preload list
 
 The `texture_preload_list.txt` is designed to tell Team Fortress 2 which textures to load on startup.
 Strip all nonexistant textures from the default one if there is an update, and then add your changes.
 Preloaded textures should be common enough to warrant the extra startup time and memory usage.
 
-### Shader cache
+#### Shader cache
 
 This comes in two parts: the main shader cache at `shader_cache.cfg` and the OpenGL shader pair cache at `glshaders.cfg`
 and `glbaseshaders.cfg`. The main shader cache is a key value store for each shader, with the key being the bytecode index
 and value being the bytecode size. This can be used to enable or disable shader caching for certain shaders. The OpenGL
 shader pair cache is a bit different, with the numbers being indices.
 
-### DirectX support
+#### DirectX support
 
 Edit `dxsupport_override.cfg` and set hidden ConVars and other settings according to hardware and DirectX level.
 Make sure there are no updates to this file from the game repository (unlikely, was last updated in 2013) before making changes.
@@ -133,3 +133,19 @@ Make sure there are no updates to this file from the game repository (unlikely, 
 Yay! You made your changes and now it's time to send to off to be included in the config. Just 
 [make a new pull request](https://github.com/mastercoms/tf2cfg/compare) and name it something nice and
 descriptive! In your post, why you made the change along with any other information you find important.
+
+# Testing Config Changes
+
+There are several steps you should take before making or accepting changes to the config.
+
+## Benchmarking
+
+Use [meb's benchmark](http://www.teamfortress.tv/7598/tf2-benchmarks) to do basic testing on options.
+
+## Bot match
+
+After the results are positive with the benchmark, measure your average FPS in a local bot match.
+
+## Casual match
+
+After the results are positive with the local bot match, measure your average FPS in a casual match.
