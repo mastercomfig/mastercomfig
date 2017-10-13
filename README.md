@@ -90,12 +90,26 @@ Finally, launch TF2 with only the `-default -autoconfig -console` launch options
 
 # Screenshots
 
-[Screenshots are available on the wiki.](https://github.com/mastercoms/tf2cfg/wiki/Screenshots)
+[Screenshots are available on the wiki](https://github.com/mastercoms/tf2cfg/wiki/Screenshots).
 
 # Troubleshooting
 
-[You can find solutions to common problems on the wiki.](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting)
+[You can find solutions to common problems on the wiki](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
 
 # Benchmarks
 
-Benchmarks can be found on the [teamfortress.tv thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/).
+[Benchmarks can be found on the teamfortress.tv thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/).
+
+# Credits
+
+* [Chris](https://chrisdown.name/tf2/) for starting it all
+* [Comanglia](http://www.teamfortress.tv/25328/comanglias-config-fps-guide) for continuing what Chris started and helping a bit with my config
+* [Rhapsody](http://rhapsodysl.github.io/perfconfig/) for updating Chris' config
+* [Felik](http://www.teamfortress.tv/36792/feliks-config-chris-config-replacement) for providing an alternative to Chris-based configs
+* The TeamFortress.TV community in the [config thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/) for their continued support, advice and benchmarks. (Special Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby, Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage and perhaps many others)
+* [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page) for their documentation of Source Engine console varialbes and mechanics
+* and to Valve, for making and updating the best class-based FPS to date with so much customizability on top
+
+# Legal
+
+Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo are trademarks and/or registered trademarks of Valve Corporation. Mastercomfig is not associated with nor endorsed by Valve Corporation.
