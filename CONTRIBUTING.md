@@ -144,8 +144,8 @@ Use [meb's benchmark](http://www.teamfortress.tv/7598/tf2-benchmarks) to do basi
 
 ## Bot match
 
-After the results are positive with the benchmark, measure your average FPS in a local bot match.
+After the results are positive with the benchmark, measure your average FPS in a local 24 player bot match on `cp_gorge`, highest difficulty.
 
 ## Casual match
 
-After the results are positive with the local bot match, measure your average FPS in a casual match.
+After the results are positive with the local bot match, measure your average FPS in a filled casual match.
