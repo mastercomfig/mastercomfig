@@ -7,26 +7,31 @@ so that you may adjust settings to your needs/preferences.
 
 ## Installation
 
-[Download latest release ZIP](https://github.com/mastercoms/tf2cfg/releases/latest), open the `tf2cfg` folder and extract
-the `mastercomfig` folder to `TF2_FOLDER/tf/custom` after [cleaning your config](#clean-up).
+[Download latest release ZIP](https://github.com/mastercoms/tf2cfg/releases/latest), open the `tf2cfg` folder
+and extract the `mastercomfig` and `mastercomfig_exec` folders to `TF2_FOLDER/tf/custom` after [cleaning your config](#clean-up).
 
-To get to the `TF2_FOLDER`, right click Team Fortress 2 in your library, click
-properties, go to the local files tab, and then click the `browse local files...`
-button.
+To get to the `TF2_FOLDER`, right click Team Fortress 2 in your library, click properties,
+go to the `local files` tab, and then click the `browse local files...` button.
 
-If you already have your own `autoexec.cfg`, delete `mastercomfig/cfg/autoexec.cfg` and
-add `exec comfig` to your `autoexec.cfg`.
+If you already have your own `autoexec.cfg`, copy the contents of `mastercomfig_exec/cfg/autoexec.cfg`
+into your own `autoexec.cfg` and then delete the `mastercomfig_exec` folder.
 
-Finally, go to properties again and click set launch options.
-Put `-novid -nojoy -nosteamcontroller -noff -nohltv -softparticlesdefaultoff -reuse -primarysound -snoforceformat -swapcores` in
-the box and click ok. More information on launch options can be found in
-`mastercomfig/cfg/comfig.cfg`.
+Finally, go to Team Fortress 2 properties again and click the `set launch options...` button.
+Copy and paste `-novid -nojoy -nosteamcontroller -noff -nohltv -softparticlesdefaultoff -reuse -primarysound -snoforceformat -swapcores` into
+the box and click ok. More information on launch options can be found in `mastercomfig_exec/cfg/autoexec.cfg`.
 
-You can find some presets at the bottom of `comfig.cfg` to change the config for max FPS, high quality, etc.
+You can also find some instructions at the bottom of `mastercomfig_exec/cfg/autoexec.cfg` to change the config for maximum performance, maximum quality, etc.
 
 If you're using Linux or macOS, check out the wiki for [some optional instructions](https://github.com/mastercoms/tf2cfg/wiki/OpenGL-Systems).
 
 Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
+
+## Updating
+
+Download the update's release ZIP and then extract the `mastercomfig` folder to `TF2_FOLDER/tf/custom`.
+
+You won't need to copy the other folders unless specified in the update. This means that if you miss a few updates,
+make sure to look through the release notes for each update you missed to see if the other folders require an update.
 
 ## Clean up
 
@@ -47,6 +52,7 @@ Finally, launch TF2 with only the `-default -autoconfig -console` launch options
   * Extensive commenting for different options
   * Presets to easily fit your use case
   * Extra optional customization settings
+  * Modular config system to allow for easy updating
 * Rendering
   * Threaded graphics
   * Optimizations for modern systems
@@ -77,6 +83,7 @@ Finally, launch TF2 with only the `-default -autoconfig -console` launch options
   * Reuses sockets if available
   * Client view smoothing
   * Increased client timeout
+  * Matchmaking improvements and fixes
   * Increased max file size for extra content
 * Sound
   * Asynchronous sound and mixing
