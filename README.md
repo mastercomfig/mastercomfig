@@ -8,7 +8,7 @@ so that you may adjust settings to your needs/preferences.
 You may find that this config makes TF2 a lot smoother, eliminates stuttering,
 reduces load times and increases FPS. This is because this config is heavily tuned
 and the commands and values are based on TF2's source code, rather than just
-experiments, guesswork and trying to understand the vague/non-existant documentation.
+experiments, guesswork and trying to understand the vague/non-existent documentation.
 
 The config is constantly updated with tweaks, new features and documentation improvements —
 iterated upon based on user feedback and benchmarks. So if you think there's an unoptimal value,
