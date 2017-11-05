@@ -7,8 +7,8 @@ to see if your issue is already known.
 not "i need help" or "hey problem found in your config please fix, thanks!!"
 3. Include the following information in your report:
     * How you encountered the issue
-    * Config version
-    * Config preset(s)
+    * Config version (don't say latest, say the actual version, found at the top of `mastercomfig/cfg/comfig.cfg`, like 5.0.1)
+    * Config preset and addons
     * Custom values (if any)
     * DX level
     * Launch options
