@@ -22,5 +22,6 @@ not "i need help" or "hey problem found in your config please fix, thanks!!"
 
 1. Search [current issues](https://github.com/mastercoms/tf2cfg/issues)
 to see if your feature has already been requested.
-2. Title your feature request with something short but descriptive, not "cool idea i had" or "please look at this one thanks very much".
+2. Title your feature request with something short but descriptive, like "Add better options for pyrovision",
+not "cool idea i had" or "please look at this one thanks very much".
 3. Describe the feature you want as much detail as you can, and also explain why the feature should be included.
