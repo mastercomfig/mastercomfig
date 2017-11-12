@@ -140,7 +140,7 @@ There are several steps you should take before making or accepting changes to th
 
 ## Benchmarking
 
-Use [meb's benchmark](http://www.teamfortress.tv/7598/tf2-benchmarks) to do basic testing on options.
+Use [mastercoms' new test benchmark](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k) to do basic testing on options.
 
 ## Bot match
 
