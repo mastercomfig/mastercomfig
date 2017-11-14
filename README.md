@@ -54,7 +54,7 @@ Then [verify your game files](https://support.steampowered.com/kb_article.php?re
 
 Next, if you have Steam Cloud Synchronization enabled, make all the files in `STEAM_FOLDER/userdata/USER_ID/440/remote/cfg` blank. Do not delete them, or else Steam Cloud will redownload them.
 
-Finally, launch TF2 with only the `-default -autoconfig -console` launch options. Enter `host_writeconfig;mat_savechanges` in the console, and then exit and remove the launch options.
+Finally, launch TF2 with only the `-default -autoconfig +host_writeconfig +mat_savechanges +quit` launch options. The game will launch and exit. Afterwards, remove these launch options.
 
 ## Features
 
