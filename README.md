@@ -123,7 +123,7 @@ Finally, launch TF2 with only the `-default -autoconfig +host_writeconfig +mat_s
 * [Comanglia](http://www.teamfortress.tv/25328/comanglias-config-fps-guide) for continuing what Chris started and helping a bit with my config
 * [Rhapsody](http://rhapsodysl.github.io/perfconfig/) for updating Chris' config
 * [Felik](http://www.teamfortress.tv/44076/se-config-framework-feliks-config-3) for providing an alternative to Chris-based configs
-* The TeamFortress.TV community in the [config thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/) for their continued support, advice and benchmarks. (Special Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby, Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage and perhaps many others)
+* The TeamFortress.TV community in the [config thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/) for their continued support, advice and benchmarks. (Special Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby, Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz and perhaps many others)
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page) for their documentation of Source Engine console variables and mechanics
 * and to Valve, for making and updating the best class-based FPS to date with so much customizability on top
 
