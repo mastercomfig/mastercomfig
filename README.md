@@ -24,7 +24,7 @@ To get to the `TF2_FOLDER`, right click Team Fortress 2 in your library, click p
 go to the `local files` tab, and then click the `browse local files...` button.
 
 If you already have your own `autoexec.cfg`, copy the contents of `mastercomfig_exec/cfg/autoexec.cfg`
-to the bottom of your own `autoexec.cfg` and then delete the `mastercomfig_exec` folder.
+to the top of your own `autoexec.cfg` and then delete the `mastercomfig_exec` folder.
 
 Finally, go to Team Fortress 2 properties again and click the `set launch options...` button.
 Copy and paste `-novid -nojoy -nosteamcontroller -noff -nohltv -softparticlesdefaultoff -reuse -primarysound -snoforceformat -swapcores` into
