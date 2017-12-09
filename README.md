@@ -18,7 +18,7 @@ probably see a fix in a future update.
 ## Installation (vpk)
 
 [Download latest VPK release](https://github.com/mastercoms/tf2cfg/releases/latest), drag the VPK of
-your choice to your custom folder after [cleaning your config](#clean-up), along with an addon if needed.
+your choice to your custom folder after [cleaning your config](#clean-up), along with any addons if needed.
 
 To get to your custom folder, right click Team Fortress 2 in your library, click properties,
 go to the `local files` tab, and then click the `browse local files...` button. Then, open the tf folder
