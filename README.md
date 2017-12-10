@@ -15,26 +15,26 @@ iterated upon based on user feedback and benchmarks. So if you think there's an 
 or if it's just as simple as a comment being confusing to you, report the problem and you'll
 probably see a fix in a future update.
 
-## Installation (vpk)
+## Installation (VPK)
 
-[Download latest VPK release](https://github.com/mastercoms/tf2cfg/releases/latest), drag the VPK of
-your choice to your custom folder after [cleaning your config](#clean-up), along with any addons if needed.
+Download the VPK of the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest), drag the VPK of
+your choice to your `tf/custom` folder after [cleaning your config](#clean-up), along with any addons if needed.
 
-To get to your custom folder, right click Team Fortress 2 in your library, click properties,
-go to the `local files` tab, and then click the `browse local files...` button. Then, open the tf folder
-and then open the custom folder.
+To get to your `tf/custom` folder, right click Team Fortress 2 in your library, click properties,
+go to the `local files` tab, and then click the `browse local files...` button. Then, open the `tf` folder
+and then open the `custom` folder.
 
 If you have your own `autoexec.cfg` already, rename it to `custom.cfg`.
 
 Finally, go to Team Fortress 2 properties again and click the `set launch options...` button.
-Copy and paste `-novid -nojoy -nosteamcontroller -noff -nohltv -softparticlesdefaultoff -reuse -primarysound -snoforceformat -swapcores` into the box and click ok.
+Copy and paste `-novid -nojoy -nosteamcontroller -noff -nohltv -softparticlesdefaultoff -reuse -swapcores` into the box and click ok.
 More information on launch options can be found [here](https://github.com/mastercoms/tf2cfg/wiki/Launch-Options).
 
 Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
 
-## Installation (zip)
+## Installation (ZIP)
 
-[Download latest release ZIP](https://github.com/mastercoms/tf2cfg/releases/latest), open the `tf2cfg` folder
+Download the source ZIP of the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest), open the `tf2cfg` folder
 and extract the `mastercomfig` and `mastercomfig_exec` folders to `TF2_FOLDER/tf/custom` after [cleaning your config](#clean-up).
 
 To get to the `TF2_FOLDER`, right click Team Fortress 2 in your library, click properties,
@@ -44,7 +44,7 @@ If you already have your own `autoexec.cfg`, copy the contents of `mastercomfig_
 to the top of your own `autoexec.cfg` and then delete the `mastercomfig_exec` folder.
 
 Finally, go to Team Fortress 2 properties again and click the `set launch options...` button.
-Copy and paste `-novid -nojoy -nosteamcontroller -noff -nohltv -softparticlesdefaultoff -reuse -primarysound -snoforceformat -swapcores` into the box and click ok.
+Copy and paste `-novid -nojoy -nosteamcontroller -noff -nohltv -softparticlesdefaultoff -reuse -swapcores` into the box and click ok.
 More information on launch options can be found in `mastercomfig_exec/cfg/autoexec.cfg`.
 
 You can also find some instructions at the bottom of `mastercomfig_exec/cfg/autoexec.cfg` to change the config for maximum performance, maximum quality, etc.
