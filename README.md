@@ -1,3 +1,5 @@
+[![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-738bd7.svg?style=flat-square)](https://discord.gg/CuPb2zV)
+
 # mastercomfig
 
 This config is by default for modern PCs and aims to disable heavily unoptimized
