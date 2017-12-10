@@ -19,7 +19,7 @@ probably see a fix in a future update.
 
 Download the VPK of your choice from the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest), drag the VPK to your `tf/custom` folder after [cleaning your config](#clean-up), along with any addons if needed.
 
-For more information about presets or addons, see [here](https://github.com/mastercoms/tf2cfg/wiki/Presets-and-Addons).
+For more information about presets or addons to help you choose, see [here](https://github.com/mastercoms/tf2cfg/wiki/Presets-and-Addons).
 
 To get to your `tf/custom` folder, right click Team Fortress 2 in your library, click properties,
 go to the `local files` tab, and then click the `browse local files...` button. Then, open the `tf` folder
