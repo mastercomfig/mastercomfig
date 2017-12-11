@@ -35,6 +35,10 @@ More information on launch options can be found [here](https://github.com/master
 
 Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
 
+## Updating (VPK)
+
+Drag the new VPK to your custom folder, replacing the old one.
+
 ## Installation (ZIP)
 
 Download the source code ZIP of the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest), open the `tf2cfg`
@@ -57,7 +61,7 @@ If you're using Linux or macOS, check out the wiki for [some optional instructio
 
 Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
 
-## Updating
+## Updating (ZIP)
 
 Download the update's release ZIP and then extract the `mastercomfig` folder to `TF2_FOLDER/tf/custom`.
 
