@@ -102,6 +102,9 @@ convar 0 // What the command does and a bit about what this default
 As you can see, default ConVar values should be at the beginning, with alternatives coming after.
 Unlike the launch options, use sentence case. Avoid punctuation unless using multiple sentences.
 
+ConVars and commands are found by launching TF2 with `-novid -default -autoconfig -condebug +cvarlist +quit` and
+then reading `tf/console.log`.
+
 Add your alternatives uncommented to applicable presets:
 
 * `maxperformance`: The absolute maximum performance you can get without any regards to visual quality
