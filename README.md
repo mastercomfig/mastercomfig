@@ -1,9 +1,9 @@
 [![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-738bd7.svg?style=flat-square)](https://discord.gg/CuPb2zV)
 
 ## Quick Links
-* [Installation](https://github.com/mastercoms/tf2cfg/#Installation)
-* [Updating](https://github.com/mastercoms/tf2cfg/#Updating)
-* [Troubleshooting](https://github.com/mastercoms/tf2cfg/#Troubleshooting)
+* [Installation](https://github.com/mastercoms/tf2cfg#installation)
+* [Updating](https://github.com/mastercoms/tf2cfg#updating)
+* [Troubleshooting](https://github.com/mastercoms/tf2cfg#troubleshooting)
 
 # mastercomfig
 
