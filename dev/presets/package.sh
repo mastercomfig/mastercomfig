@@ -1,8 +1,20 @@
+#!/bin/bash
+# Run script within the directory
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
-rm *.vpk
+# Delete old VPKs and folders
+rm *.vpk -f
+rm */ -rf
 
+# Create folders
+
+# Create default
+mkdir -p mastercomfig-default/cfg
+touch mastercomfig-default/cfg/autoexec.cfg
+echo -e "exec comfig\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/stripped\r\nexec custom\r\n" > mastercomfig-default/cfg/autoexec.cfg
+
+# Create presets
 declare -a presets=("comp" "compquality" "maxperformance" "maxquality" "midquality")
 
 for P in "${presets[@]}"; do
@@ -12,6 +24,7 @@ for P in "${presets[@]}"; do
     echo -e "exec comfig\r\nexec presets/${P}\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/stripped\r\nexec custom\r\n" > mastercomfig-"${P}"/cfg/autoexec.cfg
 done
 
+# Fill folders with common files
 for D in *; do
     if [ -d "${D}" ]; then
         cp -f ../../mastercomfig/cfg/comfig.cfg "${D}"/cfg/comfig.cfg
@@ -21,9 +34,11 @@ for D in *; do
     fi
 done
 
+# Overwrite common files
 cp -f ../../01-mastercomfig_dx_maxperformance/dxsupport_override.cfg mastercomfig-maxperformance/dxsupport_override.cfg
 cp -f ../../01-mastercomfig_dx_maxquality/dxsupport_override.cfg mastercomfig-maxquality/dxsupport_override.cfg
 
+# Package into VPK
 for D in *; do
     if [ -d "${D}" ]; then
         vpk "${D}"
