@@ -1,5 +1,10 @@
 [![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-738bd7.svg?style=flat-square)](https://discord.gg/CuPb2zV)
 
+## Quick Links
+* [Installation](https://github.com/mastercoms/tf2cfg#installation)
+* [Updating](https://github.com/mastercoms/tf2cfg#updating)
+* [Troubleshooting](https://github.com/mastercoms/tf2cfg#troubleshooting)
+
 # mastercomfig
 
 This config is by default for modern PCs and aims to disable heavily unoptimized
@@ -17,7 +22,9 @@ iterated upon based on user feedback and benchmarks. So if you think there's an 
 or if it's just as simple as a comment being confusing to you, report the problem and you'll
 probably see a fix in a future update.
 
-## Installation (VPK)
+## Installation
+
+### Installation (VPK)
 
 Download the VPK of your choice from the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest), drag the VPK to your `tf/custom` folder after [cleaning your config](#clean-up), along with any addons if needed.
 
@@ -35,11 +42,7 @@ More information on launch options can be found [here](https://github.com/master
 
 Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
 
-## Updating (VPK)
-
-Drag the new VPK to your custom folder, replacing the old one.
-
-## Installation (ZIP)
+### Installation (ZIP)
 
 Download the source code ZIP of the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest), open the `tf2cfg`
 folder and extract the `mastercomfig` and `mastercomfig_exec` folders to `TF2_FOLDER/tf/custom` after 
@@ -61,7 +64,13 @@ If you're using Linux or macOS, check out the wiki for [some optional instructio
 
 Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
 
-## Updating (ZIP)
+## Updating
+
+### Updating (VPK)
+
+Drag the new VPK to your custom folder, replacing the old one.
+
+### Updating (ZIP)
 
 Download the update's release ZIP and then extract the `mastercomfig` folder to `TF2_FOLDER/tf/custom`.
 
@@ -130,19 +139,19 @@ Finally, launch TF2 with only the `-novid -default -autoconfig +host_writeconfig
   * Key time from smoothed frametime
   * Optional same sensitivity for scope
 
-# Screenshots
+## Screenshots
 
 [Screenshots are available on the wiki](https://github.com/mastercoms/tf2cfg/wiki/Screenshots).
 
-# Troubleshooting
+## Troubleshooting
 
 [You can find solutions to common problems on the wiki](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
 
-# Benchmarks
+## Benchmarks
 
 [Benchmarks can be found on the teamfortress.tv thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/).
 
-# Credits
+## Credits
 
 * [Chris](https://chrisdown.name/tf2/) for starting it all
 * [Comanglia](http://www.teamfortress.tv/25328/comanglias-config-fps-guide) for continuing what Chris started and helping a bit with my config
@@ -152,6 +161,6 @@ Finally, launch TF2 with only the `-novid -default -autoconfig +host_writeconfig
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page) for their documentation of Source Engine console variables and mechanics
 * and to Valve, for making and updating the best class-based FPS to date with so much customizability on top
 
-# Legal
+## Legal
 
 Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo are trademarks and/or registered trademarks of Valve Corporation. Mastercomfig is not associated with nor endorsed by Valve Corporation.
