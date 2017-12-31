@@ -1,6 +1,10 @@
 # Make sure all text files have CRLF line endings
 * text eol=crlf
 
+# Unix files should have LF line endings
+*.sh eol=lf
+.git* eol=lf
+
 # These files are text files
 *.cfg text
 *.md text
