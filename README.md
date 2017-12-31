@@ -44,9 +44,7 @@ Having issues (like crashes or local servers not working where you can't move or
 
 ### Installation (ZIP)
 
-Download the source code ZIP of the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest), open the `tf2cfg`
-folder and extract the `mastercomfig` and `mastercomfig_exec` folders to `TF2_FOLDER/tf/custom` after 
-[cleaning your config](#clean-up).
+Download `mastercomfig.zip` from the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest) and then extract the `mastercomfig` and `mastercomfig_exec` folders to `TF2_FOLDER/tf/custom` after [cleaning your config](#clean-up).
 
 To get to the `TF2_FOLDER`, right click Team Fortress 2 in your library, click properties,
 go to the `local files` tab, and then click the `browse local files...` button.
