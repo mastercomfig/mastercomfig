@@ -154,3 +154,8 @@ After the results are positive with the benchmark, measure your average FPS in a
 ## Casual match
 
 After the results are positive with the local bot match, measure your average FPS in a filled casual match.
+
+# Packaging and Releases
+
+Generally you won't have to do this, but you can generate VPK packages for all presets and addons as well as a ZIP for
+the config. Use the `package.sh` script in the `dev` folder.
