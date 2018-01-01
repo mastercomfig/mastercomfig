@@ -30,4 +30,4 @@ curl -u $GITHUB_USERNAME:$GITHUB_TOKEN -X POST -H 'Content-type: application/zip
   -T mastercomfig.zip \
   "$assets_url?name=mastercomfig.zip&label=mastercomfig%20ZIP"
 
-echo \n
+printf "\n"

@@ -20,4 +20,4 @@ curl -X POST -H 'application/x-www-form-urlencoded' \
   -F "body=$formatted_body" -F 'thread_id=42867' -F "token=$TFTV_TOKEN" \
   http://www.teamfortress.tv/post/add
 
-echo \n
+printf "\n"

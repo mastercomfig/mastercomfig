@@ -22,4 +22,4 @@ for D in *; do
     fi
 done
 
-echo \n
+printf "\n"

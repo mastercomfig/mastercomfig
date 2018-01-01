@@ -14,4 +14,4 @@ read highlights
 ./deploy.sh $version "$highlights"
 ./announce.sh $version "$highlights"
 
-echo \n
+printf "\n"
