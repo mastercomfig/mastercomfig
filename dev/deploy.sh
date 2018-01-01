@@ -8,7 +8,7 @@ source mastercomfig-vars
 # Create release
 
 assets_url=$(curl -u $GITHUB_USERNAME:$GITHUB_TOKEN -X POST -H 'Content-type: application/json' \
-  --data "{\"tag_name\":\"$1\",\"target_commitish\":\"release\",\"name\":\"$1\",\"body\":\"**Highlights:** $2\",\"draft\":true}" \
+  --data "{\"tag_name\":\"$1\",\"target_commitish\":\"release\",\"name\":\"$1\",\"body\":\"**Highlights:** $2\"}" \
   https://api.github.com/repos/mastercoms/tf2cfg/releases | jq '.assets_url' | sed -e 's/^"//' -e 's/"$//')
 assets_url=${assets_url/api/uploads}
 
