@@ -107,16 +107,18 @@ then reading `tf/console.log`.
 
 Add your alternatives uncommented to applicable presets:
 
-* `maxperformance`: The absolute maximum performance you can get without any regards to visual quality
+* `maxperformance`: The maximum performance you can get without too much consideration to playability
 * `comp`: The maximum performance you can get without making the game too hard to play from awful visual quality and glitches
 * `compquality`: The maximum performance you can get without losing any features that may give you an information advantage
 * `maxquality`: The maximum quality you can get without any regards to performance
-* `iGPU`: Optimizations that do not affect quality that are only optimal on iGPUs or when you are severely GPU bound
+* `badcpu`: Optimizations that generally do not affect quality that are only optimal on weaker, dual core CPUs
+* `badgpu`: Optimizations that do not affect quality that are only optimal when you are GPU bound
+* `stripped`: Things that negatively affect playability by a lot, or disable very essential features
 
 #### Texture preload list
 
 The `texture_preload_list.txt` is designed to tell Team Fortress 2 which textures to load on startup.
-Strip all nonexistant textures from the default one if there is an update, and then add your changes.
+Strip all nonexistant textures from the default one if there is a major TF2 update, and then add your changes.
 Preloaded textures should be common enough to warrant the extra startup time and memory usage.
 
 #### Shader cache
