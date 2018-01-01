@@ -28,6 +28,7 @@ done
 for D in *; do
     if [ -d "${D}" ]; then
         cp -f ../../mastercomfig/cfg/comfig.cfg "${D}"/cfg/comfig.cfg
+        cp -f ../../mastercomfig/cfg/listenserver.cfg "${D}"/cfg/listenserver.cfg
         cp -f ../../mastercomfig/dxsupport_override.cfg "${D}"/dxsupport_override.cfg
         cp -f ../../mastercomfig/texture_preload_list.txt "${D}"/texture_preload_list.txt
         vpk "${D}"
