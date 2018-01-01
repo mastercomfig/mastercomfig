@@ -8,7 +8,7 @@ rm *.vpk -f
 rm */ -rf
 
 # Create addons
-declare -a addons=("badcpu" "badgpu" "stripped")
+declare -a addons=("badcpu" "badgpu" "stripped" "transparent_viewmodels")
 
 for A in "${addons[@]}"; do
     mkdir -p mastercomfig-"${A}"-addon/cfg/addons
