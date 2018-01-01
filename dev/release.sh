@@ -5,11 +5,13 @@ cd "$BINDIR"
 
 ./package.sh
 
-echo 'Version: '
+echo Version:
 read version
 
-echo 'Highlights: '
+echo Highlights:
 read highlights
 
-./deploy.sh $version $highlights
-./announce.sh $version $highlights
+./deploy.sh $version "$highlights"
+./announce.sh $version "$highlights"
+
+echo \n

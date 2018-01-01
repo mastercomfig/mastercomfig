@@ -11,3 +11,5 @@ cd "$BINDIR"
 cd ..
 zip mastercomfig -r 01-ISSUES_NO_MOVE_OR_SHOOT_LOCAL_SERVERS.txt 01-mastercomfig_dx_maxperformance/ 01-mastercomfig_dx_maxquality/ mastercomfig/ mastercomfig_exec/
 mv mastercomfig.zip dev/mastercomfig.zip
+
+echo \n

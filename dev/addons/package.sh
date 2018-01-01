@@ -21,3 +21,5 @@ for D in *; do
         vpk "${D}"
     fi
 done
+
+echo \n
