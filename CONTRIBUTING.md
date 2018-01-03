@@ -50,8 +50,8 @@ Every setting and change should be based on information
 found in Team Fortress 2 [blog posts/patch notes](http://www.teamfortress.com/), 
 the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/SDK_Docs),
 the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013) and the Source 2007 source code leak, so make
-sure those are available to you before you start contributing. File overrides like `dxsupport.cfg`, the shader cache files
-and `texture_preload_list.txt` must be updated according to changes
+sure those are available to you before you start contributing. File overrides like `dxsupport_override.cfg`, the shader 
+cache files and `texture_preload_list.txt` must be updated according to changes
 [tracked by Steam Database](https://github.com/SteamDatabase/GameTracking-TF2).
 
 ### Find a task
