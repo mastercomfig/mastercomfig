@@ -141,11 +141,13 @@ descriptive! In your post, why you made the change along with any other informat
 
 # Testing Config Changes
 
-There are several steps you should take before making or accepting changes to the config.
+There are several steps you should take before making or accepting changes to the config. You can use Fraps or
+MSI Afterburner to get a FPS measurement of matches.
 
 ## Benchmarking
 
-Use [mastercoms' new test benchmark](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k) to do basic testing on options.
+Use [mastercoms' new test benchmark](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k) to do 
+basic testing on options.
 
 ## Bot match
 
