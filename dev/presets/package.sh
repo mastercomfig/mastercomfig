@@ -12,16 +12,16 @@ rm */ -rf
 # Create default
 mkdir -p mastercomfig-default/cfg
 touch mastercomfig-default/cfg/autoexec.cfg
-echo -e "exec comfig\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/stripped\r\nexec custom\r\n" > mastercomfig-default/cfg/autoexec.cfg
+echo -e "exec comfig\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/ssd\r\nexec addons/transparent_viewmodels\r\nexec custom\r\n" > mastercomfig-default/cfg/autoexec.cfg
 
 # Create presets
-declare -a presets=("comp" "compquality" "maxperformance" "maxquality" "midquality")
+declare -a presets=("comp" "compquality" "maxperformance" "stripped" "maxquality" "midquality")
 
 for P in "${presets[@]}"; do
     mkdir -p mastercomfig-"${P}"/cfg/presets
     cp -f ../../mastercomfig/cfg/presets/"${P}".cfg mastercomfig-"${P}"/cfg/presets/"${P}".cfg
     touch mastercomfig-"${P}"/cfg/autoexec.cfg
-    echo -e "exec comfig\r\nexec presets/${P}\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/stripped\r\nexec custom\r\n" > mastercomfig-"${P}"/cfg/autoexec.cfg
+    echo -e "exec comfig\r\nexec presets/${P}\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/ssd\r\nexec addons/transparent_viewmodels\r\nexec custom\r\n" > mastercomfig-"${P}"/cfg/autoexec.cfg
 done
 
 # Fill folders with common files
@@ -37,6 +37,7 @@ done
 
 # Overwrite common files
 cp -f ../../01-mastercomfig_dx_maxperformance/dxsupport_override.cfg mastercomfig-maxperformance/dxsupport_override.cfg
+cp -f ../../01-mastercomfig_dx_maxperformance/dxsupport_override.cfg mastercomfig-stripped/dxsupport_override.cfg
 cp -f ../../01-mastercomfig_dx_maxquality/dxsupport_override.cfg mastercomfig-maxquality/dxsupport_override.cfg
 
 # Package into VPK
