@@ -37,7 +37,7 @@ and then open the `custom` folder.
 If you have your own `autoexec.cfg` already, rename it to `custom.cfg`.
 
 Finally, go to Team Fortress 2 properties again and click the `set launch options...` button.
-Copy and paste `-novid -nojoy -nosteamcontroller -noff -nohltv -softparticlesdefaultoff -reuse -swapcores` into the box and click ok.
+Copy and paste `-novid -nojoy -nosteamcontroller -noff -softparticlesdefaultoff -reuse` into the box and click ok.
 More information on launch options can be found [here](https://github.com/mastercoms/tf2cfg/wiki/Launch-Options).
 
 Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
@@ -53,7 +53,7 @@ If you already have your own `autoexec.cfg`, copy the contents of `mastercomfig_
 to the top of your own `autoexec.cfg` and then delete the `mastercomfig_exec` folder. Do the same with `listenserver.cfg`.
 
 Finally, go to Team Fortress 2 properties again and click the `set launch options...` button.
-Copy and paste `-novid -nojoy -nosteamcontroller -noff -nohltv -softparticlesdefaultoff -reuse -swapcores` into the box and click ok.
+Copy and paste `-novid -nojoy -nosteamcontroller -noff -softparticlesdefaultoff -reuse` into the box and click ok.
 More information on launch options can be found in `mastercomfig_exec/cfg/autoexec.cfg`.
 
 You can also find some instructions at the bottom of `mastercomfig_exec/cfg/autoexec.cfg` to change the config for maximum performance, maximum quality, etc.
