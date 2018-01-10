@@ -543,7 +543,6 @@ models/workshop/weapons/c_models/c_acr_hookblade/c_acr_hookblade
 models/workshop/weapons/c_models/c_acr_hookblade/c_acr_hookblade_normal
 models/workshop/weapons/c_models/c_amputator/c_amputator
 models/workshop/weapons/c_models/c_amputator/c_amputator_blue
-models/workshop/weapons/c_models/c_assault_minigun/c_assault_minigun
 models/workshop/weapons/c_models/c_atom_launcher/c_atom_launcher
 models/workshop/weapons/c_models/c_ava_roseknife/c_ava_roseknife
 models/workshop/weapons/c_models/c_ava_roseknife/c_ava_roseknife_black
@@ -669,9 +668,6 @@ models/workshop/weapons/c_models/c_persian_shield/c_persian_shield
 models/workshop/weapons/c_models/c_persian_shield/c_persian_shield_spike
 models/workshop/weapons/c_models/c_picket/c_picket
 models/workshop/weapons/c_models/c_picket/c_picket_paper
-models/workshop/weapons/c_models/c_pilot_flaregun/c_pilot_flare
-models/workshop/weapons/c_models/c_pilot_flaregun/c_pilot_flaregun
-models/workshop/weapons/c_models/c_pistol_knife/c_pistol_knife
 models/workshop/weapons/c_models/c_powerjack/c_powerjack_blue
 models/workshop/weapons/c_models/c_powerjack/c_powerjack_red
 models/workshop/weapons/c_models/c_pro_rifle/c_pro_rifle
@@ -698,8 +694,6 @@ models/workshop/weapons/c_models/c_skullbat/c_skullbat_hats_blue
 models/workshop/weapons/c_models/c_skullbat/c_skullbat_skeleton
 models/workshop/weapons/c_models/c_sledgehammer/c_sledgehammer
 models/workshop/weapons/c_models/c_sledgehammer/c_sledgehammer_phongmask
-models/workshop/weapons/c_models/c_sniperrifle_tv/c_sniperrifle_tv_blue
-models/workshop/weapons/c_models/c_sniperrifle_tv/c_sniperrifle_tv_red
 models/workshop/weapons/c_models/c_snub_nose/c_snub_nose
 models/workshop/weapons/c_models/c_soda_popper/c_soda_popper
 models/workshop/weapons/c_models/c_spikewrench/c_spikewrench
