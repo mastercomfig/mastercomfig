@@ -159,6 +159,14 @@ Finally, launch TF2 with only the `-novid -default -autoconfig +host_writeconfig
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page) for their documentation of Source Engine console variables and mechanics
 * and to Valve, for making and updating the best class-based FPS to date with so much customizability on top
 
+## See Also
+
+Here are a few awesome TF2 modifications:
+
+* [No Hats Mod](http://www.teamfortress.tv/35222/no-hats-mod)
+* [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
+* [Particle Limitation Pack](http://www.teamfortress.tv/22586/particle-limitation-pack)
+
 ## Legal
 
 Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo are trademarks and/or registered trademarks of Valve Corporation. Mastercomfig is not associated with nor endorsed by Valve Corporation.
