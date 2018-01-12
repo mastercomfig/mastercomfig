@@ -1,0 +1,25 @@
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(38, 50, 56, 0.7) 10%, rgba(38, 50, 56, 0.7)), url('cp_badlands01.jpg');
+    background-size: cover;
+    background-position: center
+}
+
+.img-separator {
+    height: 40vh;
+    margin-bottom: 2rem
+}
+
+.progress {
+    border-radius: 0
+}
+
+.progress-bar {
+    padding-left: 1rem;
+    text-align: left
+}
+
+section {
+    padding-top: 2rem;
+    padding-bottom: 4rem
+}

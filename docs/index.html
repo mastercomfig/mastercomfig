@@ -5,27 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha256-PCsx7lOyGhyGmzsO5MGXhzwV6UpNTlNf1p6V6w2CppQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="twentytwenty/twentytwenty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" integrity="sha256-akwTLZec/XAFvgYgVH1T5/369lhA2Efr22xzCNl1nHs=" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 
     <title>mastercomfig</title>
   </head>
-  <body>
-    <header class="jumbotron">
+  <body class="bg-dark">
+    <header class="jumbotron jumbotron-fluid text-light">
         <div class="container d-flex align-items-center justify-content-center" style="height: 100%">
             <div class="align-middle text-center">
                 <h1 class="display-4">mastercomfig</h1>
                 <p class="lead">A modern Team Fortress 2 performance and customization config.</p>
-                <a class="btn btn-outline-primary btn-lg" href="https://github.com/mastercoms/mastercomfig/releases/latest">Download</a>
+                <a class="btn btn-outline-light btn-lg" href="https://github.com/mastercoms/mastercomfig/blob/release/README.md#installation-vpk">
+                    <span class="oi oi-data-transfer-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download
+                </a>
             </div>
         </div>
     </header>
 
-    <section>
-        
+    <section class="bg-dark text-light">
+        <div class="container" style="height: 100%">
+            <div class="row d-flex align-items-center justify-content-center" style="height: 100%">
+                <div class="col-md align-middle">
+                    <div class="progress bg-dark">
+                        <div id="mastercomfig-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">141FPS</div>
+                    </div>
+                    <p>mastercomfig comp</p>
+                    <div class="progress bg-dark">
+                        <div id="comanglia-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100">129FPS</div>
+                    </div>
+                    <p>Comanglia's config</p>
+                    <hr class="bg-light" style="margin-bottom: 0.5rem">
+                    <p class="font-weight-light" style="font-size: 0.7rem">FPS = frames per second (higher is better). Measured on i7-870 GTX660 8GB RAM SSD Linux using mastercoms' test benchmark.</p>
+                </div>  
+                <div class="col-md align-middle">
+                    <h1 class="display-5"><span class="oi oi-bolt" title="bolt" aria-hidden="true" style="font-size: 2rem"></span> Performance</h1>
+                    <p class="lead">Get faster load times and a buttery smooth game at high frames with mastercomfig.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="img-separator" style="background: linear-gradient(rgba(38, 50, 56, 0.7) 10%, rgba(38, 50, 56, 0.7)), url('cp_sunshine04.jpg'); background-size: cover; background-position: center; background-attachment: fixed; margin-bottom: 0"></div>
+
+    <section class="bg-dark text-light" style="padding-top: 0; padding-bottom: 0">
+        <div style="background-image: url('network.png'); background-size: cover; height: 100%">
+            <div class="container" style="height: 100%; padding-top: 4rem; padding-bottom: 4rem">
+                <div class="row d-flex align-items-center justify-content-center" style="height: 100%">
+                    <div class="col-md-6 align-middle">
+                        <h1 class="display-5"><span class="oi oi-target" title="target" aria-hidden="true" style="font-size: 2rem"></span> Hitreg</h1>
+                        <p class="lead">With mastercomfig's optimized networking settings that minimize choke and lag, you'll never get a 0 damage headshot again.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="img-separator" style="background: linear-gradient(rgba(38, 50, 56, 0.7) 10%, rgba(38, 50, 56, 0.7)), url('pl_badwater01.jpg'); background-size: cover; background-position: center; background-attachment: fixed"></div>
+
+    <section class="bg-dark text-light">
+        <div class="container" style="height: 100%">
+            <div class="row d-flex align-items-center justify-content-center" style="height: 100%">
+                <div class="col-md align-middle">
+                    <div id="quality-compare" class="twentytwenty-container">
+                        <img src="pl_badwater05_performance.jpg">
+                        <img src="pl_badwater05_quality.jpg">
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md align-middle">
+                    <h1 class="display-5"><span class="oi oi-eye" title="eye" aria-hidden="true" style="font-size: 2rem"></span> Quality</h1>
+                    <p class="lead">
+                        Only the most unoptimized settings have been disabled by default in mastercomfig, so you don't have to sacrifice everything for performance.
+                        Looking for more performance, or quality? Easily customize looks to your exact preference using the many config customization presets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <hr class="bg-light">
+    </section>
+
+    <section class="bg-dark text-light">
+        <div class="container" style="height: 100%">
+            <div class="row d-flex align-items-center justify-content-center" style="height: 100%">
+                <div class="col-md align-middle">
+                    <h1 class="display-5"><span class="oi oi-wrench" title="wrench" aria-hidden="true" style="font-size: 2rem"></span> Customization</h1>
+                    <p class="lead">
+                        Fine tune your game settings with precision using mastercomfig's extensive commenting and value explanations for every command.
+                    </p>
+                </div>
+                <div class="col-md-8 align-middle">
+                    <pre><code class="cpp">
+…
+// =============
+// '--- HUD ---'
+// =============
+// ---------------
+// '-- General --'
+// ---------------
+// General/misc HUD settings
+
+cl_hud_playerclass_use_playermodel 0 // Disable live player model in HUD, also partially fixes animation bug
+//cl_hud_playerclass_use_playermodel 1 // Enable live player model in HUD
+//cl_hud_minmode 1 // HUD min mode
+…
+//cl_software_cursor 1 // Uses a stylized cursor handled by the game instead of the OS
+tf_mm_dashboard_slide_panel_step 10 // Change the horizontal offset of the primary matchmaking panel
+tf_item_inspect_model_auto_spin 1 // Auto spin items in the inspect view
+//tf_item_inspect_model_auto_spin 0 // Do not auto spin items in the inspect view
+tf_item_inspect_model_spin_rate 30 // Rate at which items spin in the inspect view
+tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
+//tf_quest_map_tuner_wobble_magnitude 0 // Disable the red tuner on the contracker
+//tf_build_menu_controller_mode 1 // Use controller style engineer build menu
+//tf_disguise_menu_controller_mode 1 // Controller disguise menu
+//tf_simple_disguise_menu 0 // Concise disguise menu
+//tf_colorblindassist 1 // Colorblind mode
+//cl_disablehtmlmotd 1 // Disable HTML MOTDs (ads, music player, rules, fancy server intros)
+…
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container text-center text-light">
+        <h1 class="display-4">Get frames, get mastercomfig.</h1>
+        <h2 class="display-5 text-muted">Best free TF2 config.</h2>
+        <br>
+        <a class="btn btn-secondary btn-lg" href="https://github.com/mastercoms/mastercomfig/blob/release/README.md#installation-vpk">
+            <span class="oi oi-data-transfer-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download mastercomfig
+        </a>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js" integrity="sha256-VzXcD0HmV1s8RGdJ/yIf7YkZiOZrcxPphaDpwM++pSs=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha256-JNyuT3QsYBdyeKxKBwnGJAJiACWcow2TjhNruIFFPMQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js" integrity="sha256-O89HlAm2WdqzEdqsBihytS0wjt7OGPfbIaGMDaHFSHk=" crossorigin="anonymous"></script>
+    <script src="twentytwenty/jquery.event.move.js"></script>
+    <script src="twentytwenty/jquery.twentytwenty.js"></script>
+    <script>
+        $(function() {
+            $("#quality-compare").twentytwenty({
+                before_label: 'maxperformance',
+                after_label: 'maxquality'
+            });
+        });
+        hljs.initHighlightingOnLoad();
+        var barAnimation = false;
+        $(window).scroll(function() {
+            if ($('#comanglia-bar').visible()) {
+                document.getElementById('mastercomfig-bar').style.width = '100%';
+                document.getElementById('comanglia-bar').style.width = '91%';
+                $(window).off('scroll');
+            }
+        });
+        if ($('#comanglia-bar').visible()) {
+            document.getElementById('mastercomfig-bar').style.width = '100%';
+            document.getElementById('comanglia-bar').style.width = '91%';
+            $(window).off('scroll');
+        }
+    </script>
   </body>
 </html>
