@@ -155,14 +155,16 @@ tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
     <script src="twentytwenty/jquery.event.move.js"></script>
     <script src="twentytwenty/jquery.twentytwenty.js"></script>
     <script>
+        // Init quality image compare
         $(function() {
             $("#quality-compare").twentytwenty({
                 before_label: 'maxperformance',
                 after_label: 'maxquality'
             });
         });
+        // Init customization example highlighting
         hljs.initHighlightingOnLoad();
-        var barAnimation = false;
+        // If we scroll down to the bars, do an anim
         $(window).scroll(function() {
             if ($('#comanglia-bar').visible()) {
                 document.getElementById('mastercomfig-bar').style.width = '100%';
@@ -170,6 +172,7 @@ tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
                 $(window).off('scroll');
             }
         });
+        // If page loaded with bars visible, then still do the anim
         if ($('#comanglia-bar').visible()) {
             document.getElementById('mastercomfig-bar').style.width = '100%';
             document.getElementById('comanglia-bar').style.width = '91%';
