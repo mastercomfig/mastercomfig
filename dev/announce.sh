@@ -20,6 +20,8 @@ formatted_body=${post_body// /+}
 #  -F "body=$formatted_body" -F 'thread_id=42867' -F "token=$TFTV_TOKEN" \
 #  http://www.teamfortress.tv/post/add
 
+printf "\n"
+
 echo $post_body
 
 printf "\n"
