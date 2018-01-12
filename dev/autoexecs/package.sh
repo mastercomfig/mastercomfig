@@ -7,17 +7,18 @@ cd "$BINDIR"
 rm *.cfg -f
 
 # Create preset autoexec combos and names
-declare -a names=("default" "comp" "compquality" "maxperformance" "stripped" "maxquality" "midquality" "badgpu")
-declare -a combos=("" "../../mastercomfig/cfg/presets/comp.cfg" "../../mastercomfig/cfg/presets/compquality.cfg" "../../mastercomfig/cfg/presets/maxperformance.cfg" "../../mastercomfig/cfg/presets/stripped.cfg" "../../mastercomfig/cfg/presets/maxquality.cfg" "../../mastercomfig/cfg/presets/midquality.cfg" "../../mastercomfig/cfg/presets/maxperformance.cfg ../../mastercomfig/cfg/addons/badgpu.cfg")
+declare -a names=("default" "comp" "compquality" "maxperformance" "stripped" "maxquality" "midquality" "igpu")
+declare -a combos=("" "presets/comp" "presets/compquality" "presets/maxperformance" "presets/stripped" "presets/maxquality" "presets/midquality" "presets/maxperformance addons/badgpu")
 
 # Create autoexecs from combos
 for ((i=0; i<${#names[*]}; i++));
 do
-    cat "../../mastercomfig/cfg/comfig.cfg" >> "${names[i]}.cfg"
+    cat "../../mastercomfig/cfg/comfig.cfg" >> "mastercomfig-${names[i]}.cfg"
     for component in ${combos[i]}
     do
-        cat $component >> "${names[i]}.cfg"
+        cat "../../mastercomfig/cfg/$component.cfg" >> "mastercomfig-${names[i]}.cfg"
     done
 done
 
 printf "\n"
+
