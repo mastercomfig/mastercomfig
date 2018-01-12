@@ -5,6 +5,10 @@ header {
     background-position: center
 }
 
+.btn, .btn-lg {
+    border-radius: 0
+}
+
 .img-separator {
     height: 40vh;
     margin-bottom: 2rem
