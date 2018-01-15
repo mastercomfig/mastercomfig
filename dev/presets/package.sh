@@ -32,14 +32,22 @@ for D in *; do
         cp -f ../../mastercomfig/dxsupport_override.cfg "${D}"/dxsupport_override.cfg
         cp -f ../../mastercomfig/glbaseshaders.cfg "${D}"/glbaseshaders.cfg
         cp -f ../../mastercomfig/texture_preload_list.txt "${D}"/texture_preload_list.txt
+        mkdir -p "${D}"/scripts
+        cp -f ../../mastercomfig/scripts/client_precache.txt "${D}"/scripts/client_precache.txt
+        cp -f ../../mastercomfig/scripts/extra_models.txt "${D}"/scripts/extra_models.txt
         vpk "${D}"
     fi
 done
 
 # Overwrite common files
-cp -f ../../01-mastercomfig_dx_maxperformance/dxsupport_override.cfg mastercomfig-maxperformance/dxsupport_override.cfg
-cp -f ../../01-mastercomfig_dx_maxperformance/dxsupport_override.cfg mastercomfig-stripped/dxsupport_override.cfg
-cp -f ../../01-mastercomfig_dx_maxquality/dxsupport_override.cfg mastercomfig-maxquality/dxsupport_override.cfg
+cp -f ../../01-mastercomfig_maxperformance/dxsupport_override.cfg mastercomfig-maxperformance/dxsupport_override.cfg
+cp -f ../../01-mastercomfig_maxperformance/dxsupport_override.cfg mastercomfig-stripped/dxsupport_override.cfg
+cp -f ../../01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mastercomfig-maxperformance/scripts/soundscapes_manifest.txt
+cp -f ../../01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mastercomfig-stripped/scripts/soundscapes_manifest.txt
+cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-maxperformance/scripts/surfaceproperties_manifest.txt
+cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-stripped/scripts/surfaceproperties_manifest.txt
+cp -f ../../01-mastercomfig_maxquality/dxsupport_override.cfg mastercomfig-maxquality/dxsupport_override.cfg
+cp -f ../../01-mastercomfig_maxquality/scripts/extra_models.txt mastercomfig-maxquality/scripts/extra_models.txt
 
 # Package into VPK
 for D in *; do

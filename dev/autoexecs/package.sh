@@ -18,6 +18,7 @@ do
     do
         cat "../../mastercomfig/cfg/$component.cfg" >> "mastercomfig-${names[i]}.cfg"
     done
+    dos2unix "mastercomfig-${names[i]}.cfg"
 done
 
 printf "\n"
