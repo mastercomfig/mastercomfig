@@ -46,6 +46,8 @@ cp -f ../../01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mast
 cp -f ../../01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mastercomfig-stripped/scripts/soundscapes_manifest.txt
 cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-maxperformance/scripts/surfaceproperties_manifest.txt
 cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-stripped/scripts/surfaceproperties_manifest.txt
+cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties.txt mastercomfig-maxperformance/scripts/surfaceproperties.txt
+cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties.txt mastercomfig-stripped/scripts/surfaceproperties.txt
 cp -f ../../01-mastercomfig_maxquality/dxsupport_override.cfg mastercomfig-maxquality/dxsupport_override.cfg
 cp -f ../../01-mastercomfig_maxquality/scripts/extra_models.txt mastercomfig-maxquality/scripts/extra_models.txt
 
