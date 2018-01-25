@@ -1,9 +1,11 @@
-[![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-738bd7.svg?style=flat-square)](https://discord.gg/CuPb2zV)
+[![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-738bd7.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
+[![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?style=flat-square)](https://steamcommunity.com/groups/comfig)
+[![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
 
 ## Quick Links
-* [Installation](https://github.com/mastercoms/tf2cfg#installation)
-* [Updating](https://github.com/mastercoms/tf2cfg#updating)
-* [Troubleshooting](https://github.com/mastercoms/tf2cfg#troubleshooting)
+* [Installation](#installation)
+* [Updating](#updating)
+* [Troubleshooting](#troubleshooting)
 
 # mastercomfig
 
@@ -24,56 +26,50 @@ probably see a fix in a future update.
 
 ## Installation
 
-### Installation (VPK)
+### 1. Clean your TF2 install
 
-Download the VPK of your choice from the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest), drag the VPK to your `tf/custom` folder after [cleaning your config](#clean-up), along with any addons if needed.
+To make sure there are no user settings that conflict with the config, you will have
+to [clean up](#clean-up) your TF2 install.
 
-For more information about presets or addons to help you choose, see [here](https://github.com/mastercoms/tf2cfg/wiki/Presets-and-Addons).
+### 2. Choose your preset and addons
 
-To get to your `tf/custom` folder, right click Team Fortress 2 in your library, click properties,
-go to the `local files` tab, and then click the `browse local files...` button. Then, open the `tf` folder
-and then open the `custom` folder.
+First, you'll have to figure out what preset and addons you want to use for your computer.
+A preset is a certain quality level and addons further adapt the config to your specific 
+hardware. You can find infomation about all presets and addons 
+[here](https://github.com/mastercoms/mastercomfig/wiki/Presets-and-Addons).
 
-If you have your own `autoexec.cfg` already, rename it to `custom.cfg`.
+### 3. Download and Install
 
-Finally, go to Team Fortress 2 properties again and click the `set launch options...` button.
-Copy and paste `-novid -nojoy -nosteamcontroller -noff -softparticlesdefaultoff -reuse` into the box and click ok.
-More information on launch options can be found [here](https://github.com/mastercoms/tf2cfg/wiki/Launch-Options).
+Download the files of your choice from the [latest release](https://github.com/mastercoms/mastercomfig/releases/latest), and then drag them to your `tf/custom` folder.
 
-Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
+To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click **Properties**,
+go to the **Local Files** tab, and then click the **Browse Local Files...** button. Then in the files app 
+that appears, open the `tf` folder and then open the `custom` folder.
 
-### Installation (ZIP)
+### 4. Set Launch Options
 
-Download `mastercomfig.zip` from the [latest release](https://github.com/mastercoms/tf2cfg/releases/latest) and then extract the `mastercomfig` and `mastercomfig_exec` folders to `TF2_FOLDER/tf/custom` after [cleaning your config](#clean-up).
+Right click Team Fortress 2 in your Steam library, click **Properties** and click the **Set Launch Options...** button.
+In the window that appears, remove anything that's in there and paste `-novid -nojoy -nosteamcontroller -noff -softparticlesdefaultoff -reuse` into the box and click ok.
 
-To get to the `TF2_FOLDER`, right click Team Fortress 2 in your library, click properties,
-go to the `local files` tab, and then click the `browse local files...` button.
+More information on launch options can be found [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
 
-If you already have your own `autoexec.cfg`, copy the contents of `mastercomfig_exec/cfg/autoexec.cfg`
-to the top of your own `autoexec.cfg` and then delete the `mastercomfig_exec` folder. Do the same with `listenserver.cfg`.
+### 5. custom.cfg (optional)
 
-Finally, go to Team Fortress 2 properties again and click the `set launch options...` button.
-Copy and paste `-novid -nojoy -nosteamcontroller -noff -softparticlesdefaultoff -reuse` into the box and click ok.
-More information on launch options can be found in `mastercomfig_exec/cfg/autoexec.cfg`.
+If you have your own `autoexec.cfg` already, rename it to `custom.cfg`, but make sure you don't have any
+conflicting configs in there.
 
-You can also find some instructions at the bottom of `mastercomfig_exec/cfg/autoexec.cfg` to change the config for maximum performance, maximum quality, etc.
+You can also create a `custom.cfg` in your `tf/cfg` folder to override any settings in the config.
 
-If you're using Linux or macOS, check out the wiki for [some optional instructions](https://github.com/mastercoms/tf2cfg/wiki/OpenGL-Systems).
+### 6. Fixing Issues
 
-Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
+Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
 
 ## Updating
 
-### Updating (VPK)
+When a new release comes out, check out the [latest release](https://github.com/mastercoms/mastercomfig/releases/latest)
+and then download the latest files and drag them into your `tf/custom` folder, replacing the old files.
 
-Drag the new VPK to your custom folder, replacing the old one.
-
-### Updating (ZIP)
-
-Download the update's release ZIP and then extract the `mastercomfig` folder to `TF2_FOLDER/tf/custom`.
-
-You won't need to copy the other folders unless specified in the update. This means that if you miss a few updates,
-make sure to look through the release notes for each update you missed to see if the other folders require an update.
+This config gets updates frequently, so to get the latest improvements, make sure you check here for new releases frequently, or you can get notifications about updates on the [Discord](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config), [Steam Group](https://steamcommunity.com/groups/comfig) or [teamfortress.tv thread](https://discord.gg/CuPb2zV).
 
 ## Clean up
 
@@ -81,10 +77,11 @@ make sure to look through the release notes for each update you missed to see if
 custom settings before you do this.**
 
 If you have already have a config, or want to remove mastercomfig, delete any configs you
-may have in `TF2_FOLDER/tf/custom` and delete the `TF2_FOLDER/tf/cfg` folder.
+may have in `tf/custom` and delete the `tf/cfg` folder.
 Then [verify your game files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335) using Steam.
 
 Next, if you have Steam Cloud Synchronization enabled, make all the files in `STEAM_FOLDER/userdata/USER_ID/440/remote/cfg` blank. Do not delete them, or else Steam Cloud will redownload them.
+Alternatively, you can [disable Steam Cloud](https://support.steampowered.com/kb_article.php?ref=6736-QEIG-8941#enabling).
 
 Finally, launch TF2 with only the `-novid -default -autoconfig +host_writeconfig +mat_savechanges +quit` launch options. The game will launch and exit. Afterwards, remove these launch options.
 
@@ -112,42 +109,52 @@ Finally, launch TF2 with only the `-novid -default -autoconfig +host_writeconfig
   * Optimized ropes
   * Optimized OpenGL
   * Optimized item panel loading
+  * Removed extra cosmetic map models (UFOs, invasion posters, rockets)
 * Start up
   * Cleaned up texture preload list
+  * Cleaned up client precache
   * Increased memory for OpenGL shader cache
 * Memory/IO
   * Persistent LZMA buffer
   * Filesystem optimizations
   * Fully async IO
+  * Optimized memory usage
 * Networking
   * Increased data rate and split rate
   * Reduced choke
   * Reuses sockets if available
+  * Optimizes prediction and interp systems for better hitreg
   * Client view smoothing
   * Increased client timeout
   * Matchmaking improvements and fixes
   * Increased max file size for extra content
 * Sound
   * Asynchronous sound and mixing
-  * Adjusted phonemes
+  * Adjusted lip sync
   * Minimized sound delay
   * Improved sound performance
   * Enhanced sound quality and spatialization
 * Input
-  * Key time from smoothed frametime
-  * Optional same sensitivity for scope
+  * Optional same sensitivity for scope and other mouse enhancements
 
 ## Screenshots
 
-[Screenshots are available on the wiki](https://github.com/mastercoms/tf2cfg/wiki/Screenshots).
+[Screenshots are available on the wiki](https://github.com/mastercoms/mastercomfig/wiki/Screenshots).
 
 ## Troubleshooting
 
-[You can find solutions to common problems on the wiki](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting).
+[You can find solutions to common problems on the wiki](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
 
-## Benchmarks
+## Alternative ZIP installation
 
-[Benchmarks can be found on the teamfortress.tv thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/).
+https://github.com/mastercoms/mastercomfig/wiki/Alternative-ZIP-Installation
+
+## See Also
+
+Here are a few awesome TF2 modifications:
+
+* [No Hats Mod](http://www.teamfortress.tv/35222/no-hats-mod) — Remove cosmetics from players
+* [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script) — Get cleaner particles for explosions
 
 ## Credits
 
@@ -155,17 +162,9 @@ Finally, launch TF2 with only the `-novid -default -autoconfig +host_writeconfig
 * [Comanglia](http://www.teamfortress.tv/25328/comanglias-config-fps-guide) for continuing what Chris started and helping a bit with my config
 * [Rhapsody](http://rhapsodysl.github.io/perfconfig/) for updating Chris' config
 * [Felik](http://www.teamfortress.tv/44076/se-config-framework-feliks-config-3) for providing an alternative to Chris-based configs
-* The TeamFortress.TV community in the [config thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config/) for their continued support, advice and benchmarks. (Special Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby, Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz, JarateKing, maximsmol and perhaps many others)
+* The community for their continued support, advice and benchmarks. (Special Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby, Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz, JarateKing, maximsmol and perhaps many others)
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page) for their documentation of Source Engine console variables and mechanics
 * and to Valve, for making and updating the best class-based FPS to date with so much customizability on top
-
-## See Also
-
-Here are a few awesome TF2 modifications:
-
-* [No Hats Mod](http://www.teamfortress.tv/35222/no-hats-mod)
-* [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
-* [Particle Limitation Pack](http://www.teamfortress.tv/22586/particle-limitation-pack)
 
 ## Legal
 
