@@ -40,7 +40,8 @@ hardware. You can find infomation about all presets and addons
 
 ### 3. Download and Install
 
-Download the files of your choice from the [latest release](https://github.com/mastercoms/mastercomfig/releases/latest), and then drag them to your `tf/custom` folder.
+Download the files of your choice from the [latest release](https://github.com/mastercoms/mastercomfig/releases/latest),
+and then drag them to your `tf/custom` folder.
 
 To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click **Properties**,
 go to the **Local Files** tab, and then click the **Browse Local Files...** button. Then in the files app 
@@ -51,7 +52,7 @@ that appears, open the `tf` folder and then open the `custom` folder.
 Right click Team Fortress 2 in your Steam library, click **Properties** and click the **Set Launch Options...** button.
 In the window that appears, remove anything that's in there and paste `-novid -nojoy -nosteamcontroller -noff -softparticlesdefaultoff -reuse` into the box and click ok.
 
-More information on launch options can be found [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
+More information on launch options and choosing a DirectX version can be found [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
 
 ### 5. custom.cfg (optional)
 
