@@ -64,6 +64,9 @@ You can also create a `custom.cfg` in your `tf/cfg` folder to override any setti
 
 Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
 
+### 7. Operating system optimizations
+Although not strictly TF2 related, you can improve your performance at the OS level: [Windows](https://github.com/mastercoms/mastercomfig/wiki/Windows-Systems), [Linux](https://github.com/mastercoms/mastercomfig/wiki/Linux-Systems)
+
 ## Updating
 
 When a new release comes out, check out the [latest release](https://github.com/mastercoms/mastercomfig/releases/latest)
