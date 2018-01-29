@@ -1,4 +1,4 @@
-[![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-738bd7.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
+[![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
 [![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?style=flat-square)](https://steamcommunity.com/groups/comfig)
 [![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
 
