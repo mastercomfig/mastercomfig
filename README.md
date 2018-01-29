@@ -143,15 +143,15 @@ Finally, launch TF2 with only the `-novid -default -autoconfig +host_writeconfig
 
 ## Screenshots
 
-[Screenshots are available on the wiki](https://github.com/mastercoms/mastercomfig/wiki/Screenshots).
+Wondering what a certain preset looks like on different maps and viewmodels? You can look at the screenshots on [cfg.tf](https://cfg.tf/make/#graphics).
 
 ## Troubleshooting
 
-[You can find solutions to common problems on the wiki](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
+Having issues (like crashes or local servers not working where you can't move or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
 
 ## Alternative ZIP installation
 
-https://github.com/mastercoms/mastercomfig/wiki/Alternative-ZIP-Installation
+If you absolutely know what you're doing and need the ZIP installation, you can see [the instructions](https://github.com/mastercoms/mastercomfig/wiki/Alternative-ZIP-Installation) (not recommended) on the wiki. 
 
 ## See Also
 
@@ -166,7 +166,7 @@ Here are a few awesome TF2 modifications:
 * [Comanglia](http://www.teamfortress.tv/25328/comanglias-config-fps-guide) for continuing what Chris started and helping a bit with my config
 * [Rhapsody](http://rhapsodysl.github.io/perfconfig/) for updating Chris' config
 * [Felik](http://www.teamfortress.tv/44076/se-config-framework-feliks-config-3) for providing an alternative to Chris-based configs
-* The community for their continued support, advice and benchmarks. (Special Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby, Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz, JarateKing, maximsmol and perhaps many others)
+* The community for their continued support, advice and benchmarks. (Special Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby, Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz, JarateKing, maximsmol, Fraklin and perhaps many others)
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page) for their documentation of Source Engine console variables and mechanics
 * and to Valve, for making and updating the best class-based FPS to date with so much customizability on top
 
