@@ -1,4 +1,0 @@
-Are local servers not working for you (not being able to move or shoot)?
-
-Enter host_thread_mode 0 into console for your local server session
-and then enter host_thread_mode 1 when you are done.
