@@ -4,16 +4,8 @@
 # These files should have LF line endings
 *.sh eol=lf
 .git* eol=lf
-*.html eol=lf
-*.css eol=lf
-*.js eol=lf
 
 # These files are text files
 *.cfg text
 *.md text
 *.txt text
-
-# These files are binary
-*.cache binary
-*.jpg binary
-*.png binary
