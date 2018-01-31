@@ -1,9 +1,9 @@
 # Reporting issues
 
-1. Search [current issues](https://github.com/mastercoms/tf2cfg/issues)
-   and [troubleshooting steps](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting)
+1. Search [current issues](https://github.com/mastercoms/mastercomfig/issues)
+   and [troubleshooting steps](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting)
    to see if your issue is already known.
-2. If not, [create an issue](https://github.com/mastercoms/tf2cfg/issues/new).
+2. If not, [create an issue](https://github.com/mastercoms/mastercomfig/issues/new).
 3. Title your issue with something short but descriptive, like "Missing models
    on load", not "i need help" or "hey problem found in your config please fix,
    thanks!!"
@@ -23,9 +23,9 @@
 
 # Requesting new features
 
-1. Search [current issues](https://github.com/mastercoms/tf2cfg/issues)
+1. Search [current issues](https://github.com/mastercoms/mastercomfig/issues)
    to see if your feature has already been requested.
-2. If not, [create a feature request](https://github.com/mastercoms/tf2cfg/issues/new).
+2. If not, [create a feature request](https://github.com/mastercoms/mastercomfig/issues/new).
 3. Title your feature request with something short but descriptive, not "cool
     idea i had" or "please look at this one thanks very much".
 4. Describe the feature you want as much detail as you can, and also explain why
@@ -185,7 +185,7 @@ changes.
 ## Making your pull request
 
 Yay! You made your changes and now it's time to send to off to be included in
-the config. Just [make a new pull request](https://github.com/mastercoms/tf2cfg/compare)
+the config. Just [make a new pull request](https://github.com/mastercoms/mastercomfig/compare)
 and name it something nice and descriptive! In your post, why you made the
 change along with any other information you find important.
 

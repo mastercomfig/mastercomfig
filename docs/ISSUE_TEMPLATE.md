@@ -1,7 +1,7 @@
 ## Reporting an issue
 
-1. Search [current issues](https://github.com/mastercoms/tf2cfg/issues) and
-[troubleshooting](https://github.com/mastercoms/tf2cfg/wiki/Troubleshooting)
+1. Search [current issues](https://github.com/mastercoms/mastercomfig/issues) and
+[troubleshooting](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting)
 to see if your issue is already known.
 2. Title your issue with something short but descriptive, like "Missing models
 on load", not "i need help" or "hey problem found in your config please fix,
@@ -22,7 +22,7 @@ thanks!!"
 
 ## Requesting new features
 
-1. Search [current issues](https://github.com/mastercoms/tf2cfg/issues)
+1. Search [current issues](https://github.com/mastercoms/mastercomfig/issues)
    to see if your feature has already been requested.
 2. Title your feature request with something short but descriptive, like "Add
    better options for pyrovision", not "cool idea i had" or "please look at this
