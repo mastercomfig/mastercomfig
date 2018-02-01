@@ -129,7 +129,7 @@ options. The game will launch and exit. Afterwards, remove these launch options.
   * Optimized particles
   * Optimized water
   * Optimized post processing effects
-  * Optimized antialiasing and texture filtering
+  * Optimized anti-aliasing and texture filtering
   * Optimized characters
   * Optimized decals
   * Optimized gibs
@@ -144,7 +144,7 @@ options. The game will launch and exit. Afterwards, remove these launch options.
   * Increased memory for OpenGL shader cache
 * Memory/IO
   * Persistent LZMA buffer
-  * Filesystem optimizations
+  * File system optimizations
   * Fully async IO
   * Optimized memory usage
 * Networking
