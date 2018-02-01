@@ -35,8 +35,9 @@
 
 mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
-[teamfortress.tv](http://www.teamfortress.tv/user/mastercoms) or
-[Reddit](https://www.reddit.com/user/mastercoms).
+[teamfortress.tv](http://www.teamfortress.tv/user/mastercoms)
+[Reddit](https://www.reddit.com/user/mastercoms) or by email at
+mastercoms@tutanota.de.
 
 # Contributing
 
@@ -186,8 +187,9 @@ changes.
 
 Yay! You made your changes and now it's time to send to off to be included in
 the config. Just [make a new pull request](https://github.com/mastercoms/mastercomfig/compare)
-and name it something nice and descriptive! In your post, why you made the
-change along with any other information you find important.
+and name it something nice and descriptive! In your post, include an explanation
+of the changes, why you made those changes, along with any other information you
+find important.
 
 # Testing Config Changes
 
