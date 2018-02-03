@@ -113,6 +113,12 @@ Finally, launch TF2 with only the
 `-novid -default -autoconfig +host_writeconfig +mat_savechanges +quit` launch
 options. The game will launch and exit. Afterwards, remove these launch options.
 
+## Alternative ZIP installation
+
+If you absolutely know what you're doing and need the ZIP installation, you can
+see [the instructions](https://github.com/mastercoms/mastercomfig/wiki/Alternative-ZIP-Installation)
+(not recommended) on the wiki.
+
 ## Features
 
 * Customization
@@ -129,7 +135,7 @@ options. The game will launch and exit. Afterwards, remove these launch options.
   * Optimized particles
   * Optimized water
   * Optimized post processing effects
-  * Optimized antialiasing and texture filtering
+  * Optimized anti-aliasing and texture filtering
   * Optimized characters
   * Optimized decals
   * Optimized gibs
@@ -144,7 +150,7 @@ options. The game will launch and exit. Afterwards, remove these launch options.
   * Increased memory for OpenGL shader cache
 * Memory/IO
   * Persistent LZMA buffer
-  * Filesystem optimizations
+  * File system optimizations
   * Fully async IO
   * Optimized memory usage
 * Networking
@@ -174,12 +180,6 @@ You can look at the screenshots on [cfg.tf](https://cfg.tf/make/#graphics).
 
 Having issues (like crashes or local servers not working where you can't move
 or shoot)? Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
-
-## Alternative ZIP installation
-
-If you absolutely know what you're doing and need the ZIP installation, you can
-see [the instructions](https://github.com/mastercoms/mastercomfig/wiki/Alternative-ZIP-Installation)
-(not recommended) on the wiki.
 
 ## See Also
 

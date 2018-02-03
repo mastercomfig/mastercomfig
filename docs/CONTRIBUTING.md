@@ -8,12 +8,13 @@
    on load", not "i need help" or "hey problem found in your config please fix,
    thanks!!"
 4. Include the following information in your report:
+    * A description of the issue
     * How you encountered the issue
     * Config version (don't say latest, say the actual version, found in the
       startup console output)
     * Config preset and addon(s)
     * Custom values (if any)
-    * DX level
+    * DirectX level (dxlevel)
     * Launch options
     * Operating system (OS)
     * Graphics card (GPU)
@@ -27,16 +28,17 @@
    to see if your feature has already been requested.
 2. If not, [create a feature request](https://github.com/mastercoms/mastercomfig/issues/new).
 3. Title your feature request with something short but descriptive, not "cool
-    idea i had" or "please look at this one thanks very much".
-4. Describe the feature you want as much detail as you can, and also explain why
-   the feature should be included.
+   idea i had" or "please look at this one thanks very much".
+4. Describe the feature you want in as much detail as you can, and also explain
+   why the feature should be included.
 
 # Contact the maintainer
 
 mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
-[teamfortress.tv](http://www.teamfortress.tv/user/mastercoms) or
-[Reddit](https://www.reddit.com/user/mastercoms).
+[teamfortress.tv](http://www.teamfortress.tv/user/mastercoms)
+[Reddit](https://www.reddit.com/user/mastercoms) or by email at
+mastercoms@tutanota.de.
 
 # Contributing
 
@@ -91,10 +93,10 @@ There are currently 4 categories for launch options:
   benefit all users
 * `Extra`: These are launch options people find to be personal preference or for
   use cases that cannot be applied to all users
-* `Experimental`: These are launch options that are being tested to be moved
-  elsewhere as their effects are not clear
 * `Niche`: These are launch options most people will not use, but will still
   satisfy a valid use case
+* `Experimental`: These are launch options that are being tested to be moved
+  elsewhere as their effects are not clear
 
 Put your launch option in the appropriate section and if it's in the
 `Launch Options` section, add it to the launch options line for easy copying.
@@ -118,7 +120,8 @@ As you can see, default ConVar values should be at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
-Default values are ones that disable unoptimized features and optimize the game without making it look bad.
+Default values are ones that disable unoptimized features and optimize the game
+without making it look bad.
 
 ConVars and commands are found by launching TF2 with
 `-novid -default -autoconfig -condebug +cvarlist +quit` and then reading
@@ -186,8 +189,9 @@ changes.
 
 Yay! You made your changes and now it's time to send to off to be included in
 the config. Just [make a new pull request](https://github.com/mastercoms/mastercomfig/compare)
-and name it something nice and descriptive! In your post, why you made the
-change along with any other information you find important.
+and name it something nice and descriptive! In your post, include an explanation
+of the changes, why you made those changes, along with any other information you
+find important.
 
 # Testing Config Changes
 
