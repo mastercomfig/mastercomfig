@@ -44,9 +44,11 @@ addons [here](https://github.com/mastercoms/mastercomfig/wiki/Presets-and-Addons
 
 ### 3. Download and Install
 
-Download the files of your choice from the
+Download the VPK files of your choice from the
 [latest release](https://github.com/mastercoms/mastercomfig/releases/latest),
-and then drag them to your `tf/custom` folder.
+and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
+in a folder inside your `custom` folder, put them in the `custom` folder itself.
+You don't have to rename anything either, just drag the files as is into `custom`.
 
 To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 **Properties**, go to the **Local Files** tab, and then click the
@@ -74,7 +76,7 @@ You can also create a `custom.cfg` in your `tf/cfg` folder to override any setti
 ### 6. Fixing Issues
 
 Having issues (like crashes or local servers not working where you can't move or shoot)?
-Check out some[troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
+Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
 
 ### 7. Operating system optimizations
 Although not strictly TF2 related, you can improve your performance at the OS
