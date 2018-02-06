@@ -7,15 +7,8 @@ cd "$BINDIR"
 rm *.vpk -f
 rm */ -rf
 
-# Create folders
-
-# Create default
-mkdir -p mastercomfig-default/cfg
-touch mastercomfig-default/cfg/autoexec.cfg
-echo -e "exec comfig\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/ssd\r\nexec addons/transparent_viewmodels\r\nexec custom\r\n" > mastercomfig-default/cfg/autoexec.cfg
-
 # Create presets
-declare -a presets=("comp" "compquality" "maxperformance" "stripped" "maxquality" "midquality")
+declare -a presets=("comp" "compquality" "maxperformance" "stripped" "maxquality" "midquality" "default")
 
 for P in "${presets[@]}"; do
     mkdir -p mastercomfig-"${P}"/cfg/presets
