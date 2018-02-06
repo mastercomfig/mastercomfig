@@ -19,7 +19,7 @@ declare -a presets=("comp" "compquality" "maxperformance" "stripped" "maxquality
 
 for P in "${presets[@]}"; do
     mkdir -p mastercomfig-"${P}"/cfg/presets
-    cp -f ../../mastercomfig/cfg/presets/"${P}".cfg mastercomfig-"${P}"/cfg/presets/"${P}".cfg
+    cp -f ../../config/mastercomfig/cfg/presets/"${P}".cfg mastercomfig-"${P}"/cfg/presets/"${P}".cfg
     touch mastercomfig-"${P}"/cfg/autoexec.cfg
     echo -e "exec comfig\r\nexec presets/${P}\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/ssd\r\nexec addons/transparent_viewmodels\r\nexec custom\r\n" > mastercomfig-"${P}"/cfg/autoexec.cfg
 done
@@ -27,29 +27,29 @@ done
 # Fill folders with common files
 for D in *; do
     if [ -d "${D}" ]; then
-        cp -f ../../mastercomfig/cfg/comfig.cfg "${D}"/cfg/comfig.cfg
-        cp -f ../../mastercomfig/cfg/listenserver.cfg "${D}"/cfg/listenserver.cfg
-        cp -f ../../mastercomfig/dxsupport_override.cfg "${D}"/dxsupport_override.cfg
-        cp -f ../../mastercomfig/glbaseshaders.cfg "${D}"/glbaseshaders.cfg
-        cp -f ../../mastercomfig/texture_preload_list.txt "${D}"/texture_preload_list.txt
+        cp -f ../../config/mastercomfig/cfg/comfig.cfg "${D}"/cfg/comfig.cfg
+        cp -f ../../config/mastercomfig/cfg/listenserver.cfg "${D}"/cfg/listenserver.cfg
+        cp -f ../../config/mastercomfig/dxsupport_override.cfg "${D}"/dxsupport_override.cfg
+        cp -f ../../config/mastercomfig/glbaseshaders.cfg "${D}"/glbaseshaders.cfg
+        cp -f ../../config/mastercomfig/texture_preload_list.txt "${D}"/texture_preload_list.txt
         mkdir -p "${D}"/scripts
-        cp -f ../../mastercomfig/scripts/client_precache.txt "${D}"/scripts/client_precache.txt
-        cp -f ../../mastercomfig/scripts/extra_models.txt "${D}"/scripts/extra_models.txt
+        cp -f ../../config/mastercomfig/scripts/client_precache.txt "${D}"/scripts/client_precache.txt
+        cp -f ../../config/mastercomfig/scripts/extra_models.txt "${D}"/scripts/extra_models.txt
         vpk "${D}"
     fi
 done
 
 # Overwrite common files
-cp -f ../../01-mastercomfig_maxperformance/dxsupport_override.cfg mastercomfig-maxperformance/dxsupport_override.cfg
-cp -f ../../01-mastercomfig_maxperformance/dxsupport_override.cfg mastercomfig-stripped/dxsupport_override.cfg
-cp -f ../../01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mastercomfig-maxperformance/scripts/soundscapes_manifest.txt
-cp -f ../../01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mastercomfig-stripped/scripts/soundscapes_manifest.txt
-cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-maxperformance/scripts/surfaceproperties_manifest.txt
-cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-stripped/scripts/surfaceproperties_manifest.txt
-cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties.txt mastercomfig-maxperformance/scripts/surfaceproperties.txt
-cp -f ../../01-mastercomfig_maxperformance/scripts/surfaceproperties.txt mastercomfig-stripped/scripts/surfaceproperties.txt
-cp -f ../../01-mastercomfig_maxquality/dxsupport_override.cfg mastercomfig-maxquality/dxsupport_override.cfg
-cp -f ../../01-mastercomfig_maxquality/scripts/extra_models.txt mastercomfig-maxquality/scripts/extra_models.txt
+cp -f ../../config/01-mastercomfig_maxperformance/dxsupport_override.cfg mastercomfig-maxperformance/dxsupport_override.cfg
+cp -f ../../config/01-mastercomfig_maxperformance/dxsupport_override.cfg mastercomfig-stripped/dxsupport_override.cfg
+cp -f ../../config/01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mastercomfig-maxperformance/scripts/soundscapes_manifest.txt
+cp -f ../../config/01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mastercomfig-stripped/scripts/soundscapes_manifest.txt
+cp -f ../../config/01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-maxperformance/scripts/surfaceproperties_manifest.txt
+cp -f ../../config/01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-stripped/scripts/surfaceproperties_manifest.txt
+cp -f ../../config/01-mastercomfig_maxperformance/scripts/surfaceproperties.txt mastercomfig-maxperformance/scripts/surfaceproperties.txt
+cp -f ../../config/01-mastercomfig_maxperformance/scripts/surfaceproperties.txt mastercomfig-stripped/scripts/surfaceproperties.txt
+cp -f ../../config/01-mastercomfig_maxquality/dxsupport_override.cfg mastercomfig-maxquality/dxsupport_override.cfg
+cp -f ../../config/01-mastercomfig_maxquality/scripts/extra_models.txt mastercomfig-maxquality/scripts/extra_models.txt
 
 # Package into VPK
 for D in *; do

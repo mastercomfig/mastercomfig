@@ -15,13 +15,9 @@ curl -X POST -H 'Content-type: application/json' \
 
 post_body="[url=https://github.com/mastercoms/mastercomfig/releases/tag/$1]$1[/url] released with $2."
 
-#formatted_body=${post_body// /+}
-#curl -X POST -H 'Content-type: application/x-www-form-urlencoded' \
-#  -F "body=$formatted_body" -F 'thread_id=42867' -F "token=$TFTV_TOKEN" \
-#  http://www.teamfortress.tv/post/add
-
 printf "\n"
 
+echo "BBCode announcement for tf.tv and Steam Group:"
 echo $post_body
 
 printf "\n"

@@ -187,7 +187,7 @@ changes.
 
 ## Making your pull request
 
-Yay! You made your changes and now it's time to send to off to be included in
+Yay! You made your changes and now it's time to send it off to be included in
 the config. Just [make a new pull request](https://github.com/mastercoms/mastercomfig/compare)
 and name it something nice and descriptive! In your post, include an explanation
 of the changes, why you made those changes, along with any other information you
@@ -218,4 +218,4 @@ FPS in a filled casual match.
 
 Generally you won't have to do this, but you can generate VPK packages for all
 presets and addons as well as a ZIP for the config. Use the `package.sh` script
-in the `dev` folder.
+in the `dev` folder. You can learn more about the dev scripts in dev/README.md.

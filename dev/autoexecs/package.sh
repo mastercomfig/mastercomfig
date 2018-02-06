@@ -13,10 +13,10 @@ declare -a combos=("" "presets/comp" "presets/compquality" "presets/maxperforman
 # Create autoexecs from combos
 for ((i=0; i<${#names[*]}; i++));
 do
-    cat "../../mastercomfig/cfg/comfig.cfg" >> "mastercomfig-${names[i]}.cfg"
+    cat "../../config/mastercomfig/cfg/comfig.cfg" >> "mastercomfig-${names[i]}.cfg"
     for component in ${combos[i]}
     do
-        cat "../../mastercomfig/cfg/$component.cfg" >> "mastercomfig-${names[i]}.cfg"
+        cat "../../config/mastercomfig/cfg/$component.cfg" >> "mastercomfig-${names[i]}.cfg"
     done
     dos2unix "mastercomfig-${names[i]}.cfg"
 done

@@ -12,7 +12,7 @@ declare -a addons=("badcpu" "badgpu" "ssd" "transparent_viewmodels")
 
 for A in "${addons[@]}"; do
     mkdir -p mastercomfig-"${A}"-addon/cfg/addons
-    cp -f ../../mastercomfig/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
+    cp -f ../../config/mastercomfig/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
 done
 
 # Package into VPK
