@@ -13,11 +13,17 @@ start with `01` so they are loaded in the correct order to override conflicting
 files.
 
 ### 01-mastercomfig_maxperformance
-These are overrides and extra files for the `maxperformance` and `stripped`
-presets.
+These are overrides for the `maxperformance` and `stripped` presets.
 
 ### 01-mastercomfig_maxquality
 These are overrides for the `maxquality` preset.
+
+### 01-mastercomfig_no_footsteps
+These are overrides to remove footstep sounds, used in the `stripped` preset.
+
+### 01-mastercomfig_no_soundscapes
+These are overrides to remove sounds, used in the `maxperformance` and
+`stripped` presets.
 
 ## mastercomfig folders
 These are the main config files that get executed and read by the engine.
