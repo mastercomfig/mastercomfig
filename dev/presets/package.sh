@@ -28,21 +28,21 @@ for D in *; do
         mkdir -p "${D}"/scripts
         cp -f ../../config/mastercomfig/scripts/client_precache.txt "${D}"/scripts/client_precache.txt
         cp -f ../../config/mastercomfig/scripts/extra_models.txt "${D}"/scripts/extra_models.txt
-        vpk "${D}"
     fi
 done
 
-# Overwrite common files
-cp -f ../../config/01-mastercomfig_maxperformance/dxsupport_override.cfg mastercomfig-maxperformance/dxsupport_override.cfg
-cp -f ../../config/01-mastercomfig_maxperformance/dxsupport_override.cfg mastercomfig-stripped/dxsupport_override.cfg
-cp -f ../../config/01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mastercomfig-maxperformance/scripts/soundscapes_manifest.txt
-cp -f ../../config/01-mastercomfig_maxperformance/scripts/soundscapes_manifest.txt mastercomfig-stripped/scripts/soundscapes_manifest.txt
-cp -f ../../config/01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-maxperformance/scripts/surfaceproperties_manifest.txt
-cp -f ../../config/01-mastercomfig_maxperformance/scripts/surfaceproperties_manifest.txt mastercomfig-stripped/scripts/surfaceproperties_manifest.txt
-cp -f ../../config/01-mastercomfig_maxperformance/scripts/surfaceproperties.txt mastercomfig-maxperformance/scripts/surfaceproperties.txt
-cp -f ../../config/01-mastercomfig_maxperformance/scripts/surfaceproperties.txt mastercomfig-stripped/scripts/surfaceproperties.txt
-cp -f ../../config/01-mastercomfig_maxquality/dxsupport_override.cfg mastercomfig-maxquality/dxsupport_override.cfg
-cp -f ../../config/01-mastercomfig_maxquality/scripts/extra_models.txt mastercomfig-maxquality/scripts/extra_models.txt
+declare -a overriden_presets=("maxperformance" "stripped" "maxquality")
+declare -a override_combos=("01-mastercomfig_maxperformance" "01-mastercomfig_maxperformance 01-mastercomfig_no_footsteps 01-mastercomfig_no_soundscapes" "01-mastercomfig_maxquality")
+
+# Preset specific overrides
+for ((i=0; i<${#overriden_presets[*]}; i++));
+do
+    folder="mastercomfig-${overriden_presets[i]}/"
+    for override in ${override_combos[i]}
+    do
+        cp -rf "../../config/$override/"* $folder
+    done
+done
 
 # Package into VPK
 for D in *; do
