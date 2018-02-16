@@ -3,11 +3,8 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
-# Execute package scripts for addons and presets
-# also build autoexecs for cfg.tf
-addons/package.sh
-presets/package.sh
-autoexecs/package.sh
+# Execute package scripts
+*/package.sh
 
 # ZIP
 rm mastercomfig.zip

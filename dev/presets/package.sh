@@ -37,7 +37,7 @@ for D in *; do
 done
 
 declare -a overriden_presets=("maxperformance" "stripped" "maxquality")
-declare -a override_combos=("01-mastercomfig_maxperformance" "01-mastercomfig_maxperformance 01-mastercomfig_no_footsteps 01-mastercomfig_no_soundscapes 01-mastercomfig_no_pyroland" "01-mastercomfig_maxquality")
+declare -a override_combos=("01-mastercomfig_maxperformance 01-mastercomfig_no_soundscapes 01-mastercomfig_no_pyroland" "01-mastercomfig_maxperformance 01-mastercomfig_no_footsteps 01-mastercomfig_no_soundscapes 01-mastercomfig_no_pyroland" "01-mastercomfig_maxquality")
 
 # Preset specific overrides
 for ((i=0; i<${#overriden_presets[*]}; i++));
