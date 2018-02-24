@@ -25,8 +25,7 @@ echo -e "exec comfig\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/
 # Fill folders with common files
 for D in *; do
     if [ -d "${D}" ]; then
-        cp -f ../../config/mastercomfig/cfg/comfig.cfg "${D}"/cfg/comfig.cfg
-        cp -f ../../config/mastercomfig/cfg/listenserver.cfg "${D}"/cfg/listenserver.cfg
+        cp -f ../../config/mastercomfig/cfg/*.cfg "${D}"/cfg/
         cp -f ../../config/mastercomfig/dxsupport_override.cfg "${D}"/dxsupport_override.cfg
         cp -f ../../config/mastercomfig/glbaseshaders.cfg "${D}"/glbaseshaders.cfg
         cp -f ../../config/mastercomfig/texture_preload_list.txt "${D}"/texture_preload_list.txt
