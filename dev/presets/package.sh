@@ -18,9 +18,9 @@ for P in "${presets[@]}"; do
 done
 
 # Create custom preset
-mkdir -p mastercomfig-custom/cfg/presets
+mkdir -p mastercomfig-custom/cfg
 touch mastercomfig-custom/cfg/autoexec.cfg
-echo -e "exec comfig\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/ssd\r\nexec addons/transparent_viewmodels\r\nexec custom\r\n" > mastercomfig-"${P}"/cfg/autoexec.cfg
+echo -e "exec comfig\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/ssd\r\nexec addons/transparent_viewmodels\r\nexec custom\r\n" > mastercomfig-custom/cfg/autoexec.cfg
 
 # Fill folders with common files
 for D in *; do
