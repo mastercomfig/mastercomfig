@@ -11,9 +11,4 @@ for D in *; do
     fi
 done
 
-# ZIP
-echo "Packaging ZIP"
-rm mastercomfig.zip
-(cd ../config && zip ../dev/mastercomfig -r *)
-
 printf "\n"
