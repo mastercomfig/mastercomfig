@@ -66,12 +66,16 @@ the box and click ok.
 More information on launch options and choosing a DirectX version can be found
 [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
 
-### 5. custom.cfg (optional)
+### 5. Custom configs (optional)
 
 If you have your own `autoexec.cfg` already, rename it to `custom.cfg`, but make sure you don't have any
 conflicting configs in there.
 
 You can also create a `custom.cfg` in your `tf/cfg` folder to override any settings in the config.
+
+If you have any class configs, you will have to rename them to add a `_c`.  For example, `scout_c.cfg`.
+
+For your `custom.cfg` and your class configs, you can use [modules](https://github.com/mastercoms/mastercomfig/wiki/Modules) to easily customize settings.
 
 ### 6. Fixing Issues
 
