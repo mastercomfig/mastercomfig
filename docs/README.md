@@ -76,7 +76,7 @@ You can also create a `custom.cfg` in your `tf/cfg` folder to override any setti
 If you have any class configs, you will have to rename them to add a `_c`.  For example, `scout_c.cfg`.
 
 For your `custom.cfg` and your class configs, you can use [modules](https://github.com/mastercoms/mastercomfig/wiki/Modules) to easily customize settings. To do finer customization through individual
-console variables and commands, you can look through the [config file on GitHub](https://github.com/mastercoms/mastercomfig/blob/beta/config/mastercomfig/cfg/comfig.cfg) and add your preferences to your `custom.cfg`.
+console variables and commands, you can look through the [config file on GitHub](https://github.com/mastercoms/mastercomfig/blob/release/config/mastercomfig/cfg/comfig.cfg) and add your preferences to your `custom.cfg`.
 
 ### 6. Fixing Issues
 
