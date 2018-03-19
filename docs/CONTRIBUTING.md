@@ -108,6 +108,9 @@ They were generated using Aveyo's [GetLaunchOptions tool](https://github.com/Ave
 
 #### Comfig and presets
 
+Note: some additional information about the config can be found
+[here](https://github.com/mastercoms/mastercomfig/blob/release/config/README.md).
+
 Add options like this
 
 ```
@@ -120,9 +123,6 @@ As you can see, default ConVar values should be at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
-Default values are ones that disable unoptimized features and optimize the game
-without making it look bad.
-
 ConVars and commands are found by launching TF2 with
 `-novid -default -autoconfig -condebug +cvarlist +quit` and then reading
 `tf/console.log`.
@@ -134,25 +134,36 @@ Add your alternatives uncommented in the applicable presets/addons:
 * `maxquality`: Absolute maximum quality without caring about performance
 * `midquality`: Enables graphical features missing from default without making
   them higher quality
-* `maxperformance`: The maximum performance you can get without caring much
-  about visibility or possible bugs
+* `default`: Disable unoptimized features and optimize the game without making 
+  it look bad.
 * `compquality`: The maximum performance you can get while enabling features
   that may give you an information advantage and disabling optimizations that
   may reduce accuracy
 * `comp`: The maximum performance you can get without making the game too hard
   to play because of awful visual quality and glitches
+* `maxperformance`: The maximum performance you can get without caring much
+  about visibility or possible bugs
 * `stripped`: Negatively affects playability by a lot and disables very
   essential features in desperation for performance
 
 **Addons:**
 
-* `badcpu`: Optimizations that generally do not affect quality that are only
-  optimal on weaker, dual core CPUs
+* `badcpu`: Optimizations that generally do not affect quality for bad CPUs 
+  with two or less threads
 * `badgpu`: Optimizations that do not affect quality that are only optimal for
   weak integrated graphics chips (Intel graphics) or weak/old GPUs
   (lower end made before 2007)
 * `ssd`: Memory and loading optimizations for when your TF2 installation is on
   a SSD.
+* `transparent_viewmodels` - Enables support for transparent viewmodels
+  
+**Modules:**
+
+If your settings affect quality in any way, create a new module or modify
+the existing modules if applicable, then add documentation for it at the
+[modules wiki page](https://github.com/mastercoms/mastercomfig/wiki/Modules). 
+Use [this generator](https://github.com/ekalinin/github-markdown-toc) to get 
+the navigation links to be generated properly.
 
 #### Texture preload list
 
@@ -184,6 +195,12 @@ Edit `dxsupport_override.cfg` and set hidden ConVars and other settings
 according to hardware and DirectX level. Make sure there are no updates to this
 file from the game repository (unlikely, was last updated in 2013) before making
 changes.
+
+#### Game overrides
+
+Some ConVars are set from what the map author specified so we have to override them.
+This is currently done [in](https://github.com/mastercoms/mastercomfig/blob/release/dev/presets/package.sh#L51)
+the packaging process.
 
 ## Making your pull request
 
@@ -218,4 +235,15 @@ FPS in a filled casual match.
 
 Generally you won't have to do this, but you can generate VPK packages for all
 presets and addons as well as a ZIP for the config. Use the `package.sh` script
-in the `dev` folder. You can learn more about the dev scripts in dev/README.md.
+in the `dev/` folder. You can learn more about the dev scripts in dev/README.md.
+
+In order to successfully deploy and announce, you will have to create a new file
+in `dev/` called `mastercomfig-vars`, containing the following variables:
+
+```bash
+DISCORD_WEBHOOK="Discord webhook for config announcements"
+GITHUB_USERNAME="GitHub username used for authentication for release deployment"
+GITHUB_TOKEN="GitHub authentication token used for release deployment"
+```
+
+More information [here](https://github.com/mastercoms/mastercomfig/blob/release/dev/README.md).
