@@ -1,11 +1,9 @@
 # Config folder
 This folder contains the original files for the config, used for creating the
-VPK files and ZIP file. You can read the files in these folders for reference
+VPK files. You can read the files in these folders for reference
 but it is not recommended to use the `comfig.cfg` as an `autoexec` by copying
 and pasting text, as you will lose the many benefits from the extra script and
-data files in the config. Additionally, using the folders as a custom folder,
-like in the alternative ZIP based installation, will increase load times and
-may introduce loading bugs.
+data files in the config.
 
 ## 01-mastercomfig folders
 These are folders with overrides for the main `mastercomfig/` folder. They
@@ -34,7 +32,3 @@ These are the main config files that get executed and read by the engine.
 
 ### mastercomfig
 This is where the data files and console variables/commands go.
-
-### mastercomfig_exec
-This is where the execution config file goes that selects specific presets and
-addons to be run, as well as the main config file.
