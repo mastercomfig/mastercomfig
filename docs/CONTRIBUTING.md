@@ -224,7 +224,7 @@ to do basic testing on options.
 ## Bot match
 
 After the results are positive with the benchmark, measure your average FPS in a
-local 24 player bot match on `cp_gorge`, highest difficulty.
+local 24 player bot match on `pl_upward`, highest difficulty.
 
 ## Casual match
 
