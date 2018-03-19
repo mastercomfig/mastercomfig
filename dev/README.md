@@ -2,8 +2,8 @@
 This folder contains scripts to build release files and manage releases.
 
 ## Packaging
-This creates the necessary files for releases (VPKs for addons and presets, the
-ZIP and the autoexecs for cfg.tf).
+This creates the necessary files for releases (VPKs for addons and presets, 
+and the autoexecs for cfg.tf).
 
 ### Presets
 This collects the common files from the config folder, then generates an
