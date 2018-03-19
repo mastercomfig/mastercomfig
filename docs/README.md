@@ -122,12 +122,6 @@ Finally, launch TF2 with only the
 `-novid -default -autoconfig +host_writeconfig +mat_savechanges +quit` launch
 options. The game will launch and exit. Afterwards, remove these launch options.
 
-## Alternative ZIP installation
-
-If you absolutely know what you're doing and need the ZIP installation, you can
-see [the instructions](https://github.com/mastercoms/mastercomfig/wiki/Alternative-ZIP-Installation)
-(not recommended) on the wiki.
-
 ## Features
 
 * Customization
