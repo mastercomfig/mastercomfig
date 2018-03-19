@@ -234,8 +234,9 @@ FPS in a filled casual match.
 # Packaging and Releases
 
 Generally you won't have to do this, but you can generate VPK packages for all
-presets and addons as well as a ZIP for the config. Use the `package.sh` script
-in the `dev/` folder. You can learn more about the dev scripts in dev/README.md.
+presets and addons. Use the `package.sh` script in the `dev/` folder. You can 
+learn more about the dev scripts in 
+[dev/README.md](https://github.com/mastercoms/mastercomfig/blob/release/dev/README.md).
 
 In order to successfully deploy and announce, you will have to create a new file
 in `dev/` called `mastercomfig-vars`, containing the following variables:
@@ -245,5 +246,3 @@ DISCORD_WEBHOOK="Discord webhook for config announcements"
 GITHUB_USERNAME="GitHub username used for authentication for release deployment"
 GITHUB_TOKEN="GitHub authentication token used for release deployment"
 ```
-
-More information [here](https://github.com/mastercoms/mastercomfig/blob/release/dev/README.md).
