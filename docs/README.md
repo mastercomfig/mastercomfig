@@ -78,6 +78,8 @@ If you have any class configs, you will have to rename them to add a `_c`.  For 
 For your `custom.cfg` and your class configs, you can use [modules](https://github.com/mastercoms/mastercomfig/wiki/Modules) to easily customize settings. To do finer customization through individual
 console variables and commands, you can look through the [config file on GitHub](https://github.com/mastercoms/mastercomfig/blob/release/config/mastercomfig/cfg/comfig.cfg) and add your preferences to your `custom.cfg`.
 
+It is also recommended to determine your optimal upload rate settings with [this tool](https://mastercoms.github.io/mastercomfig/upload/).
+
 ### 6. Fixing Issues
 
 Having issues (like crashes or local servers not working where you can't move or shoot)?
