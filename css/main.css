@@ -1,6 +1,13 @@
 header {
-    height: 100vh;
-    background: linear-gradient(rgba(38, 50, 56, 0.7) 10%, rgba(38, 50, 56, 0.7)), url('cp_badlands01.jpg');
+    height: 100vh
+}
+
+.dark-header {
+  background-color: #212121
+}
+
+.home-header {
+    background: linear-gradient(rgba(38, 50, 56, 0.7) 10%, rgba(38, 50, 56, 0.7)), url('../img/cp_badlands01.jpg');
     background-size: cover;
     background-position: center
 }
@@ -26,4 +33,8 @@ header {
 section {
     padding-top: 2rem;
     padding-bottom: 4rem
+}
+
+.modal-lg {
+  max-width: 85%
 }
