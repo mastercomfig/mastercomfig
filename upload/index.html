@@ -24,7 +24,7 @@
                 <p class="lead">2. Enter it here:</p>
                 <input class="form-control col-md-6" type="text" placeholder="Upload speed in MB" id="upload">
                 <br>
-                <p class="lead">3. Put this in your custom.cfg:</p>
+                <p class="lead" id="rate-label">3. Put this in your custom.cfg:</p>
                 <code id="rate">rate 196608;net_splitpacket_maxrate 196608;net_maxcleartime 4</code>
             </div>
         </div>
@@ -39,10 +39,7 @@
       String.prototype.format = function() {
         var args = arguments;
         return this.replace(/{(\d+)}/g, function(match, number) {
-          return typeof args[number] != 'undefined'
-            ? args[number]
-            : match
-          ;
+          return typeof args[number] != 'undefined' ? args[number] : match;
         });
       };
 
@@ -57,7 +54,7 @@
           if (value > 1048576) {
             var uploadRate = 1048576;
             var maxClearTime = 1288 / value;
-            rate = "rate {0};net_splitpacket_maxrate {0};net_maxcleartime {1}".format(uploadRate, maxClearTime.toFixed(7));
+            rate = "rate {0};net_splitpacket_maxrate {0};net_maxcleartime {1}".format(uploadRate, Math.max(maxClearTime.toFixed(7), 0.0000001));
           } else {
             rate = "rate {0};net_splitpacket_maxrate {0};net_maxcleartime 4".format(value);
           }
