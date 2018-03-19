@@ -25,6 +25,10 @@ These are overrides to remove footstep sounds, used in the `stripped` preset.
 These are overrides to remove sounds, used in the `maxperformance` and
 `stripped` presets.
 
+### 01-mastercomfig_no_pyroland
+These are overrides to remove Pyroland map textures, used in the `maxperformance`
+and `stripped` presets.
+
 ## mastercomfig folders
 These are the main config files that get executed and read by the engine.
 
