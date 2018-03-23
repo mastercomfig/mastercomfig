@@ -204,7 +204,7 @@ Here are a few awesome TF2 modifications:
   — New custom crosshairs
 * [yttrium's viewmodels](http://www.teamfortress.tv/34834/yttriums-competitive-viewmodels)
   — Customize hiding individual viewmodels
-* [Transprent Viewmodels](http://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
+* [Transparent Viewmodels](http://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
   — Make viewmodels translucent
 
 ## Credits
