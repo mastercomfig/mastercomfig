@@ -13,14 +13,29 @@ declare -a presets=("stripped" "maxperformance" "comp" "compquality" "default" "
 for P in "${presets[@]}"; do
     mkdir -p mastercomfig-"${P}"/cfg/presets
     cp -f ../../config/mastercomfig/cfg/presets/"${P}".cfg mastercomfig-"${P}"/cfg/presets/"${P}".cfg
-    touch mastercomfig-"${P}"/cfg/autoexec.cfg
-    echo -e "exec comfig\r\nexec presets/${P}\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/ssd\r\nexec addons/transparent_viewmodels\r\nexec custom\r\n" > mastercomfig-"${P}"/cfg/autoexec.cfg
+    preset_file=mastercomfig-"${P}"/cfg/autoexec.cfg
+    touch $preset_file
+    echo "exec comfig" > $preset_file
+    echo "exec presets/${P}" >> $preset_file
+    echo "exec addons/badcpu" >> $preset_file
+    echo "exec addons/badgpu" >> $preset_file
+    echo "exec addons/ssd" >> $preset_file
+    echo "exec addons/transparent_viewmodels" >> $preset_file
+    echo "exec custom" >> $preset_file
+    unix2dos $preset_file
 done
 
 # Create custom preset
 mkdir -p mastercomfig-custom/cfg
-touch mastercomfig-custom/cfg/autoexec.cfg
-echo -e "exec comfig\r\nexec addons/badcpu\r\nexec addons/badgpu\r\nexec addons/ssd\r\nexec addons/transparent_viewmodels\r\nexec custom\r\n" > mastercomfig-custom/cfg/autoexec.cfg
+custom_file="mastercomfig-custom/cfg/autoexec.cfg"
+touch $custom_file
+echo "exec comfig" > $custom_file
+echo "exec addons/badcpu" >> $custom_file
+echo "exec addons/badgpu" >> $custom_file
+echo "exec addons/ssd" >> $custom_file
+echo "exec addons/transparent_viewmodels" >> $custom_file
+echo "exec custom" >> $custom_file
+unix2dos $custom_file
 
 # Fill folders with common files
 for D in *; do
