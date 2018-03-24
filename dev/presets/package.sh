@@ -48,41 +48,6 @@ do
     done
 done
 
-# Cheap water override
-declare -a game_overrides_water=("r_cheapwaterstart" "r_cheapwaterend")
-declare -a game_overrides_water_values=("0.1 1" "400 1000" "3000 5000")
-declare -a game_overrides_water_preset_keys=(0 1 1 1 1 1 2)
-
-# Detail controller override
-declare -a game_overrides_detail=("cl_detaildist" "cl_detailfade")
-declare -a game_overrides_detail_values=("900 0" "3000 100")
-declare -a game_overrides_detail_preset_keys=(-1 -1 -1 -1 -1 0 1)
-
-for P in "${presets[@]}"; do
-  preset_folder=mastercomfig-"${P}"/cfg
-  touch "${preset_folder}"/game_overrides.cfg
-done
-
-for ((i=0; i<${#presets[*]}; i++));
-do
-    file=mastercomfig-${presets[i]}/cfg/game_overrides.cfg
-    touch "${file}"
-    value_combo_water=(${game_overrides_water_values[${game_overrides_water_preset_keys[i]}]})
-    for ((j=0; j<${#value_combo_water[*]}; j++))
-    do
-      echo -e "${game_overrides_water[j]} ${value_combo_water[j]}" >> "${file}"
-    done
-    index_value_combo_detail=${game_overrides_detail_preset_keys[i]}
-    if [ $index_value_combo_detail -ne -1 ]; then
-      value_combo_detail=(${game_overrides_detail_values[${index_value_combo_detail}]})
-      for ((j=0; j<${#value_combo_detail[*]}; j++))
-      do
-        echo -e "${game_overrides_detail[j]} ${value_combo_detail[j]}" >> "${file}"
-      done
-    fi
-    echo -e "" >> "${file}"
-done
-
 # Package into VPK
 for D in *; do
     if [ -d "${D}" ]; then
