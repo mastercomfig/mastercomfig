@@ -194,6 +194,18 @@ Here are a few awesome TF2 modifications:
   from players
 * [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
+* [Model Remover Mod](http://www.teamfortress.tv/46863/hamburgers-model-removal-mod-2018) 
+  — Remove extra models
+* [Particle Limitation Pack](http://www.teamfortress.tv/22586/particle-limitation-pack)
+  — Reduce certain particles
+* [Clean TF2](http://www.teamfortress.tv/21756/prism-hud-clean-tf2)
+  — Make textures simple colors
+* [VTF Crosshair Pack](http://www.teamfortress.tv/35367/vtf-crosshair-pack)
+  — New custom crosshairs
+* [yttrium's viewmodels](http://www.teamfortress.tv/34834/yttriums-competitive-viewmodels)
+  — Customize hiding individual viewmodels
+* [Transparent Viewmodels](http://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
+  — Make viewmodels translucent
 
 ## Credits
 
