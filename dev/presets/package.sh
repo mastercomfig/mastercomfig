@@ -11,9 +11,9 @@ rm */ -rf
 declare -a presets=("stripped" "maxperformance" "comp" "compquality" "default" "midquality" "maxquality")
 
 for P in "${presets[@]}"; do
-    mkdir -p mastercomfig-"${P}"/cfg/presets
-    cp -f ../../config/mastercomfig/cfg/presets/"${P}".cfg mastercomfig-"${P}"/cfg/presets/"${P}".cfg
-    preset_file=mastercomfig-"${P}"/cfg/autoexec.cfg
+    mkdir -p mastercomfig-"${P}"-preset/cfg/presets
+    cp -f ../../config/mastercomfig/cfg/presets/"${P}".cfg mastercomfig-"${P}"-preset/cfg/presets/"${P}".cfg
+    preset_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
     touch $preset_file
     echo "exec comfig" > $preset_file
     echo "exec presets/${P}" >> $preset_file
@@ -25,17 +25,17 @@ for P in "${presets[@]}"; do
     unix2dos $preset_file
 done
 
-# Create custom preset
-mkdir -p mastercomfig-custom/cfg
-custom_file="mastercomfig-custom/cfg/autoexec.cfg"
-touch $custom_file
-echo "exec comfig" > $custom_file
-echo "exec addons/badcpu" >> $custom_file
-echo "exec addons/badgpu" >> $custom_file
-echo "exec addons/ssd" >> $custom_file
-echo "exec addons/transparent_viewmodels" >> $custom_file
-echo "exec custom" >> $custom_file
-unix2dos $custom_file
+# Create no preset VPK
+mkdir -p mastercomfig-no-preset/cfg
+no_preset_file="mastercomfig-no-preset/cfg/autoexec.cfg"
+touch $no_preset_file
+echo "exec comfig" > $no_preset_file
+echo "exec addons/badcpu" >> $no_preset_file
+echo "exec addons/badgpu" >> $no_preset_file
+echo "exec addons/ssd" >> $no_preset_file
+echo "exec addons/transparent_viewmodels" >> $no_preset_file
+echo "exec custom" >> $no_preset_file
+unix2dos $no_preset_file
 
 # Fill folders with common files
 for D in *; do
@@ -56,7 +56,7 @@ declare -a override_combos=("01-mastercomfig_maxperformance 01-mastercomfig_no_s
 # Preset specific overrides
 for ((i=0; i<${#overriden_presets[*]}; i++));
 do
-    folder="mastercomfig-${overriden_presets[i]}/"
+    folder="mastercomfig-${overriden_presets[i]}-preset/"
     for override in ${override_combos[i]}
     do
         cp -rf "../../config/$override/"* $folder
