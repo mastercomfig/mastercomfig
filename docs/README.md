@@ -49,6 +49,9 @@ Download the VPK files of your choice from the
 and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
 in a folder inside your `custom` folder, put them in the `custom` folder itself.
 You don't have to rename anything either, just drag the files as is into `custom`.
+Do not download the source code, and do not download from the `Clone or Download`
+button. Only download the VPK files from the
+[latest release](https://github.com/mastercoms/mastercomfig/releases/latest)
 
 To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 **Properties**, go to the **Local Files** tab, and then click the
@@ -66,7 +69,7 @@ the box and click ok.
 More information on launch options and choosing a DirectX version can be found
 [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
 
-### 5. Custom configs (optional)
+### 5. Custom configs
 
 If you have your own `autoexec.cfg` already, rename it to `custom.cfg`, but make sure you don't have any
 conflicting configs in there.
