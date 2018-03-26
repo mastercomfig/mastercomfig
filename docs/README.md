@@ -209,6 +209,8 @@ Here are a few awesome TF2 modifications:
   — Customize hiding individual viewmodels
 * [Transparent Viewmodels](http://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
   — Make viewmodels translucent
+* [Common scripts/binds](https://www.reddit.com/r/tf2scripthelp/wiki/commonscripts)
+  — Some common and useful scripts/binds, like the null-cancelling movement script
 
 ## Credits
 
