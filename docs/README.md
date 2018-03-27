@@ -85,6 +85,8 @@ console variables and commands, you can look through the [config file on GitHub]
 
 It is also recommended to determine your optimal upload rate settings with [this tool](https://mastercoms.github.io/mastercomfig/upload/).
 
+To get an idea of how to use custom configs, [see what](https://github.com/mastercoms/mastercomfig/wiki/List-of-custom-configs) other people in the community have done.
+
 ### 6. Fixing Issues
 
 Having issues (like crashes or local servers not working where you can't move or shoot)?
