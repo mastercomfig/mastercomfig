@@ -7,7 +7,7 @@ cd "$BINDIR"
 rm *.cfg -f
 
 # Create preset autoexec combos and names
-declare -a names=("custom" "default" "comp" "compquality" "maxperformance" "stripped" "maxquality" "midquality" "igpu")
+declare -a names=("no-preset" "default" "comp" "compquality" "maxperformance" "stripped" "maxquality" "midquality" "igpu")
 declare -a combos=("" "presets/default" "presets/comp" "presets/compquality" "presets/maxperformance" "presets/stripped" "presets/maxquality" "presets/midquality" "presets/maxperformance addons/badgpu")
 
 # Create autoexecs from combos

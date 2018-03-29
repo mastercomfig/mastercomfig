@@ -85,12 +85,20 @@ console variables and commands, you can look through the [config file on GitHub]
 
 It is also recommended to determine your optimal upload rate settings with [this tool](https://mastercoms.github.io/mastercomfig/upload/).
 
-### 6. Fixing Issues
+To get an idea of how to use custom configs, [see what](https://github.com/mastercoms/mastercomfig/wiki/List-of-custom-configs) other people in the community have done.
+
+### 6. Competitive matchmaking
+
+Want to get competitive but encounter crashes due to the config reset feature of
+in-game competitive matchmaking? Run `exec mm/override` in console on the main menu
+to make the config compatible with competitive.
+
+### 7. Fixing Issues
 
 Having issues (like crashes or local servers not working where you can't move or shoot)?
 Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
 
-### 7. Operating system optimizations
+### 8. Operating system optimizations
 Although not strictly TF2 related, you can improve your performance at the OS
 level: [Windows](https://github.com/mastercoms/mastercomfig/wiki/Windows-Systems),
 [Linux](https://github.com/mastercoms/mastercomfig/wiki/Linux-Systems)
@@ -197,7 +205,7 @@ Here are a few awesome TF2 modifications:
   from players
 * [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
-* [Model Remover Mod](http://www.teamfortress.tv/46863/hamburgers-model-removal-mod-2018) 
+* [Model Remover Mod](http://www.teamfortress.tv/46863/hamburgers-model-removal-mod-2018)
   — Remove extra models
 * [Particle Limitation Pack](http://www.teamfortress.tv/22586/particle-limitation-pack)
   — Reduce certain particles

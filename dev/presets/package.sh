@@ -41,6 +41,7 @@ unix2dos $no_preset_file
 for D in *; do
     if [ -d "${D}" ]; then
         cp -f ../../config/mastercomfig/cfg/*.cfg "${D}"/cfg/
+        cp -rf ../../config/mastercomfig/cfg/mm/ "${D}"/cfg
         cp -f ../../config/mastercomfig/dxsupport_override.cfg "${D}"/dxsupport_override.cfg
         cp -f ../../config/mastercomfig/glbaseshaders.cfg "${D}"/glbaseshaders.cfg
         cp -f ../../config/mastercomfig/texture_preload_list.txt "${D}"/texture_preload_list.txt
