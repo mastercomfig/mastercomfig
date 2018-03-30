@@ -51,7 +51,7 @@ in a folder inside your `custom` folder, put them in the `custom` folder itself.
 You don't have to rename anything either, just drag the files as is into `custom`.
 Do not download the source code, and do not download from the `Clone or Download`
 button. Only download the VPK files from the
-[latest release](https://github.com/mastercoms/mastercomfig/releases/latest)
+[latest release](https://github.com/mastercoms/mastercomfig/releases/latest).
 
 To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 **Properties**, go to the **Local Files** tab, and then click the
