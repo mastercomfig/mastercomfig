@@ -83,7 +83,7 @@ If you have a `listenserver.cfg`, you will have to rename it to `listenserver_c.
 For your `custom.cfg`, class configs and listen server config, you can use [modules](https://github.com/mastercoms/mastercomfig/wiki/Modules) to easily customize settings. To do finer customization through individual
 console variables and commands, you can look through the [config file on GitHub](https://github.com/mastercoms/mastercomfig/blob/release/config/mastercomfig/cfg/comfig.cfg) and add your preferences to your `custom.cfg`.
 
-It is also recommended to determine your optimal upload rate settings with [this tool](https://mastercoms.github.io/mastercomfig/upload/).
+It is also recommended to determine your optimal upload rate settings with [this tool](https://mastercoms.github.io/mastercomfig/upload).
 
 To get an idea of how to use custom configs, [see what](https://github.com/mastercoms/mastercomfig/wiki/List-of-custom-configs) other people in the community have done.
 
