@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha256-PCsx7lOyGhyGmzsO5MGXhzwV6UpNTlNf1p6V6w2CppQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>mastercomfig upload rate generator</title>
+    <meta property="og:title" content="mastercomfig upload rate generator">
+    <meta property="og:description" content="The upload rat generator for mastercomfig: a modern Team Fortress 2 performance and customization config.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mastercoms.github.io/mastercomfig/upload">
+  </head>
+  <body class="bg-dark">
+    <header class="jumbotron jumbotron-fluid text-light dark-header">
+        <div class="container d-flex align-items-center justify-content-center" style="height: 100%">
+            <div class="align-middle">
+                <h1 class="display-4">mastercomfig upload rate generator</h1>
+                <p class="lead">1. Measure your upload speed at <a href="https://beta.speedtest.net">speedtest.net</a>.</p>
+                <p class="lead">2. Enter it here:</p>
+                <input class="form-control col-md-6" type="text" placeholder="Upload speed in Mb" id="upload">
+                <br>
+                <p class="lead" id="rate-label">3. Put this in your custom.cfg:</p>
+                <code id="rate">rate 196608; net_maxcleartime 4</code>
+            </div>
+        </div>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js" integrity="sha256-VzXcD0HmV1s8RGdJ/yIf7YkZiOZrcxPphaDpwM++pSs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha256-JNyuT3QsYBdyeKxKBwnGJAJiACWcow2TjhNruIFFPMQ=" crossorigin="anonymous"></script>
+
+    <script>
+      String.prototype.format = function() {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function(match, number) {
+          return typeof args[number] != 'undefined' ? args[number] : match;
+        });
+      };
+
+      var base = "rate 196608;net_splitpacket_maxrate 196608;net_maxcleartime 4";
+      var field = document.getElementById('upload');
+      var copy = document.getElementById('rate');
+      field.addEventListener('input', function(e) {
+        var rate;
+        if (field.value) {
+          var value = parseFloat(field.value);
+          value *= 100000; // convert 80% from Mb to B
+          if (value > 1048576) {
+            var uploadRate = 1048576;
+            var maxClearTime = 1288 / value;
+            rate = "rate {0}; net_maxcleartime {1}".format(uploadRate, Math.max(maxClearTime.toFixed(7), 0.0000001));
+          } else {
+            rate = "rate {0}; net_maxcleartime 4".format(value);
+          }
+        } else {
+          rate = base;
+        }
+        copy.innerText = rate;
+      });
+    </script>
+  </body>
+</html>
