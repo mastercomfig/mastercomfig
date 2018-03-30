@@ -77,6 +77,7 @@ conflicting configs in there.
 You can also create a `custom.cfg` in your `tf/cfg` folder to override any settings in the config.
 
 If you have any class configs, you will have to rename them to add a `_c`.  For example, `scout_c.cfg`.
+If there's something you'd like to run for all of your class configs, you can add it to `game_overrides_c.cfg`.
 
 If you have a `listenserver.cfg`, you will have to rename it to `listenserver_c.cfg`.
 
