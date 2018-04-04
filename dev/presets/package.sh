@@ -19,7 +19,6 @@ for P in "${presets[@]}"; do
     echo "exec presets/${P}" >> $preset_file
     echo "exec addons/badcpu" >> $preset_file
     echo "exec addons/badgpu" >> $preset_file
-    echo "exec addons/ssd" >> $preset_file
     echo "exec addons/transparent_viewmodels" >> $preset_file
     echo "exec custom" >> $preset_file
     unix2dos $preset_file
@@ -32,7 +31,6 @@ touch $no_preset_file
 echo "exec comfig" > $no_preset_file
 echo "exec addons/badcpu" >> $no_preset_file
 echo "exec addons/badgpu" >> $no_preset_file
-echo "exec addons/ssd" >> $no_preset_file
 echo "exec addons/transparent_viewmodels" >> $no_preset_file
 echo "exec custom" >> $no_preset_file
 unix2dos $no_preset_file

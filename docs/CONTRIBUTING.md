@@ -134,7 +134,7 @@ Add your alternatives uncommented in the applicable presets/addons:
 * `maxquality`: Absolute maximum quality without caring about performance
 * `midquality`: Enables graphical features missing from default without making
   them higher quality
-* `default`: Disable unoptimized features and optimize the game without making 
+* `default`: Disable unoptimized features and optimize the game without making
   it look bad.
 * `compquality`: The maximum performance you can get while enabling features
   that may give you an information advantage and disabling optimizations that
@@ -148,21 +148,19 @@ Add your alternatives uncommented in the applicable presets/addons:
 
 **Addons:**
 
-* `badcpu`: Optimizations that generally do not affect quality for bad CPUs 
+* `badcpu`: Optimizations that generally do not affect quality for bad CPUs
   with two or less threads
 * `badgpu`: Optimizations that do not affect quality that are only optimal for
   weak integrated graphics chips (Intel graphics) or weak/old GPUs
   (lower end made before 2007)
-* `ssd`: Memory and loading optimizations for when your TF2 installation is on
-  a SSD.
 * `transparent_viewmodels` - Enables support for transparent viewmodels
-  
+
 **Modules:**
 
 If your settings affect quality in any way, create a new module or modify
 the existing modules if applicable, then add documentation for it at the
-[modules wiki page](https://github.com/mastercoms/mastercomfig/wiki/Modules). 
-Use [this generator](https://github.com/ekalinin/github-markdown-toc) to get 
+[modules wiki page](https://github.com/mastercoms/mastercomfig/wiki/Modules).
+Use [this generator](https://github.com/ekalinin/github-markdown-toc) to get
 the navigation links to be generated properly.
 
 #### Texture preload list
@@ -234,8 +232,8 @@ FPS in a filled casual match.
 # Packaging and Releases
 
 Generally you won't have to do this, but you can generate VPK packages for all
-presets and addons. Use the `package.sh` script in the `dev/` folder. You can 
-learn more about the dev scripts in 
+presets and addons. Use the `package.sh` script in the `dev/` folder. You can
+learn more about the dev scripts in
 [dev/README.md](https://github.com/mastercoms/mastercomfig/blob/release/dev/README.md).
 
 In order to successfully deploy and announce, you will have to create a new file
