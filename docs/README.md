@@ -28,7 +28,11 @@ think there's an unoptimal value, or if it's just as simple as a comment being
 confusing to you, report the problem and you'll most likely see a fix in a
 future update.
 
-## Installation
+## Installation (guided)
+
+Visit the [download site](https://mastercoms.github.io/mastercomfig/download) for a guided install.
+
+## Installation (manual)
 
 ### 1. Clean your TF2 install
 
@@ -38,7 +42,7 @@ have to [clean up](#clean-up) your TF2 install.
 ### 2. Choose your preset and addons
 
 First, you'll have to figure out what [preset and addons](https://github.com/mastercoms/mastercomfig/wiki/Presets-and-Addons)
-you want to use for your computer. A preset is a certain quality level and 
+you want to use for your computer. A preset is a certain quality level and
 addons further adapt the config to your specific hardware.
 
 ### 3. Download and Install
@@ -81,7 +85,7 @@ conflicting configs in there.
 You can also create a `custom.cfg` in your `tf/cfg` folder to override any settings in the config.
 
 If you have any class configs, you will have to rename them to add a `_c`.  (`scout_c.cfg`, `soldier_c.cfg`,
-`pyro_c.cfg`, `demoman_c.cfg`, `heavyweapons_c.cfg`, `engineer_c.cfg`, `medic_c.cfg`, `sniper_c.cfg` and `spy_c.cfg`.
+`pyro_c.cfg`, `demoman_c.cfg`, `heavyweapons_c.cfg`, `engineer_c.cfg`, `medic_c.cfg`, `sniper_c.cfg` and `spy_c.cfg`).
 If there's something you'd like to run for all of your class configs, you can add it to `game_overrides_c.cfg`.
 
 If you have a `listenserver.cfg`, you will have to rename it to `listenserver_c.cfg`.
