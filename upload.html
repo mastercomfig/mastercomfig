@@ -25,7 +25,7 @@
                 <input class="form-control col-md-6" type="text" placeholder="Upload speed in Mb" id="upload">
                 <br>
                 <p class="lead" id="rate-label">3. Put this in your custom.cfg:</p>
-                <code id="rate">rate 196608; net_maxcleartime 4</code>
+                <code id="rate">rate 196608;net_splitpacket_maxrate 98304</code>
             </div>
         </div>
     </header>
@@ -43,7 +43,7 @@
         });
       };
 
-      var base = "rate 196608;net_splitpacket_maxrate 196608;net_maxcleartime 4";
+      var base = "rate 196608;net_splitpacket_maxrate 98304";
       var field = document.getElementById('upload');
       var copy = document.getElementById('rate');
       field.addEventListener('input', function(e) {
@@ -54,9 +54,11 @@
           if (value > 1048576) {
             var uploadRate = 1048576;
             var maxClearTime = 1288 / value;
-            rate = "rate {0}; net_maxcleartime {1}".format(uploadRate, Math.max(maxClearTime.toFixed(7), 0.0000001));
+            rate = "rate 1048576; net_splitpacket_maxrate {1}; net_maxcleartime {2}".format(Math.min(1048576, Math.floor(value / 2)),
+                                                                                            Math.max(maxClearTime.toFixed(7), Number(0.0000001).toFixed(7)));
           } else {
-            rate = "rate {0}; net_maxcleartime 4".format(value);
+            rate = "rate {0}; net_splitpacket_maxrate {1}".format(value,
+                                                                  Math.floor(value / 2));
           }
         } else {
           rate = base;
