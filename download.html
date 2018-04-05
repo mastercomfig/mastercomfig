@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>mastercomfig download</title>
+    <meta property="og:title" content="mastercomfig download">
+    <meta property="og:description" content="The download for mastercomfig: a modern Team Fortress 2 performance and customization config.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mastercoms.github.io/mastercomfig/download">
+  </head>
+  <body class="dark-header">
+    <header class="jumbotron jumbotron-fluid text-light dark-header">
+        <div class="container d-flex align-items-center" style="min-height: 100%">
+            <div class="align-middle">
+                <h1 class="display-4" id="title">Download mastercomfig</h1>
+                <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/tree/release/docs#installation" class="text-light">Installation Instructions</a></p>
+                <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/tree/release/docs#updating" class="text-light">Updating Instructions</a></p>
+                <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/releases/latest"  class="text-light">Changelog</a></p>
+                <h2>Choose your preset</h2>
+                <div class="list-group" id="presets">
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="maxquality" href="#">
+                    <h5 class="mb-1">Maximum quality</h5>
+                    <p class="mb-1">Absolute maximum quality without caring about performance.</p>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="highquality" href="#">
+                    <h5 class="mb-1">High quality</h5>
+                    <p class="mb-1">Enables graphical features missing from default without making them very high quality.</p>
+                  </a>
+                  <a class="list-group-item list-group-item-action active list-group-item-dark" id="default" href="#">
+                    <h5 class="mb-1">Default quality</h5>
+                    <p class="mb-1">Disables unoptimized features and optimizes the game without making the game look bad.</p>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="compquality" href="#">
+                    <h5 class="mb-1">Competitive quality</h5>
+                    <p class="mb-1">The maximum performance you can get while enabling features that may give you an information advantage and disabling optimizations that may reduce accuracy.</p>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="comp" href="#">
+                    <h5 class="mb-1">Competitive performance</h5>
+                    <p class="mb-1">The maximum performance you can get without making the game too hard to play because of awful visual quality and glitches.</p>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="maxperformance" href="#">
+                    <h5 class="mb-1">Maximum performance</h5>
+                    <p class="mb-1">Maximum performance without caring much about visibility or possible bugs.</p>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="stripped" href="#">
+                    <h5 class="mb-1">Stripped performance</h5>
+                    <p class="mb-1">Negatively affects playability by a lot and disables very essential features in desperation for performance.</p>
+                  </a>
+                </div>
+                <hr>
+                <h2>Select any addons</h2>
+                <form>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="badgpu">
+                    <label class="custom-control-label" for="badgpu">
+                      <b>Bad GPU</b> &mdash; Optimizations that generally do not affect quality for weak integrated graphics chips (Intel graphics) or weak/old GPUs (lower end made before 2007). Recommend to be used with the competitive performance or maximum performance presets. WARNING: can potentially REDUCE performance on other graphics cards!!!
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="badcpu">
+                    <label class="custom-control-label" for="badcpu">
+                      <b>Bad CPU</b> &mdash; Optimizations that generally do not affect quality for bad CPUs with two or less threads. Recommend to be used with the stripped performance, maximum performance or competitive performance preset. WARNING: can potentially REDUCE performance on other CPUs!!!
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="transparent_viewmodels">
+                    <label class="custom-control-label" for="transparent_viewmodels">
+                      <b>Transparent Viewmodels</b> &mdash; Enables support for transparent viewmodels. Note that this does not enable transparent viewmodels, your HUD must enable them. This only allows transparent viewmodels to work. Transparent viewmodels also require dxlevel 90 or higher.
+                    </label>
+                  </div>
+                </form>
+                <hr>
+                <h2>Download your VPKs</h2>
+                <p>Just drop them in your <code>tf/custom</code> folder and they'll automatically run.</p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.6/mastercomfig-default-preset.vpk" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Default Quality preset VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.6/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.6/mastercomfig-badcpu-addon.vpk" class="text-light" id="badcpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad CPU addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.6/mastercomfig-transparent_viewmodels-addon.vpk" class="text-light" id="transparent_viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="eye" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
+            </div>
+        </div>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown.js/0.5.0/markdown.min.js" integrity="sha256-m08q2xO2R0aeibb2C0GfTjpky+ZgvfKWzNQbj/2zJaY=" crossorigin="anonymous"></script>
+
+    <script>
+      String.prototype.format = function() {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function(match, number) {
+          return typeof args[number] != 'undefined' ? args[number] : match;
+        });
+      };
+
+      presets = new Map();
+      presets.set("maxquality", "Maximum Quality");
+      presets.set("highquality", "High Quality");
+      presets.set("default", "Default Quality");
+      presets.set("compquality", "Competitive Quality");
+      presets.set("comp", "Competitive Performance");
+      presets.set("maxperformance", "Maximum Performance");
+      presets.set("stripped", "Stripped Performance");
+
+      downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/download/{0}/mastercomfig-";
+      addonUrl = downloadUrl + "{1}-addon.vpk";
+      presetUrl = downloadUrl + "{1}-preset.vpk";
+
+      presetDownload = document.getElementById('preset-dl');
+
+      version = null;
+
+      $.get("https://api.github.com/repositories/69422496/releases/latest", function(data) {
+        version = data.tag_name;
+        document.getElementById('title').innerText = "Download mastercomfig " + data.tag_name;
+        document.getElementById('badgpu-dl').setAttribute('href', addonUrl.format(version, 'badgpu'));
+        document.getElementById('badcpu-dl').setAttribute('href', addonUrl.format(version, 'badcpu'));
+        document.getElementById('transparent_viewmodels-dl').setAttribute('href', addonUrl.format(version, 'transparent_viewmodels'));
+      }, "json");
+
+      $('#presets a').on('click', function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+        presetDownload.setAttribute('href', presetUrl.format(version, this.id));
+        presetDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset VPK'.format(presets.get(this.id))
+      });
+
+      $( "input[type='checkbox']" ).change(function() {
+        document.getElementById(this.id + "-dl").style.display = this.checked ? "initial" : "none"
+      });
+    </script>
+  </body>
+</html>
