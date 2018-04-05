@@ -35,7 +35,7 @@ future update.
 To make sure there are no user settings that conflict with the config, you will
 have to [clean up](#clean-up) your TF2 install.
 
-### 2. Download your preset and addons
+### 2. Download and install your preset and addons
 
 [Download](https://mastercoms.github.io/mastercomfig/download) the VPK files of your choice from the
 and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs

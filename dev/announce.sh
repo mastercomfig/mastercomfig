@@ -8,7 +8,7 @@ source mastercomfig-vars
 # Announce on Discord #releases
 
 curl -X POST -H 'Content-type: application/json' \
- --data "{\"content\":\"**[$1](https://mastercoms.github.io/mastercomfig/download)** released with $2.\"}" \
+ --data "{\"content\":\"@everyone **[$1](https://mastercoms.github.io/mastercomfig/download)** released with $2.\"}" \
  $DISCORD_WEBHOOK
 
 # TODO: Announce on teamfortress.tv and Steam Group

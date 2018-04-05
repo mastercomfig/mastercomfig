@@ -8,7 +8,7 @@ source mastercomfig-vars
 # Create release
 
 assets_url=$(curl -u $GITHUB_USERNAME:$GITHUB_TOKEN -X POST -H 'Content-type: application/json' \
-  --data "{\"tag_name\":\"$1\",\"target_commitish\":\"release\",\"name\":\"$1\",\"body\":\"**Highlights:** $2\n\n[Guided Install](https://mastercoms.github.io/mastercomfig/download)\n\n[**Manual Installation Instructions**](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#installation)\n\n[**Updating Instructions**](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#updating)\n\n***\n\n[View the code changes](https://github.com/mastercoms/mastercomfig/compare/...$1)\"}" \
+  --data "{\"tag_name\":\"$1\",\"target_commitish\":\"release\",\"name\":\"$1\",\"body\":\"**Highlights:** $2\n\n[**Installation Instructions**](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#installation)\n\n[**Updating Instructions**](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#updating)\n\n***\n\n[View the code changes](https://github.com/mastercoms/mastercomfig/compare/...$1)\"}" \
   https://api.github.com/repositories/69422496/releases | jq '.assets_url' | sed -e 's/^"//' -e 's/"$//')
 assets_url=${assets_url/api/uploads}
 
