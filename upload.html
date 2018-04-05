@@ -55,7 +55,7 @@
             var uploadRate = 1048576;
             var maxClearTime = 1288 / value;
             rate = "rate 1048576; net_splitpacket_maxrate {0}; net_maxcleartime {1}".format(Math.min(1048576, Math.floor(value / 2)),
-                                                                                            Math.max(maxClearTime.toFixed(7), Number(0.0000001).toFixed(7)));
+                                                                                            Math.max(maxClearTime.toFixed(7), Number(0.0000001).toFixed(8)));
           } else {
             rate = "rate {0}; net_splitpacket_maxrate {1}".format(value,
                                                                   Math.floor(value / 2));
