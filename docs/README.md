@@ -37,10 +37,9 @@ have to [clean up](#clean-up) your TF2 install.
 
 ### 2. Choose your preset and addons
 
-First, you'll have to figure out what preset and addons you want to use for your
-computer. A preset is a certain quality level and addons further adapt the
-config to your specific hardware. You can find infomation about all presets and
-addons [here](https://github.com/mastercoms/mastercomfig/wiki/Presets-and-Addons).
+First, you'll have to figure out what [preset and addons](https://github.com/mastercoms/mastercomfig/wiki/Presets-and-Addons)
+you want to use for your computer. A preset is a certain quality level and 
+addons further adapt the config to your specific hardware.
 
 ### 3. Download and Install
 
@@ -52,6 +51,11 @@ You don't have to rename anything either, just drag the files as is into `custom
 Do not download the source code, and do not download from the `Clone or Download`
 button. Only download the VPK files from the
 [latest release](https://github.com/mastercoms/mastercomfig/releases/latest).
+
+The VPK includes everything needed for the config to run, so you don't need to
+have an autoexec or run it using anything. If you already have an autoexec,
+you'll definitely want to read step 5 for more information on how to migrate
+to mastercomfig.
 
 To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 **Properties**, go to the **Local Files** tab, and then click the
@@ -76,7 +80,8 @@ conflicting configs in there.
 
 You can also create a `custom.cfg` in your `tf/cfg` folder to override any settings in the config.
 
-If you have any class configs, you will have to rename them to add a `_c`.  For example, `scout_c.cfg`.
+If you have any class configs, you will have to rename them to add a `_c`.  (`scout_c.cfg`, `soldier_c.cfg`,
+`pyro_c.cfg`, `demoman_c.cfg`, `heavyweapons_c.cfg`, `engineer_c.cfg`, `medic_c.cfg`, `sniper_c.cfg` and `spy_c.cfg`.
 If there's something you'd like to run for all of your class configs, you can add it to `game_overrides_c.cfg`.
 
 If you have a `listenserver.cfg`, you will have to rename it to `listenserver_c.cfg`.
@@ -88,18 +93,12 @@ It is also recommended to determine your optimal upload rate settings with [this
 
 To get an idea of how to use custom configs, [see what](https://github.com/mastercoms/mastercomfig/wiki/List-of-custom-configs) other people in the community have done.
 
-### 6. Competitive matchmaking
-
-Want to get competitive but encounter crashes due to the config reset feature of
-in-game competitive matchmaking? Run `exec mm/override` in console on the main menu
-to make the config compatible with competitive.
-
-### 7. Fixing Issues
+### 6. Fixing Issues
 
 Having issues (like crashes or local servers not working where you can't move or shoot)?
 Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
 
-### 8. Operating system optimizations
+### 7. Operating system optimizations
 Although not strictly TF2 related, you can improve your performance at the OS
 level: [Windows](https://github.com/mastercoms/mastercomfig/wiki/Windows-Systems),
 [Linux](https://github.com/mastercoms/mastercomfig/wiki/Linux-Systems)
