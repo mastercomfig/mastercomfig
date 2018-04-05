@@ -28,33 +28,22 @@ think there's an unoptimal value, or if it's just as simple as a comment being
 confusing to you, report the problem and you'll most likely see a fix in a
 future update.
 
-## Installation (guided)
-
-Visit the [download site](https://mastercoms.github.io/mastercomfig/download) for a guided install.
-
-## Installation (manual)
+## Installation
 
 ### 1. Clean your TF2 install
 
 To make sure there are no user settings that conflict with the config, you will
 have to [clean up](#clean-up) your TF2 install.
 
-### 2. Choose your preset and addons
+### 2. Download your preset and addons
 
-First, you'll have to figure out what [preset and addons](https://github.com/mastercoms/mastercomfig/wiki/Presets-and-Addons)
-you want to use for your computer. A preset is a certain quality level and
-addons further adapt the config to your specific hardware.
-
-### 3. Download and Install
-
-Download the VPK files of your choice from the
-[latest release](https://github.com/mastercoms/mastercomfig/releases/latest),
+[Download](https://mastercoms.github.io/mastercomfig/download) the VPK files of your choice from the
 and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
 in a folder inside your `custom` folder, put them in the `custom` folder itself.
 You don't have to rename anything either, just drag the files as is into `custom`.
 Do not download the source code, and do not download from the `Clone or Download`
 button. Only download the VPK files from the
-[latest release](https://github.com/mastercoms/mastercomfig/releases/latest).
+[official site](https://mastercoms.github.io/mastercomfig/download).
 
 The VPK includes everything needed for the config to run, so you don't need to
 have an autoexec or run it using anything. If you already have an autoexec,
@@ -66,7 +55,7 @@ To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 **Browse Local Files...** button. Then in the files app that appears, open the
 `tf` folder and then open the `custom` folder.
 
-### 4. Set Launch Options
+### 3. Set Launch Options
 
 Right click Team Fortress 2 in your Steam library, click **Properties** and
 click the **Set Launch Options...** button. In the window that appears, remove
@@ -77,7 +66,7 @@ the box and click ok.
 More information on launch options and choosing a DirectX version can be found
 [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
 
-### 5. Custom configs
+### 4. Custom configs
 
 If you have your own `autoexec.cfg` already, rename it to `custom.cfg`, but make sure you don't have any
 conflicting configs in there.
@@ -97,12 +86,12 @@ It is also recommended to determine your optimal upload rate settings with [this
 
 To get an idea of how to use custom configs, [see what](https://github.com/mastercoms/mastercomfig/wiki/List-of-custom-configs) other people in the community have done.
 
-### 6. Fixing Issues
+### 5. Fixing Issues
 
 Having issues (like crashes or local servers not working where you can't move or shoot)?
 Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
 
-### 7. Operating system optimizations
+### 6. Operating system optimizations
 Although not strictly TF2 related, you can improve your performance at the OS
 level: [Windows](https://github.com/mastercoms/mastercomfig/wiki/Windows-Systems),
 [Linux](https://github.com/mastercoms/mastercomfig/wiki/Linux-Systems)
