@@ -134,7 +134,7 @@ Add your alternatives uncommented in the applicable presets/addons:
 * `maxquality`: Absolute maximum quality without caring about performance
 * `highquality`: Enables graphical features missing from default without making
   them very high quality
-* `default`: Disable unoptimized features and optimize the game without making
+* `midquality`: Disable unoptimized features and optimize the game without making
   it look bad.
 * `compquality`: The maximum performance you can get while enabling features
   that may give you an information advantage and disabling optimizations that

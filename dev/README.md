@@ -2,7 +2,7 @@
 This folder contains scripts to build release files and manage releases.
 
 ## Packaging
-This creates the necessary files for releases (VPKs for addons and presets, 
+This creates the necessary files for releases (VPKs for addons and presets,
 and the autoexecs for cfg.tf).
 
 ### Presets
@@ -26,8 +26,8 @@ See [VDC](https://developer.valvesoftware.com/wiki/VPK#Linux_users).
 
 ### Autoexecs
 
-The packaging script for autoexecs is used to create combinations of the default
-comfig with some presets and addons for use on cfg.tf.
+The packaging script for autoexecs is used to create combinations of the comfig
+with some presets and addons for use on cfg.tf.
 
 This requires `dos2unix` to be installed to convert the CRLF line endings to
 LF for cfg.tf.

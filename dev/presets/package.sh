@@ -8,7 +8,7 @@ rm *.vpk -f
 rm */ -rf
 
 # Create presets
-declare -a presets=("stripped" "maxperformance" "comp" "compquality" "default" "highquality" "maxquality")
+declare -a presets=("stripped" "maxperformance" "comp" "compquality" "midquality" "highquality" "maxquality")
 
 for P in "${presets[@]}"; do
     mkdir -p mastercomfig-"${P}"-preset/cfg/presets
