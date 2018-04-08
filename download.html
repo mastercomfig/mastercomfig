@@ -31,10 +31,10 @@
                   </a>
                   <a class="list-group-item list-group-item-action list-group-item-dark" id="highquality" href="#">
                     <h5 class="mb-1">High quality</h5>
-                    <p class="mb-1">Enables graphical features missing from default without making them very high quality.</p>
+                    <p class="mb-1">Enables graphical features missing from mid quality without making them very high quality.</p>
                   </a>
-                  <a class="list-group-item list-group-item-action active list-group-item-dark" id="default" href="#">
-                    <h5 class="mb-1">Default quality</h5>
+                  <a class="list-group-item list-group-item-action active list-group-item-dark" id="midquality" href="#">
+                    <h5 class="mb-1">Mid quality</h5>
                     <p class="mb-1">Disables unoptimized features and optimizes the game without making the game look bad.</p>
                   </a>
                   <a class="list-group-item list-group-item-action list-group-item-dark" id="compquality" href="#">
@@ -77,14 +77,28 @@
                       <b>Transparent Viewmodels</b> &mdash; Enables support for transparent viewmodels. Note that this does not enable transparent viewmodels, your HUD must enable them. This only allows transparent viewmodels to work. Transparent viewmodels also require dxlevel 90 or higher.
                     </label>
                   </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="no_tutorial">
+                    <label class="custom-control-label" for="no_tutorial">
+                      <b>No Tutorial</b> &mdash; Disables tutorial messages and other popups
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="mouse_tweaks">
+                    <label class="custom-control-label" for="mouse_tweaks">
+                      <b>Mouse Tweaks</b> &mdash; Some optional mouse tweaks that arguably improve mouse input
+                    </label>
+                  </div>
                 </form>
                 <hr>
                 <h2>Download your VPKs</h2>
                 <p>Just drop them in your <code>tf/custom</code> folder and they'll automatically run.</p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.6/mastercomfig-default-preset.vpk" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Default Quality preset VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.6/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.6/mastercomfig-badcpu-addon.vpk" class="text-light" id="badcpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad CPU addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.6/mastercomfig-transparent_viewmodels-addon.vpk" class="text-light" id="transparent_viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="eye" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-midquality-preset.vpk" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Mid Quality preset VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-badcpu-addon.vpk" class="text-light" id="badcpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad CPU addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-transparent_viewmodels-addon.vpk" class="text-light" id="transparent_viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-no_tutorial-addon.vpk" class="text-light" id="no_tutorial-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Tutorial addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-mouse_tweaks-addon.vpk" class="text-light" id="mouse_tweaks-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Mouse Tweaks addon VPK</a></p>
                 <br><br>
             </div>
         </div>
@@ -106,7 +120,7 @@
       presets = new Map();
       presets.set("maxquality", "Maximum Quality");
       presets.set("highquality", "High Quality");
-      presets.set("default", "Default Quality");
+      presets.set("midquality", "Mid Quality");
       presets.set("compquality", "Competitive Quality");
       presets.set("comp", "Competitive Performance");
       presets.set("maxperformance", "Maximum Performance");
@@ -126,6 +140,8 @@
         document.getElementById('badgpu-dl').setAttribute('href', addonUrl.format(version, 'badgpu'));
         document.getElementById('badcpu-dl').setAttribute('href', addonUrl.format(version, 'badcpu'));
         document.getElementById('transparent_viewmodels-dl').setAttribute('href', addonUrl.format(version, 'transparent_viewmodels'));
+        document.getElementById('no_tutorial-dl').setAttribute('href', addonUrl.format(version, 'no_tutorial'));
+        document.getElementById('mouse_tweaks-dl').setAttribute('href', addonUrl.format(version, 'mouse_tweaks'));
       }, "json");
 
       $('#presets a').on('click', function (e) {
