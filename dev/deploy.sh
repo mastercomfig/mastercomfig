@@ -6,7 +6,7 @@ cd "$BINDIR"
 source mastercomfig-vars
 
 # Get old release version
-old_release=$(curl https://api.github.com/repositories/69422496/releases/latest | jq '.tag_name')
+old_release=$(curl https://api.github.com/repositories/69422496/releases/latest | jq '.tag_name' | sed -e 's/^"//' -e 's/"$//')
 
 # Create release
 
