@@ -3,9 +3,9 @@
 [![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
 
 ## Quick Links
-* [Installation](#installation)
-* [Updating](#updating)
-* [Troubleshooting](#troubleshooting)
+* [Installation](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#installation)
+* [Updating](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#updating)
+* [Troubleshooting](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#troubleshooting)
 * [Website](https://mastercoms.github.io/mastercomfig/)
 * [Wiki](https://github.com/mastercoms/mastercomfig/wiki)
 
@@ -48,7 +48,7 @@ button. Only download the VPK files from the
 The VPK includes everything needed for the config to run, so you don't need to
 have an autoexec or run it using anything. If you already have an autoexec,
 you'll definitely want to read step 5 for more information on how to migrate
-to mastercomfig.
+to mastercomfig. **Don't edit the VPK either, step 5 has customization instructions.**
 
 To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 **Properties**, go to the **Local Files** tab, and then click the
@@ -105,9 +105,9 @@ replacing the old files.
 
 This config gets updates frequently, so to get the latest improvements, make
 sure you check here for new releases frequently, or you can get notifications
-about updates on the [Discord](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config),
+about updates on the [Discord](https://discord.gg/CuPb2zV),
 [Steam Group](https://steamcommunity.com/groups/comfig) or
-[teamfortress.tv thread](https://discord.gg/CuPb2zV).
+[teamfortress.tv thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
 
 ## Clean up
 
