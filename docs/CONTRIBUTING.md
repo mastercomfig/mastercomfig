@@ -151,9 +151,9 @@ UFO posters
 * `no-footsteps`: Removes footstep sounds
 * `no-pyroland`: Removes Pyroland map textures
 * `no-soundscapes`: Remove soundscapes (ambient map noise)
-* `no_tutorial`: Disables tutorial messages and other popups
-* `mouse_tweaks`: Some optional mouse tweaks that arguably improve mouse input
-* `transparent_viewmodels`: Enables support for transparent viewmodels
+* `no-tutorial`: Disables tutorial messages and other popups
+* `mouse-tweaks`: Some optional mouse tweaks that arguably improve mouse input
+* `transparent-viewmodels`: Enables support for transparent viewmodels
 * `badcpu`: Optimizations that generally do not affect quality for bad CPUs
   with two or less threads
 * `badgpu`: Optimizations that do not affect quality that are only optimal for

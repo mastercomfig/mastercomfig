@@ -19,9 +19,9 @@ for P in "${presets[@]}"; do
     echo "exec presets/${P}" >> $preset_file
     echo "exec addons/badcpu" >> $preset_file
     echo "exec addons/badgpu" >> $preset_file
-    echo "exec addons/transparent_viewmodels" >> $preset_file
-    echo "exec addons/no_tutorial" >> $preset_file
-    echo "exec addons/mouse_tweaks" >> $preset_file
+    echo "exec addons/transparent-viewmodels" >> $preset_file
+    echo "exec addons/no-tutorial" >> $preset_file
+    echo "exec addons/mouse-tweaks" >> $preset_file
     echo "exec modules" >> $preset_file
     echo "exec comfig/modules-run" >> $preset_file
     echo "exec custom" >> $preset_file
