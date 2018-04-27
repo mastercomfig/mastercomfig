@@ -25,38 +25,87 @@
                 <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/releases/latest"  class="text-light">Changelog</a></p>
                 <h2>Choose your preset</h2>
                 <div class="list-group" id="presets">
-                  <a class="list-group-item list-group-item-action list-group-item-dark" id="maxquality" href="#">
-                    <h5 class="mb-1">Maximum quality</h5>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="ultra" href="#">
+                    <h5 class="mb-1">Ultra</h5>
                     <p class="mb-1">Absolute maximum quality without caring about performance.</p>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-dark" id="highquality" href="#">
-                    <h5 class="mb-1">High quality</h5>
-                    <p class="mb-1">Enables graphical features missing from mid quality without making them very high quality.</p>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="high" href="#">
+                    <h5 class="mb-1">High</h5>
+                    <p class="mb-1">Enables graphical features without making them very high quality.</p>
                   </a>
-                  <a class="list-group-item list-group-item-action active list-group-item-dark" id="midquality" href="#">
-                    <h5 class="mb-1">Mid quality</h5>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="medium-high" href="#">
+                    <h5 class="mb-1">Medium High</h5>
                     <p class="mb-1">Disables unoptimized features and optimizes the game without making the game look bad.</p>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-dark" id="compquality" href="#">
-                    <h5 class="mb-1">Competitive quality</h5>
-                    <p class="mb-1">The maximum performance you can get while enabling features that may give you an information advantage and disabling optimizations that may reduce accuracy.</p>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="medium" href="#">
+                    <h5 class="mb-1">Medium</h5>
+                    <p class="mb-1">The maximum performance you can get while enabling a few effects that may give you a slight edge.</p>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-dark" id="comp" href="#">
-                    <h5 class="mb-1">Competitive performance</h5>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="medium-low" href="#">
+                    <h5 class="mb-1">Medium Low</h5>
                     <p class="mb-1">The maximum performance you can get without making the game too hard to play because of awful visual quality and glitches.</p>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-dark" id="maxperformance" href="#">
-                    <h5 class="mb-1">Maximum performance</h5>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="low" href="#">
+                    <h5 class="mb-1">Low</h5>
                     <p class="mb-1">Maximum performance without caring much about visibility or possible bugs.</p>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-dark" id="stripped" href="#">
-                    <h5 class="mb-1">Stripped performance</h5>
+                  <a class="list-group-item list-group-item-action list-group-item-dark" id="very-low" href="#">
+                    <h5 class="mb-1">Very Low</h5>
                     <p class="mb-1">Negatively affects playability by a lot and disables very essential features in desperation for performance.</p>
                   </a>
                 </div>
                 <hr>
                 <h2>Select any addons</h2>
                 <form>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="no-extra-models">
+                    <label class="custom-control-label" for="no-extra-models">
+                      <b>No Extra Models</b> &mdash; Removes extra models like rockets in the background, UFOs and UFO posters
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="no-footsteps">
+                    <label class="custom-control-label" for="no-footsteps">
+                      <b>No Footsteps</b> &mdash; Removes footstep sounds
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="no-pyroland">
+                    <label class="custom-control-label" for="no-pyroland">
+                      <b>No Pyroland</b> &mdash; Removes Pyroland map textures
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="no-soundscapes">
+                    <label class="custom-control-label" for="no-soundscapes">
+                      <b>No Soundscapes</b> &mdash; Remove soundscapes (ambient map noise)
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="no-tutorial">
+                    <label class="custom-control-label" for="no-tutorial">
+                      <b>No Tutorial</b> &mdash; Disables tutorial messages and other popups
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="mouse-tweaks">
+                    <label class="custom-control-label" for="mouse-tweaks">
+                      <b>Mouse Tweaks</b> &mdash; Some optional mouse tweaks that arguably improve mouse input
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="transparent-viewmodels">
+                    <label class="custom-control-label" for="transparent-viewmodels">
+                      <b>Transparent Viewmodels</b> &mdash; Enables support for transparent viewmodels. Note that this does not enable transparent viewmodels, your HUD must enable them. This only allows transparent viewmodels to work. Transparent viewmodels also require dxlevel 90 or higher.
+                    </label>
+                  </div>
+                  <br>
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="badgpu">
                     <label class="custom-control-label" for="badgpu">
@@ -70,37 +119,20 @@
                       <b>Bad CPU</b> &mdash; Optimizations that generally do not affect quality for bad CPUs with two or less threads. Recommend to be used with the stripped performance, maximum performance or competitive performance preset. WARNING: can potentially REDUCE performance on other CPUs!!!
                     </label>
                   </div>
-                  <br>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="transparent_viewmodels">
-                    <label class="custom-control-label" for="transparent_viewmodels">
-                      <b>Transparent Viewmodels</b> &mdash; Enables support for transparent viewmodels. Note that this does not enable transparent viewmodels, your HUD must enable them. This only allows transparent viewmodels to work. Transparent viewmodels also require dxlevel 90 or higher.
-                    </label>
-                  </div>
-                  <br>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="no_tutorial">
-                    <label class="custom-control-label" for="no_tutorial">
-                      <b>No Tutorial</b> &mdash; Disables tutorial messages and other popups
-                    </label>
-                  </div>
-                  <br>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="mouse_tweaks">
-                    <label class="custom-control-label" for="mouse_tweaks">
-                      <b>Mouse Tweaks</b> &mdash; Some optional mouse tweaks that arguably improve mouse input
-                    </label>
-                  </div>
                 </form>
                 <hr>
                 <h2>Download your VPKs</h2>
                 <p>Just drop them in your <code>tf/custom</code> folder and they'll automatically run.</p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-midquality-preset.vpk" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Mid Quality preset VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-badcpu-addon.vpk" class="text-light" id="badcpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad CPU addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-transparent_viewmodels-addon.vpk" class="text-light" id="transparent_viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-no_tutorial-addon.vpk" class="text-light" id="no_tutorial-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Tutorial addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.5.8/mastercomfig-mouse_tweaks-addon.vpk" class="text-light" id="mouse_tweaks-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Mouse Tweaks addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-medium-high-preset.vpk" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Medium High preset VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-no-extra-models-addon.vpk" class="text-light" id="no-extra-models-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Extra Models addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-no-footsteps-addon.vpk" class="text-light" id="no-footsteps-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Footsteps addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-no_pyroland-addon.vpk" class="text-light" id="no-pyroland-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Pyroland addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-no_soundscapes-addon.vpk" class="text-light" id="no-soundscapes-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Soundscapes addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-no_tutorial-addon.vpk" class="text-light" id="no-tutorial-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Tutorial addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-mouse_tweaks-addon.vpk" class="text-light" id="mouse-tweaks-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Mouse Tweaks addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-transparent_viewmodels-addon.vpk" class="text-light" id="transparent-viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/6.7.0/mastercomfig-badcpu-addon.vpk" class="text-light" id="badcpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad CPU addon VPK</a></p>
                 <br><br>
             </div>
         </div>
@@ -112,21 +144,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown.js/0.5.0/markdown.min.js" integrity="sha256-m08q2xO2R0aeibb2C0GfTjpky+ZgvfKWzNQbj/2zJaY=" crossorigin="anonymous"></script>
 
     <script>
-      String.prototype.format = function() {
-        var args = arguments;
-        return this.replace(/{(\d+)}/g, function(match, number) {
-          return typeof args[number] != 'undefined' ? args[number] : match;
-        });
-      };
-
       presets = new Map();
-      presets.set("maxquality", "Maximum Quality");
-      presets.set("highquality", "High Quality");
-      presets.set("midquality", "Mid Quality");
-      presets.set("compquality", "Competitive Quality");
-      presets.set("comp", "Competitive Performance");
-      presets.set("maxperformance", "Maximum Performance");
-      presets.set("stripped", "Stripped Performance");
+      presets.set("ultra", "Ultra");
+      presets.set("high", "High");
+      presets.set("medium-high", "Medium High");
+      presets.set("medium", "Medium");
+      presets.set("medium-low", "Medium Low");
+      presets.set("low", "Low");
+      presets.set("very-low", "Very Low");
 
       downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/download/{0}/mastercomfig-";
       addonUrl = downloadUrl + "{1}-addon.vpk";
@@ -136,25 +161,60 @@
 
       version = null;
 
+      addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "transparent-viewmodels", "badgpu", "badcpu"];
+
+      storage = localStorage;
+
+      toggleAddon = function(id) {
+        setAddon(id, document.getElementById(id).checked);
+      };
+
+      setAddon = function(id, checked) {
+        storage.setItem(id, checked);
+        checked = storage.getItem(id) == 'true';
+        document.getElementById(id + "-dl").style.display = checked ? "initial" : "none"
+        document.getElementById(id).checked = checked;
+      }
+
+      setPreset = function(id) {
+        storage.setItem('preset', id);
+        $(document.getElementById(id)).tab('show');
+        presetDownload.setAttribute('href', presetUrl.format(version, id));
+        presetDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset VPK'.format(presets.get(id));
+      }
+
+      String.prototype.format = function() {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function(match, number) {
+          return typeof args[number] != 'undefined' ? args[number] : match;
+        });
+      };
+
       $.get("https://api.github.com/repositories/69422496/releases/latest", function(data) {
         version = data.tag_name;
         document.getElementById('title').innerText = "Download mastercomfig " + data.tag_name;
-        document.getElementById('badgpu-dl').setAttribute('href', addonUrl.format(version, 'badgpu'));
-        document.getElementById('badcpu-dl').setAttribute('href', addonUrl.format(version, 'badcpu'));
-        document.getElementById('transparent_viewmodels-dl').setAttribute('href', addonUrl.format(version, 'transparent_viewmodels'));
-        document.getElementById('no_tutorial-dl').setAttribute('href', addonUrl.format(version, 'no_tutorial'));
-        document.getElementById('mouse_tweaks-dl').setAttribute('href', addonUrl.format(version, 'mouse_tweaks'));
+        if (!storage.getItem('preset')) {
+          setPreset('medium-high');
+        } else {
+          setPreset(storage.getItem('preset'));
+        }
+        addons.forEach(function(id) {
+          document.getElementById(id + '-dl').setAttribute('href', addonUrl.format(version, id));
+          if (!storage.getItem(id)) {
+            setAddon(id, false);
+          } else {
+            setAddon(id, storage.getItem(id))
+          }
+        });
       }, "json");
 
       $('#presets a').on('click', function (e) {
         e.preventDefault();
-        $(this).tab('show');
-        presetDownload.setAttribute('href', presetUrl.format(version, this.id));
-        presetDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset VPK'.format(presets.get(this.id))
+        setPreset(this.id);
       });
 
       $( "input[type='checkbox']" ).change(function() {
-        document.getElementById(this.id + "-dl").style.display = this.checked ? "initial" : "none"
+        toggleAddon(this.id);
       });
     </script>
   </body>
