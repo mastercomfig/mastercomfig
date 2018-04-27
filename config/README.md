@@ -5,30 +5,38 @@ but it is not recommended to use the `comfig.cfg` as an `autoexec` by copying
 and pasting text, as you will lose the many benefits from the extra script and
 data files in the config.
 
-## 01-mastercomfig folders
-These are folders with overrides for the main `mastercomfig/` folder. They
-start with `01` so they are loaded in the correct order to override conflicting
-files.
+## overrides folder
+These are folders with overrides for the main `mastercomfig/` folder.
 
-### 01-mastercomfig_maxperformance
-These are overrides for the `maxperformance` and `stripped` presets.
+### low
+These are overrides for the `low` and `very_low` presets.
 
-### 01-mastercomfig_maxquality
-These are overrides for the `maxquality` preset.
+### ultra
+These are overrides for the `ultra` preset.
 
-### 01-mastercomfig_no_footsteps
-These are overrides to remove footstep sounds, used in the `stripped` preset.
+## addons folder
+These are folders with non `.cfg` addon files.
 
-### 01-mastercomfig_no_soundscapes
-These are overrides to remove sounds, used in the `maxperformance` and
-`stripped` presets.
+### mastercomfig-no-extra-models-addon
+This is an addon to remove extra models like rockets in the background, UFOs and
+UFO posters, used all presets except for `ultra` by default.
 
-### 01-mastercomfig_no_pyroland
-These are overrides to remove Pyroland map textures, used in the `maxperformance`
-and `stripped` presets.
+### mastercomfig-no-footsteps-addon
+This is an addon to remove footstep sounds, used in the `very_low` preset by default.
 
-## mastercomfig folders
-These are the main config files that get executed and read by the engine.
+### mastercomfig-no-soundscapes-addon
+This is an addon to remove soundscapes (ambient map noise), used in the `low` and
+`very_low` presets by default.
 
-### mastercomfig
-This is where the data files and console variables/commands go.
+### mastercomfig-no-pyroland-addon
+This is an addon to remove Pyroland map textures, used in the `low`
+and `very_low` presets by default.
+
+## mastercomfig folder
+These are the main files that get executed and read by the engine for every preset.
+
+## cfg folder
+This is where `.cfg` based addons and presets go.
+
+## tf2.json
+A work in progress JSON representation of mastercomfig.

@@ -18,19 +18,11 @@ See [VDC](https://developer.valvesoftware.com/wiki/VPK#Linux_users).
 
 ### Addons
 
-This script collects the config files from the various addons and generates a
+This script collects the files from the various addons and generates a
 VPK for each.
 
 This requires a `vpk` script installed to your binaries.
 See [VDC](https://developer.valvesoftware.com/wiki/VPK#Linux_users).
-
-### Autoexecs
-
-The packaging script for autoexecs is used to create combinations of the comfig
-with some presets and addons for use on cfg.tf.
-
-This requires `dos2unix` to be installed to convert the CRLF line endings to
-LF for cfg.tf.
 
 ## Releases
 

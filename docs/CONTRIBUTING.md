@@ -131,29 +131,34 @@ Add your alternatives uncommented in the applicable presets/addons:
 
 **Presets:**
 
-* `maxquality`: Absolute maximum quality without caring about performance
-* `highquality`: Enables graphical features missing from default without making
-  them very high quality
-* `midquality`: Disable unoptimized features and optimize the game without making
-  it look bad.
-* `compquality`: The maximum performance you can get while enabling features
-  that may give you an information advantage and disabling optimizations that
-  may reduce accuracy
-* `comp`: The maximum performance you can get without making the game too hard
-  to play because of awful visual quality and glitches
-* `maxperformance`: The maximum performance you can get without caring much
-  about visibility or possible bugs
-* `stripped`: Negatively affects playability by a lot and disables very
+* `ultra`: Absolute maximum quality without caring about performance
+* `high`: Enables graphical features without making them very high quality
+* `medium_high`: Disables unoptimized features and optimize the game without
+  making it look bad
+* `medium`: The maximum performance you can get while enabling a few effects
+  that may give you a slight edge
+* `medium_low`: The maximum performance you can get without making the game too
+  hard to play because of awful visual quality and glitches
+* `low`: Maximum performance without caring much about visibility or possible
+  bugs
+* `very_low`: Negatively affects playability by a lot and disables very
   essential features in desperation for performance
 
 **Addons:**
 
+* `no-extra-models`: Removes extra models like rockets in the background, UFOs and
+UFO posters
+* `no-footsteps`: Removes footstep sounds
+* `no-pyroland`: Removes Pyroland map textures
+* `no-soundscapes`: Remove soundscapes (ambient map noise)
+* `no_tutorial`: Disables tutorial messages and other popups
+* `mouse_tweaks`: Some optional mouse tweaks that arguably improve mouse input
+* `transparent_viewmodels`: Enables support for transparent viewmodels
 * `badcpu`: Optimizations that generally do not affect quality for bad CPUs
   with two or less threads
 * `badgpu`: Optimizations that do not affect quality that are only optimal for
   weak integrated graphics chips (Intel graphics) or weak/old GPUs
   (lower end made before 2007)
-* `transparent_viewmodels` - Enables support for transparent viewmodels
 
 **Modules:**
 

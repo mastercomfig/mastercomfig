@@ -47,8 +47,8 @@ button. Only download the VPK files from the
 
 The VPK includes everything needed for the config to run, so you don't need to
 have an autoexec or run it using anything. If you already have an autoexec,
-you'll definitely want to read step 5 for more information on how to migrate
-to mastercomfig. **Don't edit the VPK either, step 5 has customization instructions.**
+you'll definitely want to read step 4 for more information on how to migrate
+to mastercomfig. **Don't edit the VPK either, step 4 has customization instructions.**
 
 To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 **Properties**, go to the **Local Files** tab, and then click the
@@ -63,24 +63,38 @@ anything that's in there and paste
 `-novid -nojoy -nosteamcontroller -noff -softparticlesdefaultoff -reuse` into
 the box and click ok.
 
-More information on launch options and choosing a DirectX version can be found
-[here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
+You will also want to read about optional launch options and choosing a DirectX version [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
 
 ### 4. Custom configs
 
-If you have your own `autoexec.cfg` already, rename it to `custom.cfg`, but make sure you don't have any
-conflicting configs in there.
+You can't use an `autoexec.cfg` with mastercomfig. Instead, you will have to use `custom.cfg`.
 
-You can also create a `custom.cfg` in your `tf/cfg` folder to override any settings in the config.
+So, if you already have an `autoexec.cfg`, just rename it to `custom.cfg`. Make sure you don't have a pre-existing
+full blown config like Comanglia's or Chris' config or some network config in your `autoexec.cfg`, as that will
+conflict with mastercomfig.
+
+If you don't have an `autoexec.cfg`, you can create a `custom.cfg` in your `tf/cfg` folder to override any settings in the config.
 
 If you have any class configs, you will have to rename them to add a `_c`.  (`scout_c.cfg`, `soldier_c.cfg`,
 `pyro_c.cfg`, `demoman_c.cfg`, `heavyweapons_c.cfg`, `engineer_c.cfg`, `medic_c.cfg`, `sniper_c.cfg` and `spy_c.cfg`).
+You can change the name of your custom class configs using the `class_config_classname` alias.
+For example, you can put `alias class_config_heavyweapons "exec myheavy"` in `custom.cfg` if you want to use a file named `myheavy.cfg` for Heavy.
+
 If there's something you'd like to run for all of your class configs, you can add it to `game_overrides_c.cfg`.
+You can change the name of your custom game overrides config using the `game_overrides_c` alias.
+For example, you can put `alias game_overrides_c "exec mygameoverrides"` in `custom.cfg` if you want to use a file named `mygameoverrides.cfg`.
 
 If you have a `listenserver.cfg`, you will have to rename it to `listenserver_c.cfg`.
+You can change the name of your custom listen server config using the `listenserver_c` alias.
+For example, you can put `alias listenserver_c "exec mylistenserver"` in `custom.cfg` if you want to use a file named `mylistenserver.cfg`.
 
-For your `custom.cfg`, class configs and listen server config, you can use [modules](https://github.com/mastercoms/mastercomfig/wiki/Modules) to easily customize settings. To do finer customization through individual
-console variables and commands, you can look through the [config file on GitHub](https://github.com/mastercoms/mastercomfig/blob/release/config/mastercomfig/cfg/comfig.cfg) and add your preferences to your `custom.cfg`.
+You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
+For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
+
+To easily customize settings, you can use [modules](https://github.com/mastercoms/mastercomfig/wiki/Modules).
+
+To do finer customization through individual console variables and commands,
+you can look through the [config file on GitHub](https://github.com/mastercoms/mastercomfig/blob/release/config/mastercomfig/cfg/comfig.cfg) and add your preferences to your `custom.cfg`.
 
 It is also recommended to determine your optimal upload rate settings with [this tool](https://mastercoms.github.io/mastercomfig/upload).
 
@@ -88,8 +102,7 @@ To get an idea of how to use custom configs, [see what](https://github.com/maste
 
 ### 5. Fixing Issues
 
-Having issues (like crashes or local servers not working where you can't move or shoot)?
-Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
+Having issues? Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
 
 ### 6. Operating system optimizations
 Although not strictly TF2 related, you can improve your performance at the OS

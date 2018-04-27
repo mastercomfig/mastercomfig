@@ -8,11 +8,11 @@ rm *.vpk -f
 rm */ -rf
 
 # Create presets
-declare -a presets=("stripped" "maxperformance" "comp" "compquality" "midquality" "highquality" "maxquality")
+declare -a presets=("very_low" "low" "medium_low" "medium" "medium_high" "high" "ultra")
 
 for P in "${presets[@]}"; do
     mkdir -p mastercomfig-"${P}"-preset/cfg/presets
-    cp -f ../../config/mastercomfig/cfg/presets/"${P}".cfg mastercomfig-"${P}"-preset/cfg/presets/"${P}".cfg
+    cp -f ../../config/cfg/presets/"${P}".cfg mastercomfig-"${P}"-preset/cfg/presets/"${P}".cfg
     preset_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
     touch $preset_file
     echo "exec comfig" > $preset_file
@@ -22,39 +22,21 @@ for P in "${presets[@]}"; do
     echo "exec addons/transparent_viewmodels" >> $preset_file
     echo "exec addons/no_tutorial" >> $preset_file
     echo "exec addons/mouse_tweaks" >> $preset_file
+    echo "exec modules" >> $preset_file
+    echo "exec comfig/modules-run" >> $preset_file
     echo "exec custom" >> $preset_file
-    unix2dos $preset_file
 done
-
-# Create no preset VPK
-mkdir -p mastercomfig-no-preset/cfg
-no_preset_file="mastercomfig-no-preset/cfg/autoexec.cfg"
-touch $no_preset_file
-echo "exec comfig" > $no_preset_file
-echo "exec addons/badcpu" >> $no_preset_file
-echo "exec addons/badgpu" >> $no_preset_file
-echo "exec addons/transparent_viewmodels" >> $no_preset_file
-echo "exec addons/no_tutorial" >> $preset_file
-echo "exec addons/mouse_tweaks" >> $preset_file
-echo "exec custom" >> $no_preset_file
-unix2dos $no_preset_file
 
 # Fill folders with common files
 for D in *; do
     if [ -d "${D}" ]; then
-        cp -f ../../config/mastercomfig/cfg/*.cfg "${D}"/cfg/
-        cp -rf ../../config/mastercomfig/cfg/mm/ "${D}"/cfg
-        cp -f ../../config/mastercomfig/dxsupport_override.cfg "${D}"/dxsupport_override.cfg
-        cp -f ../../config/mastercomfig/glbaseshaders.cfg "${D}"/glbaseshaders.cfg
-        cp -f ../../config/mastercomfig/texture_preload_list.txt "${D}"/texture_preload_list.txt
-        mkdir -p "${D}"/scripts
-        cp -f ../../config/mastercomfig/scripts/client_precache.txt "${D}"/scripts/client_precache.txt
-        cp -f ../../config/mastercomfig/scripts/extra_models.txt "${D}"/scripts/extra_models.txt
+        cp -rf ../../config/mastercomfig/* "${D}"/
+        sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//' "${D}"/cfg/comfig.cfg
     fi
 done
 
-declare -a overriden_presets=("maxperformance" "stripped" "maxquality")
-declare -a override_combos=("01-mastercomfig_maxperformance 01-mastercomfig_no_soundscapes 01-mastercomfig_no_pyroland" "01-mastercomfig_maxperformance 01-mastercomfig_no_footsteps 01-mastercomfig_no_soundscapes 01-mastercomfig_no_pyroland" "01-mastercomfig_maxquality")
+declare -a overriden_presets=("low" "very_low" "ultra")
+declare -a override_combos=("low" "low" "ultra")
 
 # Preset specific overrides
 for ((i=0; i<${#overriden_presets[*]}; i++));
@@ -62,7 +44,7 @@ do
     folder="mastercomfig-${overriden_presets[i]}-preset/"
     for override in ${override_combos[i]}
     do
-        cp -rf "../../config/$override/"* $folder
+        cp -rf "../../config/overrides/$override/"* $folder
     done
 done
 

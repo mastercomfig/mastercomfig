@@ -1,0 +1,93 @@
+{
+  "entries": {
+    "network.split_packets.net_queued_packet_thread": {
+      "values": {
+        "type": "conditional",
+        "condition": {
+          "os": "Linux"
+        },
+        "failure": {
+          "value": true,
+          "description": "Queue split packets to send at a timed interval on a separate thread"
+        },
+        "success": {
+          "value": false,
+          "description": "Send split packets out per frame without a queued thread"
+        }
+      },
+      "name": "Queued packet thread",
+      "description": "Whether to queue split packets on another thread",
+    },
+    "network.split_packets.net_splitrate": {
+      "values": {
+        "type": "conditional",
+        "condition": {
+          "cpu_cores": {
+            "comparison": "greater_than_or_equal_to",
+            "value": 2
+          }
+        },
+        "failure": 1,
+        "success": {
+          "type": "scalable",
+          "scaler": "cpu_ghz",
+          "relationship": {
+            "min": 1,
+            "equation": {
+              "value": "2 * (x - 2.5) + 1",
+              "rounding": "floor"
+            }
+          },
+        }
+      },
+      "description": "How many packets to split per frame"
+    },
+    "network.rate.rate": {
+      "values": {
+        "type": "scalable",
+        "scaler": "upload",
+        "relationship": {
+          "min": 3000,
+          "equation": {
+            "value": "x",
+            "rounding": "floor"
+          },
+          "max": 1048576
+        }
+      }
+    },
+    "network.rate.net_maxcleartime": {
+      "values": {
+        "type": "conditional",
+        "condition": {
+          "upload": {
+            "comparison": "greater_than",
+            "value": 1048576
+          }
+        },
+        "failure": 4,
+        "success": {
+          "type": "scalable",
+          "scaler": "upload",
+          "relationship": {
+            "min": 0.0000001,
+            "equation": "1288 / x",
+          }
+        }
+      }
+    },
+    "network.rate.net_splitpacket_maxrate": {
+      "values": {
+        "type": "scalable",
+        "scaler": "upload",
+        "relationship": {
+          "min": 3000,
+          "equation": {
+            "value": "x / 2",
+            "rounding": "floor"
+          }
+        }
+      }
+    }
+  }
+}
