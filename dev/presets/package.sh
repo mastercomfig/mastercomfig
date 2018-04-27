@@ -8,7 +8,7 @@ rm *.vpk -f
 rm */ -rf
 
 # Create presets
-declare -a presets=("very_low" "low" "medium_low" "medium" "medium_high" "high" "ultra")
+declare -a presets=("very-low" "low" "medium-low" "medium" "medium-high" "high" "ultra")
 
 for P in "${presets[@]}"; do
     mkdir -p mastercomfig-"${P}"-preset/cfg/presets
@@ -35,7 +35,7 @@ for D in *; do
     fi
 done
 
-declare -a overriden_presets=("low" "very_low" "ultra")
+declare -a overriden_presets=("low" "very-low" "ultra")
 declare -a override_combos=("low" "low" "ultra")
 
 # Preset specific overrides
