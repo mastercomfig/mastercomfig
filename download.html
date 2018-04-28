@@ -153,6 +153,15 @@
       presets.set("low", "Low");
       presets.set("very-low", "Very Low");
 
+      recommendedAddons = new Map();
+      recommendedAddons.set("ultra", []);
+      recommendedAddons.set("high", ["no-extra-models"]);
+      recommendedAddons.set("medium-high", ["no-extra-models"]);
+      recommendedAddons.set("medium", ["no-extra-models"]);
+      recommendedAddons.set("medium-low", ["no-extra-models"]);
+      recommendedAddons.set("low", ["no-extra-models", "no-pyroland", "no-soundscapes"]);
+      recommendedAddons.set("very-low", ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"]);
+
       downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/download/{0}/mastercomfig-";
       addonUrl = downloadUrl + "{1}-addon.vpk";
       presetUrl = downloadUrl + "{1}-preset.vpk";
@@ -176,11 +185,21 @@
         document.getElementById(id).checked = checked;
       }
 
-      setPreset = function(id) {
+      setPreset = function(id, no_set) {
         storage.setItem('preset', id);
         $(document.getElementById(id)).tab('show');
         presetDownload.setAttribute('href', presetUrl.format(version, id));
         presetDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset VPK'.format(presets.get(id));
+        if (!no_set) {
+          if (id != "very-low") {
+            ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"].forEach(function(addon) {
+              setAddon(addon, false)
+            });
+          }
+          recommendedAddons.get(id).forEach(function(addon) {
+            setAddon(addon, true);
+          });
+        }
       }
 
       String.prototype.format = function() {
@@ -196,7 +215,7 @@
         if (!storage.getItem('preset')) {
           setPreset('medium-high');
         } else {
-          setPreset(storage.getItem('preset'));
+          setPreset(storage.getItem('preset'), true);
         }
         addons.forEach(function(id) {
           document.getElementById(id + '-dl').setAttribute('href', addonUrl.format(version, id));
