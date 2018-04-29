@@ -14,6 +14,7 @@ for P in "${presets[@]}"; do
     mkdir -p mastercomfig-"${P}"-preset/cfg/presets
     cp -f ../../config/cfg/presets/"${P}".cfg mastercomfig-"${P}"-preset/cfg/presets/"${P}".cfg
     preset_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
+    sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//' $preset_file
     touch $preset_file
     echo "exec comfig" > $preset_file
     echo "exec presets/${P}" >> $preset_file
