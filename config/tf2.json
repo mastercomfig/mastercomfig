@@ -90,6 +90,47 @@
       }
     }
   },
+  "keyboard.in_usekeyboardsampletime": {
+    "values": {
+      "type": "conditional",
+      "condition": {
+        "keyboard_look": true
+      },
+      "failure": {
+        "value": 0,
+        "TODO": "description",
+        "description": "Do not use averaged framerate for key-press duration tracking."
+      },
+      "success": {
+        "value": 1,
+        "TODO": "description",
+        "description": "Use averaged framerate for key-press duration tracking."
+      }
+    },
+    "TODO": "idk exactly what this does",
+    "name": "Key-press duration smoothing",
+    "description": "Whether to smooth key-press duration."
+  },
+  "keyboard_look.cl_yawspeed": {
+    "values": {
+      "type": "range",
+      "min": 0,
+      "max": 1000,
+      "default": 210
+    },
+    "name": "Keyboard look yaw speed",
+    "description": "How fast the looking direction is changed by the keyboard look on the yaw (left-right) axis."
+  },
+  "keyboard_look.cl_pitchspeed": {
+    "values": {
+      "type": "range",
+      "min": 0,
+      "max": 1000,
+      "default": 225
+    },
+    "name": "Keyboard look pitch speed",
+    "description": "How fast the looking direction is changed by the keyboard look on the pitch (up-down) axis."
+  },
   "mouse.m_pitch": {
     "values": {
       "type": "range",
