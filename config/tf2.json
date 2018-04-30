@@ -90,6 +90,416 @@
       }
     }
   },
+  "sound.snd_async_fullyasync": {
+    "values": [
+      {
+        "value": 0,
+        "description": "TODO"
+      },
+      {
+        "value": 1,
+        "description": "TODO"
+      }
+    ],
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "sound.snd_async_minsize": {
+    "values": {
+      "type": "range",
+      "min": 0,
+      "max": 1048576,
+      "default": 8192
+    },
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "sound.snd_mix_async": {
+    "values": {
+      "type": "conditional",
+      "condition": {
+        "cpu_cores": {
+          "comparison": "greater_than_or_equal_to",
+          "value": 4
+        }
+      },
+      "success": {
+        "value": 1,
+        "description": "Mix sounds in a separate thread. Performance impact on systems with less than 4 threads."
+      },
+      "failure": {
+        "value": 0,
+        "description": "Mix sounds in the main thread. Performance impact on systems with 4 threads or more."
+      }
+    },
+    "name": "Asynchronous sound mixing",
+    "description": "Whether to use a separate thread for sound mixing."
+  },
+  "sound.phonemedelay": {
+    "values": {
+      "type": "range",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0
+    },
+    "TODO": "isnt this technically rendering, not sound?",
+    "name": "Phoneme delay",
+    "description": "How many seconds to reserve for sound processing before before moving characters' mouths."
+  },
+  "sound.volume": {
+    "values": {
+      "type": "range",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "name": "Sound volume"
+  },
+  "sound.snd_musicvolume": {
+    "values": {
+      "type": "range",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "name": "Music volume"
+  },
+  "sound.snd_delay_sound_shift": {
+    "values": {
+      "type": "range",
+      "min": 0.001,
+      "max": 1.0,
+      "default": 0.01
+    },
+    "name": "Sound delay",
+    "description": "How many seconds to reserve for sound processing before playing the sound. Low values will significantly impact sound quality. High values cause delay."
+  },
+  "sound.snd_mixahead": {
+    "values": {
+      "type": "range",
+      "min": 0.01,
+      "max": 1.0,
+      "default": 0.08
+    },
+    "name": "Sound mix-ahead buffer size",
+    "description": "How many seconds of sound to mix to the sound buffer every time sound is mixed."
+  },
+  "sound.config.snd_surround_speakers": {
+    "values": [
+      {
+        "value": -1,
+        "description": "Use the configuration reported by the operating system."
+      },
+      {
+        "value": 0,
+        "description": "Assume headphones."
+      },
+      {
+        "value": 2,
+        "description": "Assume two speakers."
+      },
+      {
+        "value": 4,
+        "description": "Assume four speakers."
+      },
+      {
+        "value": 5,
+        "description": "Assume the 5.1 speaker configuration."
+      },
+      {
+        "value": 7,
+        "description": "Assume the 7.1 speaker configuration."
+      }
+    ],
+    "name": "Speaker configuration",
+    "description": "What speaker configuration to assume when computing sound spatialization."
+  },
+  "sound.config.windows_speaker_config": {
+    "values": "TODO",
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "sound.snd_lockpartial": {
+    "values": [
+      {
+        "value": 0,
+        "description": "TODO"
+      },
+      {
+        "value": 1,
+        "description": "TODO"
+      }
+    ],
+    "TODO": "idk exactly what this does",
+    "name": "Sound partial locking",
+    "description": "Whether to use an interleaved partial-locking algorithm for scheduling sound."
+  },
+  "sound.snd_cull_duplicates": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Only play the most recent instance of every sound."
+      },
+      {
+        "value": 1,
+        "description": "Allow playing as many instances of every sound as otherwise possible."
+      }
+    ],
+    "name": "Duplicate sounds",
+    "description": "Whether to allow playing multiple instances of the same sound."
+  },
+  "sound.voice_steal": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Do not reuse channels"
+      },
+      {
+        "value": 1,
+        "description": "TODO"
+      },
+      {
+        "value": 2,
+        "description": "TODO"
+      },
+    ],
+    "name": "Voice steal mode",
+    "description": "Whether to allow reusing a channel occupied by a quiet far-away sound."
+  },
+  "sound.voice_buffer_ms": {
+    "values": {
+      "type": "range",
+      "min": 0,
+      "max": 1000,
+      "default": 200
+    },
+    "name": "Voice buffer size",
+    "description": "Size of the voice chat sound buffer. Higher values increase latency. Low values may cause sound stuttering."
+  },
+  "debug.sound.snd_async_spew_blocking": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Do not spew."
+      },
+      {
+        "value": 1,
+        "description": "Print a message."
+      }
+    ],
+    "name": "Asynchronous sound blocks spew",
+    "description": "Print to console wherever asynchronous sound blocks on file I/O.",
+    "TODO": "awkward value descriptions"
+  },
+  "sound.snd_disable_mixer_duck": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Disable sound ducking."
+      },
+      {
+        "value": 1,
+        "TODO": "Used by anything else?",
+        "description": "Enable sound ducking. Used by voice chat. Performance impact."
+      }
+    ],
+    "name": "Sound ducking",
+    "description": "Whether to allow sound ducking - prioritizing a sound by lowering the volume of all other sound."
+  },
+  "sound.snd_disable_mixer_duck": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Disable sound ducking."
+      },
+      {
+        "value": 1,
+        "TODO": "Used by anything else?",
+        "description": "Enable sound ducking. Used by voice chat. Performance impact."
+      }
+    ],
+    "name": "Sound ducking",
+    "description": "Whether to allow sound ducking - prioritizing a sound by lowering the volume of all other sound."
+  },
+  "sound.snd_pitchquality": {
+    "values": [
+      {
+        "value": 0,
+        "description": "TODO"
+      },
+      {
+        "value": 1,
+        "description": "TODO"
+      }
+    ],
+    "name": "TODO"
+  },
+  "sound.dsp.dsp_enhance_stereo": {
+    "values": [
+      {
+        "value": 0,
+        "description": "TODO"
+      },
+      {
+        "value": 1,
+        "description": "TODO"
+      }
+    ],
+    "name": "TODO"
+  },
+  "sound.dsp.dsp_slow_cpu": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Process sound effects as usual."
+      },
+      {
+        "value": 1,
+        "description": "Avoid cpu-intensive spatial sound effects: `dsp_room`, `dsp_facingaway`, `dsp_spatial`, `dsp_automatic`."
+      }
+    ],
+    "name": "Expensive sound effects",
+    "description": "Whether to avoid cpu-intensive spatial sound effects."
+  },
+  "sound.spat.snd_spatialize_roundrobin": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Spatialize all channels every frame."
+      },
+      {
+        "type": "range",
+        "min": 1,
+        "max": 5,
+        "description": "Spatialize only `1/2^x` of all channels every frame."
+      }
+    ],
+    "name": "Sound channel spatialization fraction",
+    "description": "How many sound channels to spatialize each frame."
+  },
+  "sound.dsp.dsp_room": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Do not use a sound effect to simulate size of the surroundings."
+      },
+      {
+        "value": 1,
+        "TODO 1": "are there any other values? is this a toggle or an effect id?",
+        "TODO": "is this accurate? isnt this overridden by the automatic mechanisms and soundscapes?",
+        "description": "Use the default room effect."
+      }
+    ],
+    "TODO": "idk exactly what this does",
+    "name": "Room sound effect",
+    "description": "What effect to use to simulate sound distortion due to room size."
+  },
+  "sound.dsp.dsp_facingaway": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Do not use a sound effect when facing away."
+      },
+      {
+        "value": 30,
+        "description": "Use a low-pass effect for sounds when facing away."
+      },
+      {
+        "value": 31,
+        "TODO": "is this higher quality?",
+        "description": "Use a low-pass effect and a 80ms delay for sounds when facing away."
+      }
+    ],
+    "TODO": "idk exactly what this does",
+    "name": "Face-away sound effect",
+    "description": "What effect to use to when facing away from the sound source."
+  },
+  "sound.dsp.dsp_speaker": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Do not use a sound effect for the administrator."
+      },
+      {
+        "value": 50,
+        "description": "Use the default administrator effect."
+      },
+      {
+        "value": 59,
+        "TODO": "is this higher quality?",
+        "description": "Use an alternative administrator effect."
+      }
+    ],
+    "name": "Administrator sound effect",
+    "TODO": "is it used by anything else?",
+    "description": "What sound effect to use to simulate low-quality speakers. Used by the administrator."
+  },
+  "sound.dsp.dsp_water": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Do not use a sound effect underwater."
+      },
+      {
+        "value": 14,
+        "description": "Use a water effect with a small sound delay."
+      },
+      {
+        "value": 15,
+        "description": "Use a water effect with a medium sound delay."
+      },
+      {
+        "value": 16,
+        "TODO": "is this higher quality?",
+        "description": "Use a water effect with a large sound delay"
+      }
+    ],
+    "name": "Water sound effect",
+    "description": "What sound effect to use when underwater."
+  },
+  "sound.dsp.dsp_spatial": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Do not use a spatial sound effect."
+      },
+      {
+        "value": 40,
+        "description": "Use the default spatial sound effect."
+      }
+    ],
+    "TODO": "idk exactly what this does",
+    "name": "Spatial sound effect",
+    "description": "What effect to use for simulating spatial sound delays."
+  },
+  "sound.spatial.snd_defer_trace": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Spatialize immediately. Performance impact."
+      },
+      {
+        "value": 1,
+        "description": "Spatialize on the next frame. Increases spatialization latency."
+      }
+    ],
+    "name": "Defer sound spatialization",
+    "description": "Whether to wait until the next frame to spatialize a sound."
+  },
+  "sound.snd_noextraupdate": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Only refill the sound buffer once."
+      },
+      {
+        "value": 1,
+        "description": "Additionally refill the sound buffer after time-consuming operations."
+      }
+    ],
+    "name": "Extra sound update",
+    "description": "Whether to refill the sound buffer multiple times per frame."
+  },
   "keyboard.in_usekeyboardsampletime": {
     "values": {
       "type": "conditional",
