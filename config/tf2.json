@@ -90,6 +90,70 @@
       }
     }
   },
+  "steam_controller.sc_joystick_map": {
+    "values": [
+      {
+        "value": 0,
+        "description": "TODO"
+      },
+      {
+        "value": 1,
+        "description": "TODO"
+      }
+    ],
+    "TODO": "select a default",
+    "name": "TODO"
+  },
+  "steam_controller.sc_look_sensitivity_scale": {
+    "values": {
+      "type": "range",
+      "min": 0.1,
+      "max": 10.0,
+      "default": 1.0
+    },
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "steam_controller.sc_pitch_sensitivity": {
+    "values": {
+      "type": "range",
+      "min": 0.1,
+      "max": 10.0,
+      "default": 1.0
+    },
+    "name": "Steam controller extra pitch sensitivity",
+    "description": "Additional sensitivity for the pitch (up-down) axis of the steam controller."
+  },
+  "steam_controller.sc_pitch_sensitivity_default": {
+    "values": {
+      "type": "range",
+      "min": 0.1,
+      "max": 10.0,
+      "default": 1.0
+    },
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "steam_controller.sc_yaw_sensitivity": {
+    "values": {
+      "type": "range",
+      "min": 0.1,
+      "max": 10.0,
+      "default": 1.0
+    },
+    "name": "Steam controller extra yaw sensitivity",
+    "description": "Additional sensitivity for the yaw (left-right) axis of the steam controller."
+  },
+  "steam_controller.sc_yaw_sensitivity_default": {
+    "values": {
+      "type": "range",
+      "min": 0.1,
+      "max": 10.0,
+      "default": 1.0
+    },
+    "name": "TODO",
+    "description": "TODO"
+  },
   "go-kart.tf_halloween_kart_pitch": {
     "values": {
       "type": "range",
