@@ -90,6 +90,196 @@
       }
     }
   },
+  "mouse.m_pitch": {
+    "values": {
+      "type": "range",
+      "min": 0.01,
+      "max": 10.0,
+      "default": 0.022
+    },
+    "name": "TODO"
+  },
+  "mouse.m_yaw": {
+    "values": {
+      "type": "range",
+      "min": 0.01,
+      "max": 10.0,
+      "default": 0.022
+    },
+    "TODO": "is this the right default?",
+    "name": "TODO"
+  },
+  "mouse.sensitivity": {
+    "values": {
+      "type": "range",
+      "min": 0.01,
+      "max": 10.0,
+      "default": 3.0
+    },
+    "TODO": "is this the right default?",
+    "name": "Mouse sensitivity"
+  },
+  "mouse.m_limitedcapture_workaround": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Simply capture the mouse. Use unless there are problems."
+      },
+      {
+        "value": 1,
+        "description": "Try to work around issues with mouse capturing. Might help prevent clicking outside the TF2 window."
+      }
+    ],
+    "TODO": "is this the right default?",
+    "name": "Mouse capture issues workarounds",
+    "description": "Whether to work around mouse capture issues."
+  },
+  "mouse.m_filter": {
+    "values": [
+      {
+        "value": 0,
+        "description": "Use mouse input as is."
+      },
+      {
+        "value": 1,
+        "description": "Take the average of the change in mouse position changes over 2 frames. Makes mouse input smoother if FPS varies a lot."
+      }
+    ],
+    "TODO": "is this the right default?",
+    "name": "Mouse input filtering",
+    "description": "Whether to filter mouse input."
+  },
+  "mouse.m_mousespeed": {
+    "values": [
+      {
+        "value": 0,
+        "description": "TODO"
+      },
+      {
+        "value": 1,
+        "description": "TODO"
+      }
+    ],
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "mouse.m_mouseaccel1": {
+    "values": [
+      {
+        "value": 0,
+        "description": "TODO"
+      },
+      {
+        "value": 1,
+        "description": "TODO"
+      }
+    ],
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "mouse.m_mouseaccel2": {
+    "values": [
+      {
+        "value": 0,
+        "description": "TODO"
+      },
+      {
+        "value": 1,
+        "description": "TODO"
+      }
+    ],
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "mouse.m_rawinput": {
+    "values": [
+      {
+        "value": 1,
+        "description": "Try to disable acceleration, filtering and any other effects applied to mouse input by the system. Does not completely work on Mac OS."
+      },
+      {
+        "value": 0,
+        "description": "Use mouse input processed by the operating system."
+      }
+    ],
+    "name": "Raw mouse input",
+    "description": "Whether to use raw mouse input."
+  },
+  "mouse.accel.m_customaccel": {
+    "values": [
+      {
+        "value": 0,
+        "description": "No custom acceleration."
+      },
+      {
+        "value": 1,
+        "description": "Accelerate by `min(m_customaccel_max, pow(raw_mouse_delta, m_customaccel_exponent) * m_customaccel_scale + sensitivity)`."
+      },
+      {
+        "value": 2,
+        "description": "TODO is it m_yaw for x and m_pitch for y or the other way",
+        "descirption_": "Custom mouse acceleration scaled on the x and y axes by `m_yaw` and `m_pitch` respectively."
+      },
+      {
+        "value": 3,
+        "description": "Accelerate by `pow(raw_mouse_delta, m_customaccel_exponent - 1) * sensitivity`."
+      }
+    ],
+    "name": "Custom mouse acceleration mode"
+  },
+  "mouse.accel.m_customaccel_scale": {
+    "values": {
+      "type": "range",
+      "min": 0.01,
+      "max": 10.0,
+      "default": 0.04
+    },
+    "name": "Custom mouse acceleration multiplier",
+    "TODO": "restrict by m_customaccel",
+    "description": "Value used in custom mouse acceleration formulas as a coefficient. For example, a value of `0.5` would halve the amount of acceleration."
+  },
+  "mouse.accel.m_customaccel_max": {
+    "values": {
+      "type": "range",
+      "min": 0,
+      "max": 10.0,
+      "default": 0
+    },
+    "name": "Custom mouse acceleration upper limit",
+    "TODO": "restrict by m_customaccel",
+    "description": "Maximum value of the custom mouse acceleration."
+  },
+  "mouse.accel.m_customaccel_exponent": {
+    "values": {
+      "type": "range",
+      "min": 0.01,
+      "max": 10.0,
+      "default": 1
+    },
+    "name": "Custom mouse acceleration exponent",
+    "TODO": "restrict by m_customaccel",
+    "description": "Value used in custom mouse acceleration formulas as an exponent. Small changes effect the acceleration by a lot."
+  },
+  "mouse.zoom_sensitivity_ratio": {
+    "values": {
+      "type": "range",
+      "min": 0.01,
+      "max": 10.0,
+      "default": 0.7934714
+    },
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "TODO.cl_idealpitchscale": {
+    "values": {
+      "type": "range",
+      "min": 0.1,
+      "max": 10.0,
+      "default": 1.3
+    },
+    "name": "TODO",
+    "description: TODO"
+  },
   "steam_controller.sc_joystick_map": {
     "values": [
       {
