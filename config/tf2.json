@@ -89,5 +89,12 @@
         }
       }
     }
+  },
+  "console.filter.con_filter_text_out": {
+    "values": {
+      "type": "string"
+    },
+    "name": "Console message blacklist",
+    "description": "Filter out console messages containing a given string. Used to block console spam."
   }
 }
