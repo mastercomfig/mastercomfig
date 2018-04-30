@@ -90,6 +90,36 @@
       }
     }
   },
+  "go-kart.tf_halloween_kart_pitch": {
+    "values": {
+      "type": "range",
+      "min": 0.1,
+      "max": 100.0,
+      "default": 10.0
+    },
+    "name": "TODO",
+    "description": "TODO"
+  },
+  "go-kart.tf_halloween_kart_pitch_fast_follow_rate": {
+    "values": {
+      "type": "range",
+      "min": 0.1,
+      "max": 100.0,
+      "default": 10.0
+    },
+    "name": "Go-kart camera fast follow speed",
+    "description": "Speed with which the camera follows a player in a go-kart when they are moving fast."
+  },
+  "go-kart.tf_halloween_kart_pitch_slow_follow_rate": {
+    "values": {
+      "type": "range",
+      "min": 0.1,
+      "max": 100.0,
+      "default": 0.5
+    },
+    "name": "Go-kart camera slow follow speed",
+    "description": "Speed with which the camera follows a player in a go-kart when they are moving slowly."
+  },
   "console.filter.con_filter_text_out": {
     "values": {
       "type": "string"
