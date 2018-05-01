@@ -16,7 +16,7 @@
         }
       },
       "name": "Queued packet thread",
-      "description": "Whether to queue split packets on another thread",
+      "description": "Whether to queue split packets on another thread"
     },
     "network.split_packets.net_splitrate": {
       "values": {
@@ -37,7 +37,7 @@
               "value": "2 * (x - 2.5) + 1",
               "rounding": "floor"
             }
-          },
+          }
         }
       },
       "description": "How many packets to split per frame"
@@ -71,7 +71,7 @@
           "scaler": "upload",
           "relationship": {
             "min": 0.0000001,
-            "equation": "1288 / x",
+            "equation": "1288 / x"
           }
         }
       }
