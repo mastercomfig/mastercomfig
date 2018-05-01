@@ -161,11 +161,11 @@
       "values": [
         {
           "value": 1,
-          "description": "Enabled."
+          "description": "Play killsounds."
         },
         {
           "value": 0,
-          "description": "Disabled."
+          "description": "Do not play killsounds."
         }
       ],
       "name": "Killsounds",
@@ -238,11 +238,11 @@
       "values": [
         {
           "value": 1,
-          "description": "Enabled."
+          "description": "Play hitsounds."
         },
         {
           "value": 0,
-          "description": "Disabled."
+          "description": "Do not play hitsounds."
         }
       ],
       "name": "Hitsounds",
