@@ -620,7 +620,7 @@
         },
         {
           "value": 1,
-          "TODO 1": "are there any other values? is this a toggle or an effect id?",
+          "TODO": "are there any other values? is this a toggle or an effect id?",
           "TODO": "is this accurate? isnt this overridden by the automatic mechanisms and soundscapes?",
           "description": "Use the default room effect."
         }
