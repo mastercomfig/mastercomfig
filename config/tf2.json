@@ -89,6 +89,16 @@
         }
       }
     },
+    "engine.ai_frametime_limit": {
+      "values": {
+        "type": "range",
+        "min": 0.0,
+        "max": 5.0,
+        "default": 0.0152
+      },
+      "name": "Smart AI frametime",
+      "description": "How much time in seconds a frame can take before simple AI is used."
+    },
     "sound.killsound.tf_dingalingaling_lasthit": {
       "values": [
         {
