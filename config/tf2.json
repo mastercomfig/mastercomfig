@@ -89,6 +89,64 @@
         }
       }
     },
+    "replay.tf_replay_pyrovision": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not use pyrovision."
+        },
+        {
+          "value": 1,
+          "description": "Use pyrovision."
+        }
+      ],
+      "name": "Replay pyrovision",
+      "description": "Whether to use pyrovision when playing a replay."
+    },
+    "replay.replay_cache_client_ragdolls": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Recalculate physics every time a replay is played. Can lead to different results every time."
+        },
+        {
+          "value": 1,
+          "description": "Record client-side ragdolls and replay exactly."
+        }
+      ],
+      "name": "Client-side ragdoll recording",
+      "TODO": "is it recording or playback? is the description correct?",
+      "description": "Whether to record ragdoll poses and positions exactly as displayed when recording a replay."
+    },
+    "replay.replay_voice_during_playback": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not play voice chat recordings."
+        },
+        {
+          "value": 1,
+          "description": "Play voice chat recordings."
+        }
+      ],
+      "name": "Replay voice chat",
+      "TODO": "is it recording or playback?",
+      "description": "Whether to play voice chat communications in replays."
+    },
+    "replay.replay_rendersetting_renderglow": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not render x-rays."
+        },
+        {
+          "value": 1,
+          "description": "Render the x-ray outlines. Visible through walls."
+        }
+      ],
+      "name": "Replay x-rays",
+      "description": "Whether to render the outline around teammates and objectives in a replay."
+    },
     "engine.ai_frametime_limit": {
       "values": {
         "type": "range",
