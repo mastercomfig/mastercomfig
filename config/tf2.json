@@ -90,6 +90,93 @@
       }
     }
   },
+  "sound.hitsound.tf_dingalingaling": {
+    "values": [
+      {
+        "value": 1,
+        "description": "Enabled."
+      },
+      {
+        "value": 0,
+        "description": "Disabled."
+      }
+    ],
+    "name": "Hitsounds",
+    "description": "Whether to play a sound every time you do damage."
+  },
+  "sound.hitsound.tf_dingaling_pitchmaxdmg": {
+    "values": {
+      "type": "range",
+      "min": 0,
+      "max": 255,
+      "default": 65,
+      "TODO": "are min/max okay?"
+    },
+    "name": "High damage hitsound pitch",
+    "description": "Pitch of the hitsound for hits of at least 150 damage."
+  },
+  "sound.hitsound.tf_dingaling_pitchmindmg": {
+    "values": {
+      "type": "range",
+      "min": 0,
+      "max": 255,
+      "default": 127,
+      "TODO": "are min/max okay?"
+    },
+    "name": "Low damage hitsound pitch",
+    "description": "Pitch of the hitsound for hits of at most 10 damage."
+  },
+  "sound.hitsound.tf_dingalingaling_repeat_delay": {
+    "values": {
+      "type": "range",
+      "min": 0.0,
+      "max": 5.0,
+      "default": 0.0
+    },
+    "name": "Hitsound repeat delay",
+    "description": "Minimum delay in seconds between two hitsounds."
+  },
+  "sound.hitsound.tf_dingaling_volume": {
+    "values": {
+      "type": "range",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.7
+    },
+    "name": "Hitsound volume"
+  },
+  "sound.hitsound.tf_dingalingaling_effect": {
+    "values": [
+      {
+        "value": 0,
+        "description": ""
+      },
+      {
+        "value": 1,
+        "description": ""
+      }
+    ],
+    "name": "Hitsound effect",
+    "TODO": "add all hitsounds + descriptions",
+    "description": "Which hitsound effect to use."
+  },
+  "sound.hitsound.tf_dingaling_pitch_override": {
+    "values": [
+      {
+        "value": -1,
+        "description": "Do not force."
+      },
+      {
+        "type": "range",
+        "min": 1,
+        "max": 255,
+        "TODO": "are min/max okay?",
+        "description": "Force the specified pitch."
+      }
+    ],
+    "name": "Hitsound pitch override",
+    "description": "Whether to force one pitch for all hitsounds, regardless of damage."
+  },
   "sound.snd_async_fullyasync": {
     "values": [
       {
