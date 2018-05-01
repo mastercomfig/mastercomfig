@@ -90,6 +90,83 @@
       }
     }
   },
+  "sound.killsound.tf_dingalingaling_lasthit": {
+    "values": [
+      {
+        "value": 1,
+        "description": "Enabled."
+      },
+      {
+        "value": 0,
+        "description": "Disabled."
+      }
+    ],
+    "name": "Killsounds",
+    "description": "Whether to play a sound every time you kill an enemy."
+  },
+  "sound.killsound.tf_dingaling_lasthit_pitchmaxdmg": {
+    "values": {
+      "type": "range",
+      "min": 0,
+      "max": 255,
+      "default": 65,
+      "TODO": "are min/max okay?"
+    },
+    "name": "High damage killsound pitch",
+    "description": "Pitch of the killsound for hits of at least 150 damage."
+  },
+  "sound.killsound.tf_dingaling_lasthit_pitchmindmg": {
+    "values": {
+      "type": "range",
+      "min": 0,
+      "max": 255,
+      "default": 127,
+      "TODO": "are min/max okay?"
+    },
+    "name": "Low damage killsound pitch",
+    "description": "Pitch of the killsound for hits of at most 10 damage."
+  },
+  "sound.killsound.tf_dingaling_lasthit_volume": {
+    "values": {
+      "type": "range",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.7
+    },
+    "name": "Killsound volume"
+  },
+  "sound.killsound.tf_dingalingaling_last_effect": {
+    "values": [
+      {
+        "value": 0,
+        "description": ""
+      },
+      {
+        "value": 1,
+        "description": ""
+      }
+    ],
+    "name": "Killsound effect",
+    "TODO": "add all killsounds + descriptions",
+    "description": "Which killsound effect to use."
+  },
+  "sound.killsound.tf_dingaling_lasthit_pitch_override": {
+    "values": [
+      {
+        "value": -1,
+        "description": "Do not force."
+      },
+      {
+        "type": "range",
+        "min": 1,
+        "max": 255,
+        "TODO": "are min/max okay?",
+        "description": "Force the specified pitch."
+      }
+    ],
+    "name": "Killsound pitch override",
+    "description": "Whether to force one pitch for all killsounds, regardless of damage."
+  },
   "sound.hitsound.tf_dingalingaling": {
     "values": [
       {
