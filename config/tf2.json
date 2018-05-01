@@ -88,912 +88,912 @@
           }
         }
       }
-    }
-  },
-  "sound.killsound.tf_dingalingaling_lasthit": {
-    "values": [
-      {
-        "value": 1,
-        "description": "Enabled."
-      },
-      {
-        "value": 0,
-        "description": "Disabled."
-      }
-    ],
-    "name": "Killsounds",
-    "description": "Whether to play a sound every time you kill an enemy."
-  },
-  "sound.killsound.tf_dingaling_lasthit_pitchmaxdmg": {
-    "values": {
-      "type": "range",
-      "min": 0,
-      "max": 255,
-      "default": 65,
-      "TODO": "are min/max okay?"
     },
-    "name": "High damage killsound pitch",
-    "description": "Pitch of the killsound for hits of at least 150 damage."
-  },
-  "sound.killsound.tf_dingaling_lasthit_pitchmindmg": {
-    "values": {
-      "type": "range",
-      "min": 0,
-      "max": 255,
-      "default": 127,
-      "TODO": "are min/max okay?"
+    "sound.killsound.tf_dingalingaling_lasthit": {
+      "values": [
+        {
+          "value": 1,
+          "description": "Enabled."
+        },
+        {
+          "value": 0,
+          "description": "Disabled."
+        }
+      ],
+      "name": "Killsounds",
+      "description": "Whether to play a sound every time you kill an enemy."
     },
-    "name": "Low damage killsound pitch",
-    "description": "Pitch of the killsound for hits of at most 10 damage."
-  },
-  "sound.killsound.tf_dingaling_lasthit_volume": {
-    "values": {
-      "type": "range",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 0.7
-    },
-    "name": "Killsound volume"
-  },
-  "sound.killsound.tf_dingalingaling_last_effect": {
-    "values": [
-      {
-        "value": 0,
-        "description": ""
-      },
-      {
-        "value": 1,
-        "description": ""
-      }
-    ],
-    "name": "Killsound effect",
-    "TODO": "add all killsounds + descriptions",
-    "description": "Which killsound effect to use."
-  },
-  "sound.killsound.tf_dingaling_lasthit_pitch_override": {
-    "values": [
-      {
-        "value": -1,
-        "description": "Do not force."
-      },
-      {
+    "sound.killsound.tf_dingaling_lasthit_pitchmaxdmg": {
+      "values": {
         "type": "range",
-        "min": 1,
+        "min": 0,
         "max": 255,
-        "TODO": "are min/max okay?",
-        "description": "Force the specified pitch."
-      }
-    ],
-    "name": "Killsound pitch override",
-    "description": "Whether to force one pitch for all killsounds, regardless of damage."
-  },
-  "sound.hitsound.tf_dingalingaling": {
-    "values": [
-      {
-        "value": 1,
-        "description": "Enabled."
+        "default": 65,
+        "TODO": "are min/max okay?"
       },
-      {
-        "value": 0,
-        "description": "Disabled."
-      }
-    ],
-    "name": "Hitsounds",
-    "description": "Whether to play a sound every time you do damage."
-  },
-  "sound.hitsound.tf_dingaling_pitchmaxdmg": {
-    "values": {
-      "type": "range",
-      "min": 0,
-      "max": 255,
-      "default": 65,
-      "TODO": "are min/max okay?"
+      "name": "High damage killsound pitch",
+      "description": "Pitch of the killsound for hits of at least 150 damage."
     },
-    "name": "High damage hitsound pitch",
-    "description": "Pitch of the hitsound for hits of at least 150 damage."
-  },
-  "sound.hitsound.tf_dingaling_pitchmindmg": {
-    "values": {
-      "type": "range",
-      "min": 0,
-      "max": 255,
-      "default": 127,
-      "TODO": "are min/max okay?"
-    },
-    "name": "Low damage hitsound pitch",
-    "description": "Pitch of the hitsound for hits of at most 10 damage."
-  },
-  "sound.hitsound.tf_dingalingaling_repeat_delay": {
-    "values": {
-      "type": "range",
-      "min": 0.0,
-      "max": 5.0,
-      "default": 0.0
-    },
-    "name": "Hitsound repeat delay",
-    "description": "Minimum delay in seconds between two hitsounds."
-  },
-  "sound.hitsound.tf_dingaling_volume": {
-    "values": {
-      "type": "range",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 0.7
-    },
-    "name": "Hitsound volume"
-  },
-  "sound.hitsound.tf_dingalingaling_effect": {
-    "values": [
-      {
-        "value": 0,
-        "description": ""
-      },
-      {
-        "value": 1,
-        "description": ""
-      }
-    ],
-    "name": "Hitsound effect",
-    "TODO": "add all hitsounds + descriptions",
-    "description": "Which hitsound effect to use."
-  },
-  "sound.hitsound.tf_dingaling_pitch_override": {
-    "values": [
-      {
-        "value": -1,
-        "description": "Do not force."
-      },
-      {
+    "sound.killsound.tf_dingaling_lasthit_pitchmindmg": {
+      "values": {
         "type": "range",
-        "min": 1,
+        "min": 0,
         "max": 255,
-        "TODO": "are min/max okay?",
-        "description": "Force the specified pitch."
-      }
-    ],
-    "name": "Hitsound pitch override",
-    "description": "Whether to force one pitch for all hitsounds, regardless of damage."
-  },
-  "sound.snd_async_fullyasync": {
-    "values": [
-      {
-        "value": 0,
-        "description": "TODO"
+        "default": 127,
+        "TODO": "are min/max okay?"
       },
-      {
-        "value": 1,
-        "description": "TODO"
-      }
-    ],
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "sound.snd_async_minsize": {
-    "values": {
-      "type": "range",
-      "min": 0,
-      "max": 1048576,
-      "default": 8192
+      "name": "Low damage killsound pitch",
+      "description": "Pitch of the killsound for hits of at most 10 damage."
     },
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "sound.snd_mix_async": {
-    "values": {
-      "type": "conditional",
-      "condition": {
-        "cpu_cores": {
-          "comparison": "greater_than_or_equal_to",
-          "value": 4
+    "sound.killsound.tf_dingaling_lasthit_volume": {
+      "values": {
+        "type": "range",
+        "min": 0.0,
+        "max": 1.0,
+        "default": 0.7
+      },
+      "name": "Killsound volume"
+    },
+    "sound.killsound.tf_dingalingaling_last_effect": {
+      "values": [
+        {
+          "value": 0,
+          "description": ""
+        },
+        {
+          "value": 1,
+          "description": ""
+        }
+      ],
+      "name": "Killsound effect",
+      "TODO": "add all killsounds + descriptions",
+      "description": "Which killsound effect to use."
+    },
+    "sound.killsound.tf_dingaling_lasthit_pitch_override": {
+      "values": [
+        {
+          "value": -1,
+          "description": "Do not force."
+        },
+        {
+          "type": "range",
+          "min": 1,
+          "max": 255,
+          "TODO": "are min/max okay?",
+          "description": "Force the specified pitch."
+        }
+      ],
+      "name": "Killsound pitch override",
+      "description": "Whether to force one pitch for all killsounds, regardless of damage."
+    },
+    "sound.hitsound.tf_dingalingaling": {
+      "values": [
+        {
+          "value": 1,
+          "description": "Enabled."
+        },
+        {
+          "value": 0,
+          "description": "Disabled."
+        }
+      ],
+      "name": "Hitsounds",
+      "description": "Whether to play a sound every time you do damage."
+    },
+    "sound.hitsound.tf_dingaling_pitchmaxdmg": {
+      "values": {
+        "type": "range",
+        "min": 0,
+        "max": 255,
+        "default": 65,
+        "TODO": "are min/max okay?"
+      },
+      "name": "High damage hitsound pitch",
+      "description": "Pitch of the hitsound for hits of at least 150 damage."
+    },
+    "sound.hitsound.tf_dingaling_pitchmindmg": {
+      "values": {
+        "type": "range",
+        "min": 0,
+        "max": 255,
+        "default": 127,
+        "TODO": "are min/max okay?"
+      },
+      "name": "Low damage hitsound pitch",
+      "description": "Pitch of the hitsound for hits of at most 10 damage."
+    },
+    "sound.hitsound.tf_dingalingaling_repeat_delay": {
+      "values": {
+        "type": "range",
+        "min": 0.0,
+        "max": 5.0,
+        "default": 0.0
+      },
+      "name": "Hitsound repeat delay",
+      "description": "Minimum delay in seconds between two hitsounds."
+    },
+    "sound.hitsound.tf_dingaling_volume": {
+      "values": {
+        "type": "range",
+        "min": 0.0,
+        "max": 1.0,
+        "default": 0.7
+      },
+      "name": "Hitsound volume"
+    },
+    "sound.hitsound.tf_dingalingaling_effect": {
+      "values": [
+        {
+          "value": 0,
+          "description": ""
+        },
+        {
+          "value": 1,
+          "description": ""
+        }
+      ],
+      "name": "Hitsound effect",
+      "TODO": "add all hitsounds + descriptions",
+      "description": "Which hitsound effect to use."
+    },
+    "sound.hitsound.tf_dingaling_pitch_override": {
+      "values": [
+        {
+          "value": -1,
+          "description": "Do not force."
+        },
+        {
+          "type": "range",
+          "min": 1,
+          "max": 255,
+          "TODO": "are min/max okay?",
+          "description": "Force the specified pitch."
+        }
+      ],
+      "name": "Hitsound pitch override",
+      "description": "Whether to force one pitch for all hitsounds, regardless of damage."
+    },
+    "sound.snd_async_fullyasync": {
+      "values": [
+        {
+          "value": 0,
+          "description": "TODO"
+        },
+        {
+          "value": 1,
+          "description": "TODO"
+        }
+      ],
+      "name": "TODO",
+      "description": "TODO"
+    },
+    "sound.snd_async_minsize": {
+      "values": {
+        "type": "range",
+        "min": 0,
+        "max": 1048576,
+        "default": 8192
+      },
+      "name": "TODO",
+      "description": "TODO"
+    },
+    "sound.snd_mix_async": {
+      "values": {
+        "type": "conditional",
+        "condition": {
+          "cpu_cores": {
+            "comparison": "greater_than_or_equal_to",
+            "value": 4
+          }
+        },
+        "success": {
+          "value": 1,
+          "description": "Mix sounds in a separate thread. Performance impact on systems with less than 4 threads."
+        },
+        "failure": {
+          "value": 0,
+          "description": "Mix sounds in the main thread. Performance impact on systems with 4 threads or more."
         }
       },
-      "success": {
-        "value": 1,
-        "description": "Mix sounds in a separate thread. Performance impact on systems with less than 4 threads."
-      },
-      "failure": {
-        "value": 0,
-        "description": "Mix sounds in the main thread. Performance impact on systems with 4 threads or more."
-      }
+      "name": "Asynchronous sound mixing",
+      "description": "Whether to use a separate thread for sound mixing."
     },
-    "name": "Asynchronous sound mixing",
-    "description": "Whether to use a separate thread for sound mixing."
-  },
-  "sound.phonemedelay": {
-    "values": {
-      "type": "range",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 0.0
-    },
-    "TODO": "isnt this technically rendering, not sound?",
-    "name": "Phoneme delay",
-    "description": "How many seconds to reserve for sound processing before before moving characters' mouths."
-  },
-  "sound.volume": {
-    "values": {
-      "type": "range",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 1.0
-    },
-    "name": "Sound volume"
-  },
-  "sound.snd_musicvolume": {
-    "values": {
-      "type": "range",
-      "min": 0.0,
-      "max": 1.0,
-      "default": 1.0
-    },
-    "name": "Music volume"
-  },
-  "sound.snd_delay_sound_shift": {
-    "values": {
-      "type": "range",
-      "min": 0.001,
-      "max": 1.0,
-      "default": 0.01
-    },
-    "name": "Sound delay",
-    "description": "How many seconds to reserve for sound processing before playing the sound. Low values will significantly impact sound quality. High values cause delay."
-  },
-  "sound.snd_mixahead": {
-    "values": {
-      "type": "range",
-      "min": 0.01,
-      "max": 1.0,
-      "default": 0.08
-    },
-    "name": "Sound mix-ahead buffer size",
-    "description": "How many seconds of sound to mix to the sound buffer every time sound is mixed."
-  },
-  "sound.config.snd_surround_speakers": {
-    "values": [
-      {
-        "value": -1,
-        "description": "Use the configuration reported by the operating system."
-      },
-      {
-        "value": 0,
-        "description": "Assume headphones."
-      },
-      {
-        "value": 2,
-        "description": "Assume two speakers."
-      },
-      {
-        "value": 4,
-        "description": "Assume four speakers."
-      },
-      {
-        "value": 5,
-        "description": "Assume the 5.1 speaker configuration."
-      },
-      {
-        "value": 7,
-        "description": "Assume the 7.1 speaker configuration."
-      }
-    ],
-    "name": "Speaker configuration",
-    "description": "What speaker configuration to assume when computing sound spatialization."
-  },
-  "sound.config.windows_speaker_config": {
-    "values": "TODO",
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "sound.snd_lockpartial": {
-    "values": [
-      {
-        "value": 0,
-        "description": "TODO"
-      },
-      {
-        "value": 1,
-        "description": "TODO"
-      }
-    ],
-    "TODO": "idk exactly what this does",
-    "name": "Sound partial locking",
-    "description": "Whether to use an interleaved partial-locking algorithm for scheduling sound."
-  },
-  "sound.snd_cull_duplicates": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Only play the most recent instance of every sound."
-      },
-      {
-        "value": 1,
-        "description": "Allow playing as many instances of every sound as otherwise possible."
-      }
-    ],
-    "name": "Duplicate sounds",
-    "description": "Whether to allow playing multiple instances of the same sound."
-  },
-  "sound.voice_steal": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Do not reuse channels"
-      },
-      {
-        "value": 1,
-        "description": "TODO"
-      },
-      {
-        "value": 2,
-        "description": "TODO"
-      },
-    ],
-    "name": "Voice steal mode",
-    "description": "Whether to allow reusing a channel occupied by a quiet far-away sound."
-  },
-  "sound.voice_buffer_ms": {
-    "values": {
-      "type": "range",
-      "min": 0,
-      "max": 1000,
-      "default": 200
-    },
-    "name": "Voice buffer size",
-    "description": "Size of the voice chat sound buffer. Higher values increase latency. Low values may cause sound stuttering."
-  },
-  "debug.sound.snd_async_spew_blocking": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Do not spew."
-      },
-      {
-        "value": 1,
-        "description": "Print a message."
-      }
-    ],
-    "name": "Asynchronous sound blocks spew",
-    "description": "Print to console wherever asynchronous sound blocks on file I/O.",
-    "TODO": "awkward value descriptions"
-  },
-  "sound.snd_disable_mixer_duck": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Disable sound ducking."
-      },
-      {
-        "value": 1,
-        "TODO": "Used by anything else?",
-        "description": "Enable sound ducking. Used by voice chat. Performance impact."
-      }
-    ],
-    "name": "Sound ducking",
-    "description": "Whether to allow sound ducking - prioritizing a sound by lowering the volume of all other sound."
-  },
-  "sound.snd_disable_mixer_duck": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Disable sound ducking."
-      },
-      {
-        "value": 1,
-        "TODO": "Used by anything else?",
-        "description": "Enable sound ducking. Used by voice chat. Performance impact."
-      }
-    ],
-    "name": "Sound ducking",
-    "description": "Whether to allow sound ducking - prioritizing a sound by lowering the volume of all other sound."
-  },
-  "sound.snd_pitchquality": {
-    "values": [
-      {
-        "value": 0,
-        "description": "TODO"
-      },
-      {
-        "value": 1,
-        "description": "TODO"
-      }
-    ],
-    "name": "TODO"
-  },
-  "sound.dsp.dsp_enhance_stereo": {
-    "values": [
-      {
-        "value": 0,
-        "description": "TODO"
-      },
-      {
-        "value": 1,
-        "description": "TODO"
-      }
-    ],
-    "name": "TODO"
-  },
-  "sound.dsp.dsp_slow_cpu": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Process sound effects as usual."
-      },
-      {
-        "value": 1,
-        "description": "Avoid cpu-intensive spatial sound effects: `dsp_room`, `dsp_facingaway`, `dsp_spatial`, `dsp_automatic`."
-      }
-    ],
-    "name": "Expensive sound effects",
-    "description": "Whether to avoid cpu-intensive spatial sound effects."
-  },
-  "sound.spat.snd_spatialize_roundrobin": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Spatialize all channels every frame."
-      },
-      {
+    "sound.phonemedelay": {
+      "values": {
         "type": "range",
-        "min": 1,
-        "max": 5,
-        "description": "Spatialize only `1/2^x` of all channels every frame."
-      }
-    ],
-    "name": "Sound channel spatialization fraction",
-    "description": "How many sound channels to spatialize each frame."
-  },
-  "sound.dsp.dsp_room": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Do not use a sound effect to simulate size of the surroundings."
+        "min": 0.0,
+        "max": 1.0,
+        "default": 0.0
       },
-      {
-        "value": 1,
-        "TODO 1": "are there any other values? is this a toggle or an effect id?",
-        "TODO": "is this accurate? isnt this overridden by the automatic mechanisms and soundscapes?",
-        "description": "Use the default room effect."
-      }
-    ],
-    "TODO": "idk exactly what this does",
-    "name": "Room sound effect",
-    "description": "What effect to use to simulate sound distortion due to room size."
-  },
-  "sound.dsp.dsp_facingaway": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Do not use a sound effect when facing away."
-      },
-      {
-        "value": 30,
-        "description": "Use a low-pass effect for sounds when facing away."
-      },
-      {
-        "value": 31,
-        "TODO": "is this higher quality?",
-        "description": "Use a low-pass effect and a 80ms delay for sounds when facing away."
-      }
-    ],
-    "TODO": "idk exactly what this does",
-    "name": "Face-away sound effect",
-    "description": "What effect to use to when facing away from the sound source."
-  },
-  "sound.dsp.dsp_speaker": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Do not use a sound effect for the administrator."
-      },
-      {
-        "value": 50,
-        "description": "Use the default administrator effect."
-      },
-      {
-        "value": 59,
-        "TODO": "is this higher quality?",
-        "description": "Use an alternative administrator effect."
-      }
-    ],
-    "name": "Administrator sound effect",
-    "TODO": "is it used by anything else?",
-    "description": "What sound effect to use to simulate low-quality speakers. Used by the administrator."
-  },
-  "sound.dsp.dsp_water": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Do not use a sound effect underwater."
-      },
-      {
-        "value": 14,
-        "description": "Use a water effect with a small sound delay."
-      },
-      {
-        "value": 15,
-        "description": "Use a water effect with a medium sound delay."
-      },
-      {
-        "value": 16,
-        "TODO": "is this higher quality?",
-        "description": "Use a water effect with a large sound delay"
-      }
-    ],
-    "name": "Water sound effect",
-    "description": "What sound effect to use when underwater."
-  },
-  "sound.dsp.dsp_spatial": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Do not use a spatial sound effect."
-      },
-      {
-        "value": 40,
-        "description": "Use the default spatial sound effect."
-      }
-    ],
-    "TODO": "idk exactly what this does",
-    "name": "Spatial sound effect",
-    "description": "What effect to use for simulating spatial sound delays."
-  },
-  "sound.spatial.snd_defer_trace": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Spatialize immediately. Performance impact."
-      },
-      {
-        "value": 1,
-        "description": "Spatialize on the next frame. Increases spatialization latency."
-      }
-    ],
-    "name": "Defer sound spatialization",
-    "description": "Whether to wait until the next frame to spatialize a sound."
-  },
-  "sound.snd_noextraupdate": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Only refill the sound buffer once."
-      },
-      {
-        "value": 1,
-        "description": "Additionally refill the sound buffer after time-consuming operations."
-      }
-    ],
-    "name": "Extra sound update",
-    "description": "Whether to refill the sound buffer multiple times per frame."
-  },
-  "keyboard.in_usekeyboardsampletime": {
-    "values": {
-      "type": "conditional",
-      "condition": {
-        "keyboard_look": true
-      },
-      "failure": {
-        "value": 0,
-        "TODO": "description",
-        "description": "Do not use averaged framerate for key-press duration tracking."
-      },
-      "success": {
-        "value": 1,
-        "TODO": "description",
-        "description": "Use averaged framerate for key-press duration tracking."
-      }
+      "TODO": "isnt this technically rendering, not sound?",
+      "name": "Phoneme delay",
+      "description": "How many seconds to reserve for sound processing before before moving characters' mouths."
     },
-    "TODO": "idk exactly what this does",
-    "name": "Key-press duration smoothing",
-    "description": "Whether to smooth key-press duration."
-  },
-  "keyboard_look.cl_yawspeed": {
-    "values": {
-      "type": "range",
-      "min": 0,
-      "max": 1000,
-      "default": 210
-    },
-    "name": "Keyboard look yaw speed",
-    "description": "How fast the looking direction is changed by the keyboard look on the yaw (left-right) axis."
-  },
-  "keyboard_look.cl_pitchspeed": {
-    "values": {
-      "type": "range",
-      "min": 0,
-      "max": 1000,
-      "default": 225
-    },
-    "name": "Keyboard look pitch speed",
-    "description": "How fast the looking direction is changed by the keyboard look on the pitch (up-down) axis."
-  },
-  "mouse.m_pitch": {
-    "values": {
-      "type": "range",
-      "min": 0.01,
-      "max": 10.0,
-      "default": 0.022
-    },
-    "name": "TODO"
-  },
-  "mouse.m_yaw": {
-    "values": {
-      "type": "range",
-      "min": 0.01,
-      "max": 10.0,
-      "default": 0.022
-    },
-    "TODO": "is this the right default?",
-    "name": "TODO"
-  },
-  "mouse.sensitivity": {
-    "values": {
-      "type": "range",
-      "min": 0.01,
-      "max": 10.0,
-      "default": 3.0
-    },
-    "TODO": "is this the right default?",
-    "name": "Mouse sensitivity"
-  },
-  "mouse.m_limitedcapture_workaround": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Simply capture the mouse. Use unless there are problems."
+    "sound.volume": {
+      "values": {
+        "type": "range",
+        "min": 0.0,
+        "max": 1.0,
+        "default": 1.0
       },
-      {
-        "value": 1,
-        "description": "Try to work around issues with mouse capturing. Might help prevent clicking outside the TF2 window."
-      }
-    ],
-    "TODO": "is this the right default?",
-    "name": "Mouse capture issues workarounds",
-    "description": "Whether to work around mouse capture issues."
-  },
-  "mouse.m_filter": {
-    "values": [
-      {
-        "value": 0,
-        "description": "Use mouse input as is."
+      "name": "Sound volume"
+    },
+    "sound.snd_musicvolume": {
+      "values": {
+        "type": "range",
+        "min": 0.0,
+        "max": 1.0,
+        "default": 1.0
       },
-      {
-        "value": 1,
-        "description": "Take the average of the change in mouse position changes over 2 frames. Makes mouse input smoother if FPS varies a lot."
-      }
-    ],
-    "TODO": "is this the right default?",
-    "name": "Mouse input filtering",
-    "description": "Whether to filter mouse input."
-  },
-  "mouse.m_mousespeed": {
-    "values": [
-      {
-        "value": 0,
-        "description": "TODO"
+      "name": "Music volume"
+    },
+    "sound.snd_delay_sound_shift": {
+      "values": {
+        "type": "range",
+        "min": 0.001,
+        "max": 1.0,
+        "default": 0.01
       },
-      {
-        "value": 1,
-        "description": "TODO"
-      }
-    ],
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "mouse.m_mouseaccel1": {
-    "values": [
-      {
-        "value": 0,
-        "description": "TODO"
+      "name": "Sound delay",
+      "description": "How many seconds to reserve for sound processing before playing the sound. Low values will significantly impact sound quality. High values cause delay."
+    },
+    "sound.snd_mixahead": {
+      "values": {
+        "type": "range",
+        "min": 0.01,
+        "max": 1.0,
+        "default": 0.08
       },
-      {
-        "value": 1,
-        "description": "TODO"
-      }
-    ],
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "mouse.m_mouseaccel2": {
-    "values": [
-      {
-        "value": 0,
-        "description": "TODO"
+      "name": "Sound mix-ahead buffer size",
+      "description": "How many seconds of sound to mix to the sound buffer every time sound is mixed."
+    },
+    "sound.config.snd_surround_speakers": {
+      "values": [
+        {
+          "value": -1,
+          "description": "Use the configuration reported by the operating system."
+        },
+        {
+          "value": 0,
+          "description": "Assume headphones."
+        },
+        {
+          "value": 2,
+          "description": "Assume two speakers."
+        },
+        {
+          "value": 4,
+          "description": "Assume four speakers."
+        },
+        {
+          "value": 5,
+          "description": "Assume the 5.1 speaker configuration."
+        },
+        {
+          "value": 7,
+          "description": "Assume the 7.1 speaker configuration."
+        }
+      ],
+      "name": "Speaker configuration",
+      "description": "What speaker configuration to assume when computing sound spatialization."
+    },
+    "sound.config.windows_speaker_config": {
+      "values": "TODO",
+      "name": "TODO",
+      "description": "TODO"
+    },
+    "sound.snd_lockpartial": {
+      "values": [
+        {
+          "value": 0,
+          "description": "TODO"
+        },
+        {
+          "value": 1,
+          "description": "TODO"
+        }
+      ],
+      "TODO": "idk exactly what this does",
+      "name": "Sound partial locking",
+      "description": "Whether to use an interleaved partial-locking algorithm for scheduling sound."
+    },
+    "sound.snd_cull_duplicates": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Only play the most recent instance of every sound."
+        },
+        {
+          "value": 1,
+          "description": "Allow playing as many instances of every sound as otherwise possible."
+        }
+      ],
+      "name": "Duplicate sounds",
+      "description": "Whether to allow playing multiple instances of the same sound."
+    },
+    "sound.voice_steal": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not reuse channels"
+        },
+        {
+          "value": 1,
+          "description": "TODO"
+        },
+        {
+          "value": 2,
+          "description": "TODO"
+        },
+      ],
+      "name": "Voice steal mode",
+      "description": "Whether to allow reusing a channel occupied by a quiet far-away sound."
+    },
+    "sound.voice_buffer_ms": {
+      "values": {
+        "type": "range",
+        "min": 0,
+        "max": 1000,
+        "default": 200
       },
-      {
-        "value": 1,
-        "description": "TODO"
-      }
-    ],
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "mouse.m_rawinput": {
-    "values": [
-      {
-        "value": 1,
-        "description": "Try to disable acceleration, filtering and any other effects applied to mouse input by the system. Does not completely work on Mac OS."
+      "name": "Voice buffer size",
+      "description": "Size of the voice chat sound buffer. Higher values increase latency. Low values may cause sound stuttering."
+    },
+    "debug.sound.snd_async_spew_blocking": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not spew."
+        },
+        {
+          "value": 1,
+          "description": "Print a message."
+        }
+      ],
+      "name": "Asynchronous sound blocks spew",
+      "description": "Print to console wherever asynchronous sound blocks on file I/O.",
+      "TODO": "awkward value descriptions"
+    },
+    "sound.snd_disable_mixer_duck": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Disable sound ducking."
+        },
+        {
+          "value": 1,
+          "TODO": "Used by anything else?",
+          "description": "Enable sound ducking. Used by voice chat. Performance impact."
+        }
+      ],
+      "name": "Sound ducking",
+      "description": "Whether to allow sound ducking - prioritizing a sound by lowering the volume of all other sound."
+    },
+    "sound.snd_disable_mixer_duck": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Disable sound ducking."
+        },
+        {
+          "value": 1,
+          "TODO": "Used by anything else?",
+          "description": "Enable sound ducking. Used by voice chat. Performance impact."
+        }
+      ],
+      "name": "Sound ducking",
+      "description": "Whether to allow sound ducking - prioritizing a sound by lowering the volume of all other sound."
+    },
+    "sound.snd_pitchquality": {
+      "values": [
+        {
+          "value": 0,
+          "description": "TODO"
+        },
+        {
+          "value": 1,
+          "description": "TODO"
+        }
+      ],
+      "name": "TODO"
+    },
+    "sound.dsp.dsp_enhance_stereo": {
+      "values": [
+        {
+          "value": 0,
+          "description": "TODO"
+        },
+        {
+          "value": 1,
+          "description": "TODO"
+        }
+      ],
+      "name": "TODO"
+    },
+    "sound.dsp.dsp_slow_cpu": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Process sound effects as usual."
+        },
+        {
+          "value": 1,
+          "description": "Avoid cpu-intensive spatial sound effects: `dsp_room`, `dsp_facingaway`, `dsp_spatial`, `dsp_automatic`."
+        }
+      ],
+      "name": "Expensive sound effects",
+      "description": "Whether to avoid cpu-intensive spatial sound effects."
+    },
+    "sound.spat.snd_spatialize_roundrobin": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Spatialize all channels every frame."
+        },
+        {
+          "type": "range",
+          "min": 1,
+          "max": 5,
+          "description": "Spatialize only `1/2^x` of all channels every frame."
+        }
+      ],
+      "name": "Sound channel spatialization fraction",
+      "description": "How many sound channels to spatialize each frame."
+    },
+    "sound.dsp.dsp_room": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not use a sound effect to simulate size of the surroundings."
+        },
+        {
+          "value": 1,
+          "TODO 1": "are there any other values? is this a toggle or an effect id?",
+          "TODO": "is this accurate? isnt this overridden by the automatic mechanisms and soundscapes?",
+          "description": "Use the default room effect."
+        }
+      ],
+      "TODO": "idk exactly what this does",
+      "name": "Room sound effect",
+      "description": "What effect to use to simulate sound distortion due to room size."
+    },
+    "sound.dsp.dsp_facingaway": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not use a sound effect when facing away."
+        },
+        {
+          "value": 30,
+          "description": "Use a low-pass effect for sounds when facing away."
+        },
+        {
+          "value": 31,
+          "TODO": "is this higher quality?",
+          "description": "Use a low-pass effect and a 80ms delay for sounds when facing away."
+        }
+      ],
+      "TODO": "idk exactly what this does",
+      "name": "Face-away sound effect",
+      "description": "What effect to use to when facing away from the sound source."
+    },
+    "sound.dsp.dsp_speaker": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not use a sound effect for the administrator."
+        },
+        {
+          "value": 50,
+          "description": "Use the default administrator effect."
+        },
+        {
+          "value": 59,
+          "TODO": "is this higher quality?",
+          "description": "Use an alternative administrator effect."
+        }
+      ],
+      "name": "Administrator sound effect",
+      "TODO": "is it used by anything else?",
+      "description": "What sound effect to use to simulate low-quality speakers. Used by the administrator."
+    },
+    "sound.dsp.dsp_water": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not use a sound effect underwater."
+        },
+        {
+          "value": 14,
+          "description": "Use a water effect with a small sound delay."
+        },
+        {
+          "value": 15,
+          "description": "Use a water effect with a medium sound delay."
+        },
+        {
+          "value": 16,
+          "TODO": "is this higher quality?",
+          "description": "Use a water effect with a large sound delay"
+        }
+      ],
+      "name": "Water sound effect",
+      "description": "What sound effect to use when underwater."
+    },
+    "sound.dsp.dsp_spatial": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not use a spatial sound effect."
+        },
+        {
+          "value": 40,
+          "description": "Use the default spatial sound effect."
+        }
+      ],
+      "TODO": "idk exactly what this does",
+      "name": "Spatial sound effect",
+      "description": "What effect to use for simulating spatial sound delays."
+    },
+    "sound.spatial.snd_defer_trace": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Spatialize immediately. Performance impact."
+        },
+        {
+          "value": 1,
+          "description": "Spatialize on the next frame. Increases spatialization latency."
+        }
+      ],
+      "name": "Defer sound spatialization",
+      "description": "Whether to wait until the next frame to spatialize a sound."
+    },
+    "sound.snd_noextraupdate": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Only refill the sound buffer once."
+        },
+        {
+          "value": 1,
+          "description": "Additionally refill the sound buffer after time-consuming operations."
+        }
+      ],
+      "name": "Extra sound update",
+      "description": "Whether to refill the sound buffer multiple times per frame."
+    },
+    "keyboard.in_usekeyboardsampletime": {
+      "values": {
+        "type": "conditional",
+        "condition": {
+          "keyboard_look": true
+        },
+        "failure": {
+          "value": 0,
+          "TODO": "description",
+          "description": "Do not use averaged framerate for key-press duration tracking."
+        },
+        "success": {
+          "value": 1,
+          "TODO": "description",
+          "description": "Use averaged framerate for key-press duration tracking."
+        }
       },
-      {
-        "value": 0,
-        "description": "Use mouse input processed by the operating system."
-      }
-    ],
-    "name": "Raw mouse input",
-    "description": "Whether to use raw mouse input."
-  },
-  "mouse.accel.m_customaccel": {
-    "values": [
-      {
-        "value": 0,
-        "description": "No custom acceleration."
+      "TODO": "idk exactly what this does",
+      "name": "Key-press duration smoothing",
+      "description": "Whether to smooth key-press duration."
+    },
+    "keyboard_look.cl_yawspeed": {
+      "values": {
+        "type": "range",
+        "min": 0,
+        "max": 1000,
+        "default": 210
       },
-      {
-        "value": 1,
-        "description": "Accelerate by `min(m_customaccel_max, pow(raw_mouse_delta, m_customaccel_exponent) * m_customaccel_scale + sensitivity)`."
+      "name": "Keyboard look yaw speed",
+      "description": "How fast the looking direction is changed by the keyboard look on the yaw (left-right) axis."
+    },
+    "keyboard_look.cl_pitchspeed": {
+      "values": {
+        "type": "range",
+        "min": 0,
+        "max": 1000,
+        "default": 225
       },
-      {
-        "value": 2,
-        "description": "TODO is it m_yaw for x and m_pitch for y or the other way",
-        "descirption_": "Custom mouse acceleration scaled on the x and y axes by `m_yaw` and `m_pitch` respectively."
+      "name": "Keyboard look pitch speed",
+      "description": "How fast the looking direction is changed by the keyboard look on the pitch (up-down) axis."
+    },
+    "mouse.m_pitch": {
+      "values": {
+        "type": "range",
+        "min": 0.01,
+        "max": 10.0,
+        "default": 0.022
       },
-      {
-        "value": 3,
-        "description": "Accelerate by `pow(raw_mouse_delta, m_customaccel_exponent - 1) * sensitivity`."
-      }
-    ],
-    "name": "Custom mouse acceleration mode"
-  },
-  "mouse.accel.m_customaccel_scale": {
-    "values": {
-      "type": "range",
-      "min": 0.01,
-      "max": 10.0,
-      "default": 0.04
+      "name": "TODO"
     },
-    "name": "Custom mouse acceleration multiplier",
-    "TODO": "restrict by m_customaccel",
-    "description": "Value used in custom mouse acceleration formulas as a coefficient. For example, a value of `0.5` would halve the amount of acceleration."
-  },
-  "mouse.accel.m_customaccel_max": {
-    "values": {
-      "type": "range",
-      "min": 0,
-      "max": 10.0,
-      "default": 0
-    },
-    "name": "Custom mouse acceleration upper limit",
-    "TODO": "restrict by m_customaccel",
-    "description": "Maximum value of the custom mouse acceleration."
-  },
-  "mouse.accel.m_customaccel_exponent": {
-    "values": {
-      "type": "range",
-      "min": 0.01,
-      "max": 10.0,
-      "default": 1
-    },
-    "name": "Custom mouse acceleration exponent",
-    "TODO": "restrict by m_customaccel",
-    "description": "Value used in custom mouse acceleration formulas as an exponent. Small changes effect the acceleration by a lot."
-  },
-  "mouse.zoom_sensitivity_ratio": {
-    "values": {
-      "type": "range",
-      "min": 0.01,
-      "max": 10.0,
-      "default": 0.7934714
-    },
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "TODO.cl_idealpitchscale": {
-    "values": {
-      "type": "range",
-      "min": 0.1,
-      "max": 10.0,
-      "default": 1.3
-    },
-    "name": "TODO",
-    "description: TODO"
-  },
-  "steam_controller.sc_joystick_map": {
-    "values": [
-      {
-        "value": 0,
-        "description": "TODO"
+    "mouse.m_yaw": {
+      "values": {
+        "type": "range",
+        "min": 0.01,
+        "max": 10.0,
+        "default": 0.022
       },
-      {
-        "value": 1,
-        "description": "TODO"
-      }
-    ],
-    "TODO": "select a default",
-    "name": "TODO"
-  },
-  "steam_controller.sc_look_sensitivity_scale": {
-    "values": {
-      "type": "range",
-      "min": 0.1,
-      "max": 10.0,
-      "default": 1.0
+      "TODO": "is this the right default?",
+      "name": "TODO"
     },
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "steam_controller.sc_pitch_sensitivity": {
-    "values": {
-      "type": "range",
-      "min": 0.1,
-      "max": 10.0,
-      "default": 1.0
+    "mouse.sensitivity": {
+      "values": {
+        "type": "range",
+        "min": 0.01,
+        "max": 10.0,
+        "default": 3.0
+      },
+      "TODO": "is this the right default?",
+      "name": "Mouse sensitivity"
     },
-    "name": "Steam controller extra pitch sensitivity",
-    "description": "Additional sensitivity for the pitch (up-down) axis of the steam controller."
-  },
-  "steam_controller.sc_pitch_sensitivity_default": {
-    "values": {
-      "type": "range",
-      "min": 0.1,
-      "max": 10.0,
-      "default": 1.0
+    "mouse.m_limitedcapture_workaround": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Simply capture the mouse. Use unless there are problems."
+        },
+        {
+          "value": 1,
+          "description": "Try to work around issues with mouse capturing. Might help prevent clicking outside the TF2 window."
+        }
+      ],
+      "TODO": "is this the right default?",
+      "name": "Mouse capture issues workarounds",
+      "description": "Whether to work around mouse capture issues."
     },
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "steam_controller.sc_yaw_sensitivity": {
-    "values": {
-      "type": "range",
-      "min": 0.1,
-      "max": 10.0,
-      "default": 1.0
+    "mouse.m_filter": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Use mouse input as is."
+        },
+        {
+          "value": 1,
+          "description": "Take the average of the change in mouse position changes over 2 frames. Makes mouse input smoother if FPS varies a lot."
+        }
+      ],
+      "TODO": "is this the right default?",
+      "name": "Mouse input filtering",
+      "description": "Whether to filter mouse input."
     },
-    "name": "Steam controller extra yaw sensitivity",
-    "description": "Additional sensitivity for the yaw (left-right) axis of the steam controller."
-  },
-  "steam_controller.sc_yaw_sensitivity_default": {
-    "values": {
-      "type": "range",
-      "min": 0.1,
-      "max": 10.0,
-      "default": 1.0
+    "mouse.m_mousespeed": {
+      "values": [
+        {
+          "value": 0,
+          "description": "TODO"
+        },
+        {
+          "value": 1,
+          "description": "TODO"
+        }
+      ],
+      "name": "TODO",
+      "description": "TODO"
     },
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "go-kart.tf_halloween_kart_pitch": {
-    "values": {
-      "type": "range",
-      "min": 0.1,
-      "max": 100.0,
-      "default": 10.0
+    "mouse.m_mouseaccel1": {
+      "values": [
+        {
+          "value": 0,
+          "description": "TODO"
+        },
+        {
+          "value": 1,
+          "description": "TODO"
+        }
+      ],
+      "name": "TODO",
+      "description": "TODO"
     },
-    "name": "TODO",
-    "description": "TODO"
-  },
-  "go-kart.tf_halloween_kart_pitch_fast_follow_rate": {
-    "values": {
-      "type": "range",
-      "min": 0.1,
-      "max": 100.0,
-      "default": 10.0
+    "mouse.m_mouseaccel2": {
+      "values": [
+        {
+          "value": 0,
+          "description": "TODO"
+        },
+        {
+          "value": 1,
+          "description": "TODO"
+        }
+      ],
+      "name": "TODO",
+      "description": "TODO"
     },
-    "name": "Go-kart camera fast follow speed",
-    "description": "Speed with which the camera follows a player in a go-kart when they are moving fast."
-  },
-  "go-kart.tf_halloween_kart_pitch_slow_follow_rate": {
-    "values": {
-      "type": "range",
-      "min": 0.1,
-      "max": 100.0,
-      "default": 0.5
+    "mouse.m_rawinput": {
+      "values": [
+        {
+          "value": 1,
+          "description": "Try to disable acceleration, filtering and any other effects applied to mouse input by the system. Does not completely work on Mac OS."
+        },
+        {
+          "value": 0,
+          "description": "Use mouse input processed by the operating system."
+        }
+      ],
+      "name": "Raw mouse input",
+      "description": "Whether to use raw mouse input."
     },
-    "name": "Go-kart camera slow follow speed",
-    "description": "Speed with which the camera follows a player in a go-kart when they are moving slowly."
-  },
-  "console.filter.con_filter_text_out": {
-    "values": {
-      "type": "string"
+    "mouse.accel.m_customaccel": {
+      "values": [
+        {
+          "value": 0,
+          "description": "No custom acceleration."
+        },
+        {
+          "value": 1,
+          "description": "Accelerate by `min(m_customaccel_max, pow(raw_mouse_delta, m_customaccel_exponent) * m_customaccel_scale + sensitivity)`."
+        },
+        {
+          "value": 2,
+          "description": "TODO is it m_yaw for x and m_pitch for y or the other way",
+          "descirption_": "Custom mouse acceleration scaled on the x and y axes by `m_yaw` and `m_pitch` respectively."
+        },
+        {
+          "value": 3,
+          "description": "Accelerate by `pow(raw_mouse_delta, m_customaccel_exponent - 1) * sensitivity`."
+        }
+      ],
+      "name": "Custom mouse acceleration mode"
     },
-    "name": "Console message blacklist",
-    "description": "Filter out console messages containing a given string. Used to block console spam."
+    "mouse.accel.m_customaccel_scale": {
+      "values": {
+        "type": "range",
+        "min": 0.01,
+        "max": 10.0,
+        "default": 0.04
+      },
+      "name": "Custom mouse acceleration multiplier",
+      "TODO": "restrict by m_customaccel",
+      "description": "Value used in custom mouse acceleration formulas as a coefficient. For example, a value of `0.5` would halve the amount of acceleration."
+    },
+    "mouse.accel.m_customaccel_max": {
+      "values": {
+        "type": "range",
+        "min": 0,
+        "max": 10.0,
+        "default": 0
+      },
+      "name": "Custom mouse acceleration upper limit",
+      "TODO": "restrict by m_customaccel",
+      "description": "Maximum value of the custom mouse acceleration."
+    },
+    "mouse.accel.m_customaccel_exponent": {
+      "values": {
+        "type": "range",
+        "min": 0.01,
+        "max": 10.0,
+        "default": 1
+      },
+      "name": "Custom mouse acceleration exponent",
+      "TODO": "restrict by m_customaccel",
+      "description": "Value used in custom mouse acceleration formulas as an exponent. Small changes effect the acceleration by a lot."
+    },
+    "mouse.zoom_sensitivity_ratio": {
+      "values": {
+        "type": "range",
+        "min": 0.01,
+        "max": 10.0,
+        "default": 0.7934714
+      },
+      "name": "TODO",
+      "description": "TODO"
+    },
+    "TODO.cl_idealpitchscale": {
+      "values": {
+        "type": "range",
+        "min": 0.1,
+        "max": 10.0,
+        "default": 1.3
+      },
+      "name": "TODO",
+      "description: TODO"
+    },
+    "steam_controller.sc_joystick_map": {
+      "values": [
+        {
+          "value": 0,
+          "description": "TODO"
+        },
+        {
+          "value": 1,
+          "description": "TODO"
+        }
+      ],
+      "TODO": "select a default",
+      "name": "TODO"
+    },
+    "steam_controller.sc_look_sensitivity_scale": {
+      "values": {
+        "type": "range",
+        "min": 0.1,
+        "max": 10.0,
+        "default": 1.0
+      },
+      "name": "TODO",
+      "description": "TODO"
+    },
+    "steam_controller.sc_pitch_sensitivity": {
+      "values": {
+        "type": "range",
+        "min": 0.1,
+        "max": 10.0,
+        "default": 1.0
+      },
+      "name": "Steam controller extra pitch sensitivity",
+      "description": "Additional sensitivity for the pitch (up-down) axis of the steam controller."
+    },
+    "steam_controller.sc_pitch_sensitivity_default": {
+      "values": {
+        "type": "range",
+        "min": 0.1,
+        "max": 10.0,
+        "default": 1.0
+      },
+      "name": "TODO",
+      "description": "TODO"
+    },
+    "steam_controller.sc_yaw_sensitivity": {
+      "values": {
+        "type": "range",
+        "min": 0.1,
+        "max": 10.0,
+        "default": 1.0
+      },
+      "name": "Steam controller extra yaw sensitivity",
+      "description": "Additional sensitivity for the yaw (left-right) axis of the steam controller."
+    },
+    "steam_controller.sc_yaw_sensitivity_default": {
+      "values": {
+        "type": "range",
+        "min": 0.1,
+        "max": 10.0,
+        "default": 1.0
+      },
+      "name": "TODO",
+      "description": "TODO"
+    },
+    "go-kart.tf_halloween_kart_pitch": {
+      "values": {
+        "type": "range",
+        "min": 0.1,
+        "max": 100.0,
+        "default": 10.0
+      },
+      "name": "TODO",
+      "description": "TODO"
+    },
+    "go-kart.tf_halloween_kart_pitch_fast_follow_rate": {
+      "values": {
+        "type": "range",
+        "min": 0.1,
+        "max": 100.0,
+        "default": 10.0
+      },
+      "name": "Go-kart camera fast follow speed",
+      "description": "Speed with which the camera follows a player in a go-kart when they are moving fast."
+    },
+    "go-kart.tf_halloween_kart_pitch_slow_follow_rate": {
+      "values": {
+        "type": "range",
+        "min": 0.1,
+        "max": 100.0,
+        "default": 0.5
+      },
+      "name": "Go-kart camera slow follow speed",
+      "description": "Speed with which the camera follows a player in a go-kart when they are moving slowly."
+    },
+    "console.filter.con_filter_text_out": {
+      "values": {
+        "type": "string"
+      },
+      "name": "Console message blacklist",
+      "description": "Filter out console messages containing a given string. Used to block console spam."
+    }
   }
 }
