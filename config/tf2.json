@@ -40,6 +40,7 @@
           }
         }
       },
+      "name": "Packet split rate",
       "description": "How many packets to split per frame"
     },
     "network.rate.rate": {
@@ -54,7 +55,8 @@
           },
           "max": 1048576
         }
-      }
+      },
+      "name": "Upload rate"
     },
     "network.rate.net_maxcleartime": {
       "values": {
@@ -74,7 +76,8 @@
             "equation": "1288 / x"
           }
         }
-      }
+      },
+      "name": "Network downtime limit"
     },
     "network.rate.net_splitpacket_maxrate": {
       "values": {
@@ -87,7 +90,8 @@
             "rounding": "floor"
           }
         }
-      }
+      },
+      "name": "Split packet upload rate"
     },
     "replay.tf_replay_pyrovision": {
       "values": [
