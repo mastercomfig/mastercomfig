@@ -492,7 +492,7 @@
         {
           "value": 2,
           "description": "TODO"
-        },
+        }
       ],
       "name": "Voice steal mode",
       "description": "Whether to allow reusing a channel occupied by a quiet far-away sound."
@@ -899,8 +899,8 @@
         },
         {
           "value": 2,
-          "description": "TODO is it m_yaw for x and m_pitch for y or the other way",
-          "descirption_": "Custom mouse acceleration scaled on the x and y axes by `m_yaw` and `m_pitch` respectively."
+          "TODO": "TODO is it m_yaw for x and m_pitch for y or the other way",
+          "description": "Custom mouse acceleration scaled on the x and y axes by `m_yaw` and `m_pitch` respectively."
         },
         {
           "value": 3,
@@ -960,7 +960,7 @@
         "default": 1.3
       },
       "name": "TODO",
-      "description: TODO"
+      "description": "TODO"
     },
     "steam_controller.sc_joystick_map": {
       "values": [
