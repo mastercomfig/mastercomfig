@@ -1,0 +1,155 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "properties": {
+    "entries": {
+      "type": "object",
+      "patternProperties": {
+        "^[\\w-]+(\\.[\\w-]+)*$": {
+          "properties": {
+            "values": {
+              "oneOf": [
+                {"$ref": "#/definitions/complexValue"},
+                {
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/value"}
+                },
+                {
+                  "type": "string",
+                  "enum": ["TODO"]
+                }
+              ]
+            },
+            "name": {"type": "string"},
+            "description": {"type": "string"},
+            "TODO": {"type": "string"}
+          },
+          "required": ["values", "name"],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["entries"],
+  "additionalProperties": false,
+
+  "definitions": {
+    "float": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "not": {
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    "minMax": {
+      "oneOf": [
+        {"type": "integer"},
+        {"$ref": "#/definitions/float"}
+      ]
+    },
+    "value": {
+      "oneOf": [
+        {"$ref": "#/definitions/plainValue"},
+        {"$ref": "#/definitions/complexValue"}
+      ]
+    },
+    "plainValue": {
+      "oneOf": [
+        {"type": "integer"},
+        {"$ref": "#/definitions/float"},
+        {"type": "string"},
+        {"type": "boolean"}
+      ]
+    },
+    "complexValue": {
+      "type": "object",
+      "anyOf": [
+        {
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "value": {"$ref": "#/definitions/plainValue"}
+          },
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "type": {"type": "string", "enum": ["conditional"]},
+
+            "condition": {},
+            "success": {"$ref": "#/definitions/value"},
+            "failure": {"$ref": "#/definitions/value"}
+          },
+          "required": ["type", "condition", "success", "failure"],
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "type": {"type": "string", "enum": ["range"]},
+
+            "min": {"$ref": "#/definitions/minMax"},
+            "max": {"$ref": "#/definitions/minMax"},
+            "default": {"$ref": "#/definitions/plainValue"}
+          },
+          "required": ["type", "min", "max"],
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "type": {"type": "string", "enum": ["scalable"]},
+
+            "scaler": {"type": "string"},
+            "relationship": {
+              "type": "object",
+              "properties": {
+                "min": {"$ref": "#/definitions/minMax"},
+                "max": {"$ref": "#/definitions/minMax"},
+                "equation": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "value": {"type": "string"},
+                        "rounding": {"type": "string", "enum": ["floor", "ceil", "round"]}
+                      },
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "required": ["type", "scaler", "relationship"],
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "type": {"type": "string", "enum": ["string"]},
+
+            "default": {"type": "string"}
+          },
+          "required": ["type"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}
