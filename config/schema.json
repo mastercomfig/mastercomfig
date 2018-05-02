@@ -102,6 +102,7 @@
             "default": {"$ref": "#/definitions/plainValue"}
           },
           "required": ["type", "min", "max"],
+          "$comment": "default not required because sometimes ranges are used in conjunction with a special (default) 'disable' value",
           "additionalProperties": false
         },
         {
@@ -146,7 +147,7 @@
 
             "default": {"type": "string"}
           },
-          "required": ["type"],
+          "required": ["type", "default"],
           "additionalProperties": false
         }
       ]
