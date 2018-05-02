@@ -93,6 +93,48 @@
       },
       "name": "Split packet upload rate"
     },
+    "xray.glow_outline_effect_enable": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Render x-rays. Visible through walls."
+        },
+        {
+          "value": 1,
+          "description": "Do not render x-rays. Arguably a disadvantage."
+        }
+      ],
+      "name": "X-rays",
+      "description": "Whether to render the outline around teammates and objectives."
+    },
+    "xray.tf_enable_glows_after_respawn": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Render x-rays after respawning. Visible through walls."
+        },
+        {
+          "value": 1,
+          "description": "Do not render x-rays after respawning. Arguably a disadvantage."
+        }
+      ],
+      "name": "Respawn x-rays",
+      "description": "Whether to render the outline around teammates after respawning."
+    },
+    "xray.tf_spec_xray_disable": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Render x-rays when spectating. Visible through walls."
+        },
+        {
+          "value": 1,
+          "description": "Do not render x-rays when spectating."
+        }
+      ],
+      "name": "Spectator x-rays",
+      "description": "Whether to render the outline around teammates and objectives when spectating."
+    },
     "demo.demo_recordcommands": {
       "values": [
         {
