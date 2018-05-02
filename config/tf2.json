@@ -93,6 +93,171 @@
       },
       "name": "Split packet upload rate"
     },
+    "demo.demo_recordcommands": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not record commands."
+        },
+        {
+          "value": 1,
+          "description": "Record commands."
+        }
+      ],
+      "name": "Demo record commands",
+      "description": "Whether to record console commands in demo files. Includes keyboard and mouse input commands.",
+      "TODO": "does it include input"
+    },
+    "demo.demo_fov_override": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not override demo FOV."
+        },
+        {
+          "type": "range",
+          "min": 1,
+          "max": 179,
+          "description": "Override demo FOV with the specified value."
+        }
+      ],
+      "name": "Demo FOV override",
+      "description": "What value to force the FOV to when playing a demo."
+    },
+    "demo.ds_enable": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Manual. Do not recording anything automatically."
+        },
+        {
+          "value": 1,
+          "description": "Automatically record competitive matchmaking."
+        },
+        {
+          "value": 2,
+          "description": "Automatically record everything."
+        },
+        {
+          "value": 3,
+          "description": "Automatically record games on servers with `mp_tournament 1`."
+        }
+      ],
+      "name": "Demo auto-recording",
+      "description": "When to automatically record demos."
+    },
+    "demo.ds_autodelete": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not automatically delete demos."
+        },
+        {
+          "value": 1,
+          "description": "Automatically delete uneventful demos."
+        }
+      ],
+      "name": "Demo auto-delete",
+      "description": "Whether to automatically delete demos without killstraks or bookmarks."
+    },
+    "demo.ds_dir": {
+      "values": {
+        "type": "string",
+        "default": "demos"
+      },
+      "name": "Demo directory",
+      "description": "What directory to place demo files in. Relative to `tf/`."
+    },
+    "demo.ds_kill_delay": {
+      "values": {
+        "type": "range",
+        "min": 0.001,
+        "max": 600.0,
+        "default": 15.0,
+
+        "TODO": "check min/max/default"
+      },
+      "name": "Demo killstreak length",
+      "description": "What is the maximum amount of time between kills in a single killstreak."
+    },
+    "demo.ds_log": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not write a demo log."
+        },
+        {
+          "value": 1,
+          "description": "Write a demo log."
+        }
+      ],
+      "name": "Demo logs",
+      "description": "Whether to write a log of demo killstreaks and bookmarks."
+    },
+    "demo.ds_min_streak": {
+      "values": {
+        "type": "range",
+        "min": 1,
+        "max": 50,
+        "default": 4
+      },
+      "name": "Demo minimum killstreak",
+      "description": "How many kills in a killstreak are enough to add a demo bookmark."
+    },
+    "demo.ds_notify": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Print to console."
+        },
+        {
+          "value": 1,
+          "description": "Print to console and chat."
+        },
+        {
+          "value": 2,
+          "description": "Print to console and show a message on the HUD."
+        }
+      ],
+      "name": "Demo notification mode",
+      "description": "Where to print a message when adding a killstreak or a bookmark to a demo."
+    },
+    "demo.ds_prefix": {
+      "values": {
+        "type": "string",
+        "default": ""
+      },
+      "name": "Demo file prefix",
+      "description": "What prefix to prepend to all demo files."
+    },
+    "TODO.ds_screens": {
+      "values": [
+        {
+          "value": 1,
+          "description": "Take scoreboard screenshots."
+        },
+        {
+          "value": 0,
+          "description": "Do not take scoreboard screenshots."
+        }
+      ],
+      "name": "Scoreboard screenshots",
+      "description": "Whether to take a screenshot of the scoreboard when the round ends."
+    },
+    "demo.ds_sound": {
+      "values": [
+        {
+          "value": 1,
+          "description": "Play recording sounds."
+        },
+        {
+          "value": 0,
+          "description": "Do not play recording sounds."
+        }
+      ],
+      "name": "Demo record sounds",
+      "description": "Whether to play a film reel sound when starting and ending demo recording."
+    },
     "replay.tf_replay_pyrovision": {
       "values": [
         {
