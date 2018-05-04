@@ -102,7 +102,7 @@
         "TODO": "is this the right minimum"
       },
       "name": "FOV",
-      "description": "What field-of-view to use. Controls how far/close objects appear and how much fits on screen."
+      "description": "What field-of-view to use. Controls how far/close objects appear and how much fits on the screen."
     },
     "viewmodel.r_drawviewmodel": {
       "values": [
