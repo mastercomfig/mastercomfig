@@ -36,21 +36,20 @@
 
   "definitions": {
     "float": {
+      "type": "number",
+      "$comment": "see realFloat"
+    },
+    "realFloat": {
       "allOf": [
         {
           "type": "number"
         },
         {
+          "$comment": "virtually all validators consider 1.0 to be an integer, thus going against the standard. this is depressing",
           "not": {
             "type": "integer"
           }
         }
-      ]
-    },
-    "minMax": {
-      "oneOf": [
-        {"type": "integer"},
-        {"$ref": "#/definitions/float"}
       ]
     },
     "value": {
@@ -61,7 +60,6 @@
     },
     "plainValue": {
       "oneOf": [
-        {"type": "integer"},
         {"$ref": "#/definitions/float"},
         {"type": "string"},
         {"type": "boolean"}
@@ -92,20 +90,22 @@
           "additionalProperties": false
         },
         {
+          "$comment": "there should be an extra integer-only option. see realFloat",
           "properties": {
             "TODO": {"type": "string"},
             "description": {"type": "string"},
             "type": {"type": "string", "enum": ["range"]},
 
-            "min": {"$ref": "#/definitions/minMax"},
-            "max": {"$ref": "#/definitions/minMax"},
-            "default": {"$ref": "#/definitions/plainValue"}
+            "min": {"$ref": "#/definitions/float"},
+            "max": {"$ref": "#/definitions/float"},
+            "default": {"$ref": "#/definitions/float"}
           },
           "required": ["type", "min", "max"],
           "$comment": "default not required because sometimes ranges are used in conjunction with a special (default) 'disable' value",
           "additionalProperties": false
         },
         {
+          "$comment": "there should be an extra integer-only option for min/max. see realFloat",
           "properties": {
             "TODO": {"type": "string"},
             "description": {"type": "string"},
@@ -115,8 +115,8 @@
             "relationship": {
               "type": "object",
               "properties": {
-                "min": {"$ref": "#/definitions/minMax"},
-                "max": {"$ref": "#/definitions/minMax"},
+                "min": {"$ref": "#/definitions/float"},
+                "max": {"$ref": "#/definitions/float"},
                 "equation": {
                   "oneOf": [
                     {
