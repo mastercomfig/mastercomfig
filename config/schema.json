@@ -82,7 +82,32 @@
             "description": {"type": "string"},
             "type": {"type": "string", "enum": ["conditional"]},
 
-            "condition": {},
+            "condition": {
+              "patternProperties": {
+                "^\\w+$": {
+                  "oneOf": [
+                    {"$ref": "#/definitions/plainValue"},
+                    {
+                      "type": "object",
+                      "properties": {
+                        "comparison": {
+                          "type": "string",
+                          "enum": [
+                            "greater_than",
+                            "greater_than_or_equal_to",
+                            "less_than",
+                            "less_than_or_equal_to"
+                          ]
+                        },
+                        "value": {"$ref": "#/definitions/plainValue"}
+                      },
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              },
+              "additionalProperties": false
+            },
             "success": {"$ref": "#/definitions/value"},
             "failure": {"$ref": "#/definitions/value"}
           },
