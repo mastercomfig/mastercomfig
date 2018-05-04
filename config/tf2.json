@@ -93,6 +93,165 @@
       },
       "name": "Split packet upload rate"
     },
+    "fov_desired": {
+      "values": {
+        "type": "range",
+        "min": 54,
+        "max": 90,
+        "default": 90,
+        "TODO": "is this the right minimum"
+      },
+      "name": "FOV",
+      "description": "What field-of-view to use. Controls how far/close objects appear and how much fits on screen."
+    },
+    "viewmodel.r_drawviewmodel": {
+      "values": [
+        {
+          "value": 1,
+          "description": "Draw viewmodels."
+        },
+        {
+          "value": 0,
+          "description": "Do not draw viewmodels."
+        }
+      ],
+      "name": "Viewmodels",
+      "description": "Whether to draw held weapons when in first-person."
+    },
+    "viewmodel.viewmodel_fov": {
+      "values": {
+        "type": "range",
+        "min": 1,
+        "max": 179,
+        "default": 70
+      },
+      "name": "Viewmodel FOV",
+      "description": "What field-of-view to use for viewmodels. Controls how close/far viewmodels appear."
+    },
+    "viewmodel.cl_flipviewmodels": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Use right-handed viewmodels."
+        },
+        {
+          "value": 1,
+          "description": "Use left-handed viewmodels. Can cause visual bugs. Affects projectile weapons."
+        }
+      ],
+      "name": "Flip viewmodels",
+      "description": "Whether to use left-handed viewmodels."
+    },
+    "viewmodel.tf_use_min_viewmodels": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Use default viewmodels."
+        },
+        {
+          "value": 1,
+          "description": "Use minimized viewmodels."
+        }
+      ],
+      "name": "Min-viewmodels",
+      "description": "Whether to use minimized viewmodels."
+    },
+    "viewmodel.cl_first_person_uses_world_model": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Use viewmodels."
+        },
+        {
+          "value": 1,
+          "description": "Use the character model."
+        }
+      ],
+      "name": "World viewmodel",
+      "description": "Whether to use a viewmodel or draw the actual character's body in first-person."
+    },
+    "tf_medieval_thirdperson": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Use first-person in medieval."
+        },
+        {
+          "value": 1,
+          "description": "Use third-person in medieval."
+        }
+      ],
+      "name": "Medieval third-person",
+      "description": "Whether to use third-person view for the Medieval gamemode."
+    },
+    "tf_taunt_first_person": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Taunt in third-person."
+        },
+        {
+          "value": 1,
+          "description": "Taunt in first-person."
+        }
+      ],
+      "name": "First-person taunts",
+      "description": "Whether to taunt in first or third person view."
+    },
+    "tf_spectate_pyrovision": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Do not use pyrovision."
+        },
+        {
+          "value": 1,
+          "description": "Use pyrovision."
+        }
+      ],
+      "name": "Spectator pyrovision",
+      "description": "Whether to use pyrovision when spectating."
+    },
+    "spec_autodirector": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Disable the auto-director."
+        },
+        {
+          "value": 1,
+          "description": "Enable the auto-director.",
+          "TODO": "explain what the 'best' view means"
+        }
+      ],
+      "name": "Spectator auto-director",
+      "description": "Automatically choose the best spectator view."
+    },
+    "tf_romevision_opt_in": {
+      "values": [
+        {
+          "value": 0,
+          "description": "Disable romevision. TODO"
+        },
+        {
+          "value": 1,
+          "description": "Enable romevision. TODO"
+        }
+      ],
+      "name": "Romevision",
+      "description": "TODO. idk what romevision is"
+    },
+    "tf_sheen_alpha_firstperson": {
+      "values": {
+        "type": "range",
+        "min": 0,
+        "max": 255,
+        "default": 0,
+        "TODO": "is this the right default"
+      },
+      "name": "Killstreak sheen alpha",
+      "description": "First-person killstreak sheen transparency."
+    },
     "xray.glow_outline_effect_enable": {
       "values": [
         {
@@ -164,7 +323,7 @@
         }
       ],
       "name": "Demo FOV override",
-      "description": "What value to force the FOV to when playing a demo."
+      "description": "What value to force the filed-of-view to when playing a demo."
     },
     "demo.ds_enable": {
       "values": [
