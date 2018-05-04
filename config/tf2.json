@@ -138,12 +138,12 @@
     "demo.demo_recordcommands": {
       "values": [
         {
-          "value": 0,
-          "description": "Do not record commands."
-        },
-        {
           "value": 1,
           "description": "Record commands."
+        },
+        {
+          "value": 0,
+          "description": "Do not record commands."
         }
       ],
       "name": "Demo record commands",
