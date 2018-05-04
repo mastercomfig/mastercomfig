@@ -96,11 +96,11 @@
     "xray.glow_outline_effect_enable": {
       "values": [
         {
-          "value": 0,
+          "value": 1,
           "description": "Render x-rays. Visible through walls."
         },
         {
-          "value": 1,
+          "value": 0,
           "description": "Do not render x-rays. Arguably a disadvantage."
         }
       ],
@@ -110,11 +110,11 @@
     "xray.tf_enable_glows_after_respawn": {
       "values": [
         {
-          "value": 0,
+          "value": 1,
           "description": "Render x-rays after respawning. Visible through walls."
         },
         {
-          "value": 1,
+          "value": 0,
           "description": "Do not render x-rays after respawning. Arguably a disadvantage."
         }
       ],
