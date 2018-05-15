@@ -9,28 +9,36 @@
               "cl_updaterate": 20,
               "cl_cmdrate": 20
             },
-            "interp-rate": 20
+            "update-rate": 20
           },
           "medium": {
             "values": {
               "cl_updaterate": 33,
               "cl_cmdrate": 33
             },
-            "interp-rate": 33
+            "update-rate": 33
           },
           "high": {
             "values": {
               "cl_updaterate": 66,
               "cl_cmdrate": 66
             },
-            "interp-rate": 66
+            "update-rate": 66
           }
         }
       },
       "packet_buffer": {
         "description": "How long the client smooths communication from the server.",
         "levels": {
-          "low": {
+          "very_high": {
+            "name": "Very High smoothing",
+            "description": "A very high smoothing time to ensure a safe connection for those on very unstable connections.",
+            "values": {
+              "cl_interp_ratio": 3
+            },
+            "interp-ratio": 3
+          },
+          "high": {
             "name": "High smoothing",
             "description": "A high smoothing time to ensure a safe connection for those on unstable connections.",
             "values": {
@@ -38,7 +46,7 @@
             },
             "interp-ratio": 3
           },
-          "medium": {
+          "standard": {
             "name": "Standard smoothing",
             "description": "The standard smoothing time, reliable for all but the most unstable connections.",
             "values": {
@@ -46,7 +54,15 @@
             },
             "interp-ratio": 2
           },
-          "high": {
+          "balanced": {
+            "name": "Balanced smoothing",
+            "description": "A short smoothing time that is mostly reliable.",
+            "values": {
+              "cl_interp_ratio": 1.15
+            },
+            "interp-ratio": 1.15
+          },
+          "lan": {
             "name": "Local network smoothing",
             "description": "The shortest smoothing time, very unreliable.",
             "values": {
@@ -107,7 +123,8 @@
             "values": {
               "r_rootlod": 2,
               "r_lod": -1,
-              "lod_TransitionDist": -1
+              "lod_TransitionDist": -1,
+              "cl_jiggle_bone_framerate_cutoff": 0
             },
             "description": "Lowest model quality. Objects will look basic and fade out quickly."
           },
@@ -115,7 +132,8 @@
             "values": {
               "r_rootlod": 1,
               "r_lod": -1,
-              "lod_TransitionDist": -5000
+              "lod_TransitionDist": -5000,
+              "cl_jiggle_bone_framerate_cutoff": 0
             },
             "description": "Medium model quality."
           },
@@ -123,29 +141,33 @@
             "values": {
               "r_rootlod": 0,
               "r_lod": -1,
-              "lod_TransitionDist": 800
+              "lod_TransitionDist": 800,
+              "cl_jiggle_bone_framerate_cutoff": 67
             },
             "description": "High model quality."
           },
           "ultra": {
             "values": {
-              "r_rootlod": 0,
               "r_lod": 0,
-              "lod_TransitionDist": 1000
+              "r_rootlod": 0,
+              "lod_TransitionDist": 1000,
+              "cl_jiggle_bone_framerate_cutoff": 67
             },
             "description": "Highest model quality. Models will always be at their highest quality with no pop in."
           }
         }
       },
-      "props": {
-        "name": "Prop Detail",
-        "description": "The extra props, grass and detail objects in the world.",
+      "world": {
+        "name": "World Detail",
+        "description": "The extra props, grass, skybox and detail objects in the world.",
         "levels": {
           "off": {
             "values": {
               "cl_phys_props_enable": 0,
               "r_drawdetailprops": 0,
               "r_staticprop_lod": 7,
+              "r_3dsky": 0,
+              "rope_rendersolid": 0,
             },
             "detail_props": "none"
           },
@@ -153,7 +175,9 @@
             "values": {
               "cl_phys_props_enable": 0,
               "r_drawdetailprops": 0,
-              "r_staticprop_lod": -1
+              "r_staticprop_lod": -1,
+              "r_3dsky": 0,
+              "rope_rendersolid": 0
             },
             "detail_props": "none"
           },
@@ -163,7 +187,12 @@
               "cl_phys_props_max": 20,
               "cl_phys_props_respawndist": 3000,
               "cl_phys_props_respawnrate": 120,
-              "r_drawdetailprops": 1
+              "r_drawdetailprops": 1,
+              "r_3dsky": 1,
+              "rope_rendersolid": 1,
+              "rope_collide": 1,
+              "rope_wind_dist": 0,
+              "rope_subdiv": 2
             },
             "detail_props": "medium"
           },
@@ -173,7 +202,12 @@
               "cl_phys_props_max": 20,
               "cl_phys_props_respawndist": 3000,
               "cl_phys_props_respawnrate": 120,
-              "r_drawdetailprops": 1
+              "r_drawdetailprops": 1,
+              "r_3dsky": 1,
+              "rope_rendersolid": 1,
+              "rope_collide": 2,
+              "rope_wind_dist": 1000,
+              "rope_subdiv": 7
             },
             "detail_props": "full"
           }
@@ -248,6 +282,50 @@
           }
         }
       },
+      "textures": {
+        "description": "Texture quality is how detailed the images on 3D models and terrain are. Higher quality textures will be streamed in and put more pressure on memory and your graphics card.",
+        "levels": {
+          "very_low": {
+            "values": {
+              "mat_picmip": 2,
+              "mat_filtertextures": 0,
+              "mat_disable_fancy_blending": 1,
+              "mat_bumpmap": 0,
+              "mat_specular": 0
+            }
+          },
+          "low": {
+            "values": {
+              "mat_picmip": 2,
+              "mat_filtertextures": 1,
+              "mat_disable_fancy_blending": 1,
+              "mat_bumpmap": 1,
+              "mat_specular": 1
+            }
+          },
+          "medium": {
+            "mat_picmip": 1,
+            "mat_filtertextures": 1,
+            "mat_disable_fancy_blending": 0,
+            "mat_bumpmap": 1,
+            "mat_specular": 1
+          },
+          "high": {
+            "mat_picmip": 0,
+            "mat_filtertextures": 1,
+            "mat_disable_fancy_blending": 0,
+            "mat_bumpmap": 1,
+            "mat_specular": 1
+          },
+          "very_high": {
+            "mat_picmip": -1,
+            "mat_filtertextures": 1,
+            "mat_disable_fancy_blending": 0,
+            "mat_bumpmap": 1,
+            "mat_specular": 1
+          }
+        }
+      },
       "shadows": {
         "description": "Shadows on objects improve the look and help with depth perception. They require additional processing power, more memory and graphical performance as you go up in quality.",
         "levels": {
@@ -316,7 +394,7 @@
               "cl_new_impact_effects": 0,
               "r_drawflecks": 0
             },
-            "dxsupport": "low",
+            "dxsupport": "low-particles",
             "description": "Reduced particle effects and bullet tracers. Best performance, but has the least visual cues."
           },
           "medium": {
@@ -331,7 +409,7 @@
               "cl_new_impact_effects": 0,
               "r_drawflecks": 1
             },
-            "dxsupport": "medium",
+            "dxsupport": "medium-particles",
             "description": "Most gameplay effecting particle effects turned on at low quality."
           },
           "high": {
@@ -346,7 +424,7 @@
               "cl_new_impact_effects": 1,
               "r_drawflecks": 1
             },
-            "dxsupport": "high",
+            "dxsupport": "high-particles",
             "description": "All particle effects turned on at maximum quality. Shows more effects and requires more graphical performance."
           }
         }
@@ -515,7 +593,9 @@
               "mat_software_aa_strength": 0,
               "mat_software_aa_strength_vgui": 0,
               "mat_antialias": 1,
-              "mat_aaquality": 0
+              "mat_aaquality": 0,
+              "rope_smooth": 0,
+              "rope_subdiv": 0
             },
             "description": "No anti-aliasing done, best performance. There will be jagged edges and fences will be harder to see through."
           },
@@ -821,10 +901,88 @@
       }
     },
     "hud": {
-
+      "outlines": {
+        "description": "The outlines on objects, spectating and allies on spawn.",
+        "levels": {
+          "off": {
+            "values": {
+              "glow_outline_effect_enable": 0,
+              "tf_enable_glows_after_respawn": 0,
+              "tf_spec_xray_disable": 1
+            }
+          },
+          "low": {
+            "glow_outline_effect_enable": 0,
+            "tf_enable_glows_after_respawn": 1,
+            "tf_spec_xray_disable": 0
+          },
+          "high": {
+            "glow_outline_effect_enable": 1,
+            "tf_enable_glows_after_respawn": 0,
+            "tf_spec_xray_disable": 1
+          }
+        }
+      }
     },
     "sound": {
-
+      "levels": {
+        "low": {
+          "values": {
+            "snd_disable_mixer_duck": 1,
+            "snd_pitchquality": 0,
+            "dsp_slow_cpu": 1,
+            "snd_spatialize_roundrobin": 3,
+            "dsp_room": 0,
+            "dsp_facingaway": 0,
+            "dsp_speaker": 0,
+            "dsp_water": 0,
+            "dsp_spatial": 0
+          },
+          "dxsupport": "low-sound"
+        },
+        "medium": {
+          "values": {
+            "snd_disable_mixer_duck": 0,
+            "snd_pitchquality": 0,
+            "dsp_slow_cpu": 1,
+            "snd_spatialize_roundrobin": 2,
+            "dsp_room": 0,
+            "dsp_facingaway": 0,
+            "dsp_speaker": 0,
+            "dsp_water": 0,
+            "dsp_spatial": 40
+          },
+          "dxsupport": "high-sound"
+        },
+        "high": {
+          "values": {
+            "snd_disable_mixer_duck": 0,
+            "snd_pitchquality": 1,
+            "dsp_slow_cpu": 0,
+            "snd_spatialize_roundrobin": 1,
+            "dsp_room": 0,
+            "dsp_facingaway": 30,
+            "dsp_speaker": 0,
+            "dsp_water": 0,
+            "dsp_spatial": 40
+          },
+          "dxsupport": "high-sound"
+        },
+        "ultra": {
+          "values": {
+            "snd_disable_mixer_duck": 0,
+            "snd_pitchquality": 1,
+            "dsp_slow_cpu": 0,
+            "snd_spatialize_roundrobin": 0,
+            "dsp_room": 0,
+            "dsp_facingaway": 31,
+            "dsp_speaker": 0,
+            "dsp_water": 0,
+            "dsp_spatial": 40
+          },
+          "dxsupport": "high-sound"
+        }
+      }
     }
   }
 }
