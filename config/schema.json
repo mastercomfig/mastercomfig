@@ -1,0 +1,181 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "properties": {
+    "entries": {
+      "type": "object",
+      "patternProperties": {
+        "^[\\w-]+(\\.[\\w-]+)*$": {
+          "properties": {
+            "values": {
+              "oneOf": [
+                {"$ref": "#/definitions/complexValue"},
+                {
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/value"}
+                },
+                {
+                  "type": "string",
+                  "enum": ["TODO"]
+                }
+              ]
+            },
+            "name": {"type": "string"},
+            "description": {"type": "string"},
+            "TODO": {"type": "string"}
+          },
+          "required": ["values", "name"],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["entries"],
+  "additionalProperties": false,
+
+  "definitions": {
+    "float": {
+      "type": "number",
+      "$comment": "see realFloat"
+    },
+    "realFloat": {
+      "allOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$comment": "virtually all validators consider 1.0 to be an integer, thus going against the standard. this is depressing",
+          "not": {
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    "value": {
+      "oneOf": [
+        {"$ref": "#/definitions/plainValue"},
+        {"$ref": "#/definitions/complexValue"}
+      ]
+    },
+    "plainValue": {
+      "oneOf": [
+        {"$ref": "#/definitions/float"},
+        {"type": "string"},
+        {"type": "boolean"}
+      ]
+    },
+    "complexValue": {
+      "type": "object",
+      "anyOf": [
+        {
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "value": {"$ref": "#/definitions/plainValue"}
+          },
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "type": {"type": "string", "enum": ["conditional"]},
+
+            "condition": {
+              "patternProperties": {
+                "^\\w+$": {
+                  "oneOf": [
+                    {"$ref": "#/definitions/plainValue"},
+                    {
+                      "type": "object",
+                      "properties": {
+                        "comparison": {
+                          "type": "string",
+                          "enum": [
+                            "greater_than",
+                            "greater_than_or_equal_to",
+                            "less_than",
+                            "less_than_or_equal_to"
+                          ]
+                        },
+                        "value": {"$ref": "#/definitions/plainValue"}
+                      },
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              },
+              "additionalProperties": false
+            },
+            "success": {"$ref": "#/definitions/value"},
+            "failure": {"$ref": "#/definitions/value"}
+          },
+          "required": ["type", "condition", "success", "failure"],
+          "additionalProperties": false
+        },
+        {
+          "$comment": "there should be an extra integer-only option. see realFloat",
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "type": {"type": "string", "enum": ["range"]},
+
+            "min": {"$ref": "#/definitions/float"},
+            "max": {"$ref": "#/definitions/float"},
+            "default": {"$ref": "#/definitions/float"}
+          },
+          "required": ["type", "min", "max"],
+          "$comment": "default not required because sometimes ranges are used in conjunction with a special (default) 'disable' value",
+          "additionalProperties": false
+        },
+        {
+          "$comment": "there should be an extra integer-only option for min/max. see realFloat",
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "type": {"type": "string", "enum": ["scalable"]},
+
+            "scaler": {"type": "string"},
+            "relationship": {
+              "type": "object",
+              "properties": {
+                "min": {"$ref": "#/definitions/float"},
+                "max": {"$ref": "#/definitions/float"},
+                "equation": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "value": {"type": "string"},
+                        "rounding": {"type": "string", "enum": ["floor", "ceil", "round"]}
+                      },
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "required": ["type", "scaler", "relationship"],
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "TODO": {"type": "string"},
+            "description": {"type": "string"},
+            "type": {"type": "string", "enum": ["string"]},
+
+            "default": {"type": "string"}
+          },
+          "required": ["type", "default"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}
