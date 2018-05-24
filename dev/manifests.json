@@ -1,0 +1,9 @@
+{
+  "config-dir": "../config",
+  "build-dir": "../build",
+  "manifests": {
+    "presets": ["presets.json"],
+    "cvars": ["cvars.json"],
+    "modules": ["modules.json"]
+  }
+}
