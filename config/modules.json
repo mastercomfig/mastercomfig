@@ -301,25 +301,31 @@
           }
         },
         "medium": {
-          "mat_picmip": 1,
-          "mat_filtertextures": 1,
-          "mat_disable_fancy_blending": 0,
-          "mat_bumpmap": 1,
-          "mat_specular": 1
+          "values": {
+            "mat_picmip": 1,
+            "mat_filtertextures": 1,
+            "mat_disable_fancy_blending": 0,
+            "mat_bumpmap": 1,
+            "mat_specular": 1
+          }
         },
         "high": {
-          "mat_picmip": 0,
-          "mat_filtertextures": 1,
-          "mat_disable_fancy_blending": 0,
-          "mat_bumpmap": 1,
-          "mat_specular": 1
+          "values": {
+            "mat_picmip": 0,
+            "mat_filtertextures": 1,
+            "mat_disable_fancy_blending": 0,
+            "mat_bumpmap": 1,
+            "mat_specular": 1
+          }
         },
         "very_high": {
-          "mat_picmip": -1,
-          "mat_filtertextures": 1,
-          "mat_disable_fancy_blending": 0,
-          "mat_bumpmap": 1,
-          "mat_specular": 1
+          "values": {
+            "mat_picmip": -1,
+            "mat_filtertextures": 1,
+            "mat_disable_fancy_blending": 0,
+            "mat_bumpmap": 1,
+            "mat_specular": 1
+          }
         }
       }
     },
@@ -884,15 +890,19 @@
     "ragdolls": {
       "levels": {
         "off": {
-          "cl_ragdoll_fade_time": -3,
-          "cl_ragdoll_forcefade": 1,
-          "cl_ragdoll_physics_enable": 0
+          "values": {
+            "cl_ragdoll_fade_time": -3,
+            "cl_ragdoll_forcefade": 1,
+            "cl_ragdoll_physics_enable": 0
+          }
         },
         "on": {
-          "cl_ragdoll_fade_time": 15,
-          "cl_ragdoll_forcefade": 0,
-          "cl_ragdoll_physics_enable": 1,
-          "ragdoll_sleepaftertime": 2.5
+          "values": {
+            "cl_ragdoll_fade_time": 15,
+            "cl_ragdoll_forcefade": 0,
+            "cl_ragdoll_physics_enable": 1,
+            "ragdoll_sleepaftertime": 2.5
+          }
         }
       }
     },
@@ -907,14 +917,18 @@
           }
         },
         "low": {
-          "glow_outline_effect_enable": 0,
-          "tf_enable_glows_after_respawn": 1,
-          "tf_spec_xray_disable": 0
+          "values": {
+            "glow_outline_effect_enable": 0,
+            "tf_enable_glows_after_respawn": 1,
+            "tf_spec_xray_disable": 0
+          }
         },
         "high": {
-          "glow_outline_effect_enable": 1,
-          "tf_enable_glows_after_respawn": 0,
-          "tf_spec_xray_disable": 1
+          "values": {
+            "glow_outline_effect_enable": 1,
+            "tf_enable_glows_after_respawn": 0,
+            "tf_spec_xray_disable": 1
+          }
         }
       }
     },
