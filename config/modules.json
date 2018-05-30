@@ -112,6 +112,18 @@
         }
       }
     },
+    "networking.upload": {
+      "description": "How much data can the client use per second",
+      "levels": {
+        "default": {
+          "values": {
+            "rate": 196608,
+            "net_splitpacket_maxrate": 98304,
+            "net_maxcleartime": 4
+          }
+        }
+      }
+    },
     "models": {
       "name": "Model Detail",
       "description": "The detail of 3D objects and how they fade into view at a distance.",

@@ -26,12 +26,13 @@ def generator(**kwargs):
 
 
 def main():
+    # get our original script path
+    original_dir = os.path.dirname(os.path.realpath(sys.argv[0])) + "/"
+    os.chdir(original_dir)
+
     # read the file that contains the list of files to read from (providers) for each manifest
     with open(manifest_provider_file_path) as manifest_provider_file:
         manifest_providers = json.load(manifest_provider_file)
-
-    # get our original script path
-    original_dir = os.path.dirname(os.path.realpath(sys.argv[0])) + "/"
 
     # read the config providers relative to the config dir
     os.chdir(original_dir + manifest_providers['config-dir'])
@@ -61,9 +62,11 @@ def main():
             start = time.perf_counter()
             exec(compile(open(original_dir + "plugins/" + file, "rb").read(), original_dir + "plugins/" + file,
                          'exec'), globals(), locals())
-            print("Loaded {0} in {1}s.".format(os.path.splitext(file)[0], time.perf_counter() - start))
+            print("Loaded {0} in {1}s.".format(file, time.perf_counter() - start))
         elif file.endswith(".sh"):
+            start = time.perf_counter()
             generator()(functools.partial(subprocess.call, original_dir + "plugins/" + file, shell=True))
+            print("Loaded {0} in {1}s.".format(file, time.perf_counter() - start))
 
     # enter the build directory
     os.makedirs(original_dir + manifest_providers['build-dir'], exist_ok=True)

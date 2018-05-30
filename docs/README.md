@@ -37,13 +37,13 @@ have to [clean up](#clean-up) your TF2 install.
 
 ### 2. Download and install your preset and addons
 
-[Download](https://mastercoms.github.io/mastercomfig/download) the VPK files of your choice from the
+[Download](https://mastercomfig.com/download) the VPK files of your choice from the
 and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
 in a folder inside your `custom` folder, put them in the `custom` folder itself.
 You don't have to rename anything either, just drag the files as is into `custom`.
 Do not download the source code, and do not download from the `Clone or Download`
 button. Only download the VPK files from the
-[official site](https://mastercoms.github.io/mastercomfig/download).
+[official site](https://mastercomfig.com/download).
 
 The VPK includes everything needed for the config to run, so you don't need to
 have an autoexec or run it using anything. If you already have an autoexec,
@@ -60,7 +60,7 @@ To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 Right click Team Fortress 2 in your Steam library, click **Properties** and
 click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
-`-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse` into
+`-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse -noassert -norebuildaudio` into
 the box and click ok.
 
 You will also want to read about optional launch options and choosing a DirectX version [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
