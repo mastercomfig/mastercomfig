@@ -236,7 +236,8 @@
             "r_dynamic": 0,
             "mat_disable_lightwarp": 1,
             "mat_filterlightmaps": 0,
-            "rope_averagelight": 0
+            "rope_averagelight": 0,
+            "r_pixelvisibility_partial": 0
           },
           "description": "The lowest quality lighting and shading. May make players hard to see."
         },
@@ -250,7 +251,8 @@
             "r_dynamic": 0,
             "mat_disable_lightwarp": 1,
             "mat_filterlightmaps": 1,
-            "rope_averagelight": 1
+            "rope_averagelight": 1,
+            "r_pixelvisibility_partial": 0
           },
           "description": "Low quality shading with very slight light detail."
         },
@@ -267,7 +269,8 @@
             "r_dynamic": 0,
             "mat_disable_lightwarp": 0,
             "mat_filterlightmaps": 1,
-            "rope_averagelight": 1
+            "rope_averagelight": 1,
+            "r_pixelvisibility_partial": 1
           },
           "description": "High quality shading and lighting with boosted lighting effects."
         },
@@ -285,7 +288,8 @@
             "r_maxdlights": 17,
             "mat_disable_lightwarp": 0,
             "mat_filterlightmaps": 1,
-            "rope_averagelight": 1
+            "rope_averagelight": 1,
+            "r_pixelvisibility_partial": 1
           },
           "description": "The highest quality lighting and lighting. The extra detail looks nice and may help with visibility of objects and players."
         }

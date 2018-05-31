@@ -60,7 +60,7 @@ To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 Right click Team Fortress 2 in your Steam library, click **Properties** and
 click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
-`-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse -noassert -norebuildaudio` into
+`-novid -noassert -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse` into
 the box and click ok.
 
 You will also want to read about optional launch options and choosing a DirectX version [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
