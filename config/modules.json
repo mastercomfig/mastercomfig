@@ -229,7 +229,7 @@
         "low": {
           "values": {
             "mat_reducefillrate": 1,
-            "r_worldlightmin": 9999,
+            "r_worldlightmin": 2,
             "r_lightaverage": 0,
             "r_worldlights": 0,
             "mat_phong": 0,
@@ -330,7 +330,7 @@
             "mat_specular": 1
           }
         },
-        "very_high": {
+        "ultra": {
           "values": {
             "mat_picmip": -1,
             "mat_filtertextures": 1,
@@ -572,7 +572,7 @@
           },
           "description": "Motion blur is turned off, which results in exact visuals even when moving and the greatest graphical performance."
         },
-        "low": {
+        "high": {
           "values": {
             "mat_motion_blur_enabled": 1,
             "mat_motion_blur_falling_intensity": 0,
@@ -583,7 +583,7 @@
           },
           "description": "A small amount of motion blur is enabled, with no additional blur effects."
         },
-        "high": {
+        "ultra": {
           "values": {
             "mat_motion_blur_enabled": 1,
             "mat_motion_blur_falling_intensity": 1,
@@ -880,21 +880,24 @@
           "values": {
             "cl_burninggibs": 0,
             "violence_hblood": 0,
-            "violence_hgibs": 0
-          }
-        },
-        "medium": {
-          "values": {
-            "cl_burninggibs": 0,
-            "violence_hblood": 1,
-            "violence_hgibs": 1
+            "violence_hgibs": 0,
+            "props_break_max_pieces": 0
           }
         },
         "high": {
           "values": {
+            "cl_burninggibs": 0,
+            "violence_hblood": 1,
+            "violence_hgibs": 1,
+            "props_break_max_pieces": -1
+          }
+        },
+        "ultra": {
+          "values": {
             "cl_burninggibs": 1,
             "violence_hblood": 1,
-            "violence_hgibs": 1
+            "violence_hgibs": 1,
+            "props_break_max_pieces": -1
           }
         }
       }
@@ -928,7 +931,7 @@
             "tf_spec_xray_disable": 1
           }
         },
-        "low": {
+        "medium": {
           "values": {
             "glow_outline_effect_enable": 0,
             "tf_enable_glows_after_respawn": 1,
