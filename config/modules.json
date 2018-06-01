@@ -228,21 +228,22 @@
       "levels": {
         "low": {
           "values": {
+            "r_pixelvisibility_partial": 0,
             "mat_reducefillrate": 1,
-            "r_worldlightmin": 2,
+            "r_worldlightmin": 1,
             "r_lightaverage": 0,
             "r_worldlights": 0,
             "mat_phong": 0,
             "r_dynamic": 0,
             "mat_disable_lightwarp": 1,
             "mat_filterlightmaps": 0,
-            "rope_averagelight": 0,
-            "r_pixelvisibility_partial": 0
+            "rope_averagelight": 0
           },
           "description": "The lowest quality lighting and shading. May make players hard to see."
         },
         "medium": {
           "values": {
+            "r_pixelvisibility_partial": 0,
             "mat_reducefillrate": 1,
             "r_worldlightmin": 0.004,
             "r_lightaverage": 1,
@@ -251,13 +252,13 @@
             "r_dynamic": 0,
             "mat_disable_lightwarp": 1,
             "mat_filterlightmaps": 1,
-            "rope_averagelight": 1,
-            "r_pixelvisibility_partial": 0
+            "rope_averagelight": 1
           },
           "description": "Low quality shading with very slight light detail."
         },
         "high": {
           "values": {
+            "r_pixelvisibility_partial": 1,
             "mat_reducefillrate": 0,
             "r_worldlightmin": 0.0008,
             "r_lightaverage": 1,
@@ -269,13 +270,13 @@
             "r_dynamic": 0,
             "mat_disable_lightwarp": 0,
             "mat_filterlightmaps": 1,
-            "rope_averagelight": 1,
-            "r_pixelvisibility_partial": 1
+            "rope_averagelight": 1
           },
           "description": "High quality shading and lighting with boosted lighting effects."
         },
         "ultra": {
           "values": {
+            "r_pixelvisibility_partial": 1,
             "mat_reducefillrate": 0,
             "r_worldlightmin": 0.0002,
             "r_lightaverage": 1,
@@ -288,8 +289,7 @@
             "r_maxdlights": 17,
             "mat_disable_lightwarp": 0,
             "mat_filterlightmaps": 1,
-            "rope_averagelight": 1,
-            "r_pixelvisibility_partial": 1
+            "rope_averagelight": 1
           },
           "description": "The highest quality lighting and lighting. The extra detail looks nice and may help with visibility of objects and players."
         }
