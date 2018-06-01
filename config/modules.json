@@ -910,7 +910,7 @@
       "levels": {
         "off": {
           "values": {
-            "cl_ragdoll_fade_time": -3,
+            "cl_ragdoll_fade_time": 0,
             "cl_ragdoll_forcefade": 1,
             "cl_ragdoll_physics_enable": 0
           }
