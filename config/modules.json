@@ -130,37 +130,37 @@
       "levels": {
         "low": {
           "values": {
-            "r_rootlod": 2,
-            "r_lod": -1,
             "lod_TransitionDist": -1,
-            "cl_jiggle_bone_framerate_cutoff": 0
+            "cl_jiggle_bone_framerate_cutoff": 0,
+            "r_lod": -1,
+            "r_rootlod": 2
           },
           "description": "Lowest model quality. Objects will look basic and fade out quickly."
         },
         "medium": {
           "values": {
-            "r_rootlod": 1,
-            "r_lod": -1,
             "lod_TransitionDist": -5000,
-            "cl_jiggle_bone_framerate_cutoff": 0
+            "cl_jiggle_bone_framerate_cutoff": 0,
+            "r_lod": -1,
+            "r_rootlod": 1
           },
           "description": "Medium model quality."
         },
         "high": {
           "values": {
-            "r_rootlod": 0,
-            "r_lod": -1,
             "lod_TransitionDist": 800,
-            "cl_jiggle_bone_framerate_cutoff": 67
+            "cl_jiggle_bone_framerate_cutoff": 67,
+            "r_lod": -1,
+            "r_rootlod": 0
           },
           "description": "High model quality."
         },
         "ultra": {
           "values": {
-            "r_lod": 0,
-            "r_rootlod": 0,
             "lod_TransitionDist": 1000,
-            "cl_jiggle_bone_framerate_cutoff": 67
+            "cl_jiggle_bone_framerate_cutoff": 67,
+            "r_lod": 0,
+            "r_rootlod": 0
           },
           "description": "Highest model quality. Models will always be at their highest quality with no pop in."
         }
@@ -229,67 +229,67 @@
         "low": {
           "values": {
             "r_pixelvisibility_partial": 0,
-            "mat_reducefillrate": 1,
-            "r_worldlightmin": 1,
+            "r_worldlightmin": 0.9,
             "r_lightaverage": 0,
-            "r_worldlights": 0,
-            "mat_phong": 0,
             "r_dynamic": 0,
             "mat_disable_lightwarp": 1,
+            "rope_averagelight": 0,
+            "r_worldlights": 0,
             "mat_filterlightmaps": 0,
-            "rope_averagelight": 0
+            "mat_reducefillrate": 1,
+            "mat_phong": 0
           },
           "description": "The lowest quality lighting and shading. May make players hard to see."
         },
         "medium": {
           "values": {
             "r_pixelvisibility_partial": 0,
-            "mat_reducefillrate": 1,
             "r_worldlightmin": 0.004,
             "r_lightaverage": 1,
-            "r_worldlights": 0,
-            "mat_phong": 0,
             "r_dynamic": 0,
             "mat_disable_lightwarp": 1,
+            "rope_averagelight": 1,
+            "r_worldlights": 0,
             "mat_filterlightmaps": 1,
-            "rope_averagelight": 1
+            "mat_reducefillrate": 1,
+            "mat_phong": 0
           },
           "description": "Low quality shading with very slight light detail."
         },
         "high": {
           "values": {
             "r_pixelvisibility_partial": 1,
-            "mat_reducefillrate": 0,
             "r_worldlightmin": 0.0008,
             "r_lightaverage": 1,
-            "r_worldlights": 2,
             "r_ambientboost": 1,
             "r_ambientmin": 0.3,
-            "mat_phong": 1,
             "r_rimlight": 1,
             "r_dynamic": 0,
             "mat_disable_lightwarp": 0,
+            "rope_averagelight": 1,
+            "r_worldlights": 2,
             "mat_filterlightmaps": 1,
-            "rope_averagelight": 1
+            "mat_reducefillrate": 0,
+            "mat_phong": 1
           },
           "description": "High quality shading and lighting with boosted lighting effects."
         },
         "ultra": {
           "values": {
             "r_pixelvisibility_partial": 1,
-            "mat_reducefillrate": 0,
             "r_worldlightmin": 0.0002,
             "r_lightaverage": 1,
-            "r_worldlights": 4,
             "r_ambientboost": 1,
             "r_ambientmin": 0.6,
-            "mat_phong": 1,
             "r_rimlight": 1,
             "r_dynamic": 1,
             "r_maxdlights": 17,
             "mat_disable_lightwarp": 0,
+            "rope_averagelight": 1,
+            "r_worldlights": 4,
             "mat_filterlightmaps": 1,
-            "rope_averagelight": 1
+            "mat_reducefillrate": 0,
+            "mat_phong": 1
           },
           "description": "The highest quality lighting and lighting. The extra detail looks nice and may help with visibility of objects and players."
         }
@@ -300,47 +300,47 @@
       "levels": {
         "very_low": {
           "values": {
-            "mat_picmip": 2,
-            "mat_filtertextures": 0,
             "mat_disable_fancy_blending": 1,
+            "mat_filtertextures": 0,
             "mat_bumpmap": 0,
-            "mat_specular": 0
+            "mat_specular": 0,
+            "mat_picmip": 2
           }
         },
         "low": {
           "values": {
-            "mat_picmip": 2,
-            "mat_filtertextures": 1,
             "mat_disable_fancy_blending": 1,
+            "mat_filtertextures": 1,
             "mat_bumpmap": 1,
-            "mat_specular": 1
+            "mat_specular": 1,
+            "mat_picmip": 2
           }
         },
         "medium": {
           "values": {
-            "mat_picmip": 1,
-            "mat_filtertextures": 1,
             "mat_disable_fancy_blending": 0,
+            "mat_filtertextures": 1,
             "mat_bumpmap": 1,
-            "mat_specular": 1
+            "mat_specular": 1,
+            "mat_picmip": 1
           }
         },
         "high": {
           "values": {
-            "mat_picmip": 0,
-            "mat_filtertextures": 1,
             "mat_disable_fancy_blending": 0,
+            "mat_filtertextures": 1,
             "mat_bumpmap": 1,
-            "mat_specular": 1
+            "mat_specular": 1,
+            "mat_picmip": 0
           }
         },
         "ultra": {
           "values": {
-            "mat_picmip": -1,
-            "mat_filtertextures": 1,
             "mat_disable_fancy_blending": 0,
+            "mat_filtertextures": 1,
             "mat_bumpmap": 1,
-            "mat_specular": 1
+            "mat_specular": 1,
+            "mat_picmip": -1
           }
         }
       }
@@ -494,40 +494,40 @@
       "levels": {
         "off": {
           "values": {
-            "mat_hdr_level": 0,
             "mat_colorcorrection": 0,
-            "mat_postprocessing_combine": 0
+            "mat_postprocessing_combine": 0,
+            "mat_hdr_level": 0
           },
           "description": "No post processing effects are enabled. This gives the best graphical performance and least visual extras."
         },
         "low": {
           "values": {
-            "mat_hdr_level": 0,
             "mat_colorcorrection": 1,
-            "mat_postprocessing_combine": 1
+            "mat_postprocessing_combine": 1,
+            "mat_hdr_level": 0
           },
           "description": "A simple color adjustment effect is enabled for more natural colors."
         },
         "medium": {
           "values": {
-            "mat_hdr_level": 1,
             "mat_colorcorrection": 1,
-            "mat_postprocessing_combine": 1
+            "mat_postprocessing_combine": 1,
+            "mat_hdr_level": 1
           },
           "description": "Color correction and bloom is enabled for natural and boosted colors."
         },
         "high": {
           "values": {
-            "mat_hdr_level": 2,
             "mat_colorcorrection": 1,
-            "mat_postprocessing_combine": 1
+            "mat_postprocessing_combine": 1,
+            "mat_hdr_level": 2
           },
           "description": "Color correction and HDR bloom is enabled for a vivid picture."
         },
         "ultra": {
           "values": {
-            "mat_hdr_level": 3,
-            "mat_postprocessing_combine": 1
+            "mat_postprocessing_combine": 1,
+            "mat_hdr_level": 3
           },
           "description": "Post processing is set to its most accurate and highest quality levels. This gives great visuals at the cost of graphical performance."
         }
@@ -609,18 +609,18 @@
         "off": {
           "values": {
             "mat_alphacoverage": 0,
+            "rope_smooth": 0,
             "mat_software_aa_strength": 0,
             "mat_software_aa_strength_vgui": 0,
             "mat_antialias": 1,
-            "mat_aaquality": 0,
-            "rope_smooth": 0,
-            "rope_subdiv": 0
+            "mat_aaquality": 0
           },
           "description": "No anti-aliasing done, best performance. There will be jagged edges and fences will be harder to see through."
         },
         "fxaa_low": {
           "values": {
             "mat_alphacoverage": 1,
+            "rope_smooth": 1,
             "mat_software_aa_strength": 1,
             "mat_software_aa_strength_vgui": 1,
             "mat_software_aa_quality": 0,
@@ -632,6 +632,7 @@
         "fxaa_high": {
           "values": {
             "mat_alphacoverage": 1,
+            "rope_smooth": 1,
             "mat_software_aa_strength": 1,
             "mat_software_aa_strength_vgui": 1,
             "mat_software_aa_quality": 1,
@@ -643,6 +644,7 @@
         "msaa_2x": {
           "values": {
             "mat_alphacoverage": 1,
+            "rope_smooth": 1,
             "mat_software_aa_strength": 0,
             "mat_software_aa_strength_vgui": -1,
             "mat_software_aa_quality": 1,
@@ -654,6 +656,7 @@
         "msaa_4x": {
           "values": {
             "mat_alphacoverage": 1,
+            "rope_smooth": 1,
             "mat_software_aa_strength": 0,
             "mat_software_aa_strength_vgui": -1,
             "mat_software_aa_quality": 1,
@@ -665,6 +668,7 @@
         "msaa_8x": {
           "values": {
             "mat_alphacoverage": 1,
+            "rope_smooth": 1,
             "mat_software_aa_strength": 0,
             "mat_software_aa_strength_vgui": -1,
             "mat_software_aa_quality": 1,
@@ -676,6 +680,7 @@
         "msaa_16x": {
           "values": {
             "mat_alphacoverage": 1,
+            "rope_smooth": 1,
             "mat_software_aa_strength": 0,
             "mat_software_aa_strength_vgui": -1,
             "mat_software_aa_quality": 1,
