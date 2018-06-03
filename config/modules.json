@@ -1,31 +1,5 @@
 {
   "modules": {
-    "networking.packet_rate": {
-      "description": "How fast the client and server communicate.",
-      "levels": {
-        "low": {
-          "values": {
-            "cl_updaterate": 20,
-            "cl_cmdrate": 20
-          },
-          "update-rate": 20
-        },
-        "medium": {
-          "values": {
-            "cl_updaterate": 33,
-            "cl_cmdrate": 33
-          },
-          "update-rate": 33
-        },
-        "high": {
-          "values": {
-            "cl_updaterate": 66,
-            "cl_cmdrate": 66
-          },
-          "update-rate": 66
-        }
-      }
-    },
     "networking.packet_buffer": {
       "description": "How long the client smooths communication from the server.",
       "levels": {
@@ -35,7 +9,7 @@
           "values": {
             "cl_interp_ratio": 3
           },
-          "interp-ratio": 3
+          "interp_ratio": 3
         },
         "high": {
           "name": "High smoothing",
@@ -43,7 +17,7 @@
           "values": {
             "cl_interp_ratio": 3
           },
-          "interp-ratio": 3
+          "interp_ratio": 3
         },
         "standard": {
           "name": "Standard smoothing",
@@ -51,7 +25,7 @@
           "values": {
             "cl_interp_ratio": 2
           },
-          "interp-ratio": 2
+          "interp_ratio": 2
         },
         "balanced": {
           "name": "Balanced smoothing",
@@ -67,7 +41,33 @@
           "values": {
             "cl_interp_ratio": 1
           },
-          "interp-ratio": 1
+          "interp_ratio": 1
+        }
+      }
+    },
+    "networking.packet_rate": {
+      "description": "How fast the client and server communicate.",
+      "levels": {
+        "low": {
+          "values": {
+            "cl_updaterate": 20,
+            "cl_cmdrate": 20
+          },
+          "update_rate": 20
+        },
+        "medium": {
+          "values": {
+            "cl_updaterate": 33,
+            "cl_cmdrate": 33
+          },
+          "update_rate": 33
+        },
+        "high": {
+          "values": {
+            "cl_updaterate": 66,
+            "cl_cmdrate": 66
+          },
+          "update_rate": 66
         }
       }
     },
@@ -118,8 +118,8 @@
         "default": {
           "values": {
             "rate": 196608,
-            "net_splitpacket_maxrate": 98304,
-            "net_maxcleartime": 4
+            "net_splitpacket_maxrate": 131072,
+            "net_maxcleartime": 0.0049133
           }
         }
       }
@@ -203,7 +203,7 @@
             "rope_wind_dist": 0,
             "rope_subdiv": 2
           },
-          "detail_props": "medium"
+          "detail_props": "high"
         },
         "ultra": {
           "values": {
@@ -218,7 +218,7 @@
             "rope_wind_dist": 1000,
             "rope_subdiv": 7
           },
-          "detail_props": "full"
+          "detail_props": "ultra"
         }
       }
     },
@@ -467,6 +467,7 @@
             "r_waterforceexpensive": 0,
             "r_waterforcereflectentities": 0
           },
+          "cheap_water": "none",
           "description": "Water has simple world reflections."
         },
         "high": {
@@ -476,6 +477,7 @@
             "r_waterforceexpensive": 0,
             "r_waterforcereflectentities": 1
           },
+          "cheap_water": "none",
           "description": "Water will reflect moving objects and players as well as the world."
         },
         "ultra": {
@@ -485,6 +487,7 @@
             "r_waterforceexpensive": 1,
             "r_waterforcereflectentities": 1
           },
+          "cheap_water": "none",
           "description": "Water will be at its highest quality with full reflections."
         }
       }

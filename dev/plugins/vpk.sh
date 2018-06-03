@@ -1,1 +1,1 @@
-vpk mastercomfig-6.8.0b1/
+vpk mastercomfig-6.8.0b2/
