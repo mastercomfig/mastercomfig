@@ -1,9 +1,67 @@
 {
-  "config-dir": "../config",
-  "build-dir": "../build",
+  "version": "6.8.0b3",
+  "config-dir": "../config/",
+  "build-dir": "../build/",
+  "sources-dir": "../config/mastercomfig/",
+  "patches-dir": "../config/patches/",
   "manifests": {
     "presets": ["presets.json"],
     "cvars": ["cvars.json"],
-    "modules": ["modules.json"]
-  }
+    "modules": ["modules.json"],
+    "comfig": ["comfig.json"]
+  },
+  "patches": [
+    {
+      "source": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-TF2/master/tf/tf2_misc_dir/dxsupport_override.cfg",
+      "patch": "dxsupport-sound-low-particles-low",
+      "dest": "mastercomfig-sound-low-particles-low/dxsupport_override.cfg"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-TF2/master/tf/tf2_misc_dir/dxsupport_override.cfg",
+      "patch": "dxsupport-sound-low-particles-medium",
+      "dest": "mastercomfig-sound-low-particles-medium/dxsupport_override.cfg"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-TF2/master/tf/tf2_misc_dir/dxsupport_override.cfg",
+      "patch": "dxsupport-sound-low-particles-high",
+      "dest": "mastercomfig-sound-low-particles-high/dxsupport_override.cfg"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-TF2/master/tf/tf2_misc_dir/dxsupport_override.cfg",
+      "patch": "dxsupport-sound-high-particles-low",
+      "dest": "mastercomfig-sound-low-particles-medium/dxsupport_override.cfg"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-TF2/master/tf/tf2_misc_dir/dxsupport_override.cfg",
+      "patch": "dxsupport-sound-high-particles-medium",
+      "dest": "mastercomfig-sound-low-particles-medium/dxsupport_override.cfg"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-TF2/master/tf/tf2_misc_dir/dxsupport_override.cfg",
+      "patch": "dxsupport-sound-high-particles-high",
+      "dest": "mastercomfig-sound-low-particles-medium/dxsupport_override.cfg"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-TF2/master/tf/tf2_misc_dir/scripts/extra_models.txt",
+      "patch": "no-extra-models",
+      "dest": "mastercomfig-no-extra-models/scripts/extra_models.txt"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-TF2/master/tf/tf2_misc_dir/texture_preload_list.txt",
+      "patch": "optimize-texture-preload-list",
+      "base-dir": true,
+      "dest": "texture_preload_list.txt"
+    },
+    {
+      "source": "https://github.com/SteamDatabase/GameTracking-TF2/raw/master/tf/tf2_misc_dir/scripts/client_precache.txt",
+      "patch": "optimize-client_precache",
+      "base-dir": true,
+      "dest": "scripts/client_precache.txt"
+    },
+    {
+      "source": "https://github.com/SteamDatabase/GameTracking-TF2/raw/master/tf/tf2_misc_dir/glbaseshaders.cfg",
+      "patch": "optimize-glshaders",
+      "dest": "mastercomfig-opengl/glbaseshaders.cfg"
+    }
+  ]
 }

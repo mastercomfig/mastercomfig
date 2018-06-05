@@ -33,7 +33,7 @@
           "values": {
             "cl_interp_ratio": 1.15
           },
-          "interp-ratio": 1.15
+          "interp_ratio": 1.15
         },
         "lan": {
           "name": "Local network smoothing",
@@ -51,21 +51,21 @@
         "low": {
           "values": {
             "cl_updaterate": 20,
-            "cl_cmdrate": 20
+            "cl_cmdrate": 19
           },
           "update_rate": 20
         },
         "medium": {
           "values": {
             "cl_updaterate": 33,
-            "cl_cmdrate": 33
+            "cl_cmdrate": 32
           },
           "update_rate": 33
         },
         "high": {
           "values": {
             "cl_updaterate": 66,
-            "cl_cmdrate": 66
+            "cl_cmdrate": 65
           },
           "update_rate": 66
         }
@@ -413,7 +413,7 @@
             "cl_new_impact_effects": 0,
             "r_drawflecks": 0
           },
-          "dxsupport": "low-particles",
+          "dxsupport": "particles-low",
           "description": "Reduced particle effects and bullet tracers. Best performance, but has the least visual cues."
         },
         "medium": {
@@ -428,7 +428,7 @@
             "cl_new_impact_effects": 0,
             "r_drawflecks": 1
           },
-          "dxsupport": "medium-particles",
+          "dxsupport": "particles-medium",
           "description": "Most gameplay effecting particle effects turned on at low quality."
         },
         "high": {
@@ -443,7 +443,7 @@
             "cl_new_impact_effects": 1,
             "r_drawflecks": 1
           },
-          "dxsupport": "high-particles",
+          "dxsupport": "particles-high",
           "description": "All particle effects turned on at maximum quality. Shows more effects and requires more graphical performance."
         }
       }
@@ -586,7 +586,7 @@
             "mat_motion_blur_forward_enabled": 0,
             "mat_motion_blur_percent_of_screen_max": 1,
             "mat_motion_blur_rotation_intensity": 0.05,
-            "mat_motion_blur_strength": 1
+            "mat_motion_blur_strength": 0.8
           },
           "description": "A small amount of motion blur is enabled, with no additional blur effects."
         },
@@ -597,11 +597,11 @@
             "mat_motion_blur_falling_max": 15,
             "mat_motion_blur_falling_min": 5,
             "mat_motion_blur_forward_enabled": 1,
-            "mat_motion_blur_percent_of_screen_max": 4,
-            "mat_motion_blur_rotation_intensity": 0.1,
-            "mat_motion_blur_strength": 1
+            "mat_motion_blur_percent_of_screen_max": 2.5,
+            "mat_motion_blur_rotation_intensity": 0.05,
+            "mat_motion_blur_strength": 0.8
           },
-          "description": "A normal amount of motion blur, with all additional blur effects enabled. Results in smoother frame motion but using some additional graphical power."
+          "description": "A normal amount of motion blur, with all additional blur effects enabled. Results in smoother frame motion but uses some additional graphical power."
         }
       }
     },
@@ -973,7 +973,7 @@
             "dsp_water": 0,
             "dsp_spatial": 0
           },
-          "dxsupport": "low-sound"
+          "dxsupport": "sound-low"
         },
         "medium": {
           "values": {
@@ -987,7 +987,7 @@
             "dsp_water": 0,
             "dsp_spatial": 40
           },
-          "dxsupport": "high-sound"
+          "dxsupport": "sound-high"
         },
         "high": {
           "values": {
@@ -1001,7 +1001,7 @@
             "dsp_water": 0,
             "dsp_spatial": 40
           },
-          "dxsupport": "high-sound"
+          "dxsupport": "sound-high"
         },
         "ultra": {
           "values": {
@@ -1015,7 +1015,7 @@
             "dsp_water": 0,
             "dsp_spatial": 40
           },
-          "dxsupport": "high-sound"
+          "dxsupport": "sound-high"
         }
       }
     }

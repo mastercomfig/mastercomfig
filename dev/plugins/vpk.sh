@@ -1,1 +1,2 @@
-vpk mastercomfig-6.8.0b2/
+#!/usr/bin/env bash
+vpk mastercomfig/

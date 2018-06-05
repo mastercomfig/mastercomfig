@@ -5,6 +5,19 @@ import os
 import subprocess
 import sys
 import time
+import datetime
+from distutils.dir_util import copy_tree
+
+global make_cfg_dir
+global base_dir
+
+base_dir = "mastercomfig/"
+
+
+def make_cfg_dir():
+    os.makedirs(base_dir, exist_ok=True)
+    os.makedirs(base_dir + 'cfg', exist_ok=True)
+
 
 # get the path to our manifest providers data file
 manifest_provider_file_path = sys.argv[1] if len(sys.argv) < 1 else "manifests.json"
@@ -12,6 +25,8 @@ manifest_provider_file_path = sys.argv[1] if len(sys.argv) < 1 else "manifests.j
 manifest_data = {}
 
 generators = []
+
+source_config_files = []
 
 
 def generator(**kwargs):
@@ -33,6 +48,13 @@ def main():
     # read the file that contains the list of files to read from (providers) for each manifest
     with open(manifest_provider_file_path) as manifest_provider_file:
         manifest_providers = json.load(manifest_provider_file)
+
+    # copy static sources to build
+    copy_tree(manifest_providers['sources-dir'], manifest_providers['build-dir'] + base_dir)
+
+    for config in os.listdir(manifest_providers['sources-dir'] + "cfg"):
+        if config != "autoexec.cfg":
+            source_config_files.append(config)
 
     # read the config providers relative to the config dir
     os.chdir(original_dir + manifest_providers['config-dir'])
@@ -78,6 +100,39 @@ def main():
             gen['callback'](manifest_data[gen['manifest']])
         else:
             gen['callback']()
+
+    make_cfg_dir()
+    with open(base_dir + 'cfg/comfig.cfg', "a+") as comfig:
+        for config_file in source_config_files:
+            name = os.path.splitext(config_file)[0] + "_c"
+            comfig.write("alias " + name + " \"exec " + name + "\n")
+        space_padding = range(0, 4)
+        for i in space_padding:
+            comfig.write("echo \" \"\n")
+        star_padding = range(0, 2)
+        left_pad = "  ** "
+        right_pad = " **  "
+        version_string = left_pad + "mastercomfig " + manifest_providers['version'] + " loaded" + right_pad
+        width = len(version_string)
+        date = datetime.datetime.utcnow().strftime("%B %d %Y")
+        stars = ""
+        for i in range(0, width - 4):
+            stars += "*"
+        date_string = left_pad
+        for i in range(0, int(round((width - len(left_pad) * 2 - len(date)) / 2))):
+            date_string += " "
+        date_string += date
+        for i in range(0, int((width - len(left_pad) * 2 - len(date)) / 2)):
+            date_string += " "
+        date_string += right_pad
+        for i in star_padding:
+            comfig.write("echo \"  " + stars + "  \"\n")
+        comfig.write("echo \"" + version_string + "\"\n")
+        comfig.write("echo \"" + date_string + "\"\n")
+        for i in star_padding:
+            comfig.write("echo \"  " + stars + "  \"\n")
+        for i in space_padding:
+            comfig.write("echo \" \"\n")
 
 
 if __name__ == '__main__':
