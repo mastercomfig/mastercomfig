@@ -31,10 +31,16 @@ source_config_files = []
 
 def generator(**kwargs):
     def decorator(func):
-        generators.append({
-            'callback': func,
-            'manifest': kwargs.get('manifest')
-        })
+        if kwargs.get('data'):
+            generators.append({
+                'callback': func,
+                'data': kwargs.get('data')
+            })
+        else:
+            generators.append({
+                'callback': func,
+                'manifest': kwargs.get('manifest')
+            })
         return func
 
     return decorator
@@ -51,10 +57,6 @@ def main():
 
     # copy static sources to build
     copy_tree(manifest_providers['sources-dir'], manifest_providers['build-dir'] + base_dir)
-
-    for config in os.listdir(manifest_providers['sources-dir'] + "cfg"):
-        if config != "autoexec.cfg":
-            source_config_files.append(config)
 
     # read the config providers relative to the config dir
     os.chdir(original_dir + manifest_providers['config-dir'])
@@ -78,7 +80,7 @@ def main():
                       .format(time.perf_counter() - start))
 
     # run plugins to register their generators
-    for file in os.listdir(original_dir + "plugins"):
+    for file in sorted(os.listdir(original_dir + "plugins")):
         # execute python files
         if file.endswith(".py"):
             start = time.perf_counter()
@@ -98,41 +100,17 @@ def main():
     for gen in generators:
         if gen.get('manifest') is not None and manifest_data.get(gen['manifest']) is not None:
             gen['callback'](manifest_data[gen['manifest']])
+        elif gen.get('data') is not None:
+            try:
+                tuple(gen.get('data'))
+            except TypeError:
+                gen['data'] = (gen.get('data'), )
+            args = []
+            for entry in list(gen['data']):
+                args.append(manifest_providers.get(entry))
+            gen['callback'](*args)
         else:
             gen['callback']()
-
-    make_cfg_dir()
-    with open(base_dir + 'cfg/comfig.cfg', "a+") as comfig:
-        for config_file in source_config_files:
-            name = os.path.splitext(config_file)[0] + "_c"
-            comfig.write("alias " + name + " \"exec " + name + "\n")
-        space_padding = range(0, 4)
-        for i in space_padding:
-            comfig.write("echo \" \"\n")
-        star_padding = range(0, 2)
-        left_pad = "  ** "
-        right_pad = " **  "
-        version_string = left_pad + "mastercomfig " + manifest_providers['version'] + " loaded" + right_pad
-        width = len(version_string)
-        date = datetime.datetime.utcnow().strftime("%B %d %Y")
-        stars = ""
-        for i in range(0, width - 4):
-            stars += "*"
-        date_string = left_pad
-        for i in range(0, int(round((width - len(left_pad) * 2 - len(date)) / 2))):
-            date_string += " "
-        date_string += date
-        for i in range(0, int((width - len(left_pad) * 2 - len(date)) / 2)):
-            date_string += " "
-        date_string += right_pad
-        for i in star_padding:
-            comfig.write("echo \"  " + stars + "  \"\n")
-        comfig.write("echo \"" + version_string + "\"\n")
-        comfig.write("echo \"" + date_string + "\"\n")
-        for i in star_padding:
-            comfig.write("echo \"  " + stars + "  \"\n")
-        for i in space_padding:
-            comfig.write("echo \" \"\n")
 
 
 if __name__ == '__main__':

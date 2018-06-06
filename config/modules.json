@@ -114,6 +114,7 @@
     },
     "networking.upload": {
       "description": "How much data can the client use per second",
+      "hidden": true,
       "levels": {
         "default": {
           "values": {
@@ -299,6 +300,7 @@
       "description": "Texture quality is how detailed the images on 3D models and terrain are. Higher quality textures will be streamed in and put more pressure on memory and your graphics card.",
       "levels": {
         "very_low": {
+          "description": "Textures are at their lowest quality and have all visual effects disabled.",
           "values": {
             "mat_disable_fancy_blending": 1,
             "mat_filtertextures": 0,
@@ -815,6 +817,7 @@
           }
         },
         "low": {
+          "description": "A minimal amount of decals to check spread patterns.",
           "values": {
             "r_decals": 9,
             "mp_decals": 9,
@@ -852,6 +855,7 @@
           }
         },
         "ultra": {
+          "description": "The maximum amount of decals.",
           "values": {
             "r_decals": 2048,
             "mp_decals": 2048,
@@ -867,6 +871,7 @@
       }
     },
     "sprays": {
+      "description": "Graphics sprayed onto surfaces by players.",
       "levels": {
         "off": {
           "values": {
@@ -887,12 +892,13 @@
       }
     },
     "gibs": {
+      "description": "The gore associated with players blowing up due to high explosive damage. Increases models rendered and physics simulated.",
       "levels": {
         "off": {
           "values": {
             "cl_burninggibs": 0,
-            "violence_hblood": 0,
-            "violence_hgibs": 0,
+            "violence_hblood": 1,
+            "violence_hgibs": 1,
             "props_break_max_pieces": 0
           }
         },
@@ -905,6 +911,7 @@
           }
         },
         "ultra": {
+          "description": "Gibs will be shown, and will be burning if the player gibbed while on fire.",
           "values": {
             "cl_burninggibs": 1,
             "violence_hblood": 1,
@@ -915,6 +922,7 @@
       }
     },
     "ragdolls": {
+      "description": "Dead bodies which have their physics simulated.",
       "levels": {
         "off": {
           "values": {
@@ -933,10 +941,11 @@
         }
       }
     },
-    "hud.outlines": {
+    "HUD.outlines": {
       "description": "The outlines on objects, spectating and allies on spawn.",
       "levels": {
         "off": {
+          "description": "No outlines will be shown.",
           "values": {
             "glow_outline_effect_enable": 0,
             "tf_enable_glows_after_respawn": 0,
@@ -944,6 +953,7 @@
           }
         },
         "medium": {
+          "description": "Outlines will not be drawn, but nametags will be shown through walls.",
           "values": {
             "glow_outline_effect_enable": 0,
             "tf_enable_glows_after_respawn": 1,
@@ -951,17 +961,20 @@
           }
         },
         "high": {
+          "description": "Outlines and nametags will be shown.",
           "values": {
             "glow_outline_effect_enable": 1,
             "tf_enable_glows_after_respawn": 0,
-            "tf_spec_xray_disable": 1
+            "tf_spec_xray_disable": 0
           }
         }
       }
     },
     "sound": {
+      "description": "The quality of sound and positional effects.",
       "levels": {
         "low": {
+          "description": "All sound effects and positional audio are disabled.",
           "values": {
             "snd_disable_mixer_duck": 1,
             "snd_pitchquality": 0,
@@ -1004,6 +1017,7 @@
           "dxsupport": "sound-high"
         },
         "ultra": {
+          "description": "All sound effects and positional audio are enabled and turned to their highest quality. Uses the most processing power (CPU).",
           "values": {
             "snd_disable_mixer_duck": 0,
             "snd_pitchquality": 1,
