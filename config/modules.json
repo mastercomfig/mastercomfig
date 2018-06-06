@@ -7,9 +7,9 @@
           "name": "Very High smoothing",
           "description": "A very high smoothing time to ensure a safe connection for those on very unstable connections.",
           "values": {
-            "cl_interp_ratio": 3
+            "cl_interp_ratio": 4
           },
-          "interp_ratio": 3
+          "interp_ratio": 4
         },
         "high": {
           "name": "High smoothing",
