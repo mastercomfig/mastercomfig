@@ -58,7 +58,7 @@
     "dsp_enhance_stereo": 0,
     "snd_noextraupdate": 1,
     "snd_async_spew_blocking": 0,
-    "mem_compact": "",
-    "hud_reloadscheme": ""
+    "hud_reloadscheme": "",
+    "mem_compact": ""
   }
 }
