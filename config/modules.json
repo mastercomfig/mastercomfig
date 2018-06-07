@@ -171,7 +171,7 @@
       "name": "World Detail",
       "description": "The extra props, grass, skybox and detail objects in the world.",
       "levels": {
-        "off": {
+        "low": {
           "values": {
             "cl_phys_props_enable": 0,
             "r_drawdetailprops": 0,
@@ -453,14 +453,23 @@
     "water": {
       "description": "The quality of water and its reflections.",
       "levels": {
+        "very_low": {
+          "values": {
+            "r_WaterDrawReflection": 0,
+            "r_WaterDrawRefraction": 0,
+            "r_waterforceexpensive": 0
+          },
+          "cheap_water": "full",
+          "description": "Water will be rendered as an opaque surface."
+        },
         "low": {
           "values": {
             "r_WaterDrawReflection": 0,
             "r_WaterDrawRefraction": 1,
             "r_waterforceexpensive": 0
           },
-          "cheap_water": "full",
-          "description": "Water will be shown as an opaque surface."
+          "cheap_water": "partial",
+          "description": "Water will be shown with simplicity."
         },
         "medium": {
           "values": {
@@ -469,7 +478,7 @@
             "r_waterforceexpensive": 0,
             "r_waterforcereflectentities": 0
           },
-          "cheap_water": "none",
+          "cheap_water": "off",
           "description": "Water has simple world reflections."
         },
         "high": {
@@ -479,7 +488,7 @@
             "r_waterforceexpensive": 0,
             "r_waterforcereflectentities": 1
           },
-          "cheap_water": "none",
+          "cheap_water": "off",
           "description": "Water will reflect moving objects and players as well as the world."
         },
         "ultra": {
@@ -489,7 +498,7 @@
             "r_waterforceexpensive": 1,
             "r_waterforcereflectentities": 1
           },
-          "cheap_water": "none",
+          "cheap_water": "off",
           "description": "Water will be at its highest quality with full reflections."
         }
       }
@@ -941,7 +950,7 @@
         }
       }
     },
-    "HUD.outlines": {
+    "hud.outlines": {
       "description": "The outlines on objects, spectating and allies on spawn.",
       "levels": {
         "off": {

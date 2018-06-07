@@ -1,5 +1,32 @@
 {
   "presets": {
+    "very_low": {
+      "modules": {
+        "networking.packet_rate": "high",
+        "networking.packet_buffer": "standard",
+        "networking.packet_size": "standard",
+        "networking.upload": "default",
+        "models": "low",
+        "world": "low",
+        "shaders": "low",
+        "textures": "very_low",
+        "shadows": "off",
+        "effects": "low",
+        "water": "very_low",
+        "post_processing": "off",
+        "pyrovision": "low",
+        "motion_blur": "off",
+        "antialiasing": "off",
+        "texture_filter": "bilinear",
+        "characters": "low",
+        "decals": "off",
+        "sprays": "off",
+        "gibs": "off",
+        "ragdolls": "off",
+        "hud.outlines": "off",
+        "sound": "low"
+      }
+    },
     "low": {
       "modules": {
         "networking.packet_rate": "high",
@@ -7,10 +34,10 @@
         "networking.packet_size": "standard",
         "networking.upload": "default",
         "models": "low",
-        "world": "off",
+        "world": "low",
         "shaders": "low",
         "textures": "low",
-        "shadows": "off",
+        "shadows": "low",
         "effects": "low",
         "water": "low",
         "post_processing": "low",
@@ -19,7 +46,7 @@
         "antialiasing": "off",
         "texture_filter": "bilinear",
         "characters": "low",
-        "decals": "off",
+        "decals": "low",
         "sprays": "off",
         "gibs": "off",
         "ragdolls": "off",
