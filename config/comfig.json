@@ -7,12 +7,14 @@
     "net_maxfilesize": 64,
     "tf_steam_workshop_query_timeout": 5,
     "tf_mm_debug_level": 0,
-    "tf_party_force_update": "",
     "sv_parallel_sendsnapshot": 1,
     "r_particle_sim_spike_threshold_ms": 0,
     "r_overlayfadeenable": 1,
     "r_overlayfademax": 1750,
     "r_overlayfademin": 1500,
+    "mat_forcehardwaresync": 1,
+    "r_hunkalloclightmaps": 0,
+    "r_lightcache_zbuffercache": 1,
     "fps_max": 240,
     "mat_vsync": 0,
     "engine_no_focus_sleep": 0,
@@ -58,6 +60,7 @@
     "dsp_enhance_stereo": 0,
     "snd_noextraupdate": 1,
     "snd_async_spew_blocking": 0,
+    "tf_party_force_update": "",
     "hud_reloadscheme": "",
     "mem_compact": ""
   }

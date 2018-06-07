@@ -5,18 +5,9 @@ import os
 import subprocess
 import sys
 import time
+import itertools
 import datetime
 from distutils.dir_util import copy_tree
-
-global make_cfg_dir
-global base_dir
-
-base_dir = "mastercomfig/"
-
-
-def make_cfg_dir():
-    os.makedirs(base_dir, exist_ok=True)
-    os.makedirs(base_dir + 'cfg', exist_ok=True)
 
 
 # get the path to our manifest providers data file
@@ -25,6 +16,8 @@ manifest_provider_file_path = sys.argv[1] if len(sys.argv) < 1 else "manifests.j
 manifest_data = {}
 
 generators = []
+
+finalizers = []
 
 source_config_files = []
 
@@ -46,6 +39,11 @@ def generator(**kwargs):
     return decorator
 
 
+def finalizer(func):
+    finalizers.append(func)
+    return func
+
+
 def main():
     # get our original script path
     original_dir = os.path.dirname(os.path.realpath(sys.argv[0])) + "/"
@@ -54,9 +52,6 @@ def main():
     # read the file that contains the list of files to read from (providers) for each manifest
     with open(manifest_provider_file_path) as manifest_provider_file:
         manifest_providers = json.load(manifest_provider_file)
-
-    # copy static sources to build
-    copy_tree(manifest_providers['sources-dir'], manifest_providers['build-dir'] + base_dir)
 
     # read the config providers relative to the config dir
     os.chdir(original_dir + manifest_providers['config-dir'])
@@ -111,6 +106,10 @@ def main():
             gen['callback'](*args)
         else:
             gen['callback']()
+
+    # after generators, run the finalizers
+    for fin in finalizers:
+        fin()
 
 
 if __name__ == '__main__':

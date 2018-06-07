@@ -75,8 +75,8 @@
         "characters": "medium",
         "decals": "medium",
         "sprays": "off",
-        "gibs": "off",
-        "ragdolls": "off",
+        "gibs": "medium",
+        "ragdolls": "medium",
         "hud.outlines": "medium",
         "sound": "medium"
       }
@@ -103,7 +103,7 @@
         "decals": "high",
         "sprays": "on",
         "gibs": "high",
-        "ragdolls": "on",
+        "ragdolls": "high",
         "hud.outlines": "high",
         "sound": "high"
       }
@@ -130,7 +130,7 @@
         "decals": "ultra",
         "sprays": "on",
         "gibs": "ultra",
-        "ragdolls": "on",
+        "ragdolls": "high",
         "hud.outlines": "high",
         "sound": "ultra"
       }

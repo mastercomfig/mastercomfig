@@ -125,7 +125,7 @@
         }
       }
     },
-    "models": {
+    "graphics.models": {
       "name": "Model Detail",
       "description": "The detail of 3D objects and how they fade into view at a distance.",
       "levels": {
@@ -136,7 +136,8 @@
             "r_lod": -1,
             "r_rootlod": 2
           },
-          "description": "Lowest model quality. Objects will look basic and fade out quickly."
+          "description": "Lowest model quality. Objects will look basic and fade out quickly.",
+          "dxsupport": "fade-low"
         },
         "medium": {
           "values": {
@@ -145,7 +146,8 @@
             "r_lod": -1,
             "r_rootlod": 1
           },
-          "description": "Medium model quality."
+          "description": "Medium model quality.",
+          "dxsupport": "fade-low"
         },
         "high": {
           "values": {
@@ -154,7 +156,8 @@
             "r_lod": -1,
             "r_rootlod": 0
           },
-          "description": "High model quality."
+          "description": "High model quality.",
+          "dxsupport": "fade-high"
         },
         "ultra": {
           "values": {
@@ -163,11 +166,12 @@
             "r_lod": 0,
             "r_rootlod": 0
           },
-          "description": "Highest model quality. Models will always be at their highest quality with no pop in."
+          "description": "Highest model quality. Models will always be at their highest quality with no pop in.",
+          "dxsupport": "fade-high"
         }
       }
     },
-    "world": {
+    "graphics.world": {
       "name": "World Detail",
       "description": "The extra props, grass, skybox and detail objects in the world.",
       "levels": {
@@ -179,7 +183,8 @@
             "r_3dsky": 0,
             "rope_rendersolid": 0
           },
-          "detail_props": "none"
+          "detail_props": "none",
+          "dxsupport": "ropes-off"
         },
         "medium": {
           "values": {
@@ -189,7 +194,8 @@
             "r_3dsky": 0,
             "rope_rendersolid": 0
           },
-          "detail_props": "none"
+          "detail_props": "none",
+          "dxsupport": "ropes-off"
         },
         "high": {
           "values": {
@@ -204,7 +210,8 @@
             "rope_wind_dist": 0,
             "rope_subdiv": 2
           },
-          "detail_props": "high"
+          "detail_props": "high",
+          "dxsupport": "ropes-on"
         },
         "ultra": {
           "values": {
@@ -223,13 +230,15 @@
         }
       }
     },
-    "shaders": {
+    "graphics.shaders": {
       "name": "Shader Quality",
       "description": "The quality of the lighting of objects and characters.",
       "levels": {
         "low": {
           "values": {
             "r_pixelvisibility_partial": 0,
+            "r_dopixelvisibility": 0,
+            "building_cubemaps": 1,
             "r_worldlightmin": 0.9,
             "r_lightaverage": 0,
             "r_dynamic": 0,
@@ -245,6 +254,8 @@
         "medium": {
           "values": {
             "r_pixelvisibility_partial": 0,
+            "r_dopixelvisibility": 0,
+            "building_cubemaps": 0,
             "r_worldlightmin": 0.004,
             "r_lightaverage": 1,
             "r_dynamic": 0,
@@ -260,6 +271,8 @@
         "high": {
           "values": {
             "r_pixelvisibility_partial": 1,
+            "r_dopixelvisibility": 1,
+            "building_cubemaps": 0,
             "r_worldlightmin": 0.0008,
             "r_lightaverage": 1,
             "r_ambientboost": 1,
@@ -278,6 +291,8 @@
         "ultra": {
           "values": {
             "r_pixelvisibility_partial": 1,
+            "r_dopixelvisibility": 1,
+            "building_cubemaps": 0,
             "r_worldlightmin": 0.0002,
             "r_lightaverage": 1,
             "r_ambientboost": 1,
@@ -296,7 +311,7 @@
         }
       }
     },
-    "textures": {
+    "graphics.textures": {
       "description": "Texture quality is how detailed the images on 3D models and terrain are. Higher quality textures will be streamed in and put more pressure on memory and your graphics card.",
       "levels": {
         "very_low": {
@@ -347,7 +362,7 @@
         }
       }
     },
-    "shadows": {
+    "graphics.shadows": {
       "description": "Shadows on objects improve the look and help with depth perception. They require additional processing power, more memory and graphical performance as you go up in quality.",
       "levels": {
         "off": {
@@ -401,7 +416,7 @@
         }
       }
     },
-    "effects": {
+    "graphics.effects": {
       "description": "Various other graphical effects like particles and bullet tracer lines that only appear in specific situations.",
       "levels": {
         "low": {
@@ -430,7 +445,7 @@
             "cl_new_impact_effects": 0,
             "r_drawflecks": 1
           },
-          "dxsupport": "particles-medium",
+          "dxsupport": "particles-low",
           "description": "Most gameplay effecting particle effects turned on at low quality."
         },
         "high": {
@@ -450,7 +465,7 @@
         }
       }
     },
-    "water": {
+    "graphics.water": {
       "description": "The quality of water and its reflections.",
       "levels": {
         "very_low": {
@@ -503,7 +518,7 @@
         }
       }
     },
-    "post_processing": {
+    "graphics.post_processing": {
       "description": "Additional visuals put on top of the image.",
       "levels": {
         "off": {
@@ -547,7 +562,7 @@
         }
       }
     },
-    "pyrovision": {
+    "graphics.pyrovision": {
       "description": "Extra effects when in Pyrovision.",
       "levels": {
         "low": {
@@ -581,7 +596,7 @@
         }
       }
     },
-    "motion_blur": {
+    "graphics.motion_blur": {
       "description": "Blurs the image from movement.",
       "levels": {
         "off": {
@@ -616,7 +631,7 @@
         }
       }
     },
-    "antialiasing": {
+    "graphics.antialiasing": {
       "name": "Anti-Aliasing",
       "description": "Smooths out rough edges and reduces shimmering.",
       "levels": {
@@ -706,7 +721,7 @@
         }
       }
     },
-    "texture_filter": {
+    "graphics.texture_filter": {
       "name": "Texture Filtering",
       "description": "Increases the quality of textures, especially ones further away.",
       "levels": {
@@ -753,7 +768,7 @@
         }
       }
     },
-    "characters": {
+    "graphics.characters": {
       "name": "Character Detail",
       "description": "How detailed character models and facial expressions are.",
       "levels": {
@@ -813,7 +828,7 @@
         }
       }
     },
-    "decals": {
+    "graphics.decals": {
       "description": "The overlay textures from bullet holes, blood on characters. Requires more memory and graphical performance.",
       "levels": {
         "off": {
@@ -834,7 +849,10 @@
             "r_decal_overlap_area": 0.4,
             "r_decal_overlap_count": 0,
             "r_renderoverlayfragment": 1,
-            "r_decalstaticprops": 1
+            "r_overlayfademin": 384,
+            "r_overlayfademax": 512,
+            "r_decalstaticprops": 1,
+            "r_decal_cullsize": 200
           }
         },
         "medium": {
@@ -845,9 +863,12 @@
             "r_decal_overlap_area": 0.4,
             "r_decal_overlap_count": 0,
             "r_renderoverlayfragment": 1,
+            "r_overlayfademin": 1000,
+            "r_overlayfademax": 1200,
             "r_drawmodeldecals": 1,
             "r_maxmodeldecal": 9,
-            "r_decalstaticprops": 1
+            "r_decalstaticprops": 1,
+            "r_decal_cullsize": 15
           }
         },
         "high": {
@@ -858,9 +879,12 @@
             "r_decal_overlap_area": 0.8,
             "r_decal_overlap_count": 3,
             "r_renderoverlayfragment": 1,
+            "r_overlayfademin": 1100,
+            "r_overlayfademax": 1350,
             "r_drawmodeldecals": 1,
             "r_maxmodeldecal": 32,
-            "r_decalstaticprops": 1
+            "r_decalstaticprops": 1,
+            "r_decal_cullsize": 15
           }
         },
         "ultra": {
@@ -872,14 +896,17 @@
             "r_decal_overlap_area": 1,
             "r_decal_overlap_count": 8,
             "r_renderoverlayfragment": 1,
+            "r_overlayfademin": 1750,
+            "r_overlayfademax": 2000,
             "r_drawmodeldecals": 1,
             "r_maxmodeldecal": 32,
-            "r_decalstaticprops": 1
+            "r_decalstaticprops": 1,
+            "r_decal_cullsize": 5
           }
         }
       }
     },
-    "sprays": {
+    "graphics.sprays": {
       "description": "Graphics sprayed onto surfaces by players.",
       "levels": {
         "off": {
@@ -900,7 +927,7 @@
         }
       }
     },
-    "gibs": {
+    "graphics.gibs": {
       "description": "The gore associated with players blowing up due to high explosive damage. Increases models rendered and physics simulated.",
       "levels": {
         "off": {
@@ -909,6 +936,14 @@
             "violence_hblood": 1,
             "violence_hgibs": 1,
             "props_break_max_pieces": 0
+          }
+        },
+        "medium": {
+          "values": {
+            "cl_burninggibs": 0,
+            "violence_hblood": 1,
+            "violence_hgibs": 1,
+            "props_break_max_pieces": 2
           }
         },
         "high": {
@@ -930,7 +965,7 @@
         }
       }
     },
-    "ragdolls": {
+    "graphics.ragdolls": {
       "description": "Dead bodies which have their physics simulated.",
       "levels": {
         "off": {
@@ -940,7 +975,15 @@
             "cl_ragdoll_physics_enable": 0
           }
         },
-        "on": {
+        "medium": {
+          "values": {
+            "cl_ragdoll_fade_time": 5,
+            "cl_ragdoll_forcefade": 1,
+            "cl_ragdoll_physics_enable": 1,
+            "ragdoll_sleepaftertime": 1.0
+          }
+        },
+        "high": {
           "values": {
             "cl_ragdoll_fade_time": 15,
             "cl_ragdoll_forcefade": 0,
