@@ -993,7 +993,7 @@
         }
       }
     },
-    "hud.outlines": {
+    "HUD.outlines": {
       "description": "The outlines on objects, spectating and allies on spawn.",
       "levels": {
         "off": {
