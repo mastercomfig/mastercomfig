@@ -1,0 +1,130 @@
+{
+  "entries": {
+    "LOD": {
+      "category": "graphics.models",
+      "data": {
+        "type": "selector",
+        "value": [
+          {
+            "name": "low",
+            "values": {
+              "r_lod": -1,
+              "r_rootlod": 2
+            }
+          },
+          {
+            "name": "medium",
+            "values": {
+              "r_lod": -1,
+              "r_rootlod": 1
+            }
+          },
+          {
+            "name": "high",
+            "values": {
+              "r_lod": -1,
+              "r_rootlod": 0
+            }
+          },
+          {
+            "name": "ultra",
+            "values": {
+              "r_lod": 0,
+              "r_rootlod": 0
+            }
+          }
+        ]
+      }
+    },
+    "jigglebones": {
+      "category": "graphics.models",
+      "data": {
+        "type": "slider",
+        "value": {
+          "cvar": "cl_jiggle_bone_framerate_cutoff",
+          "min": "0",
+          "max": "240"
+        }
+      }
+    },
+    "grass": {
+      "category": "graphics.world",
+      "data": {
+        "type": "selector",
+        "value": [
+          {
+            "name": "off",
+            "values": {
+              "r_drawdetailprops": 0
+            },
+            "detail_props": "none"
+          },
+          {
+            "name": "high",
+            "values": {
+              "r_drawdetailprops": 1
+            },
+            "detail_props": "high"
+          },
+          {
+            "name": "ultra",
+            "values": {
+              "r_drawdetailprops": 1
+            },
+            "detail_props": "ultra"
+          }
+        ]
+      }
+    },
+    "3D_sky": {
+      "category": "graphics.world",
+      "data": {
+        "type": "toggle",
+        "value": ["r_3dsky"]
+      }
+    },
+    "props": {
+      "category": "graphics.world",
+      "data": {
+        "type": "slider",
+        "value": {
+          "cvar": "cl_phys_props_max",
+          "min": 0,
+          "max": 300,
+          "extra": [
+            {
+              "type": "conditional",
+              "if": ">",
+              "value": 0,
+              "then": "cl_phys_props_enable 1"
+            }
+          ]
+        }
+      }
+    },
+    "ropes": {
+      "category": "graphics.world",
+      "data": {
+        "type": "selector",
+        "value": [
+          {
+            "name": "off",
+            "values": {
+              "rope_rendersolid": 0,
+              "r_ropetranslucent": 0
+            },
+            "dxsupport": "ropes-off"
+          },
+          {
+            "name": "on",
+            "values": {
+              "rope_rendersolid": 1,
+              "r_ropetranslucent": 1
+            },
+            "dxsupport": "ropes-on"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -17,6 +17,7 @@
     "mat_vsync": 0,
     "engine_no_focus_sleep": 0,
     "r_fastzreject": 1,
+    "r_dopixelvisibility": 1,
     "r_occludeemaxarea": 20,
     "r_occluderminarea": 1,
     "r_occludermincount": 1,

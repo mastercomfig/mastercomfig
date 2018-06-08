@@ -181,7 +181,8 @@
             "r_drawdetailprops": 0,
             "r_staticprop_lod": 7,
             "r_3dsky": 0,
-            "rope_rendersolid": 0
+            "rope_rendersolid": 0,
+            "r_ropetranslucent": 0
           },
           "detail_props": "none",
           "dxsupport": "ropes-off"
@@ -192,7 +193,8 @@
             "r_drawdetailprops": 0,
             "r_staticprop_lod": -1,
             "r_3dsky": 0,
-            "rope_rendersolid": 0
+            "rope_rendersolid": 0,
+            "r_ropetranslucent": 0
           },
           "detail_props": "none",
           "dxsupport": "ropes-off"
@@ -206,6 +208,7 @@
             "r_drawdetailprops": 1,
             "r_3dsky": 1,
             "rope_rendersolid": 1,
+            "r_ropetranslucent": 1,
             "rope_collide": 1,
             "rope_wind_dist": 0,
             "rope_subdiv": 2
@@ -216,12 +219,13 @@
         "ultra": {
           "values": {
             "cl_phys_props_enable": 1,
-            "cl_phys_props_max": 20,
+            "cl_phys_props_max": 300,
             "cl_phys_props_respawndist": 3000,
             "cl_phys_props_respawnrate": 120,
             "r_drawdetailprops": 1,
             "r_3dsky": 1,
             "rope_rendersolid": 1,
+            "r_ropetranslucent": 1,
             "rope_collide": 2,
             "rope_wind_dist": 1000,
             "rope_subdiv": 7

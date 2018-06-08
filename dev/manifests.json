@@ -8,7 +8,8 @@
     "presets": ["presets.json"],
     "cvars": ["cvars.json"],
     "modules": ["modules.json"],
-    "comfig": ["comfig.json"]
+    "comfig": ["comfig.json"],
+    "customs": ["customs.json"]
   },
   "patches": [
     {
