@@ -237,8 +237,6 @@
         "low": {
           "values": {
             "r_pixelvisibility_partial": 0,
-            "r_dopixelvisibility": 0,
-            "building_cubemaps": 1,
             "r_worldlightmin": 0.9,
             "r_lightaverage": 0,
             "r_dynamic": 0,
@@ -254,8 +252,6 @@
         "medium": {
           "values": {
             "r_pixelvisibility_partial": 0,
-            "r_dopixelvisibility": 0,
-            "building_cubemaps": 0,
             "r_worldlightmin": 0.004,
             "r_lightaverage": 1,
             "r_dynamic": 0,
@@ -271,8 +267,6 @@
         "high": {
           "values": {
             "r_pixelvisibility_partial": 1,
-            "r_dopixelvisibility": 1,
-            "building_cubemaps": 0,
             "r_worldlightmin": 0.0008,
             "r_lightaverage": 1,
             "r_ambientboost": 1,
@@ -291,8 +285,6 @@
         "ultra": {
           "values": {
             "r_pixelvisibility_partial": 1,
-            "r_dopixelvisibility": 1,
-            "building_cubemaps": 0,
             "r_worldlightmin": 0.0002,
             "r_lightaverage": 1,
             "r_ambientboost": 1,
