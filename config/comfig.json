@@ -10,8 +10,6 @@
     "sv_parallel_sendsnapshot": 1,
     "r_particle_sim_spike_threshold_ms": 0,
     "r_overlayfadeenable": 1,
-    "r_overlayfademax": 1750,
-    "r_overlayfademin": 1500,
     "mat_forcehardwaresync": 1,
     "r_hunkalloclightmaps": 0,
     "r_lightcache_zbuffercache": 1,
