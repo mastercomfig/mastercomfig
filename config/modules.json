@@ -739,28 +739,28 @@
             "mat_trilinear": 1,
             "mat_forceaniso": 2
           },
-          "name": "Anistropic Filtering 2x"
+          "name": "Anisotropic Filtering 2x"
         },
         "aniso_4x": {
           "values": {
             "mat_trilinear": 1,
             "mat_forceaniso": 4
           },
-          "name": "Anistropic Filtering 4x"
+          "name": "Anisotropic Filtering 4x"
         },
         "aniso_8x": {
           "values": {
             "mat_trilinear": 1,
             "mat_forceaniso": 8
           },
-          "name": "Anistropic Filtering 8x"
+          "name": "Anisotropic Filtering 8x"
         },
         "aniso_16x": {
           "values": {
             "mat_trilinear": 1,
             "mat_forceaniso": 16
           },
-          "name": "Anistropic Filtering 16x"
+          "name": "Anisotropic Filtering 16x"
         }
       }
     },
@@ -1001,7 +1001,7 @@
           }
         },
         "medium": {
-          "description": "Outlines will not be drawn, but nametags will be shown through walls.",
+          "description": "Outlines will not be drawn, but name tags will be shown through walls.",
           "values": {
             "glow_outline_effect_enable": 0,
             "tf_enable_glows_after_respawn": 1,
@@ -1009,7 +1009,7 @@
           }
         },
         "high": {
-          "description": "Outlines and nametags will be shown.",
+          "description": "Outlines and name tags will be shown.",
           "values": {
             "glow_outline_effect_enable": 1,
             "tf_enable_glows_after_respawn": 0,

@@ -38,6 +38,7 @@
     },
     "jigglebones": {
       "category": "graphics.models",
+      "description": "The minimum framerate needed for showing jigglebones like the fish viewmodel. 0 to disable always.",
       "data": {
         "type": "slider",
         "value": {
@@ -96,7 +97,8 @@
               "type": "conditional",
               "if": ">",
               "value": 0,
-              "then": "cl_phys_props_enable 1"
+              "then": "cl_phys_props_enable 1",
+              "else": "cl_phys_props_enable 0"
             }
           ]
         }
