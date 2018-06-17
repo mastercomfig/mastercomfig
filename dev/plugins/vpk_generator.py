@@ -149,7 +149,9 @@ def modules_define_file(manifest):
     with open(base_dir + 'cfg/modules-define.cfg', "w+") as modules:
         manifest_modules = manifest.get('modules', {})
         for module in manifest_modules.keys():
-            module_name = module.replace(".", "_")
+            name_parts = module.split(".")
+            name_parts[0] = name_parts[0][0]
+            module_name = "_".join(name_parts)
             module_levels = manifest_modules.get(module, {}).get('levels', {})
             for level in module_levels.keys():
                 level_string = ""
@@ -233,14 +235,14 @@ def presets_files(manifest):
     with open(base_dir + 'cfg/modules-define.cfg', "a+") as modules_define:
         for preset in manifest_presets.keys():
             alias_string = "alias preset_" + preset + " \"setinfo preset " + preset
-            os.makedirs('presets/' + preset, exist_ok=True)
-            with open('presets/' + preset + '/modules.cfg', "w+") as preset_file:
+            os.makedirs(base_dir + 'cfg/presets/', exist_ok=True)
+            with open(base_dir + 'cfg/presets/' + preset + '.cfg', "w+") as preset_file:
                 modules = manifest_presets.get(preset, {}).get('modules', {})
                 for module in modules.keys():
                     module_name = module.replace(".", "_")
                     level = modules.get(module)
                     preset_file.write("alias run_" + module_name + " " + module_name + "_" + level + "\n")
-                    alias_string += ";" + module_name + "_" + level
+            alias_string += ";exec presets/" + preset
             alias_string += "\"\n"
             modules_define.write(alias_string)
             modules_define.write("setinfo preset_" + preset + " \"\"\n")
