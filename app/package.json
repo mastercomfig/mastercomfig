@@ -31,22 +31,33 @@
   "dependencies": {
     "bootstrap": "^4.1.1",
     "electron-settings": "^3.2.0",
+    "electron-updater": "^2.21.10",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "speedtest-net": "^1.4.3",
     "xel": "0.0.139"
   },
   "build": {
-    "appId":"com.mastercomfig.app",
+    "appId": "com.mastercomfig.app",
     "mac": {
       "category": "public.app-category.games"
     },
     "linux": {
-      "target": ["snap", "deb", "rpm", "pacman", "tar.gz"],
-      "publish": ["github"]
+      "target": [
+        "snap",
+        "deb",
+        "rpm",
+        "pacman",
+        "tar.gz"
+      ],
+      "publish": [
+        "github"
+      ]
     },
     "win": {
-      "publish": ["github"]
+      "publish": [
+        "github"
+      ]
     }
   }
 }
