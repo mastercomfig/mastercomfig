@@ -8,6 +8,10 @@ build/
 venv/
 .idea/
 
+# node
+node_modules/
+dist/
+
 # OS generated files
 .DS_Store
 .DS_Store?

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="node_modules/xel/themes/material.css">
+  <script src="node_modules/xel/xel.min.js"></script>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="third_party/font/overpass.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+  <title>mastercomfig setup</title>
+  <style type="text/css">
+    body {
+      font-family: 'Overpass', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    }
+    .custom-file-label {
+      border-radius: 2px;
+      box-shadow: 0  3px  1px -2px rgba(0,0,0,0.2), 0px  2px  2px 0px rgba(0,0,0,0.14), 0 1px  5px 0 rgba(0,0,0,0.12);
+    }
+    .custom-file-label:after {
+      background-color: #fff;
+      color: #2196f3;
+      text-transform: uppercase;
+      font-size: 13px;
+      --trigger-effect: ripple;
+    }
+  </style>
+</head>
+<body style="padding-bottom: 200px">
+<nav class="navbar navbar-dark bg-dark d-flex align-items-center" style="-webkit-app-region: drag">
+  <span class="navbar-brand">mastercomfig</span>
+  <a href="#">
+    <x-icon name="close" skin="titlebar" style="-webkit-app-region: no-drag" id="close-btn"></x-icon>
+  </a>
+</nav>
+<div class="container" style="margin-top: 20px">
+  <h1 class="display-3">Welcome to mastercomfig!</h1>
+  <p class="lead">We just need some info before we get started.</p>
+  <h3>1. <x-icon name="check" skin="success" style="display: none" id="folder-check"></x-icon>
+    Select your Team Fortress 2 folder</h3>
+  <div class="custom-file" style="width: 400px">
+    <input type="file" class="custom-file-input" id="tf2-folder" webkitdirectory/>
+    <label class="custom-file-label" for="tf2-folder" id="folder-label">Choose folder...</label>
+  </div>
+  <hr>
+  <h3>
+    2. <x-icon name="check" skin="success" style="display: none" id="speedtest-check"></x-icon>
+    Run an internet speed test</h3>
+  <div id="speedtest">
+    <x-button id="speedtest-btn">Run test</x-button>
+    <x-progressbar style="display: none; margin-top: 4px" id="speedtest-bar"></x-progressbar>
+    <p><small>Clicking run test will access the Speedtest.net service to record your upload speed.</small></p>
+  </div>
+  <p style="display: none" id="upload"><strong>Upload speed:</strong> </p>
+  <hr>
+  <h3>
+    3. <x-icon name="check" skin="success" style="display: none" id="preset-check"></x-icon>
+    Choose a preset</h3>
+  <x-select id="presets-select" style="width: 200px">
+    <x-menu id="presets-menu">
+    </x-menu>
+  </x-select>
+  </p>
+  <x-button disabled id="next-btn">Next</x-button>
+</div>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/lib.js"></script>
+<script src="js/titlebar.js"></script>
+<script>
+  var steps = 0;
+
+  function incrementProgress() {
+    steps++;
+
+    if (steps >= 3) {
+      var next = document.getElementById('next-btn');
+      next.removeAttribute("disabled");
+      next.addEventListener('click', function() {
+        const {BrowserWindow} = require('electron').remote;
+        BrowserWindow.getFocusedWindow().loadFile("mastercomfig.html");
+      });
+    }
+  }
+
+  document.getElementById('tf2-folder').addEventListener('change', e => {
+    let folder = e.target.files[0].name;
+    if (folder === "Team Fortress 2") {
+      document.getElementById('folder-label').innerText = folder;
+      document.getElementById('folder-check').style.display = "inline-block";
+      settings.set('tf2-folder', e.target.files[0].path);
+      incrementProgress();
+    } else {
+      document.getElementById('folder-label').innerText = "Invalid Team Fortress 2 folder. Please try again.";
+    }
+  });
+
+  document.getElementById('speedtest-btn').addEventListener('click', () => {
+    const speedtest = require('speedtest-net');
+    var test = speedtest({maxTime: 5000});
+
+    var bar = document.getElementById('speedtest-bar');
+    document.getElementById('speedtest-btn').setAttribute("disabled", null);
+    bar.style.display = "inline";
+
+    test.on('uploadprogress', progress => {
+      bar.setAttribute("value", (parseFloat(progress) / 100).toString());
+    });
+
+    test.on('data', data => {
+      bar.style.display = "none";
+      document.getElementById('speedtest').style.display = "none";
+      document.getElementById('speedtest-check').style.display = "inline-block";
+      document.getElementById('upload').style.display = "inline";
+      document.getElementById('upload').innerHTML += data.speeds.upload + "Mbps";
+      settings.set('upload-speed', data.speeds.upload);
+      incrementProgress();
+    })
+  }, {
+    once: true
+  });
+
+  const settings = require('electron-settings');
+
+  fetch('http://127.0.0.1:8887/config/presets.json')
+      .then(response => {
+        return response.json();
+      }).then(json => {
+        var selected = false;
+        var presetsMenu = document.getElementById("presets-menu");
+        var presets = json.presets;
+        Object.keys(presets).forEach(key => {
+          var friendlyName = key.replace("_", " ").toProperCase();
+          var item = document.createElement("x-menuitem");
+          item.setAttribute("value", key);
+          var label = document.createElement("x-label");
+          label.innerText = friendlyName;
+          item.appendChild(label);
+          presetsMenu.appendChild(item);
+
+        });
+        document.getElementById("presets-select").addEventListener('change', (e) => {
+          if (!selected) {
+            selected = true;
+            incrementProgress();
+          }
+          settings.set('preset', e.detail.newValue);
+        });
+  });
+</script>
+</body>
+</html>

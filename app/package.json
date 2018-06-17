@@ -1,0 +1,52 @@
+{
+  "name": "mastercomfig-app",
+  "productName": "mastercomfig",
+  "version": "1.0.0",
+  "description": "The desktop app for mastercomfig, a Team Fortress 2 config",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/mastercoms/mastercomfig",
+  "keywords": [
+    "tf2",
+    "team-fortress-2",
+    "valve",
+    "tf2-config",
+    "source-engine"
+  ],
+  "author": "mastercoms <mastercoms@tutanota.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mastercoms/mastercomfig/issues"
+  },
+  "homepage": "https://mastercomfig.com",
+  "devDependencies": {
+    "electron": "^2.0.2",
+    "electron-builder": "^20.15.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "electron-settings": "^3.2.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "speedtest-net": "^1.4.3",
+    "xel": "0.0.139"
+  },
+  "build": {
+    "appId":"com.mastercomfig.app",
+    "mac": {
+      "category": "public.app-category.games"
+    },
+    "linux": {
+      "target": ["snap", "deb", "rpm", "pacman", "tar.gz"],
+      "publish": ["github"]
+    },
+    "win": {
+      "publish": ["github"]
+    }
+  }
+}

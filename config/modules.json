@@ -1018,7 +1018,7 @@
         }
       }
     },
-    "sound": {
+    "sound.quality": {
       "description": "The quality of sound and positional effects.",
       "levels": {
         "low": {

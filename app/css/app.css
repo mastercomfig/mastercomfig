@@ -1,0 +1,19 @@
+body {
+    font-family: 'Overpass', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    overflow: hidden;
+}
+
+x-icon[skin="titlebar"] {
+    color: rgba(0, 0, 0, 0.4);
+    transition: 0.1s;
+}
+
+x-icon[skin="titlebar"]:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+x-icon[skin="success"] {
+    height: 24px;
+    width: 24px;
+    color: #43A047;
+}

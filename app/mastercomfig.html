@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="node_modules/xel/themes/material.css">
+  <script src="node_modules/xel/xel.min.js"></script>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="third_party/font/overpass.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>mastercomfig</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark d-flex align-items-center" style="-webkit-app-region: drag">
+  <span class="navbar-brand">mastercomfig</span>
+  <a href="#">
+    <x-icon name="close" skin="titlebar" style="-webkit-app-region: no-drag" id="close-btn"></x-icon>
+  </a>
+</nav>
+<x-tabs id="cat-tabs"></x-tabs>
+<div class="container" id="tab-content" style="overflow-y: scroll; overflow-x: hidden; height: 75vh; padding-bottom: 48px;"></div>
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <div class="ml-auto"></div>
+  <x-throbber hidden id="install-ring"></x-throbber>
+  <button class="btn btn-outline-primary" id="apply-btn">Apply</button>
+</nav>
+<x-notification id="notification" timeout="2000">An error occurred while downloading mastercomfig. Please try again later.</x-notification>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/lib.js"></script>
+<script src="js/titlebar.js"></script>
+<script>
+  const settings = require('electron-settings');
+  var currentTab = '';
+  var presets = null;
+
+  document.getElementById('apply-btn').addEventListener('click', () => {
+    document.getElementById('apply-btn').disabled = true;
+    var ring = document.getElementById('install-ring');
+    ring.hidden = false;
+
+    fetch('https://api.github.com/repositories/69422496/releases')
+        .then(response => {
+          return response.json();
+        }).then(json => {
+      var version = json[0]['tag_name'];
+
+      download("https://github.com/mastercoms/mastercomfig/releases/download/" + version + "/mastercomfig.vpk", settings.get('tf2-folder') + "/tf/custom/mastercomfig.vpk")
+          .then(() => {
+            const fs = require('fs');
+            var stream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
+            stream.once('open', () => {
+              stream.write('preset_' + settings.get('preset') + "\n");
+              var modules = settings.get('modules');
+              Object.keys(modules).forEach(category => {
+                Object.keys(modules[category]).forEach(module => {
+                  var name = category + "_" + module;
+                  stream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
+                });
+              });
+            });
+            ring.hidden = true;
+            document.getElementById('apply-btn').disabled = false;
+          })
+          .catch((err) => {
+            ring.hidden = true;
+            document.getElementById('notification').innerText = err;
+            document.getElementById('notification').opened = true;
+            document.getElementById('apply-btn').disabled = false;
+          });
+    });
+  });
+
+  fetch('http://127.0.0.1:8887/config/presets.json')
+      .then(response => {
+        return response.json();
+      }).then(json => {
+        presets = json.presets;
+  }).then(() => {
+    fetch('http://127.0.0.1:8887/config/modules.json')
+        .then(response => {
+          return response.json();
+        }).then(json => {
+      var modules = json.modules;
+      var categoryMap = new Map();
+      Object.keys(modules).forEach(key => {
+        var module = modules[key];
+        if (module.hasOwnProperty('hidden') && module['hidden']) {
+          return;
+        }
+
+        var catEntryList = key.split(".");
+        var category = catEntryList[0];
+        var entry = catEntryList[1];
+
+        if (categoryMap.has(category)) {
+          categoryMap.get(category).push(entry);
+        } else {
+          categoryMap.set(category, [entry]);
+        }
+      });
+
+      var catTabs = document.getElementById("cat-tabs");
+
+      var first = true;
+
+      categoryMap.forEach((value, key) => {
+        var keyName = key;
+        if (key.charAt(0) !== key.charAt(0).toUpperCase()) {
+          keyName = key.toProperCase();
+        }
+
+        var item = document.createElement("x-tab");
+        item.setAttribute("href", "#" + key + "-card");
+        var label = document.createElement("x-label");
+        label.innerText = keyName;
+        item.appendChild(label);
+        catTabs.appendChild(item);
+
+        var tabContent = document.getElementById('tab-content');
+        var card = document.createElement("x-card");
+        card.id = key + "-card";
+
+        if (first) {
+          item.setAttribute("selected", null);
+          currentTab = key + "-card";
+          first = false;
+        } else {
+          card.hidden = true;
+        }
+
+        item.addEventListener('click', () => {
+          document.getElementById(currentTab).hidden = true;
+          currentTab = key + '-card';
+          card.hidden = false;
+        });
+
+        value.forEach((item, index) => {
+          var moduleIndex = key + "." + item;
+          var module = modules[moduleIndex];
+          var friendlyName = "";
+          if (module.hasOwnProperty('name')) {
+            friendlyName = module['name'];
+          } else {
+            friendlyName = item.replace("_", " ").toProperCase();
+          }
+
+          var accordion = document.createElement("x-accordion");
+          var header = document.createElement("header");
+          var label = document.createElement("x-label");
+          label.style.width = "150px";
+          var bold = document.createElement("strong");
+          bold.innerText = friendlyName;
+          var description = document.createElement("x-label");
+          var moduleLevel = settings.get("modules." + moduleIndex, presets[settings.get('preset')]["modules"][moduleIndex]);
+          var moduleLevelName = '';
+          if (module['levels'][moduleLevel].hasOwnProperty('name')) {
+            moduleLevelName = module['levels'][moduleLevel]['name'];
+          } else {
+            moduleLevelName = moduleLevel.replace("_", " ").toProperCase();
+          }
+          description.innerText = moduleLevelName;
+          label.appendChild(bold);
+          header.appendChild(label);
+          header.appendChild(description);
+          accordion.appendChild(header);
+          var main = document.createElement("main");
+          var row = document.createElement("div");
+          row.classList.add("row");
+          main.appendChild(row);
+          var right = document.createElement("div");
+          right.classList.add("col-sm");
+          if (module.hasOwnProperty('description')) {
+            var moduleDescription = document.createElement("p");
+            moduleDescription.classList.add("lead");
+            moduleDescription.innerText = module['description'];
+            right.appendChild(moduleDescription);
+          }
+          var moduleLevelDescription = document.createElement("p");
+          right.appendChild(moduleLevelDescription);
+          var left = document.createElement("div");
+          left.classList.add("col-sm");
+          var moduleSelect = document.createElement("x-select");
+          moduleSelect.style.width = "100%";
+          left.appendChild(moduleSelect);
+          var moduleMenu = document.createElement("x-menu");
+          moduleSelect.appendChild(moduleMenu);
+          Object.keys(module['levels']).forEach(key => {
+            var moduleMenuItem = document.createElement("x-menuitem");
+            moduleMenuItem.setAttribute("value", key);
+            if (key === moduleLevel) {
+              moduleMenuItem.setAttribute("toggled", null);
+            }
+            var moduleMenuItemLabel = document.createElement("x-label");
+            var moduleName = '';
+            if (module['levels'][key].hasOwnProperty('name')) {
+              moduleName = module['levels'][key]['name'];
+            } else {
+              moduleName = key.replace("_", " ").toProperCase();
+            }
+            if (module['levels'][key].hasOwnProperty('description')) {
+              moduleLevelDescription.innerText = module['levels'][key]['description'];
+            }
+            moduleMenuItemLabel.innerText = moduleName;
+            moduleMenuItem.appendChild(moduleMenuItemLabel);
+            moduleMenu.appendChild(moduleMenuItem);
+          });
+          moduleSelect.addEventListener('change', (e) => {
+            if (module['levels'][e.detail.newValue].hasOwnProperty('description')) {
+              var moduleLevel = module['levels'][e.detail.newValue];
+              moduleLevelDescription.innerText = moduleLevel['description'];
+              var moduleLevelName = '';
+              if (moduleLevel.hasOwnProperty('name')) {
+                moduleLevelName = moduleLevel['name'];
+              } else {
+                moduleLevelName = e.detail.newValue.replace("_", " ").toProperCase();
+              }
+              description.innerText = moduleLevelName;
+            }
+            settings.set("modules." + moduleIndex, e.detail.newValue);
+          });
+          row.appendChild(left);
+          row.appendChild(right);
+          accordion.appendChild(main);
+          card.appendChild(accordion);
+          if (index !== value.length - 1) {
+            card.appendChild(document.createElement("hr"));
+          }
+        });
+
+        tabContent.appendChild(card);
+      });
+    });
+  });
+</script>
+</body>
+</html>
