@@ -19,8 +19,7 @@ function download(url, dest) {
         response.pipe(file);
       } else if ([301,302].indexOf(response.statusCode) !== -1 && response.headers.location) {
         resolve(download(response.headers.location, dest));
-      }
-      else {
+      } else {
         file.close();
         fs.unlink(dest, () => {});
         reject(`Server responded with ${response.statusCode}: ${response.statusMessage}`);
@@ -35,13 +34,6 @@ function download(url, dest) {
 
     file.on("finish", () => {
       resolve();
-    });
-
-    file.on("error", err => {
-      file.close();
-
-      fs.unlink(dest, () => {});
-      reject(err.message);
     });
   });
 }
