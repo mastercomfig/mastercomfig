@@ -35,5 +35,11 @@ function download(url, dest) {
     file.on("finish", () => {
       resolve();
     });
+
+    file.on("error", err => {
+      file.close();
+      fs.unlink(dest, () => {});
+      reject(err.message);
+    });
   });
 }
