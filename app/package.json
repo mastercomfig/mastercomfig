@@ -55,7 +55,6 @@
       ]
     },
     "win": {
-      "target": "nsis-web",
       "publish": [
         "github"
       ]
