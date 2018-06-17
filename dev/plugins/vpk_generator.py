@@ -245,7 +245,9 @@ def presets_files(manifest):
             with open(base_dir + 'cfg/presets/' + preset + '.cfg', "w+") as preset_file:
                 modules = manifest_presets.get(preset, {}).get('modules', {})
                 for module in modules.keys():
-                    module_name = module.replace(".", "_")
+                    name_parts = module.split(".")
+                    name_parts[0] = name_parts[0][0]
+                    module_name = "_".join(name_parts)
                     level = modules.get(module)
                     preset_file.write("alias run_" + module_name + " " + module_name + "_" + level + "\n")
             alias_string += ";exec presets/" + preset
