@@ -209,7 +209,7 @@
         });
       };
 
-      $.get("https://api.github.com/repositories/69422496/releases/latest", function(data) {
+      $.get("https://api.github.com/repositories/69422496/releases/tags/6.7.0", function(data) {
         version = data.tag_name;
         document.getElementById('title').innerText = "Download mastercomfig " + data.tag_name;
         if (!storage.getItem('preset')) {
