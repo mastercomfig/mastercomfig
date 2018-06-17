@@ -51,17 +51,28 @@
       download("https://github.com/mastercoms/mastercomfig/releases/download/" + version + "/mastercomfig.vpk", settings.get('tf2-folder') + "/tf/custom/mastercomfig.vpk")
           .then(() => {
             const fs = require('fs');
-            var stream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
-            stream.once('open', () => {
-              stream.write('preset_' + settings.get('preset') + "\n");
+            var modulesStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
+            modulesStream.once('open', () => {
+              modulesStream.write('preset_' + settings.get('preset') + "\n");
               var modules = settings.get('modules');
               Object.keys(modules).forEach(category => {
                 Object.keys(modules[category]).forEach(module => {
                   var name = category + "_" + module;
-                  stream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
+                  modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
                 });
               });
+              modulesStream.end();
             });
+            var customStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-custom.cfg");
+            customStream.once('open', () => {
+              var uploadSpeed = settings.get('upload-speed');
+              var rate = "rate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 75000).toFixed(7))));
+              var splitpacketRate = ";net_splitpacket_maxrate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 50000).toFixed(7))));
+              var maxClearTime = ";net_maxcleartime " + Math.max(0.0000001, parseFloat((0.01288 / uploadSpeed).toFixed(7)));
+              customStream.write("alias run_n_upload \"" + rate + splitpacketRate + maxClearTime + "\"\n");
+              customStream.end();
+            });
+
             ring.hidden = true;
             document.getElementById('apply-btn').disabled = false;
           })
@@ -209,17 +220,21 @@
             moduleMenu.appendChild(moduleMenuItem);
           });
           moduleSelect.addEventListener('change', (e) => {
-            if (module['levels'][e.detail.newValue].hasOwnProperty('description')) {
-              var moduleLevel = module['levels'][e.detail.newValue];
+            var moduleLevel = module['levels'][e.detail.newValue];
+            if (moduleLevel.hasOwnProperty('description')) {
               moduleLevelDescription.innerText = moduleLevel['description'];
-              var moduleLevelName = '';
-              if (moduleLevel.hasOwnProperty('name')) {
-                moduleLevelName = moduleLevel['name'];
-              } else {
-                moduleLevelName = e.detail.newValue.replace("_", " ").toProperCase();
-              }
-              description.innerText = moduleLevelName;
+            } else {
+              moduleLevelDescription.innerText = '';
             }
+            var moduleLevelName = '';
+
+            if (moduleLevel.hasOwnProperty('name')) {
+              moduleLevelName = moduleLevel['name'];
+            } else {
+              moduleLevelName = e.detail.newValue.replace("_", " ").toProperCase();
+            }
+            description.innerText = moduleLevelName;
+
             settings.set("modules." + moduleIndex, e.detail.newValue);
           });
           row.appendChild(left);
