@@ -23,7 +23,8 @@
 <nav class="navbar fixed-bottom navbar-light bg-light">
   <div class="ml-auto"></div>
   <x-throbber hidden id="install-ring"></x-throbber>
-  <button class="btn btn-outline-primary" id="apply-btn">Apply</button>
+  <span class="text-success navbar-text" id="apply-success" hidden> <x-icon name="check" skin="success" style="height: 16px; width: 16px"></x-icon> mastercomfig settings successfully applied!</span>
+  <button class="btn btn-outline-primary" style="margin-left: 10px" id="apply-btn">Apply</button>
 </nav>
 <x-notification id="notification" timeout="6000">An error occurred while downloading mastercomfig. Please try again later.</x-notification>
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
@@ -75,6 +76,11 @@
 
             ring.hidden = true;
             document.getElementById('apply-btn').disabled = false;
+            var success = document.getElementById('apply-success');
+            success.hidden = false;
+            setTimeout(() => {
+              success.hidden = true;
+            }, 1000);
           })
           .catch((err) => {
             ring.hidden = true;

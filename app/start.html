@@ -36,7 +36,7 @@
 <div class="container" style="margin-top: 20px">
   <h1 class="display-3">Welcome to mastercomfig!</h1>
   <p class="lead">We just need some info before we get started.</p>
-  <h3>1. <x-icon name="check" skin="success" style="display: none" id="folder-check"></x-icon>
+  <h3>1. <x-icon name="check" skin="success" id="folder-check" hidden></x-icon>
     Select your Team Fortress 2 folder</h3>
   <div class="custom-file" style="width: 400px">
     <input type="file" class="custom-file-input" id="tf2-folder" webkitdirectory/>
@@ -44,17 +44,17 @@
   </div>
   <hr>
   <h3>
-    2. <x-icon name="check" skin="success" style="display: none" id="speedtest-check"></x-icon>
+    2. <x-icon name="check" skin="success" id="speedtest-check" hidden></x-icon>
     Run an internet speed test</h3>
   <div id="speedtest">
     <x-button id="speedtest-btn">Run test</x-button>
-    <x-progressbar style="display: none; margin-top: 4px" id="speedtest-bar"></x-progressbar>
+    <x-progressbar style="margin-top: 4px" id="speedtest-bar" hidden></x-progressbar>
     <p><small>Clicking run test will access the Speedtest.net service to record your upload speed.</small></p>
   </div>
-  <p style="display: none" id="upload"><strong>Upload speed:</strong> </p>
+  <p id="upload" hidden><strong>Upload speed:</strong> </p>
   <hr>
   <h3>
-    3. <x-icon name="check" skin="success" style="display: none" id="preset-check"></x-icon>
+    3. <x-icon name="check" skin="success" id="preset-check" hidden></x-icon>
     Choose a preset</h3>
   <x-select id="presets-select" style="width: 200px">
     <x-menu id="presets-menu">
@@ -89,7 +89,7 @@
     let folder = e.target.files[0].name;
     if (folder === "Team Fortress 2") {
       document.getElementById('folder-label').innerText = folder;
-      document.getElementById('folder-check').style.display = "inline-block";
+      document.getElementById('folder-check').hidden = false;
       settings.set('tf2-folder', e.target.files[0].path);
       incrementProgress();
     } else {
@@ -103,17 +103,17 @@
 
     var bar = document.getElementById('speedtest-bar');
     document.getElementById('speedtest-btn').setAttribute("disabled", null);
-    bar.style.display = "inline";
+    bar.hidden = false;
 
     test.on('uploadprogress', progress => {
       bar.setAttribute("value", (parseFloat(progress) / 100).toString());
     });
 
     test.on('data', data => {
-      bar.style.display = "none";
-      document.getElementById('speedtest').style.display = "none";
-      document.getElementById('speedtest-check').style.display = "inline-block";
-      document.getElementById('upload').style.display = "inline";
+      bar.hidden = true;
+      document.getElementById('speedtest').hidden = true;
+      document.getElementById('speedtest-check').hidden = false;
+      document.getElementById('upload').hidden = false;
       document.getElementById('upload').innerHTML += data.speeds.upload + "Mbps";
       settings.set('upload-speed', data.speeds.upload);
       incrementProgress();
@@ -144,7 +144,7 @@
         document.getElementById("presets-select").addEventListener('change', (e) => {
           if (!selected) {
             selected = true;
-            document.getElementById('preset-check').style.display = "inline-block";
+            document.getElementById('preset-check').hidden = false;
             incrementProgress();
           }
           settings.set('preset', e.detail.newValue);

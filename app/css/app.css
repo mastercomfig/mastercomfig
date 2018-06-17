@@ -13,6 +13,7 @@ x-icon[skin="titlebar"]:hover {
 }
 
 x-icon[skin="success"] {
+    display: inline-block;
     height: 24px;
     width: 24px;
     color: #43A047;
