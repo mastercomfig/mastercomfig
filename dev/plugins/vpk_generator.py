@@ -134,9 +134,15 @@ def modules_run_file(manifest):
     with open(base_dir + 'cfg/modules-run.cfg', 'w+') as modules:
         for module in manifest.get('modules', {}).keys():
             if module == "networking.packet_buffer":
-                interp_string = "run_" + module.replace(".", "_") + "\n"
+                name_parts = module.split(".")
+                name_parts[0] = name_parts[0][0]
+                module = "_".join(name_parts)
+                interp_string = "run_" + module + "\n"
             else:
-                modules.write("run_" + module.replace(".", "_") + "\n")
+                name_parts = module.split(".")
+                name_parts[0] = name_parts[0][0]
+                module = "_".join(name_parts)
+                modules.write("run_" + module + "\n")
             if module == "networking.packet_rate":
                 modules.write(interp_string)
 
