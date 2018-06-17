@@ -125,7 +125,7 @@
         "graphics.pyrovision": "ultra",
         "graphics.motion_blur": "ultra",
         "graphics.antialiasing": "msaa_16x",
-        "graphics.texture_filter": "bilinear",
+        "graphics.texture_filter": "aniso_16x",
         "graphics.characters": "ultra",
         "graphics.decals": "ultra",
         "graphics.sprays": "on",

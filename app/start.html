@@ -144,6 +144,7 @@
         document.getElementById("presets-select").addEventListener('change', (e) => {
           if (!selected) {
             selected = true;
+            document.getElementById('preset-check').style.display = "inline-block";
             incrementProgress();
           }
           settings.set('preset', e.detail.newValue);
