@@ -1,7 +1,7 @@
 {
   "name": "mastercomfig-app",
   "productName": "mastercomfig",
-  "version": "1.0.0",
+  "version": "v7.0.0",
   "description": "The desktop app for mastercomfig, a Team Fortress 2 config",
   "main": "main.js",
   "scripts": {
@@ -55,6 +55,7 @@
       ]
     },
     "win": {
+      "target": "nsis-web",
       "publish": [
         "github"
       ]
