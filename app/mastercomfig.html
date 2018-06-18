@@ -58,7 +58,7 @@
               var modules = settings.get('modules');
               Object.keys(modules).forEach(category => {
                 Object.keys(modules[category]).forEach(module => {
-                  var name = category + "_" + module;
+                  var name = category[0] + "_" + module;
                   modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
                 });
               });
