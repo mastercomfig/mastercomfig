@@ -1,8 +1,7 @@
 {
   "name": "mastercomfig-app",
-  "productName": "mastercomfig",
-  "version": "v7.0.0a3",
-  "description": "The desktop app for mastercomfig, a Team Fortress 2 config",
+  "version": "v7.0.0a4",
+  "description": "The mastercomfig app allows you to customize and optimize Team Fortress 2 easily.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -10,7 +9,7 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
-  "repository": "https://github.com/mastercoms/mastercomfig",
+  "repository": "github:mastercoms/mastercomfig",
   "keywords": [
     "tf2",
     "team-fortress-2",
@@ -18,12 +17,15 @@
     "tf2-config",
     "source-engine"
   ],
-  "author": "mastercoms <mastercoms@tutanota.de>",
+  "author": {
+    "name": "mastercoms",
+    "email": "mastercoms@tutanota.de"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mastercoms/mastercomfig/issues"
   },
-  "homepage": "https://mastercomfig.com",
+  "homepage": "https://github.com/mastercoms/mastercomfig#readme",
   "devDependencies": {
     "electron": "^2.0.2",
     "electron-builder": "^20.15.1"
@@ -38,26 +40,37 @@
     "xel": "0.0.139"
   },
   "build": {
+    "productName": "mastercomfig",
     "appId": "com.mastercomfig.app",
     "mac": {
-      "category": "public.app-category.games"
+      "category": "public.app-category.utilities"
     },
     "linux": {
+      "synopsis": "The desktop app for mastercomfig, a Team Fortress 2 config.",
       "target": [
         "snap",
         "deb",
         "rpm",
         "pacman",
-        "tar.gz"
+        "tar.xz"
       ],
-      "publish": [
-        "github"
-      ]
+      "category": "Settings"
+    },
+    "snap": {
+      "confinement": "classic",
+      "grade": "devel"
     },
     "win": {
-      "publish": [
-        "github"
-      ]
+      "target": [
+        {
+          "target": "nsis-web",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "legalTrademarks": "Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo are trademarks and/or registered trademarks of Valve Corporation. mastercomfig is not associated with nor endorsed by Valve Corporation."
     }
   }
 }

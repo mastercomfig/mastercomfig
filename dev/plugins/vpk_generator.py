@@ -86,7 +86,7 @@ def cheap_water(level, value):
     cheap_water_alias = None
     if value == "off":
         if not cheap_water_none_defined:
-            cheap_water_alias = "alias cheap_water_none " + "\"\"\n"
+            cheap_water_alias = "alias cheap_water_off " + "\"\"\n"
             cheap_water_none_defined = True
     else:
         cheap_water_alias = "alias cheap_water_{0} \"r_cheapwaterstart {1[0]};r_cheapwaterend {1[1]}\"\n"\
@@ -133,18 +133,13 @@ def modules_run_file(manifest):
     make_cfg_dir()
     with open(base_dir + 'cfg/modules-run.cfg', 'w+') as modules:
         for module in manifest.get('modules', {}).keys():
-            if module == "networking.packet_buffer":
-                name_parts = module.split(".")
-                name_parts[0] = name_parts[0][0]
-                module = "_".join(name_parts)
-                interp_string = "run_" + module + "\n"
-            else:
+            if module != "networking.packet_buffer":
                 name_parts = module.split(".")
                 name_parts[0] = name_parts[0][0]
                 module = "_".join(name_parts)
                 modules.write("run_" + module + "\n")
-            if module == "networking.packet_rate":
-                modules.write(interp_string)
+            if module == "n_packet_rate":
+                modules.write("run_n_packet_buffer\n")
 
 
 @generator(manifest='modules')
@@ -162,7 +157,10 @@ def modules_define_file(manifest):
             for level in module_levels.keys():
                 level_string = ""
                 alias_name = module_name + "_" + level
-                alias_string = "setinfo " + module_name + " " + level
+                if manifest_modules[module].get('hidden'):
+                    alias_string = ""
+                else:
+                    alias_string = "setinfo " + module_name + " " + level
                 for cvar, value in module_levels.get(level, {}).get('values', {}).items():
                     alias_string += ";" + cvar + " " + value.__str__()
                 for entry, value in module_levels.get(level, {}).items():
@@ -174,7 +172,8 @@ def modules_define_file(manifest):
                                 if ret[1] is not None:
                                     level_string += ret[1]
                 level_string += "alias " + alias_name + " \"" + alias_string + "\"""\n"
-                level_string += "setinfo " + alias_name + " \"\"\n"
+                if not manifest_modules[module].get('hidden'):
+                    level_string += "setinfo " + alias_name + " \"\"\n"
                 modules.write(level_string)
 
 

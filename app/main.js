@@ -1,8 +1,9 @@
 'use strict';
 
-const {app, BrowserWindow} = require('electron');
-const os = require('os');
-const settings = require('electron-settings');
+import {app, BrowserWindow } from "electron";
+import { os } from "os";
+import { settings } from "electron-settings";
+import { autoUpdater } from "electron-updater";
 
 let window;
 
