@@ -1,9 +1,9 @@
 'use strict';
 
-import {app, BrowserWindow } from "electron";
-import { os } from "os";
-import { settings } from "electron-settings";
-import { autoUpdater } from "electron-updater";
+const {app, BrowserWindow } = require("electron");
+const os = require("os");
+const settings = require("electron-settings");
+const { autoUpdater } = require("electron-updater");
 
 let window;
 
@@ -49,4 +49,7 @@ app.on('window-all-closed', () => {
   app.quit();
 });
 
-app.on('ready', createWindow);
+app.on('ready', () => {
+  autoUpdater.checkForUpdatesAndNotify();
+  createWindow();
+});
