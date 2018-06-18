@@ -303,7 +303,7 @@
             "mat_reducefillrate": 0,
             "mat_phong": 1
           },
-          "description": "The highest quality lighting and lighting. The extra detail looks nice and may help with visibility of objects and players."
+          "description": "The highest quality lighting and lighting effects. The extra detail looks nice and may help with visibility of objects and players."
         }
       }
     },
