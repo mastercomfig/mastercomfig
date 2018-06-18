@@ -303,10 +303,12 @@ def comfig_format(*args):
         for _ in range(0, width - 4):
             stars += "*"
         date_string = left_pad
-        for _ in range(0, int(round((width - len(left_pad) * 2 - len(date)) / 2))):
+        print((width - len(left_pad) * 2 - len(date)) / 2)
+        print(round((width - len(left_pad) * 2 - len(date)) / 2))
+        for _ in range(0, int((width - len(left_pad) * 2 - len(date)) / 2)):
             date_string += " "
         date_string += date
-        for _ in range(0, int((width - len(left_pad) * 2 - len(date)) / 2)):
+        for _ in range(0, int((width - len(right_pad) * 2 - len(date)) / 2 + 0.5)):
             date_string += " "
         date_string += right_pad
         for _ in star_padding:
