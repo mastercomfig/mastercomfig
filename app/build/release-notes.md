@@ -2,7 +2,7 @@
 * Changed versioning scheme to SemVer
 * Added an auto updater
 * Windows app installer updated
-  * Web-based, will download from
+  * Web-based, will download according to your system
   * Supports 32-bit and 64-bit operating systems
   * Added legal trademark notices
 * Fixed the snap package being incorrectly confined
