@@ -1,6 +1,6 @@
 {
   "name": "mastercomfig-app",
-  "version": "7.0.0-a4",
+  "version": "7.0.0-alpha.4",
   "description": "The mastercomfig app allows you to customize and optimize Team Fortress 2 easily.",
   "main": "main.js",
   "scripts": {
