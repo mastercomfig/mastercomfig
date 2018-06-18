@@ -7,7 +7,8 @@
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "release": "electron-builder -wlp \"always\""
   },
   "repository": "github:mastercoms/mastercomfig",
   "keywords": [
