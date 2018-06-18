@@ -4,3 +4,8 @@
 *.txt eol=lf
 *.sh eol=lf
 .git* eol=lf
+
+# These files are binary
+*.png binary
+*.ico binary
+*.icns binary
