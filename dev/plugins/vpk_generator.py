@@ -202,7 +202,9 @@ def modules_help_file(manifest):
                     words[i] = " ".join(in_words)
                 friendly_name = ": ".join(words)
 
-            module_name = module.split(".")[-1]
+            name_parts = module.split(".")
+            name_parts[0] = name_parts[0][0]
+            module_name = "_".join(name_parts)
             modules_help.write("echo \"~~" + friendly_name + " (" + module_name + ")~~\"\n"
                                + module_name + "\n")
             if manifest_modules.get(module, {}).get('description'):

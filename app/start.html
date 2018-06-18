@@ -34,8 +34,8 @@
   </a>
 </nav>
 <div class="container" style="margin-top: 20px">
-  <h1 class="display-3">Welcome to mastercomfig!</h1>
-  <p class="lead">We just need some info before we get started.</p>
+  <h1 class="display-3" id="title">Welcome to mastercomfig!</h1>
+  <p class="lead" id="description">We just need some info before we get started.</p>
   <h3>1. <x-icon name="check" skin="success" id="folder-check" hidden></x-icon>
     Select your Team Fortress 2 folder</h3>
   <div class="custom-file" style="width: 400px">
@@ -70,6 +70,22 @@
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script>
+  const settings = require('electron-settings');
+  var doCheckMark = true;
+
+  if (settings.has('tf2-folder') && settings.has('upload-speed') && settings.has('preset')) {
+    document.getElementById('title').innerText = "mastercomfig settings";
+    document.getElementById('description').innerText = "Something changed since your initial setup? Customize your settings here.";
+    doCheckMark = false;
+    var next = document.getElementById('next-btn');
+    next.innerText = "Close";
+    next.removeAttribute("disabled");
+    next.addEventListener('click', function() {
+      const {BrowserWindow} = require('electron').remote;
+      BrowserWindow.getFocusedWindow().loadFile("mastercomfig.html");
+    });
+  }
+
   var steps = 0;
 
   function incrementProgress() {
@@ -89,9 +105,11 @@
     let folder = e.target.files[0].name;
     if (folder === "Team Fortress 2") {
       document.getElementById('folder-label').innerText = folder;
-      document.getElementById('folder-check').hidden = false;
       settings.set('tf2-folder', e.target.files[0].path);
-      incrementProgress();
+      if (doCheckMark) {
+        document.getElementById('folder-check').hidden = false;
+        incrementProgress();
+      }
     } else {
       document.getElementById('folder-label').innerText = "Invalid Team Fortress 2 folder. Please try again.";
     }
@@ -112,17 +130,18 @@
     test.on('data', data => {
       bar.hidden = true;
       document.getElementById('speedtest').hidden = true;
-      document.getElementById('speedtest-check').hidden = false;
+
       document.getElementById('upload').hidden = false;
       document.getElementById('upload').innerHTML += data.speeds.upload + "Mbps";
       settings.set('upload-speed', data.speeds.upload);
-      incrementProgress();
+      if (doCheckMark) {
+        document.getElementById('speedtest-check').hidden = false;
+        incrementProgress();
+      }
     })
   }, {
     once: true
   });
-
-  const settings = require('electron-settings');
 
   fetch('https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/presets.json')
       .then(response => {
@@ -144,8 +163,10 @@
         document.getElementById("presets-select").addEventListener('change', (e) => {
           if (!selected) {
             selected = true;
-            document.getElementById('preset-check').hidden = false;
-            incrementProgress();
+            if (doCheckMark) {
+              document.getElementById('preset-check').hidden = false;
+              incrementProgress();
+            }
           }
           settings.set('preset', e.detail.newValue);
         });

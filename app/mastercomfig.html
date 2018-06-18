@@ -21,6 +21,7 @@
 <x-tabs id="cat-tabs"></x-tabs>
 <div class="container" id="tab-content" style="overflow-y: scroll; overflow-x: hidden; height: 75vh; padding-bottom: 48px;"></div>
 <nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-text no-link" id="settings" href="#"><x-icon name="settings" style="display: inline-block; height: 16px; width: 16px"></x-icon> Settings</a>
   <div class="ml-auto"></div>
   <x-throbber hidden id="install-ring"></x-throbber>
   <span class="text-success navbar-text" id="apply-success" hidden> <x-icon name="check" skin="success" style="height: 16px; width: 16px"></x-icon> mastercomfig settings successfully applied!</span>
@@ -38,6 +39,12 @@
   var currentTab = '';
   var presets = null;
 
+  document.getElementById('settings').addEventListener('click', (e) => {
+    e.preventDefault();
+    const {BrowserWindow} = require('electron').remote;
+    BrowserWindow.getFocusedWindow().loadFile("start.html");
+  });
+
   document.getElementById('apply-btn').addEventListener('click', () => {
     document.getElementById('apply-btn').disabled = true;
     var ring = document.getElementById('install-ring');
@@ -48,46 +55,44 @@
           return response.json();
         }).then(json => {
       var version = json[0]['tag_name'];
-
-      download("https://github.com/mastercoms/mastercomfig/releases/download/" + version + "/mastercomfig.vpk", settings.get('tf2-folder') + "/tf/custom/mastercomfig.vpk")
-          .then(() => {
-            const fs = require('fs');
-            var modulesStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
-            modulesStream.once('open', () => {
-              modulesStream.write('preset_' + settings.get('preset') + "\n");
-              var modules = settings.get('modules');
-              Object.keys(modules).forEach(category => {
-                Object.keys(modules[category]).forEach(module => {
-                  var name = category + "_" + module;
-                  modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
+      var vpkPath = settings.get('tf2-folder') + "/tf/custom/mastercomfig.vpk";
+      fs.unlink(vpkPath, () => {
+        download("https://github.com/mastercoms/mastercomfig/releases/download/" + version + "/mastercomfig.vpk", vpkPath)
+            .then(() => {
+              const fs = require('fs');
+              var modulesStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
+              fs.unlink(settings.get('tf2-folder') + "/tf/cfg/client-custom.cfg", () => {});
+              modulesStream.once('open', () => {
+                modulesStream.write('preset_' + settings.get('preset') + "\n");
+                var modules = settings.get('modules');
+                Object.keys(modules).forEach(category => {
+                  Object.keys(modules[category]).forEach(module => {
+                    var name = category[0] + "_" + module;
+                    modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
+                  });
                 });
+                var uploadSpeed = settings.get('upload-speed');
+                var rate = "rate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 75000).toFixed(7))));
+                var splitpacketRate = ";net_splitpacket_maxrate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 50000).toFixed(7))));
+                var maxClearTime = ";net_maxcleartime " + Math.max(0.0000001, parseFloat((0.01288 / uploadSpeed).toFixed(7)));
+                modulesStream.write("alias run_n_upload \"" + rate + splitpacketRate + maxClearTime + "\"\n");
+                modulesStream.end();
               });
-              modulesStream.end();
+              ring.hidden = true;
+              document.getElementById('apply-btn').disabled = false;
+              var success = document.getElementById('apply-success');
+              success.hidden = false;
+              setTimeout(() => {
+                success.hidden = true;
+              }, 1000);
+            })
+            .catch((err) => {
+              ring.hidden = true;
+              document.getElementById('notification').innerText = err;
+              document.getElementById('notification').opened = true;
+              document.getElementById('apply-btn').disabled = false;
             });
-            var customStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-custom.cfg");
-            customStream.once('open', () => {
-              var uploadSpeed = settings.get('upload-speed');
-              var rate = "rate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 75000).toFixed(7))));
-              var splitpacketRate = ";net_splitpacket_maxrate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 50000).toFixed(7))));
-              var maxClearTime = ";net_maxcleartime " + Math.max(0.0000001, parseFloat((0.01288 / uploadSpeed).toFixed(7)));
-              customStream.write("alias run_n_upload \"" + rate + splitpacketRate + maxClearTime + "\"\n");
-              customStream.end();
-            });
-
-            ring.hidden = true;
-            document.getElementById('apply-btn').disabled = false;
-            var success = document.getElementById('apply-success');
-            success.hidden = false;
-            setTimeout(() => {
-              success.hidden = true;
-            }, 1000);
-          })
-          .catch((err) => {
-            ring.hidden = true;
-            document.getElementById('notification').innerText = err;
-            document.getElementById('notification').opened = true;
-            document.getElementById('apply-btn').disabled = false;
-          });
+      });
     });
   });
 
@@ -210,6 +215,11 @@
             moduleMenuItem.setAttribute("value", key);
             if (key === moduleLevel) {
               moduleMenuItem.setAttribute("toggled", null);
+              if (module['levels'][key].hasOwnProperty('description')) {
+                moduleLevelDescription.innerText = module['levels'][key]['description'];
+              } else {
+                moduleLevelDescription.innerText = '';
+              }
             }
             var moduleMenuItemLabel = document.createElement("x-label");
             var moduleName = '';
@@ -217,9 +227,6 @@
               moduleName = module['levels'][key]['name'];
             } else {
               moduleName = key.replace("_", " ").toProperCase();
-            }
-            if (module['levels'][key].hasOwnProperty('description')) {
-              moduleLevelDescription.innerText = module['levels'][key]['description'];
             }
             moduleMenuItemLabel.innerText = moduleName;
             moduleMenuItem.appendChild(moduleMenuItemLabel);

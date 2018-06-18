@@ -18,3 +18,13 @@ x-icon[skin="success"] {
     width: 24px;
     color: #43A047;
 }
+
+.no-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.no-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
