@@ -12,6 +12,7 @@ venv/
 node_modules/
 dist/
 *.log
+!app/build/
 
 # OS generated files
 .DS_Store
