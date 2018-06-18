@@ -1,7 +1,7 @@
 {
   "name": "mastercomfig-app",
   "productName": "mastercomfig",
-  "version": "v7.0.0a2",
+  "version": "v7.0.0a3",
   "description": "The desktop app for mastercomfig, a Team Fortress 2 config",
   "main": "main.js",
   "scripts": {
