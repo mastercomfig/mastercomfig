@@ -4,3 +4,4 @@
 * Added config update notifications
 * Added a version tooltip to the toolbar
 * Fixed a typo for the lighting - ultra description
+* Fixed Linux builds not having proper permissions
