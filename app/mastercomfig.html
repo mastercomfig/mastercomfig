@@ -21,10 +21,15 @@
 <x-tabs id="cat-tabs"></x-tabs>
 <div class="container" id="tab-content" style="overflow-y: scroll; overflow-x: hidden; height: 75vh; padding-bottom: 48px;"></div>
 <nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="navbar-text no-link" id="settings" href="#"><x-icon name="settings" style="display: inline-block; height: 16px; width: 16px"></x-icon> Settings</a>
+  <a class="nav-item navbar-text no-link" id="settings" href="#"><x-icon name="settings" style="display: inline-block; height: 16px; width: 16px"></x-icon> Settings</a>
+  <a class="nav-item navbar-text no-link" id="about" href="#" data-toggle="tooltip" data-placement="top">
+    <x-icon name="info" style="display: inline-block; height: 16px; width: 16px; margin-left: 16px"></x-icon>
+    Version
+  </a>
   <div class="ml-auto"></div>
   <x-throbber hidden id="install-ring"></x-throbber>
-  <span class="text-success navbar-text" id="apply-success" hidden> <x-icon name="check" skin="success" style="height: 16px; width: 16px"></x-icon> mastercomfig settings successfully applied!</span>
+  <span class="text-info navbar-text" id="config-update" hidden><x-icon name="update" style="height: 20px; width: 20px; display: inline-block"></x-icon> There's a new config version available, click apply to install!</span>
+  <span class="text-success navbar-text" id="apply-success" hidden><x-icon name="check" skin="success" style="height: 16px; width: 16px"></x-icon> mastercomfig settings successfully applied!</span>
   <button class="btn btn-outline-primary" style="margin-left: 10px" id="apply-btn">Apply</button>
 </nav>
 <x-notification id="notification" timeout="4000">An error occurred while downloading mastercomfig. Please try again later.</x-notification>
@@ -35,7 +40,26 @@
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script>
+  document.getElementById('about').title = require('electron').remote.app.getVersion();
+  $('#about').tooltip();
+
   const settings = require('electron-settings');
+
+  var latestSha = settings.get('config-sha');
+
+  if (latestSha) {
+    fetch('https://api.github.com/repositories/69422496/commits?sha=beta&path=config')
+        .then(response => {
+          return response.json()
+        }).then(json => {
+      latestSha = json[0].sha;
+      if (settings.get('config-sha') !== latestSha) {
+        document.getElementById('config-update').hidden = false;
+      }
+    });
+  }
+
+
   var currentTab = '';
   var presets = null;
 
@@ -46,6 +70,7 @@
   });
 
   document.getElementById('apply-btn').addEventListener('click', () => {
+    document.getElementById('config-update').hidden = true;
     document.getElementById('apply-btn').disabled = true;
     var ring = document.getElementById('install-ring');
     ring.hidden = false;
@@ -80,6 +105,7 @@
               });
               ring.hidden = true;
               document.getElementById('apply-btn').disabled = false;
+              settings.set('config-sha', latestSha);
               var success = document.getElementById('apply-success');
               success.hidden = false;
               setTimeout(() => {
@@ -233,6 +259,7 @@
             moduleMenu.appendChild(moduleMenuItem);
           });
           moduleSelect.addEventListener('change', (e) => {
+            console.log('test');
             var moduleLevel = module['levels'][e.detail.newValue];
             if (moduleLevel.hasOwnProperty('description')) {
               moduleLevelDescription.innerText = moduleLevel['description'];

@@ -291,7 +291,7 @@ def comfig_format(*args):
             name = os.path.splitext(config_file)[0] + "_c"
             comfig.write("alias " + name + " \"exec " + name + "\n")
         space_padding = range(0, 4)
-        for i in space_padding:
+        for _ in space_padding:
             comfig.write("echo \" \"\n")
         star_padding = range(0, 2)
         left_pad = "  ** "

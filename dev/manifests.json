@@ -1,5 +1,5 @@
 {
-  "version": "7.0.0-a.4",
+  "version": "7.0.0-a.5",
   "config-dir": "../config/",
   "build-dir": "../build/",
   "sources-dir": "../config/mastercomfig/",

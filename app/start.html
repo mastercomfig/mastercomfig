@@ -45,11 +45,12 @@
   <hr>
   <h3>
     2. <x-icon name="check" skin="success" id="speedtest-check" hidden></x-icon>
-    Run an internet speed test</h3>
+    Run an internet speed test
+  </h3>
+  <x-button id="speedtest-btn" style="margin-bottom: 4px">Run test</x-button>
   <div id="speedtest">
-    <x-button id="speedtest-btn">Run test</x-button>
-    <x-progressbar style="margin-top: 4px" id="speedtest-bar" hidden></x-progressbar>
-    <p><small>Clicking run test will access the Speedtest.net service to record your upload speed.</small></p>
+    <x-progressbar id="speedtest-bar" hidden></x-progressbar>
+    <p><small id="status">Clicking run test will access the Speedtest.net service to record your upload speed.</small></p>
   </div>
   <p id="upload" hidden><strong>Upload speed:</strong> </p>
   <hr>
@@ -115,13 +116,20 @@
     }
   });
 
-  document.getElementById('speedtest-btn').addEventListener('click', () => {
+  var speedtestBtn = document.getElementById('speedtest-btn');
+
+  speedtestBtn.addEventListener('click', () => {
     const speedtest = require('speedtest-net');
     var test = speedtest({maxTime: 5000});
+    var server = document.getElementById('status');
+    server.innerText = "Finding server...";
 
     var bar = document.getElementById('speedtest-bar');
-    document.getElementById('speedtest-btn').setAttribute("disabled", null);
+    document.getElementById('speedtest-btn').disabled = true;
     bar.hidden = false;
+    bar.removeAttribute("value");
+
+    document.getElementById('speedtest').hidden = false;
 
     test.on('uploadprogress', progress => {
       bar.setAttribute("value", (parseFloat(progress) / 100).toString());
@@ -130,17 +138,21 @@
     test.on('data', data => {
       bar.hidden = true;
       document.getElementById('speedtest').hidden = true;
-
+      speedtestBtn.innerText = "Retry";
+      speedtestBtn.disabled = false;
+      var speed = data.speeds.upload;
       document.getElementById('upload').hidden = false;
-      document.getElementById('upload').innerHTML += data.speeds.upload + "Mbps";
-      settings.set('upload-speed', data.speeds.upload);
+      document.getElementById('upload').innerHTML += speed + "Mbps";
+      settings.set('upload-speed', speed);
       if (doCheckMark) {
         document.getElementById('speedtest-check').hidden = false;
         incrementProgress();
       }
-    })
-  }, {
-    once: true
+    });
+
+    test.on('testserver', testserver => {
+        server.innerText = testserver.name + ", " + testserver.cc + " — " + testserver.sponsor + " (" + Math.round(testserver.bestPing) + "ms, " + Math.round(testserver.dist) + "km)";
+    });
   });
 
   fetch('https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/presets.json')
