@@ -3,3 +3,4 @@
 * Added a retry button to the speedtest
 * Added config update notifications
 * Added a version tooltip to the toolbar
+* Fixed a typo for the lighting - ultra description
