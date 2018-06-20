@@ -39,7 +39,6 @@
     "net_graphsolid": 0,
     "mem_max_heapsize_dedicated": 128,
     "mem_max_heapsize": 720,
-    "datacachesize": 256,
     "lzma_persistent_buffer": 1,
     "mat_bufferprimitives": 1,
     "filesystem_buffer_size": 8192,
