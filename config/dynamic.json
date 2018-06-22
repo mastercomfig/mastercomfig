@@ -5,6 +5,16 @@
         "r_occludeemaxarea": 10,
         "r_occluderminarea": 1.5,
         "mat_tonemapping_occlusion_use_stencil": 1
+      },
+      "NVIDIA": {
+        "r_occludeemaxarea": 2.5,
+        "r_occluderminarea": 20,
+        "mat_tonemapping_occlusion_use_stencil": 0
+      },
+      "AMD": {
+        "r_occludeemaxarea": 2.5,
+        "r_occluderminarea": 20,
+        "mat_tonemapping_occlusion_use_stencil": 0
       }
     },
     "software.os.name": {

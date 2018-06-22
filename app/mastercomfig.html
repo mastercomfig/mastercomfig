@@ -88,48 +88,51 @@
       fs.unlink(vpkPath, () => {
         download("https://github.com/mastercoms/mastercomfig/releases/download/" + version + "/mastercomfig.vpk", vpkPath)
             .then(() => {
-              const fs = require('fs');
-              var modulesStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
-              modulesStream.once('open', () => {
-                fs.unlink(modulesStream.path, () => {
-                  modulesStream.write('preset_' + settings.get('preset') + "\n");
-                  var modules = settings.get('modules');
-                  Object.keys(modules).forEach(category => {
-                    Object.keys(modules[category]).forEach(module => {
-                      var name = category[0] + "_" + module;
-                      modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
-                    });
-                  });
-                  var uploadSpeed = settings.get('upload-speed');
-                  var rate = "rate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 75000).toFixed(7))));
-                  var splitpacketRate = ";net_splitpacket_maxrate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 50000).toFixed(7))));
-                  var maxClearTime = ";net_maxcleartime " + Math.max(0.0000001, parseFloat((0.01288 / uploadSpeed).toFixed(7)));
-                  modulesStream.write("alias run_n_upload \"" + rate + splitpacketRate + maxClearTime + "\"\n");
-                  modulesStream.end();
-                });
-              });
-              var customStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
-              customStream.once('open', () => {
-                fs.unlink(customStream.path, () => {
-                  fetch('https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/dynamic.json')
-                      .then(response => {
-                        return response.json();
-                      }).then(json => {
-                    var dynamics = json.entries;
-                    Object.keys(dynamics).forEach(key => {
-                      var dynamicData = ipcRenderer.sendSync('dynamic-data-request', key);
-                      Object.keys(dynamics[key]).forEach(dataKey => {
-                        if (dataKey.startsWith(dynamicData)) {
-                          Object.keys(dynamics[key][dataKey]).forEach(cvar => {
-                            customStream.write(cvar + " " + dynamics[key][dataKey][cvar] + "\n");
-                          });
-                        }
+                const fs = require('fs');
+                fs.unlink(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg", () => {
+                  var modulesStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
+                  modulesStream.once('open', () => {
+                    modulesStream.write('preset_' + settings.get('preset') + "\n");
+                    var modules = settings.get('modules');
+                    Object.keys(modules).forEach(category => {
+                      Object.keys(modules[category]).forEach(module => {
+                        var name = category[0] + "_" + module;
+                        modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
                       });
                     });
-                    customStream.end();
+
+                    modulesStream.end();
                   });
                 });
-              });
+                fs.unlink(settings.get('tf2-folder') + "/tf/cfg/client-custom.cfg", () => {
+                  var customStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-custom.cfg");
+                  customStream.once('open', () => {
+                    fetch('https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/dynamic.json')
+                        .then(response => {
+                          return response.json();
+                        }).then(json => {
+                        var dynamics = json.entries;
+                        var count = 0;
+                        Object.keys(dynamics).forEach(key => {
+                          count++;
+                          ipcRenderer.send('dynamic-data-request', key);
+                          ipcRenderer.on('dynamic-data-reply', (event, arg) => {
+                            Object.keys(dynamics[key]).forEach(dataKey => {
+                              if (dataKey.startsWith(arg)) {
+                                Object.keys(dynamics[key][dataKey]).forEach(cvar => {
+                                  customStream.write(cvar + " " + dynamics[key][dataKey][cvar] + "\n");
+                                });
+                              }
+                              count--;
+                              if (count === 0) {
+                                customStream.end();
+                              }
+                            });
+                          });
+                        });
+                    });
+                  });
+                });
               ring.hidden = true;
               document.getElementById('apply-btn').disabled = false;
               settings.set('config-sha', latestSha);

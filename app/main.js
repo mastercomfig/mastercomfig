@@ -68,20 +68,31 @@ function getDynamicData(name, callback) {
         arg.basic_info.forEach((item) => {
           if (item.description === "GL_VENDOR") {
             callback(item.value);
+            gpuWindow.close();
             return;
           }
         });
       });
       break;
+    case "hardware.cpu.cores":
+      callback(os.cpus().length);
+      break;
+    case "hardware.cpu.speed":
+      callback(os.cpus()[0].speed);
+      break;
+    case "hardware.cpu.model":
+      callback(os.cpu()[0].model);
+      break;
     case "software.os.name":
       callback(os.type());
+      break;
   }
 }
 
 ipcMain.on('dynamic-data-request', (event, arg) => {
   getDynamicData(arg, (data) => {
-    event.returnValue = data;
-  })
+    event.sender.send('dynamic-data-reply', data);
+  });
 });
 
 
