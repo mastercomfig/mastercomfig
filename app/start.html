@@ -93,7 +93,7 @@
 
   document.getElementById('tf2-folder').addEventListener('change', e => {
     let folder = e.target.files[0].path;
-    if (folder === "Team Fortress 2") {
+    if (folder.indexOf("Team Fortress 2") != -1) {
       document.getElementById('folder-label').innerText = folder;
       settings.set('tf2-folder', folder);
       document.getElementById('folder-check').hidden = false;
