@@ -4,12 +4,12 @@ body {
 }
 
 x-icon[skin="titlebar"] {
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(224, 224, 224, 0.4);
     transition: 0.1s;
 }
 
 x-icon[skin="titlebar"]:hover {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(250, 250, 250, 0.8);
 }
 
 x-icon[skin="success"] {

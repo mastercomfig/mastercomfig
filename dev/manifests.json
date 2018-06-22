@@ -1,5 +1,5 @@
 {
-  "version": "7.0.0-a.5",
+  "version": "7.0.0-a.6",
   "config-dir": "../config/",
   "build-dir": "../build/",
   "sources-dir": "../config/mastercomfig/",
@@ -9,7 +9,8 @@
     "cvars": ["cvars.json"],
     "modules": ["modules.json"],
     "comfig": ["comfig.json"],
-    "customs": ["customs.json"]
+    "customs": ["customs.json"],
+    "dynamics": ["dynamics.json"]
   },
   "patches": [
     {

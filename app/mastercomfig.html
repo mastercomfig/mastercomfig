@@ -13,7 +13,10 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark d-flex align-items-center" style="-webkit-app-region: drag">
-  <span class="navbar-brand">mastercomfig</span>
+  <span class="navbar-brand">
+    <img src="img/mastercomfig_logo_transparent.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    mastercomfig
+  </span>
   <a href="#">
     <x-icon name="close" skin="titlebar" style="-webkit-app-region: no-drag" id="close-btn"></x-icon>
   </a>
@@ -40,6 +43,8 @@
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script>
+  const {ipcRenderer} = require('electron');
+
   document.getElementById('about').title = require('electron').remote.app.getVersion();
   $('#about').tooltip();
 
@@ -59,14 +64,13 @@
     });
   }
 
-
   var currentTab = '';
   var presets = null;
 
   document.getElementById('settings').addEventListener('click', (e) => {
     e.preventDefault();
     const {BrowserWindow} = require('electron').remote;
-    BrowserWindow.getFocusedWindow().loadFile("start.html");
+    BrowserWindow.getFocusedWindow().loadFile("settings.html");
   });
 
   document.getElementById('apply-btn').addEventListener('click', () => {
@@ -86,22 +90,45 @@
             .then(() => {
               const fs = require('fs');
               var modulesStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
-              fs.unlink(settings.get('tf2-folder') + "/tf/cfg/client-custom.cfg", () => {});
               modulesStream.once('open', () => {
-                modulesStream.write('preset_' + settings.get('preset') + "\n");
-                var modules = settings.get('modules');
-                Object.keys(modules).forEach(category => {
-                  Object.keys(modules[category]).forEach(module => {
-                    var name = category[0] + "_" + module;
-                    modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
+                fs.unlink(modulesStream.path, () => {
+                  modulesStream.write('preset_' + settings.get('preset') + "\n");
+                  var modules = settings.get('modules');
+                  Object.keys(modules).forEach(category => {
+                    Object.keys(modules[category]).forEach(module => {
+                      var name = category[0] + "_" + module;
+                      modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
+                    });
+                  });
+                  var uploadSpeed = settings.get('upload-speed');
+                  var rate = "rate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 75000).toFixed(7))));
+                  var splitpacketRate = ";net_splitpacket_maxrate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 50000).toFixed(7))));
+                  var maxClearTime = ";net_maxcleartime " + Math.max(0.0000001, parseFloat((0.01288 / uploadSpeed).toFixed(7)));
+                  modulesStream.write("alias run_n_upload \"" + rate + splitpacketRate + maxClearTime + "\"\n");
+                  modulesStream.end();
+                });
+              });
+              var customStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
+              customStream.once('open', () => {
+                fs.unlink(customStream.path, () => {
+                  fetch('https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/dynamics.json')
+                      .then(response => {
+                        return response.json();
+                      }).then(json => {
+                    var dynamics = json.entries;
+                    Object.keys(dynamics).forEach(key => {
+                      var dynamicData = ipcRenderer.sendSync('dynamic-data-request', key);
+                      Object.keys(dynamics[key]).forEach(dataKey => {
+                        if (dataKey.startsWith(dynamicData)) {
+                          Object.keys(dynamics[key][dataKey]).forEach(cvar => {
+                            customStream.write(cvar + " " + dynamics[key][dataKey][cvar] + "\n");
+                          });
+                        }
+                      });
+                    });
+                    customStream.end();
                   });
                 });
-                var uploadSpeed = settings.get('upload-speed');
-                var rate = "rate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 75000).toFixed(7))));
-                var splitpacketRate = ";net_splitpacket_maxrate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 50000).toFixed(7))));
-                var maxClearTime = ";net_maxcleartime " + Math.max(0.0000001, parseFloat((0.01288 / uploadSpeed).toFixed(7)));
-                modulesStream.write("alias run_n_upload \"" + rate + splitpacketRate + maxClearTime + "\"\n");
-                modulesStream.end();
               });
               ring.hidden = true;
               document.getElementById('apply-btn').disabled = false;
@@ -203,7 +230,10 @@
           var bold = document.createElement("strong");
           bold.innerText = friendlyName;
           var description = document.createElement("x-label");
-          var moduleLevel = settings.get("modules." + moduleIndex, presets[settings.get('preset')]["modules"][moduleIndex]);
+          var moduleLevel = settings.get("modules." + moduleIndex);
+          if (!moduleLevel) {
+            moduleLevel = presets[settings.get('preset')]["modules"][moduleIndex];
+          }
           var moduleLevelName = '';
           if (module['levels'][moduleLevel].hasOwnProperty('name')) {
             moduleLevelName = module['levels'][moduleLevel]['name'];

@@ -172,8 +172,6 @@ def modules_define_file(manifest):
                                 if ret[1] is not None:
                                     level_string += ret[1]
                 level_string += "alias " + alias_name + " \"" + alias_string + "\"""\n"
-                if not manifest_modules[module].get('hidden'):
-                    level_string += "setinfo " + alias_name + " \"\"\n"
                 modules.write(level_string)
 
 
