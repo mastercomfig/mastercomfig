@@ -22,6 +22,7 @@
                 <h1 class="display-4">mastercomfig</h1>
                 <p class="lead">A modern Team Fortress 2 performance and customization config.</p>
                 <a class="btn btn-outline-light btn-lg" id="download">
+                  <span class="fas fa-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download
                 </a>
                 <br>
                 <a href="https://github.com/mastercoms/mastercomfig/releases/tag/v7.0.0-a.6">
@@ -35,10 +36,10 @@
         console.log(window.navigator.platform);
         if (window.navigator.platform.indexOf("Win") != -1) {
             download.href = "https://github.com/mastercoms/mastercomfig/releases/download/v7.0.0-a.6/mastercomfig-app-web-setup-7.0.0-a.6.exe";
-            download.innerHTML = '<span class="fas fa-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download for Windows';
+            download.innerHTML += ' for Windows';
         } else if (window.navigator.platform.indexOf("Linux") != -1) {
             download.href = "https://github.com/mastercoms/mastercomfig/releases/tag/v7.0.0-a.6";
-            download.innerHTML = '<span class="fas fa-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download for Linux';
+            download.innerHTML += ' for Linux';
         } else {
             download.classList.remove("btn", "btn-outline-light", "btn-lg");
             download.innerHTML = "The mastercomfig app is not available for your platform. Please download the VPK from other versions or compile from source."
