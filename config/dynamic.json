@@ -5,7 +5,7 @@
         "r_occludeemaxarea": 10,
         "r_occluderminarea": 1.5,
         "mat_tonemapping_occlusion_use_stencil": 1
-      },
+      }
     },
     "software.os.name": {
       "Linux": {
