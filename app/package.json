@@ -71,6 +71,13 @@
             "x64",
             "ia32"
           ]
+        },
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
         }
       ],
       "legalTrademarks": "Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo are trademarks and/or registered trademarks of Valve Corporation. mastercomfig is not associated with nor endorsed by Valve Corporation."

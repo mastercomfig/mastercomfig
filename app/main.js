@@ -3,8 +3,8 @@
 const {app, BrowserWindow, ipcMain } = require("electron");
 const os = require("os");
 const settings = require("electron-settings");
-const { autoUpdater } = require("electron-updater");
-const path = require('path')
+const autoUpdater = require("electron-updater").autoUpdater;
+const path = require('path');
 const url = require('url');
 
 let window;
