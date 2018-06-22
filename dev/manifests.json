@@ -10,7 +10,7 @@
     "modules": ["modules.json"],
     "comfig": ["comfig.json"],
     "customs": ["customs.json"],
-    "dynamics": ["dynamics.json"]
+    "dynamic": ["dynamic.json"]
   },
   "patches": [
     {

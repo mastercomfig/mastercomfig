@@ -43,11 +43,11 @@
   "build": {
     "productName": "mastercomfig",
     "appId": "com.mastercomfig.app",
+    "compression": "maximum",
     "mac": {
       "category": "public.app-category.utilities"
     },
     "linux": {
-      "compression": "maximum",
       "synopsis": "The desktop app for mastercomfig, a Team Fortress 2 config.",
       "target": [
         "snap",
