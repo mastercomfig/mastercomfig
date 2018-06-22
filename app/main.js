@@ -48,7 +48,7 @@ function createWindow() {
 
 function getDynamicData(name, callback) {
   switch (name) {
-    case "hardware.gpu.type":
+    case "hardware.gpu.vendor":
       let gpuWindow = new BrowserWindow({
         webPreferences: {
           offscreen: true,
@@ -68,7 +68,6 @@ function getDynamicData(name, callback) {
         arg.basic_info.forEach((item) => {
           if (item.description === "GL_VENDOR") {
             callback(item.value);
-            gpuWindow.close();
             return;
           }
         });
@@ -81,17 +80,23 @@ function getDynamicData(name, callback) {
       callback(os.cpus()[0].speed);
       break;
     case "hardware.cpu.model":
-      callback(os.cpu()[0].model);
+      callback(os.cpus()[0].model);
       break;
     case "software.os.name":
       callback(os.type());
+      break;
+    default:
+      callback("none");
       break;
   }
 }
 
 ipcMain.on('dynamic-data-request', (event, arg) => {
   getDynamicData(arg, (data) => {
-    event.sender.send('dynamic-data-reply', data);
+    event.sender.send('dynamic-data-reply', {
+      key: arg,
+      data: data
+    });
   });
 });
 

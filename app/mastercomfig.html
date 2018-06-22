@@ -113,40 +113,40 @@
                 fs.unlink(settings.get('tf2-folder') + "/tf/cfg/client-custom.cfg", () => {
                   var customStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-custom.cfg");
                   customStream.once('open', () => {
-                    fetch('https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/dynamic.json')
-                        .then(response => {
-                          return response.json();
-                        }).then(json => {
-                        var dynamics = json.entries;
-                        var count = 0;
+                  fetch('https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/dynamic.json')
+                      .then(response => {
+                        return response.json();
+                      }).then(json => {
+                        const dynamics = json.entries;
+                        let count = 0;
+                        ipcRenderer.on('dynamic-data-reply', (event, arg) => {
+                          Object.keys(dynamics[arg.key]).forEach(dataKey => {
+                            if (arg.data.startsWith(dataKey)) {
+                              Object.keys(dynamics[arg.key][dataKey]).forEach(cvar => {
+                                customStream.write(cvar + " " + dynamics[arg.key][dataKey][cvar] + "\n");
+                              });
+                            }
+                          });
+                          count--;
+                          if (count === 0) {
+                            customStream.end();
+                          }
+                        });
                         Object.keys(dynamics).forEach(key => {
                           count++;
                           ipcRenderer.send('dynamic-data-request', key);
-                          ipcRenderer.on('dynamic-data-reply', (event, arg) => {
-                            Object.keys(dynamics[key]).forEach(dataKey => {
-                              if (dataKey.startsWith(arg)) {
-                                Object.keys(dynamics[key][dataKey]).forEach(cvar => {
-                                  customStream.write(cvar + " " + dynamics[key][dataKey][cvar] + "\n");
-                                });
-                              }
-                              count--;
-                              if (count === 0) {
-                                customStream.end();
-                              }
-                            });
-                          });
                         });
-                    });
-                  });
+                      });
+                   });
                 });
-              ring.hidden = true;
-              document.getElementById('apply-btn').disabled = false;
-              settings.set('config-sha', latestSha);
-              var success = document.getElementById('apply-success');
-              success.hidden = false;
-              setTimeout(() => {
-                success.hidden = true;
-              }, 1000);
+                ring.hidden = true;
+                document.getElementById('apply-btn').disabled = false;
+                settings.set('config-sha', latestSha);
+                var success = document.getElementById('apply-success');
+                success.hidden = false;
+                setTimeout(() => {
+                  success.hidden = true;
+                }, 1000);
             })
             .catch((err) => {
               ring.hidden = true;
@@ -298,7 +298,6 @@
             moduleMenu.appendChild(moduleMenuItem);
           });
           moduleSelect.addEventListener('change', (e) => {
-            console.log('test');
             var moduleLevel = module['levels'][e.detail.newValue];
             if (moduleLevel.hasOwnProperty('description')) {
               moduleLevelDescription.innerText = moduleLevel['description'];
