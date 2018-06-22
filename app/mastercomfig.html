@@ -94,13 +94,19 @@
                   modulesStream.once('open', () => {
                     modulesStream.write('preset_' + settings.get('preset') + "\n");
                     var modules = settings.get('modules');
-                    Object.keys(modules).forEach(category => {
-                      Object.keys(modules[category]).forEach(module => {
-                        var name = category[0] + "_" + module;
-                        modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
+                    if (modules) {
+                      Object.keys(modules).forEach(category => {
+                        Object.keys(modules[category]).forEach(module => {
+                          var name = category[0] + "_" + module;
+                          modulesStream.write("alias run_" + name + " " + name + "_" + settings.get("modules." + category + "." + module) + "\n");
+                        });
                       });
-                    });
-
+                    }
+                    var uploadSpeed = settings.get('upload-speed');
+                    var rate = "rate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 75000).toFixed(7))));
+                    var splitpacketRate = ";net_splitpacket_maxrate " + Math.max(3500, Math.min(1048576, parseFloat((uploadSpeed * 50000).toFixed(7))));
+                    var maxClearTime = ";net_maxcleartime " + Math.max(0.0000001, parseFloat((0.01288 / uploadSpeed).toFixed(7)));
+                    modulesStream.write("alias run_n_upload \"" + rate + splitpacketRate + maxClearTime + "\"\n");
                     modulesStream.end();
                   });
                 });
