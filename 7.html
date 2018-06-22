@@ -34,10 +34,10 @@
     <script>
         var download = document.getElementById('download');
         console.log(window.navigator.platform);
-        if (window.navigator.platform.indexOf("Win") != -1) {
+        if (window.navigator.platform.indexOf("Win") !== -1) {
             download.href = "https://github.com/mastercoms/mastercomfig/releases/download/v7.0.0-a.6/mastercomfig-app-web-setup-7.0.0-a.6.exe";
             download.innerHTML += ' for Windows';
-        } else if (window.navigator.platform.indexOf("Linux") != -1) {
+        } else if (window.navigator.platform.indexOf("Linux") !== -1 && window.navigator.userAgent.indexOf("Android") !== -1) {
             download.href = "https://github.com/mastercoms/mastercomfig/releases/tag/v7.0.0-a.6";
             download.innerHTML += ' for Linux';
         } else {
