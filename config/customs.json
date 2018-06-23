@@ -87,21 +87,8 @@
     "props": {
       "category": "graphics.world",
       "data": {
-        "type": "slider",
-        "value": {
-          "cvar": "cl_phys_props_max",
-          "min": 0,
-          "max": 300,
-          "extra": [
-            {
-              "type": "conditional",
-              "if": ">",
-              "value": 0,
-              "then": "cl_phys_props_enable 1",
-              "else": "cl_phys_props_enable 0"
-            }
-          ]
-        }
+        "type": "toggle",
+        "value": ["cl_phys_props_enable 1"]
       }
     },
     "ropes": {

@@ -26,8 +26,8 @@
     }
   </style>
 </head>
-<body style="padding-bottom: 200px">
-<nav class="navbar navbar-dark bg-dark d-flex align-items-center" style="-webkit-app-region: drag">
+<body style="padding-bottom: 40px">
+<nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top" style="-webkit-app-region: drag">
   <span class="navbar-brand">
     <img src="img/mastercomfig_logo_transparent.png" width="30" height="30" class="d-inline-block align-top" alt="">
     mastercomfig
@@ -36,8 +36,8 @@
     <x-icon name="close" skin="titlebar" style="-webkit-app-region: no-drag" id="close-btn"></x-icon>
   </a>
 </nav>
-<div class="container" style="margin-top: 20px">
-  <h1 class="display-3" id="title">Welcome to mastercomfig!</h1>
+<div class="container" style="margin-top: 20px;overflow-y: scroll; overflow-x: hidden; height: 95vh; padding-bottom: 48px;">
+  <h1 class="display-4" id="title">Welcome to mastercomfig!</h1>
   <p class="lead" id="description">We just need some info before we get started.</p>
   <h3>1. <x-icon name="check" skin="success" id="folder-check" hidden></x-icon>
     Select your Team Fortress 2 folder</h3>
@@ -64,7 +64,6 @@
     <x-menu id="presets-menu">
     </x-menu>
   </x-select>
-  </p>
   <a class="no-link" href="#"><x-button disabled id="next-btn">Next</x-button></a>
 </div>
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
@@ -93,7 +92,7 @@
 
   document.getElementById('tf2-folder').addEventListener('change', e => {
     let folder = e.target.files[0].path;
-    if (folder.indexOf("Team Fortress 2") != -1) {
+    if (e.target.files[0].name === "Team Fortress 2") {
       document.getElementById('folder-label').innerText = folder;
       settings.set('tf2-folder', folder);
       document.getElementById('folder-check').hidden = false;

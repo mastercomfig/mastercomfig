@@ -12,7 +12,7 @@
   <title>mastercomfig</title>
 </head>
 <body>
-<nav class="navbar navbar-dark bg-dark d-flex align-items-center" style="-webkit-app-region: drag">
+<nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top" style="-webkit-app-region: drag">
   <span class="navbar-brand">
     <img src="img/mastercomfig_logo_transparent.png" width="30" height="30" class="d-inline-block align-top" alt="">
     mastercomfig
@@ -69,8 +69,10 @@
 
   document.getElementById('settings').addEventListener('click', (e) => {
     e.preventDefault();
-    const {BrowserWindow} = require('electron').remote;
-    BrowserWindow.getFocusedWindow().loadFile("settings.html");
+    if (document.getElementById('install-ring').hidden) {
+      const {BrowserWindow} = require('electron').remote;
+      BrowserWindow.getFocusedWindow().loadFile("settings.html");
+    }
   });
 
   document.getElementById('apply-btn').addEventListener('click', () => {
@@ -78,6 +80,7 @@
     document.getElementById('apply-btn').disabled = true;
     var ring = document.getElementById('install-ring');
     ring.hidden = false;
+    document.getElementById('settings').removeAttribute("href");
 
     fetch('https://api.github.com/repositories/69422496/releases')
         .then(response => {
@@ -140,6 +143,7 @@
                    });
                 });
                 ring.hidden = true;
+                document.getElementById('settings').href = "#";
                 document.getElementById('apply-btn').disabled = false;
                 settings.set('config-sha', latestSha);
                 var success = document.getElementById('apply-success');
@@ -153,6 +157,7 @@
               document.getElementById('notification').innerText = err;
               document.getElementById('notification').opened = true;
               document.getElementById('apply-btn').disabled = false;
+              document.getElementById('settings').href = "#";
             });
       });
     });

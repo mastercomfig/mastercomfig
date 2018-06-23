@@ -907,21 +907,6 @@
       "name": "Sound ducking",
       "description": "Whether to allow sound ducking - prioritizing a sound by lowering the volume of all other sound."
     },
-    "sound.snd_disable_mixer_duck": {
-      "values": [
-        {
-          "value": 0,
-          "description": "Disable sound ducking."
-        },
-        {
-          "value": 1,
-          "TODO": "Used by anything else?",
-          "description": "Enable sound ducking. Used by voice chat. Performance impact."
-        }
-      ],
-      "name": "Sound ducking",
-      "description": "Whether to allow sound ducking - prioritizing a sound by lowering the volume of all other sound."
-    },
     "sound.snd_pitchquality": {
       "values": [
         {

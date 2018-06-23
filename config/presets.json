@@ -3,7 +3,7 @@
     "very_low": {
       "modules": {
         "networking.packet_rate": "high",
-        "networking.packet_buffer": "standard",
+        "networking.packet_buffer": "balanced",
         "networking.packet_size": "standard",
         "networking.upload": "default",
         "graphics.models": "low",
@@ -30,7 +30,7 @@
     "low": {
       "modules": {
         "networking.packet_rate": "high",
-        "networking.packet_buffer": "standard",
+        "networking.packet_buffer": "balanced",
         "networking.packet_size": "standard",
         "networking.upload": "default",
         "graphics.models": "low",
@@ -57,7 +57,7 @@
     "medium": {
       "modules": {
         "networking.packet_rate": "high",
-        "networking.packet_buffer": "standard",
+        "networking.packet_buffer": "balanced",
         "networking.packet_size": "standard",
         "networking.upload": "default",
         "graphics.models": "medium",
@@ -84,7 +84,7 @@
     "high": {
       "modules": {
         "networking.packet_rate": "high",
-        "networking.packet_buffer": "standard",
+        "networking.packet_buffer": "balanced",
         "networking.packet_size": "standard",
         "networking.upload": "default",
         "graphics.models": "high",
@@ -111,7 +111,7 @@
     "ultra": {
       "modules": {
         "networking.packet_rate": "high",
-        "networking.packet_buffer": "standard",
+        "networking.packet_buffer": "balanced",
         "networking.packet_size": "standard",
         "networking.upload": "default",
         "graphics.models": "ultra",

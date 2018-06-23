@@ -31,9 +31,9 @@
           "name": "Balanced smoothing",
           "description": "A short smoothing time that is mostly reliable.",
           "values": {
-            "cl_interp_ratio": 1.15
+            "cl_interp_ratio": 1.4347826
           },
-          "interp_ratio": 1.15
+          "interp_ratio": 1.4347826087
         },
         "lan": {
           "name": "Local network smoothing",

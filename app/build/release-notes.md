@@ -1,17 +1,13 @@
 App Changes:
 
-* Adjusted the color of the close window to be more visible
-* Added mastercomfig logo to the titlebar
-* The settings page now shows your current settings
-* Fixed some issues with the speedtest display
-* Increased the width on the TF2 folder selector to show full path
-* Fixed presets setting module overrides
+* Fixed auto-updater thinking the latest app release was 6.7.0
+* Fixed the settings and start pages on smaller window sizes
+* Fixed a few layout problems on the settings and start pages
+* Fixed the TF2 folder selector having incorrect checks for validity
+* Fixed a reintroduction of the "never closing mastercomfig" bug
+* Disabled the settings button while the config is installing to prevent accidental interruptions
+* Added a dev tools and settings clear button to the settings page
 
 
 Config Changes:
-* Improved memory management
-* Started work on optimizing for specific platforms
-* Optimized occlusion queries
-* Module levels are no longer auto-completed in console in preparation for more modules (there is a cap to how many user defined auto-completions there can be, or else the engine crashes)
-  * Modules still have console variables entries indicating what level they have been set to
-  * Modules and their levels will continue to be listed in the `modules_help` command
+* Fixed packet buffer module and preset defaults

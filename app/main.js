@@ -8,6 +8,7 @@ const path = require('path');
 const url = require('url');
 
 let window;
+let gpuWindow;
 
 function createWindow() {
 
@@ -16,7 +17,10 @@ function createWindow() {
     height: 672,
     show: false,
     minWidth: 320,
-    minHeight: 240
+    minHeight: 240,
+    webPreferences: {
+      devTools: true
+    }
   };
 
   if (os.type() !== "Darwin") {
@@ -42,6 +46,10 @@ function createWindow() {
   });
 
   window.on('closed', () => {
+    if (gpuWindow) {
+      gpuWindow.destroy();
+      gpuWindow = null;
+    }
     window = null;
   });
 }
@@ -49,7 +57,7 @@ function createWindow() {
 function getDynamicData(name, callback) {
   switch (name) {
     case "hardware.gpu.vendor":
-      let gpuWindow = new BrowserWindow({
+      gpuWindow = new BrowserWindow({
         webPreferences: {
           offscreen: true,
           preload: path.join(__dirname, 'js/gpu.js')
@@ -64,6 +72,7 @@ function getDynamicData(name, callback) {
       }));
       gpuWindow.webContents.executeJavaScript("var browserBridge = { onGpuInfoUpdate:function(arg){sendGpuInfo(arg);}};");
       gpuWindow.webContents.executeJavaScript("chrome.send('browserBridgeInitialized');");
+
       ipcMain.on('gpu-info', (event, arg) => {
         arg.basic_info.forEach((item) => {
           if (item.description === "GL_VENDOR") {
@@ -100,13 +109,19 @@ ipcMain.on('dynamic-data-request', (event, arg) => {
   });
 });
 
+ipcMain.on('dev-tools-open', () => {
+  window.webContents.openDevTools();
+});
+
 
 app.on('window-all-closed', () => {
   app.quit();
 });
 
 app.on('ready', () => {
-  autoUpdater.checkForUpdatesAndNotify();
   createWindow();
+  autoUpdater.allowPrerelease = true;
+  autoUpdater.allowDowngrade = true;
+  autoUpdater.checkForUpdatesAndNotify();
 });
 
