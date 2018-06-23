@@ -25,7 +25,8 @@
                   <span class="fas fa-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download
                 </a>
                 <br>
-                <a class="text-light" href="https://github.com/mastercoms/mastercomfig/releases/tag/v7.0.0-a.6">
+                <hr style="width: 25%">
+                <a class="text-light" href="https://github.com/mastercoms/mastercomfig/releases/" id="additional">
                     Other versions and changelog
                 </a>
             </div>
@@ -33,12 +34,13 @@
     </header>
     <script>
         var download = document.getElementById('download');
-        console.log(window.navigator.platform);
+        var version = "v7.0.0-a.7"
+        document.getElementById('additional').href += "tag/" + version;
         if (window.navigator.platform.indexOf("Win") !== -1) {
-            download.href = "https://github.com/mastercoms/mastercomfig/releases/download/v7.0.0-a.6/mastercomfig-app-web-setup-7.0.0-a.6.exe";
+            download.href = "https://github.com/mastercoms/mastercomfig/releases/download/" + version + "/mastercomfig-app-web-setup-7.0.0-a.6.exe";
             download.innerHTML += ' for Windows';
         } else if (window.navigator.platform.indexOf("Linux") !== -1 && window.navigator.userAgent.indexOf("Android") === -1) {
-            download.href = "https://github.com/mastercoms/mastercomfig/releases/tag/v7.0.0-a.6";
+            download.href = "https://github.com/mastercoms/mastercomfig/releases/tag/" + version;
             download.innerHTML += ' for Linux';
         } else {
             download.classList.remove("btn", "btn-outline-light", "btn-lg");
