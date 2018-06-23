@@ -1,7 +1,7 @@
 {
   "name": "mastercomfig-app",
   "version": "7.0.0-a.7",
-  "description": "The mastercomfig app allows you to customize and optimize Team Fortress 2 easily.",
+  "description": "mastercomfig desktop app",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -48,6 +48,7 @@
       "category": "public.app-category.utilities"
     },
     "linux": {
+      "description": "The mastercomfig app allows you to customize and optimize Team Fortress 2 easily.",
       "synopsis": "The desktop app for mastercomfig, a Team Fortress 2 config.",
       "target": [
         "snap",
