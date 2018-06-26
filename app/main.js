@@ -57,27 +57,28 @@ function createWindow() {
 function getDynamicData(name, callback) {
   switch (name) {
     case "hardware.gpu.vendor":
-      gpuWindow = new BrowserWindow({
-        webPreferences: {
-          offscreen: true,
-          preload: path.join(__dirname, 'js/gpu.js')
-        },
-        frame: false,
-        show: false
-      });
-      gpuWindow.loadURL(url.format({
-        pathname: 'gpu',
-        protocol: 'chrome:',
-        slashes: true
-      }));
+      if (gpuWindow === null) {
+        gpuWindow = new BrowserWindow({
+          webPreferences: {
+            offscreen: true,
+            preload: path.join(__dirname, 'js/gpu.js')
+          },
+          frame: false,
+          show: false
+        });
+        gpuWindow.loadURL(url.format({
+          pathname: 'gpu',
+          protocol: 'chrome:',
+          slashes: true
+        }));
+      }
       gpuWindow.webContents.executeJavaScript("var browserBridge = { onGpuInfoUpdate:function(arg){sendGpuInfo(arg);}};");
       gpuWindow.webContents.executeJavaScript("chrome.send('browserBridgeInitialized');");
 
       ipcMain.on('gpu-info', (event, arg) => {
         arg.basic_info.forEach((item) => {
-          if (item.description === "GL_VENDOR") {
+          if (item.description === "Driver vendor") {
             callback(item.value);
-            return;
           }
         });
       });

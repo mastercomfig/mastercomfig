@@ -40,7 +40,7 @@
       "category": "graphics.models",
       "description": "The minimum framerate needed for showing jigglebones like the fish viewmodel. 0 to disable always.",
       "data": {
-        "type": "slider",
+        "type": "stepper",
         "value": {
           "cvar": "cl_jiggle_bone_framerate_cutoff",
           "min": "0",

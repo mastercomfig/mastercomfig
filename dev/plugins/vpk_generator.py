@@ -133,6 +133,8 @@ def modules_run_file(manifest):
     make_cfg_dir()
     with open(base_dir + 'cfg/modules-run.cfg', 'w+') as modules:
         for module in manifest.get('modules', {}).keys():
+            if manifest.get('modules', {})[module].get('no-data', False):
+                continue
             if module != "networking.packet_buffer":
                 name_parts = module.split(".")
                 name_parts[0] = name_parts[0][0]
@@ -150,6 +152,8 @@ def modules_define_file(manifest):
     with open(base_dir + 'cfg/modules-define.cfg', "w+") as modules:
         manifest_modules = manifest.get('modules', {})
         for module in manifest_modules.keys():
+            if manifest_modules[module].get('no-data', False):
+                continue
             name_parts = module.split(".")
             name_parts[0] = name_parts[0][0]
             module_name = "_".join(name_parts)
@@ -185,7 +189,7 @@ def modules_help_file(manifest):
         comfig_aliases += "setinfo modules_help \"\"\n"
         manifest_modules = manifest.get('modules', {})
         for module in manifest_modules.keys():
-            if manifest_modules.get(module, {}).get('hidden'):
+            if manifest_modules.get(module, {}).get('hidden') or manifest_modules[module].get('no-data', False):
                 continue
             if manifest_modules.get(module, {}).get('name'):
                 friendly_name = manifest_modules.get(module, {}).get('name')
