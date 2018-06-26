@@ -88,7 +88,7 @@
       "category": "graphics.world",
       "data": {
         "type": "toggle",
-        "value": ["cl_phys_props_enable 1"]
+        "value": ["cl_phys_props_enable"]
       }
     },
     "ropes": {

@@ -73,7 +73,7 @@
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script>
-  const settings = require('electron-settings');
+
 
   var steps = 0;
 
@@ -84,7 +84,6 @@
       var next = document.getElementById('next-btn');
       next.removeAttribute("disabled");
       next.addEventListener('click', function() {
-        const {BrowserWindow} = require('electron').remote;
         BrowserWindow.getFocusedWindow().loadFile("mastercomfig.html");
       });
     }

@@ -36,8 +36,8 @@
     <x-icon name="close" skin="titlebar" style="-webkit-app-region: no-drag" id="close-btn"></x-icon>
   </a>
 </nav>
-<div class="container" style="margin-top: 20px;overflow-y: scroll; overflow-x: hidden; height: 95vh; padding-bottom: 48px;">
-  <h1 class="display-4" id="title">mastercomfig settings</h1>
+<div class="container" style="overflow-y: scroll; overflow-x: hidden; height: 85vh; padding-bottom: 48px;">
+  <h1 class="display-4" id="title" style="margin-top: 20px">mastercomfig settings</h1>
   <h3>Select your Team Fortress 2 folder</h3>
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="tf2-folder" webkitdirectory/>
@@ -57,6 +57,17 @@
     <x-menu id="presets-menu">
     </x-menu>
   </x-select>
+  <hr>
+  <h3>Appearance</h3>
+  <div class="row">
+    <div class="col">
+      Dark Mode
+    </div>
+    <div class="col">
+      <x-switch id="dark-mode"></x-switch>
+    </div>
+  </div>
+  <hr>
   <h3>Advanced Options</h3>
   <div class="row">
     <div class="col">
@@ -69,18 +80,19 @@
       <p>Opens the Chrome Developer Tools for inspecting the app and viewing the console.</p>
     </div>
   </div>
-  <a class="no-link" href="#"><x-button id="next-btn">Close</x-button></a>
 </div>
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="no-link" href="#"><x-button id="next-btn">Close</x-button></a>
+</nav>
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
+<script src="js/dark.js"></script>
 <script>
-  const settings = require('electron-settings');
-  document.getElementById('next-btn').addEventListener('click', function() {
-    const {BrowserWindow} = require('electron').remote;
+  document.getElementById('next-btn').addEventListener('click', () => {
     BrowserWindow.getFocusedWindow().loadFile("mastercomfig.html");
   });
   document.getElementById('upload').innerHTML = "<strong>Upload speed:</strong> " + settings.get('upload-speed') + "Mbps";
@@ -93,6 +105,44 @@
       settings.set('tf2-folder', folder);
     } else {
       document.getElementById('folder-label').innerText = "Invalid Team Fortress 2 folder. Please try again.";
+    }
+  });
+
+  document.getElementById('delete-this').addEventListener('click', () => {
+    settings.deleteAll();
+    app.relaunch({args: process.argv.slice(1).concat(['--relaunch'])});
+    app.exit(0);
+  });
+
+  document.getElementById('dev-tools').addEventListener('click', () => {
+    ipcRenderer.send('dev-tools-open');
+  });
+
+  var darkMode = document.getElementById('dark-mode');
+  if (settings.get('ui.dark', false)) {
+    darkMode.setAttribute('toggled', null);
+  }
+  darkMode.addEventListener('toggle', () => {
+    var dark = darkMode.hasAttribute("toggled");
+    settings.set('ui.dark', dark);
+    if (dark) {
+      $('body')
+          .addClass('bg-dark')
+          .addClass('text-light');
+      $('.navbar-light')
+          .removeClass('navbar-light')
+          .removeClass('bg-light')
+          .addClass('navbar-dark')
+          .addClass('bg-dark');
+    } else {
+      $('body')
+          .removeClass('bg-dark')
+          .removeClass('text-light');
+      $('.navbar-dark').filter('.fixed-bottom')
+          .removeClass('navbar-dark')
+          .removeClass('bg-dark')
+          .addClass('navbar-light')
+          .addClass('bg-light');
     }
   });
 

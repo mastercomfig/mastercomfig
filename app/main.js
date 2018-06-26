@@ -7,8 +7,8 @@ const autoUpdater = require("electron-updater").autoUpdater;
 const path = require('path');
 const url = require('url');
 
-let window;
-let gpuWindow;
+let window = null;
+let gpuWindow = null;
 
 function createWindow() {
 
@@ -46,7 +46,7 @@ function createWindow() {
   });
 
   window.on('closed', () => {
-    if (gpuWindow) {
+    if (gpuWindow !== null) {
       gpuWindow.destroy();
       gpuWindow = null;
     }

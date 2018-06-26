@@ -1,5 +1,3 @@
-const {BrowserWindow} = require('electron').remote;
-
 let closeBtn = document.getElementById('close-btn');
 closeBtn.hidden = true;
 

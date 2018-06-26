@@ -1,12 +1,15 @@
+const {ipcRenderer} = require('electron');
+const {BrowserWindow, app} = require('electron').remote;
+const settings = require('electron-settings');
+const http = require("http");
+const https = require("https");
+const fs = require("fs");
+
 String.prototype.toProperCase = function () {
   return this.replace(/\w\S*/g, function (txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
 };
-
-const http = require("http");
-const https = require("https");
-const fs = require("fs");
 
 function getResponse(url, file) {
   return new Promise((resolve, reject) => {

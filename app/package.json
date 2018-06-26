@@ -1,6 +1,6 @@
 {
   "name": "mastercomfig-app",
-  "version": "7.0.0-a.7",
+  "version": "7.0.0-a.8",
   "description": "mastercomfig desktop app",
   "main": "main.js",
   "scripts": {

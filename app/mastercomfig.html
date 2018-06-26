@@ -42,13 +42,10 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
+<script src="js/dark.js"></script>
 <script>
-  const {ipcRenderer} = require('electron');
-
-  document.getElementById('about').title = require('electron').remote.app.getVersion();
+  document.getElementById('about').title = app.getVersion();
   $('#about').tooltip();
-
-  const settings = require('electron-settings');
 
   var latestSha = settings.get('config-sha');
 
@@ -70,7 +67,6 @@
   document.getElementById('settings').addEventListener('click', (e) => {
     e.preventDefault();
     if (document.getElementById('install-ring').hidden) {
-      const {BrowserWindow} = require('electron').remote;
       BrowserWindow.getFocusedWindow().loadFile("settings.html");
     }
   });
@@ -91,7 +87,6 @@
       fs.unlink(vpkPath, () => {
         download("https://github.com/mastercoms/mastercomfig/releases/download/" + version + "/mastercomfig.vpk", vpkPath)
             .then(() => {
-                const fs = require('fs');
                 fs.unlink(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg", () => {
                   var modulesStream = fs.createWriteStream(settings.get('tf2-folder') + "/tf/cfg/client-modules.cfg");
                   modulesStream.once('open', () => {
