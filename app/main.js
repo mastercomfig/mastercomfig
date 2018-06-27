@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-const {app, BrowserWindow, ipcMain } = require("electron");
+const {app, BrowserWindow, ipcMain} = require("electron");
 const os = require("os");
 const settings = require("electron-settings");
 const autoUpdater = require("electron-updater").autoUpdater;
-const path = require('path');
-const url = require('url');
+const path = require("path");
+const url = require("url");
 
 let window = null;
 let gpuWindow = null;
@@ -24,28 +24,29 @@ function createWindow() {
   };
 
   if (os.type() !== "Darwin") {
-    windowOptions['frame'] = false;
+    windowOptions["frame"] = false;
   }
 
   window = new BrowserWindow(windowOptions);
 
-  if (settings.has('tf2-folder') && settings.has('upload-speed') && settings.has('preset')) {
-    window.loadFile('mastercomfig.html');
+  if (settings.has("tf2-folder") && settings.has("upload-speed") &&
+    settings.has("preset")) {
+    window.loadFile("mastercomfig.html");
   } else {
-    window.loadFile('start.html');
+    window.loadFile("start.html");
   }
 
-  window.once('ready-to-show', () => {
+  window.once("ready-to-show", () => {
     window.show();
   });
 
-  window.webContents.on('did-finish-load', () => {
+  window.webContents.on("did-finish-load", () => {
     if (os.type() !== "Darwin") {
-      window.webContents.executeJavaScript('showWindowControls()');
+      window.webContents.executeJavaScript("showWindowControls()");
     }
   });
 
-  window.on('closed', () => {
+  window.on("closed", () => {
     if (gpuWindow !== null) {
       gpuWindow.destroy();
       gpuWindow = null;
@@ -61,21 +62,23 @@ function getDynamicData(name, callback) {
         gpuWindow = new BrowserWindow({
           webPreferences: {
             offscreen: true,
-            preload: path.join(__dirname, 'js/gpu.js')
+            preload: path.join(__dirname, "js/gpu.js")
           },
           frame: false,
           show: false
         });
         gpuWindow.loadURL(url.format({
-          pathname: 'gpu',
-          protocol: 'chrome:',
+          pathname: "gpu",
+          protocol: "chrome:",
           slashes: true
         }));
       }
-      gpuWindow.webContents.executeJavaScript("var browserBridge = { onGpuInfoUpdate:function(arg){sendGpuInfo(arg);}};");
-      gpuWindow.webContents.executeJavaScript("chrome.send('browserBridgeInitialized');");
+      gpuWindow.webContents.executeJavaScript(
+        "var browserBridge = { onGpuInfoUpdate:function(arg){sendGpuInfo(arg);}};");
+      gpuWindow.webContents.executeJavaScript(
+        "chrome.send('browserBridgeInitialized');");
 
-      ipcMain.on('gpu-info', (event, arg) => {
+      ipcMain.on("gpu-info", (event, arg) => {
         arg.basic_info.forEach((item) => {
           if (item.description === "Driver vendor") {
             callback(item.value);
@@ -101,25 +104,24 @@ function getDynamicData(name, callback) {
   }
 }
 
-ipcMain.on('dynamic-data-request', (event, arg) => {
+ipcMain.on("dynamic-data-request", (event, arg) => {
   getDynamicData(arg, (data) => {
-    event.sender.send('dynamic-data-reply', {
+    event.sender.send("dynamic-data-reply", {
       key: arg,
       data: data
     });
   });
 });
 
-ipcMain.on('dev-tools-open', () => {
+ipcMain.on("dev-tools-open", () => {
   window.webContents.openDevTools();
 });
 
-
-app.on('window-all-closed', () => {
+app.on("window-all-closed", () => {
   app.quit();
 });
 
-app.on('ready', () => {
+app.on("ready", () => {
   createWindow();
   autoUpdater.allowPrerelease = true;
   autoUpdater.allowDowngrade = true;

@@ -1,5 +1,5 @@
-const {ipcRenderer} = require('electron');
+const {ipcRenderer} = require("electron");
 
 window.sendGpuInfo = function(data) {
-  ipcRenderer.send('gpu-info', data);
+  ipcRenderer.send("gpu-info", data);
 };

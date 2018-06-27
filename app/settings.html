@@ -2,7 +2,8 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="node_modules/xel/themes/material.css">
   <script src="node_modules/xel/xel.min.js"></script>
   <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
@@ -13,10 +14,12 @@
     body {
       font-family: 'Overpass', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     }
+
     .custom-file-label {
       border-radius: 2px;
-      box-shadow: 0  3px  1px -2px rgba(0,0,0,0.2), 0px  2px  2px 0px rgba(0,0,0,0.14), 0 1px  5px 0 rgba(0,0,0,0.12);
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     }
+
     .custom-file-label:after {
       background-color: #fff;
       color: #2196f3;
@@ -27,30 +30,41 @@
   </style>
 </head>
 <body style="padding-bottom: 40px;">
-<nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top" style="-webkit-app-region: drag">
+<nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top"
+     style="-webkit-app-region: drag">
   <span class="navbar-brand">
-    <img src="img/mastercomfig_logo_transparent.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img src="img/mastercomfig_logo_transparent.png" width="30" height="30"
+         class="d-inline-block align-top" alt="">
     mastercomfig
   </span>
   <a href="#">
-    <x-icon name="close" skin="titlebar" style="-webkit-app-region: no-drag" id="close-btn"></x-icon>
+    <x-icon name="close" skin="titlebar" style="-webkit-app-region: no-drag"
+            id="close-btn"></x-icon>
   </a>
 </nav>
-<div class="container" style="overflow-y: scroll; overflow-x: hidden; height: 85vh; padding-bottom: 48px;">
-  <h1 class="display-4" id="title" style="margin-top: 20px">mastercomfig settings</h1>
+<div class="container"
+     style="overflow-y: scroll; overflow-x: hidden; height: 85vh; padding-bottom: 48px;">
+  <h1 class="display-4" id="title" style="margin-top: 20px">mastercomfig
+                                                            settings</h1>
   <h3>Select your Team Fortress 2 folder</h3>
   <div class="custom-file">
-    <input type="file" class="custom-file-input" id="tf2-folder" webkitdirectory/>
-    <label class="custom-file-label" for="tf2-folder" id="folder-label">Choose folder...</label>
+    <input type="file" class="custom-file-input" id="tf2-folder"
+           webkitdirectory/>
+    <label class="custom-file-label" for="tf2-folder" id="folder-label">Choose
+                                                                        folder...</label>
   </div>
   <hr>
   <h3>Run an internet speed test</h3>
   <x-button id="speedtest-btn" style="margin-bottom: 4px">Run test</x-button>
   <div id="speedtest">
     <x-progressbar id="speedtest-bar" hidden></x-progressbar>
-    <p><small id="status">Clicking run test will access the Speedtest.net service to record your upload speed.</small></p>
+    <p>
+      <small id="status">Clicking run test will access the Speedtest.net service
+                         to record your upload speed.
+      </small>
+    </p>
   </div>
-  <p id="upload"><strong>Upload speed:</strong> </p>
+  <p id="upload"><strong>Upload speed:</strong></p>
   <hr>
   <h3>Choose a preset</h3>
   <x-select id="presets-select" style="width: 200px">
@@ -77,14 +91,20 @@
     </div>
     <div class="col">
       <x-button id="dev-tools">Open Dev Tools</x-button>
-      <p>Opens the Chrome Developer Tools for inspecting the app and viewing the console.</p>
+      <p>Opens the Chrome Developer Tools for inspecting the app and viewing the
+         console.</p>
     </div>
   </div>
 </div>
 <nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="no-link" href="#"><x-button id="next-btn">Close</x-button></a>
+  <a class="no-link" href="#">
+    <x-button id="next-btn">Close</x-button>
+  </a>
 </nav>
-<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<script>if (typeof module === "object") {
+  window.module = module;
+  module = undefined;
+}</script>
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -92,103 +112,111 @@
 <script src="js/titlebar.js"></script>
 <script src="js/dark.js"></script>
 <script>
-  document.getElementById('next-btn').addEventListener('click', () => {
+  document.getElementById("next-btn").addEventListener("click", () => {
     BrowserWindow.getFocusedWindow().loadFile("mastercomfig.html");
   });
-  document.getElementById('upload').innerHTML = "<strong>Upload speed:</strong> " + settings.get('upload-speed') + "Mbps";
-  document.getElementById('folder-label').innerText = settings.get('tf2-folder');
+  document.getElementById("upload").innerHTML =
+    "<strong>Upload speed:</strong> " + settings.get("upload-speed") + "Mbps";
+  document.getElementById("folder-label").innerText =
+    settings.get("tf2-folder");
 
-  document.getElementById('tf2-folder').addEventListener('change', e => {
+  document.getElementById("tf2-folder").addEventListener("change", e => {
     let folder = e.target.files[0].path;
     if (e.target.files[0].name === "Team Fortress 2") {
-      document.getElementById('folder-label').innerText = folder;
-      settings.set('tf2-folder', folder);
+      document.getElementById("folder-label").innerText = folder;
+      settings.set("tf2-folder", folder);
     } else {
-      document.getElementById('folder-label').innerText = "Invalid Team Fortress 2 folder. Please try again.";
+      document.getElementById("folder-label").innerText =
+        "Invalid Team Fortress 2 folder. Please try again.";
     }
   });
 
-  document.getElementById('delete-this').addEventListener('click', () => {
+  document.getElementById("delete-this").addEventListener("click", () => {
     settings.deleteAll();
-    app.relaunch({args: process.argv.slice(1).concat(['--relaunch'])});
+    app.relaunch({args: process.argv.slice(1).concat(["--relaunch"])});
     app.exit(0);
   });
 
-  document.getElementById('dev-tools').addEventListener('click', () => {
-    ipcRenderer.send('dev-tools-open');
+  document.getElementById("dev-tools").addEventListener("click", () => {
+    ipcRenderer.send("dev-tools-open");
   });
 
-  var darkMode = document.getElementById('dark-mode');
-  if (settings.get('ui.dark', false)) {
-    darkMode.setAttribute('toggled', null);
+  var darkMode = document.getElementById("dark-mode");
+  if (settings.get("ui.dark", false)) {
+    darkMode.setAttribute("toggled", null);
   }
-  darkMode.addEventListener('toggle', () => {
+  darkMode.addEventListener("toggle", () => {
     var dark = darkMode.hasAttribute("toggled");
-    settings.set('ui.dark', dark);
+    settings.set("ui.dark", dark);
     if (dark) {
-      $('body')
-          .addClass('bg-dark')
-          .addClass('text-light');
-      $('.navbar-light')
-          .removeClass('navbar-light')
-          .removeClass('bg-light')
-          .addClass('navbar-dark')
-          .addClass('bg-dark');
+      $("body")
+        .addClass("bg-dark")
+        .addClass("text-light");
+      $(".navbar-light")
+        .removeClass("navbar-light")
+        .removeClass("bg-light")
+        .addClass("navbar-dark")
+        .addClass("bg-dark");
     } else {
-      $('body')
-          .removeClass('bg-dark')
-          .removeClass('text-light');
-      $('.navbar-dark').filter('.fixed-bottom')
-          .removeClass('navbar-dark')
-          .removeClass('bg-dark')
-          .addClass('navbar-light')
-          .addClass('bg-light');
+      $("body")
+        .removeClass("bg-dark")
+        .removeClass("text-light");
+      $(".navbar-dark").filter(".fixed-bottom")
+        .removeClass("navbar-dark")
+        .removeClass("bg-dark")
+        .addClass("navbar-light")
+        .addClass("bg-light");
     }
   });
 
-  var speedtestBtn = document.getElementById('speedtest-btn');
+  var speedtestBtn = document.getElementById("speedtest-btn");
 
-  speedtestBtn.addEventListener('click', () => {
-    const speedtest = require('speedtest-net');
+  speedtestBtn.addEventListener("click", () => {
+    const speedtest = require("speedtest-net");
     var test = speedtest({maxTime: 5000});
-    var server = document.getElementById('status');
+    var server = document.getElementById("status");
     server.innerText = "Finding server...";
 
-    var bar = document.getElementById('speedtest-bar');
-    document.getElementById('speedtest-btn').disabled = true;
+    var bar = document.getElementById("speedtest-bar");
+    document.getElementById("speedtest-btn").disabled = true;
     bar.hidden = false;
     bar.removeAttribute("value");
 
-    document.getElementById('speedtest').hidden = false;
+    document.getElementById("speedtest").hidden = false;
 
-    test.on('uploadprogress', progress => {
+    test.on("uploadprogress", progress => {
       bar.setAttribute("value", (parseFloat(progress) / 100).toString());
     });
 
-    test.on('data', data => {
+    test.on("data", data => {
       bar.hidden = true;
-      document.getElementById('speedtest').hidden = true;
+      document.getElementById("speedtest").hidden = true;
       speedtestBtn.innerText = "Retry";
       speedtestBtn.disabled = false;
       var speed = data.speeds.upload;
-      document.getElementById('upload').hidden = false;
-      document.getElementById('upload').innerHTML = "<strong>Upload speed:</strong> " + speed + "Mbps";
-      settings.set('upload-speed', speed);
+      document.getElementById("upload").hidden = false;
+      document.getElementById("upload").innerHTML =
+        "<strong>Upload speed:</strong> " + speed + "Mbps";
+      settings.set("upload-speed", speed);
     });
 
-    test.on('testserver', testserver => {
-      server.innerText = testserver.name + ", " + testserver.cc + " — " + testserver.sponsor + " (" + Math.round(testserver.bestPing) + "ms, " + Math.round(testserver.dist) + "km)";
+    test.on("testserver", testserver => {
+      server.innerText =
+        testserver.name + ", " + testserver.cc + " — " + testserver.sponsor +
+        " (" + Math.round(testserver.bestPing) + "ms, " +
+        Math.round(testserver.dist) + "km)";
     });
   });
 
-  fetch('https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/presets.json')
-      .then(response => {
-        return response.json();
-      }).then(json => {
+  fetch(
+    "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/presets.json")
+    .then(response => {
+      return response.json();
+    }).then(json => {
     var selected = false;
     var presetsMenu = document.getElementById("presets-menu");
     var presets = json.presets;
-    var currentPreset = settings.get('preset');
+    var currentPreset = settings.get("preset");
     Object.keys(presets).forEach(key => {
       var friendlyName = key.replace("_", " ").toProperCase();
       var item = document.createElement("x-menuitem");
@@ -201,12 +229,13 @@
         item.setAttribute("toggled", null);
       }
     });
-    document.getElementById("presets-select").addEventListener('change', (e) => {
-      if (!selected) {
-        selected = true;
-      }
-      settings.set('preset', e.detail.newValue);
-    });
+    document.getElementById("presets-select")
+      .addEventListener("change", (e) => {
+        if (!selected) {
+          selected = true;
+        }
+        settings.set("preset", e.detail.newValue);
+      });
   });
 </script>
 </body>
