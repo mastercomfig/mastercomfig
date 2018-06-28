@@ -10,28 +10,15 @@
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
   <title>mastercomfig setup</title>
-  <style type="text/css">
-    body {
-      font-family: 'Overpass', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    }
-
-    .custom-file-label {
-      border-radius: 2px;
-      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    }
-
-    .custom-file-label:after {
-      background-color: #fff;
-      color: #2196f3;
-      text-transform: uppercase;
-      font-size: 13px;
-      --trigger-effect: ripple;
-    }
-  </style>
+  <link href="css/settings.css" rel="stylesheet">
 </head>
 <body style="padding-bottom: 40px;">
 <nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top"
-     style="-webkit-app-region: drag">
+     style="-webkit-app-region: drag; border-bottom: 1px solid #141414">
+  <a href="#" id="slider-toggle">
+    <x-icon name="menu" skin="titlebar"
+            style="-webkit-app-region: no-drag"></x-icon>
+  </a>
   <span class="navbar-brand">
     <img src="img/mastercomfig_logo_transparent.png" width="30" height="30"
          class="d-inline-block align-top" alt="">
@@ -42,11 +29,31 @@
             id="close-btn"></x-icon>
   </a>
 </nav>
+<ul class="nav flex-column position-fixed bg-dark text-light" id="slider" style="width:
+30%; height: 100vh; z-index: 1000; left: -30%; border-right: 1px solid
+#141414">
+  <li class="nav-item" style="margin-top: 1rem;">
+    <a class="nav-link no-link" href="mastercomfig.html">Home</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link no-link" href="#">Community</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link no-link active" href="#" id="settings">Settings</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link no-link" href="about.html">About</a>
+  </li>
+  <hr>
+</ul>
 <div class="container"
      style="overflow-y: scroll; overflow-x: hidden; height: 85vh; padding-bottom: 48px;">
   <h1 class="display-4" id="title" style="margin-top: 20px">mastercomfig
                                                             settings</h1>
-  <h3>Select your Team Fortress 2 folder</h3>
+  <h3>Team Fortress 2 folder</h3>
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="tf2-folder"
            webkitdirectory/>
@@ -54,7 +61,7 @@
                                                                         folder...</label>
   </div>
   <hr>
-  <h3>Run an internet speed test</h3>
+  <h3>Upload Speed</h3>
   <x-button id="speedtest-btn" style="margin-bottom: 4px">Run test</x-button>
   <div id="speedtest">
     <x-progressbar id="speedtest-bar" hidden></x-progressbar>
@@ -66,11 +73,14 @@
   </div>
   <p id="upload"><strong>Upload speed:</strong></p>
   <hr>
-  <h3>Choose a preset</h3>
+  <h3>Preset</h3>
   <x-select id="presets-select" style="width: 200px">
     <x-menu id="presets-menu">
     </x-menu>
   </x-select>
+  <br>
+  <x-button id="remove-modules">Reset to preset</x-button>
+  <p>Removes any custom selections.</p>
   <hr>
   <h3>Appearance</h3>
   <div class="row">
@@ -96,25 +106,24 @@
     </div>
   </div>
 </div>
-<nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="no-link" href="#">
-    <x-button id="next-btn">Close</x-button>
-  </a>
+<nav class="navbar fixed-bottom navbar-light bg-light" style="border-top: 1px
+solid #141414">
+  <div class="container">
+    <a class="btn btn-outline-secondary ml-auto" style="margin-left: 10px"
+       href="mastercomfig.html">Close
+    </a>
+  </div>
 </nav>
-<script>if (typeof module === "object") {
-  window.module = module;
-  module = undefined;
-}</script>
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="js/module.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script src="js/dark.js"></script>
 <script>
-  document.getElementById("next-btn").addEventListener("click", () => {
-    BrowserWindow.getFocusedWindow().loadFile("mastercomfig.html");
-  });
+  "use strict";
+
   document.getElementById("upload").innerHTML =
     "<strong>Upload speed:</strong> " + settings.get("upload-speed") + "Mbps";
   document.getElementById("folder-label").innerText =
@@ -135,6 +144,10 @@
     settings.deleteAll();
     app.relaunch({args: process.argv.slice(1).concat(["--relaunch"])});
     app.exit(0);
+  });
+
+  document.getElementById("remove-modules").addEventListener("click", () => {
+    settings.delete("modules");
   });
 
   document.getElementById("dev-tools").addEventListener("click", () => {

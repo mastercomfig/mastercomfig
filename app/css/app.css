@@ -1,30 +1,34 @@
 body {
-    font-family: 'Overpass', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    overflow: hidden;
+  font-family: 'Overpass', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  overflow: hidden;
 }
 
 x-icon[skin="titlebar"] {
-    color: rgba(224, 224, 224, 0.4);
-    transition: 0.1s;
+  color: rgba(224, 224, 224, 0.4);
+  transition: 0.1s;
 }
 
 x-icon[skin="titlebar"]:hover {
-    color: rgba(250, 250, 250, 0.8);
+  color: rgba(250, 250, 250, 0.8);
 }
 
 x-icon[skin="success"] {
-    display: inline-block;
-    height: 24px;
-    width: 24px;
-    color: #43A047;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  color: #43a047;
 }
 
 .no-link {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .no-link:hover {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.bg-dark .nav-item .active {
+  font-weight: 600;
 }

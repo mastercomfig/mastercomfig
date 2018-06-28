@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
@@ -14,7 +14,11 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top"
-     style="-webkit-app-region: drag">
+     style="-webkit-app-region: drag; border-bottom: 1px solid #141414">
+  <a href="#" id="slider-toggle">
+    <x-icon name="menu" skin="titlebar"
+            style="-webkit-app-region: no-drag"></x-icon>
+  </a>
   <span class="navbar-brand">
     <img src="img/mastercomfig_logo_transparent.png" width="30" height="30"
          class="d-inline-block align-top" alt="">
@@ -25,52 +29,58 @@
             id="close-btn"></x-icon>
   </a>
 </nav>
+<ul class="nav flex-column position-fixed bg-dark text-light" id="slider" style="width:
+30%; height: 100vh; z-index: 1000; left: -30%; border-right: 1px solid
+#141414">
+  <li class="nav-item" style="margin-top: 1rem;">
+    <a class="nav-link no-link active" href="#">Home</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link no-link" href="#">Community</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link no-link" href="settings.html" id="settings">Settings</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link no-link" href="about.html">About</a>
+  </li>
+  <hr>
+</ul>
 <x-tabs id="cat-tabs"></x-tabs>
 <div class="container" id="tab-content"
      style="overflow-y: scroll; overflow-x: hidden; height: 75vh; padding-bottom: 48px;"></div>
-<nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="nav-item navbar-text no-link" id="settings" href="#">
-    <x-icon name="settings"
-            style="display: inline-block; height: 16px; width: 16px"></x-icon>
-    Settings</a>
-  <a class="nav-item navbar-text no-link" id="about" href="#"
-     data-toggle="tooltip" data-placement="top">
-    <x-icon name="info"
-            style="display: inline-block; height: 16px; width: 16px; margin-left: 16px"></x-icon>
-    Version
-  </a>
-  <div class="ml-auto"></div>
-  <x-throbber hidden id="install-ring"></x-throbber>
-  <span class="text-info navbar-text" id="config-update" hidden>
-    <x-icon name="update"
-            style="height: 20px; width: 20px; display: inline-block"></x-icon>
-     There's a new config version available, click apply to install!</span>
-  <span class="text-success navbar-text" id="apply-success" hidden><x-icon
-    name="check" skin="success"
-    style="height: 16px; width: 16px"></x-icon> mastercomfig settings successfully applied!</span>
-  <button class="btn btn-outline-primary" style="margin-left: 10px"
-          id="apply-btn">Apply
-  </button>
+<nav class="navbar fixed-bottom navbar-light bg-light" style="border-top: 1px
+solid #141414">
+  <div class="container">
+    <div class="ml-auto"></div>
+    <x-throbber hidden id="install-ring"></x-throbber>
+    <span class="text-info navbar-text" id="config-update" hidden>
+      <x-icon name="update"
+              style="height: 20px; width: 20px; display: inline-block"></x-icon>
+       There's a new config version available, click apply to install!</span>
+    <span class="text-success navbar-text" id="apply-success" hidden><x-icon
+      name="check" skin="success"
+      style="height: 16px; width: 16px"></x-icon> mastercomfig settings successfully applied!</span>
+    <button class="btn btn-outline-secondary" style="margin-left: 10px"
+            id="apply-btn">Apply
+    </button>
+  </div>
 </nav>
-<x-notification id="notification" timeout="4000">An error occurred while
-                                                 downloading mastercomfig.
-                                                 Please try again
-                                                 later.
+<x-notification id="notification" timeout="4000">
+  An error occurred while downloading mastercomfig. Please try again later.
 </x-notification>
-<script>if (typeof module === "object") {
-  window.module = module;
-  module = undefined;
-}</script>
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="js/module.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script src="js/dark.js"></script>
 <script>
-  // Set the about tooltip to the app version
-  document.getElementById("about").title = app.getVersion();
-  $("#about").tooltip();
+  "use strict";
 
   // Check for updates available for the config files
   var latestSha = settings.get("config-sha");
@@ -91,14 +101,6 @@
   var currentTab = "";
   var presets = null;
 
-  // Settings button
-  document.getElementById("settings").addEventListener("click", (e) => {
-    e.preventDefault();
-    if (document.getElementById("install-ring").hidden) {
-      BrowserWindow.getFocusedWindow().loadFile("settings.html");
-    }
-  });
-
   // Apply button
   document.getElementById("apply-btn").addEventListener("click", () => {
     // Clear UI elements as we start installing the config
@@ -106,7 +108,6 @@
     document.getElementById("apply-btn").disabled = true;
     var ring = document.getElementById("install-ring");
     ring.hidden = false;
-    document.getElementById("settings").removeAttribute("href");
 
     // GitHub API for latest release
     fetch("https://api.github.com/repositories/69422496/releases")
@@ -191,15 +192,18 @@
                         });
                         count--;
                         if (count === 0) {
-                          Object.keys(settings.get("customs"))
-                            .forEach(custom => {
-                              var customSetting = settings.get(
-                                "customs")[custom];
-                              if (customSetting.used) {
-                                customStream.write(customSetting.entry + "\n");
-                              }
-                            });
-                          customStream.end();
+                          if (settings.get("customs")) {
+                            Object.keys(settings.get("customs"))
+                              .forEach(custom => {
+                                var customSetting = settings.get(
+                                  "customs")[custom];
+                                if (customSetting.used) {
+                                  customStream.write(customSetting.entry +
+                                    "\n");
+                                }
+                              });
+                            customStream.end();
+                          }
                         }
                       });
                       ipcRenderer.send("dynamic-data-request", key);
@@ -208,7 +212,6 @@
                 });
               });
               ring.hidden = true;
-              document.getElementById("settings").href = "#";
               document.getElementById("apply-btn").disabled = false;
               settings.set("config-sha", latestSha);
               var success = document.getElementById("apply-success");
@@ -222,7 +225,6 @@
               document.getElementById("notification").innerText = err;
               document.getElementById("notification").opened = true;
               document.getElementById("apply-btn").disabled = false;
-              document.getElementById("settings").href = "#";
             });
         });
       });

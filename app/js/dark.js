@@ -1,3 +1,5 @@
+"use strict";
+
 if (settings.get("ui.dark")) {
   $("body")
     .addClass("bg-dark")

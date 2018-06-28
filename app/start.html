@@ -9,29 +9,13 @@
   <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
+  <link href="css/settings.css" rel="stylesheet">
   <title>mastercomfig setup</title>
-  <style type="text/css">
-    body {
-      font-family: 'Overpass', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    }
-
-    .custom-file-label {
-      border-radius: 2px;
-      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    }
-
-    .custom-file-label:after {
-      background-color: #fff;
-      color: #2196f3;
-      text-transform: uppercase;
-      font-size: 13px;
-      --trigger-effect: ripple;
-    }
-  </style>
 </head>
 <body style="padding-bottom: 40px">
 <nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top"
-     style="-webkit-app-region: drag">
+     style="-webkit-app-region: drag; border-bottom: 1px solid #141414">
+  <div></div>
   <span class="navbar-brand">
     <img src="img/mastercomfig_logo_transparent.png" width="30" height="30"
          class="d-inline-block align-top" alt="">
@@ -88,17 +72,14 @@
     <x-button disabled id="next-btn">Next</x-button>
   </a>
 </div>
-<script>if (typeof module === "object") {
-  window.module = module;
-  module = undefined;
-}</script>
+<script src="js/module.js"></script>
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script>
-
+  "use strict";
 
   var steps = 0;
 

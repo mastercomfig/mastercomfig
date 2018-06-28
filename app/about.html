@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="node_modules/xel/themes/material.css">
+  <script src="node_modules/xel/xel.min.js"></script>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="third_party/font/overpass.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>mastercomfig</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top"
+     style="-webkit-app-region: drag; border-bottom: 1px solid #141414">
+  <a href="#" id="slider-toggle">
+    <x-icon name="menu" skin="titlebar"
+            style="-webkit-app-region: no-drag"></x-icon>
+  </a>
+  <span class="navbar-brand">
+    <img src="img/mastercomfig_logo_transparent.png" width="30" height="30"
+         class="d-inline-block align-top" alt="">
+    mastercomfig
+  </span>
+  <a href="#">
+    <x-icon name="close" skin="titlebar" style="-webkit-app-region: no-drag"
+            id="close-btn"></x-icon>
+  </a>
+</nav>
+<ul class="nav flex-column position-fixed bg-dark text-light" id="slider"
+    style="width:
+30%; height: 100vh; z-index: 1000; left: -30%; border-right: 1px solid
+#141414">
+  <li class="nav-item" style="margin-top: 1rem;">
+    <a class="nav-link no-link" href="mastercomfig.html">Home</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link no-link" href="#">Community</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link no-link" href="settings.html" id="settings">Settings</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link no-link active" href="about.html">About</a>
+  </li>
+  <hr>
+</ul>
+<div class="jumbotron-fluid" style="margin-top: 0; margin-bottom: 2rem">
+  <div style="background: rgb(0,150,136); padding: 100px 0">
+    <div class="container" style="color: rgb(178,223,219)">
+      <img src="img/mastercomfig_logo_transparent_i.png" style="max-height:
+      6rem; float:left">
+      <h1 class="display-1 text-light" style="margin: 0; line-height: 0.7">
+        mastercomfig</h1>
+      <h2 class="display-6" id="version"
+          style="margin-left: 6.6rem"></h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h5>Debug info</h5>
+  <div class="row">
+    <div class="col">
+      <strong>Config commit</strong>
+    </div>
+    <div class="col">
+      <p id="commit"></p>
+    </div>
+  </div>
+</div>
+<script src="js/module.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/lib.js"></script>
+<script src="js/titlebar.js"></script>
+<script src="js/dark.js"></script>
+<script>
+  "use strict";
+
+  document.getElementById("version").innerText = app.getVersion();
+
+  var sha = settings.get("config-sha")
+  var commitText = document.getElementById("commit");
+  if (sha) {
+    commitText.innerText = sha;
+  } else {
+    commitText.innerText = "Not applied";
+  }
+</script>
+</body>
+</html>

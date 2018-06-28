@@ -1,3 +1,5 @@
+"use strict";
+
 const {ipcRenderer} = require("electron");
 const {BrowserWindow, app} = require("electron").remote;
 const settings = require("electron-settings");
