@@ -55,6 +55,8 @@ function createWindow() {
   });
 }
 
+let badVendors = ["Mesa"];
+
 function getDynamicData(name, callback) {
   switch (name) {
     case "hardware.gpu.vendor":
@@ -79,18 +81,33 @@ function getDynamicData(name, callback) {
         "chrome.send('browserBridgeInitialized');");
 
       ipcMain.on("gpu-info", (event, arg) => {
+        let glVendor = null;
         arg.basic_info.forEach((item) => {
-          if (item.description === "Driver vendor") {
-            callback(item.value);
+          if (item.description === "GL_VENDOR") {
+            if (glVendor === -1) {
+              callback(item.value);
+            } else {
+              glVendor = item.value;
+            }
+          } else if (item.description === "Driver vendor") {
+            if (badVendors.includes(item.value)) {
+              if (glVendor) {
+                callback(glVendor);
+              } else {
+                glVendor = -1;
+              }
+            } else {
+              callback(item.value);
+            }
           }
         });
       });
       break;
     case "hardware.cpu.cores":
-      callback(os.cpus().length);
+      callback(os.cpus().length.toString());
       break;
     case "hardware.cpu.speed":
-      callback(os.cpus()[0].speed);
+      callback(os.cpus()[0].speed.toFixed(0));
       break;
     case "hardware.cpu.model":
       callback(os.cpus()[0].model);

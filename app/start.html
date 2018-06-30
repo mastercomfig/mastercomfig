@@ -119,7 +119,10 @@
 
   speedtestBtn.addEventListener("click", () => {
     const speedtest = require("speedtest-net");
-    var test = speedtest({pingCount: 10, serversUrl: 'https://www.speedtest.net/speedtest-servers-static.php'});
+    var test = speedtest({
+      pingCount: 10,
+      serversUrl: "https://www.speedtest.net/speedtest-servers-static.php"
+    });
     var server = document.getElementById("status");
     server.innerText = "Finding server...";
 
