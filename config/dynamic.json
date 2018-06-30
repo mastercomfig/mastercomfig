@@ -4,21 +4,25 @@
       "Intel": {
         "r_occludeemaxarea": 10,
         "r_occluderminarea": 1.5,
+        "r_occludermincount": 2,
         "mat_tonemapping_occlusion_use_stencil": 1
       },
       "Nvidia": {
-        "r_occludeemaxarea": 2.5,
+        "r_occludeemaxarea": 10,
         "r_occluderminarea": 10,
+        "r_occludermincount": 1,
         "mat_tonemapping_occlusion_use_stencil": 0
       },
       "AMD": {
-        "r_occludeemaxarea": 2.5,
+        "r_occludeemaxarea": 10,
         "r_occluderminarea": 10,
+        "r_occludermincount": 1,
         "mat_tonemapping_occlusion_use_stencil": 0
       },
       "ATI": {
-        "r_occludeemaxarea": 2.5,
+        "r_occludeemaxarea": 10,
         "r_occluderminarea": 10,
+        "r_occludermincount": 1,
         "mat_tonemapping_occlusion_use_stencil": 0
       }
     },
