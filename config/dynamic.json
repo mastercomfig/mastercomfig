@@ -1,22 +1,22 @@
 {
   "entries": {
     "hardware.gpu.vendor": {
-      "intel": {
+      "Intel": {
         "r_occludeemaxarea": 10,
         "r_occluderminarea": 1.5,
         "mat_tonemapping_occlusion_use_stencil": 1
       },
-      "nvidia": {
-        "r_occludeemaxarea": 2.5,
+      "Nvidia": {
+        "r_occludeemaxarea": 1,
         "r_occluderminarea": 20,
         "mat_tonemapping_occlusion_use_stencil": 0
       },
-      "amd": {
-        "r_occludeemaxarea": 2.5,
+      "AMD": {
+        "r_occludeemaxarea": 1,
         "r_occluderminarea": 20,
         "mat_tonemapping_occlusion_use_stencil": 0
       },
-      "ati": {
+      "ATI": {
         "r_occludeemaxarea": 2.5,
         "r_occluderminarea": 20,
         "mat_tonemapping_occlusion_use_stencil": 0
@@ -29,8 +29,7 @@
         "gl_debug_output": 0,
         "gl_magnify_resolve_mode": 1,
         "gl_paircache_rows_lg2": 11,
-        "gl_paircache_ways_lg2": 5,
-        "mat_texture_reload_frame_swap_workaround": 1
+        "gl_paircache_ways_lg2": 5
       },
       "Darwin": {
         "gl_pow2_tempmem": 1,

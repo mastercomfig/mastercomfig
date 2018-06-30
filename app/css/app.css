@@ -30,5 +30,29 @@ x-icon[skin="success"] {
 }
 
 .bg-dark .nav-item .active {
+  color: rgb(248, 249, 250);
   font-weight: 600;
+}
+
+.nav-link x-icon {
+  float: left;
+  margin-right: 3px
+}
+
+.nav-link {
+  color: rgba(248, 249, 250, 0.6);
+  line-height: 1.8;
+  transition: 0.1s
+}
+
+.nav-link:hover {
+  color: rgb(248, 249, 250);
+}
+
+.nav-link.disabled {
+  color: #6c757d;
+}
+
+.nav-link.disabled:hover {
+  color: #6c757d;
 }

@@ -9,7 +9,7 @@ if (settings.get("ui.dark")) {
     .removeClass("bg-light")
     .addClass("navbar-dark")
     .addClass("bg-dark");
-  var styleNode = document.createElement("style");
+  let styleNode = document.createElement("style");
   styleNode.innerHTML = "x-card { background-color:  #424242; }";
   styleNode.innerHTML +=
     "x-accordion > header > x-label strong { color: rgba(248,249,250,0.87) }";

@@ -49,25 +49,31 @@
       "description": "How fast the client and server communicate.",
       "levels": {
         "low": {
+          "description": "A third of the max packet rate.",
           "values": {
-            "cl_updaterate": 20,
-            "cl_cmdrate": 19
+            "cl_updaterate": 22,
+            "cl_cmdrate": 21
           },
-          "update_rate": 20
+          "update_rate": 22,
+          "rel_rate": 3
         },
         "medium": {
+          "description": "Half of the max packet rate.",
           "values": {
             "cl_updaterate": 33,
             "cl_cmdrate": 32
           },
-          "update_rate": 33
+          "update_rate": 33,
+          "rel_rate": 2
         },
         "high": {
+          "description": "The max packet rate. Uses the most internet, but communicates data faster.",
           "values": {
             "cl_updaterate": 66,
             "cl_cmdrate": 65
           },
-          "update_rate": 66
+          "update_rate": 66,
+          "rel_rate": 1
         }
       }
     },

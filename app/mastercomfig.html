@@ -4,9 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://*.github.com/ https://*.githubusercontent.com/">
   <link rel="stylesheet" href="node_modules/xel/themes/material.css">
   <script src="node_modules/xel/xel.min.js"></script>
-  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw="
+        crossorigin="anonymous" rel="stylesheet">
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
   <meta charset="UTF-8">
@@ -20,8 +24,8 @@
             style="-webkit-app-region: no-drag"></x-icon>
   </a>
   <span class="navbar-brand">
-    <img src="img/mastercomfig_logo_transparent.png" width="30" height="30"
-         class="d-inline-block align-top" alt="">
+    <img src="img/mastercomfig_logo_transparent.png" style="width: 30px;
+    height: 30px" class="d-inline-block align-top" alt="">
     mastercomfig
   </span>
   <a href="#">
@@ -29,23 +33,36 @@
             id="close-btn"></x-icon>
   </a>
 </nav>
-<ul class="nav flex-column position-fixed bg-dark text-light" id="slider" style="width:
+<ul class="nav flex-column position-fixed bg-dark text-light" id="slider"
+    style="width:
 30%; height: 100vh; z-index: 1000; left: -30%; border-right: 1px solid
 #141414">
   <li class="nav-item" style="margin-top: 1rem;">
-    <a class="nav-link no-link active" href="#">Home</a>
+    <a class="nav-link no-link active" href="#">
+      <x-icon
+        name="home"></x-icon>
+      Home</a>
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link" href="#">Community</a>
+    <a class="nav-link no-link disabled" href="#">
+      <x-icon
+        name="share"></x-icon>
+      Community</a>
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link" href="settings.html" id="settings">Settings</a>
+    <a class="nav-link no-link" href="settings.html" id="settings">
+      <x-icon
+        name="settings"></x-icon>
+      Settings</a>
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link" href="about.html">About</a>
+    <a class="nav-link no-link" href="about.html">
+      <x-icon
+        name="info"></x-icon>
+      About</a>
   </li>
   <hr>
 </ul>
@@ -64,7 +81,7 @@ solid #141414">
     <span class="text-success navbar-text" id="apply-success" hidden><x-icon
       name="check" skin="success"
       style="height: 16px; width: 16px"></x-icon> mastercomfig settings successfully applied!</span>
-    <button class="btn btn-outline-secondary" style="margin-left: 10px"
+    <button class="btn btn-outline-primary" style="margin-left: 10px"
             id="apply-btn">Apply
     </button>
   </div>
@@ -73,9 +90,15 @@ solid #141414">
   An error occurred while downloading mastercomfig. Please try again later.
 </x-notification>
 <script src="js/module.js"></script>
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="node_modules/popper.js/dist/umd/popper.js"
+        integrity="sha256-wqAoCRn9//AnHSl4qbXVhqdvmgFQqN5Elqp4Eb2wOXA="
+        crossorigin="anonymous"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"
+        integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8="
+        crossorigin="anonymous"></script>
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script src="js/dark.js"></script>
@@ -98,8 +121,8 @@ solid #141414">
     }
   });
 
-  var currentTab = "";
-  var presets = null;
+  let currentTab = "";
+  let presets = null;
 
   // Apply button
   document.getElementById("apply-btn").addEventListener("click", () => {
@@ -116,8 +139,8 @@ solid #141414">
       })
       .then(json => {
         // Get the latest comfig release
-        var version = json[0]["tag_name"];
-        var vpkPath = settings.get("tf2-folder") +
+        let version = json[0]["tag_name"];
+        let vpkPath = settings.get("tf2-folder") +
           "/tf/custom/mastercomfig.vpk";
         // Delete pre-existing VPK to prevent overwrites
         fs.unlink(vpkPath, () => {
@@ -129,14 +152,14 @@ solid #141414">
               // Delete pre-existing client modules file to prevent overwrites
               fs.unlink(settings.get("tf2-folder") +
                 "/tf/cfg/client-modules.cfg", () => {
-                var modulesStream = fs.createWriteStream(settings.get(
+                let modulesStream = fs.createWriteStream(settings.get(
                   "tf2-folder") + "/tf/cfg/client-modules.cfg");
                 modulesStream.once("open", () => {
                   // Set the selected preset to define module aliases
                   modulesStream.write("preset_" + settings.get("preset") +
                     "\n");
                   // Realias modules for ones the user has set
-                  var modules = settings.get("modules");
+                  let modules = settings.get("modules");
                   if (modules) {
                     Object.keys(modules).forEach(category => {
                       Object.keys(modules[category]).forEach(module => {
@@ -149,23 +172,51 @@ solid #141414">
                     });
                   }
                   // Define the upload speed module according to user upload
-                  var uploadSpeed = settings.get("upload-speed");
-                  var rate = "rate " + Math.max(3500, Math.min(1048576,
+                  let uploadSpeed = settings.get("upload-speed");
+                  let rate = "rate " + Math.max(3500, Math.min(1048576,
                     parseFloat((uploadSpeed * 75000).toFixed(7))));
-                  var splitpacketRate = ";net_splitpacket_maxrate " +
+                  let splitpacketRate = ";net_splitpacket_maxrate " +
                     Math.max(3500, Math.min(1048576,
                       parseFloat((uploadSpeed * 50000).toFixed(7))));
-                  var maxClearTime = ";net_maxcleartime " + Math.max(0.0000001,
+                  let maxClearTime = ";net_maxcleartime " + Math.max(0.0000001,
                     parseFloat((0.01288 / uploadSpeed).toFixed(7)));
                   modulesStream.write("alias run_n_upload \"" + rate +
                     splitpacketRate + maxClearTime + "\"\n");
-                  modulesStream.end();
+                  // Check to see if we can actually reliably send at max rate
+                  let maxPacketRate = Math.floor(uploadSpeed * 100000 / 1288);
+                  // No we can't, better redo our modules
+                  // TODO: redef modules
+                  if (maxPacketRate < 66) {
+                    fetch(
+                      "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/modules.json")
+                      .then(response => {
+                        return response.json();
+                      }).then(json => {
+                      var modules = json.modules;
+                      Object.keys(modules["networking.packet_rate"]["levels"])
+                        .forEach(packetRate => {
+                          Object.keys(
+                            modules["networking.packet_buffer"]["levels"])
+                            .forEach(interp => {
+                              modulesStream.write("alias interp_" +
+                                packetRate + "_" + interp + "\" cl_interp " +
+                                +
+                                  ["networking.packet_buffer"]["levels"]["interp_ratio"] /
+                                (maxPacketRate /
+                                  modules["networking.packet_rate"]["levels"][packetRate]) +
+                                "\n");
+                            });
+                        });
+                    });
+                  } else {
+                    modulesStream.end();
+                  }
                 });
               });
               // Delete pre-existing client custom file to prevent overwrites
               fs.unlink(settings.get("tf2-folder") +
                 "/tf/cfg/client-custom.cfg", () => {
-                var customStream = fs.createWriteStream(settings.get(
+                let customStream = fs.createWriteStream(settings.get(
                   "tf2-folder") + "/tf/cfg/client-custom.cfg");
                 customStream.once("open", () => {
                   fetch(
@@ -178,34 +229,35 @@ solid #141414">
                     Object.keys(dynamics).forEach(() => {
                       count++;
                     });
-                    Object.keys(dynamics).forEach(key => {
-                      ipcRenderer.once("dynamic-data-reply", (event, arg) => {
-                        Object.keys(dynamics[arg.key]).forEach(dataKey => {
-                          if (arg.data.toLowerCase()
-                            .startsWith(dataKey.toLowerCase())) {
-                            Object.keys(dynamics[arg.key][dataKey])
-                              .forEach(cvar => {
-                                customStream.write(cvar + " " +
-                                  dynamics[arg.key][dataKey][cvar] + "\n");
-                              });
-                          }
-                        });
-                        count--;
-                        if (count === 0) {
-                          if (settings.get("customs")) {
-                            Object.keys(settings.get("customs"))
-                              .forEach(custom => {
-                                var customSetting = settings.get(
-                                  "customs")[custom];
-                                if (customSetting.used) {
-                                  customStream.write(customSetting.entry +
-                                    "\n");
-                                }
-                              });
-                            customStream.end();
-                          }
+                    ipcRenderer.on("dynamic-data-reply", (event, arg) => {
+                      Object.keys(dynamics[arg.key]).forEach(dataKey => {
+                        if (arg.data.toLowerCase()
+                          .startsWith(dataKey.toLowerCase())) {
+                          Object.keys(dynamics[arg.key][dataKey])
+                            .forEach(cvar => {
+                              customStream.write(cvar + " " +
+                                dynamics[arg.key][dataKey][cvar] + "\n");
+                            });
                         }
                       });
+                      count--;
+                      if (count === 0) {
+                        if (settings.get("customs")) {
+                          Object.keys(settings.get("customs"))
+                            .forEach(custom => {
+                              var customSetting = settings.get(
+                                "customs")[custom];
+                              if (customSetting.used) {
+                                customStream.write(customSetting.entry +
+                                  "\n");
+                              }
+                            });
+                        }
+                        customStream.end();
+                        ipcRenderer.removeAllListeners("dynamic-data-reply");
+                      }
+                    });
+                    Object.keys(dynamics).forEach(key => {
                       ipcRenderer.send("dynamic-data-request", key);
                     });
                   });
@@ -214,7 +266,7 @@ solid #141414">
               ring.hidden = true;
               document.getElementById("apply-btn").disabled = false;
               settings.set("config-sha", latestSha);
-              var success = document.getElementById("apply-success");
+              let success = document.getElementById("apply-success");
               success.hidden = false;
               setTimeout(() => {
                 success.hidden = true;

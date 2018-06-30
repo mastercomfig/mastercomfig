@@ -4,9 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://*.github.com/ https://*.githubusercontent.com/">
   <link rel="stylesheet" href="node_modules/xel/themes/material.css">
   <script src="node_modules/xel/xel.min.js"></script>
-  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw="
+        crossorigin="anonymous" rel="stylesheet">
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
   <link href="css/settings.css" rel="stylesheet">
@@ -17,8 +21,8 @@
      style="-webkit-app-region: drag; border-bottom: 1px solid #141414">
   <div></div>
   <span class="navbar-brand">
-    <img src="img/mastercomfig_logo_transparent.png" width="30" height="30"
-         class="d-inline-block align-top" alt="">
+    <img src="img/mastercomfig_logo_transparent.png" style="width: 30px;
+    height: 30px" class="d-inline-block align-top" alt="">
     mastercomfig
   </span>
   <a href="#">
@@ -73,9 +77,15 @@
   </a>
 </div>
 <script src="js/module.js"></script>
-<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="node_modules/popper.js/dist/umd/popper.js"
+        integrity="sha256-wqAoCRn9//AnHSl4qbXVhqdvmgFQqN5Elqp4Eb2wOXA="
+        crossorigin="anonymous"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"
+        integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8="
+        crossorigin="anonymous"></script>
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script>

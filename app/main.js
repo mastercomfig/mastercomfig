@@ -1,6 +1,6 @@
 "use strict";
 
-const {app, BrowserWindow, ipcMain} = require("electron");
+const {app, BrowserWindow, ipcMain, session} = require("electron");
 const os = require("os");
 const settings = require("electron-settings");
 const autoUpdater = require("electron-updater").autoUpdater;
@@ -12,7 +12,7 @@ let gpuWindow = null;
 
 function createWindow() {
 
-  var windowOptions = {
+  let windowOptions = {
     width: 1087,
     height: 672,
     show: false,
@@ -122,6 +122,9 @@ app.on("window-all-closed", () => {
 });
 
 app.on("ready", () => {
+  session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+    callback({responseHeaders: `default-src 'none'`});
+  });
   createWindow();
   autoUpdater.allowPrerelease = true;
   autoUpdater.allowDowngrade = true;

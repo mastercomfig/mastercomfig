@@ -28,17 +28,17 @@
   },
   "homepage": "https://github.com/mastercoms/mastercomfig#readme",
   "devDependencies": {
-    "electron": "^2.0.2",
-    "electron-builder": "^20.15.1"
+    "electron": "^2.0.3",
+    "electron-builder": "^20.18.0"
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
     "electron-settings": "^3.2.0",
-    "electron-updater": "^2.21.10",
+    "electron-updater": "^2.23.3",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "speedtest-net": "^1.4.3",
-    "xel": "0.0.139"
+    "xel": "0.0.141"
   },
   "build": {
     "productName": "mastercomfig",

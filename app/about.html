@@ -4,9 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://*.github.com/ https://*.githubusercontent.com/">
   <link rel="stylesheet" href="node_modules/xel/themes/material.css">
   <script src="node_modules/xel/xel.min.js"></script>
-  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw="
+        crossorigin="anonymous" rel="stylesheet">
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
   <meta charset="UTF-8">
@@ -20,8 +24,8 @@
             style="-webkit-app-region: no-drag"></x-icon>
   </a>
   <span class="navbar-brand">
-    <img src="img/mastercomfig_logo_transparent.png" width="30" height="30"
-         class="d-inline-block align-top" alt="">
+    <img src="img/mastercomfig_logo_transparent.png" style="width: 30px;
+    height: 30px" class="d-inline-block align-top" alt="">
     mastercomfig
   </span>
   <a href="#">
@@ -34,19 +38,31 @@
 30%; height: 100vh; z-index: 1000; left: -30%; border-right: 1px solid
 #141414">
   <li class="nav-item" style="margin-top: 1rem;">
-    <a class="nav-link no-link" href="mastercomfig.html">Home</a>
+    <a class="nav-link no-link" href="mastercomfig.html">
+      <x-icon
+        name="home"></x-icon>
+      Home</a>
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link" href="#">Community</a>
+    <a class="nav-link no-link disabled" href="#">
+      <x-icon
+        name="share"></x-icon>
+      Community</a>
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link" href="settings.html" id="settings">Settings</a>
+    <a class="nav-link no-link" href="settings.html" id="settings">
+      <x-icon
+        name="settings"></x-icon>
+      Settings</a>
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link active" href="about.html">About</a>
+    <a class="nav-link no-link active" href="about.html">
+      <x-icon
+        name="info"></x-icon>
+      About</a>
   </li>
   <hr>
 </ul>
@@ -74,9 +90,15 @@
   </div>
 </div>
 <script src="js/module.js"></script>
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/popper.js/dist/umd/popper.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="node_modules/popper.js/dist/umd/popper.js"
+        integrity="sha256-wqAoCRn9//AnHSl4qbXVhqdvmgFQqN5Elqp4Eb2wOXA="
+        crossorigin="anonymous"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"
+        integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8="
+        crossorigin="anonymous"></script>
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script src="js/dark.js"></script>
@@ -85,7 +107,7 @@
 
   document.getElementById("version").innerText = app.getVersion();
 
-  var sha = settings.get("config-sha")
+  var sha = settings.get("config-sha");
   var commitText = document.getElementById("commit");
   if (sha) {
     commitText.innerText = sha;
