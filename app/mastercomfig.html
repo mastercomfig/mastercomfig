@@ -240,6 +240,7 @@ solid #141414">
                       count++;
                     });
                     ipcRenderer.on("dynamic-data-reply", (event, arg) => {
+                      console.log(arg);
                       Object.keys(dynamics[arg.key]).forEach(dataKey => {
                         if (arg.data.toLowerCase()
                           .startsWith(dataKey.toLowerCase())) {

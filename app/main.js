@@ -107,7 +107,7 @@ function getDynamicData(name, callback) {
       callback(os.cpus().length.toString() + "_");
       break;
     case "hardware.cpu.speed":
-      callback(os.cpus()[0].speed.toFixed(0) + "_");
+      callback((os.cpus()[0].speed / 1000).toFixed(0) + "_");
       break;
     case "hardware.cpu.model":
       callback(os.cpus()[0].model);
