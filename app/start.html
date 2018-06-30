@@ -72,7 +72,7 @@
     </x-menu>
   </x-select>
   <br>
-  <a class="no-link" href="#">
+  <a class="no-link" href="mastercomfig.html" id="next-link">
     <x-button disabled id="next-btn">Next</x-button>
   </a>
 </div>
@@ -97,11 +97,8 @@
     steps++;
 
     if (steps >= 3) {
-      var next = document.getElementById("next-btn");
-      next.removeAttribute("disabled");
-      next.addEventListener("click", function() {
-        BrowserWindow.getFocusedWindow().loadFile("mastercomfig.html");
-      });
+      document.getElementById("next-btn").removeAttribute("disabled");
+      document.getElementById("next-link").href = "mastercomfig.html";
     }
   }
 
@@ -122,7 +119,7 @@
 
   speedtestBtn.addEventListener("click", () => {
     const speedtest = require("speedtest-net");
-    var test = speedtest({maxTime: 5000});
+    var test = speedtest({pingCount: 10, serversUrl: 'https://www.speedtest.net/speedtest-servers-static.php'});
     var server = document.getElementById("status");
     server.innerText = "Finding server...";
 

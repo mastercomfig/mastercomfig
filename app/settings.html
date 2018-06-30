@@ -211,7 +211,7 @@ solid #141414">
 
   speedtestBtn.addEventListener("click", () => {
     const speedtest = require("speedtest-net");
-    var test = speedtest({maxTime: 5000});
+    var test = speedtest({pingCount: 10, serversUrl: 'https://www.speedtest.net/speedtest-servers-static.php'});
     var server = document.getElementById("status");
     server.innerText = "Finding server...";
 
