@@ -115,14 +115,14 @@
         ]
       }
     },
-    "art_decals": {
+    "Art_decals": {
       "category": "graphics.decals",
       "data": {
         "type": "toggle",
         "value": ["r_renderoverlayfragment"]
       }
     },
-    "art_decal_fade": {
+    "Art_decal_fade": {
       "category": "graphics.decals",
       "data": {
         "type": "toggle",
