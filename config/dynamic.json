@@ -4,7 +4,10 @@
       "Intel": {
         "r_occludeemaxarea": 10,
         "r_occluderminarea": 1.5,
-        "mat_tonemapping_occlusion_use_stencil": 1
+        "r_occludermincount": 1,
+        "mat_tonemapping_occlusion_use_stencil": 1,
+        "mat_max_worldmesh_vertices": 1024,
+        "r_glint_procedural": 1
       },
       "Nvidia": {
         "r_occludeemaxarea": 2.5,
