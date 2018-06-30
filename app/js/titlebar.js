@@ -25,4 +25,3 @@ if (sliderToggle) {
     slided = !slided;
   });
 }
-

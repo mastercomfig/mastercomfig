@@ -12,8 +12,8 @@ if (settings.get("ui.dark")) {
   let styleNode = document.createElement("style");
   styleNode.innerHTML = "x-card { background-color:  #424242; }";
   styleNode.innerHTML +=
-    "x-accordion > header > x-label strong { color: rgba(248,249,250,0.87) }";
+    "x-accordion > header > x-label strong { color: rgba(248, 249, 250, .87) }";
   styleNode.innerHTML +=
-    "x-accordion > header > x-label { color: rgba(248,249,250,0.54) }";
+    "x-accordion > header > x-label { color: rgba(248, 249, 250, .54) }";
   document.body.appendChild(styleNode);
 }

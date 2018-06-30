@@ -130,4 +130,3 @@ app.on("ready", () => {
   autoUpdater.allowDowngrade = true;
   autoUpdater.checkForUpdatesAndNotify();
 });
-

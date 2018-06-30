@@ -7,18 +7,18 @@
         "mat_tonemapping_occlusion_use_stencil": 1
       },
       "Nvidia": {
-        "r_occludeemaxarea": 1,
-        "r_occluderminarea": 20,
+        "r_occludeemaxarea": 2.5,
+        "r_occluderminarea": 10,
         "mat_tonemapping_occlusion_use_stencil": 0
       },
       "AMD": {
-        "r_occludeemaxarea": 1,
-        "r_occluderminarea": 20,
+        "r_occludeemaxarea": 2.5,
+        "r_occluderminarea": 10,
         "mat_tonemapping_occlusion_use_stencil": 0
       },
       "ATI": {
         "r_occludeemaxarea": 2.5,
-        "r_occluderminarea": 20,
+        "r_occluderminarea": 10,
         "mat_tonemapping_occlusion_use_stencil": 0
       }
     },
