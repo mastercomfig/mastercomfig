@@ -382,88 +382,90 @@ solid #141414">
             var bold = document.createElement("strong");
             bold.innerText = friendlyName;
             var description = document.createElement("x-label");
-            var moduleLevel = settings.get("modules." + moduleIndex);
-            if (!moduleLevel) {
-              moduleLevel =
-                presets[settings.get("preset")]["modules"][moduleIndex];
-            }
-            var moduleLevelName = "";
-            if (module["levels"][moduleLevel].hasOwnProperty("name")) {
-              moduleLevelName = module["levels"][moduleLevel]["name"];
-            } else {
-              moduleLevelName = moduleLevel.replace("_", " ").toProperCase();
-            }
-            description.innerText = moduleLevelName;
-            label.appendChild(bold);
-            header.appendChild(label);
-            header.appendChild(description);
-            accordion.appendChild(header);
-            var main = document.createElement("main");
-            main.id = key[0] + "_" + item;
-            var row = document.createElement("div");
-            row.classList.add("row");
-            main.appendChild(row);
-            var right = document.createElement("div");
-            right.classList.add("col-sm");
-            if (module.hasOwnProperty("description")) {
-              var moduleDescription = document.createElement("p");
-              moduleDescription.classList.add("lead");
-              moduleDescription.innerText = module["description"];
-              right.appendChild(moduleDescription);
-            }
-            var moduleLevelDescription = document.createElement("p");
-            right.appendChild(moduleLevelDescription);
-            var left = document.createElement("div");
-            left.classList.add("col-sm");
-            var moduleSelect = document.createElement("x-select");
-            moduleSelect.style.width = "100%";
-            left.appendChild(moduleSelect);
-            var moduleMenu = document.createElement("x-menu");
-            moduleSelect.appendChild(moduleMenu);
-            Object.keys(module["levels"]).forEach(key => {
-              var moduleMenuItem = document.createElement("x-menuitem");
-              moduleMenuItem.setAttribute("value", key);
-              if (key === moduleLevel) {
-                moduleMenuItem.setAttribute("toggled", null);
-                if (module["levels"][key].hasOwnProperty("description")) {
-                  moduleLevelDescription.innerText =
-                    module["levels"][key]["description"];
+            if (!module["no-data"]) {
+              var moduleLevel = settings.get("modules." + moduleIndex);
+              if (!moduleLevel) {
+                moduleLevel =
+                  presets[settings.get("preset")]["modules"][moduleIndex];
+              }
+              var moduleLevelName = "";
+              if (module["levels"][moduleLevel].hasOwnProperty("name")) {
+                moduleLevelName = module["levels"][moduleLevel]["name"];
+              } else {
+                moduleLevelName = moduleLevel.replace("_", " ").toProperCase();
+              }
+              description.innerText = moduleLevelName;
+              label.appendChild(bold);
+              header.appendChild(label);
+              header.appendChild(description);
+              accordion.appendChild(header);
+              var main = document.createElement("main");
+              main.id = key[0] + "_" + item;
+              var row = document.createElement("div");
+              row.classList.add("row");
+              main.appendChild(row);
+              var right = document.createElement("div");
+              right.classList.add("col-sm");
+              if (module.hasOwnProperty("description")) {
+                var moduleDescription = document.createElement("p");
+                moduleDescription.classList.add("lead");
+                moduleDescription.innerText = module["description"];
+                right.appendChild(moduleDescription);
+              }
+              var moduleLevelDescription = document.createElement("p");
+              right.appendChild(moduleLevelDescription);
+              var left = document.createElement("div");
+              left.classList.add("col-sm");
+              var moduleSelect = document.createElement("x-select");
+              moduleSelect.style.width = "100%";
+              left.appendChild(moduleSelect);
+              var moduleMenu = document.createElement("x-menu");
+              moduleSelect.appendChild(moduleMenu);
+              Object.keys(module["levels"]).forEach(key => {
+                var moduleMenuItem = document.createElement("x-menuitem");
+                moduleMenuItem.setAttribute("value", key);
+                if (key === moduleLevel) {
+                  moduleMenuItem.setAttribute("toggled", null);
+                  if (module["levels"][key].hasOwnProperty("description")) {
+                    moduleLevelDescription.innerText =
+                      module["levels"][key]["description"];
+                  } else {
+                    moduleLevelDescription.innerText = "";
+                  }
+                }
+                var moduleMenuItemLabel = document.createElement("x-label");
+                var moduleName = "";
+                if (module["levels"][key].hasOwnProperty("name")) {
+                  moduleName = module["levels"][key]["name"];
+                } else {
+                  moduleName = key.replace("_", " ").toProperCase();
+                }
+                moduleMenuItemLabel.innerText = moduleName;
+                moduleMenuItem.appendChild(moduleMenuItemLabel);
+                moduleMenu.appendChild(moduleMenuItem);
+              });
+              moduleSelect.addEventListener("change", (e) => {
+                var moduleLevel = module["levels"][e.detail.newValue];
+                if (moduleLevel.hasOwnProperty("description")) {
+                  moduleLevelDescription.innerText = moduleLevel["description"];
                 } else {
                   moduleLevelDescription.innerText = "";
                 }
-              }
-              var moduleMenuItemLabel = document.createElement("x-label");
-              var moduleName = "";
-              if (module["levels"][key].hasOwnProperty("name")) {
-                moduleName = module["levels"][key]["name"];
-              } else {
-                moduleName = key.replace("_", " ").toProperCase();
-              }
-              moduleMenuItemLabel.innerText = moduleName;
-              moduleMenuItem.appendChild(moduleMenuItemLabel);
-              moduleMenu.appendChild(moduleMenuItem);
-            });
-            moduleSelect.addEventListener("change", (e) => {
-              var moduleLevel = module["levels"][e.detail.newValue];
-              if (moduleLevel.hasOwnProperty("description")) {
-                moduleLevelDescription.innerText = moduleLevel["description"];
-              } else {
-                moduleLevelDescription.innerText = "";
-              }
-              var moduleLevelName = "";
+                var moduleLevelName = "";
 
-              if (moduleLevel.hasOwnProperty("name")) {
-                moduleLevelName = moduleLevel["name"];
-              } else {
-                moduleLevelName =
-                  e.detail.newValue.replace("_", " ").toProperCase();
-              }
-              description.innerText = moduleLevelName;
+                if (moduleLevel.hasOwnProperty("name")) {
+                  moduleLevelName = moduleLevel["name"];
+                } else {
+                  moduleLevelName =
+                    e.detail.newValue.replace("_", " ").toProperCase();
+                }
+                description.innerText = moduleLevelName;
 
-              settings.set("modules." + moduleIndex, e.detail.newValue);
-            });
-            row.appendChild(left);
-            row.appendChild(right);
+                settings.set("modules." + moduleIndex, e.detail.newValue);
+              });
+              row.appendChild(left);
+              row.appendChild(right);
+            }
             accordion.appendChild(main);
             card.appendChild(accordion);
             if (index !== value.length - 1) {
