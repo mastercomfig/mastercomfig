@@ -185,7 +185,6 @@ solid #141414">
                   // Check to see if we can actually reliably send at max rate
                   let maxPacketRate = Math.floor(uploadSpeed * 100000 / 1288);
                   // No we can't, better redo our modules
-                  // TODO: redef modules
                   if (maxPacketRate < 66) {
                     fetch(
                       "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/modules.json")
@@ -195,17 +194,28 @@ solid #141414">
                       var modules = json.modules;
                       Object.keys(modules["networking.packet_rate"]["levels"])
                         .forEach(packetRate => {
+                          let scaledPacketRate = Math.max(10,
+                            Math.floor(maxPacketRate /
+                            modules["networking.packet_rate"]["levels"][packetRate]["rel_rate"]));
                           Object.keys(
                             modules["networking.packet_buffer"]["levels"])
                             .forEach(interp => {
+                              console.log(
+                                modules["networking.packet_buffer"]["levels"][interp]["interp_ratio"]);
                               modulesStream.write("alias interp_" +
-                                packetRate + "_" + interp + "\" cl_interp " +
+                                packetRate + "_" + interp + " \"cl_interp " +
                                 +
-                                  ["networking.packet_buffer"]["levels"]["interp_ratio"] /
-                                (maxPacketRate /
-                                  modules["networking.packet_rate"]["levels"][packetRate]) +
-                                "\n");
+                                  modules["networking.packet_buffer"]["levels"][interp]["interp_ratio"] /
+                                scaledPacketRate
+                                +
+                                "\"\n");
                             });
+                          modulesStream.write("alias " + "n_packet_rate_" +
+                            packetRate + " \"setinfo n_packet_rate " +
+                            packetRate + ";cl_updaterate " + scaledPacketRate +
+                            ";cl_cmdrate " + (scaledPacketRate -
+                              1) + ";packet_rate_" + packetRate +
+                            "_interps\"\n");
                         });
                     });
                   } else {
