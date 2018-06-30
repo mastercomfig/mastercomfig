@@ -104,10 +104,10 @@ function getDynamicData(name, callback) {
       });
       break;
     case "hardware.cpu.cores":
-      callback(os.cpus().length.toString());
+      callback(os.cpus().length.toString() + "_");
       break;
     case "hardware.cpu.speed":
-      callback(os.cpus()[0].speed.toFixed(0));
+      callback(os.cpus()[0].speed.toFixed(0) + "_");
       break;
     case "hardware.cpu.model":
       callback(os.cpus()[0].model);

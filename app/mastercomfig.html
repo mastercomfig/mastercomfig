@@ -491,10 +491,6 @@ solid #141414">
           if (settings.get("customs." + splitCats + "_" + item + ".used")) {
             checkbox.setAttribute("toggled", null);
           }
-          checkbox.addEventListener("toggle", () => {
-            settings.set("customs." + splitCats + "_" + item + ".used",
-              checkbox.hasAttribute("toggled"));
-          });
           box.appendChild(checkbox);
           var label = document.createElement("x-label");
           box.appendChild(label);
@@ -529,6 +525,23 @@ solid #141414">
                 customMenuItem.appendChild(customMenuItemLabel);
                 customMenu.appendChild(customMenuItem);
               });
+              checkbox.addEventListener("toggle", () => {
+                settings.set("customs." + splitCats + "_" + item + ".used",
+                  checkbox.hasAttribute("toggled"));
+                if (checkbox.hasAttribute("toggled")) {
+                  var customLevel = customEntry.data.value[parseInt(
+                    customSelect.value)];
+                  settings.set("customs." + splitCats + "_" + item + ".value",
+                    parseInt(customSelect.value));
+                  var cvars = "";
+                  Object.keys(customLevel.values).forEach((cvar, cvarI) => {
+                    cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
+                      customLevel.values[cvar];
+                  });
+                  settings.set("customs." + splitCats + "_" + item + ".entry",
+                    cvars);
+                }
+              });
               customSelect.addEventListener("change", (e) => {
                 var customLevel = customEntry.data.value[parseInt(
                   e.detail.newValue)];
@@ -550,6 +563,21 @@ solid #141414">
                 ".value")) {
                 switcher.setAttribute("toggled", null);
               }
+              checkbox.addEventListener("toggle", () => {
+                settings.set("customs." + splitCats + "_" + item + ".used",
+                  checkbox.hasAttribute("toggled"));
+                if (checkbox.hasAttribute("toggled")) {
+                  settings.set("customs." + splitCats + "_" + item + ".value",
+                    switcher.hasAttribute("toggled"));
+                  var cvars = "";
+                  customEntry.data.value.forEach((cvar, cvarI) => {
+                    cvars += (cvarI !== 0 ? ";" : "") + cvar +
+                      (switcher.hasAttribute("toggled") ? " 1" : " 0");
+                  });
+                  settings.set("customs." + splitCats + "_" + item + ".entry",
+                    cvars);
+                }
+              });
               switcher.addEventListener("toggle", () => {
                 settings.set("customs." + splitCats + "_" + item + ".value",
                   switcher.hasAttribute("toggled"));
@@ -576,6 +604,17 @@ solid #141414">
               num.value = value;
               num.setAttribute("max", customEntry.data.value.max);
               box.appendChild(num);
+              checkbox.addEventListener("toggle", () => {
+                settings.set("customs." + splitCats + "_" + item + ".used",
+                  checkbox.hasAttribute("toggled"));
+                if (checkbox.hasAttribute("toggled")) {
+                  settings.set("customs." + splitCats + "_" + item + ".value",
+                    num.getAttribute("value"));
+                  settings.set("customs." + splitCats + "_" + item +
+                    ".entry", customEntry.data.value.cvar + " " +
+                    num.getAttribute("value"));
+                }
+              });
               num.addEventListener("change", () => {
                 settings.set("customs." + splitCats + "_" + item + ".value",
                   num.getAttribute("value"));
