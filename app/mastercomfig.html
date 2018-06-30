@@ -483,7 +483,7 @@ solid #141414">
           var itemName = item;
           itemName = itemName.replace("_", " ");
           if (item.charAt(0) !== item.charAt(0).toUpperCase()) {
-            itemName = item.toProperCase();
+            itemName = itemName.toProperCase();
           }
           if (!mainSection.innerHTML.endsWith("<hr>")) {
             mainSection.appendChild(document.createElement("hr"));
