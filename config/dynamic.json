@@ -44,9 +44,7 @@
         "snd_async_minsize": 2097152
       },
       "2_": {
-        "snd_mix_async": 0,
-        "snd_async_fullyasync": 0,
-        "snd_async_minsize": 262144
+        "snd_mix_async": 0
       }
     },
     "hardware.cpu.speed": {
@@ -54,12 +52,11 @@
         "cl_smooth": 0,
         "net_splitrate": 1,
         "snd_delay_sound_shift": 0.03,
-        "snd_mixahead": 0.01
+        "snd_mixahead": 0.1
       },
       "2_": {
-        "cl_smooth": 0,
         "net_splitrate": 1,
-        "snd_mixahead": 0.008
+        "snd_mixahead": 0.08
       },
       "3_": {
         "net_splitrate": 2
