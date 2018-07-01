@@ -11,6 +11,16 @@
         "mat_postprocess_x": 1,
         "mat_postprocess_y": 1
       },
+      "%IntelliModder32%": {
+        "r_occludeemaxarea": 10,
+        "r_occluderminarea": 1.5,
+        "r_occludermincount": 2,
+        "mat_tonemapping_occlusion_use_stencil": 1,
+        "mat_max_worldmesh_vertices": 1024,
+        "r_glint_procedural": 1,
+        "mat_postprocess_x": 1,
+        "mat_postprocess_y": 1
+      },
       "Nvidia": {
         "r_occludeemaxarea": 1,
         "r_occluderminarea": 10,
