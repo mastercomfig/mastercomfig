@@ -27,6 +27,14 @@
         "mat_postprocess_x": 4,
         "mat_postprocess_y": 4
       },
+      "Advanced Micro Devices": {
+        "r_occludeemaxarea": 10,
+        "r_occluderminarea": 10,
+        "r_occludermincount": 1,
+        "mat_tonemapping_occlusion_use_stencil": 0,
+        "mat_postprocess_x": 4,
+        "mat_postprocess_y": 4
+      },
       "ATI": {
         "r_occludeemaxarea": 10,
         "r_occluderminarea": 10,
