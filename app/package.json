@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/mastercoms/mastercomfig#readme",
   "devDependencies": {
-    "electron": "^2.0.3",
-    "electron-builder": "^20.18.0"
+    "electron": "^2.0.4",
+    "electron-builder": "^20.19.1"
   },
   "dependencies": {
     "@firebase/app-types": "^0.3.2",
