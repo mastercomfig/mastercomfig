@@ -106,7 +106,7 @@ solid #141414">
   // Check for updates available for the config files
   var latestSha = settings.get("config-sha");
   fetch(
-    "https://api.github.com/repositories/69422496/commits?sha=beta&path=config")
+    "https://api.github.com/repositories/69422496/commits?sha=dev&path=config")
     .then(response => {
       return response.json();
     }).then(json => {
