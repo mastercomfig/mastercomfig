@@ -1,20 +1,25 @@
 App Changes:
 
-* Added support for CPU core and CPU speed detection for dynamic configs
-* Fixed a bug where the graphics card vendor was being reported incorrectly
-* Fixed initial values not being set for custom settings
-* Added support for config categories with no levels
-  * New custom config values will be streamed in over the next few days using this system
+* Fixed a bug with the start page keeping checkmarks even if switched to an invalid folder
+* Changed background color from white to a light gray for the light theme
+* Added mastercomfig community
+  * Currently, there is no support for sharing, but there are some configs shared by me!
+* Added support for addons
+* Fixed some names not replacing all underscores with spaces in the UI
+* Added support for custom config data hosting
+* Added labels to `client-custom.cfg` additions
+* Dynamic data detection now resolves conflicts when there are multiple matches
+* Improved the UI for custom settings
+* Added support for modules with no levels (entirely custom settings)
+* Hopefully fixed Linux packaging
 
 
 Config Changes:
 * Optimized occlusion settings
-* Fixed a few memory issues
-* Fixed a typo for the item panel loading time value
-* Fixed a few sound settings
-* Added more optimizatons for graphics cards (mostly Intel integrated graphics)
-* Added optimizations for different CPU speeds/core counts
-* Added custom config settings for toggling art decals and art decal fading
+* Added some more HUD custom settings
+* Optimized splitrate for less load on the CPU
+* Disabled queued packet thread attempts on Linux
+* Reordered networking category to be last
 
 
 Coming soon:
