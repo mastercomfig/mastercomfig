@@ -65,7 +65,8 @@
   <hr>
 </ul>
 <div class="container" id="content"
-     style="overflow-y: scroll; overflow-x: hidden; height: 75vh; padding-bottom: 48px;">
+     style="overflow-y: scroll; overflow-x: hidden; height: 90vh;
+     padding-bottom: 48px;">
 </div>
 <script src="js/module.js"></script>
 <script src="node_modules/jquery/dist/jquery.min.js"
@@ -90,6 +91,7 @@
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       var content = document.getElementById("content");
+      var configSubs = settings.get("subscriptions.configs", []);
 
       db.collection("configs").get().then(snapshot => {
         snapshot.forEach(doc => {
@@ -100,6 +102,9 @@
           title.innerText = config.name;
           header.appendChild(title);
           var switcher = document.createElement("x-switch");
+          if (configSubs.includes(doc.id)) {
+            switcher.setAttribute("toggled", null);
+          }
           switcher.setAttribute("skin", "big");
           header.appendChild(switcher);
           card.appendChild(header);
@@ -109,9 +114,19 @@
           main.appendChild(description);
           card.appendChild(main);
           content.appendChild(card);
-          var configSubs = settings.get("subscriptions.configs", []);
-          configSubs.push(doc.id);
-          settings.set("subscriptions.configs", configSubs);
+          switcher.addEventListener("toggle", () => {
+            if (switcher.hasAttribute("toggled")) {
+              if (!configSubs.includes(doc.id)) {
+                configSubs.push(doc.id);
+                settings.set("subscriptions.configs", configSubs);
+              }
+            } else {
+              var index = configSubs.indexOf(doc.id);
+              if (index > -1) {
+                configSubs.splice(index, 1);
+              }
+            }
+          });
         });
       });
     } else {

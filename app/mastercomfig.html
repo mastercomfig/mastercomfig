@@ -141,6 +141,14 @@ solid #141414">
         let vpkPath = settings.get("tf2-folder") +
           "/tf/custom/mastercomfig.vpk";
         // Delete pre-existing VPK to prevent overwrites
+        fs.unlink(settings.get("tf2-folder") +
+          "/tf/custom/mastercomfig-addon-no-footsteps.vpk", () => {});
+        fs.unlink(settings.get("tf2-folder") +
+          "/tf/custom/mastercomfig-addon-no-soundscapes.vpk", () => {});
+        fs.unlink(settings.get("tf2-folder") +
+          "/tf/custom/mastercomfig-addon-no-pyroland.vpk", () => {});
+        fs.unlink(settings.get("tf2-folder") +
+          "/tf/custom/mastercomfig-addon-no-extra-models.vpk", () => {});
         fs.unlink(vpkPath, () => {
           // Download latest VPK to path
           // TODO: cache file per version (use commit hash)
@@ -162,10 +170,39 @@ solid #141414">
                     Object.keys(modules).forEach(category => {
                       Object.keys(modules[category]).forEach(module => {
                         var name = category[0] + "_" + module;
+                        var level = settings.get("modules." + category + "."
+                          + module);
                         modulesStream.write("alias run_" + name + " " + name +
-                          "_" +
-                          settings.get("modules." + category + "." + module) +
-                          "\n");
+                          "_" + level + "\n");
+                        Object.keys(modules[category][module][level])
+                          .forEach(item => {
+                            switch (item) {
+                              case "footsteps":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version + "/mastercomfig-no-footsteps.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-footsteps.vpk");
+                                break;
+                              case "soundscapes":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version + "/mastercomfig-no-soundscapes.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-soundscapes.vpk");
+                                break;
+                              case "pyrovision-textures":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version + "/mastercomfig-no-pyroland.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-pyroland.vpk");
+                                break;
+                              case "extra-models":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version + "/mastercomfig-no-extra-models.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-extra-models.vpk");
+                                break;
+                            }
+                        });
                       });
                     });
                   }
@@ -245,20 +282,25 @@ solid #141414">
                           winnerDynamic = {
                             key: arg.key,
                             data: dataKey
-                          }
+                          };
                         }
                       });
                       if (winnerDynamic) {
-                        Object.keys(dynamics[winnerDynamic.key][winnerDynamic.data])
+                        customStream.write("// " + winnerDynamic.key +
+                          ": " + winnerDynamic.data + "\n");
+                        Object.keys(
+                          dynamics[winnerDynamic.key][winnerDynamic.data])
                           .forEach(cvar => {
                             customStream.write(cvar + " " +
                               dynamics[winnerDynamic.key][winnerDynamic.data][cvar]
                               + "\n");
                           });
+                        customStream.write("\n");
                       }
                       count--;
                       if (count === 0) {
                         if (settings.get("customs")) {
+                          customStream.write("\n// custom settings\n");
                           Object.keys(settings.get("customs"))
                             .forEach(custom => {
                               var customSetting = settings.get(
@@ -269,7 +311,40 @@ solid #141414">
                               }
                             });
                         }
-                        customStream.end();
+                        firebase.auth().signInAnonymously()
+                          .catch(function(error) {
+                            customStream.end();
+                          });
+                        firebase.auth().onAuthStateChanged(function(user) {
+                          if (user) {
+                            let subs = settings.get("subscriptions.configs",
+                              []);
+                            var numSubs = 0;
+                            customStream.write("\n\n// mastercomfig community");
+                            subs.forEach(() => {
+                              numSubs++;
+                            });
+                            subs.forEach(id => {
+                              db.collection("configs").doc(id).get()
+                                .then(doc => {
+                                  if (doc.exists) {
+                                    customStream.write("\n");
+                                    customStream.write("\n");
+                                    customStream.write("// " + doc.data().name +
+                                      " by mastercoms\n");
+                                    customStream.write(doc.data().config
+                                      .replaceAll("\\n", "\n"));
+                                  }
+                                  numSubs--;
+                                  if (numSubs <= 0) {
+                                    customStream.end();
+                                  }
+                                });
+                            });
+                          } else {
+                            customStream.end();
+                          }
+                        });
                         ipcRenderer.removeAllListeners("dynamic-data-reply");
                       }
                     });
@@ -489,7 +564,6 @@ solid #141414">
           if (itemName.charAt(0) !== itemName.charAt(0).toUpperCase()) {
             itemName = itemName.toProperCase();
           }
-          console.log(mainSection.innerHTML.endsWith("<!--/custom-->"));
           if (!mainSection.innerHTML.endsWith("<!--/custom-->")) {
             customContainer = document.createElement("div");
             if (mainSection.innerHTML.length === 0) {
@@ -506,7 +580,8 @@ solid #141414">
               customAccordionHeader.appendChild(customAccordionLabel);
               customContainer.appendChild(customGroupAccordion);
               customGroupAccordionMain = document.createElement("main");
-              customGroupAccordionMain.appendChild(document.createElement("hr"));
+              customGroupAccordionMain.appendChild(
+                document.createElement("hr"));
               customGroupAccordion.appendChild(customGroupAccordionMain);
               mainSection.appendChild(customContainer);
             }

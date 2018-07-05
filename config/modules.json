@@ -12,7 +12,8 @@
             "r_rootlod": 2
           },
           "description": "Lowest model quality. Objects will look basic and fade out quickly.",
-          "dxsupport": "fade-low"
+          "dxsupport": "fade-low",
+          "extra-models": "none"
         },
         "medium": {
           "values": {
@@ -22,7 +23,8 @@
             "r_rootlod": 1
           },
           "description": "Medium model quality.",
-          "dxsupport": "fade-low"
+          "dxsupport": "fade-low",
+          "extra-models": "none"
         },
         "high": {
           "values": {
@@ -32,7 +34,8 @@
             "r_rootlod": 0
           },
           "description": "High model quality.",
-          "dxsupport": "fade-high"
+          "dxsupport": "fade-high",
+          "extra-models": "none"
         },
         "ultra": {
           "values": {
@@ -959,6 +962,34 @@
             "dsp_spatial": 40
           },
           "dxsupport": "sound-high"
+        }
+      }
+    },
+    "sound.footsteps": {
+      "description": "Controls if footsteps play at all.",
+      "levels": {
+        "on": {
+          "values": {
+          }
+        },
+        "off": {
+          "values": {
+          },
+          "footsteps": "off"
+        }
+      }
+    },
+    "sound.ambient_noise": {
+      "description": "Controls the soundscapes (ambient noise) of maps playing.",
+      "levels": {
+        "on": {
+          "values": {
+          }
+        },
+        "off": {
+          "values": {
+          },
+          "soundscapes": "off"
         }
       }
     },

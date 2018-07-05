@@ -90,5 +90,5 @@ function download(url, dest) {
 }
 
 function fetchConfigData(path) {
-  return fetch(settings.get("config-data-root", "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/") + path);
+  return fetch(settings.get("config-data-root", "https://raw.githubusercontent.com/mastercoms/mastercomfig/dev/") + path);
 }
