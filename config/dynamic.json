@@ -54,12 +54,12 @@
         "cl_smooth": 0,
         "net_splitrate": 1,
         "snd_delay_sound_shift": 0.03,
-        "snd_mixahead": 0.01
+        "snd_mixahead": 0.1
       },
       "2_": {
         "cl_smooth": 0,
         "net_splitrate": 1,
-        "snd_mixahead": 0.008
+        "snd_mixahead": 0.08
       },
       "3_": {
         "net_splitrate": 1
