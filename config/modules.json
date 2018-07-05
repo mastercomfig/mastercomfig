@@ -12,8 +12,7 @@
             "r_rootlod": 2
           },
           "description": "Lowest model quality. Objects will look basic and fade out quickly.",
-          "dxsupport": "fade-low",
-          "extra-models": "none"
+          "dxsupport": "fade-low"
         },
         "medium": {
           "values": {
@@ -23,8 +22,7 @@
             "r_rootlod": 1
           },
           "description": "Medium model quality.",
-          "dxsupport": "fade-low",
-          "extra-models": "none"
+          "dxsupport": "fade-low"
         },
         "high": {
           "values": {
@@ -34,8 +32,7 @@
             "r_rootlod": 0
           },
           "description": "High model quality.",
-          "dxsupport": "fade-high",
-          "extra-models": "none"
+          "dxsupport": "fade-high"
         },
         "ultra": {
           "values": {
@@ -63,7 +60,8 @@
             "r_ropetranslucent": 0
           },
           "detail_props": "none",
-          "dxsupport": "ropes-off"
+          "dxsupport": "ropes-off",
+          "extra-models": "none"
         },
         "medium": {
           "values": {
@@ -75,7 +73,8 @@
             "r_ropetranslucent": 0
           },
           "detail_props": "none",
-          "dxsupport": "ropes-off"
+          "dxsupport": "ropes-off",
+          "extra-models": "none"
         },
         "high": {
           "values": {
@@ -92,7 +91,8 @@
             "rope_subdiv": 2
           },
           "detail_props": "high",
-          "dxsupport": "ropes-on"
+          "dxsupport": "ropes-on",
+          "extra-models": "none"
         },
         "ultra": {
           "values": {

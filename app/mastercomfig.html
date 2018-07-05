@@ -166,6 +166,7 @@ solid #141414">
                     "\n");
                   // Realias modules for ones the user has set
                   let modules = settings.get("modules");
+                  let selectedModules = [];
                   if (modules) {
                     Object.keys(modules).forEach(category => {
                       Object.keys(modules[category]).forEach(module => {
@@ -174,30 +175,35 @@ solid #141414">
                           + module);
                         modulesStream.write("alias run_" + name + " " + name +
                           "_" + level + "\n");
-                        Object.keys(modules[category][module][level])
+                        selectedModules.push(category + "." + module);
+                        Object.keys(modulesJson[category + "." + module]["levels"][level])
                           .forEach(item => {
                             switch (item) {
                               case "footsteps":
                                 download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                                  version + "/mastercomfig-no-footsteps.vpk",
+                                  version +
+                                  "/mastercomfig-addon-no-footsteps.vpk",
                                   settings.get("tf2-folder") +
                                   "/tf/custom/mastercomfig-addon-no-footsteps.vpk");
                                 break;
                               case "soundscapes":
                                 download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                                  version + "/mastercomfig-no-soundscapes.vpk",
+                                  version +
+                                  "/mastercomfig-addon-no-soundscapes.vpk",
                                   settings.get("tf2-folder") +
                                   "/tf/custom/mastercomfig-addon-no-soundscapes.vpk");
                                 break;
                               case "pyrovision-textures":
                                 download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                                  version + "/mastercomfig-no-pyroland.vpk",
+                                  version +
+                                  "/mastercomfig-addon-no-pyroland.vpk",
                                   settings.get("tf2-folder") +
                                   "/tf/custom/mastercomfig-addon-no-pyroland.vpk");
                                 break;
                               case "extra-models":
                                 download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                                  version + "/mastercomfig-no-extra-models.vpk",
+                                  version +
+                                  "/mastercomfig-addon-no-extra-models.vpk",
                                   settings.get("tf2-folder") +
                                   "/tf/custom/mastercomfig-addon-no-extra-models.vpk");
                                 break;
@@ -206,6 +212,43 @@ solid #141414">
                       });
                     });
                   }
+                  Object.keys(presets[settings.get("preset")]["modules"]).forEach(presetModule => {
+                    if (!selectedModules.includes(presetModule)) {
+                      Object.keys(modulesJson[presetModule]["levels"][presets[settings.get("preset")]["modules"][presetModule]])
+                        .forEach(item => {
+                          switch (item) {
+                            case "footsteps":
+                              download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                version +
+                                "/mastercomfig-addon-no-footsteps.vpk",
+                                settings.get("tf2-folder") +
+                                "/tf/custom/mastercomfig-addon-no-footsteps.vpk");
+                              break;
+                            case "soundscapes":
+                              download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                version +
+                                "/mastercomfig-addon-no-soundscapes.vpk",
+                                settings.get("tf2-folder") +
+                                "/tf/custom/mastercomfig-addon-no-soundscapes.vpk");
+                              break;
+                            case "pyrovision-textures":
+                              download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                version +
+                                "/mastercomfig-addon-no-pyroland.vpk",
+                                settings.get("tf2-folder") +
+                                "/tf/custom/mastercomfig-addon-no-pyroland.vpk");
+                              break;
+                            case "extra-models":
+                              download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                version +
+                                "/mastercomfig-addon-no-extra-models.vpk",
+                                settings.get("tf2-folder") +
+                                "/tf/custom/mastercomfig-addon-no-extra-models.vpk");
+                              break;
+                          }
+                        });
+                    }
+                  });
                   // Define the upload speed module according to user upload
                   let uploadSpeed = settings.get("upload-speed");
                   let rate = "rate " + Math.max(3500, Math.min(1048576,
@@ -373,6 +416,8 @@ solid #141414">
       });
   });
 
+  var modulesJson;
+
   fetchConfigData("config/presets.json")
     .then(response => {
       return response.json();
@@ -383,15 +428,15 @@ solid #141414">
       .then(response => {
         return response.json();
       }).then(json => {
-      var modules = json.modules;
+      modulesJson = json.modules;
       fetchConfigData("config/customs.json")
         .then(response => {
           return response.json();
         }).then(json => {
         var customs = json.entries;
         var categoryMap = new Map();
-        Object.keys(modules).forEach(key => {
-          var module = modules[key];
+        Object.keys(modulesJson).forEach(key => {
+          var module = modulesJson[key];
           if (module.hasOwnProperty("hidden") && module["hidden"]) {
             return;
           }
@@ -444,7 +489,7 @@ solid #141414">
 
           value.forEach((item, index) => {
             var moduleIndex = key + "." + item;
-            var module = modules[moduleIndex];
+            var module = modulesJson[moduleIndex];
             var friendlyName = "";
             if (module.hasOwnProperty("name")) {
               friendlyName = module["name"];
