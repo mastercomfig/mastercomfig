@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://*.github.com/ https://*.githubusercontent.com/">
   <link rel="stylesheet" href="node_modules/xel/themes/material.css">
   <script src="node_modules/xel/xel.min.js"></script>
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -16,7 +14,7 @@
   <link href="css/settings.css" rel="stylesheet">
   <title>mastercomfig setup</title>
 </head>
-<body style="padding-bottom: 40px">
+<body class="bg-light" style="padding-bottom: 40px">
 <nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top"
      style="-webkit-app-region: drag; border-bottom: 1px solid #141414">
   <div></div>
@@ -51,6 +49,8 @@
     <x-icon name="check" skin="success" id="speedtest-check" hidden></x-icon>
     Run an internet speed test
   </h3>
+  <p>This will be used to calculate optimal values for some networking settings
+     .</p>
   <x-button id="speedtest-btn" style="margin-bottom: 4px">Run test</x-button>
   <div id="speedtest">
     <x-progressbar id="speedtest-bar" hidden></x-progressbar>
@@ -93,12 +93,19 @@
 
   var steps = 0;
 
-  function incrementProgress() {
-    steps++;
+  function stepProgress(reverse) {
+    if (reverse) {
+      steps --;
+    } else {
+      steps++;
+    }
 
     if (steps >= 3) {
       document.getElementById("next-btn").removeAttribute("disabled");
       document.getElementById("next-link").href = "mastercomfig.html";
+    } else {
+      document.getElementById("next-btn").setAttribute("disabled", null);
+      document.getElementById("next-link").href = "#";
     }
   }
 
@@ -108,8 +115,13 @@
       document.getElementById("folder-label").innerText = folder;
       settings.set("tf2-folder", folder);
       document.getElementById("folder-check").hidden = false;
-      incrementProgress();
+      stepProgress();
     } else {
+      if (!document.getElementById("folder-check").hidden) {
+        stepProgress(true);
+        document.getElementById("folder-check").hidden = true;
+        settings.delete("tf2-folder");
+      }
       document.getElementById("folder-label").innerText =
         "Invalid Team Fortress 2 folder. Please try again.";
     }
@@ -148,7 +160,7 @@
         "<strong>Upload speed:</strong> " + speed + "Mbps";
       settings.set("upload-speed", speed);
       document.getElementById("speedtest-check").hidden = false;
-      incrementProgress();
+      stepProgress();
     });
 
     test.on("testserver", testserver => {
@@ -159,8 +171,7 @@
     });
   });
 
-  fetch(
-    "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/presets.json")
+  fetchConfigData("config/presets.json")
     .then(response => {
       return response.json();
     }).then(json => {
@@ -168,7 +179,7 @@
     var presetsMenu = document.getElementById("presets-menu");
     var presets = json.presets;
     Object.keys(presets).forEach(key => {
-      var friendlyName = key.replace("_", " ").toProperCase();
+      var friendlyName = key.replaceAll("_", " ").toProperCase();
       var item = document.createElement("x-menuitem");
       item.setAttribute("value", key);
       var label = document.createElement("x-label");
@@ -182,7 +193,7 @@
         if (!selected) {
           selected = true;
           document.getElementById("preset-check").hidden = false;
-          incrementProgress();
+          stepProgress();
         }
         settings.set("preset", e.detail.newValue);
       });

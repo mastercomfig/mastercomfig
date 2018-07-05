@@ -115,18 +115,57 @@
         ]
       }
     },
-    "Art_decals": {
+    "art_decals": {
       "category": "graphics.decals",
       "data": {
         "type": "toggle",
         "value": ["r_renderoverlayfragment"]
       }
     },
-    "Art_decal_fade": {
+    "art_decal_fade": {
       "category": "graphics.decals",
       "data": {
         "type": "toggle",
         "value": ["r_overlayfadeenable"]
+      }
+    },
+    "3D_HUD_playermodel": {
+      "category": "HUD.general",
+      "data": {
+        "type": "toggle",
+        "value": ["cl_hud_playerclass_use_playermodel "]
+      }
+    },
+    "killfeed": {
+      "category": "HUD.general",
+      "data": {
+        "type": "stepper",
+        "value": {
+          "cvar": "hud_deathnotice_time",
+          "min": 0,
+          "max": 12
+        }
+      }
+    },
+    "Show_spectated_player_items": {
+      "category": "HUD.backpack",
+      "data": {
+        "type": "toggle",
+        "value": ["cl_spec_carrieditems"]
+      }
+    },
+    "Alphabetically_sort_loadout_options": {
+      "category": "HUD.backpack",
+      "data": {
+        "type": "toggle",
+        "value": ["tf_item_selection_panel_sort_type"]
+      }
+    },
+    "Item_rarity_borders": {
+      "category": "HUD.backpack",
+      "data": {
+        "type": "toggle",
+        "value": ["cl_showbackpackrarities"]
       }
     }
   }

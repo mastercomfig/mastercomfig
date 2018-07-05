@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://*.github.com/ https://*.githubusercontent.com/">
   <link rel="stylesheet" href="node_modules/xel/themes/material.css">
   <script src="node_modules/xel/xel.min.js"></script>
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -16,7 +14,7 @@
   <title>mastercomfig setup</title>
   <link href="css/settings.css" rel="stylesheet">
 </head>
-<body style="padding-bottom: 40px;">
+<body class="bg-light" style="padding-bottom: 40px;">
 <nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top"
      style="-webkit-app-region: drag; border-bottom: 1px solid #141414">
   <a href="#" id="slider-toggle">
@@ -45,14 +43,14 @@
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link disabled" href="#">
+    <a class="nav-link no-link" href="community.html">
       <x-icon
         name="share"></x-icon>
       Community</a>
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link active" href="#" id="settings">
+    <a class="nav-link no-link active" href="#">
       <x-icon
         name="settings"></x-icon>
       Settings</a>
@@ -249,8 +247,7 @@ solid #141414">
     });
   });
 
-  fetch(
-    "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/presets.json")
+  fetchConfigData("config/presets.json")
     .then(response => {
       return response.json();
     }).then(json => {
@@ -259,7 +256,7 @@ solid #141414">
     var presets = json.presets;
     var currentPreset = settings.get("preset");
     Object.keys(presets).forEach(key => {
-      var friendlyName = key.replace("_", " ").toProperCase();
+      var friendlyName = key.replaceAll("_", " ").toProperCase();
       var item = document.createElement("x-menuitem");
       item.setAttribute("value", key);
       var label = document.createElement("x-label");

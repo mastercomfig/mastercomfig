@@ -1,136 +1,5 @@
 {
   "modules": {
-    "networking.packet_buffer": {
-      "description": "How long the client smooths communication from the server.",
-      "levels": {
-        "very_high": {
-          "name": "Very High smoothing",
-          "description": "A very high smoothing time to ensure a safe connection for those on very unstable connections.",
-          "values": {
-            "cl_interp_ratio": 4
-          },
-          "interp_ratio": 4
-        },
-        "high": {
-          "name": "High smoothing",
-          "description": "A high smoothing time to ensure a safe connection for those on unstable connections.",
-          "values": {
-            "cl_interp_ratio": 3
-          },
-          "interp_ratio": 3
-        },
-        "standard": {
-          "name": "Standard smoothing",
-          "description": "The standard smoothing time, reliable for all but the most unstable connections.",
-          "values": {
-            "cl_interp_ratio": 2
-          },
-          "interp_ratio": 2
-        },
-        "balanced": {
-          "name": "Balanced smoothing",
-          "description": "A short smoothing time that is mostly reliable.",
-          "values": {
-            "cl_interp_ratio": 1.4347826
-          },
-          "interp_ratio": 1.4347826087
-        },
-        "lan": {
-          "name": "Local network smoothing",
-          "description": "The shortest smoothing time, very unreliable.",
-          "values": {
-            "cl_interp_ratio": 1
-          },
-          "interp_ratio": 1
-        }
-      }
-    },
-    "networking.packet_rate": {
-      "description": "How fast the client and server communicate.",
-      "levels": {
-        "low": {
-          "description": "A third of the max packet rate.",
-          "values": {
-            "cl_updaterate": 22,
-            "cl_cmdrate": 21
-          },
-          "update_rate": 22,
-          "rel_rate": 3
-        },
-        "medium": {
-          "description": "Half of the max packet rate.",
-          "values": {
-            "cl_updaterate": 33,
-            "cl_cmdrate": 32
-          },
-          "update_rate": 33,
-          "rel_rate": 2
-        },
-        "high": {
-          "description": "The max packet rate. Uses the most internet, but communicates data faster.",
-          "values": {
-            "cl_updaterate": 66,
-            "cl_cmdrate": 65
-          },
-          "update_rate": 66,
-          "rel_rate": 1
-        }
-      }
-    },
-    "networking.packet_size": {
-      "description": "How much Internet bandwidth the client uses",
-      "levels": {
-        "bad_router": {
-          "description": "Minimizes packet size to ensure reliable delivery on bad routers/modems",
-          "values": {
-            "net_compresspackets": 1,
-            "net_compresspackets_minsize": 957,
-            "net_maxroutable": 956,
-            "net_maxfragments": 956
-          }
-        },
-        "low_end": {
-          "description": "Minimizes computations done on the client",
-          "values": {
-            "net_compresspackets": 1,
-            "net_compresspackets_minsize": 1261,
-            "net_maxroutable": 1260,
-            "net_maxfragments": 1260
-          }
-        },
-        "minimal": {
-          "description": "Minimizes Internet usage",
-          "values": {
-            "net_compresspackets": 1,
-            "net_compresspackets_minsize": 577,
-            "net_maxroutable": 1260,
-            "net_maxfragments": 1260
-          }
-        },
-        "standard": {
-          "description": "The optimal packet settings for most users",
-          "values": {
-            "net_compresspackets": 1,
-            "net_compresspackets_minsize": 957,
-            "net_maxroutable": 1200,
-            "net_maxfragments": 1200
-          }
-        }
-      }
-    },
-    "networking.upload": {
-      "description": "How much data can the client use per second",
-      "hidden": true,
-      "levels": {
-        "default": {
-          "values": {
-            "rate": 196608,
-            "net_splitpacket_maxrate": 131072,
-            "net_maxcleartime": 0.0049133
-          }
-        }
-      }
-    },
     "graphics.models": {
       "name": "Model Detail",
       "description": "The detail of 3D objects and how they fade into view at a distance.",
@@ -995,6 +864,12 @@
         }
       }
     },
+    "HUD.general": {
+      "no-data": true
+    },
+    "HUD.backpack": {
+      "no-data": true
+    },
     "HUD.outlines": {
       "description": "The outlines on objects, spectating and allies on spawn.",
       "levels": {
@@ -1084,6 +959,137 @@
             "dsp_spatial": 40
           },
           "dxsupport": "sound-high"
+        }
+      }
+    },
+    "networking.packet_buffer": {
+      "description": "How long the client smooths communication from the server.",
+      "levels": {
+        "very_high": {
+          "name": "Very High smoothing",
+          "description": "A very high smoothing time to ensure a safe connection for those on very unstable connections.",
+          "values": {
+            "cl_interp_ratio": 4
+          },
+          "interp_ratio": 4
+        },
+        "high": {
+          "name": "High smoothing",
+          "description": "A high smoothing time to ensure a safe connection for those on unstable connections.",
+          "values": {
+            "cl_interp_ratio": 3
+          },
+          "interp_ratio": 3
+        },
+        "standard": {
+          "name": "Standard smoothing",
+          "description": "The standard smoothing time, reliable for all but the most unstable connections.",
+          "values": {
+            "cl_interp_ratio": 2
+          },
+          "interp_ratio": 2
+        },
+        "balanced": {
+          "name": "Balanced smoothing",
+          "description": "A short smoothing time that is mostly reliable.",
+          "values": {
+            "cl_interp_ratio": 1.4347826
+          },
+          "interp_ratio": 1.4347826087
+        },
+        "lan": {
+          "name": "Local network smoothing",
+          "description": "The shortest smoothing time, very unreliable.",
+          "values": {
+            "cl_interp_ratio": 1
+          },
+          "interp_ratio": 1
+        }
+      }
+    },
+    "networking.packet_rate": {
+      "description": "How fast the client and server communicate.",
+      "levels": {
+        "low": {
+          "description": "A third of the max packet rate.",
+          "values": {
+            "cl_updaterate": 22,
+            "cl_cmdrate": 21
+          },
+          "update_rate": 22,
+          "rel_rate": 3
+        },
+        "medium": {
+          "description": "Half of the max packet rate.",
+          "values": {
+            "cl_updaterate": 33,
+            "cl_cmdrate": 32
+          },
+          "update_rate": 33,
+          "rel_rate": 2
+        },
+        "high": {
+          "description": "The max packet rate. Uses the most internet, but communicates data faster.",
+          "values": {
+            "cl_updaterate": 66,
+            "cl_cmdrate": 65
+          },
+          "update_rate": 66,
+          "rel_rate": 1
+        }
+      }
+    },
+    "networking.packet_size": {
+      "description": "How much Internet bandwidth the client uses",
+      "levels": {
+        "bad_router": {
+          "description": "Minimizes packet size to ensure reliable delivery on bad routers/modems",
+          "values": {
+            "net_compresspackets": 1,
+            "net_compresspackets_minsize": 957,
+            "net_maxroutable": 956,
+            "net_maxfragments": 956
+          }
+        },
+        "low_end": {
+          "description": "Minimizes computations done on the client",
+          "values": {
+            "net_compresspackets": 1,
+            "net_compresspackets_minsize": 1261,
+            "net_maxroutable": 1260,
+            "net_maxfragments": 1260
+          }
+        },
+        "minimal": {
+          "description": "Minimizes Internet usage",
+          "values": {
+            "net_compresspackets": 1,
+            "net_compresspackets_minsize": 577,
+            "net_maxroutable": 1260,
+            "net_maxfragments": 1260
+          }
+        },
+        "standard": {
+          "description": "The optimal packet settings for most users",
+          "values": {
+            "net_compresspackets": 1,
+            "net_compresspackets_minsize": 957,
+            "net_maxroutable": 1200,
+            "net_maxfragments": 1200
+          }
+        }
+      }
+    },
+    "networking.upload": {
+      "description": "How much data can the client use per second",
+      "hidden": true,
+      "levels": {
+        "default": {
+          "values": {
+            "rate": 196608,
+            "net_splitpacket_maxrate": 131072,
+            "net_maxcleartime": 0.0049133
+          }
         }
       }
     }

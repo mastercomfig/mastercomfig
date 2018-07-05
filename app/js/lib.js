@@ -7,10 +7,35 @@ const http = require("http");
 const https = require("https");
 const fs = require("fs");
 
+const firebase = require("firebase");
+require("firebase/firestore");
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBETZTOgv7hlOL1sHlskFftbmjF0eJl4zo",
+  authDomain: "mastercomfig-a9225.firebaseapp.com",
+  databaseURL: "https://mastercomfig-a9225.firebaseio.com",
+  projectId: "mastercomfig-a9225",
+  storageBucket: "mastercomfig-a9225.appspot.com",
+  messagingSenderId: "765315683049"
+};
+firebase.initializeApp(config);
+
+const db = firebase.firestore();
+db.settings({timestampsInSnapshots: true});
+
 String.prototype.toProperCase = function() {
   return this.replace(/\w\S*/g, function(txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
+};
+
+String.prototype.escapeRegExp = function() {
+  return this.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+};
+
+String.prototype.replaceAll = function(substr, replacement) {
+  return this.replace(new RegExp(substr.escapeRegExp(), 'g'), replacement);
 };
 
 function getResponse(url, file) {
@@ -62,4 +87,8 @@ function download(url, dest) {
         reject(error);
       });
   });
+}
+
+function fetchConfigData(path) {
+  return fetch(settings.get("config-data-root", "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/") + path);
 }

@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://*.github.com/ https://*.githubusercontent.com/">
   <link rel="stylesheet" href="node_modules/xel/themes/material.css">
   <script src="node_modules/xel/xel.min.js"></script>
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -16,7 +14,7 @@
   <meta charset="UTF-8">
   <title>mastercomfig</title>
 </head>
-<body>
+<body class="bg-light">
 <nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top"
      style="-webkit-app-region: drag; border-bottom: 1px solid #141414">
   <a href="#" id="slider-toggle">
@@ -45,14 +43,14 @@
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link disabled" href="#">
+    <a class="nav-link no-link" href="community.html">
       <x-icon
         name="share"></x-icon>
       Community</a>
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link" href="settings.html" id="settings">
+    <a class="nav-link no-link" href="settings.html">
       <x-icon
         name="settings"></x-icon>
       Settings</a>
@@ -186,8 +184,7 @@ solid #141414">
                   let maxPacketRate = Math.floor(uploadSpeed * 100000 / 1288);
                   // No we can't, better redo our modules
                   if (maxPacketRate < 66) {
-                    fetch(
-                      "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/modules.json")
+                    fetchConfigData("config/modules.json")
                       .then(response => {
                         return response.json();
                       }).then(json => {
@@ -196,7 +193,7 @@ solid #141414">
                         .forEach(packetRate => {
                           let scaledPacketRate = Math.max(10,
                             Math.floor(maxPacketRate /
-                            modules["networking.packet_rate"]["levels"][packetRate]["rel_rate"]));
+                              modules["networking.packet_rate"]["levels"][packetRate]["rel_rate"]));
                           Object.keys(
                             modules["networking.packet_buffer"]["levels"])
                             .forEach(interp => {
@@ -229,8 +226,8 @@ solid #141414">
                 let customStream = fs.createWriteStream(settings.get(
                   "tf2-folder") + "/tf/cfg/client-custom.cfg");
                 customStream.once("open", () => {
-                  fetch(
-                    "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/dynamic.json")
+                  fetchConfigData(
+                    "config/dynamic.json")
                     .then(response => {
                       return response.json();
                     }).then(json => {
@@ -241,16 +238,24 @@ solid #141414">
                     });
                     ipcRenderer.on("dynamic-data-reply", (event, arg) => {
                       console.log(arg);
+                      var winnerDynamic;
                       Object.keys(dynamics[arg.key]).forEach(dataKey => {
                         if (arg.data.toLowerCase()
                           .startsWith(dataKey.toLowerCase())) {
-                          Object.keys(dynamics[arg.key][dataKey])
-                            .forEach(cvar => {
-                              customStream.write(cvar + " " +
-                                dynamics[arg.key][dataKey][cvar] + "\n");
-                            });
+                          winnerDynamic = {
+                            key: arg.key,
+                            data: dataKey
+                          }
                         }
                       });
+                      if (winnerDynamic) {
+                        Object.keys(dynamics[winnerDynamic.key][winnerDynamic.data])
+                          .forEach(cvar => {
+                            customStream.write(cvar + " " +
+                              dynamics[winnerDynamic.key][winnerDynamic.data][cvar]
+                              + "\n");
+                          });
+                      }
                       count--;
                       if (count === 0) {
                         if (settings.get("customs")) {
@@ -293,21 +298,18 @@ solid #141414">
       });
   });
 
-  fetch(
-    "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/presets.json")
+  fetchConfigData("config/presets.json")
     .then(response => {
       return response.json();
     }).then(json => {
     presets = json.presets;
   }).then(() => {
-    fetch(
-      "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/modules.json")
+    fetchConfigData("config/modules.json")
       .then(response => {
         return response.json();
       }).then(json => {
       var modules = json.modules;
-      fetch(
-        "https://raw.githubusercontent.com/mastercoms/mastercomfig/beta/config/customs.json")
+      fetchConfigData("config/customs.json")
         .then(response => {
           return response.json();
         }).then(json => {
@@ -372,7 +374,7 @@ solid #141414">
             if (module.hasOwnProperty("name")) {
               friendlyName = module["name"];
             } else {
-              friendlyName = item.replace("_", " ").toProperCase();
+              friendlyName = item.replaceAll("_", " ").toProperCase();
             }
 
             var accordion = document.createElement("x-accordion");
@@ -381,8 +383,13 @@ solid #141414">
             label.style.width = "150px";
             var bold = document.createElement("strong");
             bold.innerText = friendlyName;
-            var description = document.createElement("x-label");
+            label.appendChild(bold);
+            header.appendChild(label);
+            accordion.appendChild(header);
+            var main = document.createElement("main");
+            main.id = key[0] + "_" + item;
             if (!module["no-data"]) {
+              var description = document.createElement("x-label");
               var moduleLevel = settings.get("modules." + moduleIndex);
               if (!moduleLevel) {
                 moduleLevel =
@@ -392,15 +399,11 @@ solid #141414">
               if (module["levels"][moduleLevel].hasOwnProperty("name")) {
                 moduleLevelName = module["levels"][moduleLevel]["name"];
               } else {
-                moduleLevelName = moduleLevel.replace("_", " ").toProperCase();
+                moduleLevelName =
+                  moduleLevel.replaceAll("_", " ").toProperCase();
               }
               description.innerText = moduleLevelName;
-              label.appendChild(bold);
-              header.appendChild(label);
               header.appendChild(description);
-              accordion.appendChild(header);
-              var main = document.createElement("main");
-              main.id = key[0] + "_" + item;
               var row = document.createElement("div");
               row.classList.add("row");
               main.appendChild(row);
@@ -438,7 +441,7 @@ solid #141414">
                 if (module["levels"][key].hasOwnProperty("name")) {
                   moduleName = module["levels"][key]["name"];
                 } else {
-                  moduleName = key.replace("_", " ").toProperCase();
+                  moduleName = key.replaceAll("_", " ").toProperCase();
                 }
                 moduleMenuItemLabel.innerText = moduleName;
                 moduleMenuItem.appendChild(moduleMenuItemLabel);
@@ -457,7 +460,7 @@ solid #141414">
                   moduleLevelName = moduleLevel["name"];
                 } else {
                   moduleLevelName =
-                    e.detail.newValue.replace("_", " ").toProperCase();
+                    e.detail.newValue.replaceAll("_", " ").toProperCase();
                 }
                 description.innerText = moduleLevelName;
 
@@ -475,18 +478,38 @@ solid #141414">
 
           tabContent.appendChild(card);
         });
+        var customContainer;
+        var customGroupAccordionMain;
         Object.keys(customs).forEach((item) => {
           var customEntry = customs[item];
           var splitCats = customEntry.category.split(".");
           splitCats = splitCats[0][0] + "_" + splitCats[1];
           var mainSection = document.getElementById(splitCats);
-          var itemName = item;
-          itemName = itemName.replace("_", " ");
-          if (item.charAt(0) !== item.charAt(0).toUpperCase()) {
+          var itemName = item.replaceAll("_", " ");
+          if (itemName.charAt(0) !== itemName.charAt(0).toUpperCase()) {
             itemName = itemName.toProperCase();
           }
-          if (!mainSection.innerHTML.endsWith("<hr>")) {
-            mainSection.appendChild(document.createElement("hr"));
+          console.log(mainSection.innerHTML.endsWith("<!--/custom-->"));
+          if (!mainSection.innerHTML.endsWith("<!--/custom-->")) {
+            customContainer = document.createElement("div");
+            if (mainSection.innerHTML.length === 0) {
+              mainSection.appendChild(document.createElement("hr"));
+              customGroupAccordionMain = mainSection;
+            } else {
+              mainSection.appendChild(document.createElement("hr"));
+              customContainer.classList.add("container");
+              var customGroupAccordion = document.createElement("x-accordion");
+              var customAccordionHeader = document.createElement("header");
+              var customAccordionLabel = document.createElement("x-label");
+              customAccordionLabel.innerText = "Custom settings";
+              customGroupAccordion.appendChild(customAccordionHeader);
+              customAccordionHeader.appendChild(customAccordionLabel);
+              customContainer.appendChild(customGroupAccordion);
+              customGroupAccordionMain = document.createElement("main");
+              customGroupAccordionMain.appendChild(document.createElement("hr"));
+              customGroupAccordion.appendChild(customGroupAccordionMain);
+              mainSection.appendChild(customContainer);
+            }
           }
 
           var box = document.createElement("x-box");
@@ -524,7 +547,7 @@ solid #141414">
                 customMenuItem.setAttribute("value", index);
                 var customMenuItemLabel = document.createElement("x-label");
                 customMenuItemLabel.innerText =
-                  selection.name.replace("_", " ").toProperCase();
+                  selection.name.replaceAll("_", " ").toProperCase();
                 customMenuItem.appendChild(customMenuItemLabel);
                 customMenu.appendChild(customMenuItem);
               });
@@ -628,8 +651,9 @@ solid #141414">
               break;
           }
 
-          mainSection.appendChild(box);
-          mainSection.appendChild(document.createElement("hr"));
+          customGroupAccordionMain.appendChild(box);
+          customGroupAccordionMain.appendChild(document.createElement("hr"));
+          mainSection.appendChild(document.createComment("/custom"));
         });
       });
     });

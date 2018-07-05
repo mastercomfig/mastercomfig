@@ -43,7 +43,7 @@
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link" href="community.html">
+    <a class="nav-link no-link active" href="#">
       <x-icon
         name="share"></x-icon>
       Community</a>
@@ -57,35 +57,15 @@
   </li>
   <hr>
   <li class="nav-item">
-    <a class="nav-link no-link active" href="about.html">
+    <a class="nav-link no-link" href="about.html">
       <x-icon
         name="info"></x-icon>
       About</a>
   </li>
   <hr>
 </ul>
-<div class="jumbotron-fluid" style="margin-top: 0; margin-bottom: 2rem">
-  <div style="background: rgb(0,150,136); padding: 100px 0">
-    <div class="container" style="color: rgb(178,223,219)">
-      <img src="img/mastercomfig_logo_transparent_i.png" style="max-height:
-      6rem; float:left">
-      <h1 class="display-1 text-light" style="margin: 0; line-height: 0.7">
-        mastercomfig</h1>
-      <h2 class="display-6" id="version"
-          style="margin-left: 6.6rem"></h2>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <h5>Debug info</h5>
-  <div class="row">
-    <div class="col">
-      <strong>Config commit</strong>
-    </div>
-    <div class="col">
-      <p id="commit"></p>
-    </div>
-  </div>
+<div class="container" id="content"
+     style="overflow-y: scroll; overflow-x: hidden; height: 75vh; padding-bottom: 48px;">
 </div>
 <script src="js/module.js"></script>
 <script src="node_modules/jquery/dist/jquery.min.js"
@@ -103,15 +83,41 @@
 <script>
   "use strict";
 
-  document.getElementById("version").innerText = app.getVersion();
+  firebase.auth().signInAnonymously().catch(function(error) {
+    // ignored
+  });
 
-  var sha = settings.get("config-sha");
-  var commitText = document.getElementById("commit");
-  if (sha) {
-    commitText.innerText = sha;
-  } else {
-    commitText.innerText = "Not applied";
-  }
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      var content = document.getElementById("content");
+
+      db.collection("configs").get().then(snapshot => {
+        snapshot.forEach(doc => {
+          var config = doc.data();
+          var card = document.createElement("x-card");
+          var header = document.createElement("header");
+          var title = document.createElement("h3");
+          title.innerText = config.name;
+          header.appendChild(title);
+          var switcher = document.createElement("x-switch");
+          switcher.setAttribute("skin", "big");
+          header.appendChild(switcher);
+          card.appendChild(header);
+          var main = document.createElement("main");
+          var description = document.createElement("p");
+          description.innerText = config.description;
+          main.appendChild(description);
+          card.appendChild(main);
+          content.appendChild(card);
+          var configSubs = settings.get("subscriptions.configs", []);
+          configSubs.push(doc.id);
+          settings.set("subscriptions.configs", configSubs);
+        });
+      });
+    } else {
+      // failed, ignored for now
+    }
+  });
 </script>
 </body>
 </html>
