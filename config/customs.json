@@ -138,7 +138,7 @@
     },
     "killfeed": {
       "category": "HUD.general",
-      "description": "The time that each killfeed item lasts in seconds."
+      "description": "The time that each killfeed item lasts in seconds.",
       "data": {
         "type": "stepper",
         "value": {
