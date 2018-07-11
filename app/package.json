@@ -29,7 +29,7 @@
   "homepage": "https://github.com/mastercoms/mastercomfig#readme",
   "devDependencies": {
     "electron": "^2.0.4",
-    "electron-builder": "^20.19.1"
+    "electron-builder": "^20.19.2"
   },
   "dependencies": {
     "@firebase/app-types": "^0.3.2",
@@ -41,6 +41,7 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "speedtest-net": "^1.4.3",
+    "systeminformation": "^3.42.4",
     "xel": "0.0.141"
   },
   "build": {
@@ -53,6 +54,7 @@
     "linux": {
       "description": "The mastercomfig app allows you to customize and optimize Team Fortress 2 easily.",
       "synopsis": "The desktop app for mastercomfig, a Team Fortress 2 config.",
+      "icon": "icons/1024x1024.png",
       "target": [
         "snap",
         "deb",

@@ -117,16 +117,16 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.8.tgz#38a936b60b898a1ad0f3719543ff1a1031f60f8b"
 
 "@types/node@^8.0.24":
-  version "8.10.20"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.20.tgz#fe674ea52e13950ab10954433a7824438aabbcac"
+  version "8.10.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.21.tgz#12b3f2359b27aa05a45d886c8ba1eb8d1a77e285"
 
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
 
 agent-base@4, agent-base@^4.1.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.2.0.tgz#9838b5c3392b962bad031e6a4c5e1024abec45ce"
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.2.1.tgz#d89e5999f797875674c07d87f260fc41e83e8ca9"
   dependencies:
     es6-promisify "^5.0.0"
 
@@ -144,8 +144,8 @@ ajv@^5.1.0:
     json-schema-traverse "^0.3.0"
 
 ajv@^6.5.1:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.5.1.tgz#88ebc1263c7133937d108b80c5572e64e1d9322d"
+  version "6.5.2"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.5.2.tgz#678495f9b82f7cca6be248dd92f59bff5e1f4360"
   dependencies:
     fast-deep-equal "^2.0.1"
     fast-json-stable-stringify "^2.0.0"
@@ -591,9 +591,9 @@ ejs@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
 
-electron-builder-lib@20.19.1, electron-builder-lib@~20.19.1:
-  version "20.19.1"
-  resolved "https://registry.yarnpkg.com/electron-builder-lib/-/electron-builder-lib-20.19.1.tgz#5d385130eeff74c192e4ad81b3295264a7899471"
+electron-builder-lib@20.19.2, electron-builder-lib@~20.19.1:
+  version "20.19.2"
+  resolved "https://registry.yarnpkg.com/electron-builder-lib/-/electron-builder-lib-20.19.2.tgz#1ad1053f8e02c87a5f949fec575fe55a8dff4b8b"
   dependencies:
     "7zip-bin" "~4.0.2"
     app-builder-bin "1.10.3"
@@ -623,16 +623,16 @@ electron-builder-lib@20.19.1, electron-builder-lib@~20.19.1:
     sumchecker "^2.0.2"
     temp-file "^3.1.3"
 
-electron-builder@^20.19.1:
-  version "20.19.1"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-20.19.1.tgz#a35288abfaade8aa7d57267e277474de6ca4b8c3"
+electron-builder@^20.19.2:
+  version "20.19.2"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-20.19.2.tgz#0c782ddbefa17192278963ab58c461b3a13dc99c"
   dependencies:
     bluebird-lst "^1.0.5"
     builder-util "5.13.2"
     builder-util-runtime "4.4.0"
     chalk "^2.4.1"
     dmg-builder "4.11.6"
-    electron-builder-lib "20.19.1"
+    electron-builder-lib "20.19.2"
     fs-extra-p "^4.6.1"
     is-ci "^1.1.0"
     lazy-val "^1.0.3"
@@ -982,8 +982,8 @@ home-path@^1.0.1:
   resolved "https://registry.yarnpkg.com/home-path/-/home-path-1.0.6.tgz#d549dc2465388a7f8667242c5b31588d29af29fc"
 
 hosted-git-info@^2.1.4, hosted-git-info@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.6.1.tgz#6e4cee78b01bb849dcf93527708c69fdbee410df"
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
 
 http-parser-js@>=0.4.0:
   version "0.4.13"
@@ -1373,7 +1373,7 @@ nan@^2.0.0:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
 
-needle@^2.2.0:
+needle@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/needle/-/needle-2.2.1.tgz#b5e325bd3aae8c2678902fa296f729455d1d3a7d"
   dependencies:
@@ -1389,12 +1389,12 @@ node-fetch@^1.0.1:
     is-stream "^1.0.1"
 
 node-pre-gyp@^0.10.0:
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.10.2.tgz#e8945c20ef6795a20aac2b44f036eb13cf5146e3"
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.10.3.tgz#3070040716afdc778747b61b6887bf78880b80fc"
   dependencies:
     detect-libc "^1.0.2"
     mkdirp "^0.5.1"
-    needle "^2.2.0"
+    needle "^2.2.1"
     nopt "^4.0.1"
     npm-packlist "^1.1.6"
     npmlog "^4.0.2"
@@ -2015,6 +2015,10 @@ supports-color@^5.3.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.4.0.tgz#1c6b337402c2137605efe19f10fec390f6faab54"
   dependencies:
     has-flag "^3.0.0"
+
+systeminformation@^3.42.4:
+  version "3.42.4"
+  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-3.42.4.tgz#6a36fe578975e6c95549932909f2e2c995ac4941"
 
 tar@^4:
   version "4.4.4"

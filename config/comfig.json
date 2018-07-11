@@ -1,7 +1,7 @@
 {
   "entries": {
     "net_maxpacketdrop": 1000,
-    "net_splitrate": 3,
+    "net_splitrate": 2,
     "cl_timeout": 70,
     "hud_escort_interp": 0.1,
     "net_maxfilesize": 64,

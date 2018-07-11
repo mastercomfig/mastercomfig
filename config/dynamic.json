@@ -54,7 +54,8 @@
         "cl_smooth": 0,
         "net_splitrate": 1,
         "snd_delay_sound_shift": 0.03,
-        "snd_mixahead": 0.1
+        "snd_mixahead": 0.1,
+        "tf_time_loading_item_panels": 0.0001
       },
       "2_": {
         "cl_smooth": 0,
@@ -70,11 +71,13 @@
       },
       "5_": {
         "net_splitrate": 4,
-        "snd_delay_sound_shift": 0.005
+        "snd_delay_sound_shift": 0.005,
+        "tf_time_loading_item_panels": 0.0005
       },
       "6_": {
         "net_splitrate": 8,
-        "snd_delay_sound_shift": 0.005
+        "snd_delay_sound_shift": 0.005,
+        "tf_time_loading_item_panels": 0.0005
       }
     },
     "software.os.name": {

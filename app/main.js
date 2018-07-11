@@ -1,7 +1,8 @@
 "use strict";
 
-const {app, BrowserWindow, ipcMain, session} = require("electron");
+const {app, BrowserWindow, ipcMain, session, dialog} = require("electron");
 const os = require("os");
+const si = require("systeminformation");
 const settings = require("electron-settings");
 const autoUpdater = require("electron-updater").autoUpdater;
 const path = require("path");
@@ -55,53 +56,21 @@ function createWindow() {
   });
 }
 
-let badVendors = ["Mesa"];
-
 function getDynamicData(name, callback) {
   switch (name) {
     case "hardware.gpu.vendor":
-      if (gpuWindow === null) {
-        gpuWindow = new BrowserWindow({
-          webPreferences: {
-            offscreen: true,
-            preload: path.join(__dirname, "js/gpu.js")
-          },
-          frame: false,
-          show: false
-        });
-        gpuWindow.loadURL(url.format({
-          pathname: "gpu",
-          protocol: "chrome:",
-          slashes: true
-        }));
-      }
-      gpuWindow.webContents.executeJavaScript(
-        "var browserBridge = { onGpuInfoUpdate:function(arg){sendGpuInfo(arg);}};");
-      gpuWindow.webContents.executeJavaScript(
-        "chrome.send('browserBridgeInitialized');");
-
-      ipcMain.on("gpu-info", (event, arg) => {
-        let glVendor = null;
-        arg.basic_info.forEach((item) => {
-          if (item.description === "GL_VENDOR") {
-            if (glVendor === -1) {
-              callback(item.value);
+      si.graphics()
+        .then(data => {
+          let currentVendor = "none";
+          data.controllers.forEach(card => {
+            if (!currentVendor || currentVendor === "Intel") {
+              currentVendor = card.vendor;
             } else {
-              glVendor = item.value;
+              return;
             }
-          } else if (item.description === "Driver vendor") {
-            if (badVendors.includes(item.value)) {
-              if (glVendor) {
-                callback(glVendor);
-              } else {
-                glVendor = -1;
-              }
-            } else {
-              callback(item.value);
-            }
-          }
+          });
+          callback(currentVendor);
         });
-      });
       break;
     case "hardware.cpu.cores":
       callback(os.cpus().length.toString() + "_");
@@ -142,8 +111,31 @@ app.on("ready", () => {
   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
     callback({responseHeaders: `default-src 'none'`});
   });
+
   createWindow();
+
   autoUpdater.allowPrerelease = true;
   autoUpdater.allowDowngrade = true;
-  autoUpdater.checkForUpdatesAndNotify();
+  autoUpdater.checkForUpdates();
 });
+
+autoUpdater.on('update-available', () => {
+  dialog.showMessageBox({
+    title: "mastercomfig update",
+    message: "We've found and started downloading a new update for" +
+    " mastercomfig."
+  });
+});
+
+
+autoUpdater.on('update-downloaded', () => {
+  dialog.showMessageBox({
+    title: "mastercomfig update",
+    message: "The update is ready to go. Be right back" +
+    " while we install it!"
+  }, () => {
+    setImmediate(() => autoUpdater.quitAndInstall(true, true))
+  });
+});
+
+
