@@ -14,7 +14,6 @@
     "mat_vsync": 0,
     "engine_no_focus_sleep": 0,
     "r_fastzreject": 1,
-    "r_occludermincount": 1,
     "host_flush_threshold": 0,
     "r_norefresh": 1,
     "fast_fogvolume": 1,

@@ -83,6 +83,7 @@
             "cl_phys_props_respawndist": 3000,
             "cl_phys_props_respawnrate": 120,
             "r_drawdetailprops": 1,
+            "r_staticprop_lod": -1,
             "r_3dsky": 1,
             "rope_rendersolid": 1,
             "r_ropetranslucent": 1,
@@ -101,6 +102,7 @@
             "cl_phys_props_respawndist": 3000,
             "cl_phys_props_respawnrate": 120,
             "r_drawdetailprops": 1,
+            "r_staticprop_lod": 0,
             "r_3dsky": 1,
             "rope_rendersolid": 1,
             "r_ropetranslucent": 1,
@@ -108,7 +110,8 @@
             "rope_wind_dist": 1000,
             "rope_subdiv": 7
           },
-          "detail_props": "ultra"
+          "detail_props": "ultra",
+          "dxsupport": "ropes-on"
         }
       }
     },
@@ -307,7 +310,8 @@
             "tf_particles_disable_weather": 1,
             "mat_reduceparticles": 1,
             "cl_new_impact_effects": 0,
-            "r_drawflecks": 0
+            "r_drawflecks": 0,
+            "violence_hblood": 0
           },
           "dxsupport": "particles-low",
           "description": "Reduced particle effects and bullet tracers. Best performance, but has the least visual cues."
@@ -322,7 +326,8 @@
             "tf_particles_disable_weather": 1,
             "mat_reduceparticles": 1,
             "cl_new_impact_effects": 0,
-            "r_drawflecks": 1
+            "r_drawflecks": 1,
+            "violence_hblood": 1
           },
           "dxsupport": "particles-low",
           "description": "Most gameplay effecting particle effects turned on at low quality."
@@ -337,7 +342,8 @@
             "tf_particles_disable_weather": 0,
             "mat_reduceparticles": 0,
             "cl_new_impact_effects": 1,
-            "r_drawflecks": 1
+            "r_drawflecks": 1,
+            "violence_hblood": 1
           },
           "dxsupport": "particles-high",
           "description": "All particle effects turned on at maximum quality. Shows more effects and requires more graphical performance."
@@ -815,15 +821,13 @@
         "off": {
           "values": {
             "cl_burninggibs": 0,
-            "violence_hblood": 1,
-            "violence_hgibs": 1,
+            "violence_hgibs": 0,
             "props_break_max_pieces": 0
           }
         },
         "medium": {
           "values": {
             "cl_burninggibs": 0,
-            "violence_hblood": 1,
             "violence_hgibs": 1,
             "props_break_max_pieces": 2
           }
@@ -831,7 +835,6 @@
         "high": {
           "values": {
             "cl_burninggibs": 0,
-            "violence_hblood": 1,
             "violence_hgibs": 1,
             "props_break_max_pieces": -1
           }
@@ -840,7 +843,6 @@
           "description": "Gibs will be shown, and will be burning if the player gibbed while on fire.",
           "values": {
             "cl_burninggibs": 1,
-            "violence_hblood": 1,
             "violence_hgibs": 1,
             "props_break_max_pieces": -1
           }
