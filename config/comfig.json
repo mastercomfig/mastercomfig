@@ -41,9 +41,6 @@
     "snd_mixahead": 0.066,
     "dsp_enhance_stereo": 0,
     "snd_noextraupdate": 1,
-    "snd_async_spew_blocking": 0,
-    "tf_party_force_update": "",
-    "hud_reloadscheme": "",
-    "mem_compact": ""
+    "snd_async_spew_blocking": 0
   }
 }

@@ -68,6 +68,14 @@ function getDynamicData(name, callback) {
           callback(currentVendor);
         });
       break;
+    case "hardware.gpu.type":
+      getDynamicData("hardware.gpu.vendor", data => {
+        if (data === "Intel" || data === "%IntelliModder32%") {
+          callback("Intel");
+        } else {
+          callback("Dedicated");
+        }
+      });
     case "hardware.cpu.cores":
       callback(os.cpus().length.toString() + "_");
       break;
