@@ -61,7 +61,7 @@ function getDynamicData(name, callback) {
     case "hardware.gpu.vendor":
       si.graphics()
         .then(data => {
-          let currentVendor = "none";
+          let currentVendor;
           data.controllers.forEach(card => {
             if (!currentVendor || currentVendor === "Intel") {
               currentVendor = card.vendor;
@@ -69,6 +69,9 @@ function getDynamicData(name, callback) {
               return;
             }
           });
+          if (!currentVendor) {
+            currentVendor = "Intel";
+          }
           callback(currentVendor);
         });
       break;

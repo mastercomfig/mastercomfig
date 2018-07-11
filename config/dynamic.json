@@ -4,7 +4,6 @@
       "Intel": {
         "r_occludeemaxarea": 15,
         "r_occluderminarea": 1.5,
-        "r_occludermincount": 0,
         "mat_tonemapping_occlusion_use_stencil": 1,
         "mat_max_worldmesh_vertices": 1024,
         "r_glint_procedural": 1,
@@ -12,33 +11,29 @@
         "mat_postprocess_y": 1
       },
       "Nvidia": {
-        "r_occludeemaxarea": 4,
-        "r_occluderminarea": 10,
-        "r_occludermincount": 1,
+        "r_occludeemaxarea": 7,
+        "r_occluderminarea": 4,
         "mat_tonemapping_occlusion_use_stencil": 0,
         "mat_postprocess_x": 4,
         "mat_postprocess_y": 4
       },
       "AMD": {
-        "r_occludeemaxarea": 4,
-        "r_occluderminarea": 10,
-        "r_occludermincount": 1,
+        "r_occludeemaxarea": 7,
+        "r_occluderminarea": 4,
         "mat_tonemapping_occlusion_use_stencil": 0,
         "mat_postprocess_x": 4,
         "mat_postprocess_y": 4
       },
       "ATI": {
-        "r_occludeemaxarea": 4,
-        "r_occluderminarea": 10,
-        "r_occludermincount": 1,
+        "r_occludeemaxarea": 7,
+        "r_occluderminarea": 4,
         "mat_tonemapping_occlusion_use_stencil": 0,
         "mat_postprocess_x": 4,
         "mat_postprocess_y": 4
       },
       "Advanced Micro Devices": {
-        "r_occludeemaxarea": 4,
-        "r_occluderminarea": 10,
-        "r_occludermincount": 1,
+        "r_occludeemaxarea": 7,
+        "r_occluderminarea": 4,
         "mat_tonemapping_occlusion_use_stencil": 0,
         "mat_postprocess_x": 4,
         "mat_postprocess_y": 4

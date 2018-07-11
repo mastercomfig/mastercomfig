@@ -96,6 +96,8 @@
   <br>
   <x-button id="remove-modules">Reset to preset</x-button>
   <p>Removes any custom selections.</p>
+  <x-button id="remove-customs">Clear Overrides</x-button>
+  <p>Deletes all custom setting overrides.</p>
   <hr>
   <h3>Appearance</h3>
   <div class="row">
@@ -110,9 +112,7 @@
   <h3>Advanced Options</h3>
   <div class="row">
     <div class="col">
-      <x-button id="delete-this" style="margin-bottom: 1rem">Clear
-                                                             Settings
-      </x-button>
+      <x-button id="delete-this" style="margin-bottom: 1rem">Clear Settings</x-button>
       <p>Deletes all user settings so that the app has a clean state.</p>
     </div>
     <div class="col">
@@ -171,6 +171,11 @@ solid #141414">
 
   document.getElementById("remove-modules").addEventListener("click", () => {
     settings.delete("modules");
+    settings.delete("customs");
+  });
+
+  document.getElementById("remove-customs").addEventListener("click", () => {
+    settings.delete("customs");
   });
 
   document.getElementById("dev-tools").addEventListener("click", () => {

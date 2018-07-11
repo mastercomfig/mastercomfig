@@ -79,7 +79,8 @@ def detail_props(level, value):
 def cheap_water(level, value):
     global cheap_water_none_defined
 
-    cheap_water = {'partial': (0, 800),
+    cheap_water = {'minimal': (150, 750),
+                   'partial': (0, 150),
                    'full': (0, 0.1)}
 
     cheap_water_override = "cheap_water_" + value

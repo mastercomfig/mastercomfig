@@ -243,7 +243,8 @@
           "values": {
             "r_shadows": 0,
             "r_shadowrendertotexture": 0,
-            "r_flashlightdepthtexture": 0
+            "r_flashlightdepthtexture": 0,
+            "r_flashlightrender": 0
           },
           "description": "No shadows. Having no shadows will increase graphical performance."
         },
@@ -253,7 +254,8 @@
             "r_shadowrendertotexture": 0,
             "r_flashlightdepthtexture": 0,
             "cl_blobbyshadows": 1,
-            "r_shadowmaxrendered": 8
+            "r_shadowmaxrendered": 8,
+            "r_flashlightrender": 0
           },
           "description": "Blobby shadows. Having some form of shadows helps gameplay."
         },
@@ -263,7 +265,8 @@
             "r_shadowrendertotexture": 0,
             "r_flashlightdepthtexture": 0,
             "cl_blobbyshadows": 0,
-            "r_shadowmaxrendered": 12
+            "r_shadowmaxrendered": 12,
+            "r_flashlightrender": 0
           },
           "description": "Simple shadows."
         },
@@ -273,7 +276,8 @@
             "r_shadowrendertotexture": 1,
             "r_flashlightdepthtexture": 0,
             "cl_blobbyshadows": 0,
-            "r_shadowmaxrendered": 18
+            "r_shadowmaxrendered": 18,
+            "r_flashlightrender": 1
           },
           "description": "High quality model shadows."
         },
@@ -284,7 +288,8 @@
             "r_flashlightdepthtexture": 1,
             "r_flashlightdepthres": 1024,
             "cl_blobbyshadows": 0,
-            "r_shadowmaxrendered": 32
+            "r_shadowmaxrendered": 32,
+            "r_flashlightrender": 1
           },
           "description": "Highest quality shadows. Shadows will look the best, but it has the most performance impact."
         }
@@ -367,7 +372,7 @@
             "r_waterforceexpensive": 0,
             "r_waterforcereflectentities": 0
           },
-          "cheap_water": "off",
+          "cheap_water": "minimal",
           "description": "Water has simple world reflections."
         },
         "high": {
@@ -711,7 +716,8 @@
             "mp_decals": 0,
             "r_drawmodeldecals": 0,
             "r_renderoverlayfragment": 0,
-            "r_decalstaticprops": 0
+            "r_decalstaticprops": 0,
+            "r_drawbatchdecals": 0
           }
         },
         "low": {
@@ -722,17 +728,16 @@
             "r_decal_cover_count": 1,
             "r_decal_overlap_area": 0.4,
             "r_decal_overlap_count": 0,
-            "r_renderoverlayfragment": 1,
-            "r_overlayfademin": 384,
-            "r_overlayfademax": 512,
-            "r_decalstaticprops": 1,
-            "r_decal_cullsize": 200
+            "r_renderoverlayfragment": 0,
+            "r_decalstaticprops": 0,
+            "r_decal_cullsize": 200,
+            "r_drawbatchdecals": 0
           }
         },
         "medium": {
           "values": {
-            "r_decals": 96,
-            "mp_decals": 96,
+            "r_decals": 32,
+            "mp_decals": 32,
             "r_decal_cover_count": 1,
             "r_decal_overlap_area": 0.4,
             "r_decal_overlap_count": 0,
@@ -742,7 +747,8 @@
             "r_drawmodeldecals": 1,
             "r_maxmodeldecal": 9,
             "r_decalstaticprops": 1,
-            "r_decal_cullsize": 15
+            "r_decal_cullsize": 15,
+            "r_drawbatchdecals": 0
           }
         },
         "high": {
@@ -758,7 +764,8 @@
             "r_drawmodeldecals": 1,
             "r_maxmodeldecal": 32,
             "r_decalstaticprops": 1,
-            "r_decal_cullsize": 15
+            "r_decal_cullsize": 15,
+            "r_drawbatchdecals": 1
           }
         },
         "ultra": {
@@ -775,7 +782,8 @@
             "r_drawmodeldecals": 1,
             "r_maxmodeldecal": 32,
             "r_decalstaticprops": 1,
-            "r_decal_cullsize": 5
+            "r_decal_cullsize": 5,
+            "r_drawbatchdecals": 1
           }
         }
       }
@@ -787,7 +795,7 @@
           "values": {
             "cl_allowdownload": 0,
             "cl_allowupload": 0,
-            "r_spray_lifetime": 1,
+            "r_spray_lifetime": 0,
             "cl_playerspraydisable": 1
           }
         },
