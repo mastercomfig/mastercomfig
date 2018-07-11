@@ -1,25 +1,24 @@
 App Changes:
 
-* Fixed a bug with the start page keeping checkmarks even if switched to an invalid folder
-* Changed background color from white to a light gray for the light theme
-* Added mastercomfig community
-  * Currently, there is no support for sharing, but there are some configs shared by me!
-* Added support for addons
-* Fixed some names not replacing all underscores with spaces in the UI
-* Added support for custom config data hosting
-* Added labels to `client-custom.cfg` additions
-* Dynamic data detection now resolves conflicts when there are multiple matches
-* Improved the UI for custom settings
-* Added support for modules with no levels (entirely custom settings)
-* Hopefully fixed Linux packaging
+* Fixed dark mode on mastercomfig community
+* Improved GPU detection on hybrid systems by moving to a new detection system
+  * This may also improve performance and memory usage
+* Improved auto updating behavior to notify the user
+* Fixed the config sha using the beta branch instead of the dev branch
+* Attempted to fix missing Linux icon
+* Added a button to clear custom settings overrides
+* Reset to preset now also removed custom settings overrides
+* Added a tooltip to the custom setting override checkbox to make its purpose more clear
+* Updated some dependencies
 
 
 Config Changes:
+* Optimized memory settings
 * Optimized occlusion settings
-* Added some more HUD custom settings
-* Optimized splitrate for less load on the CPU
-* Disabled queued packet thread attempts on Linux
-* Reordered networking category to be last
+* Added dynamic scaling for item panel loading time
+* Fixed a few value typos/missing entries
+* Adjusted quality levels for water, shadows and decals for better performance on lower settings
+* 
 
 
 Coming soon:

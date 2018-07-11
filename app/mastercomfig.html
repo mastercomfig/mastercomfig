@@ -634,6 +634,7 @@ solid #141414">
 
           var box = document.createElement("x-box");
           var checkbox = document.createElement("x-checkbox");
+          checkbox.title = "Enable override?";
           if (settings.get("customs." + splitCats + "_" + item + ".used")) {
             checkbox.setAttribute("toggled", null);
           }

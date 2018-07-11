@@ -5,11 +5,8 @@ const os = require("os");
 const si = require("systeminformation");
 const settings = require("electron-settings");
 const autoUpdater = require("electron-updater").autoUpdater;
-const path = require("path");
-const url = require("url");
 
 let window = null;
-let gpuWindow = null;
 
 function createWindow() {
 
@@ -48,10 +45,6 @@ function createWindow() {
   });
 
   window.on("closed", () => {
-    if (gpuWindow !== null) {
-      gpuWindow.destroy();
-      gpuWindow = null;
-    }
     window = null;
   });
 }
