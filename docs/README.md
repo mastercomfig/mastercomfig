@@ -11,22 +11,11 @@
 
 # mastercomfig
 
-This config is by default for modern PCs and aims to disable heavily unoptimized
-features and adjust other settings where it does not affect behavior or visuals
-noticeably. However, the config is documented extensively and also has presets
-so that you may adjust settings to your needs/preferences.
+mastercomfig is a modern Team Fortress 2 config that makes it simple to customize the game to your liking.
 
-You may find that this config makes TF2 a lot smoother, eliminates stuttering,
-reduces load times and increases FPS. This is because this config is heavily
-tuned and the commands and values are based on TF2's source code, rather than
-just experiments, guesswork and trying to understand the vague/non-existent
-documentation.
+It comes packed with optimizations that increase FPS, reduce load times and make the game smoother for a wide variety of PCs.
 
-The config is constantly updated with tweaks, new features and documentation
-improvements — iterated upon based on user feedback and benchmarks. So if you
-think there's an unoptimal value, or if it's just as simple as a comment being
-confusing to you, report the problem and you'll most likely see a fix in a
-future update.
+Fine tune each individual settings TF2 has to offer with ease, or choose from the many presets to get your preferred balance between graphical quality and performance.
 
 ## Installation
 
@@ -35,25 +24,9 @@ future update.
 To make sure there are no user settings that conflict with the config, you will
 have to [clean up](#clean-up) your TF2 install.
 
-### 2. Download and install your preset and addons
+### 2. Download the app
 
-[Download](https://mastercomfig.com/download) the VPK files of your choice from the
-and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
-in a folder inside your `custom` folder, put them in the `custom` folder itself.
-You don't have to rename anything either, just drag the files as is into `custom`.
-Do not download the source code, and do not download from the `Clone or Download`
-button. Only download the VPK files from the
-[official site](https://mastercomfig.com/download).
-
-The VPK includes everything needed for the config to run, so you don't need to
-have an autoexec or run it using anything. If you already have an autoexec,
-you'll definitely want to read step 4 for more information on how to migrate
-to mastercomfig. **Don't edit the VPK either, step 4 has customization instructions.**
-
-To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
-**Properties**, go to the **Local Files** tab, and then click the
-**Browse Local Files...** button. Then in the files app that appears, open the
-`tf` folder and then open the `custom` folder.
+[Download](https://mastercomfig.com/7) and install the mastercomfig app.
 
 ### 3. Set Launch Options
 
@@ -67,10 +40,13 @@ You will also want to read about optional launch options and choosing a DirectX 
 
 ### 4. Custom configs
 
+For most people, the app with be enough for customization. But if you'd like to write your own custom settings,
+this section is for you.
+
 You can't use an `autoexec.cfg` with mastercomfig. Instead, you will have to use `custom.cfg`.
 
 So, if you already have an `autoexec.cfg`, just rename it to `custom.cfg`. Make sure you don't have a pre-existing
-full blown config like Comanglia's or Chris' config or some network config in your `autoexec.cfg`, as that will
+full blown config like Comanglia's or Chris' config or some network config in your `custom.cfg`, as that will
 conflict with mastercomfig.
 
 If you don't have an `autoexec.cfg`, you can create a `custom.cfg` in your `tf/cfg` folder to override any settings in the config.
@@ -91,15 +67,6 @@ For example, you can put `alias listenserver_c "exec mylistenserver"` in `custom
 You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
 
-To easily customize settings, you can use [modules](https://github.com/mastercoms/mastercomfig/wiki/Modules).
-
-To do finer customization through individual console variables and commands,
-you can look through the [config file on GitHub](https://github.com/mastercoms/mastercomfig/blob/release/config/mastercomfig/cfg/comfig.cfg) and add your preferences to your `custom.cfg`.
-
-It is also recommended to determine your optimal upload rate settings with [this tool](https://mastercoms.github.io/mastercomfig/upload).
-
-To get an idea of how to use custom configs, [see what](https://github.com/mastercoms/mastercomfig/wiki/List-of-custom-configs) other people in the community have done.
-
 ### 5. Fixing Issues
 
 Having issues? Check out some [troubleshooting instructions](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting).
@@ -111,12 +78,14 @@ level: [Windows](https://github.com/mastercoms/mastercomfig/wiki/Windows-Systems
 
 ## Updating
 
-When a new release comes out, check out the
-[latest release](https://github.com/mastercoms/mastercomfig/releases/latest) and
-then download the latest files and drag them into your `tf/custom` folder,
-replacing the old files.
+When a new release comes out, download the
+[latest update](https://github.com/mastercoms/mastercomfig/releases/latest) for the app.
 
-This config gets updates frequently, so to get the latest improvements, make
+For Windows, you should get automatic updates whenever they're available.
+
+On Linux, you'll be able to either use a repo for your distro or just install the app file again to update.
+
+This config gets updates frequently, so to know about the latest changes, make
 sure you check here for new releases frequently, or you can get notifications
 about updates on the [Discord](https://discord.gg/CuPb2zV),
 [Steam Group](https://steamcommunity.com/groups/comfig) or
@@ -207,20 +176,10 @@ or shoot)? Check out some [troubleshooting instructions](https://github.com/mast
 
 Here are a few awesome TF2 modifications:
 
-* [No Hats Mod](http://www.teamfortress.tv/35222/no-hats-mod) — Remove cosmetics
-  from players
 * [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
-* [Model Remover Mod](http://www.teamfortress.tv/46863/hamburgers-model-removal-mod-2018)
-  — Remove extra models
-* [Particle Limitation Pack](http://www.teamfortress.tv/22586/particle-limitation-pack)
-  — Reduce certain particles
-* [Clean TF2](http://www.teamfortress.tv/21756/prism-hud-clean-tf2)
-  — Make textures simple colors
 * [VTF Crosshair Pack](http://www.teamfortress.tv/35367/vtf-crosshair-pack)
   — New custom crosshairs
-* [yttrium's viewmodels](http://www.teamfortress.tv/34834/yttriums-competitive-viewmodels)
-  — Customize hiding individual viewmodels
 * [Transparent Viewmodels](http://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
   — Make viewmodels translucent
 * [Common scripts/binds](https://www.reddit.com/r/tf2scripthelp/wiki/commonscripts)
