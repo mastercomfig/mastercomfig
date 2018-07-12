@@ -102,6 +102,9 @@
         }
       }
     ],
+    "hardware.disk.type": [
+
+    ],
     "software.os.name": {
       "Linux": {
         "gl_pow2_tempmem": 1,

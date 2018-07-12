@@ -35,7 +35,7 @@ String.prototype.escapeRegExp = function() {
 };
 
 String.prototype.replaceAll = function(substr, replacement) {
-  return this.replace(new RegExp(substr.escapeRegExp(), 'g'), replacement);
+  return this.replace(new RegExp(substr.escapeRegExp(), "g"), replacement);
 };
 
 function getResponse(url, file) {
@@ -89,6 +89,14 @@ function download(url, dest) {
   });
 }
 
+let sha = config.get("config-sha");
+
+function setTargetSha(newSha) {
+  sha = newSha;
+}
+
 function fetchConfigData(path) {
-  return fetch(settings.get("config-data-root", "https://raw.githubusercontent.com/mastercoms/mastercomfig/dev/") + path);
+  return fetch(settings.get(
+    "config-data-root", "https://raw.githubusercontent.com/mastercoms/mastercomfig/" +
+    sha + "/") + path);
 }

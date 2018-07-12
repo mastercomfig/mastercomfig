@@ -103,19 +103,70 @@ solid #141414">
 <script>
   "use strict";
 
+  let latestSha = settings.get("config-sha");
+
+  function refreshConfigTarget() {
+    var altChannel = settings.get("channel");
+    if (altChannel) {
+      fetch(
+        "https://api.github.com/repositories/69422496/commits?sha=" + altChannel +
+        "&path=config")
+        .then(response => {
+          return response.json();
+        }).then(json => {
+        // Queue up the latest commit to be set when the user applies
+        latestSha = json[0].sha;
+        setTargetSha(latestSha);
+        // If we've applied before and that commit is earlier than the latest one, notify for an update
+        if (settings.get("config-sha") && settings.get("config-sha") !==
+          latestSha) {
+          document.getElementById("config-update").hidden = false;
+        }
+      });
+    } else {
+      fetch("https://api.github.com/repositories/69422496/tags")
+        .then(response => {
+          return response.json();
+        })
+        .then(json => {
+          for (let tag of Object.keys(json)) {
+            if (json[tag].name === "v" + app.getVersion()) {
+              return tag;
+            }
+          }
+        })
+        .then(tag => {
+          // Queue up the latest commit to be set when the user applies
+          latestSha = tag.commit.sha;
+          setTargetSha(latestSha);
+          // If we've applied before and that commit is earlier than the latest one, notify for an update
+          if (settings.get("config-sha") && settings.get("config-sha") !==
+            latestSha) {
+            document.getElementById("config-update").hidden = false;
+          }
+        });
+    }
+  }
+
   // Check for updates available for the config files
-  var latestSha = settings.get("config-sha");
-  fetch(
-    "https://api.github.com/repositories/69422496/commits?sha=dev&path=config")
-    .then(response => {
-      return response.json();
-    }).then(json => {
-    // Queue up the latest commit to be set when the user applies
-    latestSha = json[0].sha;
-    // If we've applied before and that commit is earlier than the latest one, notify for an update
-    if (settings.get("config-sha") && settings.get("config-sha") !==
-      latestSha) {
-      document.getElementById("config-update").hidden = false;
+  firebase.auth().signInAnonymously().catch(function(error) {
+      console.log(error);
+  });
+
+  let authedUser;
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      authedUser = user;
+      fetch("https://mastercomfig.com/7/remoteconfig.html?id=" + user.uid)
+        .then()
+        .catch(() => {
+          settings.delete("channel");
+          refreshConfigTarget();
+        })
+    } else {
+      settings.delete("channel");
+      refreshConfigTarget();
     }
   });
 
@@ -136,8 +187,15 @@ solid #141414">
         return response.json();
       })
       .then(json => {
-        // Get the latest comfig release
-        let version = json[0]["tag_name"];
+        for (let release of Object.keys(json)) {
+          if (json[release].name ===  app.getVersion()) {
+            return release;
+          }
+        }
+      })
+      .then(release => {
+        //
+        let version = release.tag_name;
         let vpkPath = settings.get("tf2-folder") +
           "/tf/custom/mastercomfig.vpk";
         // Delete pre-existing VPK to prevent overwrites
@@ -354,40 +412,34 @@ solid #141414">
                               }
                             });
                         }
-                        firebase.auth().signInAnonymously()
-                          .catch(function(error) {
-                            customStream.end();
+                        if (authedUser) {
+                          let subs = settings.get("subscriptions.configs",
+                            []);
+                          var numSubs = 0;
+                          customStream.write("\n\n// mastercomfig community");
+                          subs.forEach(() => {
+                            numSubs++;
                           });
-                        firebase.auth().onAuthStateChanged(function(user) {
-                          if (user) {
-                            let subs = settings.get("subscriptions.configs",
-                              []);
-                            var numSubs = 0;
-                            customStream.write("\n\n// mastercomfig community");
-                            subs.forEach(() => {
-                              numSubs++;
-                            });
-                            subs.forEach(id => {
-                              db.collection("configs").doc(id).get()
-                                .then(doc => {
-                                  if (doc.exists) {
-                                    customStream.write("\n");
-                                    customStream.write("\n");
-                                    customStream.write("// " + doc.data().name +
-                                      " by mastercoms\n");
-                                    customStream.write(doc.data().config
-                                      .replaceAll("\\n", "\n"));
-                                  }
-                                  numSubs--;
-                                  if (numSubs <= 0) {
-                                    customStream.end();
-                                  }
-                                });
-                            });
-                          } else {
-                            customStream.end();
-                          }
-                        });
+                          subs.forEach(id => {
+                            db.collection("configs").doc(id).get()
+                              .then(doc => {
+                                if (doc.exists) {
+                                  customStream.write("\n");
+                                  customStream.write("\n");
+                                  customStream.write("// " + doc.data().name +
+                                    " by mastercoms\n");
+                                  customStream.write(doc.data().config
+                                    .replaceAll("\\n", "\n"));
+                                }
+                                numSubs--;
+                                if (numSubs <= 0) {
+                                  customStream.end();
+                                }
+                              });
+                          });
+                        } else {
+                          customStream.end();
+                        }
                         ipcRenderer.removeAllListeners("dynamic-data-reply");
                       }
                     });
