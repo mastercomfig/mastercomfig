@@ -89,8 +89,11 @@
     ],
     "hardware.memory.size.available": [
       {
-        "min":
-      }
+        "min": 2,
+        "values": {
+          "mem_max_heapsize": 512
+        }
+      },
       {
         "min": 4,
         "values": {

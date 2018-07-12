@@ -58,8 +58,6 @@ function getDynamicData(name, callback) {
           data.controllers.forEach(card => {
             if (!currentVendor || currentVendor === "Intel") {
               currentVendor = card.vendor;
-            } else {
-              return;
             }
           });
           if (!currentVendor) {
@@ -76,14 +74,33 @@ function getDynamicData(name, callback) {
           callback("Dedicated");
         }
       });
+      break;
     case "hardware.cpu.cores":
-      callback(os.cpus().length.toString() + "_");
+      callback(os.cpus().length);
       break;
     case "hardware.cpu.speed":
-      callback((os.cpus()[0].speed / 1000).toString().replace(".", "_"));
+      callback((os.cpus()[0].speed / 1000));
       break;
     case "hardware.cpu.model":
       callback(os.cpus()[0].model);
+      break;
+    case "hardware.memory.size.available":
+      si.mem()
+        .then(mem => {
+          callback(mem.available);
+        });
+      break;
+    case "hardware.disk.type":
+      si.blockDevices()
+        .then(disks => {
+           disks.forEach(disk => {
+             console.log(disk.name);
+             console.log(disk.type);
+             console.log(disk.mount);
+             console.log(disk.physical);
+           });
+           callback("SSD");
+        });
       break;
     case "software.os.name":
       callback(os.type());
