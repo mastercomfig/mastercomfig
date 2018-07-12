@@ -49,13 +49,6 @@
         "mat_tonemapping_occlusion_use_stencil": 0,
         "mat_postprocess_x": 4,
         "mat_postprocess_y": 4
-      },
-      "Advanced Micro Devices": {
-        "r_occludeemaxarea": 1,
-        "r_occluderminarea": 10,
-        "mat_tonemapping_occlusion_use_stencil": 0,
-        "mat_postprocess_x": 4,
-        "mat_postprocess_y": 4
       }
     },
     "hardware.cpu.cores": {
