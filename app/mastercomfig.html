@@ -103,7 +103,7 @@ solid #141414">
 <script>
   "use strict";
 
-  let latestSha = settings.get("config-sha");
+  let latestSha = settings.get("config-sha", "");
 
   function refreshConfigTarget() {
     var altChannel = settings.get("channel");
@@ -123,6 +123,8 @@ solid #141414">
           document.getElementById("config-update").hidden = false;
         }
       });
+    } else if (settings.get("dev-mode")) {
+      setTargetSha("");
     } else {
       fetch("https://api.github.com/repositories/69422496/tags")
         .then(response => {

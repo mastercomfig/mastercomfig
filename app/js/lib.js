@@ -89,7 +89,7 @@ function download(url, dest) {
   });
 }
 
-let sha = config.get("config-sha");
+let sha = settings.get("config-sha");
 
 function setTargetSha(newSha) {
   sha = newSha;
@@ -97,6 +97,6 @@ function setTargetSha(newSha) {
 
 function fetchConfigData(path) {
   return fetch(settings.get(
-    "config-data-root", "https://raw.githubusercontent.com/mastercoms/mastercomfig/" +
-    sha + "/") + path);
+    "config-data-url", "https://raw.githubusercontent.com/mastercoms/mastercomfig/") +
+    sha + "/" + path);
 }
