@@ -125,6 +125,7 @@ solid #141414">
       });
     } else if (settings.get("dev-mode")) {
       setTargetSha("");
+      console.log("dev-mode")
     } else {
       fetch("https://api.github.com/repositories/69422496/tags")
         .then(response => {
@@ -148,6 +149,374 @@ solid #141414">
           }
         });
     }
+    initConfigData();
+  }
+
+  var modulesJson;
+
+  function initConfigData() {
+
+    fetchConfigData("config/presets.json")
+      .then(response => {
+        return response.json();
+      }).then(json => {
+      presets = json.presets;
+    }).then(() => {
+      fetchConfigData("config/modules.json")
+        .then(response => {
+          return response.json();
+        }).then(json => {
+        modulesJson = json.modules;
+        fetchConfigData("config/customs.json")
+          .then(response => {
+            return response.json();
+          }).then(json => {
+          var customs = json.entries;
+          var categoryMap = new Map();
+          Object.keys(modulesJson).forEach(key => {
+            var module = modulesJson[key];
+            if (module.hasOwnProperty("hidden") && module["hidden"]) {
+              return;
+            }
+
+            var catEntryList = key.split(".");
+            var category = catEntryList[0];
+            var entry = catEntryList[1];
+
+            if (categoryMap.has(category)) {
+              categoryMap.get(category).push(entry);
+            } else {
+              categoryMap.set(category, [entry]);
+            }
+          });
+
+          var catTabs = document.getElementById("cat-tabs");
+
+          var first = true;
+
+          categoryMap.forEach((value, key) => {
+            var keyName = key;
+            if (key.charAt(0) !== key.charAt(0).toUpperCase()) {
+              keyName = key.toProperCase();
+            }
+
+            var item = document.createElement("x-tab");
+            item.setAttribute("href", "#" + key + "-card");
+            var label = document.createElement("x-label");
+            label.innerText = keyName;
+            item.appendChild(label);
+            catTabs.appendChild(item);
+
+            var tabContent = document.getElementById("tab-content");
+            var card = document.createElement("x-card");
+            card.id = key + "-card";
+
+            if (first) {
+              item.setAttribute("selected", null);
+              currentTab = key + "-card";
+              first = false;
+            } else {
+              card.hidden = true;
+            }
+
+            item.addEventListener("click", () => {
+              document.getElementById(currentTab).hidden = true;
+              currentTab = key + "-card";
+              card.hidden = false;
+            });
+
+            value.forEach((item, index) => {
+              var moduleIndex = key + "." + item;
+              var module = modulesJson[moduleIndex];
+              var friendlyName = "";
+              if (module.hasOwnProperty("name")) {
+                friendlyName = module["name"];
+              } else {
+                friendlyName = item.replaceAll("_", " ").toProperCase();
+              }
+
+              var accordion = document.createElement("x-accordion");
+              var header = document.createElement("header");
+              var label = document.createElement("x-label");
+              label.style.width = "150px";
+              var bold = document.createElement("strong");
+              bold.innerText = friendlyName;
+              label.appendChild(bold);
+              header.appendChild(label);
+              accordion.appendChild(header);
+              var main = document.createElement("main");
+              main.id = key[0] + "_" + item;
+              if (!module["no-data"]) {
+                var description = document.createElement("x-label");
+                var moduleLevel = settings.get("modules." + moduleIndex);
+                if (!moduleLevel) {
+                  moduleLevel =
+                    presets[settings.get("preset")]["modules"][moduleIndex];
+                }
+                var moduleLevelName = "";
+                if (module["levels"][moduleLevel].hasOwnProperty("name")) {
+                  moduleLevelName = module["levels"][moduleLevel]["name"];
+                } else {
+                  moduleLevelName =
+                    moduleLevel.replaceAll("_", " ").toProperCase();
+                }
+                description.innerText = moduleLevelName;
+                header.appendChild(description);
+                var row = document.createElement("div");
+                row.classList.add("row");
+                main.appendChild(row);
+                var right = document.createElement("div");
+                right.classList.add("col-sm");
+                if (module.hasOwnProperty("description")) {
+                  var moduleDescription = document.createElement("p");
+                  moduleDescription.classList.add("lead");
+                  moduleDescription.innerText = module["description"];
+                  right.appendChild(moduleDescription);
+                }
+                var moduleLevelDescription = document.createElement("p");
+                right.appendChild(moduleLevelDescription);
+                var left = document.createElement("div");
+                left.classList.add("col-sm");
+                var moduleSelect = document.createElement("x-select");
+                moduleSelect.style.width = "100%";
+                left.appendChild(moduleSelect);
+                var moduleMenu = document.createElement("x-menu");
+                moduleSelect.appendChild(moduleMenu);
+                Object.keys(module["levels"]).forEach(key => {
+                  var moduleMenuItem = document.createElement("x-menuitem");
+                  moduleMenuItem.setAttribute("value", key);
+                  if (key === moduleLevel) {
+                    moduleMenuItem.setAttribute("toggled", null);
+                    if (module["levels"][key].hasOwnProperty("description")) {
+                      moduleLevelDescription.innerText =
+                        module["levels"][key]["description"];
+                    } else {
+                      moduleLevelDescription.innerText = "";
+                    }
+                  }
+                  var moduleMenuItemLabel = document.createElement("x-label");
+                  var moduleName = "";
+                  if (module["levels"][key].hasOwnProperty("name")) {
+                    moduleName = module["levels"][key]["name"];
+                  } else {
+                    moduleName = key.replaceAll("_", " ").toProperCase();
+                  }
+                  moduleMenuItemLabel.innerText = moduleName;
+                  moduleMenuItem.appendChild(moduleMenuItemLabel);
+                  moduleMenu.appendChild(moduleMenuItem);
+                });
+                moduleSelect.addEventListener("change", (e) => {
+                  var moduleLevel = module["levels"][e.detail.newValue];
+                  if (moduleLevel.hasOwnProperty("description")) {
+                    moduleLevelDescription.innerText = moduleLevel["description"];
+                  } else {
+                    moduleLevelDescription.innerText = "";
+                  }
+                  var moduleLevelName = "";
+
+                  if (moduleLevel.hasOwnProperty("name")) {
+                    moduleLevelName = moduleLevel["name"];
+                  } else {
+                    moduleLevelName =
+                      e.detail.newValue.replaceAll("_", " ").toProperCase();
+                  }
+                  description.innerText = moduleLevelName;
+
+                  settings.set("modules." + moduleIndex, e.detail.newValue);
+                });
+                row.appendChild(left);
+                row.appendChild(right);
+              }
+              accordion.appendChild(main);
+              card.appendChild(accordion);
+              if (index !== value.length - 1) {
+                card.appendChild(document.createElement("hr"));
+              }
+            });
+
+            tabContent.appendChild(card);
+          });
+          var customContainer;
+          var customGroupAccordionMain;
+          Object.keys(customs).forEach((item) => {
+            var customEntry = customs[item];
+            var splitCats = customEntry.category.split(".");
+            splitCats = splitCats[0][0] + "_" + splitCats[1];
+            var mainSection = document.getElementById(splitCats);
+            var itemName = item.replaceAll("_", " ");
+            if (itemName.charAt(0) !== itemName.charAt(0).toUpperCase()) {
+              itemName = itemName.toProperCase();
+            }
+            if (!mainSection.innerHTML.endsWith("<!--/custom-->")) {
+              customContainer = document.createElement("div");
+              if (mainSection.innerHTML.length === 0) {
+                mainSection.appendChild(document.createElement("hr"));
+                customGroupAccordionMain = mainSection;
+              } else {
+                mainSection.appendChild(document.createElement("hr"));
+                customContainer.classList.add("container");
+                var customGroupAccordion = document.createElement("x-accordion");
+                var customAccordionHeader = document.createElement("header");
+                var customAccordionLabel = document.createElement("x-label");
+                customAccordionLabel.innerText = "Custom settings";
+                customGroupAccordion.appendChild(customAccordionHeader);
+                customAccordionHeader.appendChild(customAccordionLabel);
+                customContainer.appendChild(customGroupAccordion);
+                customGroupAccordionMain = document.createElement("main");
+                customGroupAccordionMain.appendChild(
+                  document.createElement("hr"));
+                customGroupAccordion.appendChild(customGroupAccordionMain);
+                mainSection.appendChild(customContainer);
+              }
+            }
+
+            var box = document.createElement("x-box");
+            var checkbox = document.createElement("x-checkbox");
+            checkbox.title = "Enable override?";
+            if (settings.get("customs." + splitCats + "_" + item + ".used")) {
+              checkbox.setAttribute("toggled", null);
+            }
+            box.appendChild(checkbox);
+            var label = document.createElement("x-label");
+            box.appendChild(label);
+            var controlBox = document.createElement("x-box");
+            var labelsDiv = document.createElement("div");
+            labelsDiv.style.marginRight = "10px";
+            label.appendChild(controlBox);
+            controlBox.setAttribute("vertical", null);
+            var titleLabel = document.createElement("x-label");
+            var title = document.createElement("strong");
+            title.innerText = itemName;
+            titleLabel.appendChild(title);
+            labelsDiv.appendChild(titleLabel);
+            if (customEntry.description) {
+              var description = document.createElement("x-label");
+              description.innerText = customEntry.description;
+              labelsDiv.appendChild(description);
+            }
+            controlBox.appendChild(labelsDiv);
+            switch (customEntry.data.type) {
+              case "selector":
+                var customSelect = document.createElement("x-select");
+                box.appendChild(customSelect);
+                var customMenu = document.createElement("x-menu");
+                customSelect.appendChild(customMenu);
+                customEntry.data.value.forEach((selection, index) => {
+                  var customMenuItem = document.createElement("x-menuitem");
+                  customMenuItem.setAttribute("value", index);
+                  var customMenuItemLabel = document.createElement("x-label");
+                  customMenuItemLabel.innerText =
+                    selection.name.replaceAll("_", " ").toProperCase();
+                  customMenuItem.appendChild(customMenuItemLabel);
+                  customMenu.appendChild(customMenuItem);
+                });
+                checkbox.addEventListener("toggle", () => {
+                  settings.set("customs." + splitCats + "_" + item + ".used",
+                    checkbox.hasAttribute("toggled"));
+                  if (checkbox.hasAttribute("toggled")) {
+                    var customLevel = customEntry.data.value[parseInt(
+                      customSelect.value)];
+                    settings.set("customs." + splitCats + "_" + item + ".value",
+                      parseInt(customSelect.value));
+                    var cvars = "";
+                    Object.keys(customLevel.values).forEach((cvar, cvarI) => {
+                      cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
+                        customLevel.values[cvar];
+                    });
+                    settings.set("customs." + splitCats + "_" + item + ".entry",
+                      cvars);
+                  }
+                });
+                customSelect.addEventListener("change", (e) => {
+                  var customLevel = customEntry.data.value[parseInt(
+                    e.detail.newValue)];
+                  settings.set("customs." + splitCats + "_" + item + ".value",
+                    parseInt(e.detail.newValue));
+                  var cvars = "";
+                  Object.keys(customLevel.values).forEach((cvar, cvarI) => {
+                    cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
+                      customLevel.values[cvar];
+                  });
+                  settings.set("customs." + splitCats + "_" + item + ".entry",
+                    cvars);
+                });
+                break;
+              case "toggle":
+                var switcher = document.createElement("x-switch");
+                box.appendChild(switcher);
+                if (settings.get("customs." + splitCats + "_" + item +
+                  ".value")) {
+                  switcher.setAttribute("toggled", null);
+                }
+                checkbox.addEventListener("toggle", () => {
+                  settings.set("customs." + splitCats + "_" + item + ".used",
+                    checkbox.hasAttribute("toggled"));
+                  if (checkbox.hasAttribute("toggled")) {
+                    settings.set("customs." + splitCats + "_" + item + ".value",
+                      switcher.hasAttribute("toggled"));
+                    var cvars = "";
+                    customEntry.data.value.forEach((cvar, cvarI) => {
+                      cvars += (cvarI !== 0 ? ";" : "") + cvar +
+                        (switcher.hasAttribute("toggled") ? " 1" : " 0");
+                    });
+                    settings.set("customs." + splitCats + "_" + item + ".entry",
+                      cvars);
+                  }
+                });
+                switcher.addEventListener("toggle", () => {
+                  settings.set("customs." + splitCats + "_" + item + ".value",
+                    switcher.hasAttribute("toggled"));
+                  var cvars = "";
+                  customEntry.data.value.forEach((cvar, cvarI) => {
+                    cvars += (cvarI !== 0 ? ";" : "") + cvar +
+                      (switcher.hasAttribute("toggled") ? " 1" : " 0");
+                  });
+                  settings.set("customs." + splitCats + "_" + item + ".entry",
+                    cvars);
+                });
+                break;
+              case "slider":
+              case "stepper":
+                var num = document.createElement("x-numberinput");
+                var stepper = document.createElement("x-stepper");
+                num.appendChild(stepper);
+                num.setAttribute("min", customEntry.data.value.min);
+                var value = settings.get("customs." + splitCats + "_" + item +
+                  ".value");
+                if (!value) {
+                  value = customEntry.data.value.min;
+                }
+                num.value = value;
+                num.setAttribute("max", customEntry.data.value.max);
+                box.appendChild(num);
+                checkbox.addEventListener("toggle", () => {
+                  settings.set("customs." + splitCats + "_" + item + ".used",
+                    checkbox.hasAttribute("toggled"));
+                  if (checkbox.hasAttribute("toggled")) {
+                    settings.set("customs." + splitCats + "_" + item + ".value",
+                      num.getAttribute("value"));
+                    settings.set("customs." + splitCats + "_" + item +
+                      ".entry", customEntry.data.value.cvar + " " +
+                      num.getAttribute("value"));
+                  }
+                });
+                num.addEventListener("change", () => {
+                  settings.set("customs." + splitCats + "_" + item + ".value",
+                    num.getAttribute("value"));
+                  settings.set("customs." + splitCats + "_" + item +
+                    ".entry", customEntry.data.value.cvar + " " +
+                    num.getAttribute("value"));
+                });
+                break;
+            }
+
+            customGroupAccordionMain.appendChild(box);
+            customGroupAccordionMain.appendChild(document.createElement("hr"));
+            mainSection.appendChild(document.createComment("/custom"));
+          });
+        });
+      });
+    });
   }
 
   // Check for updates available for the config files
@@ -161,7 +530,10 @@ solid #141414">
     if (user) {
       authedUser = user;
       fetch("https://mastercomfig.com/7/remoteconfig.html?id=" + user.uid)
-        .then()
+        .then(() => {
+          settings.delete("channel");
+          refreshConfigTarget();
+        })
         .catch(() => {
           settings.delete("channel");
           refreshConfigTarget();
@@ -191,7 +563,7 @@ solid #141414">
       .then(json => {
         for (let release of Object.keys(json)) {
           if (json[release].name ===  app.getVersion()) {
-            return release;
+            return json[release];
           }
         }
       })
@@ -379,26 +751,29 @@ solid #141414">
                     ipcRenderer.on("dynamic-data-reply", (event, arg) => {
                       console.log(arg);
                       var winnerDynamic;
-                      Object.keys(dynamics[arg.key]).forEach(dataKey => {
-                        if (arg.data.toLowerCase()
-                          .startsWith(dataKey.toLowerCase())) {
-                          winnerDynamic = {
-                            key: arg.key,
-                            data: dataKey
-                          };
+                      if (Array.isArray(dynamics[arg.key])) {
+                      } else {
+                        Object.keys(dynamics[arg.key]).forEach(dataKey => {
+                          if (arg.data.toLowerCase()
+                            .startsWith(dataKey.toLowerCase())) {
+                            winnerDynamic = {
+                              key: arg.key,
+                              data: dataKey
+                            };
+                          }
+                        });
+                        if (winnerDynamic) {
+                          customStream.write("// " + winnerDynamic.key +
+                            ": " + winnerDynamic.data + "\n");
+                          Object.keys(
+                            dynamics[winnerDynamic.key][winnerDynamic.data])
+                            .forEach(cvar => {
+                              customStream.write(cvar + " " +
+                                dynamics[winnerDynamic.key][winnerDynamic.data][cvar]
+                                + "\n");
+                            });
+                          customStream.write("\n");
                         }
-                      });
-                      if (winnerDynamic) {
-                        customStream.write("// " + winnerDynamic.key +
-                          ": " + winnerDynamic.data + "\n");
-                        Object.keys(
-                          dynamics[winnerDynamic.key][winnerDynamic.data])
-                          .forEach(cvar => {
-                            customStream.write(cvar + " " +
-                              dynamics[winnerDynamic.key][winnerDynamic.data][cvar]
-                              + "\n");
-                          });
-                        customStream.write("\n");
                       }
                       count--;
                       if (count === 0) {
@@ -468,370 +843,6 @@ solid #141414">
             });
         });
       });
-  });
-
-  var modulesJson;
-
-  fetchConfigData("config/presets.json")
-    .then(response => {
-      return response.json();
-    }).then(json => {
-    presets = json.presets;
-  }).then(() => {
-    fetchConfigData("config/modules.json")
-      .then(response => {
-        return response.json();
-      }).then(json => {
-      modulesJson = json.modules;
-      fetchConfigData("config/customs.json")
-        .then(response => {
-          return response.json();
-        }).then(json => {
-        var customs = json.entries;
-        var categoryMap = new Map();
-        Object.keys(modulesJson).forEach(key => {
-          var module = modulesJson[key];
-          if (module.hasOwnProperty("hidden") && module["hidden"]) {
-            return;
-          }
-
-          var catEntryList = key.split(".");
-          var category = catEntryList[0];
-          var entry = catEntryList[1];
-
-          if (categoryMap.has(category)) {
-            categoryMap.get(category).push(entry);
-          } else {
-            categoryMap.set(category, [entry]);
-          }
-        });
-
-        var catTabs = document.getElementById("cat-tabs");
-
-        var first = true;
-
-        categoryMap.forEach((value, key) => {
-          var keyName = key;
-          if (key.charAt(0) !== key.charAt(0).toUpperCase()) {
-            keyName = key.toProperCase();
-          }
-
-          var item = document.createElement("x-tab");
-          item.setAttribute("href", "#" + key + "-card");
-          var label = document.createElement("x-label");
-          label.innerText = keyName;
-          item.appendChild(label);
-          catTabs.appendChild(item);
-
-          var tabContent = document.getElementById("tab-content");
-          var card = document.createElement("x-card");
-          card.id = key + "-card";
-
-          if (first) {
-            item.setAttribute("selected", null);
-            currentTab = key + "-card";
-            first = false;
-          } else {
-            card.hidden = true;
-          }
-
-          item.addEventListener("click", () => {
-            document.getElementById(currentTab).hidden = true;
-            currentTab = key + "-card";
-            card.hidden = false;
-          });
-
-          value.forEach((item, index) => {
-            var moduleIndex = key + "." + item;
-            var module = modulesJson[moduleIndex];
-            var friendlyName = "";
-            if (module.hasOwnProperty("name")) {
-              friendlyName = module["name"];
-            } else {
-              friendlyName = item.replaceAll("_", " ").toProperCase();
-            }
-
-            var accordion = document.createElement("x-accordion");
-            var header = document.createElement("header");
-            var label = document.createElement("x-label");
-            label.style.width = "150px";
-            var bold = document.createElement("strong");
-            bold.innerText = friendlyName;
-            label.appendChild(bold);
-            header.appendChild(label);
-            accordion.appendChild(header);
-            var main = document.createElement("main");
-            main.id = key[0] + "_" + item;
-            if (!module["no-data"]) {
-              var description = document.createElement("x-label");
-              var moduleLevel = settings.get("modules." + moduleIndex);
-              if (!moduleLevel) {
-                moduleLevel =
-                  presets[settings.get("preset")]["modules"][moduleIndex];
-              }
-              var moduleLevelName = "";
-              if (module["levels"][moduleLevel].hasOwnProperty("name")) {
-                moduleLevelName = module["levels"][moduleLevel]["name"];
-              } else {
-                moduleLevelName =
-                  moduleLevel.replaceAll("_", " ").toProperCase();
-              }
-              description.innerText = moduleLevelName;
-              header.appendChild(description);
-              var row = document.createElement("div");
-              row.classList.add("row");
-              main.appendChild(row);
-              var right = document.createElement("div");
-              right.classList.add("col-sm");
-              if (module.hasOwnProperty("description")) {
-                var moduleDescription = document.createElement("p");
-                moduleDescription.classList.add("lead");
-                moduleDescription.innerText = module["description"];
-                right.appendChild(moduleDescription);
-              }
-              var moduleLevelDescription = document.createElement("p");
-              right.appendChild(moduleLevelDescription);
-              var left = document.createElement("div");
-              left.classList.add("col-sm");
-              var moduleSelect = document.createElement("x-select");
-              moduleSelect.style.width = "100%";
-              left.appendChild(moduleSelect);
-              var moduleMenu = document.createElement("x-menu");
-              moduleSelect.appendChild(moduleMenu);
-              Object.keys(module["levels"]).forEach(key => {
-                var moduleMenuItem = document.createElement("x-menuitem");
-                moduleMenuItem.setAttribute("value", key);
-                if (key === moduleLevel) {
-                  moduleMenuItem.setAttribute("toggled", null);
-                  if (module["levels"][key].hasOwnProperty("description")) {
-                    moduleLevelDescription.innerText =
-                      module["levels"][key]["description"];
-                  } else {
-                    moduleLevelDescription.innerText = "";
-                  }
-                }
-                var moduleMenuItemLabel = document.createElement("x-label");
-                var moduleName = "";
-                if (module["levels"][key].hasOwnProperty("name")) {
-                  moduleName = module["levels"][key]["name"];
-                } else {
-                  moduleName = key.replaceAll("_", " ").toProperCase();
-                }
-                moduleMenuItemLabel.innerText = moduleName;
-                moduleMenuItem.appendChild(moduleMenuItemLabel);
-                moduleMenu.appendChild(moduleMenuItem);
-              });
-              moduleSelect.addEventListener("change", (e) => {
-                var moduleLevel = module["levels"][e.detail.newValue];
-                if (moduleLevel.hasOwnProperty("description")) {
-                  moduleLevelDescription.innerText = moduleLevel["description"];
-                } else {
-                  moduleLevelDescription.innerText = "";
-                }
-                var moduleLevelName = "";
-
-                if (moduleLevel.hasOwnProperty("name")) {
-                  moduleLevelName = moduleLevel["name"];
-                } else {
-                  moduleLevelName =
-                    e.detail.newValue.replaceAll("_", " ").toProperCase();
-                }
-                description.innerText = moduleLevelName;
-
-                settings.set("modules." + moduleIndex, e.detail.newValue);
-              });
-              row.appendChild(left);
-              row.appendChild(right);
-            }
-            accordion.appendChild(main);
-            card.appendChild(accordion);
-            if (index !== value.length - 1) {
-              card.appendChild(document.createElement("hr"));
-            }
-          });
-
-          tabContent.appendChild(card);
-        });
-        var customContainer;
-        var customGroupAccordionMain;
-        Object.keys(customs).forEach((item) => {
-          var customEntry = customs[item];
-          var splitCats = customEntry.category.split(".");
-          splitCats = splitCats[0][0] + "_" + splitCats[1];
-          var mainSection = document.getElementById(splitCats);
-          var itemName = item.replaceAll("_", " ");
-          if (itemName.charAt(0) !== itemName.charAt(0).toUpperCase()) {
-            itemName = itemName.toProperCase();
-          }
-          if (!mainSection.innerHTML.endsWith("<!--/custom-->")) {
-            customContainer = document.createElement("div");
-            if (mainSection.innerHTML.length === 0) {
-              mainSection.appendChild(document.createElement("hr"));
-              customGroupAccordionMain = mainSection;
-            } else {
-              mainSection.appendChild(document.createElement("hr"));
-              customContainer.classList.add("container");
-              var customGroupAccordion = document.createElement("x-accordion");
-              var customAccordionHeader = document.createElement("header");
-              var customAccordionLabel = document.createElement("x-label");
-              customAccordionLabel.innerText = "Custom settings";
-              customGroupAccordion.appendChild(customAccordionHeader);
-              customAccordionHeader.appendChild(customAccordionLabel);
-              customContainer.appendChild(customGroupAccordion);
-              customGroupAccordionMain = document.createElement("main");
-              customGroupAccordionMain.appendChild(
-                document.createElement("hr"));
-              customGroupAccordion.appendChild(customGroupAccordionMain);
-              mainSection.appendChild(customContainer);
-            }
-          }
-
-          var box = document.createElement("x-box");
-          var checkbox = document.createElement("x-checkbox");
-          checkbox.title = "Enable override?";
-          if (settings.get("customs." + splitCats + "_" + item + ".used")) {
-            checkbox.setAttribute("toggled", null);
-          }
-          box.appendChild(checkbox);
-          var label = document.createElement("x-label");
-          box.appendChild(label);
-          var controlBox = document.createElement("x-box");
-          var labelsDiv = document.createElement("div");
-          labelsDiv.style.marginRight = "10px";
-          label.appendChild(controlBox);
-          controlBox.setAttribute("vertical", null);
-          var titleLabel = document.createElement("x-label");
-          var title = document.createElement("strong");
-          title.innerText = itemName;
-          titleLabel.appendChild(title);
-          labelsDiv.appendChild(titleLabel);
-          if (customEntry.description) {
-            var description = document.createElement("x-label");
-            description.innerText = customEntry.description;
-            labelsDiv.appendChild(description);
-          }
-          controlBox.appendChild(labelsDiv);
-          switch (customEntry.data.type) {
-            case "selector":
-              var customSelect = document.createElement("x-select");
-              box.appendChild(customSelect);
-              var customMenu = document.createElement("x-menu");
-              customSelect.appendChild(customMenu);
-              customEntry.data.value.forEach((selection, index) => {
-                var customMenuItem = document.createElement("x-menuitem");
-                customMenuItem.setAttribute("value", index);
-                var customMenuItemLabel = document.createElement("x-label");
-                customMenuItemLabel.innerText =
-                  selection.name.replaceAll("_", " ").toProperCase();
-                customMenuItem.appendChild(customMenuItemLabel);
-                customMenu.appendChild(customMenuItem);
-              });
-              checkbox.addEventListener("toggle", () => {
-                settings.set("customs." + splitCats + "_" + item + ".used",
-                  checkbox.hasAttribute("toggled"));
-                if (checkbox.hasAttribute("toggled")) {
-                  var customLevel = customEntry.data.value[parseInt(
-                    customSelect.value)];
-                  settings.set("customs." + splitCats + "_" + item + ".value",
-                    parseInt(customSelect.value));
-                  var cvars = "";
-                  Object.keys(customLevel.values).forEach((cvar, cvarI) => {
-                    cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
-                      customLevel.values[cvar];
-                  });
-                  settings.set("customs." + splitCats + "_" + item + ".entry",
-                    cvars);
-                }
-              });
-              customSelect.addEventListener("change", (e) => {
-                var customLevel = customEntry.data.value[parseInt(
-                  e.detail.newValue)];
-                settings.set("customs." + splitCats + "_" + item + ".value",
-                  parseInt(e.detail.newValue));
-                var cvars = "";
-                Object.keys(customLevel.values).forEach((cvar, cvarI) => {
-                  cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
-                    customLevel.values[cvar];
-                });
-                settings.set("customs." + splitCats + "_" + item + ".entry",
-                  cvars);
-              });
-              break;
-            case "toggle":
-              var switcher = document.createElement("x-switch");
-              box.appendChild(switcher);
-              if (settings.get("customs." + splitCats + "_" + item +
-                ".value")) {
-                switcher.setAttribute("toggled", null);
-              }
-              checkbox.addEventListener("toggle", () => {
-                settings.set("customs." + splitCats + "_" + item + ".used",
-                  checkbox.hasAttribute("toggled"));
-                if (checkbox.hasAttribute("toggled")) {
-                  settings.set("customs." + splitCats + "_" + item + ".value",
-                    switcher.hasAttribute("toggled"));
-                  var cvars = "";
-                  customEntry.data.value.forEach((cvar, cvarI) => {
-                    cvars += (cvarI !== 0 ? ";" : "") + cvar +
-                      (switcher.hasAttribute("toggled") ? " 1" : " 0");
-                  });
-                  settings.set("customs." + splitCats + "_" + item + ".entry",
-                    cvars);
-                }
-              });
-              switcher.addEventListener("toggle", () => {
-                settings.set("customs." + splitCats + "_" + item + ".value",
-                  switcher.hasAttribute("toggled"));
-                var cvars = "";
-                customEntry.data.value.forEach((cvar, cvarI) => {
-                  cvars += (cvarI !== 0 ? ";" : "") + cvar +
-                    (switcher.hasAttribute("toggled") ? " 1" : " 0");
-                });
-                settings.set("customs." + splitCats + "_" + item + ".entry",
-                  cvars);
-              });
-              break;
-            case "slider":
-            case "stepper":
-              var num = document.createElement("x-numberinput");
-              var stepper = document.createElement("x-stepper");
-              num.appendChild(stepper);
-              num.setAttribute("min", customEntry.data.value.min);
-              var value = settings.get("customs." + splitCats + "_" + item +
-                ".value");
-              if (!value) {
-                value = customEntry.data.value.min;
-              }
-              num.value = value;
-              num.setAttribute("max", customEntry.data.value.max);
-              box.appendChild(num);
-              checkbox.addEventListener("toggle", () => {
-                settings.set("customs." + splitCats + "_" + item + ".used",
-                  checkbox.hasAttribute("toggled"));
-                if (checkbox.hasAttribute("toggled")) {
-                  settings.set("customs." + splitCats + "_" + item + ".value",
-                    num.getAttribute("value"));
-                  settings.set("customs." + splitCats + "_" + item +
-                    ".entry", customEntry.data.value.cvar + " " +
-                    num.getAttribute("value"));
-                }
-              });
-              num.addEventListener("change", () => {
-                settings.set("customs." + splitCats + "_" + item + ".value",
-                  num.getAttribute("value"));
-                settings.set("customs." + splitCats + "_" + item +
-                  ".entry", customEntry.data.value.cvar + " " +
-                  num.getAttribute("value"));
-              });
-              break;
-          }
-
-          customGroupAccordionMain.appendChild(box);
-          customGroupAccordionMain.appendChild(document.createElement("hr"));
-          mainSection.appendChild(document.createComment("/custom"));
-        });
-      });
-    });
   });
 </script>
 </body>
