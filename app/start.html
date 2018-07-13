@@ -228,7 +228,7 @@
         .then(json => {
           for (let tag of Object.keys(json)) {
             if (json[tag].name === "v" + app.getVersion()) {
-              return tag;
+              return json[tag];
             }
           }
           return json[0];
