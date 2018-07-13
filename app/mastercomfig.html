@@ -136,6 +136,7 @@ solid #141414">
               return tag;
             }
           }
+          return json[0];
         })
         .then(tag => {
           // Queue up the latest commit to be set when the user applies
@@ -529,9 +530,11 @@ solid #141414">
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       authedUser = user;
-      fetch("https://mastercomfig.com/7/remoteconfig.html?id=" + user.uid)
-        .then(() => {
-          settings.delete("channel");
+      fetch("https://api.mastercomfig.com/remoteconfig?id=" + user.uid)
+        .then(response => {
+            return response.json();
+          }).then(json => {
+          settings.set("channel", json.channel);
           refreshConfigTarget();
         })
         .catch(() => {
@@ -867,14 +870,20 @@ solid #141414">
               success.hidden = true;
             }, 1000);
           })
-          .catch((err) => {
+          .catch(error => {
             ring.hidden = true;
-            console.log(err);
-            document.getElementById("notification").innerText = err;
+            console.log(error);
+            document.getElementById("notification").innerText = error;
             document.getElementById("notification").opened = true;
             document.getElementById("apply-btn").disabled = false;
           });
       });
+    }).catch(error => {
+      ring.hidden = true;
+      console.log(error);
+      document.getElementById("notification").innerText = error;
+      document.getElementById("notification").opened = true;
+      document.getElementById("apply-btn").disabled = false;
     });
   });
 </script>
