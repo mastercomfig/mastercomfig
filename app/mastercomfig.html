@@ -534,13 +534,18 @@ solid #141414">
         .then(response => {
             return response.json();
           }).then(json => {
-          settings.set("channel", json.channel);
-          refreshConfigTarget();
+            if (!json || !json.channel || json.channel === "") {
+              settings.delete("channel");
+              refreshConfigTarget();
+            } else {
+              settings.set("channel", json.channel);
+              refreshConfigTarget();
+            }
         })
         .catch(() => {
           settings.delete("channel");
           refreshConfigTarget();
-        })
+        });
     } else {
       settings.delete("channel");
       refreshConfigTarget();

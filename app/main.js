@@ -170,7 +170,8 @@ autoUpdater.on('update-available', () => {
   dialog.showMessageBox({
     title: "mastercomfig update",
     message: "We've found and started downloading a new update for" +
-    " mastercomfig."
+    " the mastercomfig app.",
+    buttons: ["Okay, got it"]
   });
 });
 
@@ -179,9 +180,10 @@ autoUpdater.on('update-downloaded', () => {
   dialog.showMessageBox({
     title: "mastercomfig update",
     message: "The update is ready to go. Be right back" +
-    " while we install it!"
+    " while we install it!",
+    buttons: ["Okay, got it"]
   }, () => {
-    setImmediate(() => autoUpdater.quitAndInstall(true, true))
+    setImmediate(() => autoUpdater.quitAndInstall(true, true));
   });
 });
 
