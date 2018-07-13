@@ -122,9 +122,11 @@ solid #141414">
           latestSha) {
           document.getElementById("config-update").hidden = false;
         }
+        initConfigData();
       });
     } else if (settings.get("dev-mode")) {
       setTargetSha("");
+      initConfigData();
     } else {
       fetch("https://api.github.com/repositories/69422496/tags")
         .then(response => {
@@ -147,9 +149,9 @@ solid #141414">
             latestSha) {
             document.getElementById("config-update").hidden = false;
           }
+          initConfigData();
         });
     }
-    initConfigData();
   }
 
   var modulesJson;

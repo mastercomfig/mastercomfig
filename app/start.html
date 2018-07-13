@@ -171,32 +171,106 @@
     });
   });
 
-  fetchConfigData("config/presets.json")
-    .then(response => {
-      return response.json();
-    }).then(json => {
-    var selected = false;
-    var presetsMenu = document.getElementById("presets-menu");
-    var presets = json.presets;
-    Object.keys(presets).forEach(key => {
-      var friendlyName = key.replaceAll("_", " ").toProperCase();
-      var item = document.createElement("x-menuitem");
-      item.setAttribute("value", key);
-      var label = document.createElement("x-label");
-      label.innerText = friendlyName;
-      item.appendChild(label);
-      presetsMenu.appendChild(item);
+  function initConfigData() {
+    fetchConfigData("config/presets.json")
+      .then(response => {
+        return response.json();
+      }).then(json => {
+      var selected = false;
+      var presetsMenu = document.getElementById("presets-menu");
+      var presets = json.presets;
+      Object.keys(presets).forEach(key => {
+        var friendlyName = key.replaceAll("_", " ").toProperCase();
+        var item = document.createElement("x-menuitem");
+        item.setAttribute("value", key);
+        var label = document.createElement("x-label");
+        label.innerText = friendlyName;
+        item.appendChild(label);
+        presetsMenu.appendChild(item);
 
-    });
-    document.getElementById("presets-select")
-      .addEventListener("change", (e) => {
-        if (!selected) {
-          selected = true;
-          document.getElementById("preset-check").hidden = false;
-          stepProgress();
-        }
-        settings.set("preset", e.detail.newValue);
       });
+      document.getElementById("presets-select")
+        .addEventListener("change", (e) => {
+          if (!selected) {
+            selected = true;
+            document.getElementById("preset-check").hidden = false;
+            stepProgress();
+          }
+          settings.set("preset", e.detail.newValue);
+        });
+    });
+  }
+
+  let latestSha;
+
+  function refreshConfigTarget() {
+    var altChannel = settings.get("channel");
+    if (altChannel) {
+      fetch(
+        "https://api.github.com/repositories/69422496/commits?sha=" + altChannel +
+        "&path=config")
+        .then(response => {
+          return response.json();
+        }).then(json => {
+        // Queue up the latest commit to be set when the user applies
+        latestSha = json[0].sha;
+        setTargetSha(latestSha);
+        initConfigData();
+      });
+    } else if (settings.get("dev-mode")) {
+      setTargetSha("");
+      initConfigData();
+    } else {
+      fetch("https://api.github.com/repositories/69422496/tags")
+        .then(response => {
+          return response.json();
+        })
+        .then(json => {
+          for (let tag of Object.keys(json)) {
+            if (json[tag].name === "v" + app.getVersion()) {
+              return tag;
+            }
+          }
+          return json[0];
+        })
+        .then(tag => {
+          // Queue up the latest commit to be set when the user applies
+          latestSha = tag.commit.sha;
+          setTargetSha(latestSha);
+          initConfigData();
+        });
+    }
+  }
+
+  firebase.auth().signInAnonymously().catch(function(error) {
+    console.log(error);
+  });
+
+  let authedUser;
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      authedUser = user;
+      fetch("https://api.mastercomfig.com/remoteconfig?id=" + user.uid)
+        .then(response => {
+          return response.json();
+        }).then(json => {
+          if (!json || !json.channel || json.channel === "") {
+            settings.delete("channel");
+            refreshConfigTarget();
+          } else {
+            settings.set("channel", json.channel);
+            refreshConfigTarget();
+          }
+        })
+        .catch(() => {
+          settings.delete("channel");
+          refreshConfigTarget();
+        });
+    } else {
+      settings.delete("channel");
+      refreshConfigTarget();
+    }
   });
 </script>
 </body>

@@ -92,6 +92,7 @@ function download(url, dest) {
 let sha = settings.get("config-sha");
 
 function setTargetSha(newSha) {
+  settings.set("config-sha", newSha);
   sha = newSha;
 }
 
