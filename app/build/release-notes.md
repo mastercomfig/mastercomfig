@@ -13,7 +13,6 @@ App Changes:
 * Fixed custom setting overrides not being applied last to `client-custom.cfg`
 * Improved formatting and labeling for `client-custom.cfg`
 
-
 Config Changes:
 * Changed behavior of clean up commands to run after everything rather than at the end of the base config
   * This should resolve HUD errors from applying anti-aliasing as well as some minor memory usage issues
