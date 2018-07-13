@@ -79,7 +79,10 @@ function getDynamicData(name, callback) {
       callback(os.cpus().length);
       break;
     case "hardware.cpu.speed":
-      callback((os.cpus()[0].speed / 1000));
+      si.cpu()
+        .then(cpu => {
+          callback(cpu.speedmax);
+        });
       break;
     case "hardware.cpu.model":
       callback(os.cpus()[0].model);
@@ -87,7 +90,7 @@ function getDynamicData(name, callback) {
     case "hardware.memory.size.available":
       si.mem()
         .then(mem => {
-          callback(mem.available);
+          callback(mem.available / 1073741824);
         });
       break;
     case "hardware.disk.type":

@@ -22,6 +22,7 @@
     "hardware.cpu.cores": [
      {
        "max": 1,
+       "suffix": " cores",
        "values": {
          "mat_queue_mode": -1,
          "snd_mix_async": 0,
@@ -31,6 +32,7 @@
       },
       {
         "max": 2,
+       "suffix": " cores",
         "values": {
           "snd_mix_async": 0,
           "snd_async_fullyasync": 0,
@@ -41,6 +43,7 @@
     "hardware.cpu.speed": [
       {
         "max": 1.7,
+        "suffix": "GHz",
         "values": {
           "cl_smooth": 0,
           "net_splitrate": 1,
@@ -50,28 +53,31 @@
         }
       },
       {
-        "max": 2.4,
+        "min": 2.4,
+        "suffix": "GHz",
         "values": {
-          "cl_smooth": 0,
           "net_splitrate": 1,
           "snd_mixahead": 0.08
         }
       },
       {
-        "max": 3.2,
+        "min": 3.2,
+        "suffix": "GHz",
         "values": {
           "net_splitrate": 1
         }
       },
       {
-        "max": 4,
+        "min": 4,
+        "suffix": "GHz",
         "values": {
           "net_splitrate": 2,
           "snd_delay_sound_shift": 0.008
         }
       },
       {
-        "max": 4.8,
+        "min": 4.7,
+        "suffix": "GHz",
         "values": {
           "net_splitrate": 4,
           "snd_delay_sound_shift": 0.005,
@@ -80,6 +86,7 @@
       },
       {
         "min": 5.2,
+        "suffix": "GHz",
         "values": {
           "net_splitrate": 8,
           "snd_delay_sound_shift": 0.005,
@@ -89,22 +96,42 @@
     ],
     "hardware.memory.size.available": [
       {
-        "min": 2,
+        "max": 1,
+        "suffix": "GB",
         "values": {
+          "cl_always_flush_models": 1
+        }
+      },
+      {
+        "min": 2,
+        "suffix": "GB",
+        "values": {
+          "lzma_persistent_buffer": 1,
           "mem_max_heapsize": 512
         }
       },
       {
         "min": 4,
+        "suffix": "GB",
         "values": {
-          "datacachesize": 512,
-          "mem_max_heapsize": 640
+          "lzma_persistent_buffer": 1,
+          "mem_max_heapsize": 640,
+          "datacachesize": 512
         }
       }
     ],
-    "hardware.disk.type": [
-
-    ],
+    "hardware.disk.type": {
+      "SSD": {
+        "mod_load_anims_async": 1,
+        "mod_load_mesh_async": 1,
+        "mod_load_vcollide_async": 1,
+        "mod_touchalldata": 0
+      },
+      "HDD": {
+        "mod_load_anims_async": 1,
+        "mod_load_mesh_async": 1
+      }
+    },
     "software.os.name": {
       "Linux": {
         "gl_pow2_tempmem": 1,

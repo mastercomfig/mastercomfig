@@ -80,10 +80,12 @@
   <h5>Debug info</h5>
   <div class="row">
     <div class="col">
-      <strong>Config commit</strong>
+      <p><strong>Config commit</strong></p>
+      <p><strong>Release channel</strong></p>
     </div>
     <div class="col">
-      <p id="commit"></p>
+      <p id="commit">Not applied</p>
+      <p id="channel">Main</p>
     </div>
   </div>
 </div>
@@ -105,13 +107,18 @@
 
   document.getElementById("version").innerText = app.getVersion();
 
-  var sha = settings.get("config-sha");
-  var commitText = document.getElementById("commit");
-  if (sha) {
-    commitText.innerText = sha;
-  } else {
-    commitText.innerText = "Not applied";
+  function setDataToField(field, data) {
+    if (data) {
+      document.getElementById(field).innerText = data;
+    }
   }
+
+  function setSettingToField(field, setting) {
+    setDataToField(field, settings.get(setting));
+  }
+
+  setSettingToField("commit", "config-sha");
+  setSettingToField("channel", "channel");
 </script>
 </body>
 </html>
