@@ -56,7 +56,6 @@ function getDynamicData(name, callback) {
         .then(data => {
           let currentVendor;
           data.controllers.forEach(card => {
-            console.log(card.bus);
             if (!currentVendor || currentVendor === "Intel") {
               currentVendor = card.vendor;
             }

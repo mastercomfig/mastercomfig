@@ -138,6 +138,12 @@ solid #141414">
               return json[tag];
             }
           }
+          let baseVersion = app.getVersion().split("-")[0];
+          for (let tag of Object.keys(json)) {
+            if (json[tag].name.startsWith(baseVersion)) {
+              return json[tag];
+            }
+          }
           return json[0];
         })
         .then(tag => {
@@ -575,9 +581,15 @@ solid #141414">
       for (let release of Object.keys(json)) {
         if (json[release].name ===  app.getVersion()) {
           return json[release];
-          }
         }
-        return json[0];
+      }
+      let baseVersion = app.getVersion().split("-")[0];
+      for (let release of Object.keys(json)) {
+        if (json[release].name.startsWith(baseVersion)) {
+          return json[release];
+        }
+      }
+      return json[0];
     }).then(release => {
       let version = release.tag_name;
       let vpkPath = settings.get("tf2-folder") +
