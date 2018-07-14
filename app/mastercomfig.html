@@ -699,8 +699,12 @@ solid #141414">
                 let splitpacketRate = ";net_splitpacket_maxrate " +
                   Math.max(3500, Math.min(1048576,
                     parseFloat((uploadSpeed * 50000).toFixed(7))));
-                let maxClearTime = ";net_maxcleartime " + Math.max(0.0000001,
+                let maxClearTime = Math.max(0.0000001,
                   parseFloat((0.01288 / uploadSpeed).toFixed(7)));
+                if (maxClearTime === "1e-7") {
+                  maxClearTime = "0.0000001";
+                }
+                maxClearTime = ";net_maxcleartime " + maxClearTime;
                 modulesStream.write("alias run_n_upload \"" + rate +
                   splitpacketRate + maxClearTime + "\"\n");
                 // Check to see if we can actually reliably send at max rate
