@@ -402,8 +402,13 @@ solid #141414">
                 box.appendChild(customSelect);
                 var customMenu = document.createElement("x-menu");
                 customSelect.appendChild(customMenu);
+                console.log(customEntry);
                 customEntry.data.value.forEach((selection, index) => {
                   var customMenuItem = document.createElement("x-menuitem");
+                  if (settings.get("customs." + splitCats + "_" + item +
+                    ".value") === index) {
+                    customMenuItem.setAttribute("toggled", null);
+                  }
                   customMenuItem.setAttribute("value", index);
                   var customMenuItemLabel = document.createElement("x-label");
                   customMenuItemLabel.innerText =
