@@ -56,6 +56,7 @@ function getDynamicData(name, callback) {
         .then(data => {
           let currentVendor;
           data.controllers.forEach(card => {
+            console.log(card.bus);
             if (!currentVendor || currentVendor === "Intel") {
               currentVendor = card.vendor;
             }
@@ -68,7 +69,8 @@ function getDynamicData(name, callback) {
       break;
     case "hardware.gpu.type":
       getDynamicData("hardware.gpu.vendor", data => {
-        if (data === "Intel" || data === "%IntelliModder32%") {
+        if (data.toLowerCase().startsWith("intel") ||
+          data.toLowerCase().startsWith("%intellimodder32%")) {
           callback("Intel");
         } else {
           callback("Dedicated");
@@ -100,32 +102,45 @@ function getDynamicData(name, callback) {
           let tf2Part;
           let diskType;
           let physicalDisks = [];
-           disks.forEach(disk => {
-             if (!diskType) {
-               if (tf2Part) {
-                 if (tf2Part.name.startsWith(disk.name) && disk.type === "disk") {
-                   diskType = disk.physical;
-                 }
-               } else if (disk.mount &&
-                 tf2Folder.startsWith(disk.mount)) {
-                 tf2Part = disk;
-                 diskType = disk.physical;
-               } else if (disk.type === "disk") {
-                 physicalDisks.push(disk);
-               }
-             }
-           });
-           if (!diskType) {
-             physicalDisks.forEach(disk => {
-               if (tf2Part.name.startsWith(disk.name) && disk.type === "disk") {
-                 diskType = disk.physical;
-               }
-             });
-             if (!diskType) {
-               diskType = "HDD";
-             }
-           }
-           callback(diskType);
+          disks.forEach(disk => {
+            if (!diskType) {
+              if (tf2Part) {
+                if (tf2Part.name.startsWith(disk.name) && disk.type ===
+                  "disk") {
+                  diskType = disk.physical;
+                  if (os.type() === "Windows_NT") {
+                    si.diskLayout().then(physDisks => {
+                      physDisks.forEach(phys => {
+                        if (phys.serialNum === disk.serial) {
+                          diskType = phys.type;
+                          if (diskType === "HD") {
+                            diskType = "HDD";
+                          }
+                        }
+                      })
+                    });
+                  }
+                }
+              } else if (disk.mount &&
+                tf2Folder.startsWith(disk.mount)) {
+                tf2Part = disk;
+                diskType = disk.physical;
+              } else if (disk.type === "disk") {
+                physicalDisks.push(disk);
+              }
+            }
+          });
+          if (!diskType) {
+            physicalDisks.forEach(disk => {
+              if (tf2Part.name.startsWith(disk.name) && disk.type === "disk") {
+                diskType = disk.physical;
+              }
+            });
+            if (!diskType) {
+              diskType = "HDD";
+            }
+          }
+          callback(diskType);
         });
       break;
     case "software.os.name":
@@ -166,7 +181,7 @@ app.on("ready", () => {
   autoUpdater.checkForUpdates();
 });
 
-autoUpdater.on('update-available', () => {
+autoUpdater.on("update-available", () => {
   dialog.showMessageBox({
     title: "mastercomfig update",
     message: "We've found and started downloading a new update for" +
@@ -175,8 +190,7 @@ autoUpdater.on('update-available', () => {
   });
 });
 
-
-autoUpdater.on('update-downloaded', () => {
+autoUpdater.on("update-downloaded", () => {
   dialog.showMessageBox({
     title: "mastercomfig update",
     message: "The update is ready to go. Be right back" +
