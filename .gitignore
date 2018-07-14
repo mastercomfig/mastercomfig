@@ -15,3 +15,9 @@ dev/mastercomfig*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+.idea/
+app/
+build/
+venv/
+
