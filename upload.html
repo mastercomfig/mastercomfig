@@ -25,10 +25,10 @@
                   <br>
                   <small class="text-muted">If you stream or use other Internet upload services, please account for that by subtracting that upload usage from your speed.</small></p>
                 <p class="lead">2. Enter it here:</p>
-                <input class="form-control col-md-6" type="text" placeholder="Upload speed in Mb" id="upload">
+                <input class="form-control col-md-6" type="text" placeholder="Upload speed in Mbps" id="upload">
                 <br>
                 <p class="lead" id="rate-label">3. Put this in your custom.cfg:</p>
-                <code id="rate">rate 196608;net_splitpacket_maxrate 98304</code>
+                <code id="rate">rate 196608; net_splitpacket_maxrate 78643; net_maxcleartime 0.0081889</code>
             </div>
         </div>
     </header>
@@ -45,27 +45,27 @@
         });
       };
 
-      var base = "rate 196608;net_splitpacket_maxrate 98304";
+      var base = "rate 196608; net_splitpacket_maxrate 78643; net_maxcleartime 0.0081889";
       var field = document.getElementById('upload');
       var copy = document.getElementById('rate');
       field.addEventListener('input', function(e) {
-        var rate;
+        var upload;
         if (field.value) {
           var value = parseFloat(field.value);
-          value *= 100000; // convert 80% from Mb to B
-          if (value > 1048576) {
-            var uploadRate = 1048576;
-            var maxClearTime = 1288 / value;
-            rate = "rate 1048576; net_splitpacket_maxrate {0}; net_maxcleartime {1}".format(Math.min(1048576, Math.floor(value / 2)),
-                                                                                            Math.max(maxClearTime.toFixed(7), Number(0.0000001).toFixed(8)));
-          } else {
-            rate = "rate {0}; net_splitpacket_maxrate {1}".format(value,
-                                                                  Math.floor(value / 2));
+          if (value) {
+            var rate = Math.max(3500, Math.min(1048576,
+                  parseFloat((uploadSpeed * 75000).toFixed(7))));
+            var splitpacketRate = Math.max(3500, Math.min(1048576,
+                    parseFloat((uploadSpeed * 50000).toFixed(7))));
+            var maxClearTime = Math.max(0.0000001,
+                  parseFloat((0.01288 / uploadSpeed).toFixed(7)));
+            upload = "rate {0}; net_splitpacket_maxrate {1}; net_maxcleartime {2}".format(rate, splitpacketRate, maxClearTime);
           }
-        } else {
-          rate = base;
         }
-        copy.innerText = rate;
+        if (!upload) {
+          upload = base;
+        }
+        copy.innerText = upload;
       });
     </script>
   </body>
