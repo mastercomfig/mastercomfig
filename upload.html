@@ -55,6 +55,9 @@
                     parseFloat((uploadSpeed * 50000).toFixed(7))));
             var maxClearTime = Math.max(0.0000001,
                   parseFloat((0.01288 / uploadSpeed).toFixed(7)));
+            if (maxClearTime === "1e-7") {
+              maxClearTime = "0.0000001";
+            }
             upload = "rate {0}; net_splitpacket_maxrate {1}; net_maxcleartime {2}".format(rate, splitpacketRate, maxClearTime);
           }
         }
