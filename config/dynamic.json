@@ -2,9 +2,8 @@
   "entries": {
     "hardware.gpu.type": {
       "Intel": {
-        "r_occludeemaxarea": 4,
-        "r_occluderminarea": 1.5,
-        "r_occludermincount": 1,
+        "r_occludeemaxarea": 2.5,
+        "r_occluderminarea": 7.5,
         "mat_tonemapping_occlusion_use_stencil": 1,
         "mat_max_worldmesh_vertices": 1024,
         "r_glint_procedural": 1,
