@@ -861,8 +861,8 @@
         },
         "medium": {
           "values": {
-            "cl_ragdoll_fade_time": 5,
-            "cl_ragdoll_forcefade": 1,
+            "cl_ragdoll_fade_time": 3,
+            "cl_ragdoll_forcefade": 0,
             "cl_ragdoll_physics_enable": 1,
             "ragdoll_sleepaftertime": 1.0
           }
