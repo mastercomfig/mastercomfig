@@ -47,8 +47,8 @@
       field.addEventListener('input', function(e) {
         var upload;
         if (field.value) {
-          var value = parseFloat(field.value);
-          if (value) {
+          var uploadSpeed = parseFloat(field.value);
+          if (uploadSpeed) {
             var rate = Math.max(3500, Math.min(1048576,
                   parseFloat((uploadSpeed * 75000).toFixed(7))));
             var splitpacketRate = Math.max(3500, Math.min(1048576,
