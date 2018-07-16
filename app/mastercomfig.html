@@ -738,7 +738,7 @@ solid #141414">
                   let splitpacketRate = ";net_splitpacket_maxrate " +
                     (uploadSpeed * 93750).floorD(7).clamp(3500, 1048576);
                   let maxClearTime =
-                    Math.max(1 / 66, 0.0114489 / uploadSpeed).floorD(7);
+                    Math.max(0.0000001, (0.0114489 / uploadSpeed).floorD(7));
                   maxClearTime = ";net_maxcleartime " + maxClearTime;
                   modulesStream.write("alias run_n_upload \"" + rateS +
                     splitpacketRate + maxClearTime + "\"\n");
@@ -788,8 +788,8 @@ solid #141414">
                             modulesStream.write("alias interp_" +
                               packetRate + "_" + interp + " \"cl_interp " +
                               +
-                                modulesJson["networking.packet_buffer"]["levels"][interp]["interp_ratio"] /
-                              scaledUpdateRate
+                                (modulesJson["networking.packet_buffer"]["levels"][interp]["interp_ratio"] /
+                              scaledUpdateRate).floorD(7)
                               +
                               "\"\n");
                           });
