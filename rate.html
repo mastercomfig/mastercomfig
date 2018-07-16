@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css"
+        integrity="sha256-zVUlvIh3NEZRYa9X/qpNY8P1aBy0d4FrI7bhfZSZVwc="
+        crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+        integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <title>mastercomfig rate generator</title>
+  <meta property="og:title" content="mastercomfig rate generator">
+  <meta property="og:description"
+        content="The rate generator for mastercomfig: a modern Team Fortress 2 performance and customization config.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mastercomfig.com/rate">
+</head>
+<body class="dark-header">
+<header class="jumbotron jumbotron-fluid text-light dark-header"
+        style="margin: 0">
+  <div class="container d-flex align-items-center" style="height: 100%">
+    <div class="align-middle">
+      <h1 class="display-4">
+        <span class="oi oi-data-transfer-upload"
+              title="upload" aria-hidden="true"
+              style="font-size: 2rem"></span>
+        mastercomfig rate
+        generator</h1>
+      <p class="lead">
+        1. Measure your internet speed at <a href="http://speedtest.net">
+        speedtest.net</a>.
+      </p>
+      <p class="lead">2. Enter it here:</p>
+      <input class="form-control col-md-6" type="text"
+             placeholder="Download speed in Mbps" id="download">
+      <input class="form-control col-md-6" type="text"
+             placeholder="Upload speed in Mbps" id="upload">
+      <br>
+      <p class="lead" id="rate-label">3. Put this in your custom.cfg:</p>
+      <code id="rate">rate 196608; net_splitpacket_maxrate 78643;
+                      net_maxcleartime 0.0081889</code>
+    </div>
+  </div>
+</header>
+
+<script>
+  String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) {
+      return typeof args[number] !== "undefined" ? args[number] : match;
+    });
+  };
+
+  Number.prototype.roundD = function(decimals, rounder) {
+    if (!rounder) {
+      rounder = Math.round;
+    }
+    return Number(rounder(this + "e" + decimals) + "e-" + decimals);
+  };
+
+  Number.prototype.ceilD = function(decimals) {
+    return this.roundD(decimals, Math.ceil);
+  };
+
+  Number.prototype.floorD = function(decimals) {
+    return this.roundD(decimals, Math.ceil);
+  };
+
+  Number.prototype.clamp = function(min, max) {
+    return Math.min(Math.max(this, min), max);
+  };
+
+  var base = "rate 196608; net_splitpacket_maxrate 184320; net_maxcleartime 0.0058233";
+  var downloadSpeed;
+  var uploadSpeed;
+  var downloadField = document.getElementById("download");
+  var uploadField = document.getElementById("upload");
+  var copy = document.getElementById("rate");
+
+  function updateRate() {
+    if (downloadSpeed && uploadSpeed) {
+      var speed = Math.min(downloadSpeed, uploadSpeed);
+      var rate = (speed * 100000).floorD(7).clamp(3500,
+        1048576);
+      var splitpacketRate = (uploadSpeed * 93750).floorD(7)
+        .clamp(3500, 1048576);
+      var maxClearTime = Math.max(0.0000001,
+        (0.0114489 / uploadSpeed).floorD(7));
+      var rateS =
+        "rate {0}; net_splitpacket_maxrate {1}; net_maxcleartime {2}".format(
+          rate, splitpacketRate, maxClearTime);
+      if (!rateS) {
+        rateS = base;
+      }
+      copy.innerText = rateS;
+    } else {
+      copy.innerText = base;
+    }
+  }
+
+  uploadField.addEventListener("input", function() {
+    if (uploadField.value) {
+      uploadSpeed = parseFloat(uploadField.value);
+    } else {
+      uploadSpeed = null;
+    }
+    updateRate();
+  });
+
+  downloadField.addEventListener("input", function() {
+    if (downloadField.value) {
+      downloadSpeed = parseFloat(downloadField.value);
+    } else {
+      downloadSpeed = null;
+    }
+    updateRate();
+  });
+</script>
+</body>
+</html>

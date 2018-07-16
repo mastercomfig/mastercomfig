@@ -1,71 +1,15 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting</title>
+</head>
+<body>
+<a href="https://mastercomfig.com/rate">Click here if you are not
+                                        redirected</a>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha256-zVUlvIh3NEZRYa9X/qpNY8P1aBy0d4FrI7bhfZSZVwc=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <title>mastercomfig upload rate generator</title>
-    <meta property="og:title" content="mastercomfig upload rate generator">
-    <meta property="og:description" content="The upload rate generator for mastercomfig: a modern Team Fortress 2 performance and customization config.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mastercomfig.com/upload">
-  </head>
-  <body class="dark-header">
-    <header class="jumbotron jumbotron-fluid text-light dark-header" style="margin: 0">
-        <div class="container d-flex align-items-center" style="height: 100%">
-            <div class="align-middle">
-                <h1 class="display-4"><span class="oi oi-data-transfer-upload" title="upload" aria-hidden="true" style="font-size: 2rem"></span> mastercomfig upload rate generator</h1>
-                <p class="lead">
-                  1. Measure your upload speed at <a href="https://beta.speedtest.net">speedtest.net</a>.
-                  <br>
-                  <small class="text-muted">If you stream or use other Internet upload services, please account for that by subtracting that upload usage from your speed.</small></p>
-                <p class="lead">2. Enter it here:</p>
-                <input class="form-control col-md-6" type="text" placeholder="Upload speed in Mbps" id="upload">
-                <br>
-                <p class="lead" id="rate-label">3. Put this in your custom.cfg:</p>
-                <code id="rate">rate 196608; net_splitpacket_maxrate 78643; net_maxcleartime 0.0081889</code>
-            </div>
-        </div>
-    </header>
-
-    <script>
-      String.prototype.format = function() {
-        var args = arguments;
-        return this.replace(/{(\d+)}/g, function(match, number) {
-          return typeof args[number] != 'undefined' ? args[number] : match;
-        });
-      };
-
-      var base = "rate 196608; net_splitpacket_maxrate 78643; net_maxcleartime 0.0081889";
-      var field = document.getElementById('upload');
-      var copy = document.getElementById('rate');
-      field.addEventListener('input', function(e) {
-        var upload;
-        if (field.value) {
-          var uploadSpeed = parseFloat(field.value);
-          if (uploadSpeed) {
-            var rate = Math.max(3500, Math.min(1048576,
-                  parseFloat((uploadSpeed * 75000).toFixed(7))));
-            var splitpacketRate = Math.max(3500, Math.min(1048576,
-                    parseFloat((uploadSpeed * 50000).toFixed(7))));
-            var maxClearTime = Math.max(0.0000001,
-                  parseFloat((0.01288 / uploadSpeed).toFixed(7)));
-            if (maxClearTime === "1e-7") {
-              maxClearTime = "0.0000001";
-            }
-            upload = "rate {0}; net_splitpacket_maxrate {1}; net_maxcleartime {2}".format(rate, splitpacketRate, maxClearTime);
-          }
-        }
-        if (!upload) {
-          upload = base;
-        }
-        copy.innerText = upload;
-      });
-    </script>
-  </body>
+<script>
+  window.location.replace("https://mastercomfig.com/rate")
+</script>
+</body>
 </html>
