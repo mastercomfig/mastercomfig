@@ -22,6 +22,8 @@
     "sv_motd_unload_on_dismissal": 1,
     "net_graphsolid": 0,
     "mat_bufferprimitives": 1,
+    "bugreporter_uploadasync": 1,
+    "ai_frametime_limit": 0.0152,
     "filesystem_buffer_size": 8192,
     "filesystem_max_stdio_read": 31,
     "filesystem_native": 1,

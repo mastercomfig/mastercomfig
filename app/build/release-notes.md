@@ -16,6 +16,8 @@ Config Changes:
 * Improved CPU scaling for `net_splitrate`
 * Reduced the memory threshold for aggressive low memory settings
 * Added more memory reduction settings for low memory devices
+* Make game overrides apply instantly on in-game module change
+* Optimized characters a bit more for local servers on lower settings
 
 Coming soon:
 * Sharing

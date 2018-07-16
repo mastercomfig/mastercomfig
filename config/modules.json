@@ -667,7 +667,10 @@
             "r_teeth": 0,
             "r_eyes": 0,
             "tf_clientsideeye_lookats": 0,
-            "blink_duration": 0
+            "blink_duration": 0,
+            "anim_3wayblend": 0,
+            "ai_expression_optimization": 1,
+            "ai_expression_frametime": 0
           },
           "description": "The least intensive character detail, with no facial features like eyes or expressions."
         },
@@ -681,7 +684,10 @@
             "r_teeth": 0,
             "r_eyes": 1,
             "tf_clientsideeye_lookats": 1,
-            "blink_duration": 0.2
+            "blink_duration": 0.2,
+            "anim_3wayblend": 0,
+            "ai_expression_optimization": 1,
+            "ai_expression_frametime": 0
           }
         },
         "high": {
@@ -694,7 +700,10 @@
             "r_teeth": 1,
             "r_eyes": 1,
             "tf_clientsideeye_lookats": 1,
-            "blink_duration": 0.2
+            "blink_duration": 0.2,
+            "anim_3wayblend": 1,
+            "ai_expression_optimization": 1,
+            "ai_expression_frametime": 0.0152
           }
         },
         "ultra": {
@@ -707,7 +716,9 @@
             "r_teeth": 1,
             "r_eyes": 1,
             "tf_clientsideeye_lookats": 1,
-            "blink_duration": 0.2
+            "blink_duration": 0.2,
+            "anim_3wayblend": 1,
+            "ai_expression_optimization": 0
           },
           "description": "The highest detailed character models. Character details and facial expressions are always shown at their highest quality."
         }
