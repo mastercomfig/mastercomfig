@@ -59,19 +59,20 @@ def detail_props(level, value):
     global defined_detail_prop
 
     detail_prop_fades = {'high': (900, 0),
-                         'ultra': (1200, 400),
-                         'none': (1200, 400)}
+                         'ultra': (1200, 400)}
 
     detail_props_override = "detail_props_" + value
     detail_props_alias = None
-    if value not in defined_detail_prop:
-        if value == "none":
-            detail_props_alias = "alias detail_props_none \"\""
-        else:
-            detail_props_alias = "alias {0} \"cl_detaildist {1[0]};cl_detailfade {1[1]}\"\n"\
-                .format(detail_props_override, detail_prop_fades.get(value))
+    detail_props_addition = detail_props_override + ";alias detail_props_override " + detail_props_override
+    if value == "none":
+        detail_props_addition = None
+    elif value not in defined_detail_prop:
+        detail_props_alias = "alias {0} \"cl_detaildist {1[0]};cl_detailfade {1[1]}\"\n"\
+            .format(detail_props_override, detail_prop_fades.get(value))
         defined_detail_prop.append(value)
-    return detail_props_override + ";alias detail_props_override " + detail_props_override, detail_props_alias
+    print(detail_props_addition)
+    print(detail_props_alias)
+    return detail_props_addition, detail_props_alias
 
 
 @custom_generator
