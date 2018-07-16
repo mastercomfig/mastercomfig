@@ -92,7 +92,7 @@ def cheap_water(level, value):
     else:
         cheap_water_alias = "alias cheap_water_{0} \"r_cheapwaterstart {1[0]};r_cheapwaterend {1[1]}\"\n"\
             .format(value, cheap_water.get(value))
-    return "alias cheap_water_override " + cheap_water_override, cheap_water_alias
+    return cheap_water_override + ";alias cheap_water_override " + cheap_water_override, cheap_water_alias
 
 global dxsupport_kv
 
