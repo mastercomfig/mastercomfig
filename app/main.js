@@ -98,7 +98,7 @@ function getDynamicData(name, callback) {
     case "hardware.disk.type":
       si.blockDevices()
         .then(disks => {
-          var tf2Folder = settings.get("tf2-folder");
+          let tf2Folder = settings.get("tf2-folder");
           let tf2Part;
           let diskType;
           let physicalDisks = [];
@@ -125,18 +125,30 @@ function getDynamicData(name, callback) {
                 tf2Folder.startsWith(disk.mount)) {
                 tf2Part = disk;
                 diskType = disk.physical;
+                if (os.type() === "Windows_NT") {
+                  si.diskLayout().then(physDisks => {
+                    physDisks.forEach(phys => {
+                      if (phys.serialNum === disk.serial) {
+                        diskType = phys.type;
+                        if (diskType === "HD") {
+                          diskType = "HDD";
+                        }
+                      }
+                    });
+                  });
+                }
               } else if (disk.type === "disk") {
                 physicalDisks.push(disk);
               }
             }
           });
-          if (!diskType) {
+          if (!diskType || diskType !== "SSD") {
             physicalDisks.forEach(disk => {
               if (tf2Part.name.startsWith(disk.name) && disk.type === "disk") {
                 diskType = disk.physical;
               }
             });
-            if (!diskType) {
+            if (!diskType || diskType !== "SSD") {
               diskType = "HDD";
             }
           }

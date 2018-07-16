@@ -10,6 +10,7 @@ App Changes:
 * Cleaned up console output
 * Properly finish writing `client-modules.cfg` when scaling packet rates
 * Fixed community configs not being able to be unsubscribed from
+* Fixed SSDs not being detected on Windows
 
 Config Changes:
 * Boosted rate limits and increase the surge rate in order to take better advantage of your network at all times
