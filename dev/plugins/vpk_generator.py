@@ -9,13 +9,12 @@ global override_aliases
 global make_cfg_dir
 global base_dir
 
-
 custom_generators = {}
 
 interps = {}
 
-detail_prop_none_defined = False
-cheap_water_none_defined = False
+defined_detail_prop = []
+defined_cheap_water = []
 
 interp_string = ""
 
@@ -57,46 +56,46 @@ def update_rate(level, value):
 
 @custom_generator
 def detail_props(level, value):
-    global detail_prop_none_defined
+    global defined_detail_prop
 
     detail_prop_fades = {'high': (900, 0),
-                         'ultra': (1600, 400)}
+                         'ultra': (1200, 400),
+                         'none': (1200, 400)}
 
     detail_props_override = "detail_props_" + value
-    if value != "none":
-        fade_tup = detail_prop_fades.get(value)
-        detail_props_alias = "alias " + detail_props_override + " \"" + "cl_detaildist " + fade_tup[0].__str__() \
-                             + ";cl_detailfade " + fade_tup[1].__str__() + "\n"
-    elif not detail_prop_none_defined:
-        detail_props_alias = "alias " + detail_props_override + " \"\"\n"
-        detail_prop_none_defined = True
-    else:
-        detail_props_alias = None
+    detail_props_alias = None
+    if value not in defined_detail_prop:
+        if value == "none":
+            detail_props_alias = "alias detail_props_none \"\""
+        else:
+            detail_props_alias = "alias {0} \"cl_detaildist {1[0]};cl_detailfade {1[1]}\"\n"\
+                .format(detail_props_override, detail_prop_fades.get(value))
+        defined_detail_prop.append(value)
     return detail_props_override + ";alias detail_props_override " + detail_props_override, detail_props_alias
 
 
 @custom_generator
 def cheap_water(level, value):
-    global cheap_water_none_defined
+    global defined_cheap_water
 
-    cheap_water = {'minimal': (150, 750),
-                   'partial': (0, 150),
-                   'full': (0, 0.1)}
+    cheap_water_vals = {'minimal': (150, 750),
+                        'partial': (0, 150),
+                        'full': (0, 0.1),
+                        'off': (1000, 2000)}
 
     cheap_water_override = "cheap_water_" + value
     cheap_water_alias = None
-    if value == "off":
-        if not cheap_water_none_defined:
-            cheap_water_alias = "alias cheap_water_off " + "\"\"\n"
-            cheap_water_none_defined = True
-    else:
-        cheap_water_alias = "alias cheap_water_{0} \"r_cheapwaterstart {1[0]};r_cheapwaterend {1[1]}\"\n"\
-            .format(value, cheap_water.get(value))
+    if value not in defined_cheap_water:
+        cheap_water_alias = "alias {0} \"r_cheapwaterstart {1[0]};r_cheapwaterend {1[1]}\"\n" \
+            .format(cheap_water_override, cheap_water_vals.get(value))
+        defined_cheap_water.append(value)
     return cheap_water_override + ";alias cheap_water_override " + cheap_water_override, cheap_water_alias
+
 
 global dxsupport_kv
 
 dxsupport_kv = {}
+
 
 @custom_generator
 def dxsupport(level, value):
@@ -110,9 +109,9 @@ def dxsupport(level, value):
     else:
         dxsupport_kv[kv[0]] = [kv[1]]
 
+
 @finalizer
 def dxsupport_finalizer():
-
     dxsupport_cats = []
 
     for key, value in dxsupport_kv.items():
@@ -124,7 +123,6 @@ def dxsupport_finalizer():
     for combo in list(itertools.product(*dxsupport_cats)):
         folder_name = "+".join(combo)
         os.makedirs("config/" + folder_name, exist_ok=True)
-
 
 
 @generator(manifest='modules')
@@ -170,12 +168,12 @@ def modules_define_file(manifest):
                     alias_string += ";" + cvar + " " + value.__str__()
                 for entry, value in module_levels.get(level, {}).items():
                     if custom_generators.get(entry):
-                            ret = custom_generators[entry](level, value)
-                            if ret is not None:
-                                if ret[0] is not None:
-                                    alias_string += ";" + ret[0]
-                                if ret[1] is not None:
-                                    level_string += ret[1]
+                        ret = custom_generators[entry](level, value)
+                        if ret is not None:
+                            if ret[0] is not None:
+                                alias_string += ";" + ret[0]
+                            if ret[1] is not None:
+                                level_string += ret[1]
                 level_string += "alias " + alias_name + " \"" + alias_string + "\"""\n"
                 modules.write(level_string)
 
