@@ -63,14 +63,14 @@
         "min": 3.2,
         "suffix": "GHz",
         "values": {
-          "net_splitrate": 1
+          "net_splitrate": 2
         }
       },
       {
         "min": 4,
         "suffix": "GHz",
         "values": {
-          "net_splitrate": 2,
+          "net_splitrate": 3,
           "snd_delay_sound_shift": 0.008
         }
       },
@@ -95,7 +95,7 @@
     ],
     "hardware.memory.size.available": [
       {
-        "max": 1,
+        "max": 0.5,
         "suffix": "GB",
         "values": {
           "cl_always_flush_models": 1

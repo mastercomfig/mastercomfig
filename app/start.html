@@ -56,11 +56,11 @@
     <x-progressbar id="speedtest-bar" hidden></x-progressbar>
     <p>
       <small id="status">Clicking run test will access the Speedtest.net service
-                         to record your upload speed.
+                         to record your speed.
       </small>
     </p>
   </div>
-  <p id="upload" hidden><strong>Upload speed:</strong></p>
+  <p id="speed" hidden></p>
   <hr>
   <h3>
     3.
@@ -91,193 +91,223 @@
 <script>
   "use strict";
 
-  var steps = 0;
+  $(() => {
+    page();
+  });
 
-  function stepProgress(reverse) {
-    if (reverse) {
-      steps --;
-    } else {
-      steps++;
+  function page() {
+    var steps = 0;
+
+    function stepProgress(reverse) {
+      if (reverse) {
+        steps--;
+      } else {
+        steps++;
+      }
+
+      if (steps >= 3) {
+        document.getElementById("next-btn").removeAttribute("disabled");
+        document.getElementById("next-link").href = "mastercomfig.html";
+      } else {
+        document.getElementById("next-btn").setAttribute("disabled", null);
+        document.getElementById("next-link").href = "#";
+      }
     }
 
-    if (steps >= 3) {
-      document.getElementById("next-btn").removeAttribute("disabled");
-      document.getElementById("next-link").href = "mastercomfig.html";
-    } else {
-      document.getElementById("next-btn").setAttribute("disabled", null);
-      document.getElementById("next-link").href = "#";
-    }
-  }
+    document.getElementById("tf2-folder").addEventListener("change", e => {
+      let folder = e.target.files[0].path;
+      if (e.target.files[0].name === "Team Fortress 2") {
+        document.getElementById("folder-label").innerText = folder;
+        settings.set("tf2-folder", folder);
+        document.getElementById("folder-check").hidden = false;
+        stepProgress();
+      } else {
+        if (!document.getElementById("folder-check").hidden) {
+          stepProgress(true);
+          document.getElementById("folder-check").hidden = true;
+          settings.delete("tf2-folder");
+        }
+        document.getElementById("folder-label").innerText =
+          "Invalid Team Fortress 2 folder. Please try again.";
+      }
+    });
 
-  document.getElementById("tf2-folder").addEventListener("change", e => {
-    let folder = e.target.files[0].path;
-    if (e.target.files[0].name === "Team Fortress 2") {
-      document.getElementById("folder-label").innerText = folder;
-      settings.set("tf2-folder", folder);
+    let tf2Folder = settings.get("tf2-folder");
+    if (tf2Folder) {
+      document.getElementById("folder-label").innerText = tf2Folder;
       document.getElementById("folder-check").hidden = false;
       stepProgress();
-    } else {
-      if (!document.getElementById("folder-check").hidden) {
-        stepProgress(true);
-        document.getElementById("folder-check").hidden = true;
-        settings.delete("tf2-folder");
-      }
-      document.getElementById("folder-label").innerText =
-        "Invalid Team Fortress 2 folder. Please try again.";
     }
-  });
 
-  var speedtestBtn = document.getElementById("speedtest-btn");
-
-  speedtestBtn.addEventListener("click", () => {
-    const speedtest = require("speedtest-net");
-    var test = speedtest({
-      pingCount: 10,
-      serversUrl: "https://www.speedtest.net/speedtest-servers-static.php"
-    });
-    var server = document.getElementById("status");
-    server.innerText = "Finding server...";
-
-    var bar = document.getElementById("speedtest-bar");
-    document.getElementById("speedtest-btn").disabled = true;
-    bar.hidden = false;
-    bar.removeAttribute("value");
-
-    document.getElementById("speedtest").hidden = false;
-
-    test.on("uploadprogress", progress => {
-      bar.setAttribute("value", (parseFloat(progress) / 100).toString());
-    });
-
-    test.on("data", data => {
-      bar.hidden = true;
-      document.getElementById("speedtest").hidden = true;
-      speedtestBtn.innerText = "Retry";
-      speedtestBtn.disabled = false;
-      var speed = data.speeds.upload;
-      document.getElementById("upload").hidden = false;
-      document.getElementById("upload").innerHTML =
-        "<strong>Upload speed:</strong> " + speed + "Mbps";
-      settings.set("upload-speed", speed);
-      document.getElementById("speedtest-check").hidden = false;
+    let preset = settings.get('preset');
+    if (preset) {
+      document.getElementById("preset-check").hidden = false;
       stepProgress();
-    });
+    }
 
-    test.on("testserver", testserver => {
-      server.innerText =
-        testserver.name + ", " + testserver.cc + " — " + testserver.sponsor +
-        " (" + Math.round(testserver.bestPing) + "ms, " +
-        Math.round(testserver.dist) + "km)";
-    });
-  });
+    var speedtestBtn = document.getElementById("speedtest-btn");
 
-  function initConfigData() {
-    fetchConfigData("config/presets.json")
-      .then(response => {
-        return response.json();
-      }).then(json => {
-      var selected = false;
-      var presetsMenu = document.getElementById("presets-menu");
-      var presets = json.presets;
-      Object.keys(presets).forEach(key => {
-        var friendlyName = key.replaceAll("_", " ").toProperCase();
-        var item = document.createElement("x-menuitem");
-        item.setAttribute("value", key);
-        var label = document.createElement("x-label");
-        label.innerText = friendlyName;
-        item.appendChild(label);
-        presetsMenu.appendChild(item);
-
+    speedtestBtn.addEventListener("click", () => {
+      const speedtest = require("speedtest-net");
+      var test = speedtest({
+        pingCount: 10,
+        serversUrl: "https://www.speedtest.net/speedtest-servers-static.php"
       });
-      document.getElementById("presets-select")
-        .addEventListener("change", (e) => {
-          if (!selected) {
-            selected = true;
-            document.getElementById("preset-check").hidden = false;
-            stepProgress();
-          }
-          settings.set("preset", e.detail.newValue);
-        });
+      var server = document.getElementById("status");
+      server.innerText = "Finding server...";
+
+      var bar = document.getElementById("speedtest-bar");
+      document.getElementById("speedtest-btn").disabled = true;
+      bar.hidden = false;
+      bar.removeAttribute("value");
+
+      document.getElementById("speedtest").hidden = false;
+
+      test.on("downloadprogress", progress => {
+        bar.setAttribute("value", (parseFloat(progress) / 100).toString());
+      });
+
+      test.on("uploadprogress", progress => {
+        bar.setAttribute("value", (parseFloat(progress) / 100).toString());
+      });
+
+      test.on("data", data => {
+        bar.hidden = true;
+        document.getElementById("speedtest").hidden = true;
+        speedtestBtn.innerText = "Retry";
+        speedtestBtn.disabled = false;
+        var download = data.speeds.download;
+        var upload = data.speeds.upload;
+        document.getElementById("speed").hidden = false;
+        document.getElementById("speed").innerHTML =
+          "<strong>Download speed:</strong> " + download + "Mbps";
+        document.getElementById("speed").innerHTML +=
+          "<br><strong>Upload speed:</strong> " + upload + "Mbps";
+        settings.set("upload-speed", upload);
+        settings.set("download-speed", download);
+        document.getElementById("speedtest-check").hidden = false;
+        stepProgress();
+      });
+
+      test.on("testserver", testserver => {
+        server.innerText =
+          testserver.name + ", " + testserver.cc + " — " + testserver.sponsor +
+          " (" + Math.round(testserver.bestPing) + "ms, " +
+          Math.round(testserver.dist) + "km)";
+      });
     });
-  }
 
-  let latestSha;
-
-  function refreshConfigTarget() {
-    var altChannel = settings.get("channel");
-    if (altChannel) {
-      fetch(
-        "https://api.github.com/repositories/69422496/commits?sha=" + altChannel +
-        "&path=config")
+    function initConfigData() {
+      fetchConfigData("config/presets.json")
         .then(response => {
           return response.json();
         }).then(json => {
-        // Queue up the latest commit to be set when the user applies
-        latestSha = json[0].sha;
-        setTargetSha(latestSha);
-        initConfigData();
+        var selected = false;
+        var presetsMenu = document.getElementById("presets-menu");
+        var presets = json.presets;
+        Object.keys(presets).forEach(key => {
+          var friendlyName = key.replaceAll("_", " ").toProperCase();
+          var item = document.createElement("x-menuitem");
+          item.setAttribute("value", key);
+          var label = document.createElement("x-label");
+          label.innerText = friendlyName;
+          item.appendChild(label);
+          presetsMenu.appendChild(item);
+          if (key === preset) {
+            item.setAttribute("toggled", null);
+          }
+        });
+        document.getElementById("presets-select")
+          .addEventListener("change", (e) => {
+            if (!selected) {
+              selected = true;
+              document.getElementById("preset-check").hidden = false;
+              stepProgress();
+            }
+            settings.set("preset", e.detail.newValue);
+          });
       });
-    } else if (settings.get("dev-mode")) {
-      setTargetSha("");
-      initConfigData();
-    } else {
-      fetch("https://api.github.com/repositories/69422496/tags")
-        .then(response => {
-          return response.json();
-        })
-        .then(json => {
-          for (let tag of Object.keys(json)) {
-            if (json[tag].name === "v" + app.getVersion()) {
-              return json[tag];
-            }
-          }
-          let baseVersion = app.getVersion().split("-")[0];
-          for (let tag of Object.keys(json)) {
-            if (json[tag].name.startsWith(baseVersion)) {
-              return json[tag];
-            }
-          }
-          return json[0];
-        })
-        .then(tag => {
+    }
+
+    let latestSha;
+
+    function refreshConfigTarget() {
+      var altChannel = settings.get("channel");
+      if (altChannel) {
+        fetch(
+          "https://api.github.com/repositories/69422496/commits?sha=" +
+          altChannel +
+          "&path=config")
+          .then(response => {
+            return response.json();
+          }).then(json => {
           // Queue up the latest commit to be set when the user applies
-          latestSha = tag.commit.sha;
+          latestSha = json[0].sha;
           setTargetSha(latestSha);
           initConfigData();
         });
+      } else if (settings.get("dev-mode")) {
+        setTargetSha("");
+        initConfigData();
+      } else {
+        fetch("https://api.github.com/repositories/69422496/tags")
+          .then(response => {
+            return response.json();
+          })
+          .then(json => {
+            for (let tag of Object.keys(json)) {
+              if (json[tag].name === "v" + app.getVersion()) {
+                return json[tag];
+              }
+            }
+            let baseVersion = app.getVersion().split("-")[0];
+            for (let tag of Object.keys(json)) {
+              if (json[tag].name.startsWith(baseVersion)) {
+                return json[tag];
+              }
+            }
+            return json[0];
+          })
+          .then(tag => {
+            // Queue up the latest commit to be set when the user applies
+            latestSha = tag.commit.sha;
+            setTargetSha(latestSha);
+            initConfigData();
+          });
+      }
     }
-  }
 
-  firebase.auth().signInAnonymously().catch(function(error) {
-    console.log(error);
-  });
+    firebase.auth().signInAnonymously().catch(function(error) {
+      console.log(error);
+    });
 
-  let authedUser;
+    let authedUser;
 
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      authedUser = user;
-      fetch("https://api.mastercomfig.com/remoteconfig?id=" + user.uid)
-        .then(response => {
-          return response.json();
-        }).then(json => {
-          if (!json || !json.channel || json.channel === "") {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        authedUser = user;
+        fetch("https://api.mastercomfig.com/remoteconfig?id=" + user.uid)
+          .then(response => {
+            return response.json();
+          }).then(json => {
+            if (!json || !json.channel || json.channel === "") {
+              settings.delete("channel");
+              refreshConfigTarget();
+            } else {
+              settings.set("channel", json.channel);
+              refreshConfigTarget();
+            }
+          })
+          .catch(() => {
             settings.delete("channel");
             refreshConfigTarget();
-          } else {
-            settings.set("channel", json.channel);
-            refreshConfigTarget();
-          }
-        })
-        .catch(() => {
-          settings.delete("channel");
-          refreshConfigTarget();
-        });
-    } else {
-      settings.delete("channel");
-      refreshConfigTarget();
-    }
-  });
+          });
+      } else {
+        settings.delete("channel");
+        refreshConfigTarget();
+      }
+    });
+  }
 </script>
 </body>
 </html>

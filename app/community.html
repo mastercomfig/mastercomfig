@@ -84,73 +84,79 @@
 <script>
   "use strict";
 
-  firebase.auth().signInAnonymously().catch(function(error) {
-    // ignored
+  $(() => {
+    page();
   });
 
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      var content = document.getElementById("content");
-      var configSubs = settings.get("subscriptions.configs", []);
+  function page() {
+    firebase.auth().signInAnonymously().catch(function(error) {
+      // ignored
+    });
 
-      db.collection("configs").get().then(snapshot => {
-        snapshot.forEach(doc => {
-          var config = doc.data();
-          var card = document.createElement("x-card");
-          var header = document.createElement("header");
-          var title = document.createElement("h3");
-          title.innerText = config.name;
-          var author = document.createElement("h6");
-          author.innerText = "by " + config.author;
-          header.appendChild(title);
-          title.appendChild(author);
-          var switcher = document.createElement("x-switch");
-          if (configSubs.includes(doc.id)) {
-            switcher.setAttribute("toggled", null);
-          }
-          switcher.setAttribute("skin", "big");
-          header.appendChild(switcher);
-          card.appendChild(header);
-          var main = document.createElement("main");
-          var description = document.createElement("p");
-          description.innerText = config.description;
-          main.appendChild(description);
-          var btn = document.createElement("a");
-          btn.classList.add("btn", "btn-outline-primary");
-          btn.setAttribute("data-toggle", "collapse");
-          btn.href = "#" + doc.id;
-          btn.innerText = "Config contents";
-          main.appendChild(btn);
-          var div = document.createElement("div");
-          div.id = doc.id;
-          div.classList.add("collapse", "container");
-          var pre = document.createElement("pre");
-          var code = document.createElement("code");
-          code.innerText = config.config.replaceAll("\\n", "\n");
-          pre.appendChild(code);
-          div.appendChild(pre);
-          main.appendChild(div);
-          card.appendChild(main);
-          content.appendChild(card);
-          switcher.addEventListener("toggle", () => {
-            if (switcher.hasAttribute("toggled")) {
-              if (!configSubs.includes(doc.id)) {
-                configSubs.push(doc.id);
-                settings.set("subscriptions.configs", configSubs);
-              }
-            } else {
-              var index = configSubs.indexOf(doc.id);
-              if (index > -1) {
-                configSubs.splice(index, 1);
-              }
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        var content = document.getElementById("content");
+        var configSubs = settings.get("subscriptions.configs", []);
+
+        db.collection("configs").get().then(snapshot => {
+          snapshot.forEach(doc => {
+            var config = doc.data();
+            var card = document.createElement("x-card");
+            var header = document.createElement("header");
+            var title = document.createElement("h3");
+            title.innerText = config.name;
+            var author = document.createElement("h6");
+            author.innerText = "by " + config.author;
+            header.appendChild(title);
+            title.appendChild(author);
+            var switcher = document.createElement("x-switch");
+            if (configSubs.includes(doc.id)) {
+              switcher.setAttribute("toggled", null);
             }
+            switcher.setAttribute("skin", "big");
+            header.appendChild(switcher);
+            card.appendChild(header);
+            var main = document.createElement("main");
+            var description = document.createElement("p");
+            description.innerText = config.description;
+            main.appendChild(description);
+            var btn = document.createElement("a");
+            btn.classList.add("btn", "btn-outline-primary");
+            btn.setAttribute("data-toggle", "collapse");
+            btn.href = "#" + doc.id;
+            btn.innerText = "Config contents";
+            main.appendChild(btn);
+            var div = document.createElement("div");
+            div.id = doc.id;
+            div.classList.add("collapse", "container");
+            var pre = document.createElement("pre");
+            var code = document.createElement("code");
+            code.innerText = config.config.replaceAll("\\n", "\n");
+            pre.appendChild(code);
+            div.appendChild(pre);
+            main.appendChild(div);
+            card.appendChild(main);
+            content.appendChild(card);
+            switcher.addEventListener("toggle", () => {
+              if (switcher.hasAttribute("toggled")) {
+                if (!configSubs.includes(doc.id)) {
+                  configSubs.push(doc.id);
+                  settings.set("subscriptions.configs", configSubs);
+                }
+              } else {
+                var index = configSubs.indexOf(doc.id);
+                if (index > -1) {
+                  configSubs.splice(index, 1);
+                }
+              }
+            });
           });
         });
-      });
-    } else {
-      // failed, ignored for now
-    }
-  });
+      } else {
+        // failed, ignored for now
+      }
+    });
+  }
 </script>
 </body>
 </html>

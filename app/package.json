@@ -1,6 +1,6 @@
 {
   "name": "mastercomfig-app",
-  "version": "7.0.0-a.14",
+  "version": "7.0.0-a.15",
   "description": "mastercomfig desktop app",
   "main": "main.js",
   "scripts": {
@@ -24,25 +24,25 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mastercoms/mastercomfig/issues"
+    "url": "https://github.com/mastercoms/mastecomfig/issues"
   },
   "homepage": "https://github.com/mastercoms/mastercomfig#readme",
   "devDependencies": {
     "electron": "^2.0.4",
-    "electron-builder": "^20.19.2"
+    "electron-builder": "^20.21.2"
   },
   "dependencies": {
     "@firebase/app-types": "^0.3.2",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.1.2",
     "electron-settings": "^3.2.0",
-    "electron-updater": "^2.23.3",
-    "firebase": "5.2.0",
+    "electron-updater": "^3.0.0",
+    "firebase": "^5.2.0",
     "grpc": "1.11.3",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "speedtest-net": "^1.4.3",
     "systeminformation": "^3.42.4",
-    "xel": "0.0.141"
+    "xel": "^0.0.141"
   },
   "build": {
     "productName": "mastercomfig",

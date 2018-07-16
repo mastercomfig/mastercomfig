@@ -28,6 +28,7 @@ function createWindow() {
   window = new BrowserWindow(windowOptions);
 
   if (settings.has("tf2-folder") && settings.has("upload-speed") &&
+    settings.has("download-speed") &&
     settings.has("preset")) {
     window.loadFile("mastercomfig.html");
   } else {
@@ -116,7 +117,7 @@ function getDynamicData(name, callback) {
                             diskType = "HDD";
                           }
                         }
-                      })
+                      });
                     });
                   }
                 }
@@ -175,29 +176,35 @@ app.on("ready", () => {
 
   createWindow();
 
+  if (os.type() === "Windows_NT") {
+    setupUpdates();
+  }
+});
+
+function setupUpdates() {
+  autoUpdater.on("update-available", () => {
+    dialog.showMessageBox({
+      title: "mastercomfig update",
+      message: "We've found and started downloading a new update for" +
+      " the mastercomfig app.",
+      buttons: ["Okay, got it"]
+    });
+  });
+
+  autoUpdater.on("update-downloaded", () => {
+    dialog.showMessageBox({
+      title: "mastercomfig update",
+      message: "The update is ready to go. Be right back" +
+      " while we install it!",
+      buttons: ["Okay, got it"]
+    }, () => {
+      setImmediate(() => autoUpdater.quitAndInstall(true, true));
+    });
+  });
+
   autoUpdater.allowPrerelease = true;
   autoUpdater.allowDowngrade = true;
   autoUpdater.checkForUpdates();
-});
-
-autoUpdater.on("update-available", () => {
-  dialog.showMessageBox({
-    title: "mastercomfig update",
-    message: "We've found and started downloading a new update for" +
-    " the mastercomfig app.",
-    buttons: ["Okay, got it"]
-  });
-});
-
-autoUpdater.on("update-downloaded", () => {
-  dialog.showMessageBox({
-    title: "mastercomfig update",
-    message: "The update is ready to go. Be right back" +
-    " while we install it!",
-    buttons: ["Okay, got it"]
-  }, () => {
-    setImmediate(() => autoUpdater.quitAndInstall(true, true));
-  });
-});
+}
 
 

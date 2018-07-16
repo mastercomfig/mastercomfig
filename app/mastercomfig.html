@@ -80,7 +80,7 @@ solid #141414">
       name="check" skin="success"
       style="height: 16px; width: 16px"></x-icon> mastercomfig settings successfully applied!</span>
     <button class="btn btn-outline-primary" style="margin-left: 10px"
-            id="apply-btn">Apply
+            id="apply-btn" disabled>Apply
     </button>
   </div>
 </nav>
@@ -103,52 +103,25 @@ solid #141414">
 <script>
   "use strict";
 
-  let latestSha = settings.get("config-sha", "");
+  $(() => {
+    page();
+  });
 
-  function refreshConfigTarget() {
-    var altChannel = settings.get("channel");
-    if (altChannel) {
-      fetch(
-        "https://api.github.com/repositories/69422496/commits?sha=" + altChannel +
-        "&path=config")
-        .then(response => {
-          return response.json();
-        }).then(json => {
-        // Queue up the latest commit to be set when the user applies
-        latestSha = json[0].sha;
-        setTargetSha(latestSha);
-        // If we've applied before and that commit is earlier than the latest one, notify for an update
-        if (settings.get("config-sha") && settings.get("config-sha") !==
-          latestSha) {
-          document.getElementById("config-update").hidden = false;
-        }
-        initConfigData();
-      });
-    } else if (settings.get("dev-mode")) {
-      setTargetSha("");
-      initConfigData();
-    } else {
-      fetch("https://api.github.com/repositories/69422496/tags")
-        .then(response => {
-          return response.json();
-        })
-        .then(json => {
-          for (let tag of Object.keys(json)) {
-            if (json[tag].name === "v" + app.getVersion()) {
-              return json[tag];
-            }
-          }
-          let baseVersion = app.getVersion().split("-")[0];
-          for (let tag of Object.keys(json)) {
-            if (json[tag].name.startsWith(baseVersion)) {
-              return json[tag];
-            }
-          }
-          return json[0];
-        })
-        .then(tag => {
+  function page() {
+    let latestSha = settings.get("config-sha", "");
+
+    function refreshConfigTarget() {
+      var altChannel = settings.get("channel");
+      if (altChannel) {
+        fetch(
+          "https://api.github.com/repositories/69422496/commits?sha=" +
+          altChannel +
+          "&path=config")
+          .then(response => {
+            return response.json();
+          }).then(json => {
           // Queue up the latest commit to be set when the user applies
-          latestSha = tag.commit.sha;
+          latestSha = json[0].sha;
           setTargetSha(latestSha);
           // If we've applied before and that commit is earlier than the latest one, notify for an update
           if (settings.get("config-sha") && settings.get("config-sha") !==
@@ -157,278 +130,331 @@ solid #141414">
           }
           initConfigData();
         });
+      } else if (settings.get("dev-mode")) {
+        setTargetSha("");
+        initConfigData();
+      } else {
+        fetch("https://api.github.com/repositories/69422496/tags")
+          .then(response => {
+            return response.json();
+          })
+          .then(json => {
+            for (let tag of Object.keys(json)) {
+              if (json[tag].name === "v" + app.getVersion()) {
+                return json[tag];
+              }
+            }
+            let baseVersion = app.getVersion().split("-")[0];
+            for (let tag of Object.keys(json)) {
+              if (json[tag].name.startsWith(baseVersion)) {
+                return json[tag];
+              }
+            }
+            return json[0];
+          })
+          .then(tag => {
+            // Queue up the latest commit to be set when the user applies
+            latestSha = tag.commit.sha;
+            setTargetSha(latestSha);
+            // If we've applied before and that commit is earlier than the latest one, notify for an update
+            if (settings.get("config-sha") && settings.get("config-sha") !==
+              latestSha) {
+              document.getElementById("config-update").hidden = false;
+            }
+            initConfigData();
+          });
+      }
     }
-  }
 
-  var modulesJson;
+    let presets;
+    let modulesJson;
+    let customs;
 
-  function initConfigData() {
-    fetchConfigData("config/presets.json")
-      .then(response => {
-        return response.json();
-      }).then(json => {
-      presets = json.presets;
-    }).then(() => {
-      fetchConfigData("config/modules.json")
+    function initConfigData() {
+      fetchConfigData("config/presets.json")
         .then(response => {
           return response.json();
         }).then(json => {
-        modulesJson = json.modules;
-        fetchConfigData("config/customs.json")
+        presets = json.presets;
+      }).then(() => {
+        fetchConfigData("config/modules.json")
           .then(response => {
             return response.json();
           }).then(json => {
-          var customs = json.entries;
-          var categoryMap = new Map();
-          Object.keys(modulesJson).forEach(key => {
-            var module = modulesJson[key];
-            if (module.hasOwnProperty("hidden") && module["hidden"]) {
-              return;
-            }
-
-            var catEntryList = key.split(".");
-            var category = catEntryList[0];
-            var entry = catEntryList[1];
-
-            if (categoryMap.has(category)) {
-              categoryMap.get(category).push(entry);
-            } else {
-              categoryMap.set(category, [entry]);
-            }
-          });
-
-          var catTabs = document.getElementById("cat-tabs");
-
-          var first = true;
-
-          categoryMap.forEach((value, key) => {
-            var keyName = key;
-            if (key.charAt(0) !== key.charAt(0).toUpperCase()) {
-              keyName = key.toProperCase();
-            }
-
-            var item = document.createElement("x-tab");
-            item.setAttribute("href", "#" + key + "-card");
-            var label = document.createElement("x-label");
-            label.innerText = keyName;
-            item.appendChild(label);
-            catTabs.appendChild(item);
-
-            var tabContent = document.getElementById("tab-content");
-            var card = document.createElement("x-card");
-            card.id = key + "-card";
-
-            if (first) {
-              item.setAttribute("selected", null);
-              currentTab = key + "-card";
-              first = false;
-            } else {
-              card.hidden = true;
-            }
-
-            item.addEventListener("click", () => {
-              document.getElementById(currentTab).hidden = true;
-              currentTab = key + "-card";
-              card.hidden = false;
-            });
-
-            value.forEach((item, index) => {
-              var moduleIndex = key + "." + item;
-              var module = modulesJson[moduleIndex];
-              var friendlyName = "";
-              if (module.hasOwnProperty("name")) {
-                friendlyName = module["name"];
-              } else {
-                friendlyName = item.replaceAll("_", " ").toProperCase();
+          modulesJson = json.modules;
+          fetchConfigData("config/customs.json")
+            .then(response => {
+              return response.json();
+            }).then(json => {
+            customs = json.entries;
+            var categoryMap = new Map();
+            Object.keys(modulesJson).forEach(key => {
+              var module = modulesJson[key];
+              if (module.hasOwnProperty("hidden") && module["hidden"]) {
+                return;
               }
 
-              var accordion = document.createElement("x-accordion");
-              var header = document.createElement("header");
+              var catEntryList = key.split(".");
+              var category = catEntryList[0];
+              var entry = catEntryList[1];
+
+              if (categoryMap.has(category)) {
+                categoryMap.get(category).push(entry);
+              } else {
+                categoryMap.set(category, [entry]);
+              }
+            });
+
+            var catTabs = document.getElementById("cat-tabs");
+
+            var first = true;
+
+            categoryMap.forEach((value, key) => {
+              var keyName = key;
+              if (key.charAt(0) !== key.charAt(0).toUpperCase()) {
+                keyName = key.toProperCase();
+              }
+
+              var item = document.createElement("x-tab");
+              item.setAttribute("href", "#" + key + "-card");
               var label = document.createElement("x-label");
-              label.style.width = "150px";
-              var bold = document.createElement("strong");
-              bold.innerText = friendlyName;
-              label.appendChild(bold);
-              header.appendChild(label);
-              accordion.appendChild(header);
-              var main = document.createElement("main");
-              main.id = key[0] + "_" + item;
-              if (!module["no-data"]) {
-                var description = document.createElement("x-label");
-                var moduleLevel = settings.get("modules." + moduleIndex);
-                if (!moduleLevel) {
-                  moduleLevel =
-                    presets[settings.get("preset")]["modules"][moduleIndex];
-                }
-                var moduleLevelName = "";
-                if (module["levels"][moduleLevel].hasOwnProperty("name")) {
-                  moduleLevelName = module["levels"][moduleLevel]["name"];
+              label.innerText = keyName;
+              item.appendChild(label);
+              catTabs.appendChild(item);
+
+              var tabContent = document.getElementById("tab-content");
+              var card = document.createElement("x-card");
+              card.id = key + "-card";
+
+              if (first) {
+                item.setAttribute("selected", null);
+                currentTab = key + "-card";
+                first = false;
+              } else {
+                card.hidden = true;
+              }
+
+              item.addEventListener("click", () => {
+                document.getElementById(currentTab).hidden = true;
+                currentTab = key + "-card";
+                card.hidden = false;
+              });
+
+              value.forEach((item, index) => {
+                var moduleIndex = key + "." + item;
+                var module = modulesJson[moduleIndex];
+                var friendlyName = "";
+                if (module.hasOwnProperty("name")) {
+                  friendlyName = module["name"];
                 } else {
-                  moduleLevelName =
-                    moduleLevel.replaceAll("_", " ").toProperCase();
+                  friendlyName = item.replaceAll("_", " ").toProperCase();
                 }
-                description.innerText = moduleLevelName;
-                header.appendChild(description);
-                var row = document.createElement("div");
-                row.classList.add("row");
-                main.appendChild(row);
-                var right = document.createElement("div");
-                right.classList.add("col-sm");
-                if (module.hasOwnProperty("description")) {
-                  var moduleDescription = document.createElement("p");
-                  moduleDescription.classList.add("lead");
-                  moduleDescription.innerText = module["description"];
-                  right.appendChild(moduleDescription);
-                }
-                var moduleLevelDescription = document.createElement("p");
-                right.appendChild(moduleLevelDescription);
-                var left = document.createElement("div");
-                left.classList.add("col-sm");
-                var moduleSelect = document.createElement("x-select");
-                moduleSelect.style.width = "100%";
-                left.appendChild(moduleSelect);
-                var moduleMenu = document.createElement("x-menu");
-                moduleSelect.appendChild(moduleMenu);
-                Object.keys(module["levels"]).forEach(key => {
-                  var moduleMenuItem = document.createElement("x-menuitem");
-                  moduleMenuItem.setAttribute("value", key);
-                  if (key === moduleLevel) {
-                    moduleMenuItem.setAttribute("toggled", null);
-                    if (module["levels"][key].hasOwnProperty("description")) {
+
+                var accordion = document.createElement("x-accordion");
+                var header = document.createElement("header");
+                var label = document.createElement("x-label");
+                label.style.width = "150px";
+                var bold = document.createElement("strong");
+                bold.innerText = friendlyName;
+                label.appendChild(bold);
+                header.appendChild(label);
+                accordion.appendChild(header);
+                var main = document.createElement("main");
+                main.id = key[0] + "_" + item;
+                if (!module["no-data"]) {
+                  var description = document.createElement("x-label");
+                  var moduleLevel = settings.get("modules." + moduleIndex);
+                  if (!moduleLevel) {
+                    moduleLevel =
+                      presets[settings.get("preset")]["modules"][moduleIndex];
+                  }
+                  var moduleLevelName = "";
+                  if (module["levels"][moduleLevel].hasOwnProperty("name")) {
+                    moduleLevelName = module["levels"][moduleLevel]["name"];
+                  } else {
+                    moduleLevelName =
+                      moduleLevel.replaceAll("_", " ").toProperCase();
+                  }
+                  description.innerText = moduleLevelName;
+                  header.appendChild(description);
+                  var row = document.createElement("div");
+                  row.classList.add("row");
+                  main.appendChild(row);
+                  var right = document.createElement("div");
+                  right.classList.add("col-sm");
+                  if (module.hasOwnProperty("description")) {
+                    var moduleDescription = document.createElement("p");
+                    moduleDescription.classList.add("lead");
+                    moduleDescription.innerText = module["description"];
+                    right.appendChild(moduleDescription);
+                  }
+                  var moduleLevelDescription = document.createElement("p");
+                  right.appendChild(moduleLevelDescription);
+                  var left = document.createElement("div");
+                  left.classList.add("col-sm");
+                  var moduleSelect = document.createElement("x-select");
+                  moduleSelect.style.width = "100%";
+                  left.appendChild(moduleSelect);
+                  var moduleMenu = document.createElement("x-menu");
+                  moduleSelect.appendChild(moduleMenu);
+                  Object.keys(module["levels"]).forEach(key => {
+                    var moduleMenuItem = document.createElement("x-menuitem");
+                    moduleMenuItem.setAttribute("value", key);
+                    if (key === moduleLevel) {
+                      moduleMenuItem.setAttribute("toggled", null);
+                      if (module["levels"][key].hasOwnProperty("description")) {
+                        moduleLevelDescription.innerText =
+                          module["levels"][key]["description"];
+                      } else {
+                        moduleLevelDescription.innerText = "";
+                      }
+                    }
+                    var moduleMenuItemLabel = document.createElement("x-label");
+                    var moduleName = "";
+                    if (module["levels"][key].hasOwnProperty("name")) {
+                      moduleName = module["levels"][key]["name"];
+                    } else {
+                      moduleName = key.replaceAll("_", " ").toProperCase();
+                    }
+                    moduleMenuItemLabel.innerText = moduleName;
+                    moduleMenuItem.appendChild(moduleMenuItemLabel);
+                    moduleMenu.appendChild(moduleMenuItem);
+                  });
+                  moduleSelect.addEventListener("change", (e) => {
+                    var moduleLevel = module["levels"][e.detail.newValue];
+                    if (moduleLevel.hasOwnProperty("description")) {
                       moduleLevelDescription.innerText =
-                        module["levels"][key]["description"];
+                        moduleLevel["description"];
                     } else {
                       moduleLevelDescription.innerText = "";
                     }
-                  }
-                  var moduleMenuItemLabel = document.createElement("x-label");
-                  var moduleName = "";
-                  if (module["levels"][key].hasOwnProperty("name")) {
-                    moduleName = module["levels"][key]["name"];
-                  } else {
-                    moduleName = key.replaceAll("_", " ").toProperCase();
-                  }
-                  moduleMenuItemLabel.innerText = moduleName;
-                  moduleMenuItem.appendChild(moduleMenuItemLabel);
-                  moduleMenu.appendChild(moduleMenuItem);
-                });
-                moduleSelect.addEventListener("change", (e) => {
-                  var moduleLevel = module["levels"][e.detail.newValue];
-                  if (moduleLevel.hasOwnProperty("description")) {
-                    moduleLevelDescription.innerText = moduleLevel["description"];
-                  } else {
-                    moduleLevelDescription.innerText = "";
-                  }
-                  var moduleLevelName = "";
+                    var moduleLevelName = "";
 
-                  if (moduleLevel.hasOwnProperty("name")) {
-                    moduleLevelName = moduleLevel["name"];
-                  } else {
-                    moduleLevelName =
-                      e.detail.newValue.replaceAll("_", " ").toProperCase();
-                  }
-                  description.innerText = moduleLevelName;
+                    if (moduleLevel.hasOwnProperty("name")) {
+                      moduleLevelName = moduleLevel["name"];
+                    } else {
+                      moduleLevelName =
+                        e.detail.newValue.replaceAll("_", " ").toProperCase();
+                    }
+                    description.innerText = moduleLevelName;
 
-                  settings.set("modules." + moduleIndex, e.detail.newValue);
-                });
-                row.appendChild(left);
-                row.appendChild(right);
-              }
-              accordion.appendChild(main);
-              card.appendChild(accordion);
-              if (index !== value.length - 1) {
-                card.appendChild(document.createElement("hr"));
-              }
+                    settings.set("modules." + moduleIndex, e.detail.newValue);
+                  });
+                  row.appendChild(left);
+                  row.appendChild(right);
+                }
+                accordion.appendChild(main);
+                card.appendChild(accordion);
+                if (index !== value.length - 1) {
+                  card.appendChild(document.createElement("hr"));
+                }
+              });
+
+              tabContent.appendChild(card);
             });
-
-            tabContent.appendChild(card);
-          });
-          var customContainer;
-          var customGroupAccordionMain;
-          Object.keys(customs).forEach((item) => {
-            var customEntry = customs[item];
-            var splitCats = customEntry.category.split(".");
-            splitCats = splitCats[0][0] + "_" + splitCats[1];
-            var mainSection = document.getElementById(splitCats);
-            var itemName = item.replaceAll("_", " ");
-            if (itemName.charAt(0) !== itemName.charAt(0).toUpperCase()) {
-              itemName = itemName.toProperCase();
-            }
-            if (!mainSection.innerHTML.endsWith("<!--/custom-->")) {
-              customContainer = document.createElement("div");
-              if (mainSection.innerHTML.length === 0) {
-                mainSection.appendChild(document.createElement("hr"));
-                customGroupAccordionMain = mainSection;
-              } else {
-                mainSection.appendChild(document.createElement("hr"));
-                customContainer.classList.add("container");
-                var customGroupAccordion = document.createElement("x-accordion");
-                var customAccordionHeader = document.createElement("header");
-                var customAccordionLabel = document.createElement("x-label");
-                customAccordionLabel.innerText = "Custom settings";
-                customGroupAccordion.appendChild(customAccordionHeader);
-                customAccordionHeader.appendChild(customAccordionLabel);
-                customContainer.appendChild(customGroupAccordion);
-                customGroupAccordionMain = document.createElement("main");
-                customGroupAccordionMain.appendChild(
-                  document.createElement("hr"));
-                customGroupAccordion.appendChild(customGroupAccordionMain);
-                mainSection.appendChild(customContainer);
+            var customContainer;
+            var customGroupAccordionMain;
+            Object.keys(customs).forEach((item) => {
+              var customEntry = customs[item];
+              var splitCats = customEntry.category.split(".");
+              splitCats = splitCats[0][0] + "_" + splitCats[1];
+              var mainSection = document.getElementById(splitCats);
+              var itemName = item.replaceAll("_", " ");
+              if (itemName.charAt(0) !== itemName.charAt(0).toUpperCase()) {
+                itemName = itemName.toProperCase();
               }
-            }
+              if (!mainSection.innerHTML.endsWith("<!--/custom-->")) {
+                customContainer = document.createElement("div");
+                if (mainSection.innerHTML.length === 0) {
+                  mainSection.appendChild(document.createElement("hr"));
+                  customGroupAccordionMain = mainSection;
+                } else {
+                  mainSection.appendChild(document.createElement("hr"));
+                  customContainer.classList.add("container");
+                  var customGroupAccordion = document.createElement(
+                    "x-accordion");
+                  var customAccordionHeader = document.createElement("header");
+                  var customAccordionLabel = document.createElement("x-label");
+                  customAccordionLabel.innerText = "Custom settings";
+                  customGroupAccordion.appendChild(customAccordionHeader);
+                  customAccordionHeader.appendChild(customAccordionLabel);
+                  customContainer.appendChild(customGroupAccordion);
+                  customGroupAccordionMain = document.createElement("main");
+                  customGroupAccordionMain.appendChild(
+                    document.createElement("hr"));
+                  customGroupAccordion.appendChild(customGroupAccordionMain);
+                  mainSection.appendChild(customContainer);
+                }
+              }
 
-            var box = document.createElement("x-box");
-            var checkbox = document.createElement("x-checkbox");
-            checkbox.title = "Enable override?";
-            if (settings.get("customs." + splitCats + "_" + item + ".used")) {
-              checkbox.setAttribute("toggled", null);
-            }
-            box.appendChild(checkbox);
-            var label = document.createElement("x-label");
-            box.appendChild(label);
-            var controlBox = document.createElement("x-box");
-            var labelsDiv = document.createElement("div");
-            labelsDiv.style.marginRight = "10px";
-            label.appendChild(controlBox);
-            controlBox.setAttribute("vertical", null);
-            var titleLabel = document.createElement("x-label");
-            var title = document.createElement("strong");
-            title.innerText = itemName;
-            titleLabel.appendChild(title);
-            labelsDiv.appendChild(titleLabel);
-            if (customEntry.description) {
-              var description = document.createElement("x-label");
-              description.innerText = customEntry.description;
-              labelsDiv.appendChild(description);
-            }
-            controlBox.appendChild(labelsDiv);
-            switch (customEntry.data.type) {
-              case "selector":
-                var customSelect = document.createElement("x-select");
-                box.appendChild(customSelect);
-                var customMenu = document.createElement("x-menu");
-                customSelect.appendChild(customMenu);
-                customEntry.data.value.forEach((selection, index) => {
-                  var customMenuItem = document.createElement("x-menuitem");
-                  if (settings.get("customs." + splitCats + "_" + item +
-                    ".value") === index) {
-                    customMenuItem.setAttribute("toggled", null);
-                  }
-                  customMenuItem.setAttribute("value", index);
-                  var customMenuItemLabel = document.createElement("x-label");
-                  customMenuItemLabel.innerText =
-                    selection.name.replaceAll("_", " ").toProperCase();
-                  customMenuItem.appendChild(customMenuItemLabel);
-                  customMenu.appendChild(customMenuItem);
-                });
-                checkbox.addEventListener("toggle", () => {
-                  settings.set("customs." + splitCats + "_" + item + ".used",
-                    checkbox.hasAttribute("toggled"));
-                  if (checkbox.hasAttribute("toggled")) {
+              var box = document.createElement("x-box");
+              var checkbox = document.createElement("x-checkbox");
+              checkbox.title = "Enable override?";
+              if (settings.get("customs." + splitCats + "_" + item + ".used")) {
+                checkbox.setAttribute("toggled", null);
+              }
+              box.appendChild(checkbox);
+              var label = document.createElement("x-label");
+              box.appendChild(label);
+              var controlBox = document.createElement("x-box");
+              var labelsDiv = document.createElement("div");
+              labelsDiv.style.marginRight = "10px";
+              label.appendChild(controlBox);
+              controlBox.setAttribute("vertical", null);
+              var titleLabel = document.createElement("x-label");
+              var title = document.createElement("strong");
+              title.innerText = itemName;
+              titleLabel.appendChild(title);
+              labelsDiv.appendChild(titleLabel);
+              if (customEntry.description) {
+                var description = document.createElement("x-label");
+                description.innerText = customEntry.description;
+                labelsDiv.appendChild(description);
+              }
+              controlBox.appendChild(labelsDiv);
+              switch (customEntry.data.type) {
+                case "selector":
+                  var customSelect = document.createElement("x-select");
+                  box.appendChild(customSelect);
+                  var customMenu = document.createElement("x-menu");
+                  customSelect.appendChild(customMenu);
+                  customEntry.data.value.forEach((selection, index) => {
+                    var customMenuItem = document.createElement("x-menuitem");
+                    if (settings.get("customs." + splitCats + "_" + item +
+                      ".value") === index) {
+                      customMenuItem.setAttribute("toggled", null);
+                    }
+                    customMenuItem.setAttribute("value", index);
+                    var customMenuItemLabel = document.createElement("x-label");
+                    customMenuItemLabel.innerText =
+                      selection.name.replaceAll("_", " ").toProperCase();
+                    customMenuItem.appendChild(customMenuItemLabel);
+                    customMenu.appendChild(customMenuItem);
+                  });
+                  checkbox.addEventListener("toggle", () => {
+                    settings.set("customs." + splitCats + "_" + item + ".used",
+                      checkbox.hasAttribute("toggled"));
+                    if (checkbox.hasAttribute("toggled")) {
+                      var customLevel = customEntry.data.value[parseInt(
+                        customSelect.value)];
+                      settings.set("customs." + splitCats + "_" + item +
+                        ".value",
+                        parseInt(customSelect.value));
+                      var cvars = "";
+                      Object.keys(customLevel.values).forEach((cvar, cvarI) => {
+                        cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
+                          customLevel.values[cvar];
+                      });
+                      settings.set("customs." + splitCats + "_" + item +
+                        ".entry",
+                        cvars);
+                    }
+                  });
+                  customSelect.addEventListener("change", (e) => {
                     var customLevel = customEntry.data.value[parseInt(
-                      customSelect.value)];
+                      e.detail.newValue)];
                     settings.set("customs." + splitCats + "_" + item + ".value",
-                      parseInt(customSelect.value));
+                      parseInt(e.detail.newValue));
                     var cvars = "";
                     Object.keys(customLevel.values).forEach((cvar, cvarI) => {
                       cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
@@ -436,33 +462,33 @@ solid #141414">
                     });
                     settings.set("customs." + splitCats + "_" + item + ".entry",
                       cvars);
-                  }
-                });
-                customSelect.addEventListener("change", (e) => {
-                  var customLevel = customEntry.data.value[parseInt(
-                    e.detail.newValue)];
-                  settings.set("customs." + splitCats + "_" + item + ".value",
-                    parseInt(e.detail.newValue));
-                  var cvars = "";
-                  Object.keys(customLevel.values).forEach((cvar, cvarI) => {
-                    cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
-                      customLevel.values[cvar];
                   });
-                  settings.set("customs." + splitCats + "_" + item + ".entry",
-                    cvars);
-                });
-                break;
-              case "toggle":
-                var switcher = document.createElement("x-switch");
-                box.appendChild(switcher);
-                if (settings.get("customs." + splitCats + "_" + item +
-                  ".value")) {
-                  switcher.setAttribute("toggled", null);
-                }
-                checkbox.addEventListener("toggle", () => {
-                  settings.set("customs." + splitCats + "_" + item + ".used",
-                    checkbox.hasAttribute("toggled"));
-                  if (checkbox.hasAttribute("toggled")) {
+                  break;
+                case "toggle":
+                  var switcher = document.createElement("x-switch");
+                  box.appendChild(switcher);
+                  if (settings.get("customs." + splitCats + "_" + item +
+                    ".value")) {
+                    switcher.setAttribute("toggled", null);
+                  }
+                  checkbox.addEventListener("toggle", () => {
+                    settings.set("customs." + splitCats + "_" + item + ".used",
+                      checkbox.hasAttribute("toggled"));
+                    if (checkbox.hasAttribute("toggled")) {
+                      settings.set("customs." + splitCats + "_" + item +
+                        ".value",
+                        switcher.hasAttribute("toggled"));
+                      var cvars = "";
+                      customEntry.data.value.forEach((cvar, cvarI) => {
+                        cvars += (cvarI !== 0 ? ";" : "") + cvar +
+                          (switcher.hasAttribute("toggled") ? " 1" : " 0");
+                      });
+                      settings.set("customs." + splitCats + "_" + item +
+                        ".entry",
+                        cvars);
+                    }
+                  });
+                  switcher.addEventListener("toggle", () => {
                     settings.set("customs." + splitCats + "_" + item + ".value",
                       switcher.hasAttribute("toggled"));
                     var cvars = "";
@@ -472,78 +498,69 @@ solid #141414">
                     });
                     settings.set("customs." + splitCats + "_" + item + ".entry",
                       cvars);
-                  }
-                });
-                switcher.addEventListener("toggle", () => {
-                  settings.set("customs." + splitCats + "_" + item + ".value",
-                    switcher.hasAttribute("toggled"));
-                  var cvars = "";
-                  customEntry.data.value.forEach((cvar, cvarI) => {
-                    cvars += (cvarI !== 0 ? ";" : "") + cvar +
-                      (switcher.hasAttribute("toggled") ? " 1" : " 0");
                   });
-                  settings.set("customs." + splitCats + "_" + item + ".entry",
-                    cvars);
-                });
-                break;
-              case "slider":
-              case "stepper":
-                var num = document.createElement("x-numberinput");
-                var stepper = document.createElement("x-stepper");
-                num.appendChild(stepper);
-                num.setAttribute("min", customEntry.data.value.min);
-                var value = settings.get("customs." + splitCats + "_" + item +
-                  ".value");
-                if (!value) {
-                  value = customEntry.data.value.min;
-                }
-                num.value = value;
-                num.setAttribute("max", customEntry.data.value.max);
-                box.appendChild(num);
-                checkbox.addEventListener("toggle", () => {
-                  settings.set("customs." + splitCats + "_" + item + ".used",
-                    checkbox.hasAttribute("toggled"));
-                  if (checkbox.hasAttribute("toggled")) {
+                  break;
+                case "slider":
+                case "stepper":
+                  var num = document.createElement("x-numberinput");
+                  var stepper = document.createElement("x-stepper");
+                  num.appendChild(stepper);
+                  num.setAttribute("min", customEntry.data.value.min);
+                  var value = settings.get("customs." + splitCats + "_" + item +
+                    ".value");
+                  if (!value) {
+                    value = customEntry.data.value.min;
+                  }
+                  num.value = value;
+                  num.setAttribute("max", customEntry.data.value.max);
+                  box.appendChild(num);
+                  checkbox.addEventListener("toggle", () => {
+                    settings.set("customs." + splitCats + "_" + item + ".used",
+                      checkbox.hasAttribute("toggled"));
+                    if (checkbox.hasAttribute("toggled")) {
+                      settings.set("customs." + splitCats + "_" + item +
+                        ".value",
+                        num.getAttribute("value"));
+                      settings.set("customs." + splitCats + "_" + item +
+                        ".entry", customEntry.data.value.cvar + " " +
+                        num.getAttribute("value"));
+                    }
+                  });
+                  num.addEventListener("change", () => {
                     settings.set("customs." + splitCats + "_" + item + ".value",
                       num.getAttribute("value"));
                     settings.set("customs." + splitCats + "_" + item +
                       ".entry", customEntry.data.value.cvar + " " +
                       num.getAttribute("value"));
-                  }
-                });
-                num.addEventListener("change", () => {
-                  settings.set("customs." + splitCats + "_" + item + ".value",
-                    num.getAttribute("value"));
-                  settings.set("customs." + splitCats + "_" + item +
-                    ".entry", customEntry.data.value.cvar + " " +
-                    num.getAttribute("value"));
-                });
-                break;
-            }
+                  });
+                  break;
+              }
 
-            customGroupAccordionMain.appendChild(box);
-            customGroupAccordionMain.appendChild(document.createElement("hr"));
-            mainSection.appendChild(document.createComment("/custom"));
+              customGroupAccordionMain.appendChild(box);
+              customGroupAccordionMain.appendChild(
+                document.createElement("hr"));
+              mainSection.appendChild(document.createComment("/custom"));
+            });
+            document.getElementById("apply-btn").disabled = false;
           });
         });
       });
+    }
+
+    // Check for updates available for the config files
+    firebase.auth().signInAnonymously().catch(function(error) {
+      document.getElementById("notification").innerText = error;
+      document.getElementById("notification").opened = true;
+      console.log(error);
     });
-  }
 
-  // Check for updates available for the config files
-  firebase.auth().signInAnonymously().catch(function(error) {
-    document.getElementById("notification").innerText = error;
-    document.getElementById("notification").opened = true;
-    console.log(error);
-  });
+    let authedUser;
 
-  let authedUser;
-
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      authedUser = user;
-      fetch("https://api.mastercomfig.com/remoteconfig?id=" + user.uid)
-        .then(response => {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        authedUser = user;
+        fetch("https://api.mastercomfig.com/remoteconfig?id=" + user.uid)
+          .then(response => {
             return response.json();
           }).then(json => {
             if (!json || !json.channel || json.channel === "") {
@@ -553,366 +570,403 @@ solid #141414">
               settings.set("channel", json.channel);
               refreshConfigTarget();
             }
-        })
-        .catch(() => {
-          settings.delete("channel");
-          refreshConfigTarget();
+          })
+          .catch(() => {
+            settings.delete("channel");
+            refreshConfigTarget();
+          });
+      } else {
+        settings.delete("channel");
+        refreshConfigTarget();
+      }
+    });
+
+    let currentTab = "";
+
+    // Apply button
+    document.getElementById("apply-btn").addEventListener("click", () => {
+      // Clear UI elements as we start installing the config
+      document.getElementById("config-update").hidden = true;
+      document.getElementById("apply-btn").disabled = true;
+      var ring = document.getElementById("install-ring");
+      ring.hidden = false;
+      fetch("https://api.github.com/repositories/69422496/releases")
+        .then(response => {
+          return response.json();
+        }).then(json => {
+        for (let release of Object.keys(json)) {
+          if (json[release].name === app.getVersion()) {
+            return json[release];
+          }
+        }
+        let baseVersion = app.getVersion().split("-")[0];
+        for (let release of Object.keys(json)) {
+          if (json[release].name.startsWith(baseVersion)) {
+            return json[release];
+          }
+        }
+        return json[0];
+      }).then(release => {
+        let version = release.tag_name;
+        let vpkPath = settings.get("tf2-folder") +
+          "/tf/custom/mastercomfig.vpk";
+        // Delete pre-existing VPK to prevent overwrites
+        fs.unlink(settings.get("tf2-folder") +
+          "/tf/custom/mastercomfig-addon-no-footsteps.vpk", () => {
         });
-    } else {
-      settings.delete("channel");
-      refreshConfigTarget();
-    }
-  });
-
-  let currentTab = "";
-  let presets = null;
-
-  // Apply button
-  document.getElementById("apply-btn").addEventListener("click", () => {
-    // Clear UI elements as we start installing the config
-    document.getElementById("config-update").hidden = true;
-    document.getElementById("apply-btn").disabled = true;
-    var ring = document.getElementById("install-ring");
-    ring.hidden = false;
-    fetch("https://api.github.com/repositories/69422496/releases")
-      .then(response => {
-        return response.json();
-      }).then(json => {
-      for (let release of Object.keys(json)) {
-        if (json[release].name ===  app.getVersion()) {
-          return json[release];
-        }
-      }
-      let baseVersion = app.getVersion().split("-")[0];
-      for (let release of Object.keys(json)) {
-        if (json[release].name.startsWith(baseVersion)) {
-          return json[release];
-        }
-      }
-      return json[0];
-    }).then(release => {
-      let version = release.tag_name;
-      let vpkPath = settings.get("tf2-folder") +
-        "/tf/custom/mastercomfig.vpk";
-      // Delete pre-existing VPK to prevent overwrites
-      fs.unlink(settings.get("tf2-folder") +
-        "/tf/custom/mastercomfig-addon-no-footsteps.vpk", () => {});
-      fs.unlink(settings.get("tf2-folder") +
-        "/tf/custom/mastercomfig-addon-no-soundscapes.vpk", () => {});
-      fs.unlink(settings.get("tf2-folder") +
-        "/tf/custom/mastercomfig-addon-no-pyroland.vpk", () => {});
-      fs.unlink(settings.get("tf2-folder") +
-        "/tf/custom/mastercomfig-addon-no-extra-models.vpk", () => {});
-      fs.unlink(vpkPath, () => {
-        // Download latest VPK to path
-        // TODO: cache file per version (use commit hash)
-        download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-          version + "/mastercomfig.vpk", vpkPath)
-          .then(() => {
-            // Delete pre-existing client modules file to prevent overwrites
-            fs.unlink(settings.get("tf2-folder") +
-              "/tf/cfg/client-modules.cfg", () => {
-              let modulesStream = fs.createWriteStream(settings.get(
-                "tf2-folder") + "/tf/cfg/client-modules.cfg");
-              modulesStream.once("open", () => {
-                // Set the selected preset to define module aliases
-                modulesStream.write("preset_" + settings.get("preset") +
-                  "\n");
-                // Realias modules for ones the user has set
-                let modules = settings.get("modules");
-                let selectedModules = [];
-                if (modules) {
-                  Object.keys(modules).forEach(category => {
-                    Object.keys(modules[category]).forEach(module => {
-                      var name = category[0] + "_" + module;
-                      var level = settings.get("modules." + category + "."
-                        + module);
-                      modulesStream.write("alias run_" + name + " " + name +
-                        "_" + level + "\n");
-                      selectedModules.push(category + "." + module);
-                      Object.keys(modulesJson[category + "." + module]["levels"][level])
-                        .forEach(item => {
-                          switch (item) {
-                            case "footsteps":
-                              download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                                version +
-                                "/mastercomfig-addon-no-footsteps.vpk",
-                                settings.get("tf2-folder") +
-                                "/tf/custom/mastercomfig-addon-no-footsteps.vpk");
-                              break;
-                            case "soundscapes":
-                              download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                                version +
-                                "/mastercomfig-addon-no-soundscapes.vpk",
-                                settings.get("tf2-folder") +
-                                "/tf/custom/mastercomfig-addon-no-soundscapes.vpk");
-                              break;
-                            case "pyrovision-textures":
-                              download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                                version +
-                                "/mastercomfig-addon-no-pyroland.vpk",
-                                settings.get("tf2-folder") +
-                                "/tf/custom/mastercomfig-addon-no-pyroland.vpk");
-                              break;
-                            case "extra-models":
-                              download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                                version +
-                                "/mastercomfig-addon-no-extra-models.vpk",
-                                settings.get("tf2-folder") +
-                                "/tf/custom/mastercomfig-addon-no-extra-models.vpk");
-                              break;
-                          }
-                        });
-                    });
-                  });
-                }
-                Object.keys(presets[settings.get("preset")]["modules"]).forEach(presetModule => {
-                  if (!selectedModules.includes(presetModule)) {
-                    Object.keys(modulesJson[presetModule]["levels"][presets[settings.get("preset")]["modules"][presetModule]])
-                      .forEach(item => {
-                        switch (item) {
-                          case "footsteps":
-                            download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                              version +
-                              "/mastercomfig-addon-no-footsteps.vpk",
-                              settings.get("tf2-folder") +
-                              "/tf/custom/mastercomfig-addon-no-footsteps.vpk");
-                            break;
-                          case "soundscapes":
-                            download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                              version +
-                              "/mastercomfig-addon-no-soundscapes.vpk",
-                              settings.get("tf2-folder") +
-                              "/tf/custom/mastercomfig-addon-no-soundscapes.vpk");
-                            break;
-                          case "pyrovision-textures":
-                            download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                              version +
-                              "/mastercomfig-addon-no-pyroland.vpk",
-                              settings.get("tf2-folder") +
-                              "/tf/custom/mastercomfig-addon-no-pyroland.vpk");
-                            break;
-                          case "extra-models":
-                            download("https://github.com/mastercoms/mastercomfig/releases/download/" +
-                              version +
-                              "/mastercomfig-addon-no-extra-models.vpk",
-                              settings.get("tf2-folder") +
-                              "/tf/custom/mastercomfig-addon-no-extra-models.vpk");
-                            break;
-                        }
-                      });
-                  }
-                });
-                // Define the upload speed module according to user upload
-                let uploadSpeed = settings.get("upload-speed");
-                let rate = "rate " + Math.max(3500, Math.min(1048576,
-                  parseFloat((uploadSpeed * 75000).toFixed(7))));
-                let splitpacketRate = ";net_splitpacket_maxrate " +
-                  Math.max(3500, Math.min(1048576,
-                    parseFloat((uploadSpeed * 50000).toFixed(7))));
-                let maxClearTime = Math.max(0.0000001,
-                  parseFloat((0.01288 / uploadSpeed).toFixed(7)));
-                if (maxClearTime === "1e-7") {
-                  maxClearTime = "0.0000001";
-                }
-                maxClearTime = ";net_maxcleartime " + maxClearTime;
-                modulesStream.write("alias run_n_upload \"" + rate +
-                  splitpacketRate + maxClearTime + "\"\n");
-                // Check to see if we can actually reliably send at max rate
-                let maxPacketRate = Math.floor(uploadSpeed * 100000 / 1288);
-                // No we can't, better redo our modules
-                if (maxPacketRate < 66) {
-                  fetchConfigData("config/modules.json")
-                    .then(response => {
-                      return response.json();
-                    }).then(json => {
-                    var modules = json.modules;
-                    Object.keys(modules["networking.packet_rate"]["levels"])
-                      .forEach(packetRate => {
-                        let scaledPacketRate = Math.max(10,
-                          Math.floor(maxPacketRate /
-                            modules["networking.packet_rate"]["levels"][packetRate]["rel_rate"]));
+        fs.unlink(settings.get("tf2-folder") +
+          "/tf/custom/mastercomfig-addon-no-soundscapes.vpk", () => {
+        });
+        fs.unlink(settings.get("tf2-folder") +
+          "/tf/custom/mastercomfig-addon-no-pyroland.vpk", () => {
+        });
+        fs.unlink(settings.get("tf2-folder") +
+          "/tf/custom/mastercomfig-addon-no-extra-models.vpk", () => {
+        });
+        fs.unlink(vpkPath, () => {
+          // Download latest VPK to path
+          // TODO: cache file per version (use commit hash)
+          download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+            version + "/mastercomfig.vpk", vpkPath)
+            .then(() => {
+              // Delete pre-existing client modules file to prevent overwrites
+              let netSplitRate = 1;
+              fs.unlink(settings.get("tf2-folder") +
+                "/tf/cfg/client-modules.cfg", () => {
+                let modulesStream = fs.createWriteStream(settings.get(
+                  "tf2-folder") + "/tf/cfg/client-modules.cfg");
+                modulesStream.once("open", () => {
+                  // Set the selected preset to define module aliases
+                  modulesStream.write("preset_" + settings.get("preset") +
+                    "\n");
+                  // Realias modules for ones the user has set
+                  let modules = settings.get("modules");
+                  let selectedModules = [];
+                  if (modules) {
+                    Object.keys(modules).forEach(category => {
+                      Object.keys(modules[category]).forEach(module => {
+                        var name = category[0] + "_" + module;
+                        var level = settings.get("modules." + category + "."
+                          + module);
+                        modulesStream.write("alias run_" + name + " " + name +
+                          "_" + level + "\n");
+                        selectedModules.push(category + "." + module);
                         Object.keys(
-                          modules["networking.packet_buffer"]["levels"])
+                          modulesJson[category + "." + module]["levels"][level])
+                          .forEach(item => {
+                            switch (item) {
+                              case "footsteps":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version +
+                                  "/mastercomfig-addon-no-footsteps.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-footsteps.vpk");
+                                break;
+                              case "soundscapes":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version +
+                                  "/mastercomfig-addon-no-soundscapes.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-soundscapes.vpk");
+                                break;
+                              case "pyrovision-textures":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version +
+                                  "/mastercomfig-addon-no-pyroland.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-pyroland.vpk");
+                                break;
+                              case "extra-models":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version +
+                                  "/mastercomfig-addon-no-extra-models.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-extra-models.vpk");
+                                break;
+                            }
+                          });
+                      });
+                    });
+                  }
+                  Object.keys(presets[settings.get("preset")]["modules"])
+                    .forEach(presetModule => {
+                      if (!selectedModules.includes(presetModule)) {
+                        Object.keys(
+                          modulesJson[presetModule]["levels"][presets[settings.get(
+                            "preset")]["modules"][presetModule]])
+                          .forEach(item => {
+                            switch (item) {
+                              case "footsteps":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version +
+                                  "/mastercomfig-addon-no-footsteps.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-footsteps.vpk");
+                                break;
+                              case "soundscapes":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version +
+                                  "/mastercomfig-addon-no-soundscapes.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-soundscapes.vpk");
+                                break;
+                              case "pyrovision-textures":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version +
+                                  "/mastercomfig-addon-no-pyroland.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-pyroland.vpk");
+                                break;
+                              case "extra-models":
+                                download("https://github.com/mastercoms/mastercomfig/releases/download/" +
+                                  version +
+                                  "/mastercomfig-addon-no-extra-models.vpk",
+                                  settings.get("tf2-folder") +
+                                  "/tf/custom/mastercomfig-addon-no-extra-models.vpk");
+                                break;
+                            }
+                          });
+                      }
+                    });
+                  // Define the speed module according to user speed
+                  let downloadSpeed = settings.get("download-speed");
+                  let uploadSpeed = settings.get("upload-speed");
+                  let speed = Math.min(downloadSpeed, uploadSpeed);
+                  let rate = (speed * 100000).floorD(7).clamp(3500,
+                    1048576);
+                  let rateS = "rate " + rate;
+                  let splitpacketRate = ";net_splitpacket_maxrate " +
+                    (uploadSpeed * 93750).floorD(7).clamp(3500, 1048576);
+                  let maxClearTime =
+                    Math.max(1 / 66, 0.0114489 / uploadSpeed).floorD(7);
+                  maxClearTime = ";net_maxcleartime " + maxClearTime;
+                  modulesStream.write("alias run_n_upload \"" + rateS +
+                    splitpacketRate + maxClearTime + "\"\n");
+                  // Check to see if we can actually reliably send at max rate
+                  let maxUpdateRate = Math.min(66, Math.floor(downloadSpeed *
+                    112500 / 1288));
+                  let maxCmdRate = Math.min(66,
+                    Math.floor(uploadSpeed * 112500 /
+                      1288));
+                  let packetSizeModule =
+                    settings.get("modules.networking.packet_size");
+                  if (!packetSizeModule) {
+                    packetSizeModule =
+                      presets[settings.get(
+                        "preset")]["modules"]["networking.packet_size"]
+                  }
+                  let maxRoutable =
+                    modulesJson["networking.packet_size"]["levels"][packetSizeModule]["values"]["net_maxroutable"];
+                  maxRoutable += 28;
+                  let maxNeededSplitRate = Math.ceil(4000 / maxRoutable);
+                  netSplitRate = Math.floor(93750 * uploadSpeed /
+                    (maxRoutable *
+                      maxCmdRate));
+                  netSplitRate = Math.min(maxNeededSplitRate, netSplitRate);
+                  // No we can't, better redo our modules
+                  if (maxUpdateRate < 66 || maxCmdRate < 66) {
+                    Object.keys(modulesJson["networking.packet_rate"]["levels"])
+                      .forEach(packetRate => {
+                        let scaledUpdateRate = Math.max(10,
+                          Math.floor(maxUpdateRate /
+                            modulesJson["networking.packet_rate"]["levels"][packetRate]["rel_rate"]));
+                        // make sure we don't bring cmdrate up to an unsupported
+                        // level. instead, bring update rate down within the
+                        // cmd rate difference limit (sv_client_cmdrate_difference)
+                        let cmdDiff = 20;
+                        if (maxUpdateRate - cmdDiff > maxCmdRate) {
+                          maxUpdateRate = maxCmdRate + cmdDiff;
+                        }
+                        // use the max allowable cmd rate we can
+                        // because we are already scaling update rate
+                        // using the relative multiplier
+                        let scaledCmdRate = Math.max(scaledUpdateRate - 1,
+                          maxCmdRate);
+                        Object.keys(
+                          modulesJson["networking.packet_buffer"]["levels"])
                           .forEach(interp => {
-                            console.log(
-                              modules["networking.packet_buffer"]["levels"][interp]["interp_ratio"]);
                             modulesStream.write("alias interp_" +
                               packetRate + "_" + interp + " \"cl_interp " +
                               +
-                                modules["networking.packet_buffer"]["levels"][interp]["interp_ratio"] /
-                              scaledPacketRate
+                                modulesJson["networking.packet_buffer"]["levels"][interp]["interp_ratio"] /
+                              scaledUpdateRate
                               +
                               "\"\n");
                           });
                         modulesStream.write("alias " + "n_packet_rate_" +
                           packetRate + " \"setinfo n_packet_rate " +
-                          packetRate + ";cl_updaterate " + scaledPacketRate +
-                          ";cl_cmdrate " + (scaledPacketRate -
-                            1) + ";packet_rate_" + packetRate +
+                          packetRate + ";cl_updaterate " + scaledUpdateRate +
+                          ";cl_cmdrate " + scaledCmdRate + ";packet_rate_" +
+                          packetRate +
                           "_interps\"\n");
+                        modulesStream.end();
                       });
-                  });
-                } else {
-                  modulesStream.end();
-                }
+                  } else {
+                    modulesStream.end();
+                  }
+                });
               });
-            });
-            // Delete pre-existing client custom file to prevent overwrites
-            fs.unlink(settings.get("tf2-folder") +
-              "/tf/cfg/client-custom.cfg", () => {
-              let customStream = fs.createWriteStream(settings.get(
-                "tf2-folder") + "/tf/cfg/client-custom.cfg");
-              customStream.once("open", () => {
-                fetchConfigData(
-                  "config/dynamic.json")
-                  .then(response => {
-                    return response.json();
-                  }).then(json => {
-                  const dynamics = json.entries;
-                  let count = Object.keys(dynamics).length;
-                  let writtenCount = count;
-                  ipcRenderer.on("dynamic-data-reply", (event, arg) => {
-                    console.log(arg);
-                    let winnerDynamic;
-                    if (Array.isArray(dynamics[arg.key])) {
-                      dynamics[arg.key].forEach(dataKey => {
-                        if (dataKey["max"] && arg.data <= dataKey.max) {
-                          winnerDynamic = {
-                            key: arg.key,
-                            data: dataKey.values,
-                            name: "at most " + dataKey.max + dataKey.suffix
+              // Delete pre-existing client custom file to prevent overwrites
+              fs.unlink(settings.get("tf2-folder") +
+                "/tf/cfg/client-custom.cfg", () => {
+                let customStream = fs.createWriteStream(settings.get(
+                  "tf2-folder") + "/tf/cfg/client-custom.cfg");
+                customStream.once("open", () => {
+                  fetchConfigData(
+                    "config/dynamic.json")
+                    .then(response => {
+                      return response.json();
+                    }).then(json => {
+                    const dynamics = json.entries;
+                    let count = Object.keys(dynamics).length;
+                    let writtenCount = count;
+                    ipcRenderer.on("dynamic-data-reply", (event, arg) => {
+                      console.log(arg);
+                      let winnerDynamic;
+                      if (Array.isArray(dynamics[arg.key])) {
+                        dynamics[arg.key].forEach(dataKey => {
+                          if (dataKey["max"] && arg.data <= dataKey.max) {
+                            winnerDynamic = {
+                              key: arg.key,
+                              data: dataKey.values,
+                              name: "at most " + dataKey.max + dataKey.suffix
+                            }
+                          } else if (dataKey["min"] && arg.data >=
+                            dataKey.min) {
+                            winnerDynamic = {
+                              key: arg.key,
+                              data: dataKey.values,
+                              name: "at least " + dataKey.min + dataKey.suffix
+                            };
                           }
-                        } else if (dataKey["min"] && arg.data >=
-                          dataKey.min) {
-                          winnerDynamic = {
-                            key: arg.key,
-                            data: dataKey.values,
-                            name: "at least " + dataKey.min + dataKey.suffix
-                          };
-                        }
-                      });
-                    } else {
-                      Object.keys(dynamics[arg.key]).forEach(dataKey => {
-                        if (arg.data.toLowerCase()
-                          .startsWith(dataKey.toLowerCase())) {
-                          winnerDynamic = {
-                            key: arg.key,
-                            data: dynamics[arg.key][dataKey],
-                            name: dataKey
-                          };
-                        }
-                      });
-                    }
-                    if (winnerDynamic) {
-                      if (writtenCount === Object.keys(dynamics).length) {
-                        customStream.write("// Dynamic settings\n\n");
-                      }
-                      customStream.write("// " + winnerDynamic.key +
-                        ": " + winnerDynamic.name + "\n");
-                      Object.keys(
-                        winnerDynamic.data)
-                        .forEach(cvar => {
-                          customStream.write(cvar + " " +
-                            winnerDynamic.data[cvar]
-                            + "\n");
                         });
-                      customStream.write("\n");
-                      writtenCount--;
-                    }
-                    count--;
-                    if (count === 0) {
-                      let writeCustoms = function() {
-                        if (settings.get("customs")) {
-                          customStream.write("\n// Custom settings");
-                          Object.keys(settings.get("customs"))
-                            .forEach(custom => {
-                              var customSetting = settings.get(
-                                "customs")[custom];
-                              customStream.write("\n\n// " + custom + "\n");
-                              if (customSetting.used) {
-                                customStream.write(customSetting.entry +
-                                  "\n");
-                              }
-                            });
-                          customStream.write("\n");
+                      } else {
+                        Object.keys(dynamics[arg.key]).forEach(dataKey => {
+                          if (arg.data.toLowerCase()
+                            .startsWith(dataKey.toLowerCase())) {
+                            winnerDynamic = {
+                              key: arg.key,
+                              data: dynamics[arg.key][dataKey],
+                              name: dataKey
+                            };
+                          }
+                        });
+                      }
+                      if (winnerDynamic) {
+                        if (writtenCount === Object.keys(dynamics).length) {
+                          customStream.write("// Dynamic settings\n\n");
                         }
-                        customStream.end();
-                      };
-                      if (authedUser) {
-                        console.log("user");
-                        let subs = settings.get("subscriptions.configs",
-                          []);
-                        if (subs && subs.length > 0) {
-                          var numSubs = 0;
-                          customStream.write("\n// mastercomfig community");
-                          subs.forEach(() => {
-                            numSubs++;
+                        customStream.write("// " + winnerDynamic.key +
+                          ": " + winnerDynamic.name + "\n");
+                        Object.keys(
+                          winnerDynamic.data)
+                          .forEach(cvar => {
+                            if (cvar === "net_splitrate") {
+                              winnerDynamic.data[cvar] = Math.min(netSplitRate,
+                                winnerDynamic.data[cvar]);
+                            }
+                            customStream.write(cvar + " " +
+                              winnerDynamic.data[cvar]
+                              + "\n");
                           });
-
-                          subs.forEach(id => {
-                            db.collection("configs").doc(id).get()
-                              .then(doc => {
-                                if (doc.exists) {
-                                  customStream.write("\n");
-                                  customStream.write("\n");
-                                  customStream.write("// " + doc.data().name +
-                                    " by " + doc.data().author + "\n");
-                                  customStream.write(doc.data().config
-                                    .replaceAll("\\n", "\n"));
+                        customStream.write("\n");
+                        writtenCount--;
+                      }
+                      count--;
+                      if (count === 0) {
+                        let writeCustoms = function() {
+                          if (settings.get("customs")) {
+                            customStream.write("\n// Custom settings");
+                            Object.keys(settings.get("customs"))
+                              .forEach(custom => {
+                                var customSetting = settings.get(
+                                  "customs")[custom];
+                                customStream.write("\n\n// " + custom + "\n");
+                                if (customSetting.used) {
+                                  customStream.write(customSetting.entry +
+                                    "\n");
                                 }
-                                numSubs--;
-                                if (numSubs <= 0) {
-                                  writeCustoms();
-                                }
-                              })
-                              .catch((error) => {
-                                document.getElementById("notification").innerText = error;
-                                document.getElementById("notification").opened = true;
-                                console.log(error);
-                                writeCustoms();
                               });
-                          });
+                            customStream.write("\n");
+                          }
+                          customStream.end();
+                        };
+                        if (authedUser) {
+                          let subs = settings.get("subscriptions.configs",
+                            []);
+                          if (subs && subs.length > 0) {
+                            var numSubs = 0;
+                            customStream.write("\n// mastercomfig community");
+                            subs.forEach(() => {
+                              numSubs++;
+                            });
+
+                            subs.forEach(id => {
+                              db.collection("configs").doc(id).get()
+                                .then(doc => {
+                                  if (doc.exists) {
+                                    customStream.write("\n");
+                                    customStream.write("\n");
+                                    customStream.write("// " + doc.data().name +
+                                      " by " + doc.data().author + "\n");
+                                    customStream.write(doc.data().config
+                                      .replaceAll("\\n", "\n"));
+                                  }
+                                  numSubs--;
+                                  if (numSubs <= 0) {
+                                    writeCustoms();
+                                  }
+                                })
+                                .catch((error) => {
+                                  document.getElementById(
+                                    "notification").innerText = error;
+                                  document.getElementById(
+                                    "notification").opened = true;
+                                  console.log(error);
+                                  writeCustoms();
+                                });
+                            });
+                          } else {
+                            writeCustoms();
+                          }
                         } else {
                           writeCustoms();
                         }
-                      } else {
-                        writeCustoms();
+                        ipcRenderer.removeAllListeners("dynamic-data-reply");
                       }
-                      ipcRenderer.removeAllListeners("dynamic-data-reply");
-                    }
-                  });
-                  Object.keys(dynamics).forEach(key => {
-                    ipcRenderer.send("dynamic-data-request", key);
+                    });
+                    Object.keys(dynamics).forEach(key => {
+                      ipcRenderer.send("dynamic-data-request", key);
+                    });
                   });
                 });
               });
+              ring.hidden = true;
+              document.getElementById("apply-btn").disabled = false;
+              settings.set("config-sha", latestSha);
+              let success = document.getElementById("apply-success");
+              success.hidden = false;
+              setTimeout(() => {
+                success.hidden = true;
+              }, 1000);
+            })
+            .catch(error => {
+              ring.hidden = true;
+              console.log(error);
+              document.getElementById("notification").innerText = error;
+              document.getElementById("notification").opened = true;
+              document.getElementById("apply-btn").disabled = false;
             });
-            ring.hidden = true;
-            document.getElementById("apply-btn").disabled = false;
-            settings.set("config-sha", latestSha);
-            let success = document.getElementById("apply-success");
-            success.hidden = false;
-            setTimeout(() => {
-              success.hidden = true;
-            }, 1000);
-          })
-          .catch(error => {
-            ring.hidden = true;
-            console.log(error);
-            document.getElementById("notification").innerText = error;
-            document.getElementById("notification").opened = true;
-            document.getElementById("apply-btn").disabled = false;
-          });
+        });
+      }).catch(error => {
+        ring.hidden = true;
+        console.log(error);
+        document.getElementById("notification").innerText = error;
+        document.getElementById("notification").opened = true;
+        document.getElementById("apply-btn").disabled = false;
       });
-    }).catch(error => {
-      ring.hidden = true;
-      console.log(error);
-      document.getElementById("notification").innerText = error;
-      document.getElementById("notification").opened = true;
-      document.getElementById("apply-btn").disabled = false;
     });
-  });
+  }
 </script>
 </body>
 </html>

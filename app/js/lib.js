@@ -24,6 +24,25 @@ firebase.initializeApp(config);
 const db = firebase.firestore();
 db.settings({timestampsInSnapshots: true});
 
+Number.prototype.roundD = function(decimals, rounder) {
+  if (!rounder) {
+    rounder = Math.round;
+  }
+  return Number(rounder(this + "e" + decimals) + "e-" + decimals);
+};
+
+Number.prototype.ceilD = function(decimals) {
+  return this.roundD(decimals, Math.ceil);
+};
+
+Number.prototype.floorD = function(decimals) {
+  return this.roundD(decimals, Math.ceil);
+};
+
+Number.prototype.clamp = function(min, max) {
+  return Math.min(Math.max(this, min), max);
+};
+
 String.prototype.toProperCase = function() {
   return this.replace(/\w\S*/g, function(txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -98,6 +117,7 @@ function setTargetSha(newSha) {
 
 function fetchConfigData(path) {
   return fetch(settings.get(
-    "config-data-url", "https://raw.githubusercontent.com/mastercoms/mastercomfig/") +
+    "config-data-url",
+    "https://raw.githubusercontent.com/mastercoms/mastercomfig/") +
     sha + "/" + path);
 }

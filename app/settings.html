@@ -86,7 +86,7 @@
       </small>
     </p>
   </div>
-  <p id="upload"><strong>Upload speed:</strong></p>
+  <p id="speed"></p>
   <hr>
   <h3>Preset</h3>
   <x-select id="presets-select" style="width: 200px">
@@ -147,139 +147,158 @@ solid #141414">
 <script>
   "use strict";
 
-  document.getElementById("upload").innerHTML =
-    "<strong>Upload speed:</strong> " + settings.get("upload-speed") + "Mbps";
-  document.getElementById("folder-label").innerText =
-    settings.get("tf2-folder");
-
-  document.getElementById("tf2-folder").addEventListener("change", e => {
-    let folder = e.target.files[0].path;
-    if (e.target.files[0].name === "Team Fortress 2") {
-      document.getElementById("folder-label").innerText = folder;
-      settings.set("tf2-folder", folder);
-    } else {
-      document.getElementById("folder-label").innerText =
-        "Invalid Team Fortress 2 folder. Please try again.";
-    }
+  $(() => {
+    page();
   });
 
-  document.getElementById("delete-this").addEventListener("click", () => {
-    settings.deleteAll();
-    app.relaunch({args: process.argv.slice(1).concat(["--relaunch"])});
-    app.exit(0);
-  });
+  function page() {
+    document.getElementById("speed").innerHTML =
+      "<strong>Download speed:</strong> " + settings.get("download-speed") +
+      "Mbps";
+    document.getElementById("speed").innerHTML +=
+      "<br><strong>Upload speed:</strong> " + settings.get("upload-speed") +
+      "Mbps";
 
-  document.getElementById("remove-modules").addEventListener("click", () => {
-    settings.delete("modules");
-    settings.delete("customs");
-  });
+    document.getElementById("folder-label").innerText =
+      settings.get("tf2-folder");
 
-  document.getElementById("remove-customs").addEventListener("click", () => {
-    settings.delete("customs");
-  });
-
-  document.getElementById("dev-tools").addEventListener("click", () => {
-    ipcRenderer.send("dev-tools-open");
-  });
-
-  var darkMode = document.getElementById("dark-mode");
-  if (settings.get("ui.dark", false)) {
-    darkMode.setAttribute("toggled", null);
-  }
-  darkMode.addEventListener("toggle", () => {
-    var dark = darkMode.hasAttribute("toggled");
-    settings.set("ui.dark", dark);
-    if (dark) {
-      $("body")
-        .addClass("bg-dark")
-        .addClass("text-light");
-      $(".navbar-light")
-        .removeClass("navbar-light")
-        .removeClass("bg-light")
-        .addClass("navbar-dark")
-        .addClass("bg-dark");
-    } else {
-      $("body")
-        .removeClass("bg-dark")
-        .removeClass("text-light");
-      $(".navbar-dark").filter(".fixed-bottom")
-        .removeClass("navbar-dark")
-        .removeClass("bg-dark")
-        .addClass("navbar-light")
-        .addClass("bg-light");
-    }
-  });
-
-  var speedtestBtn = document.getElementById("speedtest-btn");
-
-  speedtestBtn.addEventListener("click", () => {
-    const speedtest = require("speedtest-net");
-    var test = speedtest({
-      pingCount: 10,
-      serversUrl: "https://www.speedtest.net/speedtest-servers-static.php"
-    });
-    var server = document.getElementById("status");
-    server.innerText = "Finding server...";
-
-    var bar = document.getElementById("speedtest-bar");
-    document.getElementById("speedtest-btn").disabled = true;
-    bar.hidden = false;
-    bar.removeAttribute("value");
-
-    document.getElementById("speedtest").hidden = false;
-
-    test.on("uploadprogress", progress => {
-      bar.setAttribute("value", (parseFloat(progress) / 100).toString());
-    });
-
-    test.on("data", data => {
-      bar.hidden = true;
-      document.getElementById("speedtest").hidden = true;
-      speedtestBtn.innerText = "Retry";
-      speedtestBtn.disabled = false;
-      var speed = data.speeds.upload;
-      document.getElementById("upload").hidden = false;
-      document.getElementById("upload").innerHTML =
-        "<strong>Upload speed:</strong> " + speed + "Mbps";
-      settings.set("upload-speed", speed);
-    });
-
-    test.on("testserver", testserver => {
-      server.innerText =
-        testserver.name + ", " + testserver.cc + " — " + testserver.sponsor +
-        " (" + Math.round(testserver.bestPing) + "ms, " +
-        Math.round(testserver.dist) + "km)";
-    });
-  });
-
-  fetchConfigData("config/presets.json")
-    .then(response => {
-      return response.json();
-    }).then(json => {
-    var selected = false;
-    var presetsMenu = document.getElementById("presets-menu");
-    var presets = json.presets;
-    var currentPreset = settings.get("preset");
-    Object.keys(presets).forEach(key => {
-      var friendlyName = key.replaceAll("_", " ").toProperCase();
-      var item = document.createElement("x-menuitem");
-      item.setAttribute("value", key);
-      var label = document.createElement("x-label");
-      label.innerText = friendlyName;
-      item.appendChild(label);
-      presetsMenu.appendChild(item);
-      if (key === currentPreset) {
-        item.setAttribute("toggled", null);
+    document.getElementById("tf2-folder").addEventListener("change", e => {
+      let folder = e.target.files[0].path;
+      if (e.target.files[0].name === "Team Fortress 2") {
+        document.getElementById("folder-label").innerText = folder;
+        settings.set("tf2-folder", folder);
+      } else {
+        document.getElementById("folder-label").innerText =
+          "Invalid Team Fortress 2 folder. Please try again.";
       }
     });
-    document.getElementById("presets-select")
-      .addEventListener("change", (e) => {
-        if (!selected) {
-          selected = true;
-        }
-        settings.set("preset", e.detail.newValue);
+
+    document.getElementById("delete-this").addEventListener("click", () => {
+      settings.deleteAll();
+      app.relaunch({args: process.argv.slice(1).concat(["--relaunch"])});
+      app.exit(0);
+    });
+
+    document.getElementById("remove-modules").addEventListener("click", () => {
+      settings.delete("modules");
+      settings.delete("customs");
+    });
+
+    document.getElementById("remove-customs").addEventListener("click", () => {
+      settings.delete("customs");
+    });
+
+    document.getElementById("dev-tools").addEventListener("click", () => {
+      ipcRenderer.send("dev-tools-open");
+    });
+
+    var darkMode = document.getElementById("dark-mode");
+    if (settings.get("ui.dark", false)) {
+      darkMode.setAttribute("toggled", null);
+    }
+    darkMode.addEventListener("toggle", () => {
+      var dark = darkMode.hasAttribute("toggled");
+      settings.set("ui.dark", dark);
+      if (dark) {
+        $("body")
+          .addClass("bg-dark")
+          .addClass("text-light");
+        $(".navbar-light")
+          .removeClass("navbar-light")
+          .removeClass("bg-light")
+          .addClass("navbar-dark")
+          .addClass("bg-dark");
+      } else {
+        $("body")
+          .removeClass("bg-dark")
+          .removeClass("text-light");
+        $(".navbar-dark").filter(".fixed-bottom")
+          .removeClass("navbar-dark")
+          .removeClass("bg-dark")
+          .addClass("navbar-light")
+          .addClass("bg-light");
+      }
+    });
+
+    var speedtestBtn = document.getElementById("speedtest-btn");
+
+    speedtestBtn.addEventListener("click", () => {
+      const speedtest = require("speedtest-net");
+      var test = speedtest({
+        pingCount: 10,
+        serversUrl: "https://www.speedtest.net/speedtest-servers-static.php"
       });
-  });
+      var server = document.getElementById("status");
+      server.innerText = "Finding server...";
+
+      var bar = document.getElementById("speedtest-bar");
+      document.getElementById("speedtest-btn").disabled = true;
+      bar.hidden = false;
+      bar.removeAttribute("value");
+
+      document.getElementById("speedtest").hidden = false;
+
+      test.on("downloadprogress", progress => {
+        bar.setAttribute("value", (parseFloat(progress) / 100).toString());
+      });
+
+      test.on("uploadprogress", progress => {
+        bar.setAttribute("value", (parseFloat(progress) / 100).toString());
+      });
+
+      test.on("data", data => {
+        bar.hidden = true;
+        document.getElementById("speedtest").hidden = true;
+        speedtestBtn.innerText = "Retry";
+        speedtestBtn.disabled = false;
+        var download = data.speeds.download;
+        var upload = data.speeds.upload;
+        document.getElementById("speed").hidden = false;
+        document.getElementById("speed").innerHTML =
+          "<strong>Download speed:</strong> " + download + "Mbps";
+        document.getElementById("speed").innerHTML +=
+          "<br><strong>Upload speed:</strong> " + upload + "Mbps";
+        settings.set("upload-speed", upload);
+        settings.set("download-speed", download);
+      });
+
+      test.on("testserver", testserver => {
+        server.innerText =
+          testserver.name + ", " + testserver.cc + " — " + testserver.sponsor +
+          " (" + Math.round(testserver.bestPing) + "ms, " +
+          Math.round(testserver.dist) + "km)";
+      });
+    });
+
+    fetchConfigData("config/presets.json")
+      .then(response => {
+        return response.json();
+      }).then(json => {
+      var selected = false;
+      var presetsMenu = document.getElementById("presets-menu");
+      var presets = json.presets;
+      var currentPreset = settings.get("preset");
+      Object.keys(presets).forEach(key => {
+        var friendlyName = key.replaceAll("_", " ").toProperCase();
+        var item = document.createElement("x-menuitem");
+        item.setAttribute("value", key);
+        var label = document.createElement("x-label");
+        label.innerText = friendlyName;
+        item.appendChild(label);
+        presetsMenu.appendChild(item);
+        if (key === currentPreset) {
+          item.setAttribute("toggled", null);
+        }
+      });
+      document.getElementById("presets-select")
+        .addEventListener("change", (e) => {
+          if (!selected) {
+            selected = true;
+          }
+          settings.set("preset", e.detail.newValue);
+        });
+    });
+  }
 </script>
 </body>
 </html>

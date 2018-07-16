@@ -105,20 +105,26 @@
 <script>
   "use strict";
 
-  document.getElementById("version").innerText = app.getVersion();
+  $(() => {
+    page();
+  });
 
-  function setDataToField(field, data) {
-    if (data) {
-      document.getElementById(field).innerText = data;
+  function page() {
+    document.getElementById("version").innerText = app.getVersion();
+
+    function setDataToField(field, data) {
+      if (data) {
+        document.getElementById(field).innerText = data;
+      }
     }
-  }
 
-  function setSettingToField(field, setting) {
-    setDataToField(field, settings.get(setting));
-  }
+    function setSettingToField(field, setting) {
+      setDataToField(field, settings.get(setting));
+    }
 
-  setSettingToField("commit", "config-sha");
-  setSettingToField("channel", "channel");
+    setSettingToField("commit", "config-sha");
+    setSettingToField("channel", "channel");
+  }
 </script>
 </body>
 </html>

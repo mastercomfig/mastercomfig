@@ -1121,15 +1121,16 @@
         }
       }
     },
-    "networking.upload": {
+    "networking.rate": {
       "description": "How much data can the client use per second",
       "hidden": true,
       "levels": {
         "default": {
           "values": {
             "rate": 196608,
-            "net_splitpacket_maxrate": 131072,
-            "net_maxcleartime": 0.0049133
+            "net_splitpacket_maxrate": 184320,
+            "net_maxcleartime": 0.0058233,
+            "net_splitrate": 2
           }
         }
       }
