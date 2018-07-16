@@ -70,8 +70,6 @@ def detail_props(level, value):
         detail_props_alias = "alias {0} \"cl_detaildist {1[0]};cl_detailfade {1[1]}\"\n"\
             .format(detail_props_override, detail_prop_fades.get(value))
         defined_detail_prop.append(value)
-    print(detail_props_addition)
-    print(detail_props_alias)
     return detail_props_addition, detail_props_alias
 
 
