@@ -98,7 +98,8 @@
         "max": 0.5,
         "suffix": "GB",
         "values": {
-          "cl_always_flush_models": 1
+          "cl_always_flush_models": 1,
+          "mat_bufferprimitives": 0
         }
       },
       {

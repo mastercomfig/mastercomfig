@@ -147,6 +147,8 @@
                 var index = configSubs.indexOf(doc.id);
                 if (index > -1) {
                   configSubs.splice(index, 1);
+                  settings.set("subscriptions.configs",
+                    configSubs);
                 }
               }
             });

@@ -753,7 +753,7 @@ solid #141414">
                   if (!packetSizeModule) {
                     packetSizeModule =
                       presets[settings.get(
-                        "preset")]["modules"]["networking.packet_size"]
+                        "preset")]["modules"]["networking.packet_size"];
                   }
                   let maxRoutable =
                     modulesJson["networking.packet_size"]["levels"][packetSizeModule]["values"]["net_maxroutable"];
@@ -830,7 +830,7 @@ solid #141414">
                               key: arg.key,
                               data: dataKey.values,
                               name: "at most " + dataKey.max + dataKey.suffix
-                            }
+                            };
                           } else if (dataKey["min"] && arg.data >=
                             dataKey.min) {
                             winnerDynamic = {

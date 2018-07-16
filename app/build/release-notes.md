@@ -1,16 +1,21 @@
 App Changes:
+* Fixed problems with the app attempting to run logic when it was not ready to do so
+* Only attempt to auto-update on Windows
+* The app no longer allows applying before the app is ready to apply
 * Updated dependencies
-* Added author label to mastercomfig community
-* Added button to view config contents for mastercomfig community
-* Fixed bug with detecting Intel HD Graphics
-* Fixed SSDs not being detected on Windows
-* Fixed custom setting override selector controls not reflecting their selected values on startup
-* Fixed `net_maxcleartime` formatting on high upload speeds
-* Fixed the latest config data release not being used for the app if there was a more recent release from a different version branch
+* Scale various rate settings based on download and upload speed rather than using upload speed as a universal speed
+* Scale `net_splitrate` based on upload speed and packet fragment count possibilities rather than just CPU speed
+* Properly scale `cl_cmdrate` and `cl_updaterate` in relation to each other when speeds cap either
+* Optimized network and data read usage by caching some config data at runtime
+* Cleaned up console output
+* Properly finish writing `client-modules.cfg` when scaling packet rates
+* Fixed community configs not being able to be unsubscribed from
 
 Config Changes:
-* Optimized occlusion for Intel HD Graphics to further reduce the impact of crowded areas
-* Changed ragdolls medium to not instantly fade out
+* Boosted rate limits and increase the surge rate in order to take better advantage of your network at all times
+* Improved CPU scaling for `net_splitrate`
+* Reduced the memory threshold for aggressive low memory settings
+* Added more memory reduction settings for low memory devices
 
 Coming soon:
 * Sharing
