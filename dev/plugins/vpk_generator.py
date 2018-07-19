@@ -159,10 +159,7 @@ def modules_define_file(manifest):
             for level in module_levels.keys():
                 level_string = ""
                 alias_name = module_name + "_" + level
-                if manifest_modules[module].get('hidden'):
-                    alias_string = ""
-                else:
-                    alias_string = "setinfo " + module_name + " " + level
+                alias_string = ""
                 for cvar, value in module_levels.get(level, {}).get('values', {}).items():
                     alias_string += ";" + cvar + " " + value.__str__()
                 for entry, value in module_levels.get(level, {}).items():
@@ -184,7 +181,6 @@ def modules_help_file(manifest):
     make_cfg_dir()
     with open(base_dir + 'cfg/modules-help.cfg', "w+") as modules_help:
         comfig_aliases += "alias modules_help \"exec modules-help\"\n"
-        comfig_aliases += "setinfo modules_help \"\"\n"
         manifest_modules = manifest.get('modules', {})
         for module in manifest_modules.keys():
             if manifest_modules.get(module, {}).get('hidden') or manifest_modules[module].get('no-data', False):
@@ -241,7 +237,7 @@ def presets_files(manifest):
     manifest_presets = manifest.get('presets', {})
     with open(base_dir + 'cfg/modules-define.cfg', "a+") as modules_define:
         for preset in manifest_presets.keys():
-            alias_string = "alias preset_" + preset + " \"setinfo preset " + preset
+            alias_string = "alias preset_" + preset + " \""
             os.makedirs(base_dir + 'cfg/presets/', exist_ok=True)
             with open(base_dir + 'cfg/presets/' + preset + '.cfg', "w+") as preset_file:
                 modules = manifest_presets.get(preset, {}).get('modules', {})
@@ -254,7 +250,6 @@ def presets_files(manifest):
             alias_string += ";exec presets/" + preset
             alias_string += "\"\n"
             modules_define.write(alias_string)
-            modules_define.write("setinfo preset_" + preset + " \"\"\n")
 
 
 @generator(manifest='comfig')
@@ -318,4 +313,3 @@ def comfig_format(*args):
         for _ in space_padding:
             comfig.write("echo \" \"\n")
         comfig.write("alias version_comfig \"echo mastercomfig version: " + args[0] + " | " + date + "\"\n")
-        comfig.write("setinfo version_comfig \"\"")
