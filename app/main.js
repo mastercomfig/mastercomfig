@@ -57,7 +57,8 @@ function getDynamicData(name, callback) {
         .then(data => {
           let currentVendor;
           data.controllers.forEach(card => {
-            if (!currentVendor || currentVendor === "Intel") {
+            if (!currentVendor || currentVendor.toLowerCase().startsWith("intel") ||
+              currentVendor.toLowerCase().startsWith("%intellimodder32%")) {
               currentVendor = card.vendor;
             }
           });
