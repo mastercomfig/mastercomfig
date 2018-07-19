@@ -750,7 +750,7 @@ solid #141414">
                     Math.max(0.005087,
                       (4000 / (uploadSpeed * 93750 - staticUClearance)).floorD(6));
                   maxClearTime = ";net_maxcleartime " + maxClearTime;
-                  modulesStream.write("alias run_n_upload \"" + rateS +
+                  modulesStream.write("alias run_n_rate \"" + rateS +
                     splitpacketRate + maxClearTime + "\"\n");
                   // Check to see if we can actually reliably send at max rate
                   let maxUpdateRate = Math.min(66, Math.floor(downloadSpeed *

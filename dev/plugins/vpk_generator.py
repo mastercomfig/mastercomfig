@@ -161,7 +161,10 @@ def modules_define_file(manifest):
                 alias_name = module_name + "_" + level
                 alias_string = ""
                 for cvar, value in module_levels.get(level, {}).get('values', {}).items():
-                    alias_string += ";" + cvar + " " + value.__str__()
+                    if alias_string:
+                        alias_string += ";" + cvar + " " + value.__str__()
+                    else:
+                        alias_string = cvar + " " + value.__str__()
                 for entry, value in module_levels.get(level, {}).items():
                     if custom_generators.get(entry):
                         ret = custom_generators[entry](level, value)
