@@ -1045,9 +1045,9 @@
           "name": "Balanced smoothing",
           "description": "A short smoothing time that is mostly reliable.",
           "values": {
-            "cl_interp_ratio": 1.4347826
+            "cl_interp_ratio": 1.178571
           },
-          "interp_ratio": 1.4347826087
+          "interp_ratio": 1.17857142857
         },
         "lan": {
           "name": "Local network smoothing",
@@ -1098,7 +1098,7 @@
           "description": "Minimizes packet size to ensure reliable delivery on bad routers/modems",
           "values": {
             "net_compresspackets": 1,
-            "net_compresspackets_minsize": 957,
+            "net_compresspackets_minsize": 128,
             "net_maxroutable": 956,
             "net_maxfragments": 956
           }
@@ -1116,7 +1116,7 @@
           "description": "Minimizes Internet usage",
           "values": {
             "net_compresspackets": 1,
-            "net_compresspackets_minsize": 577,
+            "net_compresspackets_minsize": 128,
             "net_maxroutable": 1260,
             "net_maxfragments": 1260
           }
@@ -1125,7 +1125,7 @@
           "description": "The optimal packet settings for most users",
           "values": {
             "net_compresspackets": 1,
-            "net_compresspackets_minsize": 957,
+            "net_compresspackets_minsize": 128,
             "net_maxroutable": 1200,
             "net_maxfragments": 1200
           }
@@ -1139,8 +1139,8 @@
         "default": {
           "values": {
             "rate": 196608,
-            "net_splitpacket_maxrate": 184320,
-            "net_maxcleartime": 0.0058233,
+            "net_splitpacket_maxrate": 196608,
+            "net_maxcleartime": 0.020345,
             "net_splitrate": 2
           }
         }
