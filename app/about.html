@@ -11,7 +11,6 @@
         crossorigin="anonymous" rel="stylesheet">
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
-  <meta charset="UTF-8">
   <title>mastercomfig</title>
 </head>
 <body class="bg-light">
@@ -110,6 +109,10 @@
   });
 
   function page() {
+    if (visitor) {
+      visitor.screenview("Settings").send();
+    }
+
     document.getElementById("version").innerText = app.getVersion();
 
     function setDataToField(field, data) {

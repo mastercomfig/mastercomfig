@@ -42,6 +42,7 @@
     "popper.js": "^1.14.3",
     "speedtest-net": "^1.4.3",
     "systeminformation": "^3.42.4",
+    "universal-analytics": "^0.4.17",
     "xel": "^0.0.141"
   },
   "build": {

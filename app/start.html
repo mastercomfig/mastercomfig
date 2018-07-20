@@ -37,6 +37,7 @@
     <x-icon name="check" skin="success" id="folder-check" hidden></x-icon>
       Select your Team Fortress 2 folder
   </h3>
+  <p>This will be your main folder, within steamapps/common.</p>
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="tf2-folder"
            webkitdirectory/>
@@ -96,6 +97,13 @@
   });
 
   function page() {
+
+    let loadedTime = Date.now();
+
+    if (visitor) {
+      visitor.screenview("Start").send();
+    }
+
     var steps = 0;
 
     function stepProgress(reverse) {
@@ -147,7 +155,16 @@
 
     var speedtestBtn = document.getElementById("speedtest-btn");
 
+    let retry = 0;
+
     speedtestBtn.addEventListener("click", () => {
+      if (retry && visitor) {
+        visitor.event({
+          ec: "Speed measure",
+          ea: "Retry",
+          ev: retry
+        }).send();
+      }
       const speedtest = require("speedtest-net");
       var test = speedtest({
         pingCount: 10,
@@ -176,6 +193,7 @@
         document.getElementById("speedtest").hidden = true;
         speedtestBtn.innerText = "Retry";
         speedtestBtn.disabled = false;
+        retry++;
         var download = data.speeds.download;
         var upload = data.speeds.upload;
         document.getElementById("speed").hidden = false;
@@ -183,6 +201,18 @@
           "<strong>Download speed:</strong> " + download + "Mbps";
         document.getElementById("speed").innerHTML +=
           "<br><strong>Upload speed:</strong> " + upload + "Mbps";
+        if (visitor) {
+          visitor.event({
+            ec: "Speed measure",
+            ea: "Download speed",
+            ev: download
+          }).send();
+          visitor.event({
+            ec: "Speed measure",
+            ea: "Upload speed",
+            ev: upload
+          }).send();
+        }
         settings.set("upload-speed", upload);
         settings.set("download-speed", download);
         document.getElementById("speedtest-check").hidden = false;
@@ -190,6 +220,13 @@
       });
 
       test.on("testserver", testserver => {
+        if (visitor) {
+          visitor.event({
+            ec: "Speed measure",
+            ea: "Ping",
+            ev: testserver.bestPing
+          }).send();
+        }
         server.innerText =
           testserver.name + ", " + testserver.cc + " — " + testserver.sponsor +
           " (" + Math.round(testserver.bestPing) + "ms, " +
@@ -286,6 +323,11 @@
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         authedUser = user;
+
+        if (visitor) {
+          visitor.set("uid", user.uid);
+        }
+
         fetch("https://api.mastercomfig.com/remoteconfig?id=" + user.uid)
           .then(response => {
             return response.json();

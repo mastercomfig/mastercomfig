@@ -11,7 +11,6 @@
         crossorigin="anonymous" rel="stylesheet">
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
-  <meta charset="UTF-8">
   <title>mastercomfig</title>
 </head>
 <body class="bg-light">
@@ -89,6 +88,10 @@
   });
 
   function page() {
+    if (visitor) {
+      visitor.screenview("Community").send();
+    }
+
     firebase.auth().signInAnonymously().catch(function(error) {
       // ignored
     });
@@ -97,6 +100,10 @@
       if (user) {
         var content = document.getElementById("content");
         var configSubs = settings.get("subscriptions.configs", []);
+
+        if (visitor) {
+          visitor.set("uid", user.uid);
+        }
 
         db.collection("configs").get().then(snapshot => {
           snapshot.forEach(doc => {

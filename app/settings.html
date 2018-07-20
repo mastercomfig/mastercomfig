@@ -11,8 +11,8 @@
         crossorigin="anonymous" rel="stylesheet">
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
-  <title>mastercomfig setup</title>
   <link href="css/settings.css" rel="stylesheet">
+  <title>mastercomfig</title>
 </head>
 <body class="bg-light" style="padding-bottom: 40px;">
 <nav class="navbar navbar-dark bg-dark d-flex align-items-center sticky-top"
@@ -153,6 +153,11 @@ solid #141414">
   });
 
   function page() {
+
+    if (visitor) {
+      visitor.screenview("Settings").send();
+    }
+
     document.getElementById("speed").innerHTML =
       "<strong>Download speed:</strong> " + settings.get("download-speed") +
       "Mbps";
@@ -223,7 +228,16 @@ solid #141414">
 
     var speedtestBtn = document.getElementById("speedtest-btn");
 
+    let retry = 0;
+
     speedtestBtn.addEventListener("click", () => {
+      if (retry && visitor) {
+        visitor.event({
+          ec: "Speed measure",
+          ea: "Retry",
+          ev: retry
+        }).send();
+      }
       const speedtest = require("speedtest-net");
       var test = speedtest({
         pingCount: 10,
@@ -252,6 +266,7 @@ solid #141414">
         document.getElementById("speedtest").hidden = true;
         speedtestBtn.innerText = "Retry";
         speedtestBtn.disabled = false;
+        retry++;
         var download = data.speeds.download;
         var upload = data.speeds.upload;
         document.getElementById("speed").hidden = false;
@@ -259,11 +274,30 @@ solid #141414">
           "<strong>Download speed:</strong> " + download + "Mbps";
         document.getElementById("speed").innerHTML +=
           "<br><strong>Upload speed:</strong> " + upload + "Mbps";
+        if (visitor) {
+          visitor.event({
+            ec: "Speed measure",
+            ea: "Download speed",
+            ev: download
+          }).send();
+          visitor.event({
+            ec: "Speed measure",
+            ea: "Upload speed",
+            ev: upload
+          }).send();
+        }
         settings.set("upload-speed", upload);
         settings.set("download-speed", download);
       });
 
       test.on("testserver", testserver => {
+        if (visitor) {
+          visitor.event({
+            ec: "Speed measure",
+            ea: "Ping",
+            ev: testserver.bestPing
+          }).send();
+        }
         server.innerText =
           testserver.name + ", " + testserver.cc + " — " + testserver.sponsor +
           " (" + Math.round(testserver.bestPing) + "ms, " +
@@ -271,33 +305,119 @@ solid #141414">
       });
     });
 
-    fetchConfigData("config/presets.json")
-      .then(response => {
-        return response.json();
-      }).then(json => {
-      var selected = false;
-      var presetsMenu = document.getElementById("presets-menu");
-      var presets = json.presets;
-      var currentPreset = settings.get("preset");
-      Object.keys(presets).forEach(key => {
-        var friendlyName = key.replaceAll("_", " ").toProperCase();
-        var item = document.createElement("x-menuitem");
-        item.setAttribute("value", key);
-        var label = document.createElement("x-label");
-        label.innerText = friendlyName;
-        item.appendChild(label);
-        presetsMenu.appendChild(item);
-        if (key === currentPreset) {
-          item.setAttribute("toggled", null);
-        }
-      });
-      document.getElementById("presets-select")
-        .addEventListener("change", (e) => {
-          if (!selected) {
-            selected = true;
+    function initConfigData() {
+      fetchConfigData("config/presets.json")
+        .then(response => {
+          return response.json();
+        }).then(json => {
+        var selected = false;
+        var presetsMenu = document.getElementById("presets-menu");
+        var presets = json.presets;
+        var currentPreset = settings.get("preset");
+        Object.keys(presets).forEach(key => {
+          var friendlyName = key.replaceAll("_", " ").toProperCase();
+          var item = document.createElement("x-menuitem");
+          item.setAttribute("value", key);
+          var label = document.createElement("x-label");
+          label.innerText = friendlyName;
+          item.appendChild(label);
+          presetsMenu.appendChild(item);
+          if (key === currentPreset) {
+            item.setAttribute("toggled", null);
           }
-          settings.set("preset", e.detail.newValue);
         });
+        document.getElementById("presets-select")
+          .addEventListener("change", (e) => {
+            if (!selected) {
+              selected = true;
+            }
+            settings.set("preset", e.detail.newValue);
+          });
+      });
+    }
+
+    let latestSha;
+
+    function refreshConfigTarget() {
+      var altChannel = settings.get("channel");
+      if (altChannel) {
+        fetch(
+          "https://api.github.com/repositories/69422496/commits?sha=" +
+          altChannel +
+          "&path=config")
+          .then(response => {
+            return response.json();
+          }).then(json => {
+          // Queue up the latest commit to be set when the user applies
+          latestSha = json[0].sha;
+          setTargetSha(latestSha);
+          initConfigData();
+        });
+      } else if (settings.get("dev-mode")) {
+        setTargetSha("");
+        initConfigData();
+      } else {
+        fetch("https://api.github.com/repositories/69422496/tags")
+          .then(response => {
+            return response.json();
+          })
+          .then(json => {
+            for (let tag of Object.keys(json)) {
+              if (json[tag].name === "v" + app.getVersion()) {
+                return json[tag];
+              }
+            }
+            let baseVersion = app.getVersion().split("-")[0];
+            for (let tag of Object.keys(json)) {
+              if (json[tag].name.startsWith(baseVersion)) {
+                return json[tag];
+              }
+            }
+            return json[0];
+          })
+          .then(tag => {
+            // Queue up the latest commit to be set when the user applies
+            latestSha = tag.commit.sha;
+            setTargetSha(latestSha);
+            initConfigData();
+          });
+      }
+    }
+
+    firebase.auth().signInAnonymously().catch(function(error) {
+      console.log(error);
+    });
+
+    let authedUser;
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        authedUser = user;
+
+        if (visitor) {
+          visitor.set("uid", user.uid);
+        }
+
+        fetch("https://api.mastercomfig.com/remoteconfig?id=" + user.uid)
+          .then(response => {
+            return response.json();
+          }).then(json => {
+          if (!json || !json.channel || json.channel === "") {
+            settings.delete("channel");
+            refreshConfigTarget();
+          } else {
+            settings.set("channel", json.channel);
+            refreshConfigTarget();
+          }
+        })
+          .catch(() => {
+            settings.delete("channel");
+            refreshConfigTarget();
+          });
+      } else {
+        settings.delete("channel");
+        refreshConfigTarget();
+      }
     });
   }
 </script>

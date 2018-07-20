@@ -8,6 +8,19 @@ const autoUpdater = require("electron-updater").autoUpdater;
 
 let window = null;
 
+const isSecondInstance = app.makeSingleInstance(() => {
+  if (window) {
+    if (window.isMinimized()) {
+      window.restore();
+    }
+    window.focus();
+  }
+});
+
+if (isSecondInstance) {
+  app.quit();
+}
+
 function createWindow() {
 
   let windowOptions = {
@@ -219,5 +232,3 @@ function setupUpdates() {
   autoUpdater.allowDowngrade = true;
   autoUpdater.checkForUpdates();
 }
-
-

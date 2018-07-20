@@ -6,6 +6,7 @@ const settings = require("electron-settings");
 const http = require("http");
 const https = require("https");
 const fs = require("fs");
+const ua = require("universal-analytics");
 
 const firebase = require("firebase");
 require("firebase/firestore");
@@ -20,6 +21,15 @@ var config = {
   messagingSenderId: "765315683049"
 };
 firebase.initializeApp(config);
+
+let visitor;
+
+if (settings.get("tracking-consent", true)) {
+  visitor = ua("UA-122662888-1");
+  visitor.set("ds", "app");
+  visitor.set("an", app.getName());
+  visitor.set("av", app.getVersion());
+}
 
 const db = firebase.firestore();
 db.settings({timestampsInSnapshots: true});

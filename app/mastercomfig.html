@@ -11,7 +11,6 @@
         crossorigin="anonymous" rel="stylesheet">
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
-  <meta charset="UTF-8">
   <title>mastercomfig</title>
 </head>
 <body class="bg-light">
@@ -108,6 +107,11 @@ solid #141414">
   });
 
   function page() {
+
+    if (visitor) {
+      visitor.screenview("Home").send();
+    }
+
     let latestSha = settings.get("config-sha", "");
 
     function refreshConfigTarget() {
@@ -415,6 +419,7 @@ solid #141414">
               switch (customEntry.data.type) {
                 case "selector":
                   var customSelect = document.createElement("x-select");
+                  customSelect.hidden = true;
                   box.appendChild(customSelect);
                   var customMenu = document.createElement("x-menu");
                   customSelect.appendChild(customMenu);
@@ -434,6 +439,7 @@ solid #141414">
                   checkbox.addEventListener("toggle", () => {
                     settings.set("customs." + splitCats + "_" + item + ".used",
                       checkbox.hasAttribute("toggled"));
+                    customSelect.hidden = false;
                     if (checkbox.hasAttribute("toggled")) {
                       var customLevel = customEntry.data.value[parseInt(
                         customSelect.value)];
@@ -466,6 +472,7 @@ solid #141414">
                   break;
                 case "toggle":
                   var switcher = document.createElement("x-switch");
+                  switcher.hidden = true;
                   box.appendChild(switcher);
                   if (settings.get("customs." + splitCats + "_" + item +
                     ".value")) {
@@ -474,6 +481,7 @@ solid #141414">
                   checkbox.addEventListener("toggle", () => {
                     settings.set("customs." + splitCats + "_" + item + ".used",
                       checkbox.hasAttribute("toggled"));
+                    switcher.hidden = false;
                     if (checkbox.hasAttribute("toggled")) {
                       settings.set("customs." + splitCats + "_" + item +
                         ".value",
@@ -503,6 +511,7 @@ solid #141414">
                 case "slider":
                 case "stepper":
                   var num = document.createElement("x-numberinput");
+                  num.hidden = true;
                   var stepper = document.createElement("x-stepper");
                   num.appendChild(stepper);
                   num.setAttribute("min", customEntry.data.value.min);
@@ -515,6 +524,7 @@ solid #141414">
                   num.setAttribute("max", customEntry.data.value.max);
                   box.appendChild(num);
                   checkbox.addEventListener("toggle", () => {
+                    num.hidden = false;
                     settings.set("customs." + splitCats + "_" + item + ".used",
                       checkbox.hasAttribute("toggled"));
                     if (checkbox.hasAttribute("toggled")) {
@@ -559,6 +569,11 @@ solid #141414">
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         authedUser = user;
+
+        if (visitor) {
+          visitor.set("uid", user.uid);
+        }
+
         fetch("https://api.mastercomfig.com/remoteconfig?id=" + user.uid)
           .then(response => {
             return response.json();
