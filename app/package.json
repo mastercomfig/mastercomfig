@@ -43,6 +43,7 @@
     "speedtest-net": "^1.4.3",
     "systeminformation": "^3.42.4",
     "universal-analytics": "^0.4.17",
+    "uuid": "^3.3.2",
     "xel": "^0.0.141"
   },
   "build": {

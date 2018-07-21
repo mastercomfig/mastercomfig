@@ -119,6 +119,30 @@ function download(url, dest) {
   });
 }
 
+function downloadVpk(vpk, version) {
+  let rootVpkDl = settings.get("custom-vpk-download");
+  let isCustomVpkDl = true;
+  if (!rootVpkDl) {
+    rootVpkDl = "https://github.com/mastercoms/mastercomfig/releases/download/" +
+      version + "/";
+    isCustomVpkDl = false;
+  }
+
+  return download(rootVpkDl + vpk, settings.get("tf2-folder") + "/tf/custom/" + vpk);
+}
+
+function handleException(error) {
+  console.error(error);
+  if (visitor) {
+    visitor.exception(error).send();
+  }
+  let notif = document.getElementById("error-notification");
+  if (notif) {
+    notif.innerText = error;
+    notif.opened = true;
+  }
+}
+
 let sha = settings.get("config-sha");
 
 function setTargetSha(newSha) {
