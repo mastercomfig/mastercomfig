@@ -262,6 +262,8 @@ def comfig_file(manifest):
     make_cfg_dir()
     manifest_comfig = manifest.get('entries', {})
     comfig_aliases += "alias game_overrides \"" + ";".join(override_aliases) + "\"\n"
+    comfig_aliases += "alias app_modules \"exec app/profiles/default/modules\""
+    comfig_aliases += "alias app_custom \"exec app/profiles/default/custom\""
     with open(base_dir + 'cfg/comfig.cfg', "w+") as comfig:
         for cvar, value in manifest_comfig.items():
             if value.__str__():

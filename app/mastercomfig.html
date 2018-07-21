@@ -170,6 +170,8 @@ solid #141414">
       }
     }
 
+
+
     let presets;
     let modulesJson;
     let customs;
@@ -607,357 +609,370 @@ solid #141414">
 
     // Apply button
     document.getElementById("apply-btn").addEventListener("click", () => {
-      // Clear UI elements as we start installing the config
-      document.getElementById("config-update").hidden = true;
-      document.getElementById("apply-btn").disabled = true;
-      var ring = document.getElementById("install-ring");
-      ring.hidden = false;
-      fetch("https://api.github.com/repositories/69422496/releases")
-        .then(response => {
-          return response.json();
-        }).then(json => {
-        for (let release of Object.keys(json)) {
-          if (json[release].name === app.getVersion()) {
-            return json[release];
+        // Clear UI elements as we start installing the config
+        document.getElementById("config-update").hidden = true;
+        document.getElementById("apply-btn").disabled = true;
+        let ring = document.getElementById("install-ring");
+        ring.hidden = false;
+
+        fetch("https://api.github.com/repositories/69422496/releases")
+          .then(response => {
+            return response.json();
+          }).then(json => {
+          for (let release of Object.keys(json)) {
+            if (json[release].name === app.getVersion()) {
+              return json[release];
+            }
           }
-        }
-        let baseVersion = app.getVersion().split("-")[0];
-        for (let release of Object.keys(json)) {
-          if (json[release].name.startsWith(baseVersion)) {
-            return json[release];
+          let baseVersion = app.getVersion().split("-")[0];
+          for (let release of Object.keys(json)) {
+            if (json[release].name.startsWith(baseVersion)) {
+              return json[release];
+            }
           }
-        }
-        return json[0];
-      }).then(release => {
-        let version = release.tag_name;
-        let vpkPath = settings.get("tf2-folder") +
-          "/tf/custom/mastercomfig.vpk";
-        // Delete pre-existing VPK to prevent overwrites
-        fs.unlink(settings.get("tf2-folder") +
-          "/tf/custom/mastercomfig-addon-no-footsteps.vpk", () => {
-        });
-        fs.unlink(settings.get("tf2-folder") +
-          "/tf/custom/mastercomfig-addon-no-soundscapes.vpk", () => {
-        });
-        fs.unlink(settings.get("tf2-folder") +
-          "/tf/custom/mastercomfig-addon-no-pyroland.vpk", () => {
-        });
-        fs.unlink(settings.get("tf2-folder") +
-          "/tf/custom/mastercomfig-addon-no-extra-models.vpk", () => {
-        });
-        fs.unlink(vpkPath, () => {
-          // Download latest VPK to path
-          // TODO: cache file per version (use commit hash)
-          downloadVpk("mastercomfig.vpk", version)
-            .then(() => {
-              // Delete pre-existing client modules file to prevent overwrites
-              let netSplitRate = 1;
-              fs.unlink(settings.get("tf2-folder") +
-                "/tf/cfg/client-modules.cfg", () => {
-                let modulesStream = fs.createWriteStream(settings.get(
-                  "tf2-folder") + "/tf/cfg/client-modules.cfg");
-                modulesStream.once("open", () => {
-                  // Set the selected preset to define module aliases
-                  modulesStream.write("preset_" + settings.get("preset") +
-                    "\n");
-                  // Realias modules for ones the user has set
-                  let modules = settings.get("modules");
-                  let selectedModules = [];
-                  function doVpkModule(vpkModule) {
-                    switch (vpkModule) {
-                      case "footsteps":
-                        downloadVpk("mastercomfig-addon-no-footsteps.vpk",
-                          version);
-                        break;
-                      case "soundscapes":
-                        downloadVpk("mastercomfig-addon-no-soundscapes.vpk",
-                          version);
-                        break;
-                      case "pyrovision-textures":
-                        downloadVpk("mastercomfig-addon-no-pyroland.vpk",
-                          version);
-                        break;
-                      case "extra-models":
-                        downloadVpk("mastercomfig-addon-no-extra-models.vpk",
-                          version);
-                        break;
-                      default:
-                        // unknown vpk module, do nothing
-                        console.error("Unknown VPK module " + vpkModule);
-                        break;
-                    }
-                  }
-                  if (modules) {
-                    Object.keys(modules).forEach(category => {
-                      Object.keys(modules[category]).forEach(module => {
-                        var name = category[0] + "_" + module;
-                        var level = settings.get("modules." + category + "."
-                          + module);
-                        modulesStream.write("alias run_" + name + " " + name +
-                          "_" + level + "\n");
-                        selectedModules.push(category + "." + module);
-                        Object.keys(
-                          modulesJson[category + "." + module]["levels"][level])
-                          .forEach(vpkModule => {
-                            doVpkModule(vpkModule);
-                          });
-                      });
-                    });
-                  }
-                  Object.keys(presets[settings.get("preset")]["modules"])
-                    .forEach(presetModule => {
-                      if (!selectedModules.includes(presetModule)) {
-                        Object.keys(
-                          modulesJson[presetModule]["levels"][presets[settings.get(
-                            "preset")]["modules"][presetModule]])
-                          .forEach(vpkModule => {
-                            doVpkModule(vpkModule);
-                          });
+          return json[0];
+        }).then(release => {
+          let tf2Folder = settings.get("tf2-folder");
+          let version = release.tag_name;
+          let vpkPath = settings.get("tf2-folder") +
+            "/tf/custom/mastercomfig.vpk";
+          // Delete pre-existing VPK to prevent overwrites
+          fs.unlink(settings.get("tf2-folder") +
+            "/tf/custom/mastercomfig-addon-no-footsteps.vpk", () => {
+          });
+          fs.unlink(settings.get("tf2-folder") +
+            "/tf/custom/mastercomfig-addon-no-soundscapes.vpk", () => {
+          });
+          fs.unlink(settings.get("tf2-folder") +
+            "/tf/custom/mastercomfig-addon-no-pyroland.vpk", () => {
+          });
+          fs.unlink(settings.get("tf2-folder") +
+            "/tf/custom/mastercomfig-addon-no-extra-models.vpk", () => {
+          });
+          let profile = settings.get("profile", "default");
+          fs.unlink(vpkPath, () => {
+            let profileFile = tf2Folder + "/tf/cfg/app/profile.cfg";
+            fs.unlink(profileFile, () => {
+              fs.write(profileFile,
+                "alias app_modules \"exec app/profiles/{0}/modules\"\nalias app_custom \"exec app/profiles/{0}/custom\"\n"
+                  .format(profile));
+            });
+            // Download latest VPK to path
+            // TODO: cache file per version (use commit hash)
+            downloadVpk("mastercomfig.vpk", version)
+              .then(() => {
+                // Delete pre-existing client modules file to prevent overwrites
+                let netSplitRate = 1;
+                let modulesFile = tf2Folder +
+                  "/tf/cfg/app/profiles/{0}/modules.cfg".format(profile);
+                fs.unlink(modulesFile, () => {
+                  let modulesStream = fs.createWriteStream(modulesFile);
+                  modulesStream.once("open", () => {
+                    // Set the selected preset to define module aliases
+                    modulesStream.write("preset_" + settings.get("preset") +
+                      "\n");
+                    // Realias modules for ones the user has set
+                    let modules = settings.get("modules");
+                    let selectedModules = [];
+
+                    function doVpkModule(vpkModule) {
+                      switch (vpkModule) {
+                        case "footsteps":
+                          downloadVpk("mastercomfig-addon-no-footsteps.vpk",
+                            version);
+                          break;
+                        case "soundscapes":
+                          downloadVpk("mastercomfig-addon-no-soundscapes.vpk",
+                            version);
+                          break;
+                        case "pyrovision-textures":
+                          downloadVpk("mastercomfig-addon-no-pyroland.vpk",
+                            version);
+                          break;
+                        case "extra-models":
+                          downloadVpk("mastercomfig-addon-no-extra-models.vpk",
+                            version);
+                          break;
+                        default:
+                          // unknown vpk module, do nothing
+                          console.error("Unknown VPK module " + vpkModule);
+                          break;
                       }
-                    });
-                  // Define the speed module according to user speed
-                  let downloadSpeed = settings.get("download-speed");
-                  let staticDClearance = Math.min(625000, Math.min(96000 +
-                    downloadSpeed * 3125,
-                    downloadSpeed * 6250));
-                  let uploadSpeed = settings.get("upload-speed");
-                  let staticUClearance = Math.min(256000, Math.min(96000 +
-                    uploadSpeed, uploadSpeed *
-                    31250));
-                  let speed = Math.min(downloadSpeed, uploadSpeed);
-                  let staticClearance = speed === downloadSpeed ?
-                    staticDClearance : staticUClearance;
-                  let rate = (speed * 93750 - staticClearance).floorD(6)
-                    .clamp(3500,
-                      324192);
-                  let rateS = "rate " + rate;
-                  let splitpacketRate = ";net_splitpacket_maxrate " +
-                    (uploadSpeed * 93750 - staticUClearance).floorD(6)
+                    }
+
+                    if (modules) {
+                      Object.keys(modules).forEach(category => {
+                        Object.keys(modules[category]).forEach(module => {
+                          var name = category[0] + "_" + module;
+                          var level = settings.get("modules." + category + "."
+                            + module);
+                          modulesStream.write("alias run_" + name + " " + name +
+                            "_" + level + "\n");
+                          selectedModules.push(category + "." + module);
+                          Object.keys(
+                            modulesJson[category + "." + module]["levels"][level])
+                            .forEach(vpkModule => {
+                              doVpkModule(vpkModule);
+                            });
+                        });
+                      });
+                    }
+                    Object.keys(presets[settings.get("preset")]["modules"])
+                      .forEach(presetModule => {
+                        if (!selectedModules.includes(presetModule)) {
+                          Object.keys(
+                            modulesJson[presetModule]["levels"][presets[settings.get(
+                              "preset")]["modules"][presetModule]])
+                            .forEach(vpkModule => {
+                              doVpkModule(vpkModule);
+                            });
+                        }
+                      });
+                    // Define the speed module according to user speed
+                    let downloadSpeed = settings.get("download-speed");
+                    let staticDClearance = Math.min(625000, Math.min(96000 +
+                      downloadSpeed * 3125,
+                      downloadSpeed * 6250));
+                    let uploadSpeed = settings.get("upload-speed");
+                    let staticUClearance = Math.min(256000, Math.min(96000 +
+                      uploadSpeed, uploadSpeed *
+                      31250));
+                    let speed = Math.min(downloadSpeed, uploadSpeed);
+                    let staticClearance = speed === downloadSpeed ?
+                      staticDClearance : staticUClearance;
+                    let rate = (speed * 93750 - staticClearance).floorD(6)
                       .clamp(3500,
                         324192);
-                  let maxClearTime =
-                    Math.max(0.005087,
-                      (4000 / (uploadSpeed * 93750 - staticUClearance)).floorD(
-                        6));
-                  maxClearTime = ";net_maxcleartime " + maxClearTime;
-                  modulesStream.write("alias run_n_rate \"" + rateS +
-                    splitpacketRate + maxClearTime + "\"\n");
-                  // Check to see if we can actually reliably send at max rate
-                  let maxUpdateRate = Math.min(66, Math.floor(downloadSpeed *
-                    112500 / 1228));
-                  let maxCmdRate = Math.min(66,
-                    Math.floor(uploadSpeed * 112500 /
-                      1228));
-                  let packetSizeModule =
-                    settings.get("modules.networking.packet_size");
-                  if (!packetSizeModule) {
-                    packetSizeModule =
-                      presets[settings.get(
-                        "preset")]["modules"]["networking.packet_size"];
-                  }
-                  let maxRoutable =
-                    modulesJson["networking.packet_size"]["levels"][packetSizeModule]["values"]["net_maxroutable"];
-                  maxRoutable += 28;
-                  let maxNeededSplitRate = Math.ceil(4000 / maxRoutable);
-                  netSplitRate = Math.floor(93750 * uploadSpeed /
-                    (maxRoutable *
-                      maxCmdRate));
-                  netSplitRate = Math.min(maxNeededSplitRate, netSplitRate);
-                  // No we can't, better redo our modules
-                  if (maxUpdateRate < 66 || maxCmdRate < 66) {
-                    Object.keys(modulesJson["networking.packet_rate"]["levels"])
-                      .forEach(packetRate => {
-                        let scaledUpdateRate = Math.max(10,
-                          Math.floor(maxUpdateRate /
-                            modulesJson["networking.packet_rate"]["levels"][packetRate]["rel_rate"]));
-                        // make sure we don't bring cmdrate up to an unsupported
-                        // level. instead, bring update rate down within the
-                        // cmd rate difference limit (sv_client_cmdrate_difference)
-                        let cmdDiff = 20;
-                        if (maxUpdateRate - cmdDiff > maxCmdRate) {
-                          maxUpdateRate = maxCmdRate + cmdDiff;
-                        }
-                        // use the max allowable cmd rate we can
-                        // because we are already scaling update rate
-                        // using the relative multiplier
-                        let scaledCmdRate = Math.max(scaledUpdateRate - 1,
-                          maxCmdRate);
-                        Object.keys(
-                          modulesJson["networking.packet_buffer"]["levels"])
-                          .forEach(interp => {
-                            modulesStream.write("alias interp_" +
-                              packetRate + "_" + interp + " \"cl_interp " +
-                              +
-                                (modulesJson["networking.packet_buffer"]["levels"][interp]["interp_ratio"] /
-                                  scaledUpdateRate).floorD(6)
-                              +
-                              "\"\n");
-                          });
-                        modulesStream.write("alias " + "n_packet_rate_" +
-                          packetRate + " \"setinfo n_packet_rate " +
-                          packetRate + ";cl_updaterate " + scaledUpdateRate +
-                          ";cl_cmdrate " + scaledCmdRate + ";packet_rate_" +
-                          packetRate +
-                          "_interps\"\n");
-                        modulesStream.end();
-                      });
-                  } else {
-                    modulesStream.end();
-                  }
+                    let rateS = "rate " + rate;
+                    let splitpacketRate = ";net_splitpacket_maxrate " +
+                      (uploadSpeed * 93750 - staticUClearance).floorD(6)
+                        .clamp(3500,
+                          324192);
+                    let maxClearTime =
+                      Math.max(0.005087,
+                        (4000 / (uploadSpeed * 93750 - staticUClearance)).floorD(
+                          6));
+                    maxClearTime = ";net_maxcleartime " + maxClearTime;
+                    modulesStream.write("alias run_n_rate \"" + rateS +
+                      splitpacketRate + maxClearTime + "\"\n");
+                    // Check to see if we can actually reliably send at max rate
+                    let maxUpdateRate = Math.min(66, Math.floor(downloadSpeed *
+                      112500 / 1228));
+                    let maxCmdRate = Math.min(66,
+                      Math.floor(uploadSpeed * 112500 /
+                        1228));
+                    let packetSizeModule =
+                      settings.get("modules.networking.packet_size");
+                    if (!packetSizeModule) {
+                      packetSizeModule =
+                        presets[settings.get(
+                          "preset")]["modules"]["networking.packet_size"];
+                    }
+                    let maxRoutable =
+                      modulesJson["networking.packet_size"]["levels"][packetSizeModule]["values"]["net_maxroutable"];
+                    maxRoutable += 28;
+                    let maxNeededSplitRate = Math.ceil(4000 / maxRoutable);
+                    netSplitRate = Math.floor(93750 * uploadSpeed /
+                      (maxRoutable *
+                        maxCmdRate));
+                    netSplitRate = Math.min(maxNeededSplitRate, netSplitRate);
+                    // No we can't, better redo our modules
+                    if (maxUpdateRate < 66 || maxCmdRate < 66) {
+                      Object.keys(modulesJson["networking.packet_rate"]["levels"])
+                        .forEach(packetRate => {
+                          let scaledUpdateRate = Math.max(10,
+                            Math.floor(maxUpdateRate /
+                              modulesJson["networking.packet_rate"]["levels"][packetRate]["rel_rate"]));
+                          // make sure we don't bring cmdrate up to an unsupported
+                          // level. instead, bring update rate down within the
+                          // cmd rate difference limit (sv_client_cmdrate_difference)
+                          let cmdDiff = 20;
+                          if (maxUpdateRate - cmdDiff > maxCmdRate) {
+                            maxUpdateRate = maxCmdRate + cmdDiff;
+                          }
+                          // use the max allowable cmd rate we can
+                          // because we are already scaling update rate
+                          // using the relative multiplier
+                          let scaledCmdRate = Math.max(scaledUpdateRate - 1,
+                            maxCmdRate);
+                          Object.keys(
+                            modulesJson["networking.packet_buffer"]["levels"])
+                            .forEach(interp => {
+                              modulesStream.write("alias interp_" +
+                                packetRate + "_" + interp + " \"cl_interp " +
+                                +
+                                  (modulesJson["networking.packet_buffer"]["levels"][interp]["interp_ratio"] /
+                                    scaledUpdateRate).floorD(6)
+                                +
+                                "\"\n");
+                            });
+                          modulesStream.write("alias " + "n_packet_rate_" +
+                            packetRate + " \"setinfo n_packet_rate " +
+                            packetRate + ";cl_updaterate " + scaledUpdateRate +
+                            ";cl_cmdrate " + scaledCmdRate + ";packet_rate_" +
+                            packetRate +
+                            "_interps\"\n");
+                          modulesStream.end();
+                        });
+                    } else {
+                      modulesStream.end();
+                    }
+                  });
                 });
-              });
-              // Delete pre-existing client custom file to prevent overwrites
-              fs.unlink(settings.get("tf2-folder") +
-                "/tf/cfg/client-custom.cfg", () => {
-                let customStream = fs.createWriteStream(settings.get(
-                  "tf2-folder") + "/tf/cfg/client-custom.cfg");
-                customStream.once("open", () => {
-                  fetchConfigData(
-                    "config/dynamic.json")
-                    .then(response => {
-                      return response.json();
-                    }).then(json => {
-                    const dynamics = json.entries;
-                    let count = Object.keys(dynamics).length;
-                    let writtenCount = count;
-                    ipcRenderer.on("dynamic-data-reply", (event, arg) => {
-                      console.log(arg);
-                      let winnerDynamic;
-                      if (Array.isArray(dynamics[arg.key])) {
-                        dynamics[arg.key].forEach(dataKey => {
-                          if (dataKey["max"] && arg.data <= dataKey.max) {
-                            winnerDynamic = {
-                              key: arg.key,
-                              data: dataKey.values,
-                              name: "at most " + dataKey.max + dataKey.suffix
-                            };
-                          } else if (dataKey["min"] && arg.data >=
-                            dataKey.min) {
-                            winnerDynamic = {
-                              key: arg.key,
-                              data: dataKey.values,
-                              name: "at least " + dataKey.min + dataKey.suffix
-                            };
-                          }
-                        });
-                      } else {
-                        Object.keys(dynamics[arg.key]).forEach(dataKey => {
-                          if (arg.data.toLowerCase()
-                            .startsWith(dataKey.toLowerCase())) {
-                            winnerDynamic = {
-                              key: arg.key,
-                              data: dynamics[arg.key][dataKey],
-                              name: dataKey
-                            };
-                          }
-                        });
-                      }
-                      if (winnerDynamic) {
-                        if (writtenCount === Object.keys(dynamics).length) {
-                          customStream.write("// Dynamic settings\n\n");
-                        }
-                        customStream.write("// " + winnerDynamic.key +
-                          ": " + winnerDynamic.name + "\n");
-                        Object.keys(
-                          winnerDynamic.data)
-                          .forEach(cvar => {
-                            if (cvar === "net_splitrate") {
-                              winnerDynamic.data[cvar] = Math.min(netSplitRate,
-                                winnerDynamic.data[cvar]);
+                // Delete pre-existing client custom file to prevent overwrites
+                fs.unlink(settings.get("tf2-folder") +
+                  "/tf/cfg/client-custom.cfg", () => {
+                  let customStream = fs.createWriteStream(settings.get(
+                    "tf2-folder") + "/tf/cfg/client-custom.cfg");
+                  customStream.once("open", () => {
+                    fetchConfigData(
+                      "config/dynamic.json")
+                      .then(response => {
+                        return response.json();
+                      }).then(json => {
+                      const dynamics = json.entries;
+                      let count = Object.keys(dynamics).length;
+                      let writtenCount = count;
+                      ipcRenderer.on("dynamic-data-reply", (event, arg) => {
+                        console.log(arg);
+                        let winnerDynamic;
+                        if (Array.isArray(dynamics[arg.key])) {
+                          dynamics[arg.key].forEach(dataKey => {
+                            if (dataKey["max"] && arg.data <= dataKey.max) {
+                              winnerDynamic = {
+                                key: arg.key,
+                                data: dataKey.values,
+                                name: "at most " + dataKey.max + dataKey.suffix
+                              };
+                            } else if (dataKey["min"] && arg.data >=
+                              dataKey.min) {
+                              winnerDynamic = {
+                                key: arg.key,
+                                data: dataKey.values,
+                                name: "at least " + dataKey.min + dataKey.suffix
+                              };
                             }
-                            customStream.write(cvar + " " +
-                              winnerDynamic.data[cvar]
-                              + "\n");
                           });
-                        customStream.write("\n");
-                        writtenCount--;
-                      }
-                      count--;
-                      if (count === 0) {
-                        let writeCustoms = function() {
-                          if (settings.get("customs")) {
-                            customStream.write("\n// Custom settings");
-                            Object.keys(settings.get("customs"))
-                              .forEach(custom => {
-                                var customSetting = settings.get(
-                                  "customs")[custom];
-                                customStream.write("\n\n// " + custom + "\n");
-                                if (customSetting.used) {
-                                  customStream.write(customSetting.entry +
-                                    "\n");
-                                }
-                              });
-                            customStream.write("\n");
+                        } else {
+                          Object.keys(dynamics[arg.key]).forEach(dataKey => {
+                            if (arg.data.toLowerCase()
+                              .startsWith(dataKey.toLowerCase())) {
+                              winnerDynamic = {
+                                key: arg.key,
+                                data: dynamics[arg.key][dataKey],
+                                name: dataKey
+                              };
+                            }
+                          });
+                        }
+                        if (winnerDynamic) {
+                          if (writtenCount === Object.keys(dynamics).length) {
+                            customStream.write("// Dynamic settings\n\n");
                           }
-                          customStream.end();
-                        };
-                        if (authedUser) {
-                          let subs = settings.get("subscriptions.configs",
-                            []);
-                          if (subs && subs.length > 0) {
-                            var numSubs = 0;
-                            customStream.write("\n// mastercomfig community");
-                            subs.forEach(() => {
-                              numSubs++;
+                          customStream.write("// " + winnerDynamic.key +
+                            ": " + winnerDynamic.name + "\n");
+                          Object.keys(
+                            winnerDynamic.data)
+                            .forEach(cvar => {
+                              if (cvar === "net_splitrate") {
+                                winnerDynamic.data[cvar] = Math.min(netSplitRate,
+                                  winnerDynamic.data[cvar]);
+                              }
+                              customStream.write(cvar + " " +
+                                winnerDynamic.data[cvar]
+                                + "\n");
                             });
-
-                            subs.forEach(id => {
-                              db.collection("configs").doc(id).get()
-                                .then(doc => {
-                                  if (doc.exists) {
-                                    customStream.write("\n");
-                                    customStream.write("\n");
-                                    customStream.write("// " + doc.data().name +
-                                      " by " + doc.data().author + "\n");
-                                    customStream.write(doc.data().config
-                                      .replaceAll("\\n", "\n"));
+                          customStream.write("\n");
+                          writtenCount--;
+                        }
+                        count--;
+                        if (count === 0) {
+                          let writeCustoms = function() {
+                            if (settings.get("customs")) {
+                              customStream.write("\n// Custom settings");
+                              Object.keys(settings.get("customs"))
+                                .forEach(custom => {
+                                  var customSetting = settings.get(
+                                    "customs")[custom];
+                                  customStream.write("\n\n// " + custom + "\n");
+                                  if (customSetting.used) {
+                                    customStream.write(customSetting.entry +
+                                      "\n");
                                   }
-                                  numSubs--;
-                                  if (numSubs <= 0) {
-                                    writeCustoms();
-                                  }
-                                })
-                                .catch((error) => {
-                                  handleException(error);
-                                  writeCustoms();
                                 });
-                            });
+                              customStream.write("\n");
+                            }
+                            customStream.end();
+                          };
+                          if (authedUser) {
+                            let subs = settings.get("subscriptions.configs",
+                              []);
+                            if (subs && subs.length > 0) {
+                              var numSubs = 0;
+                              customStream.write("\n// mastercomfig community");
+                              subs.forEach(() => {
+                                numSubs++;
+                              });
+
+                              subs.forEach(id => {
+                                db.collection("configs").doc(id).get()
+                                  .then(doc => {
+                                    if (doc.exists) {
+                                      customStream.write("\n");
+                                      customStream.write("\n");
+                                      customStream.write("// " + doc.data().name +
+                                        " by " + doc.data().author + "\n");
+                                      customStream.write(doc.data().config
+                                        .replaceAll("\\n", "\n"));
+                                    }
+                                    numSubs--;
+                                    if (numSubs <= 0) {
+                                      writeCustoms();
+                                    }
+                                  })
+                                  .catch((error) => {
+                                    handleException(error);
+                                    writeCustoms();
+                                  });
+                              });
+                            } else {
+                              writeCustoms();
+                            }
                           } else {
                             writeCustoms();
                           }
-                        } else {
-                          writeCustoms();
+                          ipcRenderer.removeAllListeners("dynamic-data-reply");
                         }
-                        ipcRenderer.removeAllListeners("dynamic-data-reply");
-                      }
-                    });
-                    Object.keys(dynamics).forEach(key => {
-                      ipcRenderer.send("dynamic-data-request", key);
+                      });
+                      Object.keys(dynamics).forEach(key => {
+                        ipcRenderer.send("dynamic-data-request", key);
+                      });
                     });
                   });
                 });
+                ring.hidden = true;
+                document.getElementById("apply-btn").disabled = false;
+                settings.set("config-sha", latestSha);
+                let success = document.getElementById("apply-success");
+                success.hidden = false;
+                setTimeout(() => {
+                  success.hidden = true;
+                }, 1000);
+              })
+              .catch(error => {
+                handleException(error);
+                ring.hidden = true;
+                document.getElementById("apply-btn").disabled = false;
               });
-              ring.hidden = true;
-              document.getElementById("apply-btn").disabled = false;
-              settings.set("config-sha", latestSha);
-              let success = document.getElementById("apply-success");
-              success.hidden = false;
-              setTimeout(() => {
-                success.hidden = true;
-              }, 1000);
-            })
-            .catch(error => {
-              handleException(error);
-              ring.hidden = true;
-              document.getElementById("apply-btn").disabled = false;
-            });
+          });
+        }).catch(error => {
+          handleException(error);
+          ring.hidden = true;
+          document.getElementById("apply-btn").disabled = false;
         });
-      }).catch(error => {
-        handleException(error);
-        ring.hidden = true;
-        document.getElementById("apply-btn").disabled = false;
-      });
-    });
+      }
+    )
+    ;
   }
 </script>
 </body>

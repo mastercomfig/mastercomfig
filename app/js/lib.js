@@ -74,6 +74,13 @@ String.prototype.replaceAll = function(substr, replacement) {
   return this.replace(new RegExp(substr.escapeRegExp(), "g"), replacement);
 };
 
+String.prototype.format = function() {
+  let args = arguments;
+  return this.replace(/{(\d+)}/g, (match, number) => {
+    return typeof args[number] !== "undefined" ? args[number] : match;
+  });
+};
+
 function getResponse(url, file) {
   return new Promise((resolve, reject) => {
     const requester = url.startsWith("https:") ? https : http;

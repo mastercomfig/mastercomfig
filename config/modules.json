@@ -364,7 +364,7 @@
         },
         "low": {
           "values": {
-            "r_WaterDrawReflection": 0,
+            "r_WaterDrawReflection": 1,
             "r_WaterDrawRefraction": 1,
             "r_waterforceexpensive": 0
           },
