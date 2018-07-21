@@ -65,7 +65,10 @@
 </ul>
 <x-tabs id="cat-tabs"></x-tabs>
 <div class="container" id="tab-content"
-     style="overflow-y: scroll; overflow-x: hidden; height: 75vh; padding-bottom: 48px;"></div>
+     style="overflow-y: scroll; overflow-x: hidden; height: 75vh; padding-bottom: 48px;">
+  <x-throbber class="mx-auto align-middle"
+              style="margin-top: 35vh"></x-throbber>
+</div>
 <nav class="navbar fixed-bottom navbar-light bg-light" style="border-top: 1px
 solid #141414">
   <div class="container">
@@ -170,13 +173,18 @@ solid #141414">
       }
     }
 
-
+    function setToProfile(path, value) {
+      let currProfile = settings.get("profile");
+      settings.set("profiles." + currProfile + "." + path, value);
+    }
 
     let presets;
     let modulesJson;
     let customs;
 
     function initConfigData() {
+      document.getElementById("cat-tabs").innerHTML = "";
+      document.getElementById("tab-content").innerHTML = "";
       fetchConfigData("config/presets.json")
         .then(response => {
           return response.json();
@@ -353,7 +361,7 @@ solid #141414">
                         moduleIndex + "." + e.detail.newValue).send();
                     }
 
-                    settings.set("modules." + moduleIndex, e.detail.newValue);
+                    setToProfile("modules." + moduleIndex, e.detail.newValue);
                   });
                   row.appendChild(left);
                   row.appendChild(right);
@@ -448,13 +456,13 @@ solid #141414">
                     customMenu.appendChild(customMenuItem);
                   });
                   checkbox.addEventListener("toggle", () => {
-                    settings.set("customs." + splitCats + "_" + item + ".used",
+                    setToProfile("customs." + splitCats + "_" + item + ".used",
                       checkbox.hasAttribute("toggled"));
                     customSelect.hidden = false;
                     if (checkbox.hasAttribute("toggled")) {
                       var customLevel = customEntry.data.value[parseInt(
                         customSelect.value)];
-                      settings.set("customs." + splitCats + "_" + item +
+                      setToProfile("customs." + splitCats + "_" + item +
                         ".value",
                         parseInt(customSelect.value));
                       var cvars = "";
@@ -462,7 +470,7 @@ solid #141414">
                         cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
                           customLevel.values[cvar];
                       });
-                      settings.set("customs." + splitCats + "_" + item +
+                      setToProfile("customs." + splitCats + "_" + item +
                         ".entry",
                         cvars);
                     }
@@ -470,14 +478,14 @@ solid #141414">
                   customSelect.addEventListener("change", (e) => {
                     var customLevel = customEntry.data.value[parseInt(
                       e.detail.newValue)];
-                    settings.set("customs." + splitCats + "_" + item + ".value",
+                    setToProfile("customs." + splitCats + "_" + item + ".value",
                       parseInt(e.detail.newValue));
                     var cvars = "";
                     Object.keys(customLevel.values).forEach((cvar, cvarI) => {
                       cvars += (cvarI !== 0 ? ";" : "") + cvar + " " +
                         customLevel.values[cvar];
                     });
-                    settings.set("customs." + splitCats + "_" + item + ".entry",
+                    setToProfile("customs." + splitCats + "_" + item + ".entry",
                       cvars);
                   });
                   break;
@@ -490,11 +498,11 @@ solid #141414">
                     switcher.setAttribute("toggled", null);
                   }
                   checkbox.addEventListener("toggle", () => {
-                    settings.set("customs." + splitCats + "_" + item + ".used",
+                    setToProfile("customs." + splitCats + "_" + item + ".used",
                       checkbox.hasAttribute("toggled"));
                     switcher.hidden = false;
                     if (checkbox.hasAttribute("toggled")) {
-                      settings.set("customs." + splitCats + "_" + item +
+                      setToProfile("customs." + splitCats + "_" + item +
                         ".value",
                         switcher.hasAttribute("toggled"));
                       var cvars = "";
@@ -502,20 +510,20 @@ solid #141414">
                         cvars += (cvarI !== 0 ? ";" : "") + cvar +
                           (switcher.hasAttribute("toggled") ? " 1" : " 0");
                       });
-                      settings.set("customs." + splitCats + "_" + item +
+                      setToProfile("customs." + splitCats + "_" + item +
                         ".entry",
                         cvars);
                     }
                   });
                   switcher.addEventListener("toggle", () => {
-                    settings.set("customs." + splitCats + "_" + item + ".value",
+                    setToProfile("customs." + splitCats + "_" + item + ".value",
                       switcher.hasAttribute("toggled"));
                     var cvars = "";
                     customEntry.data.value.forEach((cvar, cvarI) => {
                       cvars += (cvarI !== 0 ? ";" : "") + cvar +
                         (switcher.hasAttribute("toggled") ? " 1" : " 0");
                     });
-                    settings.set("customs." + splitCats + "_" + item + ".entry",
+                    setToProfile("customs." + splitCats + "_" + item + ".entry",
                       cvars);
                   });
                   break;
@@ -536,21 +544,21 @@ solid #141414">
                   box.appendChild(num);
                   checkbox.addEventListener("toggle", () => {
                     num.hidden = false;
-                    settings.set("customs." + splitCats + "_" + item + ".used",
+                    setToProfile("customs." + splitCats + "_" + item + ".used",
                       checkbox.hasAttribute("toggled"));
                     if (checkbox.hasAttribute("toggled")) {
-                      settings.set("customs." + splitCats + "_" + item +
+                      setToProfile("customs." + splitCats + "_" + item +
                         ".value",
                         num.getAttribute("value"));
-                      settings.set("customs." + splitCats + "_" + item +
+                      setToProfile("customs." + splitCats + "_" + item +
                         ".entry", customEntry.data.value.cvar + " " +
                         num.getAttribute("value"));
                     }
                   });
                   num.addEventListener("change", () => {
-                    settings.set("customs." + splitCats + "_" + item + ".value",
+                    setToProfile("customs." + splitCats + "_" + item + ".value",
                       num.getAttribute("value"));
-                    settings.set("customs." + splitCats + "_" + item +
+                    setToProfile("customs." + splitCats + "_" + item +
                       ".entry", customEntry.data.value.cvar + " " +
                       num.getAttribute("value"));
                   });
@@ -634,45 +642,30 @@ solid #141414">
         }).then(release => {
           let tf2Folder = settings.get("tf2-folder");
           let version = release.tag_name;
-          let vpkPath = settings.get("tf2-folder") +
-            "/tf/custom/mastercomfig.vpk";
-          // Delete pre-existing VPK to prevent overwrites
-          fs.unlink(settings.get("tf2-folder") +
-            "/tf/custom/mastercomfig-addon-no-footsteps.vpk", () => {
-          });
-          fs.unlink(settings.get("tf2-folder") +
-            "/tf/custom/mastercomfig-addon-no-soundscapes.vpk", () => {
-          });
-          fs.unlink(settings.get("tf2-folder") +
-            "/tf/custom/mastercomfig-addon-no-pyroland.vpk", () => {
-          });
-          fs.unlink(settings.get("tf2-folder") +
-            "/tf/custom/mastercomfig-addon-no-extra-models.vpk", () => {
-          });
-          let profile = settings.get("profile", "default");
-          fs.unlink(vpkPath, () => {
-            let profileFile = tf2Folder + "/tf/cfg/app/profile.cfg";
-            fs.unlink(profileFile, () => {
-              fs.write(profileFile,
-                "alias app_modules \"exec app/profiles/{0}/modules\"\nalias app_custom \"exec app/profiles/{0}/custom\"\n"
-                  .format(profile));
-            });
-            // Download latest VPK to path
-            // TODO: cache file per version (use commit hash)
-            downloadVpk("mastercomfig.vpk", version)
-              .then(() => {
-                // Delete pre-existing client modules file to prevent overwrites
+          let selectedProfile = settings.get("profile", "default");
+          let profileFile = tf2Folder + "/tf/cfg/app/profile.cfg";
+          fs.outputFile(profileFile,
+            "alias app_modules \"exec app/profiles/{0}/modules\"\nalias app_custom \"exec app/profiles/{0}/custom\"\n"
+              .format(selectedProfile));
+          // Download latest VPK to path
+          // TODO: cache file per version (use commit hash)
+          downloadVpk("mastercomfig.vpk", version)
+            .then(() => {
+              let profiles = settings.get("profiles");
+              Object.keys(profiles).forEach((profile) => {
+                let currentProfilePath = "profiles." + profile + ".";
                 let netSplitRate = 1;
-                let modulesFile = tf2Folder +
-                  "/tf/cfg/app/profiles/{0}/modules.cfg".format(profile);
-                fs.unlink(modulesFile, () => {
+                fs.ensureDir(tf2Folder + "/tf/cfg/app/profiles/{0}/"
+                  .format(profile)).then(() => {
+                  let modulesFile = tf2Folder +
+                    "/tf/cfg/app/profiles/{0}/modules.cfg".format(profile);
                   let modulesStream = fs.createWriteStream(modulesFile);
                   modulesStream.once("open", () => {
                     // Set the selected preset to define module aliases
-                    modulesStream.write("preset_" + settings.get("preset") +
+                    modulesStream.write("preset_" + settings.get(currentProfilePath + "preset") +
                       "\n");
                     // Realias modules for ones the user has set
-                    let modules = settings.get("modules");
+                    let modules = settings.get(currentProfilePath + "modules");
                     let selectedModules = [];
 
                     function doVpkModule(vpkModule) {
@@ -695,7 +688,6 @@ solid #141414">
                           break;
                         default:
                           // unknown vpk module, do nothing
-                          console.error("Unknown VPK module " + vpkModule);
                           break;
                       }
                     }
@@ -704,30 +696,35 @@ solid #141414">
                       Object.keys(modules).forEach(category => {
                         Object.keys(modules[category]).forEach(module => {
                           var name = category[0] + "_" + module;
-                          var level = settings.get("modules." + category + "."
+                          var level = settings.get(currentProfilePath + "modules." + category + "."
                             + module);
                           modulesStream.write("alias run_" + name + " " + name +
                             "_" + level + "\n");
-                          selectedModules.push(category + "." + module);
-                          Object.keys(
-                            modulesJson[category + "." + module]["levels"][level])
-                            .forEach(vpkModule => {
-                              doVpkModule(vpkModule);
-                            });
+                          if (selectedProfile === profile) {
+                            selectedModules.push(category + "." + module);
+                            Object.keys(
+                              modulesJson[category + "." +
+                              module]["levels"][level])
+                              .forEach(vpkModule => {
+                                doVpkModule(vpkModule);
+                              });
+                          }
                         });
                       });
                     }
-                    Object.keys(presets[settings.get("preset")]["modules"])
-                      .forEach(presetModule => {
-                        if (!selectedModules.includes(presetModule)) {
-                          Object.keys(
-                            modulesJson[presetModule]["levels"][presets[settings.get(
-                              "preset")]["modules"][presetModule]])
-                            .forEach(vpkModule => {
-                              doVpkModule(vpkModule);
-                            });
-                        }
-                      });
+                    if (selectedProfile === profile) {
+                      Object.keys(presets[settings.get(currentProfilePath + "preset")]["modules"])
+                        .forEach(presetModule => {
+                          if (!selectedModules.includes(presetModule)) {
+                            Object.keys(
+                              modulesJson[presetModule]["levels"][presets[settings.get(currentProfilePath +
+                                "preset")]["modules"][presetModule]])
+                              .forEach(vpkModule => {
+                                doVpkModule(vpkModule);
+                              });
+                          }
+                        });
+                    }
                     // Define the speed module according to user speed
                     let downloadSpeed = settings.get("download-speed");
                     let staticDClearance = Math.min(625000, Math.min(96000 +
@@ -745,6 +742,7 @@ solid #141414">
                         324192);
                     let rateS = "rate " + rate;
                     let splitpacketRate = ";net_splitpacket_maxrate " +
+
                       (uploadSpeed * 93750 - staticUClearance).floorD(6)
                         .clamp(3500,
                           324192);
@@ -762,10 +760,10 @@ solid #141414">
                       Math.floor(uploadSpeed * 112500 /
                         1228));
                     let packetSizeModule =
-                      settings.get("modules.networking.packet_size");
+                      settings.get(currentProfilePath + "modules.networking.packet_size");
                     if (!packetSizeModule) {
                       packetSizeModule =
-                        presets[settings.get(
+                        presets[settings.get(currentProfilePath +
                           "preset")]["modules"]["networking.packet_size"];
                     }
                     let maxRoutable =
@@ -818,10 +816,6 @@ solid #141414">
                       modulesStream.end();
                     }
                   });
-                });
-                // Delete pre-existing client custom file to prevent overwrites
-                fs.unlink(settings.get("tf2-folder") +
-                  "/tf/cfg/client-custom.cfg", () => {
                   let customStream = fs.createWriteStream(settings.get(
                     "tf2-folder") + "/tf/cfg/client-custom.cfg");
                   customStream.once("open", () => {
@@ -888,11 +882,11 @@ solid #141414">
                         count--;
                         if (count === 0) {
                           let writeCustoms = function() {
-                            if (settings.get("customs")) {
+                            if (settings.get(currentProfilePath + "customs")) {
                               customStream.write("\n// Custom settings");
-                              Object.keys(settings.get("customs"))
+                              Object.keys(settings.get(currentProfilePath + "customs"))
                                 .forEach(custom => {
-                                  var customSetting = settings.get(
+                                  var customSetting = settings.get(currentProfilePath +
                                     "customs")[custom];
                                   customStream.write("\n\n// " + custom + "\n");
                                   if (customSetting.used) {
@@ -958,13 +952,17 @@ solid #141414">
                 setTimeout(() => {
                   success.hidden = true;
                 }, 1000);
-              })
-              .catch(error => {
+              }).catch((error) => {
                 handleException(error);
                 ring.hidden = true;
                 document.getElementById("apply-btn").disabled = false;
               });
-          });
+            })
+            .catch(error => {
+              handleException(error);
+              ring.hidden = true;
+              document.getElementById("apply-btn").disabled = false;
+            });
         }).catch(error => {
           handleException(error);
           ring.hidden = true;

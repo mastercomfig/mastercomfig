@@ -5,9 +5,8 @@ const {BrowserWindow, app} = require("electron").remote;
 const settings = require("electron-settings");
 const http = require("http");
 const https = require("https");
-const fs = require("fs");
+const fs = require("fs-extra");
 const ua = require("universal-analytics");
-const uuid = require("uuid/v4");
 const validator = require("validator");
 
 const firebase = require("firebase");
@@ -24,15 +23,19 @@ var config = {
 };
 firebase.initializeApp(config);
 
+function uuid(a){
+  return a?(a^Math.random()*16>>a/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,uuid)
+}
+
 let visitor;
 
 if (settings.get("tracking.consent", 1)) {
-  let uuid = settings.get("tracking.uuid", uuid());
-  if (!validator.isUUID(uuid, 4)) {
-    uuid = uuid();
-    settings.set("tracking.uuid", uuid);
+  let trackingUuid = settings.get("tracking.uuid", uuid());
+  if (!validator.isUUID(trackingUuid, 4)) {
+    trackingUuid = trackingUuid();
+    settings.set("tracking.uuid", trackingUuid);
   }
-  visitor = ua("UA-122662888-1", uuid);
+  visitor = ua("UA-122662888-1", trackingUuid);
   visitor.set("ds", "app");
   visitor.set("an", app.getName());
   visitor.set("av", app.getVersion());
@@ -136,12 +139,14 @@ function downloadVpk(vpk, version) {
   let rootVpkDl = settings.get("custom-vpk-download");
   let isCustomVpkDl = true;
   if (!rootVpkDl) {
-    rootVpkDl = "https://github.com/mastercoms/mastercomfig/releases/download/" +
+    rootVpkDl =
+      "https://github.com/mastercoms/mastercomfig/releases/download/" +
       version + "/";
     isCustomVpkDl = false;
   }
 
-  return download(rootVpkDl + vpk, settings.get("tf2-folder") + "/tf/custom/" + vpk);
+  return download(rootVpkDl + vpk, settings.get("tf2-folder") + "/tf/custom/" +
+    vpk);
 }
 
 function handleException(error) {
