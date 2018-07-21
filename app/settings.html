@@ -99,13 +99,21 @@
   <x-button id="remove-customs">Clear Overrides</x-button>
   <p>Deletes all custom setting overrides.</p>
   <hr>
-  <h3>Appearance</h3>
+  <h3>User Preferences</h3>
   <div class="row">
     <div class="col">
       Dark Mode
     </div>
     <div class="col">
       <x-switch id="dark-mode"></x-switch>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Analytics
+    </div>
+    <div class="col">
+      <x-switch id="analytics"></x-switch>
     </div>
   </div>
   <hr>
@@ -121,6 +129,12 @@
       </x-button>
       <p>Opens the Chrome Developer Tools for inspecting the app and viewing the
          console.</p>
+    </div>
+    <div class="col">
+      <x-button id="reset-track" style="margin-bottom: 1rem">Reset tracking ID
+      </x-button>
+      <p>Resets your anonymous tracking ID used to track accurate user counts
+         .</p>
     </div>
   </div>
 </div>
@@ -198,6 +212,10 @@ solid #141414">
       ipcRenderer.send("dev-tools-open");
     });
 
+    document.getElementById("reset-track").addEventListener("click", () => {
+      settings.set("tracking.uuid", uuid());
+    });
+
     var darkMode = document.getElementById("dark-mode");
     if (settings.get("ui.dark", false)) {
       darkMode.setAttribute("toggled", null);
@@ -205,24 +223,18 @@ solid #141414">
     darkMode.addEventListener("toggle", () => {
       var dark = darkMode.hasAttribute("toggled");
       settings.set("ui.dark", dark);
-      if (dark) {
-        $("body")
-          .addClass("bg-dark")
-          .addClass("text-light");
-        $(".navbar-light")
-          .removeClass("navbar-light")
-          .removeClass("bg-light")
-          .addClass("navbar-dark")
-          .addClass("bg-dark");
-      } else {
-        $("body")
-          .removeClass("bg-dark")
-          .removeClass("text-light");
-        $(".navbar-dark").filter(".fixed-bottom")
-          .removeClass("navbar-dark")
-          .removeClass("bg-dark")
-          .addClass("navbar-light")
-          .addClass("bg-light");
+      darkify(dark);
+    });
+
+    var analyticsSwitch = document.getElementById("analytics");
+    if (settings.get("tracking.consent", 1)) {
+      analyticsSwitch.setAttribute("toggled", null);
+    }
+    analyticsSwitch.addEventListener("toggle", () => {
+      var trackingLevel = analyticsSwitch.hasAttribute("toggled") ? 1 : 0;
+      settings.set("tracking.consent", trackingLevel);
+      if (!trackingLevel) {
+        visitor = null;
       }
     });
 

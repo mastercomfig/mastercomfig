@@ -107,9 +107,17 @@
     var steps = 0;
 
     function stepProgress(reverse) {
+
       if (reverse) {
         steps--;
       } else {
+        if (steps === 0 && visitor) {
+          visitor.timing(
+            "Setup",
+            "First progression",
+            Date.now() - loadedTime
+          ).send();
+        }
         steps++;
       }
 
@@ -316,6 +324,9 @@
 
     firebase.auth().signInAnonymously().catch(function(error) {
       console.log(error);
+      if (visitor) {
+        visitor.exception(error).send();
+      }
     });
 
     let authedUser;

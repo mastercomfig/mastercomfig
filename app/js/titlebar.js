@@ -11,17 +11,21 @@ closeBtn.addEventListener("click", () => {
   BrowserWindow.getFocusedWindow().close();
 });
 
-let sliderToggle = document.getElementById("slider-toggle");
+function slider() {
+  let sliderToggle = document.getElementById("slider-toggle");
 
-let slided = false;
+  let slided = false;
 
-if (sliderToggle) {
-  sliderToggle.addEventListener("click", () => {
-    if (slided) {
-      $("#slider").animate({left: "-30%"}, 350);
-    } else {
-      $("#slider").animate({left: 0}, 350);
-    }
-    slided = !slided;
-  });
+  if (sliderToggle) {
+    sliderToggle.addEventListener("click", () => {
+      if (slided) {
+        $("#slider").animate({left: "-30%"}, 350);
+      } else {
+        $("#slider").animate({left: 0}, 350);
+      }
+      slided = !slided;
+    });
+  }
 }
+
+$(() => slider());

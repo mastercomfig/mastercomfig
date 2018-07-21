@@ -242,6 +242,9 @@ solid #141414">
                 document.getElementById(currentTab).hidden = true;
                 currentTab = key + "-card";
                 card.hidden = false;
+                if (visitor) {
+                  visitor.event("Settings tab nav", "Switched to " + key).send();
+                }
               });
 
               value.forEach((item, index) => {
@@ -341,6 +344,11 @@ solid #141414">
                         e.detail.newValue.replaceAll("_", " ").toProperCase();
                     }
                     description.innerText = moduleLevelName;
+
+                    if (visitor) {
+                      visitor.event("Module change", "Changed to " +
+                        moduleIndex + "." + e.detail.newValue).send();
+                    }
 
                     settings.set("modules." + moduleIndex, e.detail.newValue);
                   });
@@ -562,6 +570,9 @@ solid #141414">
       document.getElementById("notification").innerText = error;
       document.getElementById("notification").opened = true;
       console.log(error);
+      if (visitor) {
+        visitor.exception(error).send();
+      }
     });
 
     let authedUser;
@@ -948,6 +959,9 @@ solid #141414">
                                   document.getElementById(
                                     "notification").opened = true;
                                   console.log(error);
+                                  if (visitor) {
+                                    visitor.exception(error).send();
+                                  }
                                   writeCustoms();
                                 });
                             });
@@ -978,6 +992,9 @@ solid #141414">
             .catch(error => {
               ring.hidden = true;
               console.log(error);
+              if (visitor) {
+                visitor.exception(error).send();
+              }
               document.getElementById("notification").innerText = error;
               document.getElementById("notification").opened = true;
               document.getElementById("apply-btn").disabled = false;
@@ -986,6 +1003,9 @@ solid #141414">
       }).catch(error => {
         ring.hidden = true;
         console.log(error);
+        if (visitor) {
+          visitor.exception(error).send();
+        }
         document.getElementById("notification").innerText = error;
         document.getElementById("notification").opened = true;
         document.getElementById("apply-btn").disabled = false;
