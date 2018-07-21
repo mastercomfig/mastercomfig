@@ -8,6 +8,7 @@ const https = require("https");
 const fs = require("fs");
 const ua = require("universal-analytics");
 const uuid = require("uuid/v4");
+const validator = require("validator");
 
 const firebase = require("firebase");
 require("firebase/firestore");
@@ -26,7 +27,12 @@ firebase.initializeApp(config);
 let visitor;
 
 if (settings.get("tracking.consent", 1)) {
-  visitor = ua("UA-122662888-1", settings.get("tracking.uuid", uuid()));
+  let uuid = settings.get("tracking.uuid", uuid());
+  if (!validator.isUUID(uuid, 4)) {
+    uuid = uuid();
+    settings.set("tracking.uuid", uuid);
+  }
+  visitor = ua("UA-122662888-1", uuid);
   visitor.set("ds", "app");
   visitor.set("an", app.getName());
   visitor.set("av", app.getVersion());
