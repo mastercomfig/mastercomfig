@@ -640,7 +640,7 @@ ejs@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
 
-electron-builder@^20.21.2:
+electron-builder@^20.24.4:
   version "20.24.4"
   resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-20.24.4.tgz#4c3884edfc565ba94ccec61aa1db6a7cb91a5d36"
   dependencies:
@@ -706,7 +706,7 @@ electron-settings@^3.2.0:
     clone "^2.1.1"
     jsonfile "^4.0.0"
 
-electron-updater@^3.0.0:
+electron-updater@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-3.0.3.tgz#67f7edd578d260f9351ccd46ff23c2789c2a5a4f"
   dependencies:
@@ -720,7 +720,7 @@ electron-updater@^3.0.0:
     semver "^5.5.0"
     source-map-support "^0.5.6"
 
-electron@^2.0.4:
+electron@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/electron/-/electron-2.0.5.tgz#6045db011e2547062a36e8c5da84d4982f434fc0"
   dependencies:
