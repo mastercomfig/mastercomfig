@@ -42,7 +42,7 @@ if (settings.get("tracking.consent", 1)) {
   visitor.set("av", app.getVersion());
 }
 
-const db = firebase.firestore();
+let db = firebase.firestore();
 db.settings({timestampsInSnapshots: true});
 
 Number.prototype.roundD = function(decimals, rounder) {
@@ -155,10 +155,8 @@ function downloadVpk(vpk, version) {
     } else {
       return fs.ensureDir(app.getPath("userData") + "/Comfig/VPK/" + version + "/")
         .then(() => {
-          console.log("hi");
           return download(rootVpkDl + vpk, cachePath);
         }).then(() => {
-          console.log("hif");
           return fs.copy(cachePath, destPath);
         });
     }
