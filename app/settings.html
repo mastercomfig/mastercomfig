@@ -131,6 +131,12 @@
          console.</p>
     </div>
     <div class="col">
+      <x-button id="clear-cache" style="margin-bottom: 1rem">Clear File Cache
+      </x-button>
+      <p>Removes all caching of config data and files downloaded from the
+         Internet.</p>
+    </div>
+    <div class="col">
       <x-button id="reset-track" style="margin-bottom: 1rem">Reset tracking ID
       </x-button>
       <p>Resets your anonymous tracking ID used to track accurate user counts
@@ -146,6 +152,9 @@ solid #141414">
     </a>
   </div>
 </nav>
+<x-notification id="error-notification" timeout="4000">
+  An error occurred while downloading mastercomfig. Please try again later.
+</x-notification>
 <script src="js/module.js"></script>
 <script src="node_modules/jquery/dist/jquery.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -214,6 +223,12 @@ solid #141414">
 
     document.getElementById("reset-track").addEventListener("click", () => {
       settings.set("tracking.uuid", uuid());
+    });
+
+    document.getElementById("clear-cache").addEventListener("click", () => {
+      fs.remove(app.getPath("userData") + "/Comfig/", error => {
+        if (error) handleException(error);
+      });
     });
 
     var darkMode = document.getElementById("dark-mode");
@@ -319,13 +334,11 @@ solid #141414">
 
     function initConfigData() {
       fetchConfigData("config/presets.json")
-        .then(response => {
-          return response.json();
-        }).then(json => {
+        .then(json => {
         var selected = false;
         var presetsMenu = document.getElementById("presets-menu");
         var presets = json.presets;
-        var currentPreset = settings.get("preset");
+        var currentPreset = getFromProfile("preset");
         Object.keys(presets).forEach(key => {
           var friendlyName = key.replaceAll("_", " ").toProperCase();
           var item = document.createElement("x-menuitem");
@@ -343,7 +356,11 @@ solid #141414">
             if (!selected) {
               selected = true;
             }
-            settings.set("preset", e.detail.newValue);
+            setToProfile("preset", e.detail.newValue);
+            if (visitor) {
+              visitor.event("Preset changed", "Changed to " +
+                e.detail.newValue).send();
+            }
           });
       });
     }
@@ -397,7 +414,7 @@ solid #141414">
     }
 
     firebase.auth().signInAnonymously().catch(function(error) {
-      console.log(error);
+      handleException(error);
     });
 
     let authedUser;

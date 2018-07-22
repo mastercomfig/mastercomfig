@@ -23,8 +23,9 @@ var config = {
 };
 firebase.initializeApp(config);
 
-function uuid(a){
-  return a?(a^Math.random()*16>>a/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,uuid)
+function uuid(a) {
+  return a ? (a ^ Math.random() * 16 >> a / 4).toString(16) :
+    ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, uuid);
 }
 
 let visitor;
@@ -144,9 +145,25 @@ function downloadVpk(vpk, version) {
       version + "/";
     isCustomVpkDl = false;
   }
-
-  return download(rootVpkDl + vpk, settings.get("tf2-folder") + "/tf/custom/" +
-    vpk);
+  let destPath = settings.get("tf2-folder") + "/tf/custom/" +
+    vpk;
+  if (!isCustomVpkDl) {
+    let cachePath = app.getPath("userData") + "/Comfig/VPK/" + version + "/" +
+      vpk;
+    if (fs.existsSync(cachePath)) {
+      return fs.copy(cachePath, destPath);
+    } else {
+      return fs.ensureDir(app.getPath("userData") + "/Comfig/VPK/" + version + "/")
+        .then(() => {
+          console.log("hi");
+          return download(rootVpkDl + vpk, cachePath);
+        }).then(() => {
+          console.log("hif");
+          return fs.copy(cachePath, destPath);
+        });
+    }
+  }
+  return download(rootVpkDl + vpk, destPath);
 }
 
 function handleException(error) {
@@ -168,9 +185,40 @@ function setTargetSha(newSha) {
   sha = newSha;
 }
 
+function setToProfile(path, value) {
+  let currProfile = settings.get("profile", "default");
+  settings.set("profiles." + currProfile + "." + path, value);
+}
+
+function getFromProfile(path, def) {
+  let currProfile = settings.get("profile", "default");
+  if (def) {
+    return settings.get("profiles." + currProfile + "." + path, def);
+  }
+  return settings.get("profiles." + currProfile + "." + path);
+}
+
 function fetchConfigData(path) {
+  if (sha) {
+    let cachePath = app.getPath("userData") + "/Comfig/" + sha + "/" + path;
+    if (fs.existsSync(cachePath)) {
+      return Promise.resolve(fs.readJson(cachePath));
+    }
+    return fetch(settings.get(
+      "config-data-url",
+      "https://raw.githubusercontent.com/mastercoms/mastercomfig/") +
+      sha + "/" + path).then(response => {
+      return response.json();
+    }).then(json => {
+      fs.outputJson(cachePath, json);
+      return Promise.resolve(json);
+    });
+  }
   return fetch(settings.get(
     "config-data-url",
-    "https://raw.githubusercontent.com/mastercoms/mastercomfig/") +
-    sha + "/" + path);
+    "https://raw.githubusercontent.com/mastercoms/mastercomfig/") + path).then(
+    response => {
+      return response.json();
+    }
+  );
 }

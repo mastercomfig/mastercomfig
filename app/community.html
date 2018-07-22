@@ -67,6 +67,9 @@
      style="overflow-y: scroll; overflow-x: hidden; height: 90vh;
      padding-bottom: 48px;">
 </div>
+<x-notification id="error-notification" timeout="4000">
+  An error occurred while downloading mastercomfig. Please try again later.
+</x-notification>
 <script src="js/module.js"></script>
 <script src="node_modules/jquery/dist/jquery.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -99,7 +102,7 @@
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         var content = document.getElementById("content");
-        var configSubs = settings.get("subscriptions.configs", []);
+        var configSubs = getFromProfile("subscriptions.configs", []);
 
         if (visitor) {
           visitor.set("uid", user.uid);
@@ -149,13 +152,13 @@
               if (switcher.hasAttribute("toggled")) {
                 if (!configSubs.includes(doc.id)) {
                   configSubs.push(doc.id);
-                  settings.set("subscriptions.configs", configSubs);
+                  getFromProfile("subscriptions.configs", configSubs);
                 }
               } else {
                 var index = configSubs.indexOf(doc.id);
                 if (index > -1) {
                   configSubs.splice(index, 1);
-                  settings.set("subscriptions.configs",
+                  setToProfile("subscriptions.configs",
                     configSubs);
                 }
               }

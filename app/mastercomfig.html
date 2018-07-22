@@ -115,6 +115,27 @@ solid #141414">
       visitor.screenview("Home").send();
     }
 
+    if (settings.get("customs")) {
+      settings.set("profiles.default.customs", settings.get("customs"));
+      settings.delete("customs");
+    }
+
+    if (settings.get("preset")) {
+      settings.set("profiles.default.preset", settings.get("preset"));
+      settings.delete("preset");
+    }
+
+    if (settings.get("modules")) {
+      settings.set("profiles.default.modules", settings.get("modules"));
+      settings.delete("modules");
+    }
+
+    if (settings.get("subscriptions")) {
+      settings.set("profiles.default.subscriptions",
+        settings.get("subscriptions"));
+      settings.delete("subscriptions");
+    }
+
     let latestSha = settings.get("config-sha", "");
 
     function refreshConfigTarget() {
@@ -173,11 +194,6 @@ solid #141414">
       }
     }
 
-    function setToProfile(path, value) {
-      let currProfile = settings.get("profile");
-      settings.set("profiles." + currProfile + "." + path, value);
-    }
-
     let presets;
     let modulesJson;
     let customs;
@@ -186,20 +202,14 @@ solid #141414">
       document.getElementById("cat-tabs").innerHTML = "";
       document.getElementById("tab-content").innerHTML = "";
       fetchConfigData("config/presets.json")
-        .then(response => {
-          return response.json();
-        }).then(json => {
-        presets = json.presets;
-      }).then(() => {
+        .then(json => {
+          presets = json.presets;
+        }).then(() => {
         fetchConfigData("config/modules.json")
-          .then(response => {
-            return response.json();
-          }).then(json => {
+          .then(json => {
           modulesJson = json.modules;
           fetchConfigData("config/customs.json")
-            .then(response => {
-              return response.json();
-            }).then(json => {
+            .then(json => {
             customs = json.entries;
             var categoryMap = new Map();
             Object.keys(modulesJson).forEach(key => {
@@ -281,10 +291,10 @@ solid #141414">
                 main.id = key[0] + "_" + item;
                 if (!module["no-data"]) {
                   var description = document.createElement("x-label");
-                  var moduleLevel = settings.get("modules." + moduleIndex);
+                  var moduleLevel = getFromProfile("modules." + moduleIndex);
                   if (!moduleLevel) {
                     moduleLevel =
-                      presets[settings.get("preset")]["modules"][moduleIndex];
+                      presets[getFromProfile("preset")]["modules"][moduleIndex];
                   }
                   var moduleLevelName = "";
                   if (module["levels"][moduleLevel].hasOwnProperty("name")) {
@@ -413,7 +423,8 @@ solid #141414">
               var box = document.createElement("x-box");
               var checkbox = document.createElement("x-checkbox");
               checkbox.title = "Enable override?";
-              if (settings.get("customs." + splitCats + "_" + item + ".used")) {
+              if (getFromProfile("customs." + splitCats + "_" + item +
+                ".used")) {
                 checkbox.setAttribute("toggled", null);
               }
               box.appendChild(checkbox);
@@ -444,7 +455,7 @@ solid #141414">
                   customSelect.appendChild(customMenu);
                   customEntry.data.value.forEach((selection, index) => {
                     var customMenuItem = document.createElement("x-menuitem");
-                    if (settings.get("customs." + splitCats + "_" + item +
+                    if (getFromProfile("customs." + splitCats + "_" + item +
                       ".value") === index) {
                       customMenuItem.setAttribute("toggled", null);
                     }
@@ -493,7 +504,7 @@ solid #141414">
                   var switcher = document.createElement("x-switch");
                   switcher.hidden = true;
                   box.appendChild(switcher);
-                  if (settings.get("customs." + splitCats + "_" + item +
+                  if (getFromProfile("customs." + splitCats + "_" + item +
                     ".value")) {
                     switcher.setAttribute("toggled", null);
                   }
@@ -534,7 +545,8 @@ solid #141414">
                   var stepper = document.createElement("x-stepper");
                   num.appendChild(stepper);
                   num.setAttribute("min", customEntry.data.value.min);
-                  var value = settings.get("customs." + splitCats + "_" + item +
+                  var value = getFromProfile("customs." + splitCats + "_" +
+                    item +
                     ".value");
                   if (!value) {
                     value = customEntry.data.value.min;
@@ -662,7 +674,8 @@ solid #141414">
                   let modulesStream = fs.createWriteStream(modulesFile);
                   modulesStream.once("open", () => {
                     // Set the selected preset to define module aliases
-                    modulesStream.write("preset_" + settings.get(currentProfilePath + "preset") +
+                    modulesStream.write("preset_" +
+                      settings.get(currentProfilePath + "preset") +
                       "\n");
                     // Realias modules for ones the user has set
                     let modules = settings.get(currentProfilePath + "modules");
@@ -696,7 +709,8 @@ solid #141414">
                       Object.keys(modules).forEach(category => {
                         Object.keys(modules[category]).forEach(module => {
                           var name = category[0] + "_" + module;
-                          var level = settings.get(currentProfilePath + "modules." + category + "."
+                          var level = settings.get(currentProfilePath +
+                            "modules." + category + "."
                             + module);
                           modulesStream.write("alias run_" + name + " " + name +
                             "_" + level + "\n");
@@ -713,7 +727,8 @@ solid #141414">
                       });
                     }
                     if (selectedProfile === profile) {
-                      Object.keys(presets[settings.get(currentProfilePath + "preset")]["modules"])
+                      Object.keys(presets[settings.get(currentProfilePath +
+                        "preset")]["modules"])
                         .forEach(presetModule => {
                           if (!selectedModules.includes(presetModule)) {
                             Object.keys(
@@ -760,7 +775,8 @@ solid #141414">
                       Math.floor(uploadSpeed * 112500 /
                         1228));
                     let packetSizeModule =
-                      settings.get(currentProfilePath + "modules.networking.packet_size");
+                      settings.get(currentProfilePath +
+                        "modules.networking.packet_size");
                     if (!packetSizeModule) {
                       packetSizeModule =
                         presets[settings.get(currentProfilePath +
@@ -821,14 +837,19 @@ solid #141414">
                   customStream.once("open", () => {
                     fetchConfigData(
                       "config/dynamic.json")
-                      .then(response => {
-                        return response.json();
-                      }).then(json => {
+                      .then(json => {
                       const dynamics = json.entries;
                       let count = Object.keys(dynamics).length;
                       let writtenCount = count;
                       ipcRenderer.on("dynamic-data-reply", (event, arg) => {
                         console.log(arg);
+                        if (visitor) {
+                          visitor.event({
+                            ec: "Hardware data",
+                            ea: arg.key,
+                            ev: arg.data
+                          }).send();
+                        }
                         let winnerDynamic;
                         if (Array.isArray(dynamics[arg.key])) {
                           dynamics[arg.key].forEach(dataKey => {
@@ -884,7 +905,8 @@ solid #141414">
                           let writeCustoms = function() {
                             if (settings.get(currentProfilePath + "customs")) {
                               customStream.write("\n// Custom settings");
-                              Object.keys(settings.get(currentProfilePath + "customs"))
+                              Object.keys(
+                                settings.get(currentProfilePath + "customs"))
                                 .forEach(custom => {
                                   var customSetting = settings.get(currentProfilePath +
                                     "customs")[custom];
@@ -899,7 +921,7 @@ solid #141414">
                             customStream.end();
                           };
                           if (authedUser) {
-                            let subs = settings.get("subscriptions.configs",
+                            let subs = getFromProfile("subscriptions.configs",
                               []);
                             if (subs && subs.length > 0) {
                               var numSubs = 0;
@@ -952,10 +974,6 @@ solid #141414">
                 setTimeout(() => {
                   success.hidden = true;
                 }, 1000);
-              }).catch((error) => {
-                handleException(error);
-                ring.hidden = true;
-                document.getElementById("apply-btn").disabled = false;
               });
             })
             .catch(error => {

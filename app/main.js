@@ -42,7 +42,7 @@ function createWindow() {
 
   if (settings.has("tf2-folder") && settings.has("upload-speed") &&
     settings.has("download-speed") &&
-    settings.has("preset")) {
+    settings.has("profiles.default.preset")) {
     window.loadFile("mastercomfig.html");
   } else {
     window.loadFile("start.html");

@@ -77,6 +77,9 @@
     <x-button disabled id="next-btn">Next</x-button>
   </a>
 </div>
+<x-notification id="error-notification" timeout="4000">
+  An error occurred while downloading mastercomfig. Please try again later.
+</x-notification>
 <script src="js/module.js"></script>
 <script src="node_modules/jquery/dist/jquery.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -155,7 +158,7 @@
       stepProgress();
     }
 
-    let preset = settings.get("preset");
+    let preset = getFromProfile("preset");
     if (preset) {
       document.getElementById("preset-check").hidden = false;
       stepProgress();
@@ -244,9 +247,7 @@
 
     function initConfigData() {
       fetchConfigData("config/presets.json")
-        .then(response => {
-          return response.json();
-        }).then(json => {
+        .then(json => {
         var selected = false;
         var presetsMenu = document.getElementById("presets-menu");
         var presets = json.presets;
@@ -269,7 +270,11 @@
               document.getElementById("preset-check").hidden = false;
               stepProgress();
             }
-            settings.set("preset", e.detail.newValue);
+            setToProfile("preset", e.detail.newValue);
+            if (visitor) {
+              visitor.event("Preset select", "Selected " +
+                e.detail.newValue).send();
+            }
           });
       });
     }
@@ -323,10 +328,7 @@
     }
 
     firebase.auth().signInAnonymously().catch(function(error) {
-      console.log(error);
-      if (visitor) {
-        visitor.exception(error).send();
-      }
+      handleException(error);
     });
 
     let authedUser;
