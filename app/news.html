@@ -124,10 +124,14 @@
             var header = document.createElement("header");
             var title = document.createElement("h3");
             title.innerText = post.name;
+            console.log(post.date);
             var author = document.createElement("h6");
             author.innerText = "by " + post.author;
             header.appendChild(title);
             title.appendChild(author);
+            var date = document.createElement("h6");
+            date.innerText = "posted " + post.date.toDate().toDateString();
+            title.appendChild(date);
             card.appendChild(header);
             var main = document.createElement("main");
             var article = document.createElement("p");
