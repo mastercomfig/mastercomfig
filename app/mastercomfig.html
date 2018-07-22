@@ -845,8 +845,9 @@ solid #141414">
                   modulesStream.end();
                 }
               });
-              let customStream = fs.createWriteStream(settings.get(
-                "tf2-folder") + "/tf/cfg/client-custom.cfg");
+              let customsFile = tf2Folder +
+                "/tf/cfg/app/profiles/{0}/custom.cfg".format(profile);
+              let customStream = fs.createWriteStream(customsFile);
               customStream.once("open", () => {
                 fetchConfigData(
                   "config/dynamic.json")

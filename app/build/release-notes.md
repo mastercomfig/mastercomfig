@@ -30,6 +30,11 @@ App Changes:
 Config Changes:
 * Tuned rate limit and surge rates by taking into account the risk factor and clearance for goodput
 * Improved CPU scaling for `net_splitrate`
+* Retuned balanced packet buffer settings based on latest server drop data
+* Decreased packet compression threshold to one suitable for the client
+* Fixed an issue where water would appear black on low quality
+* Fixed several issues with detail overrides
+* Removed user info entries because these are sent to the server
 * Reduced the memory threshold for aggressive low memory settings
 * Added more memory reduction settings for low memory devices
 * Make game overrides apply instantly on in-game module change
