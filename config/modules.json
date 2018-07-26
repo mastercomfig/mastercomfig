@@ -613,53 +613,6 @@
         }
       }
     },
-    "graphics.texture_filter": {
-      "name": "Texture Filtering",
-      "description": "Increases the quality of textures, especially ones further away.",
-      "levels": {
-        "bilinear": {
-          "values": {
-            "mat_trilinear": 0,
-            "mat_forceaniso": 1
-          },
-          "description": "The lowest texture filtering quality. Textures may get muddier the further away they are."
-        },
-        "trilinear": {
-          "values": {
-            "mat_trilinear": 1,
-            "mat_forceaniso": 1
-          }
-        },
-        "aniso_2x": {
-          "values": {
-            "mat_trilinear": 1,
-            "mat_forceaniso": 2
-          },
-          "name": "Anisotropic Filtering 2x"
-        },
-        "aniso_4x": {
-          "values": {
-            "mat_trilinear": 1,
-            "mat_forceaniso": 4
-          },
-          "name": "Anisotropic Filtering 4x"
-        },
-        "aniso_8x": {
-          "values": {
-            "mat_trilinear": 1,
-            "mat_forceaniso": 8
-          },
-          "name": "Anisotropic Filtering 8x"
-        },
-        "aniso_16x": {
-          "values": {
-            "mat_trilinear": 1,
-            "mat_forceaniso": 16
-          },
-          "name": "Anisotropic Filtering 16x"
-        }
-      }
-    },
     "graphics.characters": {
       "name": "Character Detail",
       "description": "How detailed character models and facial expressions are.",
