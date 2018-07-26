@@ -288,8 +288,9 @@ def comfig_format(*args):
             source_config_files.append(config)
     with open(base_dir + 'cfg/comfig.cfg', "a+") as comfig:
         for config_file in source_config_files:
-            name = os.path.splitext(config_file)[0] + "_c"
-            comfig.write("alias " + name + " \"exec " + name + "\n")
+            name = os.path.splitext(config_file)[0]
+            comfig.write("alias " + name + " \"exec user/" + name + ";exec " + name + "_c\n")
+        comfig.write("alias mm_override \"exec mm_overide\"")
         space_padding = range(0, 4)
         for _ in space_padding:
             comfig.write("echo \" \"\n")
