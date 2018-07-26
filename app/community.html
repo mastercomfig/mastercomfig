@@ -98,7 +98,7 @@
 
   function page() {
     if (visitor) {
-      visitor.screenview("Community").send();
+      visitor.pageview("/community.html", "https://mastercomfig.com", "Community").send();
     }
 
     firebase.auth().signInAnonymously().catch(function(error) {

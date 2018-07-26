@@ -183,7 +183,7 @@ solid #141414">
   function page() {
 
     if (visitor) {
-      visitor.screenview("Settings").send();
+      visitor.pageview("/settings.html", "https://mastercomfig.com", "Settings").send();
     }
 
     document.getElementById("speed").innerHTML =

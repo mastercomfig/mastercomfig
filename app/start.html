@@ -101,7 +101,7 @@
     let loadedTime = Date.now();
 
     if (visitor) {
-      visitor.screenview("Start").send();
+      visitor.pageview("/start.html", "https://mastercomfig.com", "Start").send();
     }
 
     var steps = 0;

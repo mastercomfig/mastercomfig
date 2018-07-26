@@ -1,0 +1,78 @@
+{
+  "settings": [
+    {
+      "name": "net_splitrate",
+      "group": "network.splits",
+      "type": "integer",
+      "condition": {
+        "type": "range",
+        "value": ">0"
+      },
+      "description": "The number of splits to do for large packets per frame.",
+      "values": {
+        "options": [
+          {
+            "value": 1,
+            "description": "The default and lowest split rate to reduce CPU load from the networking system."
+          },
+          {
+            "value": 2,
+            "description": "An increased split rate to reduce choke when splitting up large packets."
+          },
+          {
+            "value": 4,
+            "description": "An intensively high split rate to reduce choke even more when splitting up large packets."
+          }
+        ]
+      }
+    },
+    {
+      "name": "net_queued_packet_thread",
+      "group": "network.splits",
+      "type": "boolean",
+      "description": "Queue split packets on a separate thread with a set time interval.",
+      "values": {
+        "options": [
+          {
+            "value": false,
+            "description": "Disables the use of the queued packet thread. Recommended for Linux users along with the -NoQueuedPacketThread launch option."
+          },
+          {
+            "value": true,
+            "description": "Enables the use of the queued packet thread. Recommended for Windows users to avoid a packet sending bug in Windows."
+          }
+        ]
+      }
+    },
+    {
+      "name": "net_maxpacketdrop",
+      "group": "network.timeouts",
+      "type": "integer",
+      "condition": {
+        "type": "range",
+        "value": ">0"
+      },
+      "description": "The threshold of packet drops before detecting a disconnection from the server.",
+      "values": {
+        "options": [
+          {
+            "value": 1000,
+            "description": "Use a faster packet drop threshold to be more strict with packet drops and disconnect sooner."
+          }
+          {
+            "value": 5000,
+            "description": "The default packet drop threshold which is a good balance between tolerating packet drops and disconnecting soon enough."
+          },
+          {
+            "value": 10000,
+            "description": "A high packet drop threshold to allow for very unreliable networks to attempt to continue a connection with a server."
+          }
+        ]
+      }
+    },
+    {
+      "name": "cl_timeout",
+      "group": "network.timeouts"
+    }
+  ]
+}

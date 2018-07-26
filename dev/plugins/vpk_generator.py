@@ -232,7 +232,7 @@ def class_files():
         with open(base_dir + 'cfg/' + clas + '.cfg', "w+") as class_file:
             class_file.write("exec game_overrides\n"
                              "class_config_" + clas + "\n")
-            comfig_aliases += "alias class_config_" + clas + " \"exec " + clas + "_c\"\n"
+            comfig_aliases += "alias class_config_" + clas + " \"exec " + clas + "_c;exec user/" + clas + "\"\n"
 
 
 @generator(manifest='presets')

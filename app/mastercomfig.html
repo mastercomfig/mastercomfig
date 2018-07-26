@@ -116,7 +116,7 @@ solid #141414">
   function page() {
 
     if (visitor) {
-      visitor.screenview("Home").send();
+      visitor.pageview("/mastercomfig.html", "https://mastercomfig.com", "Home").send();
     }
 
     if (settings.get("customs")) {
