@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="node_modules/xel/themes/material.css">
   <script src="node_modules/xel/xel.min.js"></script>
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-        integrity="sha256-zVUlvIh3NEZRYa9X/qpNY8P1aBy0d4FrI7bhfZSZVwc="
-        crossorigin="anonymous" rel="stylesheet">
+        rel="stylesheet">
   <link href="third_party/font/overpass.css" rel="stylesheet">
   <link href="css/app.css" rel="stylesheet">
   <title>mastercomfig</title>
@@ -103,9 +102,7 @@ solid #141414">
 <script src="node_modules/popper.js/dist/umd/popper.js"
         integrity="sha256-wqAoCRn9//AnHSl4qbXVhqdvmgFQqN5Elqp4Eb2wOXA="
         crossorigin="anonymous"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"
-        integrity="sha256-IeI0loa35pfuDxqZbGhQUiZmD2Cywv1/bdqiypGW46o="
-        crossorigin="anonymous"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/titlebar.js"></script>
 <script src="js/dark.js"></script>
@@ -449,9 +446,11 @@ solid #141414">
                   var box = document.createElement("x-box");
                   var checkbox = document.createElement("x-checkbox");
                   checkbox.title = "Enable override?";
+                  let hiddenControl = true;
                   if (getFromProfile("customs." + splitCats + "_" + item +
                     ".used")) {
                     checkbox.setAttribute("toggled", null);
+                    hiddenControl = false;
                   }
                   box.appendChild(checkbox);
                   var label = document.createElement("x-label");
@@ -475,7 +474,8 @@ solid #141414">
                   switch (customEntry.data.type) {
                     case "selector":
                       var customSelect = document.createElement("x-select");
-                      customSelect.hidden = true;
+                      if (hiddenControl)
+                        customSelect.hidden = true;
                       box.appendChild(customSelect);
                       var customMenu = document.createElement("x-menu");
                       customSelect.appendChild(customMenu);
@@ -535,7 +535,8 @@ solid #141414">
                       break;
                     case "toggle":
                       var switcher = document.createElement("x-switch");
-                      switcher.hidden = true;
+                      if (hiddenControl)
+                        switcher.hidden = true;
                       box.appendChild(switcher);
                       if (getFromProfile("customs." + splitCats + "_" + item +
                         ".value")) {
@@ -577,7 +578,8 @@ solid #141414">
                     case "slider":
                     case "stepper":
                       var num = document.createElement("x-numberinput");
-                      num.hidden = true;
+                      if (hiddenControl)
+                        num.hidden = true;
                       var stepper = document.createElement("x-stepper");
                       num.appendChild(stepper);
                       num.setAttribute("min", customEntry.data.value.min);
@@ -755,35 +757,34 @@ solid #141414">
                 }
                 // Define the speed module according to user speed
                 let downloadSpeed = settings.get("download-speed");
-                downloadSpeed *= 12500;
-                if (downloadSpeed)
+                downloadSpeed *= 125000;
+                let downloadClearance = 64000 + downloadSpeed * 0.15;
+                if (downloadSpeed > 125000 * 4) {
+                  downloadClearance = 32000 + downloadSpeed * 0.1;
+                }
+                downloadSpeed -= downloadClearance;
+                downloadSpeed = Math.max(40000, downloadSpeed);
                 let uploadSpeed = settings.get("upload-speed");
                 uploadSpeed *= 125000;
-                let uploadClearance = ;
+                let uploadClearance = 64000 + uploadSpeed * 0.15;
+                if (uploadSpeed > 125000 * 2) {
+                  uploadClearance += 32000 + uploadSpeed * 0.1;
+                }
+                uploadSpeed -= uploadClearance;
+                uploadSpeed = Math.max(40000, uploadSpeed);
                 let speed = Math.min(downloadSpeed, uploadSpeed);
-                let staticClearance = speed === downloadSpeed ?
-                  staticDClearance : staticUClearance;
-                let rate = (speed * 93750 - staticClearance).floorD(6)
-                  .clamp(3500,
-                    324192);
+                let rate = speed.floorD(6).clamp(40000, 324192);
                 let rateS = "rate " + rate;
                 let splitpacketRate = ";net_splitpacket_maxrate " +
-                  (uploadSpeed * 93750 - staticUClearance).floorD(6)
-                    .clamp(3500,
-                      324192);
-                let maxClearTime =
-                  Math.max(0.005087,
-                    (4000 / (uploadSpeed * 93750 - staticUClearance)).floorD(
-                      6));
+                  uploadSpeed.floorD(6).clamp(40000, 324192);
+                let maxClearTime = Math.max(4000 / 786432,
+                  (4000 / uploadSpeed).floorD(6));
                 maxClearTime = ";net_maxcleartime " + maxClearTime;
                 modulesStream.write("alias run_n_rate \"" + rateS +
                   splitpacketRate + maxClearTime + "\"\n");
                 // Check to see if we can actually reliably send at max rate
-                let maxUpdateRate = Math.min(66, Math.floor(downloadSpeed *
-                  112500 / 1228));
-                let maxCmdRate = Math.min(66,
-                  Math.floor(uploadSpeed * 112500 /
-                    1228));
+                let maxUpdateRate = Math.min(66, Math.floor(downloadSpeed / 1228));
+                let maxCmdRate = Math.min(66, Math.floor(uploadSpeed / 1228));
                 let packetSizeModule =
                   settings.get(currentProfilePath +
                     "modules.networking.packet_size");
@@ -796,25 +797,22 @@ solid #141414">
                   modulesJson["networking.packet_size"]["levels"][packetSizeModule]["values"]["net_maxroutable"];
                 maxRoutable += 28;
                 let maxNeededSplitRate = Math.ceil(4000 / maxRoutable);
-                netSplitRate = Math.floor(93750 * uploadSpeed /
-                  (maxRoutable *
-                    maxCmdRate));
+                netSplitRate = Math.max(1, Math.floor(uploadSpeed / (maxRoutable * maxCmdRate)));
                 netSplitRate = Math.min(maxNeededSplitRate, netSplitRate);
                 // No we can't, better redo our modules
                 if (maxUpdateRate < 66 || maxCmdRate < 66) {
                   Object.keys(modulesJson["networking.packet_rate"]["levels"])
                     .forEach(packetRate => {
-                      let scaledUpdateRate = Math.max(10,
-                        Math.floor(maxUpdateRate /
-                          modulesJson["networking.packet_rate"]["levels"][packetRate]["rel_rate"]));
+                      let relative = modulesJson["networking.packet_rate"]["levels"][packetRate]["rel_rate"];
+                      let scaledUpdateRate = Math.max(11, Math.floor(maxUpdateRate / relative));
+                      let scaledCmdRate = (maxCmdRate / relative).clamp(10, scaledUpdateRate - 1);
                       // make sure we don't bring cmdrate up to an unsupported
                       // level. instead, bring update rate down within the
                       // cmd rate difference limit (sv_client_cmdrate_difference)
                       let cmdDiff = 20;
-                      if (maxUpdateRate - cmdDiff > maxCmdRate) {
-                        maxUpdateRate = maxCmdRate + cmdDiff;
+                      if (scaledUpdateRate - cmdDiff > scaledCmdRate) {
+                        scaledUpdateRate = maxCmdRate + cmdDiff;
                       }
-                      let scaledCmdRate = maxCmdRate;
                       Object.keys(
                         modulesJson["networking.packet_buffer"]["levels"])
                         .forEach(interp => {
@@ -898,8 +896,7 @@ solid #141414">
                           .forEach(cvar => {
                             if (cvar === "net_splitrate") {
                               winnerDynamic.data[cvar] =
-                                Math.min(netSplitRate,
-                                  winnerDynamic.data[cvar]);
+                                  winnerDynamic.data[cvar].clamp(1, netSplitRate);
                             }
                             customStream.write(cvar + " " +
                               winnerDynamic.data[cvar]
