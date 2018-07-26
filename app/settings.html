@@ -312,12 +312,12 @@ solid #141414">
           visitor.event({
             ec: "Speed measure",
             ea: "Download speed",
-            ev: download
+            ev: Math.round(download * 125000)
           }).send();
           visitor.event({
             ec: "Speed measure",
             ea: "Upload speed",
-            ev: upload
+            ev: Math.round(upload * 125000)
           }).send();
         }
         settings.set("upload-speed", upload);
@@ -329,7 +329,7 @@ solid #141414">
           visitor.event({
             ec: "Speed measure",
             ea: "Ping",
-            ev: testserver.bestPing
+            ev: Math.round(testserver.bestPing)
           }).send();
         }
         server.innerText =
@@ -365,7 +365,7 @@ solid #141414">
             }
             setToProfile("preset", e.detail.newValue);
             if (visitor) {
-              visitor.event("Preset changed", "Changed to " +
+              visitor.event("Preset selected", "Selected " +
                 e.detail.newValue).send();
             }
           });

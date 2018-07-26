@@ -115,6 +115,57 @@
         ]
       }
     },
+    "texture_filter": {
+      "category": "graphics.textures",
+      "description": "Adjusts the quality of textures, especially ones further away.",
+      "data": {
+        "type": "selector",
+        "value": [
+          {
+            "name": "bilinear",
+            "values": {
+              "mat_trilinear": 0,
+              "mat_forceaniso": 1
+            }
+          },
+          {
+            "name": "trilinear",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 1
+            }
+          },
+          {
+            "name": "Anisotropic Filtering 2x",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 2
+            }
+          },
+          {
+            "name": "Anisotropic Filtering 4x",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 4
+            }
+          },
+          {
+            "name": "Anisotropic Filtering 8x",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 8
+            }
+          },
+          {
+            "name": "Anisotropic Filtering 16x",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 16
+            }
+          }
+        ]
+      }
+    },
     "art_decals": {
       "category": "graphics.decals",
       "data": {

@@ -118,6 +118,7 @@
   function page() {
     if (visitor) {
       visitor.screenview("About").send();
+      visitor.pageview()
     }
 
     document.getElementById("version").innerText = app.getVersion();

@@ -198,6 +198,8 @@
             "mat_filtertextures": 0,
             "mat_bumpmap": 0,
             "mat_specular": 0,
+            "mat_trilinear": 0,
+            "mat_forceaniso": 1,
             "mat_picmip": 2
           }
         },
@@ -207,6 +209,8 @@
             "mat_filtertextures": 1,
             "mat_bumpmap": 1,
             "mat_specular": 1,
+            "mat_trilinear": 1,
+            "mat_forceaniso": 1,
             "mat_picmip": 2
           }
         },
@@ -216,6 +220,8 @@
             "mat_filtertextures": 1,
             "mat_bumpmap": 1,
             "mat_specular": 1,
+            "mat_trilinear": 1,
+            "mat_forceaniso": 2,
             "mat_picmip": 1
           }
         },
@@ -225,6 +231,8 @@
             "mat_filtertextures": 1,
             "mat_bumpmap": 1,
             "mat_specular": 1,
+            "mat_trilinear": 1,
+            "mat_forceaniso": 8,
             "mat_picmip": 0
           }
         },
@@ -234,6 +242,8 @@
             "mat_filtertextures": 1,
             "mat_bumpmap": 1,
             "mat_specular": 1,
+            "mat_trilinear": 1,
+            "mat_forceaniso": 16,
             "mat_picmip": -1
           }
         }
