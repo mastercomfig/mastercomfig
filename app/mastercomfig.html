@@ -755,13 +755,11 @@ solid #141414">
                 }
                 // Define the speed module according to user speed
                 let downloadSpeed = settings.get("download-speed");
-                let staticDClearance = Math.min(625000, Math.min(96000 +
-                  downloadSpeed * 3125,
-                  downloadSpeed * 6250));
+                downloadSpeed *= 12500;
+                if (downloadSpeed)
                 let uploadSpeed = settings.get("upload-speed");
-                let staticUClearance = Math.min(256000, Math.min(96000 +
-                  uploadSpeed, uploadSpeed *
-                  31250));
+                uploadSpeed *= 125000;
+                let uploadClearance = ;
                 let speed = Math.min(downloadSpeed, uploadSpeed);
                 let staticClearance = speed === downloadSpeed ?
                   staticDClearance : staticUClearance;
@@ -770,7 +768,6 @@ solid #141414">
                     324192);
                 let rateS = "rate " + rate;
                 let splitpacketRate = ";net_splitpacket_maxrate " +
-
                   (uploadSpeed * 93750 - staticUClearance).floorD(6)
                     .clamp(3500,
                       324192);
@@ -817,11 +814,7 @@ solid #141414">
                       if (maxUpdateRate - cmdDiff > maxCmdRate) {
                         maxUpdateRate = maxCmdRate + cmdDiff;
                       }
-                      // use the max allowable cmd rate we can
-                      // because we are already scaling update rate
-                      // using the relative multiplier
-                      let scaledCmdRate = Math.max(scaledUpdateRate - 1,
-                        maxCmdRate);
+                      let scaledCmdRate = maxCmdRate;
                       Object.keys(
                         modulesJson["networking.packet_buffer"]["levels"])
                         .forEach(interp => {
