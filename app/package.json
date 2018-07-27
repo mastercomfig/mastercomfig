@@ -29,16 +29,14 @@
   "homepage": "https://github.com/mastercoms/mastercomfig#readme",
   "devDependencies": {
     "electron": "^2.0.5",
-    "electron-builder": "^20.25.0"
+    "electron-builder": "^20.26.0"
   },
   "dependencies": {
-    "@firebase/app-types": "^0.3.2",
     "bootstrap": "^4.1.3",
     "electron-settings": "^3.2.0",
     "electron-updater": "^3.0.3",
     "firebase": "^5.2.0",
     "fs-extra": "^7.0.0",
-    "grpc": "1.11.3",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "speedtest-net": "^1.4.3",
