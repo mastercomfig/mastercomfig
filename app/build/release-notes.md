@@ -3,6 +3,7 @@ App Changes:
 * Fixed custom setting control being hidden on launch when enabled
 * Fixed network scaling, especially for lower end connections
 * Some users (~50%) have been chosen at random to be fast tracked new config updates
+* Fixed Linux icon issues
 * Updated dependencies
 
 Config Changes:
