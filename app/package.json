@@ -52,7 +52,6 @@
     "productName": "mastercomfig",
     "appId": "com.mastercomfig.app",
     "compression": "maximum",
-    "buildDependenciesFromSource": true,
     "mac": {
       "category": "public.app-category.utilities"
     },
