@@ -24,6 +24,9 @@
       container.wrap("<div class='twentytwenty-wrapper twentytwenty-" + sliderOrientation + "'></div>");
       if(!options.no_overlay) {
         container.append("<div class='twentytwenty-overlay'></div>");
+        var overlay = container.find(".twentytwenty-overlay");
+        overlay.append("<div class='twentytwenty-before-label' data-content='"+options.before_label+"'></div>");
+        overlay.append("<div class='twentytwenty-after-label' data-content='"+options.after_label+"'></div>");
       }
       var beforeImg = container.find("img:first");
       var afterImg = container.find("img:last");
@@ -34,10 +37,6 @@
       container.addClass("twentytwenty-container");
       beforeImg.addClass("twentytwenty-before");
       afterImg.addClass("twentytwenty-after");
-
-      var overlay = container.find(".twentytwenty-overlay");
-      overlay.append("<div class='twentytwenty-before-label' data-content='"+options.before_label+"'></div>");
-      overlay.append("<div class='twentytwenty-after-label' data-content='"+options.after_label+"'></div>");
 
       var calcOffset = function(dimensionPct) {
         var w = beforeImg.width();
@@ -51,14 +50,14 @@
       };
 
       var adjustContainer = function(offset) {
-      	if (sliderOrientation === 'vertical') {
+        if (sliderOrientation === 'vertical') {
           beforeImg.css("clip", "rect(0,"+offset.w+","+offset.ch+",0)");
           afterImg.css("clip", "rect("+offset.ch+","+offset.w+","+offset.h+",0)");
-      	}
-      	else {
+        }
+        else {
           beforeImg.css("clip", "rect(0,"+offset.cw+","+offset.h+",0)");
           afterImg.css("clip", "rect(0,"+offset.w+","+offset.h+","+offset.cw+")");
-    	}
+        }
         container.css("height", offset.h);
       };
 
@@ -101,8 +100,8 @@
         container.addClass("active");
         offsetX = container.offset().left;
         offsetY = container.offset().top;
-        imgWidth = beforeImg.width(); 
-        imgHeight = beforeImg.height();          
+        imgWidth = beforeImg.width();
+        imgHeight = beforeImg.height();
       };
       var onMove = function(e) {
         if (container.hasClass("active")) {
@@ -111,7 +110,7 @@
         }
       };
       var onMoveEnd = function() {
-          container.removeClass("active");
+        container.removeClass("active");
       };
 
       var moveTarget = options.move_with_handle_only ? slider : container;
