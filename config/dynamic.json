@@ -15,7 +15,8 @@
         "r_occluderminarea": 10,
         "mat_tonemapping_occlusion_use_stencil": 0,
         "mat_postprocess_x": 4,
-        "mat_postprocess_y": 4
+        "mat_postprocess_y": 4,
+        "mat_reducefillrate": 0
       }
     },
     "hardware.cpu.cores": [
@@ -148,8 +149,7 @@
         "gl_debug_output": 0,
         "gl_magnify_resolve_mode": 1,
         "gl_paircache_rows_lg2": 11,
-        "gl_paircache_ways_lg2": 5,
-        "net_queued_packet_thread": 0
+        "gl_paircache_ways_lg2": 5
       }
     }
   }
