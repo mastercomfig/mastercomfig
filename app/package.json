@@ -58,18 +58,8 @@
     "linux": {
       "description": "The mastercomfig app allows you to customize and optimize Team Fortress 2 easily.",
       "synopsis": "The desktop app for mastercomfig, a Team Fortress 2 config.",
-      "target": [
-        "snap",
-        "deb",
-        "rpm",
-        "pacman",
-        "tar.xz"
-      ],
+      "target": ["pacman", "rpm", "sh", "deb"],
       "category": "Settings"
-    },
-    "snap": {
-      "confinement": "classic",
-      "grade": "devel"
     },
     "win": {
       "compression": "maximum",
