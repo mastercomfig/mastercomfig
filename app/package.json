@@ -30,7 +30,7 @@
   "homepage": "https://github.com/mastercoms/mastercomfig#readme",
   "devDependencies": {
     "@firebase/app-types": "^0.3.2",
-    "electron": "^2.0.5",
+    "electron": "^2.0.6",
     "electron-builder": "^20.26.1"
   },
   "dependencies": {
