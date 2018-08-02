@@ -23,7 +23,7 @@
             <div class="align-middle text-center">
                 <h1 class="display-4">mastercomfig</h1>
                 <p class="lead">A modern Team Fortress 2 performance and customization config.</p>
-                <a class="btn btn-outline-light btn-lg" href="https://mastercomfig.com/download">
+                <a class="btn btn-outline-light btn-lg" href="/download">
                     <span class="oi oi-data-transfer-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download
                 </a>
             </div>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="col-lg-6 align-middle">
                     <pre><code class="cpp">
-…
+...
 // =============
 // '--- HUD ---'
 // =============
@@ -119,12 +119,11 @@
 // ---------------
 // General/misc HUD settings
 
-cl_hud_playerclass_use_playermodel 0 // Disable live player model in HUD, also partially fixes animation bug
+//cl_hud_playerclass_use_playermodel 0 // Disable live player model in HUD, also partially fixes animation bug
 //cl_hud_playerclass_use_playermodel 1 // Enable live player model in HUD
 //cl_hud_minmode 1 // HUD min mode
-…
-//cl_software_cursor 1 // Uses a stylized cursor handled by the game instead of the OS
-tf_mm_dashboard_slide_panel_step 10 // Change the horizontal offset of the primary matchmaking panel
+...
+tf_dashboard_slide_time 0.25 // Time in seconds for dashboard transitions
 tf_item_inspect_model_auto_spin 1 // Auto spin items in the inspect view
 //tf_item_inspect_model_auto_spin 0 // Do not auto spin items in the inspect view
 tf_item_inspect_model_spin_rate 30 // Rate at which items spin in the inspect view
@@ -133,19 +132,17 @@ tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
 //tf_build_menu_controller_mode 1 // Use controller style engineer build menu
 //tf_disguise_menu_controller_mode 1 // Controller disguise menu
 //tf_simple_disguise_menu 0 // Concise disguise menu
-//tf_colorblindassist 1 // Colorblind mode
-//cl_disablehtmlmotd 1 // Disable HTML MOTDs (ads, music player, rules, fancy server intros)
-…
+...
                     </code></pre>
                 </div>
             </div>
         </div>
     </section>
-
+    <hr>
     <section class="container text-center text-light">
         <h1 class="display-4">Get frames. Get mastercomfig.</h1>
         <br>
-        <a class="btn btn-secondary btn-lg" href="https://mastercomfig.com/download">
+        <a class="btn btn-secondary btn-lg" href="/download">
             <span class="oi oi-data-transfer-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download mastercomfig
         </a>
         <br><br>
@@ -172,7 +169,7 @@ tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js" integrity="sha256-VzXcD0HmV1s8RGdJ/yIf7YkZiOZrcxPphaDpwM++pSs=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/popper.min.js" integrity="sha256-FCiJD1Xk+2itXYf5YdFQrPURijNogcXySEApUqeRwHc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js" integrity="sha256-O89HlAm2WdqzEdqsBihytS0wjt7OGPfbIaGMDaHFSHk=" crossorigin="anonymous"></script>
@@ -182,8 +179,8 @@ tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
         // Init quality image compare
         $(function() {
             $("#quality-compare").twentytwenty({
-                before_label: 'maxperformance',
-                after_label: 'maxquality'
+                before_label: 'Very Low',
+                after_label: 'Ultra'
             });
 
         });
@@ -206,8 +203,8 @@ tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
 
         $('#compareModal').on('shown.bs.modal', function () {
           $("#quality-compare-large").twentytwenty({
-              before_label: 'maxperformance',
-              after_label: 'maxquality'
+              before_label: 'Very Low',
+              after_label: 'Ultra'
           });
         });
     </script>

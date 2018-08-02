@@ -20,14 +20,14 @@
         <div class="container d-flex align-items-center" style="min-height: 100%">
             <div class="align-middle">
                 <h1 class="display-4" id="title">Download mastercomfig</h1>
-                <div style="background: rgb(0,150,136);width: 100%;border-radius:0" class="jumbotron">
+                <div style="background: #009688;width: 100%;padding: 1rem 2rem" class="jumbotron">
                     <p class="lead">mastercomfig 7 is now available in alpha!</p>
                     <p>Easier customization, better performance. All in an easy to use, quick install app.</p>
-                    <a href="/7" class="btn btn-primary">Get mastercomfig 7</a>
+                    <a href="/7" class="btn btn-primary" style="border-radius:0.25rem">Get mastercomfig 7</a>
                 </div>
                 <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/tree/release/docs#installation" class="text-light">Installation Instructions</a></p>
                 <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/tree/release/docs#updating" class="text-light">Updating Instructions</a></p>
-                <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/releases/latest"  class="text-light">Changelog</a></p>
+                <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/releases/v6.10.0" class="text-light" id="changelog-link">Changelog</a></p>
                 <h2>Choose your preset</h2>
                 <div class="list-group" id="presets">
                   <a class="list-group-item list-group-item-action list-group-item-dark" id="ultra" href="#">
@@ -56,7 +56,7 @@
                   </a>
                   <a class="list-group-item list-group-item-action list-group-item-dark" id="very-low" href="#">
                     <h5 class="mb-1">Very Low</h5>
-                    <p class="mb-1">Negatively affects playability by a lot and disables very essential features in desperation for performance.</p>
+                      <p class="mb-1">Negatively affects playability by <strong>a lot</strong> and disables very essential features in desperation for performance.</p>
                   </a>
                 </div>
                 <hr>
@@ -128,119 +128,126 @@
                 <hr>
                 <h2>Download your VPKs</h2>
                 <p>Just drop them in your <code>tf/custom</code> folder and they'll automatically run.</p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-medium-high-preset.vpk" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Medium High preset VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-no-extra-models-addon.vpk" class="text-light" id="no-extra-models-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Extra Models addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-no-footsteps-addon.vpk" class="text-light" id="no-footsteps-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Footsteps addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-no-pyroland-addon.vpk" class="text-light" id="no-pyroland-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Pyroland addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-no-soundscapes-addon.vpk" class="text-light" id="no-soundscapes-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Soundscapes addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-no-tutorial-addon.vpk" class="text-light" id="no-tutorial-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Tutorial addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-mouse-tweaks-addon.vpk" class="text-light" id="mouse-tweaks-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Mouse Tweaks addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-transparent-viewmodels-addon.vpk" class="text-light" id="transparent-viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.9.0/mastercomfig-badcpu-addon.vpk" class="text-light" id="badcpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad CPU addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-medium-high-preset.vpk" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Medium High preset VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-no-extra-models-addon.vpk" class="text-light" id="no-extra-models-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Extra Models addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-no-footsteps-addon.vpk" class="text-light" id="no-footsteps-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Footsteps addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-no-pyroland-addon.vpk" class="text-light" id="no-pyroland-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Pyroland addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-no-soundscapes-addon.vpk" class="text-light" id="no-soundscapes-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Soundscapes addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-no-tutorial-addon.vpk" class="text-light" id="no-tutorial-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Tutorial addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-mouse-tweaks-addon.vpk" class="text-light" id="mouse-tweaks-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Mouse Tweaks addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-transparent-viewmodels-addon.vpk" class="text-light" id="transparent-viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.10.0/mastercomfig-badcpu-addon.vpk" class="text-light" id="badcpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad CPU addon VPK</a></p>
                 <br><br>
             </div>
         </div>
     </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js" integrity="sha256-VzXcD0HmV1s8RGdJ/yIf7YkZiOZrcxPphaDpwM++pSs=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/popper.min.js" integrity="sha256-FCiJD1Xk+2itXYf5YdFQrPURijNogcXySEApUqeRwHc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown.js/0.5.0/markdown.min.js" integrity="sha256-m08q2xO2R0aeibb2C0GfTjpky+ZgvfKWzNQbj/2zJaY=" crossorigin="anonymous"></script>
 
     <script>
-      presets = new Map();
-      presets.set("ultra", "Ultra");
-      presets.set("high", "High");
-      presets.set("medium-high", "Medium High");
-      presets.set("medium", "Medium");
-      presets.set("medium-low", "Medium Low");
-      presets.set("low", "Low");
-      presets.set("very-low", "Very Low");
+      "use strict";
 
-      recommendedAddons = new Map();
-      recommendedAddons.set("ultra", []);
-      recommendedAddons.set("high", ["no-extra-models"]);
-      recommendedAddons.set("medium-high", ["no-extra-models"]);
-      recommendedAddons.set("medium", ["no-extra-models"]);
-      recommendedAddons.set("medium-low", ["no-extra-models"]);
-      recommendedAddons.set("low", ["no-extra-models", "no-pyroland", "no-soundscapes"]);
-      recommendedAddons.set("very-low", ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"]);
+      jQuery(function() {
+        app();
+      });
 
-      downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/download/{0}/mastercomfig-";
-      addonUrl = downloadUrl + "{1}-addon.vpk";
-      presetUrl = downloadUrl + "{1}-preset.vpk";
+      function app() {
+        let presets = new Map();
+        presets.set("ultra", "Ultra");
+        presets.set("high", "High");
+        presets.set("medium-high", "Medium High");
+        presets.set("medium", "Medium");
+        presets.set("medium-low", "Medium Low");
+        presets.set("low", "Low");
+        presets.set("very-low", "Very Low");
 
-      presetDownload = document.getElementById('preset-dl');
+        let recommendedAddons = new Map();
+        recommendedAddons.set("ultra", []);
+        recommendedAddons.set("high", ["no-extra-models"]);
+        recommendedAddons.set("medium-high", ["no-extra-models"]);
+        recommendedAddons.set("medium", ["no-extra-models"]);
+        recommendedAddons.set("medium-low", ["no-extra-models"]);
+        recommendedAddons.set("low", ["no-extra-models", "no-pyroland", "no-soundscapes"]);
+        recommendedAddons.set("very-low", ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"]);
 
-      version = null;
+        let downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/download/{0}/mastercomfig-";
+        let addonUrl = downloadUrl + "{1}-addon.vpk";
+        let presetUrl = downloadUrl + "{1}-preset.vpk";
 
-      addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "mouse-tweaks", "transparent-viewmodels", "badgpu", "badcpu"];
+        let presetDownload = document.getElementById('preset-dl');
 
-      storage = localStorage;
+        let version = null;
 
-      toggleAddon = function(id) {
-        setAddon(id, document.getElementById(id).checked);
-      };
+        let addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "mouse-tweaks", "transparent-viewmodels", "badgpu", "badcpu"];
 
-      setAddon = function(id, checked) {
-        storage.setItem(id, checked);
-        checked = storage.getItem(id) == 'true';
-        document.getElementById(id + "-dl").style.display = checked ? "initial" : "none"
-        document.getElementById(id).checked = checked;
-      }
+        let storage = localStorage;
 
-      setPreset = function(id, no_set) {
-        storage.setItem('preset', id);
-        $(document.getElementById(id)).tab('show');
-        presetDownload.setAttribute('href', presetUrl.format(version, id));
-        presetDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset VPK'.format(presets.get(id));
-        if (!no_set) {
-          if (id != "very-low") {
-            ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"].forEach(function(addon) {
-              setAddon(addon, false)
+        function toggleAddon(id) {
+          setAddon(id, document.getElementById(id).checked);
+        }
+
+        function setAddon(id, checked) {
+          storage.setItem(id, checked);
+          checked = storage.getItem(id) === 'true';
+          document.getElementById(id + "-dl").style.display = checked ? "initial" : "none";
+          document.getElementById(id).checked = checked;
+        }
+
+        function setPreset(id, no_set) {
+          storage.setItem('preset', id);
+          jQuery(document.getElementById(id)).tab('show');
+          presetDownload.setAttribute('href', presetUrl.format(version, id));
+          presetDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset VPK'.format(presets.get(id));
+          if (!no_set) {
+            if (id !== "very-low") {
+              ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"].forEach(function (addon) {
+                setAddon(addon, false)
+              });
+            }
+            recommendedAddons.get(id).forEach(function (addon) {
+              setAddon(addon, true);
             });
           }
-          recommendedAddons.get(id).forEach(function(addon) {
-            setAddon(addon, true);
+        }
+
+        String.prototype.format = function () {
+          const args = arguments;
+          return this.replace(/{(\d+)}/g, function (match, number) {
+            return typeof args[number] !== 'undefined' ? args[number] : match;
           });
-        }
-      }
+        };
 
-      String.prototype.format = function() {
-        var args = arguments;
-        return this.replace(/{(\d+)}/g, function(match, number) {
-          return typeof args[number] != 'undefined' ? args[number] : match;
-        });
-      };
-
-      $.get("https://api.github.com/repositories/69422496/releases/tags/v6.9.0", function(data) {
-        version = data.tag_name;
-        document.getElementById('title').innerText = "Download mastercomfig " + data.tag_name;
-        if (!storage.getItem('preset')) {
-          setPreset('medium-high');
-        } else {
-          setPreset(storage.getItem('preset'), true);
-        }
-        addons.forEach(function(id) {
-          document.getElementById(id + '-dl').setAttribute('href', addonUrl.format(version, id));
-          if (!storage.getItem(id)) {
-            setAddon(id, false);
+        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.10.0", function (data) {
+          version = data.tag_name;
+          let versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
+          document.getElementById('title').innerText = "Download mastercomfig " + versionName;
+          document.getElementById('changelog-link').href = "https://github.com/mastercoms/mastercomfig/releases/" + version;
+          if (storage.getItem('preset')) {
+            setPreset(storage.getItem('preset'), true);
           } else {
-            setAddon(id, storage.getItem(id))
+            setPreset('medium-high');
           }
+          addons.forEach(function (id) {
+            document.getElementById(id + '-dl').setAttribute('href', addonUrl.format(version, id));
+            if (storage.getItem(id)) {
+              setAddon(id, storage.getItem(id))
+            } else {
+              setAddon(id, false);
+            }
+          });
+        }, "json");
+
+        jQuery('#presets a').on('click', function (e) {
+          e.preventDefault();
+          setPreset(this.id);
         });
-      }, "json");
 
-      $('#presets a').on('click', function (e) {
-        e.preventDefault();
-        setPreset(this.id);
-      });
-
-      $( "input[type='checkbox']" ).change(function() {
-        toggleAddon(this.id);
-      });
+        jQuery("input[type='checkbox']").change(function () {
+          toggleAddon(this.id);
+        });
+      }
     </script>
   </body>
 </html>
