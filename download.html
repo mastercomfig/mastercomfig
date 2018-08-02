@@ -154,7 +154,7 @@
       });
 
       function app() {
-        let presets = new Map();
+        var presets = new Map();
         presets.set("ultra", "Ultra");
         presets.set("high", "High");
         presets.set("medium-high", "Medium High");
@@ -163,7 +163,7 @@
         presets.set("low", "Low");
         presets.set("very-low", "Very Low");
 
-        let recommendedAddons = new Map();
+        var recommendedAddons = new Map();
         recommendedAddons.set("ultra", []);
         recommendedAddons.set("high", ["no-extra-models"]);
         recommendedAddons.set("medium-high", ["no-extra-models"]);
@@ -172,17 +172,17 @@
         recommendedAddons.set("low", ["no-extra-models", "no-pyroland", "no-soundscapes"]);
         recommendedAddons.set("very-low", ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"]);
 
-        let downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/download/{0}/mastercomfig-";
-        let addonUrl = downloadUrl + "{1}-addon.vpk";
-        let presetUrl = downloadUrl + "{1}-preset.vpk";
+        var downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/download/{0}/mastercomfig-";
+        var addonUrl = downloadUrl + "{1}-addon.vpk";
+        var presetUrl = downloadUrl + "{1}-preset.vpk";
 
-        let presetDownload = document.getElementById('preset-dl');
+        var presetDownload = document.getElementById('preset-dl');
 
-        let version = null;
+        var version = null;
 
-        let addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "mouse-tweaks", "transparent-viewmodels", "badgpu", "badcpu"];
+        var addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "mouse-tweaks", "transparent-viewmodels", "badgpu", "badcpu"];
 
-        let storage = localStorage;
+        var storage = localStorage;
 
         function toggleAddon(id) {
           setAddon(id, document.getElementById(id).checked);
@@ -221,7 +221,7 @@
 
         jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.10.0", function (data) {
           version = data.tag_name;
-          let versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
+          var versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
           document.getElementById('title').innerText = "Download mastercomfig " + versionName;
           document.getElementById('changelog-link').href = "https://github.com/mastercoms/mastercomfig/releases/" + version;
           if (storage.getItem('preset')) {
