@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="shortcut icon" href="favicon.ico">
 
     <title>mastercomfig 7</title>
@@ -27,21 +27,45 @@
                 <br>
                 <hr style="width: 25%">
                 <a class="text-light" href="https://github.com/mastercoms/mastercomfig/releases/" id="additional">
-                    Other versions and changelog
+                    Changelog and more downloads
                 </a>
+                <hr>
+                <div id="download-list"></div>
             </div>
         </div>
     </header>
     <script>
         var download = document.getElementById('download');
-        var version = "7.0.0-a.15"
+        var version = "7.0.0-a.16";
+        var rootDl = "https://github.com/mastercoms/mastercomfig/releases/download/v" + version + "/";
         document.getElementById('additional').href += "tag/v" + version;
+        var downloadList = document.getElementById('download-list');
         if (window.navigator.platform.indexOf("Win") !== -1) {
-            download.href = "https://github.com/mastercoms/mastercomfig/releases/download/v" + version + "/mastercomfig-app-web-setup-" + version + ".exe";
-            download.innerHTML += ' for Windows';
+            download.href = rootDl + "mastercomfig-app-web-setup-" + version + ".exe";
+            download.innerHTML += ' for Windows <i class="fab fa-windows"></i>';
+            var offlineBtn = document.createElement("a");
+            offlineBtn.classList.add("btn", "btn-primary", "btn-sm");
+            offlineBtn.innerText = "Download offline installer";
+            offlineBtn.href = rootDl + "mastercomfig.Setup." + version + ".exe";
+            downloadList.appendChild(offlineBtn);
         } else if (window.navigator.platform.indexOf("Linux") !== -1 && window.navigator.userAgent.indexOf("Android") === -1) {
-            download.href = "https://github.com/mastercoms/mastercomfig/releases/tag/v" + version;
-            download.innerHTML += ' for Linux';
+            download.href = rootDl + "mastercomfig-app-" + version + ".sh";
+            download.innerHTML += ' for Linux <i class="fab fa-linux"></i>';
+            var ubuntu = document.createElement("a");
+            ubuntu.innerText = "Download for Ubuntu/Debian";
+            ubuntu.href = rootDl + "mastercomfig-app_" + version + "_amd64.deb";
+            ubuntu.classList.add("btn", "btn-primary", "btn-sm");
+            downloadList.appendChild(ubuntu);
+            var fedora = document.createElement("a");
+            fedora.innerText = "Download for Fedora";
+            fedora.href = rootDl + "mastercomfig-app-" + version.replace("-", "_") + ".x86_64.rpm";
+            fedora.classList.add("btn", "btn-primary", "btn-sm");
+            downloadList.appendChild(fedora);
+            var arch = document.createElement("a");
+            arch.innerText = "Download for Arch Linux";
+            arch.href = rootDl + "mastercomfig-app-" + version.replace("-", "_") + ".pacman";
+            arch.classList.add("btn", "btn-primary", "btn-sm");
+            downloadList.appendChild(arch);
         } else {
             download.classList.remove("btn", "btn-outline-light", "btn-lg");
             download.innerHTML = "The mastercomfig app is not available for your platform. Please download the VPK from other versions or compile from source."
