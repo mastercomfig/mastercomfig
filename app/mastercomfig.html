@@ -471,11 +471,17 @@ solid #141414">
                     labelsDiv.appendChild(description);
                   }
                   controlBox.appendChild(labelsDiv);
+                  let notice = document.createElement("span");
+                  notice.innerText = "Override disabled";
+                  box.appendChild(notice);
                   switch (customEntry.data.type) {
                     case "selector":
                       var customSelect = document.createElement("x-select");
-                      if (hiddenControl)
+                      if (hiddenControl) {
                         customSelect.hidden = true;
+                      } else {
+                        notice.hidden = true;
+                      }
                       box.appendChild(customSelect);
                       var customMenu = document.createElement("x-menu");
                       customSelect.appendChild(customMenu);
@@ -498,8 +504,9 @@ solid #141414">
                         setToProfile("customs." + splitCats + "_" + item +
                           ".used",
                           checkbox.hasAttribute("toggled"));
-                        customSelect.hidden = false;
                         if (checkbox.hasAttribute("toggled")) {
+                          notice.hidden = true;
+                          customSelect.hidden = false;
                           var customLevel = customEntry.data.value[parseInt(
                             customSelect.value)];
                           setToProfile("customs." + splitCats + "_" + item +
@@ -514,6 +521,9 @@ solid #141414">
                           setToProfile("customs." + splitCats + "_" + item +
                             ".entry",
                             cvars);
+                        } else {
+                          notice.hidden = false;
+                          customSelect.hidden = true;
                         }
                       });
                       customSelect.addEventListener("change", (e) => {
@@ -535,8 +545,11 @@ solid #141414">
                       break;
                     case "toggle":
                       var switcher = document.createElement("x-switch");
-                      if (hiddenControl)
+                      if (hiddenControl) {
                         switcher.hidden = true;
+                      } else {
+                        notice.hidden = true;
+                      }
                       box.appendChild(switcher);
                       if (getFromProfile("customs." + splitCats + "_" + item +
                         ".value")) {
@@ -546,8 +559,9 @@ solid #141414">
                         setToProfile("customs." + splitCats + "_" + item +
                           ".used",
                           checkbox.hasAttribute("toggled"));
-                        switcher.hidden = false;
                         if (checkbox.hasAttribute("toggled")) {
+                          switcher.hidden = false;
+                          notice.hidden = true;
                           setToProfile("customs." + splitCats + "_" + item +
                             ".value",
                             switcher.hasAttribute("toggled"));
@@ -559,6 +573,9 @@ solid #141414">
                           setToProfile("customs." + splitCats + "_" + item +
                             ".entry",
                             cvars);
+                        } else {
+                          switcher.hidden = true;
+                          notice.hidden = false;
                         }
                       });
                       switcher.addEventListener("toggle", () => {
@@ -578,8 +595,11 @@ solid #141414">
                     case "slider":
                     case "stepper":
                       var num = document.createElement("x-numberinput");
-                      if (hiddenControl)
+                      if (hiddenControl) {
                         num.hidden = true;
+                      } else {
+                        notice.hidden = true;
+                      }
                       var stepper = document.createElement("x-stepper");
                       num.appendChild(stepper);
                       num.setAttribute("min", customEntry.data.value.min);
@@ -593,17 +613,22 @@ solid #141414">
                       num.setAttribute("max", customEntry.data.value.max);
                       box.appendChild(num);
                       checkbox.addEventListener("toggle", () => {
-                        num.hidden = false;
+
                         setToProfile("customs." + splitCats + "_" + item +
                           ".used",
                           checkbox.hasAttribute("toggled"));
                         if (checkbox.hasAttribute("toggled")) {
+                          num.hidden = false;
+                          notice.hidden = true;
                           setToProfile("customs." + splitCats + "_" + item +
                             ".value",
                             num.getAttribute("value"));
                           setToProfile("customs." + splitCats + "_" + item +
                             ".entry", customEntry.data.value.cvar + " " +
                             num.getAttribute("value"));
+                        } else {
+                          num.hidden = true;
+                          notice.hidden = false;
                         }
                       });
                       num.addEventListener("change", () => {
