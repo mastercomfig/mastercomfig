@@ -49,7 +49,7 @@
             offlineBtn.href = rootDl + "mastercomfig.Setup." + version + ".exe";
             downloadList.appendChild(offlineBtn);
         } else if (window.navigator.platform.indexOf("Linux") !== -1 && window.navigator.userAgent.indexOf("Android") === -1) {
-            download.href = rootDl + "mastercomfig-app-" + version + ".sh";
+            download.href = rootDl + "mastercomfig-app-" + version + ".tar.xz";
             download.innerHTML += ' for Linux <i class="fab fa-linux"></i>';
             var ubuntu = document.createElement("a");
             ubuntu.innerText = "Download for Ubuntu/Debian";
