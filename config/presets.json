@@ -23,7 +23,7 @@
         "graphics.gibs": "off",
         "graphics.ragdolls": "off",
         "HUD.outlines": "off",
-        "sound.quality": "low",
+        "sound.quality": "very_low",
         "sound.footsteps": "off",
         "sound.ambient_noise": "off"
       }
