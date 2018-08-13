@@ -3,20 +3,18 @@
     "hardware.gpu.type": {
       "Intel": {
         "r_occludeemaxarea": 2.5,
-        "r_occluderminarea": 7.5,
+        "r_occluderminarea": 1,
         "mat_tonemapping_occlusion_use_stencil": 1,
-        "mat_max_worldmesh_vertices": 1024,
+        "mat_max_worldmesh_vertices": 8192,
         "r_glint_procedural": 1,
         "mat_postprocess_x": 1,
         "mat_postprocess_y": 1
       },
       "Dedicated": {
-        "r_occludeemaxarea": 1,
-        "r_occluderminarea": 10,
-        "mat_tonemapping_occlusion_use_stencil": 0,
+        "r_occludeemaxarea": 1.5,
+        "r_occluderminarea": 6.5,
         "mat_postprocess_x": 4,
-        "mat_postprocess_y": 4,
-        "mat_reducefillrate": 0
+        "mat_postprocess_y": 4
       }
     },
     "hardware.cpu.cores": [
