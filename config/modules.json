@@ -663,7 +663,7 @@
             "blink_duration": 0.2,
             "anim_3wayblend": 1,
             "ai_expression_optimization": 1,
-            "ai_expression_frametime": 0.0152
+            "ai_expression_frametime": 0.0151
           }
         },
         "ultra": {
@@ -883,6 +883,23 @@
     "sound.quality": {
       "description": "The quality of sound and positional effects.",
       "levels": {
+        "very_low": {
+          "description": "All sound effects and positional audio are disabled and additional sound reduction is applied.",
+          "values": {
+            "snd_disable_mixer_duck": 1,
+            "snd_pitchquality": 0,
+            "dsp_slow_cpu": 1,
+            "snd_spatialize_roundrobin": 3,
+            "dsp_room": 0,
+            "dsp_facingaway": 0,
+            "dsp_speaker": 0,
+            "dsp_water": 0,
+            "dsp_spatial": 0,
+            "snd_cull_duplicates": 3,
+            "voice_steal": 1
+          },
+          "dxsupport": "sound-low"
+        },
         "low": {
           "description": "All sound effects and positional audio are disabled.",
           "values": {
@@ -894,7 +911,9 @@
             "dsp_facingaway": 0,
             "dsp_speaker": 0,
             "dsp_water": 0,
-            "dsp_spatial": 0
+            "dsp_spatial": 0,
+            "snd_cull_duplicates": 0,
+            "voice_steal": 2
           },
           "dxsupport": "sound-low"
         },
@@ -908,7 +927,9 @@
             "dsp_facingaway": 0,
             "dsp_speaker": 0,
             "dsp_water": 0,
-            "dsp_spatial": 40
+            "dsp_spatial": 40,
+            "snd_cull_duplicates": 0,
+            "voice_steal": 2
           },
           "dxsupport": "sound-high"
         },
@@ -920,9 +941,11 @@
             "snd_spatialize_roundrobin": 1,
             "dsp_room": 0,
             "dsp_facingaway": 30,
-            "dsp_speaker": 0,
-            "dsp_water": 0,
-            "dsp_spatial": 40
+            "dsp_speaker": 50,
+            "dsp_water": 14,
+            "dsp_spatial": 40,
+            "snd_cull_duplicates": 0,
+            "voice_steal": 2
           },
           "dxsupport": "sound-high"
         },
@@ -933,11 +956,13 @@
             "snd_pitchquality": 1,
             "dsp_slow_cpu": 0,
             "snd_spatialize_roundrobin": 0,
-            "dsp_room": 0,
+            "dsp_room": 1,
             "dsp_facingaway": 31,
-            "dsp_speaker": 0,
-            "dsp_water": 0,
-            "dsp_spatial": 40
+            "dsp_speaker": 50,
+            "dsp_water": 16,
+            "dsp_spatial": 40,
+            "snd_cull_duplicates": 0,
+            "voice_steal": 2
           },
           "dxsupport": "sound-high"
         }
@@ -994,17 +1019,17 @@
           "name": "Standard smoothing",
           "description": "The standard smoothing time, reliable for all but the most unstable connections.",
           "values": {
-            "cl_interp_ratio": 2
+            "cl_interp_ratio": 2.1
           },
-          "interp_ratio": 2
+          "interp_ratio": 2.1
         },
         "balanced": {
           "name": "Balanced smoothing",
           "description": "A short smoothing time that is mostly reliable.",
           "values": {
-            "cl_interp_ratio": 1.178571
+            "cl_interp_ratio": 1.294117
           },
-          "interp_ratio": 1.17857142857
+          "interp_ratio": 1.2941176
         },
         "lan": {
           "name": "Local network smoothing",

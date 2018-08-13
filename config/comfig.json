@@ -8,7 +8,6 @@
     "tf_mm_debug_level": 0,
     "sv_parallel_sendsnapshot": 1,
     "r_particle_sim_spike_threshold_ms": 0,
-    "r_overlayfadeenable": 1,
     "fps_max": 240,
     "mat_vsync": 0,
     "engine_no_focus_sleep": 0,
@@ -33,6 +32,10 @@
     "snd_mix_async": 1,
     "snd_mixahead": 0.066,
     "dsp_enhance_stereo": 0,
+    "dsp_db_mixdrop": 0.6,
+    "dsp_db_min": 80,
+    "dsp_mix_min": 0.24,
+    "dsp_mix_max": 0.78,
     "snd_noextraupdate": 1,
     "snd_async_spew_blocking": 0
   }
