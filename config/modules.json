@@ -11,8 +11,7 @@
             "r_lod": -1,
             "r_rootlod": 2
           },
-          "description": "Lowest model quality. Objects will look basic and fade out quickly.",
-          "dxsupport": "fade-low"
+          "description": "Lowest model quality. Objects will look basic and fade out quickly."
         },
         "medium": {
           "values": {
@@ -21,8 +20,7 @@
             "r_lod": -1,
             "r_rootlod": 1
           },
-          "description": "Medium model quality.",
-          "dxsupport": "fade-low"
+          "description": "Medium model quality."
         },
         "high": {
           "values": {
@@ -31,8 +29,7 @@
             "r_lod": -1,
             "r_rootlod": 0
           },
-          "description": "High model quality.",
-          "dxsupport": "fade-high"
+          "description": "High model quality."
         },
         "ultra": {
           "values": {
@@ -41,8 +38,7 @@
             "r_lod": 0,
             "r_rootlod": 0
           },
-          "description": "Highest model quality. Models will always be at their highest quality with no pop in.",
-          "dxsupport": "fade-high"
+          "description": "Highest model quality. Models will always be at their highest quality with no pop in."
         }
       }
     },
