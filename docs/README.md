@@ -60,7 +60,7 @@ To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
 Right click Team Fortress 2 in your Steam library, click **Properties** and
 click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
-`-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse` into
+`-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse -nohltv` into
 the box and click ok.
 
 You will also want to read about optional launch options and choosing a DirectX version [here](https://github.com/mastercoms/mastercomfig/wiki/Launch-Options).
@@ -215,8 +215,8 @@ Here are a few awesome TF2 modifications:
   — Remove extra models
 * [Particle Limitation Pack](http://www.teamfortress.tv/22586/particle-limitation-pack)
   — Reduce certain particles
-* [Clean TF2](http://www.teamfortress.tv/21756/prism-hud-clean-tf2)
-  — Make textures simple colors
+* [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
+  — Makes TF2 a lot cleaner and simpler
 * [VTF Crosshair Pack](http://www.teamfortress.tv/35367/vtf-crosshair-pack)
   — New custom crosshairs
 * [yttrium's viewmodels](http://www.teamfortress.tv/34834/yttriums-competitive-viewmodels)
@@ -234,19 +234,22 @@ Here are a few awesome TF2 modifications:
 * [Rhapsody](http://rhapsodysl.github.io/perfconfig/) for updating Chris' config
 * [Felik](http://www.teamfortress.tv/44076/se-config-framework-feliks-config-3)
   for providing an alternative to Chris-based configs
+* [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
 * Michael Moss for the [Android Insomnia](http://whitespirals.com/fonts.html)
   font used in the logo
 * The community for their continued support, advice and benchmarks. (Special
   Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby,
-  Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
-  JarateKing, maximsmol, Fraklin and perhaps many others)
+  Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz, 
+  maximsmol, Fraklin, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
+  DapperTrappper, Tene and perhaps many others)
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics
-* and to Valve, for making and updating the best class-based FPS to date with so
+* and to Valve, for making and updating (for over a decade!) the best class-based FPS to date with so
   much customizability on top
 
 ## Legal
 
 Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress
-logo are trademarks and/or registered trademarks of Valve Corporation.
-mastercomfig is not associated with nor endorsed by Valve Corporation.
+logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.
+
+mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.
