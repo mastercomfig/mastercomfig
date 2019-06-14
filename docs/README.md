@@ -38,7 +38,7 @@ have to [clean up](#clean-up) your TF2 install.
 ### 2. Download and install your preset and addons
 
 [Download](https://mastercoms.github.io/mastercomfig/download) the VPK files of your choice from the
-and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
+site and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
 in a folder inside your `custom` folder, put them in the `custom` folder itself.
 You don't have to rename anything either, just drag the files as is into `custom`.
 Do not download the source code, and do not download from the `Clone or Download`
