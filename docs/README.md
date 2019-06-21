@@ -209,6 +209,8 @@ Here are a few awesome TF2 modifications:
 
 * [No Hats Mod](http://www.teamfortress.tv/35222/no-hats-mod) — Remove cosmetics
   from players
+* [TF2 Visual Fix](https://github.com/agrastiOs/TF2VisualFix) — Fix issues with cosmetics
+and visual effects, including Dragon's Fury lag
 * [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
 * [Model Remover Mod](http://www.teamfortress.tv/46863/hamburgers-model-removal-mod-2018)
