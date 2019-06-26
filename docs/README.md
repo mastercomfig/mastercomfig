@@ -213,8 +213,6 @@ Here are a few awesome TF2 modifications:
 and visual effects, including Dragon's Fury lag
 * [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
-* [Model Remover Mod](http://www.teamfortress.tv/46863/hamburgers-model-removal-mod-2018)
-  — Remove extra models
 * [Particle Limitation Pack](http://www.teamfortress.tv/22586/particle-limitation-pack)
   — Reduce certain particles
 * [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
