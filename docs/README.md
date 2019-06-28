@@ -38,7 +38,7 @@ have to [clean up](#clean-up) your TF2 install.
 ### 2. Download and install your preset and addons
 
 [Download](https://mastercoms.github.io/mastercomfig/download) the VPK files of your choice from the
-and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
+site and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
 in a folder inside your `custom` folder, put them in the `custom` folder itself.
 You don't have to rename anything either, just drag the files as is into `custom`.
 Do not download the source code, and do not download from the `Clone or Download`
@@ -209,10 +209,10 @@ Here are a few awesome TF2 modifications:
 
 * [No Hats Mod](http://www.teamfortress.tv/35222/no-hats-mod) — Remove cosmetics
   from players
+* [TF2 Visual Fix](https://github.com/agrastiOs/TF2VisualFix) — Fix issues with cosmetics
+and visual effects, including Dragon's Fury lag
 * [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
-* [Model Remover Mod](http://www.teamfortress.tv/46863/hamburgers-model-removal-mod-2018)
-  — Remove extra models
 * [Particle Limitation Pack](http://www.teamfortress.tv/22586/particle-limitation-pack)
   — Reduce certain particles
 * [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
