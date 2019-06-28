@@ -13,20 +13,21 @@ declare -a presets=("very-low" "low" "medium-low" "medium" "medium-high" "high" 
 for P in "${presets[@]}"; do
     mkdir -p mastercomfig-"${P}"-preset/cfg/presets
     cp -f ../../config/cfg/presets/"${P}".cfg mastercomfig-"${P}"-preset/cfg/presets/"${P}".cfg
-    preset_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
+    preset_file=mastercomfig-"${P}"-preset/cfg/presets/${P}.cfg
     sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//' $preset_file
-    touch $preset_file
-    echo "exec comfig" > $preset_file
-    echo "exec presets/${P}" >> $preset_file
-    echo "exec addons/badcpu" >> $preset_file
-    echo "exec addons/badgpu" >> $preset_file
-    echo "exec addons/transparent-viewmodels" >> $preset_file
-    echo "exec addons/no-tutorial" >> $preset_file
-    echo "exec addons/mouse-tweaks" >> $preset_file
-    echo "exec modules" >> $preset_file
-    echo "exec comfig/modules-run" >> $preset_file
-    echo "exec user/autoexec" >> $preset_file
-    echo "exec finalize" >> $preset_file
+    autoexec_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
+    touch $autoexec_file
+    echo "exec comfig" > $autoexec_file
+    echo "exec presets/${P}" >> $autoexec_file
+    echo "exec addons/badcpu" >> $autoexec_file
+    echo "exec addons/badgpu" >> $autoexec_file
+    echo "exec addons/transparent-viewmodels" >> $autoexec_file
+    echo "exec addons/no-tutorial" >> $autoexec_file
+    echo "exec addons/mouse-tweaks" >> $autoexec_file
+    echo "exec modules" >> $autoexec_file
+    echo "exec comfig/modules-run" >> $autoexec_file
+    echo "exec user/autoexec" >> $autoexec_file
+    echo "exec finalize" >> $autoexec_file
 done
 
 # Fill folders with common files
