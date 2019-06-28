@@ -43,7 +43,7 @@ the supplied version and highlights text.
 This is a file that must be supplied by the user with the following entries:
 
 ```bash
-DISCORD_WEBHOOK="Discord webhook for config announcements"
-GITHUB_USERNAME="GitHub username used for authentication for release deployment"
-GITHUB_TOKEN="GitHub authentication token used for release deployment"
+export DISCORD_WEBHOOK="Discord webhook for config announcements"
+export GH_USERNAME="GitHub username used for authentication for release deployment"
+export GH_TOKEN="GitHub authentication token used for release deployment"
 ```

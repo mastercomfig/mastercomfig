@@ -3,7 +3,7 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
-source mastercomfig-vars
+. ./mastercomfig-vars
 
 # Announce on Discord #releases
 

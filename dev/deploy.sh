@@ -3,7 +3,7 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
-source mastercomfig-vars
+. ./mastercomfig-vars
 
 # Get old release version
 old_release=$(curl https://api.github.com/repositories/69422496/releases/latest | jq '.tag_name' | sed -e 's/^"//' -e 's/"$//')
@@ -12,7 +12,9 @@ old_release=$(curl https://api.github.com/repositories/69422496/releases/latest 
 
 assets_url=$(curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/json' \
   --data "{\"tag_name\":\"$1\",\"target_commitish\":\"release\",\"name\":\"$1\",\"body\":\"**Highlights:** $2\n\n[**Installation Instructions**](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#installation)\n\n[**Updating Instructions**](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#updating)\n\n***\n\n[View the code changes](https://github.com/mastercoms/mastercomfig/compare/${old_release}...$1)\"}" \
-  https://api.github.com/repositories/69422496/releases | jq '.assets_url' | sed -e 's/^"//' -e 's/"$//')
+  https://api.github.com/repositories/69422496/releases)
+echo $assets_url
+assets_url=$(echo $assets_url | jq '.id' | sed -e 's/^"//' -e 's/"$//')
 assets_url=${assets_url/api/uploads}
 
 # Upload VPKs
