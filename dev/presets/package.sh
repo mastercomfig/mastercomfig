@@ -25,7 +25,7 @@ for P in "${presets[@]}"; do
     echo "exec addons/mouse-tweaks" >> $preset_file
     echo "exec modules" >> $preset_file
     echo "exec comfig/modules-run" >> $preset_file
-    echo "exec custom" >> $preset_file
+    echo "exec user/autoexec" >> $preset_file
     echo "exec finalize" >> $preset_file
 done
 
