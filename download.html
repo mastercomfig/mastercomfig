@@ -30,7 +30,7 @@
                 </div>
                 <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/tree/release/docs#installation" class="text-light"><b>Installation Instructions</b></a></p>
                 <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/tree/release/docs#updating" class="text-light"><b>Updating Instructions</b></a></p>
-                <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/releases/v6.11.1" class="text-light" id="changelog-link"><b>Changelog</b></a></p>
+                <p class="text-muted"><a href="https://github.com/mastercoms/mastercomfig/releases/v6.11.2" class="text-light" id="changelog-link"><b>Changelog</b></a></p>
                 <h2>Choose your preset</h2>
                 <div class="list-group" id="presets">
                   <a class="list-group-item list-group-item-action list-group-item-dark" id="ultra" href="#">
@@ -222,7 +222,7 @@
           });
         };
 
-        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.11.1", function (data) {
+        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.11.2", function (data) {
           version = data.tag_name;
           var versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
           document.getElementById('title').innerText = "Download mastercomfig " + versionName;
