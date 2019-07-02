@@ -13,7 +13,7 @@ declare -a combos=("" "presets/medium-high" "presets/medium-low" "presets/medium
 # Create autoexecs from combos
 for ((i=0; i<${#names[*]}; i++));
 do
-    cat "../../config/mastercomfig/cfg/comfig.cfg" >> "mastercomfig-${names[i]}.cfg"
+    cat "../../config/mastercomfig/cfg/comfig/comfig.cfg" >> "mastercomfig-${names[i]}.cfg"
     for component in ${combos[i]}
     do
         cat "../../config/cfg/$component.cfg" >> "mastercomfig-${names[i]}.cfg"

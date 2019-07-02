@@ -17,24 +17,24 @@ for P in "${presets[@]}"; do
     sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//' $preset_file
     autoexec_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
     touch $autoexec_file
-    echo "exec comfig" > $autoexec_file
+    echo "exec comfig/comfig" > $autoexec_file
     echo "exec presets/${P}" >> $autoexec_file
     echo "exec addons/badcpu" >> $autoexec_file
     echo "exec addons/badgpu" >> $autoexec_file
     echo "exec addons/transparent-viewmodels" >> $autoexec_file
     echo "exec addons/no-tutorial" >> $autoexec_file
     echo "exec addons/mouse-tweaks" >> $autoexec_file
-    echo "exec modules" >> $autoexec_file
-    echo "exec comfig/modules-run" >> $autoexec_file
+    echo "exec user/modules" >> $autoexec_file
+    echo "exec comfig/modules_run" >> $autoexec_file
     echo "exec user/autoexec" >> $autoexec_file
-    echo "exec finalize" >> $autoexec_file
+    echo "exec comfig/finalize" >> $autoexec_file
 done
 
 # Fill folders with common files
 for D in *; do
     if [ -d "${D}" ]; then
         cp -rf ../../config/mastercomfig/* "${D}"/
-        sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//' "${D}"/cfg/comfig.cfg
+        sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//' "${D}"/cfg/comfig/comfig.cfg
     fi
 done
 

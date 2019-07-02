@@ -7,8 +7,8 @@ and the autoexecs for cfg.tf).
 
 ### Presets
 This collects the common files from the config folder, then generates an
-`autoexec.cfg` that executes `comfig.cfg`, the appropriate preset, all addons
-(which will skip execution if not preset) and `custom.cfg`. Overrides are then
+`autoexec.cfg` that executes `comfig/comfig.cfg`, the appropriate preset, all addons
+(which will skip execution if not preset) and `user/autoexec.cfg`. Overrides are then
 copied on top of the common files.
 
 Each preset's folder is then packaged into a VPK.

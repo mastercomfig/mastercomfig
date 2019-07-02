@@ -133,15 +133,15 @@ Add your alternatives uncommented in the applicable presets/addons:
 
 * `ultra`: Absolute maximum quality without caring about performance
 * `high`: Enables graphical features without making them very high quality
-* `medium_high`: Disables unoptimized features and optimize the game without
+* `medium-high`: Disables unoptimized features and optimize the game without
   making it look bad
 * `medium`: The maximum performance you can get while enabling a few effects
   that may give you a slight edge
-* `medium_low`: The maximum performance you can get without making the game too
+* `medium-low`: The maximum performance you can get without making the game too
   hard to play because of awful visual quality and glitches
 * `low`: Maximum performance without caring much about visibility or possible
   bugs
-* `very_low`: Negatively affects playability by a lot and disables very
+* `very-low`: Negatively affects playability by a lot and disables very
   essential features in desperation for performance
 
 **Addons:**

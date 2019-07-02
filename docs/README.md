@@ -93,7 +93,7 @@ For example, you could have different class configs for Scout in competitive and
 To easily customize settings, you can use [modules](https://github.com/mastercoms/mastercomfig/wiki/Modules).
 
 To do finer customization through individual console variables and commands,
-you can look through the [config file on GitHub](https://github.com/mastercoms/mastercomfig/blob/release/config/mastercomfig/cfg/comfig.cfg) and add your preferences to your `user/autoexec.cfg`.
+you can look through the [config file on GitHub](https://github.com/mastercoms/mastercomfig/blob/release/config/mastercomfig/cfg/comfig/comfig.cfg) and add your preferences to your `user/autoexec.cfg`.
 
 To get an idea of how to use custom configs, [see what](https://github.com/mastercoms/mastercomfig/wiki/List-of-custom-configs) other people in the community have done.
 
@@ -236,7 +236,7 @@ and visual effects, including Dragon's Fury lag
   font used in the logo
 * The community for their continued support, advice and benchmarks. (Special
   Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby,
-  Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz, 
+  Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
   maximsmol, Fraklin, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
   DapperTrappper, Tene and perhaps many others)
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page)
