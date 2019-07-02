@@ -25,7 +25,7 @@ for P in "${presets[@]}"; do
     echo "exec addons/no-tutorial" >> $autoexec_file
     echo "exec addons/mouse-tweaks" >> $autoexec_file
     echo "exec user/modules" >> $autoexec_file
-    echo "exec comfig/modules_run" >> $autoexec_file
+    echo "run_modules" >> $autoexec_file
     echo "exec user/autoexec" >> $autoexec_file
     echo "exec comfig/finalize" >> $autoexec_file
 done
