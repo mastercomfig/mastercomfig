@@ -34,9 +34,11 @@ done
 for D in *; do
     if [ -d "${D}" ]; then
         cp -rf ../../config/mastercomfig/* "${D}"/
-        sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//' "${D}"/cfg/comfig/comfig.cfg
     fi
 done
+
+find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
+find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
 
 declare -a overriden_presets=("low" "very-low" "ultra")
 declare -a override_combos=("low" "low" "ultra")

@@ -13,8 +13,10 @@ declare -a addons=("badcpu" "badgpu" "transparent-viewmodels" "no-tutorial" "mou
 for A in "${addons[@]}"; do
     mkdir -p mastercomfig-"${A}"-addon/cfg/addons
     cp -f ../../config/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
-    sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//' mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
 done
+
+find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
+find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
 
 # Copy over custom addons
 cp -rf ../../config/addons/* .
