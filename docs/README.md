@@ -232,8 +232,6 @@ and visual effects, including Dragon's Fury lag
 * [Felik](http://www.teamfortress.tv/44076/se-config-framework-feliks-config-3)
   for providing an alternative to Chris-based configs
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
-* Michael Moss for the [Android Insomnia](http://whitespirals.com/fonts.html)
-  font used in the logo
 * The community for their continued support, advice and benchmarks. (Special
   Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby,
   Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
