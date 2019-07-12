@@ -232,6 +232,7 @@ and visual effects, including Dragon's Fury lag
 * [Felik](http://www.teamfortress.tv/44076/se-config-framework-feliks-config-3)
   for providing an alternative to Chris-based configs
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
+* [Aar](https://www.youtube.com/user/Aarmastah) for making amazing videos about TF2 graphics customization and supporting this config
 * The community for their continued support, advice and benchmarks. (Special
   Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby,
   Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
