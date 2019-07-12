@@ -222,7 +222,7 @@
           });
         };
 
-        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.11.5", function (data) {
+        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.11.6", function (data) {
           version = data.tag_name;
           var versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
           document.getElementById('title').innerText = "Download mastercomfig " + versionName;
