@@ -117,14 +117,14 @@
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="badgpu">
                     <label class="custom-control-label" for="badgpu">
-                      <b>Bad GPU</b> &mdash; Optimizations that generally do not affect quality for weak integrated graphics chips (Intel graphics) or weak/old GPUs (lower end made before 2007). Recommended to be used with the Medium Low, Low or Very Low presets. <strong>WARNING: can potentially REDUCE performance on other graphics cards!!!</strong>
+                      <b>Bad GPU</b> &mdash; Optimizations that generally do not affect quality for weak integrated graphics chips (Intel graphics) or weak/old GPUs (lower end made before 2007). If you have to use this, it's recommended to use Medium Low, Low or Very Low presets. <strong>WARNING: can potentially REDUCE performance on other graphics cards!!!</strong>
                     </label>
                   </div>
                   <br>
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="badcpu">
                     <label class="custom-control-label" for="badcpu">
-                      <b>Bad CPU</b> &mdash; Optimizations that generally do not affect quality for bad CPUs with two or less threads. Recommended to be used with the Low or Very Low presets. <strong>WARNING: can potentially REDUCE performance on other CPUs!!!</strong>
+                      <b>Bad CPU</b> &mdash; Optimizations that generally do not affect quality for bad CPUs If have to you use this, it's recommended to use the Low or Very Low presets. <strong>WARNING: can potentially REDUCE performance on other CPUs!!!</strong>
                     </label>
                   </div>
                 </form>
@@ -222,7 +222,7 @@
           });
         };
 
-        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.11.6", function (data) {
+        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.11.7", function (data) {
           version = data.tag_name;
           var versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
           document.getElementById('title').innerText = "Download mastercomfig " + versionName;
