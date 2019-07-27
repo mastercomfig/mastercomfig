@@ -127,6 +127,7 @@
                       <b>Bad CPU</b> &mdash; Optimizations that generally do not affect quality for bad CPUs If have to you use this, it's recommended to use the Low or Very Low presets. <strong>WARNING: can potentially REDUCE performance on other CPUs!!!</strong>
                     </label>
                   </div>
+                  <br>
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="slowio">
                     <label class="custom-control-label" for="slowio">
@@ -237,7 +238,7 @@
           });
         };
 
-        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.12.0", function (data) {
+        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/6.12.0", function (data) {
           version = data.tag_name;
           var versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
           document.getElementById('title').innerText = "Download mastercomfig " + versionName;
