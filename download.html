@@ -127,6 +127,19 @@
                       <b>Bad CPU</b> &mdash; Optimizations that generally do not affect quality for bad CPUs If have to you use this, it's recommended to use the Low or Very Low presets. <strong>WARNING: can potentially REDUCE performance on other CPUs!!!</strong>
                     </label>
                   </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="slowio">
+                    <label class="custom-control-label" for="slowio">
+                      <b>Slow I/O</b> &mdash; Optimizations that generally do not affect quality for slow disk drives. Use this if you experience extreme stuttering when you join a map. <strong>WARNING: will REDUCE performance on fast I/O!!!</strong>
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="lowmem">
+                    <label class="custom-control-label" for="lowmem">
+                      <b>Low Memory</b> &mdash; Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower). <strong>WARNING: will REDUCE performance on high memory!!!</strong>
+                    </label>
+                  </div>
                 </form>
                 <hr>
                 <h2>Download your VPKs</h2>
@@ -141,6 +154,8 @@
                 <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/mastercomfig-transparent-viewmodels-addon.vpk" class="text-light" id="transparent-viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
                 <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
                 <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/mastercomfig-badcpu-addon.vpk" class="text-light" id="badcpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad CPU addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/mastercomfig-badcpu-addon.vpk" class="text-light" id="slowio-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Slow I/O addon VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/mastercomfig-badcpu-addon.vpk" class="text-light" id="lowmem-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Low Memory addon VPK</a></p>
                 <br><br>
             </div>
         </div>
@@ -183,7 +198,7 @@
 
         var version = null;
 
-        var addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "mouse-tweaks", "transparent-viewmodels", "badgpu", "badcpu"];
+        var addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "mouse-tweaks", "transparent-viewmodels", "badgpu", "badcpu", "slowio", "lowmem"];
 
         var storage = localStorage;
 
@@ -222,7 +237,7 @@
           });
         };
 
-        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.11.7", function (data) {
+        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/v6.12.0", function (data) {
           version = data.tag_name;
           var versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
           document.getElementById('title').innerText = "Download mastercomfig " + versionName;
