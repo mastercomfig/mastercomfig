@@ -19,11 +19,7 @@ for P in "${presets[@]}"; do
     touch $autoexec_file
     echo "exec comfig/comfig" > $autoexec_file
     echo "exec presets/${P}" >> $autoexec_file
-    echo "exec addons/badcpu" >> $autoexec_file
-    echo "exec addons/badgpu" >> $autoexec_file
-    echo "exec addons/transparent-viewmodels" >> $autoexec_file
-    echo "exec addons/no-tutorial" >> $autoexec_file
-    echo "exec addons/mouse-tweaks" >> $autoexec_file
+    echo "exec comfig/addons.cfg" >> $autoexec_file
     echo "exec user/modules" >> $autoexec_file
     echo "run_modules" >> $autoexec_file
     echo "exec user/autoexec" >> $autoexec_file
