@@ -3,8 +3,7 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
-cp -f ../../config/mastercomfig/cfg/comfig/comfig.cfg .
-sed -i '/^echo/d' comfig.cfg
-sed -i '/^alias/d' comfig.cfg
-sed -i -e 's/^\([^\/\/].*\)/\/\/\1/g' comfig.cfg
-sed -i '/^[[:space:]]*$/d' comfig.cfg
+cp -f ../../config/mastercomfig/cfg/comfig/comfig.cfg ./autoexec.cfg
+sed -i '/^echo/d' autoexec.cfg
+sed -i '/^alias/d' autoexec.cfg
+sed -i -e 's/^\([^\/\/].*\)/\/\/\1/g' autoexec.cfg
