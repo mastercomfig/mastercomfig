@@ -4,8 +4,8 @@
 # dev script generated packages
 dev/addons/mastercomfig*
 dev/presets/mastercomfig*
-dev/autoexecs/*.cfg
 dev/mastercomfig*
+/dev/**/*.cfg
 
 # OS generated files
 .DS_Store
@@ -20,4 +20,3 @@ Thumbs.db
 app/
 build/
 venv/
-
