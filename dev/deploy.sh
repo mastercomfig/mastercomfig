@@ -29,8 +29,7 @@ done
 
 f="comfig/autoexec.cfg"
 file="autoexec.cfg"
-name="autoexec.cfg"
-label="user/autoexec.cfg template"
+label="user/autoexec.cfg%20template"
 curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
   -T $f \
   "$assets_url?name=$file&label=$label"
