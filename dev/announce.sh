@@ -13,7 +13,7 @@ curl -X POST -H 'Content-type: application/json' \
 
 # TODO: Announce on teamfortress.tv and Steam Group
 
-post_body="[url=https://mastercomfig.com/download]$1[/url] released with $2.\n\n[url=https://github.com/mastercoms/mastercomfig/releases/tag/$1]Changelog[/url]"
+post_body="[url=https://mastercomfig.com/download]$1[/url] released with $2.\n\n[url=https://github.com/mastercoms/mastercomfig/releases/tag/$1]Changelog[/url]\n"
 
 printf "\n"
 
