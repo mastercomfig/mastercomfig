@@ -6,4 +6,4 @@ cd "$BINDIR"
 cp -f ../../config/mastercomfig/cfg/comfig/comfig.cfg ./autoexec.cfg
 sed -i '/^echo/d' autoexec.cfg
 sed -i '/^alias/d' autoexec.cfg
-sed -i -e 's/^\([^\/\/].*\)/\/\/\1/g' autoexec.cfg
+sed -i -e 's/^\([^[:space:]\+\/\/].*\)/\/\/\1/g' autoexec.cfg

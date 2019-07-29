@@ -27,10 +27,10 @@ for f in $(find -name '*.vpk'); do
     "$assets_url?name=$file&label=$label%20VPK"
 done
 
-f="comfig/comfig.cfg"
-file="comfig.cfg"
-name="comfig.cfg"
-label="autoexec user template"
+f="comfig/autoexec.cfg"
+file="autoexec.cfg"
+name="autoexec.cfg"
+label="user/autoexec.cfg template"
 curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
   -T $f \
   "$assets_url?name=$file&label=$label"
