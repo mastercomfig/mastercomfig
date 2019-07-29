@@ -146,6 +146,7 @@
                 <h2>Download your VPKs</h2>
                 <p>Just drop them in your <code>tf/custom</code> folder and they'll automatically run.</p>
                 <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/mastercomfig-medium-high-preset.vpk" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Medium High preset VPK</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/autoexec.cfg" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/autoexec.cfg template</a></p>
                 <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/mastercomfig-no-extra-models-addon.vpk" class="text-light" id="no-extra-models-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Extra Models addon VPK</a></p>
                 <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/mastercomfig-no-footsteps-addon.vpk" class="text-light" id="no-footsteps-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Footsteps addon VPK</a></p>
                 <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/download/v6.11.1/mastercomfig-no-pyroland-addon.vpk" class="text-light" id="no-pyroland-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Pyroland addon VPK</a></p>
@@ -238,9 +239,10 @@
           });
         };
 
-        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/6.12.0", function (data) {
+        jQuery.get("https://api.github.com/repositories/69422496/releases/tags/6.12.1", function (data) {
           version = data.tag_name;
           var versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
+          document.getElementById('autoexec-dl').href = "https://github.com/mastercoms/mastercomfig/releases/download/" + versionName + "/autoexec.cfg";
           document.getElementById('title').innerText = "Download mastercomfig " + versionName;
           document.getElementById('changelog-link').href = "https://github.com/mastercoms/mastercomfig/releases/" + version;
           if (storage.getItem('preset')) {
