@@ -13,7 +13,7 @@ Read below about optional launch options and choosing your own DXLevel.
 
 DXLevel Launch options are very system dependent so you will only find the best one by testing it yourself.
 
-However, `#!c -dxlevel 95` is your best bet and works for most people.
+However, `-dxlevel 95` is your best bet and works for most people.
 
 ### Windows (recommended dxlevel)
 * **-dxlevel 95** : DirectX 9Ex
@@ -44,16 +44,16 @@ However, `#!c -dxlevel 95` is your best bet and works for most people.
 * **-nostartupsound** : disable game music on main menu
 * **-limitvsconst** : limits the hardware vertex shader constants to 256, FPS boost on weak GPUs
 * **-threads X** : _ONLY USE THIS IF YOU HAVE 4 OR MORE PHYSICAL CORES_. How many extra worker threads are allowed. Set X to CPU physical core count. If your value for `-threads` is less than 4, there is no point to using `-threads`. If used properly, results in more FPS and less FPS variance
-* **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. for example, if you have a 144Hz monitor, x would be 144, for `#!c -freq 144`.
+* **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. for example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
 
 ## OpenGL Launch Options (Linux and macOS only)
-* **displayindex x** : use the monitor at the specified display index. starts at `#!c 1`, which is the primary display.
+* **displayindex x** : use the monitor at the specified display index. starts at `1`, which is the primary display.
 
 ### Linux Launch Options
 * **-gl_enablesamplerobjects** : use OpenGL Sampler Objects for better texture preloading
 * **-gl_nv_bindless_texturing** : use `NV_bindless_texture` for efficient texture handling if supported
 * **-gl_amd_pinned_memory** : use `AMD_pinned_memory` for efficient device memory handling if supported
-* **-NoQueuedPacketThread**: disable the net queued packet thread, use with `!#c net_queued_packet_thread 0`
+* **-NoQueuedPacketThread**: disable the net queued packet thread, use with `net_queued_packet_thread 0`
 
 ## Niche Launch Options
 * **-nouserclip** : uses software clipping instead of hardware user clip planes, FPS increase or decrease depends on your CPU+GPU

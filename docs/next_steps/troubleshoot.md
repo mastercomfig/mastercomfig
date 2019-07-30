@@ -9,7 +9,7 @@ viewmodel_fov 54
 r_drawviemodel 1
 ```
 
-Instead of `#!c 54` for `viewmodel_fov`, you can use any value you prefer.
+Instead of `54` for `viewmodel_fov`, you can use any value you prefer.
 
 ## TF2 crashes when entering a Competitive Matchmaking match
 
@@ -41,12 +41,12 @@ map_background preload_room; wait 10; disconnect
 
 ## Crashing when trying to preload mods
 
-Preloading conflicts with a memory usage optimization in the mastercomfig low memory addon. Set `#!c cl_always_flush_models 0`.
+Preloading conflicts with a memory usage optimization in the mastercomfig low memory addon. Set `cl_always_flush_models 0`.
 
 ## TF2 crashing on a custom map
 
-If TF2 is crashing to desktop after a custom map loading / after picking a class on a custom map enter `#!c mat_phong 1` in console. The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. All Valve maps except for `rd_asteroid` don't use lightmapped props. More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
+If TF2 is crashing to desktop after a custom map loading / after picking a class on a custom map enter `mat_phong 1` in console. The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. All Valve maps except for `rd_asteroid` don't use lightmapped props. More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
 
 ## Item panels are taking too long to load
 
-Set `#!c tf_time_loading_item_panels 0.0005`.
+Set `tf_time_loading_item_panels 0.0005`.
