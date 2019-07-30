@@ -13,6 +13,8 @@
 
 # mastercomfig
 
+Welcome to [mastercomfig](https://mastercomfig.com/), a modern Team Fortress 2 performance and customization config.
+
 This config is by default for modern PCs and aims to disable heavily unoptimized
 features and adjust other settings where it does not affect behavior or visuals
 noticeably. However, the config is documented extensively and also has presets
