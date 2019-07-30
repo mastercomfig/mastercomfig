@@ -1,2 +1,34 @@
-site_name: mastercomfig
-theme: material
+site_name: 'mastercomfig'
+site_description: 'A modern Team Fortress 2 performance and customization config.'
+copyright: 'Copyright (c) 2016-2019 mastercoms'
+markdown_extensions:
+    - smarty
+    - toc:
+        permalink: true
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.magiclink
+    - pymdownx.smartsymbols
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+theme:
+    name: 'material'
+    palette:
+        primary: 'teal'
+        accent: 'teal'
+    logo: 'docs/img/logo.png'
+    favicon: 'docs/img/favicon.ico'
+    feature:
+        tabs: true
+repo_url: 'https://github.com/mastercoms/mastercomfig/'
+edit_uri: 'https://github.com/mastercoms/mastercomfig/edit/release/docs/'
+extra:
+    repo_icon: 'github'
+    social:
+        - type: 'github'
+          link: 'https://github.com/mastercoms/mastercomfig/'
+        - type: 'discord'
+          link: 'https://discord.gg/CuPb2zV'
+        - type: 'share-square'
+          link: 'http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config'

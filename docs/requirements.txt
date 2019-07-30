@@ -1,1 +1,2 @@
 mkdocs-material>=4.4.0
+pymdown-extensions>=6.0
