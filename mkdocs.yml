@@ -2,6 +2,7 @@ site_name: 'mastercomfig'
 site_description: 'A modern Team Fortress 2 performance and customization config.'
 copyright: 'Copyright (c) 2016-2019 mastercoms<br><br>Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress
 logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.<br><br>mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.'
+strict: true
 nav:
     - About:
         - Home: 'index.md'
@@ -27,7 +28,7 @@ nav:
     - TF2 Documentation:
         - Misconceptions: 'tf2/misconceptions.md'
         - Console Variables: 'tf2/cvarlist.md'
-        - Hidden Console Variables: 'tf/hiddencvars.md'
+        - Hidden Console Variables: 'tf2/hiddencvars.md'
         - Launch Options: 'tf2/launch_options.md'
         - Silly Launch Options: 'tf2/silly_launch_options.md'
         - Generating TF2 Data: 'tf2/README.md'
@@ -38,6 +39,7 @@ markdown_extensions:
     - codehilite
     - meta
     - pymdownx.emoji
+    - pymdownx.inlinehilite
     - pymdownx.magiclink
     - pymdownx.smartsymbols
     - pymdownx.tasklist:

@@ -7,7 +7,7 @@ Modules are [used in presets](https://github.com/mastercoms/mastercomfig/tree/re
 ### Advanced
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures ""` in `user/modules.cfg`.
+If you want to disable running a module entirely, you can put (for example) `#!c alias textures ""` in `user/modules.cfg`.
 
 Since modules alises act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
 
