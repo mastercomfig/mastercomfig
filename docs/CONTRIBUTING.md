@@ -10,7 +10,7 @@ mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
 [teamfortress.tv](http://www.teamfortress.tv/user/mastercoms),
 [Reddit](https://www.reddit.com/user/mastercoms) or by email at
-`mastercoms@tuta.io`. I'd be happy to chat about any problems or
+mastercoms@tuta.io. I'd be happy to chat about any problems or
 suggestions you have for the config.
 
 # Contributing
