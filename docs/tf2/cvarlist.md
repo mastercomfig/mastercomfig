@@ -1,4 +1,4 @@
-# Console variables
+# Console Variables
 
 ```
 cvar list

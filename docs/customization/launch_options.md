@@ -1,5 +1,13 @@
 # Launch Options
 
+Right click Team Fortress 2 in your Steam library, click **Properties** and
+click the **Set Launch Options...** button. In the window that appears, remove
+anything that's in there and paste
+`-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse -nohltv` into
+the box and click ok.
+
+Read below about optional launch options and choosing your own DXLevel.
+
 ## DXLevel Launch Options
 **These launch options should be added to first launch, and then removed.**
 
@@ -20,7 +28,7 @@ However, `-dxlevel 95` is your best bet and works for most people.
 ### OpenGL (Linux and macOS) (alternative dxlevel)
 * **-dxlevel 90** : OpenGL Shader Model 2
 
-## Launch Options
+## List of Launch Options
 **Recommended**: `-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse -nohltv`
 
 * **-novid** : disables Valve startup logo, saves time

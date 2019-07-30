@@ -1,6 +1,36 @@
 site_name: 'mastercomfig'
 site_description: 'A modern Team Fortress 2 performance and customization config.'
-copyright: 'Copyright (c) 2016-2019 mastercoms'
+copyright: 'Copyright (c) 2016-2019 mastercoms<br><br>Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress
+logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.<br><br>mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.'
+nav:
+    - About:
+        - Home: 'index.md'
+        - Features: 'features.md'
+        - Screenshots: 'screenshots.md'
+        - Credits: 'credits.md'
+    - Setup:
+        - Clean Up: 'setup/clean_up.md'
+        - Install: 'setup/install.md'
+    - Customization:
+        - Launch Options: 'customization/launch_options.md'
+        - Custom Configs:  'customization/custom_configs.md'
+        - Modules: 'customization/modules.md'
+        - List of Custom Configs: 'customization/custom_config_list.md'
+        - See Also: 'customization/see_also.md'
+    - OS Optimizations:
+        - OS Optimizations: 'config/OS_Optimizations/os_optimizations.md'
+        - Windows: 'config/OS_Optimizations/windows.md'
+        - Linux: 'config/OS_Optimizations/linux.md'
+    - Next Steps:
+        - Troubleshoot: 'config/troubleshoot.md'
+        - Update: 'config/update.md'
+    - TF2 Documentation:
+        - Misconceptions: 'tf2/misconceptions.md'
+        - Console Variables: 'tf2/cvarlist.md'
+        - Hidden Console Variables: 'tf/hiddencvars.md'
+        - Launch Options: 'tf2/launch_options.md'
+        - Silly Launch Options: 'tf2/silly_launch_options.md'
+        - Generating TF2 Data: 'tf2/README.md'
 markdown_extensions:
     - smarty
     - toc:
