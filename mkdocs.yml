@@ -18,12 +18,12 @@ nav:
         - List of Custom Configs: 'customization/custom_config_list.md'
         - See Also: 'customization/see_also.md'
     - OS Optimizations:
-        - OS Optimizations: 'config/OS_Optimizations/os_optimizations.md'
-        - Windows: 'config/OS_Optimizations/windows.md'
-        - Linux: 'config/OS_Optimizations/linux.md'
+        - OS Optimizations: 'OS_Optimizations/os_optimizations.md'
+        - Windows: 'OS_Optimizations/windows.md'
+        - Linux: 'OS_Optimizations/linux.md'
     - Next Steps:
-        - Troubleshoot: 'config/troubleshoot.md'
-        - Update: 'config/update.md'
+        - Troubleshoot: 'next_steps/troubleshoot.md'
+        - Update: 'next_steps/update.md'
     - TF2 Documentation:
         - Misconceptions: 'tf2/misconceptions.md'
         - Console Variables: 'tf2/cvarlist.md'
