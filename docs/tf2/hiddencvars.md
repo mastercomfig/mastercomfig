@@ -1,3 +1,6 @@
+# Hidden console variables
+
+```
 sm_cvarlist /unlisted
 --------------
 __screenshot_internal                    : cmd      : , "norecord", "matsys" : Internal command to take a screenshot without renumbering or notifying Steam.
@@ -319,3 +322,4 @@ weapon_medigun_damage_modifier           : 1.5      : , "sv", "cheat", "rep", "l
 weapon_medigun_resist_num_chunks         : 2        : , "sv", "cheat", "rep", "launcher" : How many uber bar chunks the vaccinator has.
 --------------
 317 total convars/concommands
+```

@@ -1,3 +1,6 @@
+# Launch options
+
+```
 -abs
 -abs(
 -all
@@ -362,3 +365,4 @@
 -xis
 -Xt!
 -zoom
+```

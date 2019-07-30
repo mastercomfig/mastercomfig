@@ -1,3 +1,6 @@
+# Console variables
+
+```
 cvar list
 --------------
 _autosave                                : cmd      :                  : Autosave
@@ -3581,3 +3584,4 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
 3579 total convars/concommands
+```
