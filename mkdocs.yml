@@ -19,9 +19,9 @@ nav:
         - List of Custom Configs: 'customization/custom_config_list.md'
         - See Also: 'customization/see_also.md'
     - OS Optimizations:
-        - OS Optimizations: 'OS_Optimizations/index.md'
-        - Windows: 'OS_Optimizations/windows.md'
-        - Linux: 'OS_Optimizations/linux.md'
+        - OS Optimizations: 'os/index.md'
+        - Windows: 'os/windows.md'
+        - Linux: 'os/linux.md'
     - Next Steps:
         - Troubleshoot: 'next_steps/troubleshoot.md'
         - Update: 'next_steps/update.md'
