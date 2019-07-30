@@ -1,12 +1,12 @@
 # Install
 
-[Download](https://mastercomfig.com/mastercomfig/download) the VPK files of your choice from the
+[Download](https://mastercomfig.com/download) the VPK files of your choice from the
 site and then drag them **directly** to your `tf/custom` folder. Do not put the VPKs
 in a folder inside your `custom` folder, put them in the `custom` folder itself.
 You don't have to rename anything either, just drag the files as is into `custom`.
 Do not download the source code, and do not download from the `Clone or Download`
 button. Only download the VPK files from the
-[official site](https://mastercomfig.com/mastercomfig/download).
+[official site](https://mastercomfig.com/download).
 
 The VPK includes everything needed for the config to run, so you don't need to
 have an autoexec or run it using anything. If you already have an autoexec,

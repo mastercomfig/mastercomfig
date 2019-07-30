@@ -35,6 +35,8 @@ markdown_extensions:
     - smarty
     - toc:
         permalink: true
+    - codehilite
+    - meta
     - pymdownx.emoji
     - pymdownx.magiclink
     - pymdownx.smartsymbols

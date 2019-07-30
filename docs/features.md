@@ -1,6 +1,7 @@
 # Features
 
 ## Customization
+* Fully compatible with custom scripts and configs
 * Extensive commenting for different options
 * Presets to easily fit your use case
 * Extra optional customization settings
