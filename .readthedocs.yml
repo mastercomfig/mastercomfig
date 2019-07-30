@@ -4,6 +4,4 @@ mkdocs:
 python:
     install:
         - method: pip
-          path: .
-          extra_requirements:
-              - mkdocs-material
+          path: mkdocs-material
