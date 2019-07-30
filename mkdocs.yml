@@ -16,8 +16,8 @@ theme:
     palette:
         primary: 'teal'
         accent: 'teal'
-    logo: 'docs/img/logo.png'
-    favicon: 'docs/img/favicon.ico'
+    logo: 'img/logo.png'
+    favicon: 'img/favicon.ico'
     feature:
         tabs: true
 repo_url: 'https://github.com/mastercoms/mastercomfig/'

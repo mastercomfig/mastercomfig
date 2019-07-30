@@ -2,13 +2,6 @@
 [![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?style=flat-square)](https://steamcommunity.com/groups/comfig)
 [![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
 
-## Quick Links
-* [Installation](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#installation)
-* [Updating](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#updating)
-* [Troubleshooting](https://github.com/mastercoms/mastercomfig/blob/release/docs/README.md#troubleshooting)
-* [Website](https://mastercoms.github.io/mastercomfig/)
-* [Wiki](https://github.com/mastercoms/mastercomfig/wiki)
-
 <img align="right" alt="mastercomfig logo" width="200" src="https://raw.githubusercontent.com/mastercoms/mastercomfig/gh-pages/favicon.png">
 
 # mastercomfig
@@ -210,7 +203,7 @@ Here are a few awesome TF2 modifications:
 
 * [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
   — Makes TF2 a lot cleaner and simpler
-* [TF2 Visual Fix](https://github.com/agrastiOs/TF2VisualFix) 
+* [TF2 Visual Fix](https://github.com/agrastiOs/TF2VisualFix)
   — Fix issues with cosmetics and visual effects, including Dragon's Fury lag
 * [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
