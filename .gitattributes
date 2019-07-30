@@ -1,9 +1,11 @@
-# Make sure all text files have LF line endings
-* text eol=lf
-
 # These files are text files
-*.cfg text
-*.md text
-*.txt text
-*.sh text
-.git* text
+*.cfg text eol=crlf
+*.md text eol=crlf
+*.txt text eol=crlf
+*.sh text eol=lf
+.git* text eol=lf
+
+# These are not
+*.jpg -text
+*.png -text
+*.ico -text
