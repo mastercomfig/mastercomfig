@@ -5,8 +5,7 @@ markdown_extensions:
     - smarty
     - toc:
         permalink: true
-    - pymdownx.emoji:
-        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.emoji
     - pymdownx.magiclink
     - pymdownx.smartsymbols
     - pymdownx.tasklist:
