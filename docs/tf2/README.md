@@ -1,4 +1,6 @@
-# cvarlist
+# TF2 documentation
+
+## cvarlist
 A list of Linux TF2 cvars. If you'd like to add Windows ones, feel free!
 
 1. Remove mastercomfig VPK and add these launch options: `-novid -autoconfig -default -conclearlog -condebug +cvarlist +quit`.
@@ -6,11 +8,11 @@ A list of Linux TF2 cvars. If you'd like to add Windows ones, feel free!
 3. Remove launch options, add mastercomfig again.
 4. Copy and paste `tf/console.log` cvarlist.
 
-# hiddencvars
+## hiddencvars
 
 Use the [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262) SourceMod plugin.
 
-# launch_options
+## launch_options
 
 Get Windows launch options: https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat
 
