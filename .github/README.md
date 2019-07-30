@@ -25,6 +25,10 @@ think there's an unoptimal value, or if it's just as simple as a comment being
 confusing to you, report the problem and you'll most likely see a fix in a
 future update.
 
+## Docs
+
+For more information, including installation steps, check out [the docs](https://docs.mastercomfig.com/en/latest/).
+
 ## Credits
 
 * [Chris](https://chrisdown.name/tf2/) for starting it all
