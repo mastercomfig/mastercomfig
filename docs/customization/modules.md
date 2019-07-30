@@ -333,6 +333,11 @@ Toggle the live 3D player model in the corner of your screen
 * **`xrays=low`**: Enable xray labels for players
 * **`xrays=high`**: Enable labels for players and outline for players and objective
 
+### Map Background
+
+* **`map_background=off`**: No map background on startup
+* **`map_background=on`**: Map background on startup
+
 ## Sound modules
 
 * **`sound=low`**: Disable sound volume mixing, very low quality sound spatialization and positional effects, delays spatialization
