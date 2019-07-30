@@ -187,11 +187,6 @@ options. The game will launch and exit. Afterwards, remove these launch options.
 * Input
   * Optional same sensitivity for scope and other mouse enhancements
 
-## Screenshots
-
-Wondering what a certain preset looks like on different maps and viewmodels?
-You can look at the screenshots on [cfg.tf](https://cfg.tf/make/#graphics).
-
 ## Troubleshooting
 
 Having issues (like crashes or local servers not working where you can't move
