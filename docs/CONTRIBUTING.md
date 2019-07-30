@@ -1,44 +1,17 @@
 # Reporting issues
 
-1. Search [current issues](https://github.com/mastercoms/mastercomfig/issues)
-   and [troubleshooting steps](https://github.com/mastercoms/mastercomfig/wiki/Troubleshooting)
-   to see if your issue is already known.
-2. If not, [create an issue](https://github.com/mastercoms/mastercomfig/issues/new).
-3. Title your issue with something short but descriptive, like "Missing models
-   on load", not "i need help" or "hey problem found in your config please fix,
-   thanks!!"
-4. Include the following information in your report:
-    * A description of the issue
-    * How you encountered the issue
-    * Config version (don't say latest, say the actual version, found in the
-      startup console output)
-    * Config preset and addon(s)
-    * Custom values (if any)
-    * DirectX level (dxlevel)
-    * Launch options
-    * Operating system (OS)
-    * Graphics card (GPU)
-    * Processor (CPU)
-    * HDD or SSD
-    * RAM size in MB or GB
-
-# Requesting new features
-
-1. Search [current issues](https://github.com/mastercoms/mastercomfig/issues)
-   to see if your feature has already been requested.
-2. If not, [create a feature request](https://github.com/mastercoms/mastercomfig/issues/new).
-3. Title your feature request with something short but descriptive, not "cool
-   idea i had" or "please look at this one thanks very much".
-4. Describe the feature you want in as much detail as you can, and also explain
-   why the feature should be included.
+We always welcome reporting issues, whether it be bug reports
+or feature requests, you can help guide the development of mastercomfig
+to suit your needs and improve the config for everyone!
 
 # Contact the maintainer
 
 mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
-[teamfortress.tv](http://www.teamfortress.tv/user/mastercoms)
+[teamfortress.tv](http://www.teamfortress.tv/user/mastercoms),
 [Reddit](https://www.reddit.com/user/mastercoms) or by email at
-mastercoms@tutanota.de.
+`mastercoms@tuta.io`. I'd be happy to chat about any problems or
+suggestions you have for the config.
 
 # Contributing
 
@@ -80,9 +53,9 @@ space at the end of lines. Max line length should be 100.
 
 #### Launch options
 
-Comment launch options like this:
+Launch options are documented on the wiki and are formatted like this:
 
-`-launchoption : launch option description`
+`**-launchoption** : launch option description`
 
 Make sure the description is not sentence case and starts with a lowercase
 letter.
@@ -101,10 +74,10 @@ There are currently 4 categories for launch options:
 Put your launch option in the appropriate section and if it's in the
 `Launch Options` section, add it to the launch options line for easy copying.
 
-Here's [a list](https://gist.github.com/mastercoms/12c51b171e2d3589eedc6bc9905e8f5e)
+Here's [a list](https://github.com/mastercoms/mastercomfig/blob/release/docs/tf2/launch_options.txt)
 of launch options to help you out.
 
-They were generated using Aveyo's [GetLaunchOptions tool](https://github.com/AveYo/D-OPTIMIZER/blob/master/GetLaunchOptions.bat).
+Information about generating them can be found [here](https://github.com/mastercoms/mastercomfig/tree/release/docs/tf2#launch_options).
 
 #### Comfig and presets
 
@@ -123,11 +96,9 @@ As you can see, default ConVar values should be at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
-ConVars and commands are found by launching TF2 with
-`-novid -default -autoconfig -condebug +cvarlist +quit` and then reading
-`tf/console.log`.
+ConVars and commands are found using [these instructions](https://github.com/mastercoms/mastercomfig/tree/release/docs/tf2#cvarlist).
 
-Add your alternatives uncommented in the applicable presets/addons:
+Add your alternatives uncommented in the applicable presets/addons, or use modules:
 
 **Presets:**
 
@@ -150,15 +121,17 @@ Add your alternatives uncommented in the applicable presets/addons:
 UFO posters
 * `no-footsteps`: Removes footstep sounds
 * `no-pyroland`: Removes Pyroland map textures
-* `no-soundscapes`: Remove soundscapes (ambient map noise)
+* `no-soundscapes`: Remove soundscapes (ambient map noise) and bird noises
 * `no-tutorial`: Disables tutorial messages and other popups
 * `mouse-tweaks`: Some optional mouse tweaks that arguably improve mouse input
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `badcpu`: Optimizations that generally do not affect quality for bad CPUs
   with two or less threads
-* `badgpu`: Optimizations that do not affect quality that are only optimal for
-  weak integrated graphics chips (Intel graphics) or weak/old GPUs
-  (lower end made before 2007)
+* `badgpu`: Optimizations that generally do not affect quality for 
+weak integrated graphics chips (Intel graphics) or 
+weak/old GPUs (lower end made before 2007)
+* `slowio`: Optimizations that generally do not affect quality for slow disk drives
+* `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower)
 
 **Modules:**
 
@@ -172,16 +145,20 @@ the navigation links to be generated properly.
 
 The `texture_preload_list.txt` is designed to tell Team Fortress 2 which
 textures to load on startup.
-Strip all nonexistent textures from the default one if there is a major
+~~Strip all nonexistent textures from the default one if there is a major
 TF2 update, and then add your changes. Preloaded textures should be common
-enough to warrant the extra startup time and memory usage.
+enough to warrant the extra startup time and memory usage.~~
+Currently, mastercomfig removes all textures from this list in order to
+increase FPS and reduce memory usage.
 
 #### Client precache
 
 This is similar to the texture preload list, but it is for sounds and models.
-Also similarly to the texture preload list, strip any nonexistent entries
+~~Also similarly to the texture preload list, strip any nonexistent entries
 and then add your chages, making sure that the entries in the precache are
-common enough to warrant the extra startup time and memory usage.
+common enough to warrant the extra startup time and memory usage.~~
+Currently, mastercomfig removes all but the UI models from this file in order to
+increase FPS and reduce memory usage.
 
 #### Shader cache
 
@@ -245,7 +222,7 @@ In order to successfully deploy and announce, you will have to create a new file
 in `dev/` called `mastercomfig-vars`, containing the following variables:
 
 ```bash
-DISCORD_WEBHOOK="Discord webhook for config announcements"
-GITHUB_USERNAME="GitHub username used for authentication for release deployment"
-GITHUB_TOKEN="GitHub authentication token used for release deployment"
+export DISCORD_WEBHOOK="Discord webhook for config announcements"
+export GH_USERNAME="GitHub username used for authentication for release deployment"
+export GH_TOKEN="GitHub authentication token used for release deployment"
 ```
