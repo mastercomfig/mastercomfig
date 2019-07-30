@@ -1,4 +1,4 @@
-# TF2 documentation
+# TF2 documentation generation
 
 ## cvarlist
 A list of Linux TF2 cvars. If you'd like to add Windows ones, feel free!
