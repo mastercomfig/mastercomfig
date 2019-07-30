@@ -1,10 +1,12 @@
-# Reporting issues
+# Contributing
+
+## Reporting issues
 
 We always welcome reporting issues, whether it be bug reports
 or feature requests, you can help guide the development of mastercomfig
 to suit your needs and improve the config for everyone!
 
-# Contact the maintainer
+## Contact the maintainer
 
 mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
@@ -13,18 +15,18 @@ mastercomfig is currently maintained by mastercoms. You can contact me on
 mastercoms@tuta.io. I'd be happy to chat about any problems or
 suggestions you have for the config.
 
-# Contributing
+## Contributing
 
-## Wiki
+### Wiki
 
 Have a screenshot, workaround or anything else interesting you'd like to share?
 Contribute to the [wiki](https://github.com/mastercoms/mastercomfig/wiki).
 
-## Contributing to the Config
+### Contributing to the Config
 
 Want to contribute to the config itself? Start here!
 
-### Getting started
+#### Getting started
 
 This config has a certain standard of quality for references and will not accept
 changes based on simple hearsay or assumptions.
@@ -38,20 +40,20 @@ contributing. File overrides like `dxsupport_override.cfg`, the shader cache
 files and `texture_preload_list.txt` must be updated according to changes
 [tracked by Steam Database](https://github.com/SteamDatabase/GameTracking-TF2).
 
-### Find a task
+#### Find a task
 
 There might be TODOs within the files that need to be completed, issues that
 need to be closed or maybe something new you came up with. For any of these,
 make sure you communicate that you're going contribute to resolve that issue or
 implement that feature so that there isn't any duplicated work going on.
 
-### Making changes
+#### Making changes
 
 First things first: use spaces (no tabs) and CRLF line endings for configs, and
 continue the Valve convention in the other file overrides. Ensure no trailing
 space at the end of lines. Max line length should be 100.
 
-#### Launch options
+##### Launch options
 
 Launch options are documented on the wiki and are formatted like this:
 
@@ -79,7 +81,7 @@ of launch options to help you out.
 
 Information about generating them can be found [here](https://github.com/mastercoms/mastercomfig/tree/release/docs/tf2#launch_options).
 
-#### Comfig and presets
+##### Comfig and presets
 
 Note: some additional information about the config can be found
 [here](https://github.com/mastercoms/mastercomfig/blob/release/config/README.md).
@@ -141,7 +143,7 @@ the existing modules if applicable, then add documentation for it at the
 Use [this generator](https://github.com/ekalinin/github-markdown-toc) to get
 the navigation links to be generated properly.
 
-#### Texture preload list
+##### Texture preload list
 
 The `texture_preload_list.txt` is designed to tell Team Fortress 2 which
 textures to load on startup.
@@ -151,7 +153,7 @@ enough to warrant the extra startup time and memory usage.~~
 Currently, mastercomfig removes all textures from this list in order to
 increase FPS and reduce memory usage.
 
-#### Client precache
+##### Client precache
 
 This is similar to the texture preload list, but it is for sounds and models.
 ~~Also similarly to the texture preload list, strip any nonexistent entries
@@ -160,7 +162,7 @@ common enough to warrant the extra startup time and memory usage.~~
 Currently, mastercomfig removes all but the UI models from this file in order to
 increase FPS and reduce memory usage.
 
-#### Shader cache
+##### Shader cache
 
 This comes in two parts: the main shader cache at `shader_cache.cfg` and the
 OpenGL shader pair cache at `glshaders.cfg` and `glbaseshaders.cfg`. The main
@@ -169,20 +171,20 @@ bytecode index and value being the bytecode size. This can be used to enable or
 disable shader caching for certain shaders. The OpenGL shader pair cache is a
 bit different, with the numbers being indices.
 
-#### DirectX support
+##### DirectX support
 
 Edit `dxsupport_override.cfg` and set hidden ConVars and other settings
 according to hardware and DirectX level. Make sure there are no updates to this
 file from the game repository (unlikely, was last updated in 2013) before making
 changes.
 
-#### Game overrides
+##### Game overrides
 
 Some ConVars are set from what the map author specified so we have to override them.
 This is currently done [in](https://github.com/mastercoms/mastercomfig/blob/release/dev/presets/package.sh#L51)
 the packaging process.
 
-## Making your pull request
+### Making your pull request
 
 Yay! You made your changes and now it's time to send it off to be included in
 the config. Just [make a new pull request](https://github.com/mastercoms/mastercomfig/compare)
@@ -190,28 +192,28 @@ and name it something nice and descriptive! In your post, include an explanation
 of the changes, why you made those changes, along with any other information you
 find important.
 
-# Testing Config Changes
+## Testing Config Changes
 
 There are several steps you should take before making or accepting changes to
 the config. You can use Fraps or MSI Afterburner to get a FPS measurement of
 matches.
 
-## Benchmarking
+### Benchmarking
 
 Use [mastercoms' new test benchmark](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k)
 to do basic testing on options.
 
-## Bot match
+### Bot match
 
 After the results are positive with the benchmark, measure your average FPS in a
 local 24 player bot match on `pl_upward`, highest difficulty.
 
-## Casual match
+### Casual match
 
 After the results are positive with the local bot match, measure your average
 FPS in a filled casual match.
 
-# Packaging and Releases
+## Packaging and Releases
 
 Generally you won't have to do this, but you can generate VPK packages for all
 presets and addons. Use the `package.sh` script in the `dev/` folder. You can
