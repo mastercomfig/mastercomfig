@@ -3,5 +3,4 @@ mkdocs:
   configuration: mkdocs.yml
 python:
     install:
-        - method: pip
-          path: mkdocs-material
+        - requirements: docs/requriements.txt
