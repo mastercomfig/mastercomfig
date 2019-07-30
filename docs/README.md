@@ -9,6 +9,8 @@
 * [Website](https://mastercoms.github.io/mastercomfig/)
 * [Wiki](https://github.com/mastercoms/mastercomfig/wiki)
 
+<img align="right" alt="mastercomfig logo" width="200" src="https://raw.githubusercontent.com/mastercoms/mastercomfig/gh-pages/favicon.png">
+
 # mastercomfig
 
 This config is by default for modern PCs and aims to disable heavily unoptimized
@@ -204,16 +206,14 @@ or shoot)? Check out some [troubleshooting instructions](https://github.com/mast
 
 Here are a few awesome TF2 modifications:
 
-* [No Hats Mod](http://www.teamfortress.tv/35222/no-hats-mod) — Remove cosmetics
-  from players
-* [TF2 Visual Fix](https://github.com/agrastiOs/TF2VisualFix) — Fix issues with cosmetics
-and visual effects, including Dragon's Fury lag
+* [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
+  — Makes TF2 a lot cleaner and simpler
+* [TF2 Visual Fix](https://github.com/agrastiOs/TF2VisualFix) 
+  — Fix issues with cosmetics and visual effects, including Dragon's Fury lag
 * [No explosion smoke script](http://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
 * [Particle Limitation Pack](http://www.teamfortress.tv/22586/particle-limitation-pack)
   — Reduce certain particles
-* [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
-  — Makes TF2 a lot cleaner and simpler
 * [VTF Crosshair Pack](http://www.teamfortress.tv/35367/vtf-crosshair-pack)
   — New custom crosshairs
 * [yttrium's viewmodels](http://www.teamfortress.tv/34834/yttriums-competitive-viewmodels)
