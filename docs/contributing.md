@@ -1,5 +1,9 @@
 # Contributing
 
+As an open source project, mastercomfig appreciates the community's help in improving it.
+
+We welcome contributions of any type or size, from anyone!
+
 ## Reporting issues
 
 We always welcome reporting issues, whether it be bug reports
@@ -228,3 +232,8 @@ export DISCORD_WEBHOOK="Discord webhook for config announcements"
 export GH_USERNAME="GitHub username used for authentication for release deployment"
 export GH_TOKEN="GitHub authentication token used for release deployment"
 ```
+
+## Code of Conduct
+
+As a member of the mastercomfig community, in order to foster a more welcoming environment,
+you must abide by the [Code of Conduct](https://github.com/mastercoms/mastercomfig/blob/release/.github/CODE_OF_CONDUCT.md)
