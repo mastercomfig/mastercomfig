@@ -129,7 +129,7 @@ UFO posters
 * `no-pyroland`: Removes Pyroland map textures
 * `no-soundscapes`: Remove soundscapes (ambient map noise) and bird noises
 * `no-tutorial`: Disables tutorial messages and other popups
-* `mouse-tweaks`: Some optional mouse tweaks that arguably improve mouse input
+* `flat-mouse`: Makes mouse input "flat" with no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `badcpu`: Optimizations that generally do not affect quality for bad CPUs
   with two or less threads
