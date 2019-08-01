@@ -23,7 +23,7 @@ steps:
   displayName: 'Agree to Steam license'
 - bash: sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install steamcmd dos2unix lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386
   displayName: 'Install package dependencies'
-- bash: sudo /usr/lib/games/steam/steamcmd +login anonymous +quit
+- bash: sudo /usr/lib/games/steam/steamcmd +login anonymous +quit || [ $? -eq 42 ]
   displayName: 'Update SteamCMD'
 - bash: /usr/lib/games/steam/steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 validate +quit
   displayName: 'Install TF2DS'
