@@ -23,9 +23,7 @@ steps:
   displayName: 'Agree to Steam license'
 - bash: sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install steamcmd dos2unix lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386
   displayName: 'Install package dependencies'
-- bash: export PATH=/usr/lib/games/steam:$PATH
-  displayName: 'Add SteamCMD to $PATH'
-- bash: steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 validate +quit
+- bash: PATH=/usr/lib/games/steam:$PATH steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 validate +quit
   displayName: 'Install TF2DS'
 - bash: |
     sudo cat <<EOF >> /usr/local/bin/vpk
