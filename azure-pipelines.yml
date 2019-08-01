@@ -44,9 +44,10 @@ steps:
     Contents: |
       **/*.vpk
       **/*.cfg
-    TargetFolder: '$(System.DefaultWorkingDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Copy build files to staging'
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)'
+    targetPath: '$(Build.ArtifactStagingDirectory)'
     artifact: 'mastercomfig'
+  displayName: 'Publish artifacts'
