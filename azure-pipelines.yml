@@ -1,0 +1,17 @@
+trigger:
+  paths:
+    include: ['config/*']
+  branches:
+    include: ['release']
+pr: 
+  paths:
+    include: ['config/*']
+  branches:
+    include: ['release']
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: dev/package.sh
+  displayName: 'Build config'
