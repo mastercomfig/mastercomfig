@@ -17,6 +17,10 @@ steps:
   displayName: 'Enable 32-bit support'
 - bash: sudo apt update
   displayName: 'Update package list'
+- bash: |
+    echo steam steam/question select "I AGREE" | sudo debconf-set-selections
+    echo steam steam/license note '' | sudo debconf-set-selections
+  displayName: 'Agree to Steam license'
 - bash: sudo DEBIAN_FRONTEND=noninteractive apt -yq install steamcmd dos2unix curl jq lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386
   displayName: 'Install package dependencies'
 - bash: steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 +quit
