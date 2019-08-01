@@ -17,7 +17,7 @@ steps:
   fetchDepth: 1
 - bash: sudo dpkg --add-architecture i386
   displayName: 'Enable 32-bit support'
-- bash: sudo apt update
+- bash: sudo apt-get update
   displayName: 'Update package list'
 - bash: |
     echo steam steam/question select "I AGREE" | sudo debconf-set-selections
