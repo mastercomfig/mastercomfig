@@ -34,6 +34,7 @@ steps:
     VALVE_LIB_DIR=$(dirname "${VPK_LINUX}")
     LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
     EOF'
-  displayName: 'Install VPK to path'
+    sudo chmod +x /usr/local/bin/vpk
+  displayName: 'Install VPK'
 - bash: dev/package.sh
   displayName: 'Build config'
