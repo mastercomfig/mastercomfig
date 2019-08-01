@@ -31,10 +31,6 @@ Go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0`, and `libtcmalloc_minimal.s
 Now, Team Fortress 2 will not be able to load these libraries. The system will have to
 provide them, so make sure you have the 32-bit/multilib versions of `libtcmalloc` and `sdl2`.
 
-Alternatively, you may use [Linux Steam Integration](https://github.com/solus-project/linux-steam-integration)
-with `lsi-intercept` active. However, make sure you use either Solus or their Snap package, or else there will be
-a performance loss because of a lack of a patched glibc. See [here](https://github.com/solus-project/linux-steam-integration/issues/15) for more details.
-
 It's unknown if you can be VAC banned for this, but it is modifying libraries, which should be
 restricted by VAC. So, do it at your own risk. I am not responsible for any VAC bans you may receive.
 
