@@ -45,7 +45,7 @@ For more information, including installation steps, check out [the docs](https:/
   Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby,
   Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
   maximsmol, Fraklin, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
-  DapperTrappper, Tene, mambo and perhaps many others)
+  DapperTrapper, Tene, mambo, Perkzitos, SakiiCode and perhaps many others)
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics
 * and to Valve, for making and updating (for over a decade!) the best class-based FPS to date with so
