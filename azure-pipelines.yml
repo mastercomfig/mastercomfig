@@ -25,7 +25,7 @@ steps:
   displayName: 'Install package dependencies'
 - bash: /usr/lib/games/steam/steamcmd +login anonymous +quit || true
   displayName: 'Update SteamCMD'
-- bash: /usr/lib/games/steam/steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 +quit
+- bash: /usr/lib/games/steam/steamcmd +login anonymous +app_update 232250 +quit
   displayName: 'Install TF2DS'
 - bash: |
     sudo cat <<EOF >> /usr/local/bin/vpk
