@@ -38,3 +38,15 @@ steps:
   displayName: 'Install VPK'
 - bash: dev/package.sh
   displayName: 'Build config'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'dev'
+    Contents: |
+      **/*.vpk
+      **/*.cfg
+    TargetFolder: '$(System.DefaultWorkingDirectory)'
+  displayName: 'Copy build files to staging'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'mastercomfig'
