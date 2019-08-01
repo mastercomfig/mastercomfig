@@ -13,6 +13,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- checkout: self
+  fetchDepth: 1
 - bash: sudo dpkg --add-architecture i386
   displayName: 'Enable 32-bit support'
 - bash: sudo apt update
@@ -23,15 +25,15 @@ steps:
   displayName: 'Agree to Steam license'
 - bash: sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install steamcmd dos2unix lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386
   displayName: 'Install package dependencies'
-- bash: /usr/games/steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 validate +quit
+- bash: /usr/games/steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 +quit
   displayName: 'Install TF2DS'
 - bash: |
-    sudo cat <<EOF >> /usr/local/bin/vpk
+    sudo bash -c 'cat <<\EOF >> /usr/local/bin/vpk
     #!/bin/bash
     VPK_LINUX=$(find "${HOME}" -type f -iname "vpk_linux32" -print | head -n 1)
     VALVE_LIB_DIR=$(dirname "${VPK_LINUX}")
     LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
-    EOF
+    EOF'
   displayName: 'Install VPK to path'
 - bash: dev/package.sh
   displayName: 'Build config'
