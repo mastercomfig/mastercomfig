@@ -145,8 +145,7 @@ Controls blurring effect from rotation and movement
 Controls additional antialiasing passes (software AA)
 
 * **`aa=off`**: Turns off additional antialiasing
-* **`aa=medium`**: Enhanced fence and grass antialiasing
-* **`aa=high`**: Enhanced fence and grass antialiasing, game software antialiasing
+* **`aa=on`**: Enhanced fence and grass antialiasing
 
 ### MSAA Antialiasing
 
@@ -155,9 +154,6 @@ Controls the main hardware based MSAA antialiasing (and CSAA, if you have an Nvi
 * **`aa_msaa=off`**: Turns off MSAA and CSAA
 * **`aa_msaa=2x`**: MSAA 2x
 * **`aa_msaa=4x`**: MSAA 4x
-* **`aa_msaa=6x`**: MSAA 6x (most GPUs won't support this option)
-* **`aa_msaa=8x_csaa`**: MSAA 4x + CSAA 2x
-* **`aa_msaa=16x_csaa`**: MSAA 4x + CSAA 4x
 * **`aa_msaa=8x`**: MSAA 8x
 * **`aa_msaa=16xq_csaa`**: MSAA 8x + CSAA 2x
 
@@ -335,8 +331,8 @@ Toggle the live 3D player model in the corner of your screen
 
 ### Map Background
 
-* **`map_background=off`**: No map background on startup
-* **`map_background=on`**: Map background on startup
+* **`dynamic_background=off`**: No live map main menu background on startup
+* **`dynamic_background=on`**: Live map main menu background on startup
 
 ## Sound modules
 

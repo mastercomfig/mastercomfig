@@ -31,3 +31,10 @@ You can also get creative and use the aforementioned aliases to change your clas
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
 
 If you want to run something only the first time you spawn and never run again while you keep the game open use the `game_override_once_c` alias.
+
+## Optional User Config Template
+
+To get an idea about what to put in your `user/autoexec.cfg` and select options,
+you can download the user/autoexec.cfg template from the [latest release](https://github.com/mastercoms/mastercomfig/releases/latest).
+
+This config is only for advanced, fine tuned customization and is completely optional. Modules are recommended to be used for easy customization.

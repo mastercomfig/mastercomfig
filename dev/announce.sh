@@ -18,6 +18,6 @@ post_body="[url=https://mastercomfig.com/download]$1[/url] released with $2.\n\n
 printf "\n"
 
 echo "BBCode announcement for tf.tv and Steam Group:"
-printf $post_body
+printf "$post_body"
 
 printf "\n"
