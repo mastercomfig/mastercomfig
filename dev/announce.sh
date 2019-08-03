@@ -21,3 +21,12 @@ echo "BBCode announcement for tf.tv and Steam Group:"
 printf "$post_body"
 
 printf "\n"
+
+plain_text="$1 released with $2.\n\nDownload: https://mastercomfig.com/download\n\nChangelog: https://github.com/mastercoms/mastercomfig/releases/tag/$1"
+
+printf "\n"
+
+echo "Plain text (for Steam Chat):"
+printf "$plain_text"
+
+printf "\n"
