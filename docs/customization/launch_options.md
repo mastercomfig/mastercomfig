@@ -56,4 +56,4 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-small** : allow for resolutions smaller than 640x480
 
 ## Experimental Launch Options
-* **-gl_amd_pinned_memory** : use `AMD_pinned_memory` for efficient device memory handling if supported. Experimental as its performance impact (negative or positive) is unknown.
+* **-gl_amd_pinned_memory** : use `AMD_pinned_memory` for efficient device memory handling if supported. Experimental as its performance impact (negative or positive) is unknown. Linux only.
