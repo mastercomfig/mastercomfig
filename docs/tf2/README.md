@@ -1,7 +1,12 @@
 # TF2 documentation generation
 
-## cvarlist
-A list of Linux TF2 cvars. If you'd like to add Windows ones, feel free!
+## cvarlist_linux
+A list of Linux TF2 cvars.
+
+## cvarlist_win
+A list of Windows TF2 cvars.
+
+## Making your own cvar list
 
 1. Remove mastercomfig VPK and add these launch options: `-novid -autoconfig -default -conclearlog -condebug +cvarlist +quit`.
 2. Launch TF2
