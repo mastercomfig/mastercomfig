@@ -35,7 +35,6 @@ done
 
 find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
 find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
-find . -name "comfig.cfg" | xargs sed -i 's/\"//g'
 
 declare -a overriden_presets=("low" "very-low" "ultra")
 declare -a override_combos=("low" "low" "ultra")
