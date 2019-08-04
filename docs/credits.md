@@ -1,10 +1,10 @@
 # Credits
 
 * [Chris](https://chrisdown.name/tf2/) for starting it all
-* [Comanglia](http://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
+* [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
   continuing what Chris started and helping a bit with my config
-* [Rhapsody](http://rhapsodysl.github.io/perfconfig/) for updating Chris' config
-* [Felik](http://www.teamfortress.tv/44076/se-config-framework-feliks-config-3)
+* [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
+* [Felik](https://www.teamfortress.tv/44076/se-config-framework-feliks-config-3)
   for providing an alternative to Chris-based configs
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
 * [Aar](https://www.youtube.com/user/Aarmastah) for making amazing videos about TF2 graphics customization and supporting this config

@@ -14,7 +14,7 @@ Instead of `54` for `viewmodel_fov`, you can use any value you prefer.
 ## TF2 crashes when entering a Competitive Matchmaking match
 
 This is due to the config reset feature of in-game competitive matchmaking.  
-Make sure you are using DirectX 9 (`dxlevel 90` or above). Competitive Matchmaking does not work on DirectX 8 ([Official FAQ](http://www.teamfortress.com/meetyourmatch/faq/)).
+Make sure you are using DirectX 9 (`dxlevel 90` or above). Competitive Matchmaking does not work on DirectX 8 ([Official FAQ](https://www.teamfortress.com/meetyourmatch/faq/)).
 
 Run `mm_override` in console on the main menu before you join a in-game
 competitive match to make the config compatible with competitive matchmaking.

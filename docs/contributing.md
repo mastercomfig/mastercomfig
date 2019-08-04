@@ -14,7 +14,7 @@ to suit your needs and improve the config for everyone!
 
 mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
-[teamfortress.tv](http://www.teamfortress.tv/user/mastercoms),
+[teamfortress.tv](https://www.teamfortress.tv/user/mastercoms),
 [Reddit](https://www.reddit.com/user/mastercoms) or by email at
 mastercoms@tuta.io. I'd be happy to chat about any problems or
 suggestions you have for the config.
@@ -36,7 +36,7 @@ This config has a certain standard of quality for references and will not accept
 changes based on simple hearsay or assumptions.
 
 Every setting and change should be based on information
-found in Team Fortress 2 [blog posts/patch notes](http://www.teamfortress.com/),
+found in Team Fortress 2 [blog posts/patch notes](https://www.teamfortress.com/),
 the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/SDK_Docs),
 the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013) and the Source
 2007 source code leak, so make sure those are available to you before you start

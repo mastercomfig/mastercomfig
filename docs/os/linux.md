@@ -2,7 +2,7 @@
 **Note: These instructions are only for Linux systems.**
 
 ## Kernel
-Try a desktop oriented kernel like [Liquorix](https://liquorix.net/) or [Zen](http://zen-kernel.org/).
+Try a desktop oriented kernel like [Liquorix](https://liquorix.net/) or [Zen](https://github.com/zen-kernel).
 
 ## cpupower
 Use either the `performance`, `schedutil` or `ondemand` governors when playing TF2 by using `cpupower frequency-set -g performance`, for example. You can see available governors for your CPU with `cpupower frequency-info`.

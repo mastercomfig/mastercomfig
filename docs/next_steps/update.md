@@ -9,4 +9,4 @@ This config gets updates frequently, so to get the latest improvements, make
 sure you check here for new releases frequently, or you can get notifications
 about updates on the [Discord](https://discord.gg/CuPb2zV),
 [Steam Group](https://steamcommunity.com/groups/comfig) (or its Steam Chat) or the
-[teamfortress.tv thread](http://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
+[teamfortress.tv thread](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).

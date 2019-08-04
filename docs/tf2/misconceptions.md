@@ -7,6 +7,9 @@
 * `+exec autoexec` : autoexec.cfg is already ran on startup, there is no need to run it again
 * `+map_background` : Team Fortress 2 has a much more advanced preload system now, so map backgrounds are not needed. If you are using them to bypass sv_pure through preloading, that's fine.
 * `-dxlevel 98` : This is only supported on Xbox 360. Will fallback to `dxlevel 95` functionality on PC.
+* `-limitvsconst` : limits the hardware vertex shader constants to 256, possibly below hardware capabilities, which does save a bit of resources, but with more constants available, faster shader modes can be used
+* `-threads` : The Source Engine automatically determines the value for this, and caps it at 3, due to performance issues with higher values. Valve also [recommends](https://www.reddit.com/r/GlobalOffensive/comments/5y8r7v/in_depth_discussion_of_the_threads_launch_option/dep5yno) removing this launch option.
+* `-high` : High is a priority mode in Windows that is only recommended for short lived, time critical threads. It can unbalance resource usage and decrease performance. Close applications on your PC instead.
 
 ## Resolution and windows launch options
 * `-noborder -fullscreen -w -h -full -sw`
@@ -23,4 +26,4 @@ These launch options may be creating an improper video mode, which is not prefer
 * `mat_forcehardwaresync 0` : Syncing frames is good, as it decreases input lag for just a few FPS. Also, this value is automatically determined based on the material queue mode.
 * `mem_max_heapsize` : This value isn't really used anymore. If it worked, setting it too high will cause massive GC pauses past around 512MB.
 * `datacachesize` : No need to adjust this to be wildly large, Source can decide the best value and if you just increase it for no reason, you'll reduce the amount of heap available for other things other than the datacache
-* `sv_forcepreload`/`cl_forcepreload` : [cl_forcepreload was removed](http://www.teamfortress.com/post.php?id=19733 ) - "Fixed two most common forms of framerate stuttering / hitching when using popular FPS configs". It's also been called [cl_massive_hitches_at_surprising_times 1 by a Valve employee](https://www.reddit.com/r/GlobalOffensive/comments/adq2a4/never_install_csgo_on_an_old_hard_drive/edlbh3d/). Need I say more?
+* `sv_forcepreload`/`cl_forcepreload` : [cl_forcepreload was removed](https://www.teamfortress.com/post.php?id=19733 ) - "Fixed two most common forms of framerate stuttering / hitching when using popular FPS configs". It's also been called [cl_massive_hitches_at_surprising_times 1 by a Valve employee](https://www.reddit.com/r/GlobalOffensive/comments/adq2a4/never_install_csgo_on_an_old_hard_drive/edlbh3d/). Need I say more?
