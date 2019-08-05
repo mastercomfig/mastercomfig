@@ -27,7 +27,8 @@ nav:
         - Update: 'next_steps/update.md'
     - TF2 Documentation:
         - Misconceptions: 'tf2/misconceptions.md'
-        - Console Variables: 'tf2/cvarlist.md'
+        - Console Variables - Windows: 'tf2/cvarlist_win.md'
+        - Console Variables - Linux: 'tf2/cvarlist_linux.md'
         - Hidden Console Variables: 'tf2/hiddencvars.md'
         - Launch Options: 'tf2/launch_options.md'
         - Silly Launch Options: 'tf2/silly_launch_options.md'
