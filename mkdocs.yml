@@ -30,7 +30,8 @@ nav:
         - Console Variables - Windows: 'tf2/cvarlist_win.md'
         - Console Variables - Linux: 'tf2/cvarlist_linux.md'
         - Hidden Console Variables: 'tf2/hiddencvars.md'
-        - Launch Options: 'tf2/launch_options.md'
+        - Launch Options - Linux: 'tf2/launchopts_linux.md'
+        - Launch Options - Windows: 'tf2/launchopts_win.md'
         - Silly Launch Options: 'tf2/silly_launch_options.md'
         - Generating TF2 Data: 'tf2/README.md'
 markdown_extensions:

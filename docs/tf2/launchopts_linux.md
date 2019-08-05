@@ -1,4 +1,7 @@
-# Launch options
+# Launch Options - Linux
+
+**Not all these "launch options" are guaranteed to be actual launch options!** 
+Extracting strings from an executable is a finicky and error-prone process, and as such, some unrelated strings may have slipped through the cracks.
 
 ```
 -abs
