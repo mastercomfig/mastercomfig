@@ -66,6 +66,7 @@
 -nogamestats
 -nohltv
 -noip
+-nostartupsound
 -NoLoadPluginsForClient
 -nomaster
 -nomessagebox
