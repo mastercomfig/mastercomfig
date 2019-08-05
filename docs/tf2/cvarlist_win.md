@@ -3555,4 +3555,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  : 
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3551 total convars/concommands```
+3551 total convars/concommands
+```
