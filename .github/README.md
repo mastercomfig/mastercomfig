@@ -1,5 +1,8 @@
 ![Built with Love](https://forthebadge.com/images/badges/built-with-love.svg)
 [![Build Status](https://dev.azure.com/mastercoms/mastercomfig/_apis/build/status/mastercoms.mastercomfig?branchName=release)](https://dev.azure.com/mastercoms/mastercomfig/_build/latest?definitionId=1&branchName=release)
+[![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest)]
+[![Liberapay](http://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay)](https://liberapay.com/mastercoms/)
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W510R1Q)
 [![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
 [![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?style=flat-square)](https://steamcommunity.com/groups/comfig)
 [![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
@@ -30,6 +33,14 @@ future update.
 ## Docs
 
 For more information, including installation steps, check out [the docs](https://docs.mastercomfig.com/en/latest/).
+
+## Donations
+
+You can donate to mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-Fi](https://ko-fi.com/mastercoms) with money, or you can donate items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
+
+You have my endless gratitude if you donate, and they encourage me so much!
+
+If you are not able to donate, that's fine too! Your thank yous are always cherished.
 
 ## Credits
 
