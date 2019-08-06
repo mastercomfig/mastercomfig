@@ -34,7 +34,7 @@ future update.
 
 For more information, including installation steps, check out [the docs](https://docs.mastercomfig.com/en/latest/).
 
-## Support
+## Support me
 
 You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-Fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 

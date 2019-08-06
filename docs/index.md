@@ -30,7 +30,7 @@ think there's an unoptimal value, or if it's just as simple as a comment being
 confusing to you, report the problem and you'll most likely see a fix in a
 future update.
 
-## Support
+## Support me
 
 You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-Fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
