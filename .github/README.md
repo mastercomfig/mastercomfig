@@ -34,13 +34,13 @@ future update.
 
 For more information, including installation steps, check out [the docs](https://docs.mastercomfig.com/en/latest/).
 
-## Donations
+## Support
 
-You can donate to mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-Fi](https://ko-fi.com/mastercoms) with money, or you can donate items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
+You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-Fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
-You have my endless gratitude if you donate, and they encourage me so much!
+You have my endless gratitude if you support me with money or gift items, and this support encourages me so much!
 
-If you are not able to donate, that's fine too! Your thank yous are always cherished.
+If you are not able to support me through the above methods, that's fine too! Your thank yous are always cherished.
 
 ## Credits
 
