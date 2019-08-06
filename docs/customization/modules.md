@@ -4,12 +4,18 @@ Modules are groups of related commands with specific values for a certain use ca
 ## How to use
 Modules are [used in presets](https://github.com/mastercoms/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in a `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example, `textures=high`.
 
+### In game selection
+
+You can select modules in game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
+
+For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
+
 ### Advanced
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
 If you want to disable running a module entirely, you can put (for example) `alias textures ""` in `user/modules.cfg`.
 
-Since modules alises act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
+Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
 
 ## Network modules
 
