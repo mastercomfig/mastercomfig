@@ -1,6 +1,6 @@
 ![Built with Love](https://forthebadge.com/images/badges/built-with-love.svg)
 [![Build Status](https://dev.azure.com/mastercoms/mastercomfig/_apis/build/status/mastercoms.mastercomfig?branchName=release)](https://dev.azure.com/mastercoms/mastercomfig/_build/latest?definitionId=1&branchName=release)
-[![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest)]
+[![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest)](https://docs.mastercomfig.com/)
 [![Liberapay](http://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay)](https://liberapay.com/mastercoms/)
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W510R1Q)
 [![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
