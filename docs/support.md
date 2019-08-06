@@ -4,4 +4,4 @@ You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) 
 
 You have my endless gratitude if you support me with money or gift items, and this support encourages me so much!
 
-If you are not able to support me through the above methods, that's fine too! Your thank yous are always cherished.
+If you are not able to support me through the above methods, that's fine too! Your thank yous are always cherished and mean so much to me.
