@@ -58,6 +58,8 @@ theme:
     favicon: 'img/logo.ico'
 repo_url: 'https://github.com/mastercoms/mastercomfig/'
 edit_uri: 'https://github.com/mastercoms/mastercomfig/edit/release/docs/'
+extra_css:
+  - 'stylesheets/extra.css'
 extra:
     repo_icon: 'github'
     social:
