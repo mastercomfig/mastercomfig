@@ -10,6 +10,8 @@ You can select modules in game using the console. Just enter the module you'd li
 
 For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
 
+**How does it work?** It logs things to a file called `tf/cfg/modules.log`, and then executes that modules.log as a config file.
+
 ### Advanced
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
