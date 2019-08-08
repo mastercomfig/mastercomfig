@@ -14,8 +14,8 @@ Here are a few awesome TF2 modifications:
   — Reduce certain particles
 * [VTF Crosshair Pack](https://www.teamfortress.tv/35367/vtf-crosshair-pack)
   — New custom crosshairs
-* [HL2PriorityWrapper](https://github.com/Leo40Git/HL2PriorityWrapper)
-  — A wrapper exe for launching TF2 with different priorities
+* [SteamPriorityLauncher](https://github.com/Leo40Git/SteamPriorityLauncher)
+  — A launcher for launching Steam games, such as TF2, with different priorities
 * [yttrium's viewmodels](https://www.teamfortress.tv/34834/yttriums-competitive-viewmodels)
   — Customize hiding individual viewmodels
 * [Transparent Viewmodels](https://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
