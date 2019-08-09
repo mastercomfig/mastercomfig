@@ -170,7 +170,7 @@ tf_flamethrower_float                    : 50.0     : , "sv", "cheat", "launcher
 tf_flamethrower_maxdamagedist            : 350.0    : , "sv", "cheat", "launcher" : Maximum damage distance for flamethrower.
 tf_flamethrower_new_flame_offset         : 40 5 0   : , "sv", "cheat", "launcher" : Starting position relative to the flamethrower.
 tf_flamethrower_shortrangedamagemultiplier : 1.2      : , "sv", "cheat", "launcher" : Damage multiplier for close-in flamethrower damage.
-tf_flamethrower_vecrand                  : 0.0      : , "sv", "cheat", "launcher" : Random vector added to initial velocity of flame damage entities.
+tf_flamethrower_vecrand                  : 0.05     : , "sv", "cheat", "launcher" : Random vector added to initial velocity of flame damage entities.
 tf_flamethrower_velocity                 : 2300.0   : , "sv", "cheat", "launcher" : Initial velocity of flame damage entities.
 tf_flamethrower_velocityfadeend          : .5       : , "sv", "cheat", "launcher" : Time at which attacker's velocity contribution finishes fading.
 tf_flamethrower_velocityfadestart        : .3       : , "sv", "cheat", "launcher" : Time at which attacker's velocity contribution starts to fade.
