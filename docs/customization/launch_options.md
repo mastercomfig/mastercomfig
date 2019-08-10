@@ -43,6 +43,7 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-r_emulate_gl**: downgrades DirectX graphics features to what Team Fortress 2's OpenGL supports
 * **-nostartupsound** : disable game music on main menu
 * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. for example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
+* **-particles 512** : limits beam count to the minimum of 512
 
 ## OpenGL Launch Options (Linux and macOS only)
 * **displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
