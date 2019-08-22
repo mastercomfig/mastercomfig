@@ -48,9 +48,6 @@ However, `-dxlevel 95` is your best bet and works for most people.
 ## OpenGL Launch Options (Linux and macOS only)
 * **displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
 
-### Linux Launch Options
-* **-NoQueuedPacketThread**: disable the net queued packet thread, use with `net_queued_packet_thread 0`
-
 ## Niche Launch Options
 * **-nouserclip** : uses software clipping instead of hardware user clip planes, FPS increase or decrease depends on your CPU+GPU
 * **-nosound** : disables sound, no performance boost unless your drivers are slow
