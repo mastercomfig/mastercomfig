@@ -3,7 +3,7 @@
 *.md text eol=crlf
 *.txt text eol=crlf
 *.sh text eol=lf
-.git* text eol=lf
+*.git text eol=lf
 
 # These are not
 *.jpg -text
