@@ -55,6 +55,6 @@ Set `tf_time_loading_item_panels 0.0005`.
 
 Players' sprays are treated like a decal in-game. To get sprays to work, you have to least to set the `decals` module to `low` or higher.
 
-## Multiple "Attempting to create unknown particle system" errors in console
+## Multiple particle-related errors in console
 
-Ignore these, as these are red herrings that happen in a clean TF2 installation and they do not affect FPS.
+Ignore these, as these are red herrings that happen in a clean TF2 installation and do not affect FPS.
