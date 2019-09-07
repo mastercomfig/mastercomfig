@@ -35,15 +35,27 @@
             <div class="row d-flex align-items-center justify-content-center" style="height: 100%">
                 <div class="col-md align-middle">
                     <div class="progress bg-dark">
-                        <div id="mastercomfig-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">224FPS</div>
+                        <div id="mastercomfig-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">306FPS</div>
                     </div>
                     <p>mastercomfig low</p>
                     <div class="progress bg-dark">
-                        <div id="comanglia-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">172FPS</div>
+                        <div id="comanglia-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">291FPS</div>
                     </div>
                     <p>Comanglia's config</p>
+                    <div class="progress bg-dark">
+                        <div id="m0re-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100">290FPS</div>
+                    </div>
+                    <p>m0re highfps</p>
+                    <div class="progress bg-dark">
+                        <div id="chris-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">270FPS</div>
+                    </div>
+                    <p>Chris maxframes</p>
+                    <div class="progress bg-dark">
+                        <div id="rhapsody-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100">257FPS</div>
+                    </div>
+                    <p>Rhapsody's config</p>
                     <hr class="bg-light" style="margin-bottom: 0.5rem">
-                    <p class="font-weight-light" style="font-size: 0.7rem">FPS = frames per second (higher is better). Measured on i7-8700K @ 5GHz GTX1080 16GB 3200MT/s RAM SSD Linux using mastercoms' test benchmark.</p>
+                    <p class="font-weight-light" style="font-size: 0.7rem">FPS = frames per second (higher is better). Measured on i7-8700K GTX1080 16GB 3200MT/s RAM SSD Linux using mastercoms' test benchmark.</p>
                 </div>
                 <div class="col-md align-middle">
                     <h1 class="display-5"><span class="oi oi-bolt" title="bolt" aria-hidden="true" style="font-size: 2rem"></span> Performance</h1>
@@ -194,14 +206,20 @@ tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
         $(window).scroll(function() {
             if ($('#comanglia-bar').visible()) {
                 document.getElementById('mastercomfig-bar').style.width = '100%';
-                document.getElementById('comanglia-bar').style.width = '91%';
+                document.getElementById('comanglia-bar').style.width = '95%';
+                document.getElementById('m0re-bar').style.width = '94%';
+                document.getElementById('chris-bar').style.width = '88%';
+                document.getElementById('rhapsody-bar').style.width = '83%';
                 $(window).off('scroll');
             }
         });
         // If page loaded with bars visible, then still do the anim
         if ($('#comanglia-bar').visible()) {
             document.getElementById('mastercomfig-bar').style.width = '100%';
-            document.getElementById('comanglia-bar').style.width = '91%';
+            document.getElementById('comanglia-bar').style.width = '95%';
+            document.getElementById('m0re-bar').style.width = '94%';
+            document.getElementById('chris-bar').style.width = '88%';
+            document.getElementById('rhapsody-bar').style.width = '83%';
             $(window).off('scroll');
         }
 
