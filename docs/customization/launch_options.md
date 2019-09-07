@@ -38,8 +38,8 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-reuse** :  allow network sockets to be reused when busy (sets `SO_REUSEADDR`), better network performance
 * **-nohltv** : disables SourceTV hosting, faster startup and less memory usage
 * **-particles 1** : limits beam count to the minimum of 512
-* **-primarysound**: always use a direct hardware sound buffer (only works on stereo or headphones), may cause sounds to not play. Reduces stuttering.
-* **-snoforceformat**: do not set the hardware sound buffer format, may cause sounds to not play. Reduces stuttering and solves some minor issues with `-primarysound`.
+* **-primarysound**: always use a direct hardware sound buffer (only works on stereo or headphones), may cause sounds to not play. Reduces stuttering. Windows only.
+* **-snoforceformat**: do not set the hardware sound buffer format, may cause sounds to not play. Reduces stuttering and solves some minor issues with `-primarysound`. Windows only.
 
 ## Extra Launch Options
 * **-console** : displays console on startup
