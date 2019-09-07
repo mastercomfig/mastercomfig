@@ -314,6 +314,13 @@ Toggle the live 3D player model in the corner of your screen
 * **`hud_player_model=off`**: Disables the player model
 * **`hud_player_model=on`**: Enables the player model
 
+### Panels
+
+Toggle health/player info panels.
+
+* **`hud_panels=off`**: Disables health/player info panels on hover.
+* **`hud_panels=on`**: Enables health/player info panels on hover.
+
 ### Messages
 
 * **`messages=disable`**: Disables all text messages
