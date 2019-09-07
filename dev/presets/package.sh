@@ -18,13 +18,13 @@ for P in "${presets[@]}"; do
     autoexec_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
     touch $autoexec_file
     echo "exec comfig/comfig" > $autoexec_file
-    echo "exec comfig/select_modules" >> $autoexec_file
     echo "exec presets/${P}" >> $autoexec_file
-    echo "exec comfig/addons" >> $autoexec_file
     echo "exec user/modules" >> $autoexec_file
     echo "exec modules.log" >> $autoexec_file
     echo "run_modules" >> $autoexec_file
+    echo "exec comfig/addons" >> $autoexec_file
     echo "exec user/autoexec" >> $autoexec_file
+    echo "exec comfig/select_modules" >> $autoexec_file
     echo "exec comfig/finalize" >> $autoexec_file
 done
 

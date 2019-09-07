@@ -29,7 +29,7 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-dxlevel 90** : OpenGL Shader Model 2
 
 ## List of Launch Options
-**Recommended**: `-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse -nohltv -particles 1`
+**Recommended**: `-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse -nohltv -particles 1 -primarysound -snoforceformat`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
@@ -38,12 +38,14 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-reuse** :  allow network sockets to be reused when busy (sets `SO_REUSEADDR`), better network performance
 * **-nohltv** : disables SourceTV hosting, faster startup and less memory usage
 * **-particles 1** : limits beam count to the minimum of 512
+* **-primarysound**: always use a direct hardware sound buffer (only works on stereo or headphones), may cause sounds to not play. Reduces stuttering.
+* **-snoforceformat**: do not set the hardware sound buffer format, may cause sounds to not play. Reduces stuttering and solves some minor issues with `-primarysound`.
 
 ## Extra Launch Options
 * **-console** : displays console on startup
-* **-r_emulate_gl**: downgrades DirectX graphics features to what Team Fortress 2's OpenGL supports
+* **-r_emulate_gl**: changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX
 * **-nostartupsound** : disable game music on main menu
-* **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. for example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
+* **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
 
 ## OpenGL Launch Options (Linux and macOS only)
 * **displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).

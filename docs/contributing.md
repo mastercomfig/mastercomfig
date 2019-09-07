@@ -136,7 +136,6 @@ UFO posters
 * `badgpu`: Optimizations that generally do not affect quality for
 weak integrated graphics chips (Intel graphics) or
 weak/old GPUs (lower end made before 2007)
-* `slowio`: Optimizations that generally do not affect quality for slow disk drives
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower)
 
 **Modules:**
