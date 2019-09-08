@@ -14,5 +14,5 @@ else Steam Cloud will redownload them. Alternatively, you can
 [disable Steam Cloud](https://support.steampowered.com/kb_article.php?ref=6736-QEIG-8941#enabling).
 
 Finally, launch TF2 with only the
-`-novid -default -autoconfig +host_writeconfig +mat_savechanges +quit` launch
+`-novid -autoconfig +host_writeconfig +mat_savechanges +quit` launch
 options. The game will launch and exit. Afterwards, remove these launch options.
