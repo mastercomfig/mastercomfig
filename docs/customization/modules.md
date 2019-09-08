@@ -41,10 +41,9 @@ Controls how reliable to consider the snapshots you receive from the server to a
 
 Controls how big packets are and how they are split up/compressed
 
-* **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones
-* **`packet_size=lowend`**: Uses big single packets while avoiding compression unless needed to avoid splitting up packets. This minimizes computations done on packets before sending.
+* **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
 * **`packet_size=minimal`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
-* **`packet_size=balanced`**: Uses a reasonably large packet size limit that should work with most routers except the lowest end ones.
+* **`packet_size=balanced`**: Uses a reasonably large packet size limit that should work with most routers except the lowest end ones. Compresses minimally.
 
 ### Downloads
 
