@@ -82,7 +82,7 @@ Controls lighting fidelity: dynamic lights, how detailed lighting is, phong, rim
 Controls shadow quality.
 
 * **`shadows=off`**: No shadows.
-* **`shadows=very_low`**: Up to 12 blob shadows, and no robot shadows.
+* **`shadows=very_low`**: Up to 8 blob shadows, and no robot shadows.
 * **`shadows=low`**: Up to 12 low quality shadows, and low robot shadow distance.
 * **`shadows=medium`**: Up to 12 medium quality shadows, and medium robot shadow distance.
 * **`shadows=high`**: Up to 18 high resolution shadows, and high robot shadow distance.
