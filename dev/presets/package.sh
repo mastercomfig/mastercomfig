@@ -39,19 +39,6 @@ done
 find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
 find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
 
-declare -a overriden_presets=("low" "very-low" "ultra")
-declare -a override_combos=("low" "low" "ultra")
-
-# Preset specific overrides
-for ((i=0; i<${#overriden_presets[*]}; i++));
-do
-    folder="mastercomfig-${overriden_presets[i]}-preset/"
-    for override in ${override_combos[i]}
-    do
-        cp -rf "../../config/overrides/$override/"* $folder
-    done
-done
-
 # Package into VPK
 for D in *; do
     if [ -d "${D}" ]; then
