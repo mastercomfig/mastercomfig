@@ -49,6 +49,8 @@ However, `-dxlevel 95` is your best bet and works for most people.
 
 ## OpenGL Launch Options (Linux and macOS only)
 * **displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
+* **-gl_enablesamplerobjects** : enhance texture preloading using sampler objects
+* **-gl_texclientstorage** : use driver host copies for textures, reduces memory usage
 
 ## Niche Launch Options
 * **-nouserclip** : uses software clipping instead of hardware user clip planes, FPS increase or decrease depends on your CPU+GPU
@@ -56,4 +58,4 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-small** : allow for resolutions smaller than 640x480
 
 ## Experimental Launch Options
-* **-gl_amd_pinned_memory** : use `AMD_pinned_memory` for efficient device memory handling if supported. Experimental as its performance impact (negative or positive) is unknown. Linux only.
+* **-gl_amd_pinned_memory** : use `AMD_pinned_memory` for efficient device memory handling. Experimental as its performance impact (negative or positive) is unknown. Linux only.
