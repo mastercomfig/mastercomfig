@@ -131,8 +131,6 @@ UFO posters
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
-* `badcpu`: Optimizations that generally do not affect quality for bad CPUs
-  with two or less threads
 * `badgpu`: Optimizations that generally do not affect quality for
 weak integrated graphics chips (Intel graphics) or
 weak/old GPUs (lower end made before 2007)
