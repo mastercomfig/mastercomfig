@@ -25,7 +25,11 @@ steps:
   displayName: 'Agree to Steam license'
 - bash: sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install steamcmd dos2unix lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386
   displayName: 'Install package dependencies'
-- bash: /usr/games/steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 +quit
+- task: CacheBeta@1
+  inputs:
+    key: '"tf2v1"'
+    path: 'tf2'
+- bash: /usr/games/steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 validate +quit
   displayName: 'Install TF2DS'
 - bash: |
     sudo bash -c 'cat <<\EOF >> /usr/local/bin/vpk
@@ -35,7 +39,7 @@ steps:
     LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
     EOF'
     sudo chmod +x /usr/local/bin/vpk
-  displayName: 'Install VPK'
+  displayName: 'Install VPK script'
 - bash: dev/package.sh
   displayName: 'Build config'
 - task: CopyFiles@2
