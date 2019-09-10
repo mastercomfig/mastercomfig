@@ -28,7 +28,8 @@ steps:
 - task: CacheBeta@1
   inputs:
     key: '"tf2v1"'
-    path: 'tf2'
+    path: '(System.DefaultWorkingDirectory)/tf2'
+  displayName: 'Cache TF2 install'
 - bash: /usr/games/steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 validate +quit
   displayName: 'Install TF2DS'
 - bash: |
