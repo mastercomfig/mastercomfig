@@ -58,3 +58,7 @@ Players' sprays are treated like a decal in-game. To get sprays to work, you hav
 ## Multiple particle-related errors in console
 
 Ignore these, as these are red herrings that happen in a clean TF2 installation and do not affect FPS.
+
+## `Unknown command "gl_*"`
+
+OpenGL-related cvars are only available on Linux and macOS. Therefore, errors of this type appear a few times when using mastercomfig on Windows.
