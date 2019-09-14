@@ -49,7 +49,7 @@ If TF2 is crashing to desktop after a custom map loading / after picking a class
 
 ## Item panels are taking too long to load
 
-Set `tf_time_loading_item_panels 0.0005`.
+Set `tf_time_loading_item_panels` to `0.0005`.
 
 ## Players' sprays are not working even with the module enabled
 
@@ -61,4 +61,4 @@ Ignore these, as these are red herrings that happen in a clean TF2 installation 
 
 ## `Unknown command "gl_*"`
 
-OpenGL-related cvars are only available on Linux and macOS. Therefore, errors of this type appear a few times when using mastercomfig on Windows.
+OpenGL-related cvars are only available on Linux and macOS. Therefore, errors of this type appear a few times when using mastercomfig on Windows. These errors are harmless and can be ignored safely.
