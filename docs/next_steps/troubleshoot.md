@@ -49,7 +49,7 @@ If TF2 is crashing to desktop after a custom map loading / after picking a class
 
 ## Item panels are taking too long to load
 
-Set `tf_time_loading_item_panels` to `0.0005`.
+Run `tf_time_loading_item_panels 0.0005` in the console, or add it to your autoexec.
 
 ## Players' sprays are not working even with the module enabled
 
