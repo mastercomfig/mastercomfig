@@ -35,8 +35,8 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
 * **-nosteamcontroller** : disable Steam controller system, faster startup, less memory usage and less input conflicts
 * **-softparticlesdefaultoff** : disable scene depth blending for particles and sprites, more FPS
-* **-reuse** :  allow network sockets to be reused when busy (sets `SO_REUSEADDR`), better network performance
-* **-nohltv** : disables SourceTV hosting, faster startup and less memory usage
+* **-reuse** :  allow network sockets to be reused when busy (`TIME_WAIT`) (sets `SO_REUSEADDR`), better network performance in some edge cases
+* **-nohltv** : disables SourceTV hosting, less resource usage
 * **-particles 1** : limits beam count to the minimum of 512
 * **-primarysound**: always use a direct hardware sound buffer (only works on 2 speakers or headphones), may cause sounds to not play. Reduces stuttering. Windows only.
 * **-snoforceformat**: do not set the hardware sound buffer format, may cause sounds to not play. Reduces stuttering and solves some minor issues with `-primarysound`. Windows only.
