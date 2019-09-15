@@ -76,8 +76,10 @@ There are currently 4 categories for launch options:
 Put your launch option in the appropriate section and if it's in the
 `Launch Options` section, add it to the launch options line for easy copying.
 
-Here's [a list](https://github.com/mastercoms/mastercomfig/blob/release/docs/tf2/launch_options.txt)
-of launch options to help you out.
+Here's lists of launch options to help you out:
+
+* [Windows](https://docs.mastercomfig.com/en/latest/tf2/launchopts_win/)
+* [Linux](https://docs.mastercomfig.com/en/latest/tf2/launchopts_linux/)
 
 Information about generating them can be found [here](https://github.com/mastercoms/mastercomfig/tree/release/docs/tf2#launch_options).
 
@@ -98,7 +100,12 @@ As you can see, default ConVar values should be at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
-ConVars and commands are found using [these instructions](https://github.com/mastercoms/mastercomfig/tree/release/docs/tf2#cvarlist).
+ConVars and commands are found using [these instructions](https://github.com/mastercoms/mastercomfig/tree/release/docs/tf2#making-your-own-cvar-list).
+
+Premade lists:
+
+* [Windows](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_win/)
+* [Linux](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_linux/)
 
 Add your alternatives uncommented in the applicable presets/addons, or use modules:
 
