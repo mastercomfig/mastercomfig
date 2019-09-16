@@ -3,7 +3,7 @@
 Right click Team Fortress 2 in your Steam library, click **Properties** and
 click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
-`-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse -nohltv` into
+`-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -reuse -nohltv -particles 1 -primarysound -snoforceformat` into
 the box and click ok.
 
 Read below about optional launch options and choosing your own DXLevel.
