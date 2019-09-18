@@ -8,13 +8,17 @@
         "mat_max_worldmesh_vertices": 8192,
         "r_glint_procedural": 1,
         "mat_postprocess_x": 1,
-        "mat_postprocess_y": 1
+        "mat_postprocess_y": 1,
+        "violence_hgibs": 1,
+        "violence_hblood": 1
       },
       "Dedicated": {
         "r_occludeemaxarea": 1.5,
         "r_occluderminarea": 6.5,
         "mat_postprocess_x": 4,
-        "mat_postprocess_y": 4
+        "mat_postprocess_y": 4,
+        "violence_hgibs": 1,
+        "violence_hblood": 1
       }
     },
     "hardware.cpu.cores": [
