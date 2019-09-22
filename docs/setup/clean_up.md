@@ -3,6 +3,8 @@
 **NOTE: This will reset ALL settings. Make sure you back up your binds and other
 custom settings before you do this.**
 
+## Standard Method
+
 If you have already have a config, or want to remove mastercomfig, delete any
 configs you may have in `tf/custom` and delete the `tf/cfg` folder.
 Then [verify your game files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335)
@@ -16,3 +18,9 @@ else Steam Cloud will redownload them. Alternatively, you can
 Finally, launch TF2 with only the
 `-novid -autoconfig +host_writeconfig +mat_savechanges +quit` launch
 options. The game will launch and exit. Afterwards, remove these launch options.
+
+## Alternate Method
+
+**NOTE: This method is currently experimental.**
+
+Download [TF2 Cleanup Wizard](https://github.com/Leo40Git/TF2CleanupWizard/releases/latest), extract the .zip file to somewhere, then run `TF2CleanupWizard.exe`. The wizard will clean up your TF2 installation for you!
