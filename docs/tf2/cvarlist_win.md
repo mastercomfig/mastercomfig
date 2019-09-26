@@ -1811,7 +1811,7 @@ r_flashlightambient                      : 0        : , "cheat", "cl"  :
 r_flashlightclip                         : 0        : , "cheat"        :
 r_flashlightconstant                     : 0        : , "cheat", "cl"  :
 r_flashlightculldepth                    : 1        :                  :
-r_flashlightdepthres                     : 512      : , "cl"           :
+r_flashlightdepthres                     : 256      : , "cl"           :
 r_flashlightdepthtexture                 : 1        :                  :
 r_flashlightdrawclip                     : 0        : , "cheat"        :
 r_flashlightdrawdepth                    : 0        :                  :
@@ -1983,7 +1983,7 @@ r_unloadlightmaps                        : 0        : , "cheat"        :
 r_updaterefracttexture                   : 1        : , "cheat", "cl"  :
 r_vehicleBrakeRate                       : 1        : , "sv", "cheat"  :
 r_VehicleViewClamp                       : 1        : , "cheat", "cl"  :
-r_VehicleViewDampen                      : 0        :                  :
+r_VehicleViewDampen                      : 1        : , "sv", "cheat", "nf", "rep" :
 r_visambient                             : 0        :                  : Draw leaf ambient lighting samples.  Needs mat_leafvis 1 to work
 r_visocclusion                           : 0        : , "cheat"        : Activate/deactivate wireframe rendering of what the occlusion system is doing.
 r_visualizelighttraces                   : 0        : , "cheat"        :
@@ -1992,7 +1992,7 @@ r_visualizeproplightcaching              : 0        : , "cl"           :
 r_visualizetraces                        : 0        : , "cheat"        :
 r_WaterDrawReflection                    : 1        : , "cl"           : Enable water reflection
 r_WaterDrawRefraction                    : 1        : , "cl"           : Enable water refraction
-r_waterforceexpensive                    : 0        : , "a"            :
+r_waterforceexpensive                    : 1        : , "a"            :
 r_waterforcereflectentities              : 0        :                  :
 r_worldlightmin                          : 0        :                  :
 r_worldlights                            : 4        :                  : number of world lights to use per vertex
@@ -2408,7 +2408,7 @@ sv_allow_wait_command                    : 1        : , "rep"          : Allow o
 sv_allowdownload                         : 1        :                  : Allow clients to download files
 sv_allowupload                           : 1        :                  : Allow clients to upload customizations files
 sv_alltalk                               : 0        : , "sv", "nf", "rep" : Players can hear all other players, no team restrictions
-sv_alternateticks                        : 1        : , "sp"           : If set, server only simulates entities on even numbered ticks.
+sv_alternateticks                        : 0        : , "sp"           : If set, server only simulates entities on even numbered ticks.
 sv_autosave                              : 1        :                  : Set to 1 to autosave game on level transition. Does not affect autosave triggers.
 sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.vprof.
 sv_benchmark_force_start                 : cmd      :                  : Force start the benchmark. This is only for debugging. It's better to set sv_benchmark to 1 and restart the level.
@@ -2543,7 +2543,7 @@ sv_teststepsimulation                    : 1        : , "sv"           :
 sv_thinktimecheck                        : 0        : , "sv"           : Check for thinktimes all on same timestamp.
 sv_timeout                               : 65       :                  : After this many seconds without a message from a client, the client is dropped
 sv_turbophysics                          : 0        : , "sv", "rep"    : Turns on turbo physics
-sv_unlockedchapters                      : 99       : , "a"            : Highest unlocked game chapter.
+sv_unlockedchapters                      : 1        : , "a"            : Highest unlocked game chapter.
 sv_usercmd_custom_random_seed            : 1        : , "sv", "cheat"  : When enabled server will populate an additional random seed independent of the client
 sv_vehicle_autoaim_scale                 : 8        : , "sv"           :
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
