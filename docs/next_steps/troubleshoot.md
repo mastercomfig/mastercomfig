@@ -2,7 +2,7 @@
 
 ## Viewmodels are not visible
 
-Set the following:
+Put the following in your `user/autoexec.cfg`:
 
 ```c
 viewmodel_fov 54
@@ -10,6 +10,12 @@ r_drawviemodel 1
 ```
 
 Instead of `54` for `viewmodel_fov`, you can use any value you prefer.
+
+## Game stutters on join
+
+This is a feature of mastercomfig which fixes the %killername% bug and other HUD bugs.
+
+You can disable it by putting `alias game_overrides_once` into your `user/autoexec.cfg`.
 
 ## TF2 crashes when entering a Competitive Matchmaking match
 
@@ -23,9 +29,7 @@ You will have to exit the game to reset the lock that competitive puts on the ga
 
 ## TF2 exits on startup
 
-This is due a bug from a recent update that causes `mat_antialias` to crash the game when run on startup. Remove `mat_antialias` from your custom configs if you have it, remove `-dxlevel` from your launch options and remove any line with `mat_antialias` in your `tf/cfg/config.cfg` file.
-
-Also make sure you don't have any infinite loops caused by an `exec autoexec` in your custom configs.
+Make sure you don't have any infinite loops caused by an `exec autoexec` in your custom configs (like in your `user/autoexec.cfg`).
 
 ## Animation and/or model mods not working
 
@@ -49,7 +53,7 @@ If TF2 is crashing to desktop after a custom map loading / after picking a class
 
 ## Item panels are taking too long to load
 
-Run `tf_time_loading_item_panels 0.0005` in the console, or add it to your autoexec.
+Add `tf_time_loading_item_panels 0.0005` to `user/autoexec.cfg`.
 
 ## Players' sprays are not working even with the module enabled
 
@@ -59,6 +63,6 @@ Players' sprays are treated like a decal in-game. To get sprays to work, you hav
 
 Ignore these, as these are red herrings that happen in a clean TF2 installation and do not affect FPS.
 
-## `Unknown command "gl_*"`
+## Unknown command "gl_*"
 
 OpenGL-related cvars are only available on Linux and macOS. Therefore, errors of this type appear a few times when using mastercomfig on Windows. These errors are harmless and can be ignored safely.
