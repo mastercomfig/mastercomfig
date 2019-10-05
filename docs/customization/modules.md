@@ -79,14 +79,14 @@ Controls lighting fidelity: dynamic lights, how detailed lighting is, phong, rim
 
 ### Shadows
 
-Controls shadow quality.
+Controls shadow quality. Shadow limits affect rendered shadows. Shadows above the limit will be blobby.
 
 * **`shadows=off`**: No shadows.
-* **`shadows=very_low`**: Up to 8 blob shadows, and no robot shadows.
-* **`shadows=low`**: Up to 12 low quality shadows, and low robot shadow distance.
-* **`shadows=medium`**: Up to 12 medium quality shadows, and medium robot shadow distance.
-* **`shadows=high`**: Up to 18 high resolution shadows, and high robot shadow distance.
-* **`shadows=ultra`**: Up to 32 ultra resolution shadows, and very high robot shadow distance.
+* **`shadows=very_low`**: Blobby shadows.
+* **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
+* **`shadows=medium`**: Up to 10 high quality shadows, and medium robot shadow distance.
+* **`shadows=high`**: Up to 32 high quality shadows, and high robot shadow distance.
+* **`shadows=ultra`**: Up to 128 high quality shadows, and high robot shadow distance.
 
 ### Effects
 
