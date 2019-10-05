@@ -59,9 +59,8 @@ Controls how big packets are and how they are split up/compressed
 
 Controls how detailed objects are and how decorations fade in.
 
-* **`lod=very_low`**: Low model detail. Decorations are never drawn.
-* **`lod=low`**: Low  model detail. Decorations pop in quickly.
-* **`lod=medium`**: Low  model detail. Decorations fade in gradually.
+* **`lod=low`**: Low  model detail. Decorations are never drawn.
+* **`lod=medium`**: Low  model detail. Decorations pop in quickly
 * **`lod=medium_high`**: Medium  model detail. Decorations fade in gradually.
 * **`lod=high`**: High model detail. Decorations fade out only when far away.
 * **`lod=ultra`**: Forces high model detail regardless of distance. Decorations fade out only when far away.
