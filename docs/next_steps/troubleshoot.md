@@ -13,7 +13,7 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 ## Game stutters on join
 
-To counteract the %killername% bug and other HUD bugs, mastercomfig runs `hud_reloadscheme` on your first life, with the caveat of the game stuttering/freezing when you first join.
+To counteract the %killername% bug and other HUD bugs, mastercomfig runs `hud_reloadscheme` on the first spawn of your first match, with the caveat of the game stuttering/freezing when you first join.
 
 You can disable it by adding `alias game_overrides_once` to your `user/autoexec.cfg`, though this is not recommended.
 
