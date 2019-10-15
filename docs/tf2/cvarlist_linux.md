@@ -3536,7 +3536,7 @@ vr_moveaim_reticle_yaw_limit             : 10       : , "a", "cl"      : Beyond 
 vr_moveaim_reticle_yaw_limit_zoom        : 0        : , "a", "cl"      : Beyond this number of degrees, the mouse drags the torso
 vr_projection_znear_multiplier           : 0        : , "cl"           : Allows moving the ZNear plane to deal with body clipping
 vr_refresh_distortion_texture            : cmd      :                  :
-vr_render_hud_in_world                   : 1        : , "cl"           :
+vr_render_hud_in_world                   : 1        : , "cl"           : 
 vr_reset_home_pos                        : cmd      :                  : Sets the current HMD position as the zero point
 vr_stereo_mono_set_eye                   : 0        : , "cl"           : 0=off, Set all eyes to 1=left, 2=right, 3=middle eye
 vr_stereo_swap_eyes                      : 0        : , "cl"           : 1=swap eyes.
