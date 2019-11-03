@@ -92,10 +92,8 @@ Controls shadow quality. Shadow limits affect rendered shadows. Shadows above th
 
 Controls weapon and other miscellaneous effects
 
-* **`effects=very_low`**: disables shell casing ejection, disables muzzle flashes, minimizes bullet tracers, disables water splashes, disables collision checking of some effects,
 * **`effects=low`**: disables shell casing ejection, disables muzzle flashes, shows first person tracers, disables water splashes, optimizes collision checking of some effects
-* **`effects=medium`**: disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, optimizes collision checking of some effects
-* **`effects=medium_high`**: disables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes, optimizes collision checking of some effects
+* **`effects=medium`**: enables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, optimizes collision checking of some effects
 * **`effects=high`**: enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes, optimizes collision checking of some effects
 * **`effects=ultra`**: enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes, does very accurate collision checking of some effects
 
