@@ -3,7 +3,7 @@
 Here are a few awesome TF2 modifications:
 
 * [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
-  — Makes TF2 a lot cleaner and simpler
+  — Makes TF2 a lot cleaner and simpler, includes Nohats
 * [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases)
   —  Fix issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons
 * [No explosion smoke script](https://www.teamfortress.tv/25647/no-explosion-smoke-script)
