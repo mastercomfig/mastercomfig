@@ -46,6 +46,26 @@ Controls how big packets are and how they are split up/compressed
 * **`packet_size=minimal`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
 * **`packet_size=balanced`**: Uses a reasonably large packet size limit that should work with most routers except the lowest end ones. Compresses minimally.
 
+### Bandwidth
+
+Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow.
+
+**Note:** This does not increase data usage, just restricts how quickly data can be sent.
+
+* **`bandwidth=restricted`**: Highly restricted game traffic for very bad Internet.
+* **`bandwidth=384Kbps`**: 384Kbps game traffic bandwidth.
+* **`bandwidth=512Kbps`**: 512Kbps game traffic bandwidth.
+* **`bandwidth=768Kbps`**: 768Kbps game traffic bandwidth.
+* **`bandwidth=1.0Mbps`**: 1.0Mbps game traffic bandwidth.
+* **`bandwidth=1.5Mbps`**: 1.5Mbps game traffic bandwidth.
+* **`bandwidth=2.0Mbps`**: 2.0Mbps game traffic bandwidth.
+* **`bandwidth=2.5Mbps`**: 2.5Mbps game traffic bandwidth.
+* **`bandwidth=3.0Mbps`**: 3.0Mbps game traffic bandwidth.
+* **`bandwidth=4.0Mbps`**: 4.0Mbps game traffic bandwidth.
+* **`bandwidth=unrestricted`**: A high rate that should be good for all game traffic.
+* **`bandwidth=max`**: The absolute maximum rate allowed by the game.
+
+
 ### Downloads
 
 * **`download=all`**: Download all custom files from servers
