@@ -243,10 +243,10 @@ Controls decals sprayed by players
 * **`gibs=medium`**: Default number of gibs
 * **`gibs=high`**: Default number of gibs, gibs can burn
 
-### Silly gibs
+### Low violence
 
-* **`sillygibs=off`**: Normal gibs and blood
-* **`sillygibs=on`**: Birthday style low violence gibs and blood
+* **`lowviolence=off`**: Normal gibs and blood
+* **`lowviolence=on`**: Turns on low violence mode. In TF2, this means birthday style gibs and blood.
 
 ### Props
 
