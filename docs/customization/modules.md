@@ -335,11 +335,11 @@ Toggle health/player info panels.
 * **`killstreaks=low`**: Enables killstreak solid banner
 * **`killstreaks=high`**: Enables killstreak translucent banner
 
-### Xrays
+### Outlines
 
-* **`xrays=off`**: Completely disable xrays
-* **`xrays=low`**: Enable xray labels for players
-* **`xrays=high`**: Enable labels for players and outline for players and objective
+* **`outlines=off`**: Disable outlines and nametags
+* **`outlines=low`**: Enable nametags, disable outlines
+* **`outlines=high`**: Enable nametags and outlines
 
 ### Map Background
 
