@@ -20,14 +20,6 @@
         <div class="container d-flex align-items-center" style="min-height: 100%">
             <div class="align-middle">
                 <h1 class="display-4" id="title">Download mastercomfig</h1>
-                <div style="background: #009688;width: 100%;padding: 1rem 2rem" class="jumbotron">
-                    <p class="lead">mastercomfig 7 is now available in alpha!</p>
-                    <p>
-                      Easily customize your config in an easy to use, quick install app.<br>
-                      <b>Note: mastercomfig 7 alpha is outdated compared to mastercomfig 6, and does not have the latest configuration value improvements in the stable mastercomfig 6.</b>
-                    </p>
-                    <a href="/7" class="btn btn-primary" style="border-radius:0.25rem">Get mastercomfig 7</a>
-                </div>
                 <div class="text-light lead">
                   <p><a href="https://docs.mastercomfig.com/en/latest/support_me/"><b>Support me</b></a></p>
                   <p><a href="https://docs.mastercomfig.com/en/latest/setup/clean_up/"><b>Initial Setup Instructions</b></a></p>
@@ -58,11 +50,13 @@
                   </a>
                   <a class="list-group-item list-group-item-action list-group-item-dark" id="low" href="#">
                     <h5 class="mb-1">Low</h5>
-                    <p class="mb-1">Maximum performance without caring much about visibility or possible bugs.</p>
+                    <p class="mb-1">Maximum performance without caring much about visibility or possible visual glitches.</p>
                   </a>
                   <a class="list-group-item list-group-item-action list-group-item-dark" id="very-low" href="#">
                     <h5 class="mb-1">Very Low</h5>
-                      <p class="mb-1">Negatively affects playability by <strong>a lot</strong> and disables very essential features in desperation for performance.</p>
+                      <p class="mb-1">Negatively affects playability by <strong>a lot</strong> and disables very essential features like HUD elements in desperation for performance.
+                        <br>Not recommended unless the game has such low performance that it is more of a hinderance than not having HUD elements and good player visibility.
+                      </p>
                   </a>
                 </div>
                 <hr>
@@ -121,20 +115,6 @@
                     <input type="checkbox" class="custom-control-input" id="badgpu">
                     <label class="custom-control-label" for="badgpu">
                       <b>Bad GPU</b> &mdash; Optimizations that generally do not affect quality for weak integrated graphics chips (Intel graphics) or weak/old GPUs (lower end made before 2007). If you have to use this, it's recommended to use Medium Low, Low or Very Low presets. <strong>WARNING: can potentially REDUCE performance on other graphics cards!!!</strong>
-                    </label>
-                  </div>
-                  <br>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="badcpu">
-                    <label class="custom-control-label" for="badcpu">
-                      <b>Bad CPU</b> &mdash; Optimizations that generally do not affect quality for bad CPUs If have to you use this, it's recommended to use the Low or Very Low presets. <strong>WARNING: can potentially REDUCE performance on other CPUs!!!</strong>
-                    </label>
-                  </div>
-                  <br>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="slowio">
-                    <label class="custom-control-label" for="slowio">
-                      <b>Slow I/O</b> &mdash; Optimizations that generally do not affect quality for slow disk drives. Use this if you experience extreme stuttering when you join a map. <strong>WARNING: will REDUCE performance on fast I/O!!!</strong>
                     </label>
                   </div>
                   <br>
