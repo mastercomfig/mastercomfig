@@ -38,8 +38,8 @@ f="comfig/autoexec.cfg"
 file="autoexec.cfg"
 label="empty%20autoexec%file"
 curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
--T $f \
-"$assets_url?name=$file&label=$label"
+    -T $f \
+    "$assets_url?name=$file&label=$label"
 
 f="comfig/modules.cfg"
 file="modules.cfg"
