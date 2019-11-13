@@ -48,11 +48,11 @@ Controls how big packets are and how they are split up/compressed
 
 ### Bandwidth
 
-Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow.
+Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits).
 
 **Note:** This does not increase data usage, just restricts how quickly data can be sent.
 
-* **`bandwidth=restricted`**: Highly restricted game traffic for very bad Internet.
+* **`bandwidth=restricted`**: Highly restricted game traffic for very bad Internet (192Kbps).
 * **`bandwidth=384Kbps`**: 384Kbps game traffic bandwidth.
 * **`bandwidth=512Kbps`**: 512Kbps game traffic bandwidth.
 * **`bandwidth=768Kbps`**: 768Kbps game traffic bandwidth.
@@ -62,8 +62,8 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 * **`bandwidth=2.5Mbps`**: 2.5Mbps game traffic bandwidth.
 * **`bandwidth=3.0Mbps`**: 3.0Mbps game traffic bandwidth.
 * **`bandwidth=4.0Mbps`**: 4.0Mbps game traffic bandwidth.
-* **`bandwidth=unrestricted`**: A high rate that should be good for all game traffic.
-* **`bandwidth=max`**: The absolute maximum rate allowed by the game.
+* **`bandwidth=unrestricted`**: A high rate that should be good for all game traffic (6.0Mbps).
+* **`bandwidth=max`**: The absolute maximum rate allowed by the game (10.0Mbps).
 
 
 ### Downloads
