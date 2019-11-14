@@ -88,4 +88,3 @@ precache
 
 	"model"			"models/items/medkit_small.mdl"
 }
-
