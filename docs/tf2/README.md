@@ -8,7 +8,7 @@ A list of Windows TF2 cvars.
 
 ## Making your own cvar list
 
-1. Remove mastercomfig VPK and add these launch options: `-novid -autoconfig -default -conclearlog -condebug +cvarlist +quit`.
+1. Remove mastercomfig VPK and add these launch options: `-novid -autoconfig -default -conclearlog -condebug +clear +cvarlist +quit`.
 2. Launch TF2
 3. Remove launch options, add mastercomfig again.
 4. Copy and paste `tf/console.log` cvarlist.
