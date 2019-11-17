@@ -1,18 +1,33 @@
 # Customization
 
-mastercomfig overrides configs in `tf/cfg`. You'll have to move them to a new folder in `tf/cfg` called `user`.
+mastercomfig overrides configs in `tf/cfg`. You'll have to move them to a new folder in `tf/cfg` called `user`. If you don't have this folder, you can make it.
 
 So, if you already have an `autoexec.cfg`, just move it to `tf/cfg/user/`. Make sure you don't have a pre-existing
 full blown config like Comanglia's or Chris' config or some network config in your `autoexec.cfg`, as that will
 conflict with mastercomfig.
 
-If you don't have an `autoexec.cfg`, you can create a `autoexec.cfg` in your `tf/cfg/user/` folder to override any settings in the config.
+If you don't have an `autoexec.cfg`, you can [download a blank one](https://github.com/mastercoms/mastercomfig/releases/latest/download/autoexec.cfg) and move it to your `tf/cfg/user/` folder to override any settings in the config.
 
 If you have any class configs, you will have also have to move them to the `tf/cfg/user` folder.
 
 If there's something you'd like to run for all of your class configs, you can add it to `user/game_overrides.cfg`.
 
 If you have a `listenserver.cfg`, you will have to move it to `user/`. Or create one, if you'd like to execute stuff on local servers.
+
+## Additional Addons
+
+If you would like to distribute or create your own addon, you can create an addon CFG file, and then instruct users to add an exec for it to a `tf/cfg/user/addons.cfg`.
+
+So, for example, if you made an addon which customized the crosshair, you could name it `my-crosshair.cfg`, add it to the `tf/cfg/addons` folder and then add `exec addons/my-crosshair` to `tf/cfg/user/addons.cfg`.
+
+Custom addons run after presets, modules, and built-in mastercomfig addons, but before the user's autoexec.
+
+## Utility Commands
+
+* `run_modules`: applies modules. useful for changing module levels in-game, and then applying them all at once.
+* `restore_preset`: restores modules back to preset defaults, without using user settings.
+* `restore_config`: runs all of mastercomfig and user configs again, resetting changes made in-game.
+* `version_comfig`: outputs the version of mastercomfig currently being used.
 
 ## Optional Aliases
 
