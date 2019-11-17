@@ -295,7 +295,7 @@ Controls cloth and joint physics on some items like the fish and skull bat
 
 ### Killstreak Sheens Speed
 
-How fast the animation is on the killstreak sheen glow on weapons.
+How fast the animation is on the killstreak sheen glow for weapons.
 
 * **`sheens_speed=slow`**: Slow speed.
 * **`sheens_speed=medium`**: The standard speed.
@@ -303,7 +303,7 @@ How fast the animation is on the killstreak sheen glow on weapons.
 
 ### Killstreak Sheens Tint Intensity
 
-How intense the color tint is on the killstreak sheen glow on weapons.
+How intense the color tint is on the killstreak sheen glow for weapons.
 
 * **`sheens_tint=low`**: Base tint.
 * **`sheens_tint=medium`**: Small tint boost.
