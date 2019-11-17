@@ -18,7 +18,7 @@ These launch options may be creating an improper video mode, which is not prefer
 
 ## Bad CVars
 * `mat_shadowstate` : Does not exist
-* `mat_parallaxmap` : Does not exist
+* `mat_parallaxmap` : Not used
 * `rate 60000` : This is lower than the TF2 default rate of `80000`. TF2 default network settings are already on the low-end. Why would you set rate lower, especially when you're increasing packet rates (`cl_updaterate 66`, `cl_cmdrate 66`)?
 * `cl_interp 0.033` : This is a typo that was made somewhere along the way. The correct rate is `cl_interp_ratio 2; cl_interp 0.0303`. This is equal 2 / 66.
 * `cl_interp 0.0152` : This means you will be subject to inaccurate extrapolation which is not in line with the server's history, all for getting lower visual latency on entity positions within a few milliseconds, which doesn't matter when positions cannot be substantially different within that time. Instead, make sure your entity positions are at least in line with the server's history as that is substantially more important for lag compensation and your own perception when prediction position based on velocity/trajectory.

@@ -19,6 +19,7 @@ for P in "${presets[@]}"; do
     touch $autoexec_file
     echo "exec comfig/comfig" > $autoexec_file
     echo "exec presets/${P}" >> $autoexec_file
+    echo "exec user/define_modules" >> $autoexec_file
     echo "exec user/modules" >> $autoexec_file
     echo "exec modules.log" >> $autoexec_file
     echo "run_modules" >> $autoexec_file

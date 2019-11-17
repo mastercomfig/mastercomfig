@@ -21,6 +21,13 @@ If you want to disable running a module entirely, you can put (for example) `ali
 
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
 
+### Custom modules
+You can also create your own modules. Here are user versions of internal mastercomfig definitions:
+
+* `comfig/comfig.cfg` (define module levels): `user/define_modules.cfg`
+* `comfig/modules_run.cfg` (apply modules): `user/modules_run.cfg`
+* `comfig/select_modules.cfg` (define in-game selection commands): `user/select_modules.cfg`
+
 ## Network modules
 
 ### Packet rate
@@ -286,6 +293,23 @@ Controls cloth and joint physics on some items like the fish and skull bat
 * **`jigglebones=on`**: Disable jigglebones only if the framerate is below 67FPS
 * **`jigglebones=force_on`**: Never disable jigglebones
 
+### Killstreak Sheens Speed
+
+How fast the animation is on the killstreak sheen glow on weapons.
+
+* **`sheens_speed=slow`**: Slow speed.
+* **`sheens_speed=medium`**: The standard speed.
+* **`sheens_speed=fast`**: Faster speed.
+
+### Killstreak Sheens Tint Intensity
+
+How intense the color tint is on the killstreak sheen glow on weapons.
+
+* **`sheens_tint=low`**: Base tint.
+* **`sheens_tint=medium`**: Small tint boost.
+* **`sheens_tint=high`**: High tint boost.
+* **`sheens_tint=full`**: Maximum tint boost.
+
 ### Texture quality
 
 Controls texture quality
@@ -367,8 +391,10 @@ Toggle health/player info panels.
 
 ### Map Background
 
-* **`dynamic_background=off`**: No live map main menu background on startup
-* **`dynamic_background=on`**: Live map main menu background on startup
+* **`dynamic_background=off`**: No main menu map background on startup
+* **`dynamic_background=preload_room`**: `preload_room` map background for yttrium preloading (auto disconnects)
+* **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects)
+* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup
 
 ## Sound modules
 
