@@ -27,8 +27,10 @@ Since modules aliases act like normal commands, they can also be used in console
 
 Controls how fast you send and receive from the server.
 
-* **`packet_rate=congestion`**: A lower packet rate for congested networks, usually WiFi
-* **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
+* **`packet_rate=congestion`**: A halved packet rate for congested networks, usually bad WiFi
+* **`packet_rate=conservative`**: A lower packet rate for slower or less reliable networks, usually WiFi or slow Ethernet (PoE, low bandwidth, etc.)
+* **`packet_rate=balanced`**: A 60 packet rate, for getting rid of extra packets usually not displayed on 60Hz monitors.
+* **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all servers.
 
 ### Snapshots
 

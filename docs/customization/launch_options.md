@@ -20,11 +20,11 @@ DXLevel Launch options are very system dependent so you will only find the best 
 However, `-dxlevel 95` is your best bet and works for most people.
 
 ### Windows (recommended dxlevel)
-* **-dxlevel 95** : DirectX 9Ex
+* **-dxlevel 95** : DirectX 9+
 
 ### Windows (alternative dxlevels)
 * **-dxlevel 90** : Shader Model 2
-* **-dxlevel 100** : DirectX 9Ex (max settings allowed, no GPU feature support checking)
+* **-dxlevel 100** : DirectX 9++ (max settings allowed, no GPU feature support checking)
 
 ### OpenGL (Linux and macOS) (recommended dxlevel)
 * **-dxlevel 92** : OpenGL partial Shader Model 3
