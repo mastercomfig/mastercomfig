@@ -225,6 +225,8 @@ Controls bullet holes and overall decal support
 * **`decals=high`**: 96 max decals that hide at a far away range that can overlap much more
 * **`decals=ultra`**: 2048 max decals (engine limit) that do not hide and can overlap with practically no limit
 
+Note that in the Very Low preset, decals are forced invisible.
+
 ### Model decals
 
 Controls blood on hurt players and some bullet decals on props
