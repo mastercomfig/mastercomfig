@@ -1,6 +1,14 @@
 # Dev scripts
 This folder contains scripts to build release files and manage releases.
 
+## No Tutorial Viewed
+
+`no_tutorial_viewed.sh` generates `viewed.res` for the No Tutorial addon, by
+setting a viewed count that disables goal notifications ("You are now
+Attacking!") and map intro movies. It does this by temporarily copying
+`generate_viewed.sh` to `TF2_DIR/tf/maps` and executing it, and moving the
+resultant `viewed.res` into the No Tutorial addon's `media` folder.
+
 ## Packaging
 This creates the necessary files for releases (VPKs for addons and presets,
 and the autoexecs for cfg.tf).
@@ -46,4 +54,5 @@ This is a file that must be supplied by the user with the following entries:
 export DISCORD_WEBHOOK="Discord webhook for config announcements"
 export GH_USERNAME="GitHub username used for authentication for release deployment"
 export GH_TOKEN="GitHub authentication token used for release deployment"
+export TF2_DIR="path to Team Fortress 2 directory"
 ```

@@ -4,7 +4,7 @@ Modules are groups of related commands with specific values for a certain use ca
 ## How to use
 Modules are [used in presets](https://github.com/mastercoms/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in a `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example, `textures=high`.
 
-You can [download an empty modules.cfg](https://github.com/mastercoms/mastercomfig/releases/latest/download/modules.cfg) file and drag it into your `tf/cfg/user` folder to get started.
+You can [download the modules.cfg template](https://github.com/mastercoms/mastercomfig/releases/latest/download/modules.cfg) file and drag it into your `tf/cfg/user` folder to get started.
 
 ### In game selection
 
@@ -12,7 +12,7 @@ You can select modules in game using the console. Just enter the module you'd li
 
 For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
 
-**How does it work?** It logs things to a file called `tf/cfg/modules.log`, and then executes that modules.log as a config file.
+**How does it work?** It logs things to a file called `tf/cfg/modules.log`, and then executes that `modules.log` as a config file.
 
 ### Advanced
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.

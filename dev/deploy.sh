@@ -41,9 +41,11 @@ curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-strea
     -T $f \
     "$assets_url?name=$file&label=$label"
 
+cp -f "../config/templates/modules.cfg" "comfig/"
+
 f="comfig/modules.cfg"
 file="modules.cfg"
-label="empty%20modules%20file"
+label="modules%20template"
 curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
   -T $f \
   "$assets_url?name=$file&label=$label"
