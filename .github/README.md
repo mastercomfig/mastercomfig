@@ -32,7 +32,7 @@ future update.
 
 ## Docs
 
-For more information, including installation steps, check out [the docs](https://docs.mastercomfig.com/en/latest/).
+For more information, including installation steps, check out [the docs](https://docs.mastercomfig.com/en/stable/).
 
 ## Support me
 

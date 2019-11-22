@@ -2,8 +2,8 @@ Looking for help with mastercomfig?
 
 Check these resources out:
 
-* [Troubleshooting guide](https://docs.mastercomfig.com/en/latest/next_steps/troubleshoot/)
-* [Setup Instructions](https://docs.mastercomfig.com/en/latest/setup/clean_up/)
+* [Troubleshooting guide](https://docs.mastercomfig.com/en/stable/next_steps/troubleshoot/)
+* [Setup Instructions](https://docs.mastercomfig.com/en/stable/setup/clean_up/)
 
 Still can't find your answer and want to ask for help?
 
