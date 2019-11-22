@@ -196,7 +196,7 @@
         var version = null;
 
         var addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "flat-mouse", "transparent-viewmodels", "badgpu", "lowmem"];
-        var selectedPreset = "";
+        var selectedPreset = "medium-high";
         var selections = [];
 
         var storage = localStorage;
@@ -259,7 +259,7 @@
         function setPreset(id, no_set) {
           storage.setItem('preset', id); // save preset selection
           $(document.getElementById(id)).tab('show'); // visually select in tabs menu
-          selectedPreset = "medium-high"; // save download ID
+          selectedPreset = id; // save download ID
           vpkDownload.removeAttribute('href'); // we don't need the static download anymore
           vpkDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset and selected addons VPKs'.format(presets.get(id)); // update preset text
           // if not loading from storage, set recommended addons
