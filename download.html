@@ -215,8 +215,9 @@
 
         function downloadUrls(urls) {
             urls[0].then((result) => {
-                console.log(result.url);
-                window.location = result.url;
+                if (result.url !== "") {
+                    window.location = result.url;
+                }
                 if (urls.length > 1) {
                     setTimeout(() => {
                         return downloadUrls(urls.slice(1));
@@ -226,7 +227,9 @@
         }
 
         function download() {
-            var downloads = [];
+            var downloads = [Promise.resolve({
+                url: ""
+            })];
             downloads.push(Promise.resolve({
                 url: getPresetUrl()
             }));
