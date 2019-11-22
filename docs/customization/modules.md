@@ -128,6 +128,8 @@ Controls weapon and other miscellaneous effects
 * **`effects=high`**: enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes
 * **`effects=ultra`**: enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes
 
+Note: the way TF2 uses these settings is inconsistent and may not apply in all cases.
+
 ### Water
 
 Controls water reflections
