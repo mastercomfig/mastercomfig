@@ -129,18 +129,9 @@
                 <hr>
                 <h2>Download your VPKs</h2>
                 <p>Just drop them in your <code>tf/custom</code> folder and they'll automatically run.</p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Medium High preset VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="no-extra-models-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Extra Models addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="no-footsteps-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Footsteps addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="no-pyroland-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Pyroland addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="no-soundscapes-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Soundscapes addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="no-tutorial-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Tutorial addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="flat-mouse-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Flat Mouse addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="transparent-viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="lowmem-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Low Memory addon VPK</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/autoexec.cfg empty file</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="modules-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/modules.cfg template</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="vpk-dl" style="cursor: pointer"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Medium High preset and selected addons VPKs</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/autoexec.cfg" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/autoexec.cfg empty file</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/modules.cfg" class="text-light" id="modules-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/modules.cfg template</a></p>
                 <br><br>
             </div>
         </div>
@@ -152,104 +143,170 @@
     <script>
       "use strict";
 
-      jQuery(function() {
+      $(() => {
         app();
       });
 
       function app() {
-        var presets = new Map();
-        presets.set("ultra", "Ultra");
-        presets.set("high", "High");
-        presets.set("medium-high", "Medium High");
-        presets.set("medium", "Medium");
-        presets.set("medium-low", "Medium Low");
-        presets.set("low", "Low");
-        presets.set("very-low", "Very Low");
+          // convenience format method for string
+          String.prototype.format = function() {
+            const args = arguments;
+            return this.replace(/{(\d+)}/g, (match, number) => {
+              return typeof args[number] !== 'undefined' ? args[number] : match;
+            });
+          };
+
+        var presets = new Map([
+            ["ultra", "Ultra"],
+            ["high", "High"],
+            ["medium-high", "Medium High"],
+            ["medium", "Medium"],
+            ["medium-low", "Medium Low"],
+            ["low", "Low"],
+            ["very-low", "Very Low"]
+        ]);
+
+        const recommendableAddons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"];
 
         var recommendedAddons = new Map();
-        recommendedAddons.set("ultra", []);
-        recommendedAddons.set("high", ["no-extra-models"]);
-        recommendedAddons.set("medium-high", ["no-extra-models"]);
-        recommendedAddons.set("medium", ["no-extra-models"]);
-        recommendedAddons.set("medium-low", ["no-extra-models"]);
-        recommendedAddons.set("low", ["no-extra-models", "no-pyroland", "no-soundscapes"]);
-        recommendedAddons.set("very-low", ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"]);
 
-        var downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/download/{0}/mastercomfig-";
-        var addonUrl = downloadUrl + "{1}-addon.vpk";
-        var presetUrl = downloadUrl + "{1}-preset.vpk";
+        function setRecommendedAddons(id, values) {
+            // don't set non-recommendable addons
+            let addons = values.filter(addon => recommendableAddons.indexOf(addon) !== -1);
+            if (addons.length != values.length) {
+                console.error("Attempted to set non-recommendable addon!");
+            }
+            recommendedAddons.set(id, addons);
+        }
 
-        var presetDownload = document.getElementById('preset-dl');
+        setRecommendedAddons("ultra", []);
+        setRecommendedAddons("high", ["no-extra-models"]);
+        setRecommendedAddons("medium-high", ["no-extra-models"]);
+        setRecommendedAddons("medium", ["no-extra-models"]);
+        setRecommendedAddons("medium-low", ["no-extra-models"]);
+        setRecommendedAddons("low", ["no-extra-models", "no-pyroland", "no-soundscapes"]);
+        setRecommendedAddons("very-low", ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"]);
+
+        var downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-";
+        var addonUrl = downloadUrl + "{0}-addon.vpk";
+        var presetUrl = downloadUrl + "{0}-preset.vpk";
+
+        var vpkDownload = document.getElementById('vpk-dl');
 
         var version = null;
 
         var addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "flat-mouse", "transparent-viewmodels", "badgpu", "lowmem"];
+        var selectedPreset = "";
+        var selections = [];
 
         var storage = localStorage;
 
-        function toggleAddon(id) {
+        function getDownloadUrl(id, preset) {
+            return (preset ? presetUrl : addonUrl).format(id);
+        }
+
+        function getAddonUrl(id) {
+            return getDownloadUrl(id, false);
+        }
+
+        function getPresetUrl() {
+            return getDownloadUrl(selectedPreset, true);
+        }
+
+        function downloadUrls(urls) {
+            urls[0].then((result) => {
+                window.location = result.url;
+                if (urls.length > 1) {
+                    setTimeout(() => {
+                        return downloadUrls(urls.slice(1));
+                    }, 2000);
+                }
+            });
+        }
+
+        function download() {
+            var downloads = [];
+            downloads.push(Promise.resolve({
+                url: getPresetUrl()
+            }));
+            for (const selection of selections) {
+                downloads.push(Promise.resolve({
+                    url: getAddonUrl(selection)
+                }));
+            }
+            downloadUrls(downloads);
+        }
+
+        // update addon state based on checked
+        function updateAddon(id) {
           setAddon(id, document.getElementById(id).checked);
         }
 
+        // set addon enabled/disabled
         function setAddon(id, checked) {
           storage.setItem(id, checked);
           checked = storage.getItem(id) === 'true';
-          document.getElementById(id + "-dl").style.display = checked ? "initial" : "none";
+          if (checked) {
+              if (selections.indexOf(id) === -1) {
+                  selections.push(id);
+              }
+          } else {
+              selections = selections.filter(selection => selection !== id);
+          }
           document.getElementById(id).checked = checked;
         }
 
         function setPreset(id, no_set) {
-          storage.setItem('preset', id);
-          jQuery(document.getElementById(id)).tab('show');
-          presetDownload.setAttribute('href', presetUrl.format(version, id));
-          presetDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset VPK'.format(presets.get(id));
+          storage.setItem('preset', id); // save preset selection
+          $(document.getElementById(id)).tab('show'); // visually select in tabs menu
+          selectedPreset = "medium-high"; // save download ID
+          vpkDownload.removeAttribute('href'); // we don't need the static download anymore
+          vpkDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset and selected addons VPKs'.format(presets.get(id)); // update preset text
+          // if not loading from storage, set recommended addons
           if (!no_set) {
-            if (id !== "very-low") {
-              ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"].forEach(function (addon) {
-                setAddon(addon, false)
+              // reset all recommendable addons
+              recommendableAddons.forEach((addon) => {
+                  setAddon(addon, false);
               });
-            }
-            recommendedAddons.get(id).forEach(function (addon) {
-              setAddon(addon, true);
-            });
+              // set recommended addons
+              recommendedAddons.get(id).forEach((addon) => {
+                  setAddon(addon, true);
+              });
           }
         }
 
-        String.prototype.format = function () {
-          const args = arguments;
-          return this.replace(/{(\d+)}/g, function (match, number) {
-            return typeof args[number] !== 'undefined' ? args[number] : match;
-          });
-        };
-
-        jQuery.get("https://api.github.com/repositories/69422496/releases/latest", function (data) {
+        // get latest release, and update page
+        $.get("https://api.github.com/repositories/69422496/releases/latest", (data) => {
           version = data.tag_name;
-          var versionName = version.indexOf('v') === 0 ? version.substr(1) : version;
-          document.getElementById('autoexec-dl').href = "https://github.com/mastercoms/mastercomfig/releases/download/" + versionName + "/autoexec.cfg";
-          document.getElementById('modules-dl').href = "https://github.com/mastercoms/mastercomfig/releases/download/" + versionName + "/modules.cfg";
+          let versionName = version.indexOf('v') === 0 ? version.substr(1) : version; // some releases use the v prefix, ignore it
+          // update title with version
           document.getElementById('title').innerText = "Download mastercomfig " + versionName;
+          // if we have a stored preset, load it
           if (storage.getItem('preset')) {
             setPreset(storage.getItem('preset'), true);
           } else {
             setPreset('medium-high');
           }
-          addons.forEach(function (id) {
-            document.getElementById(id + '-dl').setAttribute('href', addonUrl.format(version, id));
+          for (const id of addons) {
             if (storage.getItem(id)) {
               setAddon(id, storage.getItem(id))
             } else {
               setAddon(id, false);
             }
-          });
+          }
         }, "json");
 
-        jQuery('#presets a').on('click', function (e) {
+        $('#presets a').on('click', function(e) {
           e.preventDefault();
           setPreset(this.id);
         });
 
-        jQuery("input[type='checkbox']").change(function () {
-          toggleAddon(this.id);
+        $('#vpk-dl').on('click', function() {
+            download();
+        });
+
+        $("input[type='checkbox']").change(function() {
+          updateAddon(this.id);
         });
       }
     </script>
