@@ -24,8 +24,6 @@ cp -rf ../../config/addons/* .
 # Package into VPK
 for D in *; do
     if [ -d "${D}" ]; then
-        mkdir -p "${D}/sounds"
-        touch "${D}/sounds/sound.cache"
         vpk "${D}"
     fi
 done
