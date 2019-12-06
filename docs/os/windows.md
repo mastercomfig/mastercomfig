@@ -19,3 +19,11 @@ Go to the Gaming tab, then set global settings or for Team Fortress 2 only if yo
 
 ## Disable Unnecessary Services
 You can use the [W10Privacy tool](https://www.winprivacy.de/deutsch-start/download/) to reduce disk load and other workloads to [improve performance](https://www.phoronix.com/scan.php?page=article&item=windows10-w10priv-wsl).
+
+## Networking optimization
+
+Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your internet settings.
+
+1. Choose your connection speed with the slider at the top.
+2. Choose the optimal setting at the bottom.
+3. Click apply changes.

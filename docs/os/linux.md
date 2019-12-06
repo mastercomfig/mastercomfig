@@ -16,6 +16,14 @@ Balance IRQ interrupts across multiple cores by installing the `irqbalance` pack
 ## Ananicy
 You can install `schedtool` and [Ananicy](https://github.com/Nefelim4ag/Ananicy) and enable the `ananicy` to get automatically applied ruled based process priority balancing to improve resources allocated to TF2.
 
+## Networking optimization
+
+See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Improving_performance) for information about improving networking parameters for performance.
+
+## Virtual memory optimization
+
+See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_memory) for information about improving virtual memory parameters.
+
 ## Native Libraries
 
 **Warning: While unlikely, it is unknown whether using native libraries is safe to do due to VAC (Valve Anti-Cheat). Continue at your own risk
