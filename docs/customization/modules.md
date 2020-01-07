@@ -115,7 +115,7 @@ Controls shadow quality. Shadow limits affect rendered shadows. Shadows above th
 * **`shadows=off`**: No shadows.
 * **`shadows=very_low`**: Blobby shadows.
 * **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
-* **`shadows=medium`**: Up to 10 high quality shadows, and medium robot shadow distance.
+* **`shadows=medium`**: Up to 12 high quality shadows (for 6v6 Competitive Matchmaking), and medium robot shadow distance.
 * **`shadows=high`**: Up to 32 high quality shadows, and high robot shadow distance.
 * **`shadows=ultra`**: Up to 128 high quality shadows, and high robot shadow distance.
 
