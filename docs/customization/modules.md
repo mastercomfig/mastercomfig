@@ -175,8 +175,7 @@ Controls pyrovision visual effects
 Controls blurring effect from rotation and movement
 
 * **`motion_blur=off`**: Turns off motion blur
-* **`motion_blur=low`**: Turns on motion blur but reduces it significantly
-* **`motion_blur=high`**: Motion blur fully enabled
+* **`motion_blur=on`**: Turns on motion blur
 
 ### Antialiasing
 
@@ -279,8 +278,7 @@ Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade
 Control physics simulation and fading for bodies that spawn on death
 
 * **`ragdolls=off`**: Disables ragdolls
-* **`ragdolls=medium`**: Enables standard ragdolls
-* **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time
+* **`ragdolls=on`**: Enables standard ragdolls with optimizations
 
 ### 3D sky
 
@@ -389,9 +387,8 @@ Toggle health/player info panels.
 
 ### Outlines
 
-* **`outlines=off`**: Disable outlines and nametags
-* **`outlines=low`**: Enable nametags, disable outlines
-* **`outlines=high`**: Enable nametags and outlines
+* **`outlines=off`**: Disable nametags and outlines
+* **`outlines=on`**: Enable nametags and outlines
 
 ### Map Background
 
