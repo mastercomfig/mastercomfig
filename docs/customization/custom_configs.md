@@ -11,7 +11,7 @@ If you don't have an `autoexec.cfg`, you can [download a blank one](https://gith
 If you have any class configs, you will have also have to move them to the `tf/cfg/user` folder.
 
 If there's something you'd like to run for all of your class configs, you can add it to `user/game_overrides.cfg`. Note: when playing Valve Competitive Matchmaking, the game overrides are skipped.
-If there's something you'd like to run once you spawn on a match for all of your class configs, you can add it to `user/game_overrides_once.cfg`.
+If you want to run something only the first time you spawn and never run again while you keep the game open, you can add it to `user/game_overrides_once.cfg`.
 
 If you have a `listenserver.cfg`, you will have to move it to `user/`. Or create one, if you'd like to execute stuff on local servers.
 
@@ -45,8 +45,6 @@ For example, you can put `alias listenserver_c "exec user/mylistenserver"` in `u
 
 You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
-
-If you want to run something only the first time you spawn and never run again while you keep the game open use the `game_overrides_once_c` alias.
 
 ## Optional User Config Template
 
