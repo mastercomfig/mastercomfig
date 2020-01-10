@@ -278,7 +278,7 @@ Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade
 Control physics simulation and fading for bodies that spawn on death
 
 * **`ragdolls=off`**: Disables ragdolls
-* **`ragdolls=on`**: Enables standard ragdolls with optimizations
+* **`ragdolls=on`**: Enables standard ragdolls
 
 ### 3D sky
 
