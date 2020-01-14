@@ -1,6 +1,8 @@
 site_name: 'mastercomfig'
+site_author: 'mastercoms'
+site_url: 'https://docs.mastercomfig.com/'
 site_description: 'A modern Team Fortress 2 performance and customization config.'
-copyright: 'Copyright (c) 2016-2019 mastercoms<br><br>Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress
+copyright: 'Copyright (c) 2016-2020 mastercoms<br><br>Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress
 logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.<br><br>mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.'
 strict: true
 nav:
@@ -40,7 +42,11 @@ markdown_extensions:
     - smarty
     - toc:
         permalink: true
-    - codehilite
+    - codehilite:
+        guess_lang: False
+        use_pygments: True
+        noclasses: True
+        pygments_style: monokai
     - meta
     - pymdownx.emoji
     - pymdownx.magiclink
@@ -59,6 +65,7 @@ repo_url: 'https://github.com/mastercoms/mastercomfig/'
 edit_uri: 'https://github.com/mastercoms/mastercomfig/edit/release/docs/'
 extra_css:
   - 'stylesheets/extra.css'
+  - 'stylesheets/dark.css'
 extra:
     repo_icon: 'github'
     social:
