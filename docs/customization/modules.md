@@ -115,9 +115,9 @@ Controls shadow quality. Shadow limits affect rendered shadows. Shadows above th
 * **`shadows=off`**: No shadows.
 * **`shadows=very_low`**: Blobby shadows.
 * **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
-* **`shadows=medium`**: Up to 10 high quality shadows, and medium robot shadow distance.
-* **`shadows=high`**: Up to 32 high quality shadows, and high robot shadow distance.
-* **`shadows=ultra`**: Up to 128 high quality shadows, and high robot shadow distance.
+* **`shadows=medium`**: Up to 12 high quality shadows, and medium robot shadow distance.
+* **`shadows=high`**: Up to 18 high quality shadows, and high robot shadow distance.
+* **`shadows=ultra`**: Up to 32 high quality shadows, and high robot shadow distance.
 
 ### Effects
 
@@ -175,8 +175,7 @@ Controls pyrovision visual effects
 Controls blurring effect from rotation and movement
 
 * **`motion_blur=off`**: Turns off motion blur
-* **`motion_blur=low`**: Turns on motion blur but reduces it significantly
-* **`motion_blur=high`**: Motion blur fully enabled
+* **`motion_blur=on`**: Motion blur on
 
 ### Antialiasing
 
