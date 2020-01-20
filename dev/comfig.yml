@@ -1,0 +1,20 @@
+app:
+  base: Source
+  subs: ["Team Fortress 2"]
+config:
+  exec:
+    net_maxpacketdrop: 0
+    cl_timeout: 60
+    cl_interp: "{#cl_interp_ratio / #cl_updaterate}.floor(7)"
+    cl_interp_ratio: 1
+    cl_updaterate: 50
+    cl_cmdrate: 64
+    net_compresspackets_minsize: 180
+    net_maxroutable: 1200
+    net_maxfragments: 1200
+    cl_smoothtime: "#cl_interp"
+    rate: "{[$net.upload.bytes, $net.download.bytes].max * .75}.floor"
+    net_splitpacket_maxrate: 65536
+    net_maxcleartime: "{4000 / #rate}.ceil(7)"
+    mat_filterlightmaps: "[{0}?(@lighting<=low), 1].get"
+    r_ambientboost: "[{0}?(@lighting<=medium), 1].get"
