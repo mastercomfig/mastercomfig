@@ -11,20 +11,12 @@ r_drawviemodel 1
 
 Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
-## Game stutters on join
-
-To counteract the %killername% bug and other HUD bugs, mastercomfig runs `hud_reloadscheme` on the first spawn of your first match, with the caveat of the game stuttering/freezing when you first join.
-
-You can disable it by adding `alias game_overrides_once` to your `user/autoexec.cfg`, though this is not recommended.
-
 ## TF2 crashes when entering a Competitive Matchmaking match
 
 This is due to the config reset feature of in-game competitive matchmaking.  
-Make sure you are using DirectX 9 (`dxlevel 90` or above). Competitive Matchmaking does not work on DirectX 8 ([Official FAQ](https://www.teamfortress.com/meetyourmatch/faq/)).
+Make sure you are using DirectX 9 (`dxlevel 90` or above). Competitive Matchmaking does not work on DirectX 8 ([Official FAQ (https://www.teamfortress.com/meetyourmatch/faq/)).
 
-Run `mm_override` in console on the main menu before you join a in-game
-competitive match to make the config compatible with competitive matchmaking.
-
+Run `mm_override` in console on the main menu before you join a in-game competitive match to make the config compatible with competitive matchmaking.
 You will have to exit the game to reset the lock that competitive puts on the game's settings.
 
 ## TF2 exits on startup
@@ -37,10 +29,10 @@ If you are trying to use this sort of mod and preload it to bypass `sv_pure`, pe
 
 ## yttrium's viewmodels not preloading
 
-If you use yttrium's viewmodels, the installer adds the preload commands to your `autoexec.cfg`. However, since mastercomfig doesn't use your `autoexec.cfg`, you'll have to add this to your `user/autoexec.cfg`:
+If you use yttrium's viewmodels, the installer adds the preload commands to your `autoexec.cfg`. However, since mastercomfig doesn't use your `autoexec.cfg`, you'll have to add this to your `user/modules.cfg`:
 
 ```c
-map_background preload_room; wait 10; disconnect
+dynamic_background=preload
 ```
 
 ## TF2 crashing on a custom map
@@ -49,11 +41,11 @@ If TF2 is crashing to desktop after a custom map loading or after picking a clas
 
 ## Item panels are taking too long to load
 
-Add `tf_time_loading_item_panels 0.0005` to `user/autoexec.cfg`.
+Add `tf_time_loading_item_panels .0005` to `user/autoexec.cfg`.
 
 ## Players' sprays are not working even with the module enabled
 
-Players' sprays are treated like a decal in-game. To get sprays to work, you have to set the `decals` module to `low` or higher.
+Players' sprays are treated like a decal in-game. To get sprays to work, you have to set the `decals` module to at least `low`.
 
 ## Particle-related errors in console
 
