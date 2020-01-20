@@ -175,7 +175,8 @@ Controls pyrovision visual effects
 Controls blurring effect from rotation and movement
 
 * **`motion_blur=off`**: Turns off motion blur
-* **`motion_blur=on`**: Motion blur on
+* **`motion_blur=low`**: Turns on motion blur but reduces it significantly
+* **`motion_blur=high`**: Motion blur fully enabled
 
 ### Antialiasing
 
