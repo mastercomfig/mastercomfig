@@ -1,5 +1,6 @@
 # package files
 *.vpk
+*.zip
 
 # dev script generated packages
 dev/addons/mastercomfig*

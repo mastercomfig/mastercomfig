@@ -4,6 +4,11 @@ BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
 ./package.sh
+zip -r comfig/mastercomfig.zip addons/ presets/
+
+export release="true"
+
+./package.sh
 
 echo Version:
 read version

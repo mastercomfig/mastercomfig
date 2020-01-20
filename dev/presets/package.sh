@@ -37,26 +37,31 @@ for D in *; do
     fi
 done
 
-find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
-find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
-
+# Disable dsp on very low and low
 declare -a dsp_off=("very-low" "low")
 for P in "${dsp_off[@]}"; do
     sed -i "/\"ConVar.dsp_off\"/ s/\"[0]*\"/\"1\"/" mastercomfig-"${P}"-preset/dxsupport_override.cfg
 done
 
-declare -a decals_depth=("very-low")
+# Hide decals on very low and low
+declare -a decals_depth=("very-low" "low")
 for P in "${decals_depth[@]}"; do
     sed -i "/\"ConVar.mat_slopescaledepthbias_decal\"/ s/\"[-0.5]*\"/\"0.000001\"/" mastercomfig-"${P}"-preset/dxsupport_override.cfg
 done
 
-# Package into VPK
-for D in *; do
-    if [ -d "${D}" ]; then
-        mkdir -p "${D}/sound"
-        touch "${D}/sound/sound.cache"
-        vpk "${D}"
-    fi
-done
+
+# Remove comments to save space
+if [ "$release" = true ] ; then
+    find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
+    find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
+    # Package into VPK
+    for D in *; do
+        if [ -d "${D}" ]; then
+            mkdir -p "${D}/sound"
+            touch "${D}/sound/sound.cache"
+            vpk "${D}"
+        fi
+    done
+fi
 
 printf "\n"

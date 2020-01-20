@@ -50,4 +50,11 @@ curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-strea
   -T $f \
   "$assets_url?name=$file&label=$label"
 
+f="comfig/mastercomfig.zip"
+file="mastercomfig.zip"
+label="mastercomfig%20zip%20package"
+curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
+  -T $f \
+  "$assets_url?name=$file&label=$label"
+
 printf "\n"

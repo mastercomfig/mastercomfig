@@ -15,19 +15,21 @@ for A in "${addons[@]}"; do
     cp -f ../../config/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
 done
 
-find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
-find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
-
 # Copy over custom addons
 cp -rf ../../config/addons/* .
 
-# Package into VPK
-for D in *; do
-    if [ -d "${D}" ]; then
-        mkdir -p "${D}/sound"
-        touch "${D}/sound/sound.cache"
-        vpk "${D}"
-    fi
-done
+# Remove comments to save space
+if [ "$release" = true ] ; then
+    find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
+    find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
+    # Package into VPK
+    for D in *; do
+        if [ -d "${D}" ]; then
+            mkdir -p "${D}/sound"
+            touch "${D}/sound/sound.cache"
+            vpk "${D}"
+        fi
+    done
+fi
 
 printf "\n"

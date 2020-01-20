@@ -10,7 +10,7 @@ This is an addon to remove extra models like rockets in the background, UFOs and
 ### mastercomfig-no-footsteps-addon
 This is an addon to remove footstep sounds. It is used only in the `very-low` preset by default.
 
-### mastercomfig-no-pyroland-addon
+### mastercomfig-disable-pyroland-addon
 This is an addon to remove Pyroland map textures. It is used in the `low` and `very-low` presets by default.
 
 ### mastercomfig-no-soundscapes-addon

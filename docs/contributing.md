@@ -126,7 +126,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `no-extra-models`: Removes extra models like rockets in the background, UFOs and
 UFO posters
 * `no-footsteps`: Removes footstep sounds
-* `no-pyroland`: Removes Pyroland map textures
+* `disable-pyroland`: Removes Pyroland map textures
 * `no-soundscapes`: Remove soundscapes (ambient map noise) and bird noises
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
