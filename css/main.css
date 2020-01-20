@@ -38,3 +38,42 @@ section {
 .modal-lg {
   max-width: 85%
 }
+
+a {
+    color: #b2dfdb;
+    transition: .25s
+}
+
+a:hover {
+    color: #00e3ce;
+    text-decoration: none
+}
+
+.btn-outline-primary {
+    color: #b2dfdb;
+    border-color: #b2dfdb
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #009688;
+    border-color: #009688
+}
+
+.progress-bar {
+    background-color: #009688
+}
+
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #009688;
+    border-color: #009688
+}
+
+.btn-primary:hover {
+    background-color: #026c63;
+    border-color: #009688
+}

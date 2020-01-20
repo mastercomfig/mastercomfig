@@ -20,11 +20,11 @@
         <div class="container d-flex align-items-center" style="min-height: 100%">
             <div class="align-middle">
                 <h1 class="display-4" id="title">Download mastercomfig</h1>
-                <div class="text-light lead">
-                  <p><a href="https://docs.mastercomfig.com/en/latest/support_me/"><b>Support me</b></a></p>
-                  <p><a href="https://docs.mastercomfig.com/en/latest/setup/clean_up/"><b>Initial Setup Instructions</b></a></p>
-                  <p><a href="https://docs.mastercomfig.com/en/latest/next_steps/update/"><b>Update Instructions</b></a></p>
-                  <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest"><b>Changelog</b></a></p>
+                <div class="lead">
+                  <p><a href="https://docs.mastercomfig.com/en/latest/support_me/"><b>Support me</b>:</a> Learn how you can support more updates to mastercomfig!</p>
+                  <p><a href="https://docs.mastercomfig.com/en/latest/setup/clean_up/"><b>Initial Setup Instructions</b>:</a> Instructions on how to install mastercomfig and get it working with your setup.</p>
+                  <p><a href="https://docs.mastercomfig.com/en/latest/next_steps/update/"><b>Update Instructions</b>:</a> Instructions on how to update mastercomfig after you've already installed it.</p>
+                  <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest"><b>Changelog</b>:</a> Read about what's changed in the latest version.</p>
                 </div>
                 <h2>1. Choose your preset</h2>
                 <div class="list-group" id="presets">
@@ -61,7 +61,7 @@
                   </a>
                 </div>
                 <hr>
-                <h2>Select any addons</h2>
+                <h2>2. Select any addons</h2>
                 <form>
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="no-extra-models">
@@ -78,9 +78,9 @@
                   </div>
                   <br>
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="no-pyroland">
-                    <label class="custom-control-label" for="no-pyroland">
-                      <b>No Pyroland</b> &mdash; Removes Pyroland map textures
+                    <input type="checkbox" class="custom-control-input" id="disable-pyroland">
+                    <label class="custom-control-label" for="disable-pyroland">
+                      <b>Disable Pyroland</b> &mdash; Removes Pyroland map textures
                     </label>
                   </div>
                   <br>
@@ -127,11 +127,22 @@
                   </div>
                 </form>
                 <hr>
-                <h2>Download your VPKs</h2>
+                <h2>3. Download your files</h2>
                 <p>Just drop them in your <code>tf/custom</code> folder and they'll automatically run.</p>
                 <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="vpk-dl" style="cursor: pointer"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Medium High preset and selected addons VPKs</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/autoexec.cfg" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/autoexec.cfg empty file</a></p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/modules.cfg" class="text-light" id="modules-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/modules.cfg template</a></p>
+                <h6>Additional mastercomfig config files</h6>
+                <p>You can put these in your <code>tf/cfg</code> folder to help you customize mastercomfig.</p>
+                <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/autoexec.cfg" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/autoexec.cfg empty file</a></p>
+                <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/modules.cfg" class="text-light" id="modules-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/modules.cfg template</a></p>
+                <a data-toggle="collapse" href="#collapseAdvanced" role="button" aria-expanded="false" aria-controls="collapseAdvanced">
+                    Advanced files
+                </a>
+                <div class="collapse" id="collapseAdvanced">
+                  <div class="card card-body bg-dark">
+                    <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/template.cfg" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/autoexec.cfg template file</a></p>
+                    <p style="margin-bottom: 0"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig.zip" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download mastercomfig zip package</a></p>
+                  </div>
+                </div>
                 <br><br>
             </div>
         </div>
@@ -166,7 +177,7 @@
             ["very-low", "Very Low"]
         ]);
 
-        const recommendableAddons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"];
+        const recommendableAddons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial"];
 
         var recommendedAddons = new Map();
 
@@ -184,8 +195,8 @@
         setRecommendedAddons("medium-high", ["no-extra-models"]);
         setRecommendedAddons("medium", ["no-extra-models"]);
         setRecommendedAddons("medium-low", ["no-extra-models"]);
-        setRecommendedAddons("low", ["no-extra-models", "no-pyroland", "no-soundscapes"]);
-        setRecommendedAddons("very-low", ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial"]);
+        setRecommendedAddons("low", ["no-extra-models", "disable-pyroland", "no-soundscapes"]);
+        setRecommendedAddons("very-low", ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial"]);
 
         var downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-";
         var addonUrl = downloadUrl + "{0}-addon.vpk";
@@ -195,7 +206,7 @@
 
         var version = null;
 
-        var addons = ["no-extra-models", "no-footsteps", "no-pyroland", "no-soundscapes", "no-tutorial", "flat-mouse", "transparent-viewmodels", "badgpu", "lowmem"];
+        var addons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial", "flat-mouse", "transparent-viewmodels", "badgpu", "lowmem"];
         var selectedPreset = "medium-high";
         var selections = [];
 
