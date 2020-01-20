@@ -25,8 +25,6 @@ if [ "$release" = true ] ; then
     # Package into VPK
     for D in *; do
         if [ -d "${D}" ]; then
-            mkdir -p "${D}/sound"
-            touch "${D}/sound/sound.cache"
             vpk "${D}"
         fi
     done
