@@ -113,6 +113,13 @@
                   </div>
                   <br>
                   <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="experimental">
+                    <label class="custom-control-label" for="experimental">
+                      <b>Experimental</b> &mdash; Experimental settings to test out
+                    </label>
+                  </div>
+                  <br>
+                  <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="badgpu">
                     <label class="custom-control-label" for="badgpu">
                       <b>Bad GPU</b> &mdash; Optimizations that generally do not affect quality for weak integrated graphics chips (Intel graphics) or weak/old GPUs (lower end made before 2007). If you have to use this, it's recommended to use Medium Low, Low or Very Low presets. <strong>WARNING: can potentially REDUCE performance on other graphics cards!!!</strong>
@@ -206,7 +213,7 @@
 
         var version = null;
 
-        var addons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial", "flat-mouse", "transparent-viewmodels", "badgpu", "lowmem"];
+        var addons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial", "flat-mouse", "transparent-viewmodels", "experimental", "badgpu", "lowmem"];
         var selectedPreset = "medium-high";
         var selections = [];
 
