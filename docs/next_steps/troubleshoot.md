@@ -11,6 +11,16 @@ r_drawviemodel 1
 
 Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
+## %killername% and other HUD bugs
+
+This is a HUD initialization bug with TF2. You can fix it by running `hud_reloadscheme`.
+
+If you'd like this command to automatically run to fix this bug, you can put this in your `user/autoexec.cfg`:
+
+```c
+alias game_overrides_once_c hud_reloadscheme
+```
+
 ## TF2 crashes when entering a Competitive Matchmaking match
 
 This is due to the config reset feature of in-game competitive matchmaking.  
