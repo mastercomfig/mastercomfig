@@ -17,7 +17,10 @@ read version
 echo Highlights:
 read highlights
 
+echo Hours taken:
+read hours
+
 ./deploy.sh $version "$highlights"
-./announce.sh $version "$highlights"
+./announce.sh $version "$highlights" "$hours"
 
 printf "\n"

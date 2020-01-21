@@ -8,12 +8,12 @@ cd "$BINDIR"
 # Announce on Discord #releases
 
 curl -X POST -H 'Content-type: application/json' \
- --data "{\"content\":\"@everyone **[$1](https://mastercomfig.com/download)** released with $2.\n\n[Changelog](https://github.com/mastercoms/mastercomfig/releases/tag/$1)\n[Support me](https://docs.mastercomfig.com/en/latest/support_me/)\"}" \
+ --data "{\"content\":\"@everyone **[$1](https://mastercomfig.com/download)** released with $2.\n\n[Changelog](https://github.com/mastercoms/mastercomfig/releases/tag/$1)\n[Support me](https://docs.mastercomfig.com/en/stable/support_me/)\n\n\This release took $3 hours to produce. If you like the work I do, consider supporting me!\"}" \
  $DISCORD_WEBHOOK
 
 # TODO: Announce on teamfortress.tv and Steam Group
 
-post_body="[url=https://mastercomfig.com/download]$1[/url] released with $2.\n\n[url=https://github.com/mastercoms/mastercomfig/releases/tag/$1]Changelog[/url]\n[url=https://docs.mastercomfig.com/en/latest/support_me/]Support me[/url]"
+post_body="[url=https://mastercomfig.com/download]$1[/url] released with $2.\n\n[url=https://github.com/mastercoms/mastercomfig/releases/tag/$1]Changelog[/url]\n[url=https://docs.mastercomfig.com/en/stable/support_me/]Support me[/url]\n\n\This release took $3 hours to produce. If you like the work I do, consider supporting me!"
 
 printf "\n"
 
@@ -22,7 +22,7 @@ printf "$post_body"
 
 printf "\n"
 
-plain_text="$1 released with $2.\n\nDownload: https://mastercomfig.com/download\n\nChangelog: https://github.com/mastercoms/mastercomfig/releases/tag/$1\nSupport me: https://docs.mastercomfig.com/en/latest/support_me/"
+plain_text="$1 released with $2.\n\nDownload: https://mastercomfig.com/download\n\nChangelog: https://github.com/mastercoms/mastercomfig/releases/tag/$1\nSupport me: https://docs.mastercomfig.com/en/stable/support_me/\n\n\This release took $3 hours to produce. If you like the work I do, consider supporting me!"
 
 printf "\n"
 
