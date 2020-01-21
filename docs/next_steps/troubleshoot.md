@@ -21,6 +21,8 @@ If you'd like this command to automatically run to fix this bug, you can put thi
 alias game_overrides_once_c hud_reloadscheme
 ```
 
+The command will only run on the first time when you spawn in a match.
+
 ## TF2 crashes when entering a Competitive Matchmaking match
 
 This is due to the config reset feature of in-game competitive matchmaking.  
