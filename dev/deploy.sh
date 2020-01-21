@@ -15,44 +15,31 @@ assets_url=$(curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: applicatio
   https://api.github.com/repositories/69422496/releases | jq '.assets_url' | sed -e 's/^"//' -e 's/"$//')
 assets_url=$(echo $assets_url | sed "s/\bapi\b/uploads/g")
 
-# Upload VPKs
+# Upload files
+uploadFileToGitHub () {
+    file=$1
+    name=${1##*/}
+    label=${2// /%20}
+    echo "$assets_url?name=$name&label=$label"
+    curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
+      -T $file \
+      "$assets_url?name=$name&label=$label"
+}
 
 for f in $(find -name '*.vpk'); do
-  file=${f##*/}
-  name=${file%.*}
-  label=${name//-/%20}
-  echo $assets_url?name=$file?label=$label
-  curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
-    -T $f \
-    "$assets_url?name=$file&label=$label%20VPK"
+    basename=${f##*/}
+    basename=${basename%.*}
+    basename=${basename//-/ }
+    uploadFileToGitHub "$f" "$basename"
+    basename=""
 done
 
-f="comfig/template.cfg"
-file="template.cfg"
-label="user%20config%20template"
-curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
-  -T $f \
-  "$assets_url?name=$file&label=$label"
+uploadFileToGitHub "./comfig/template.cfg" "user config template"
 
-f="comfig/autoexec.cfg"
-file="autoexec.cfg"
-label="empty%20autoexec%20file"
-curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
-    -T $f \
-    "$assets_url?name=$file&label=$label"
+uploadFileToGitHub "./comfig/autoexec.cfg" "empty autoexec file"
 
-f="comfig/modules.cfg"
-file="modules.cfg"
-label="modules%20template"
-curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
-  -T $f \
-  "$assets_url?name=$file&label=$label"
+uploadFileToGitHub "./comfig/modules.cfg" "modules template"
 
-f="comfig/mastercomfig.zip"
-file="mastercomfig.zip"
-label="mastercomfig%20zip%20package"
-curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
-  -T $f \
-  "$assets_url?name=$file&label=$label"
+uploadFileToGitHub "./comfig/mastercomfig.zip" "mastercomfig zip package"
 
 printf "\n"
