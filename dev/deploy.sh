@@ -36,7 +36,7 @@ curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-strea
 
 f="comfig/autoexec.cfg"
 file="autoexec.cfg"
-label="empty%20autoexec%file"
+label="empty%20autoexec%20file"
 curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
     -T $f \
     "$assets_url?name=$file&label=$label"
