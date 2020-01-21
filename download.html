@@ -245,6 +245,7 @@
         }
 
         function download() {
+            storage.setItem("lastVersion", version);
             var downloads = [Promise.resolve({
                 url: ""
             })];
