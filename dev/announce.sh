@@ -8,7 +8,7 @@ cd "$BINDIR"
 # Announce on Discord #releases
 
 curl -X POST -H 'Content-type: application/json' \
- --data "{\"content\":\"@everyone **[$1](https://mastercomfig.com/download)** released with $2.\n\n[Changelog](https://github.com/mastercoms/mastercomfig/releases/tag/$1)\n[Support me](https://docs.mastercomfig.com/en/stable/support_me/)\n\n\This release took $3 hours to produce. If you like the work I do, consider supporting me!\"}" \
+ --data "{\"content\":\"@everyone **[$1](https://mastercomfig.com/download)** released with $2.\n\n[Changelog](https://github.com/mastercoms/mastercomfig/releases/tag/$1)\n[Support me](https://docs.mastercomfig.com/en/stable/support_me/)\n\nThis release took $3 hours to produce. If you like the work I do, consider supporting me!\"}" \
  $DISCORD_WEBHOOK
 
 # TODO: Announce on teamfortress.tv and Steam Group
