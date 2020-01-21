@@ -28,6 +28,7 @@ Custom addons run after presets, modules, and built-in mastercomfig addons, but 
 * `restore_preset`: restores modules back to preset defaults, without using user settings.
 * `restore_config`: runs all of mastercomfig and user configs again, resetting changes made in-game.
 * `version_comfig`: outputs the version of mastercomfig currently being used.
+* `voice_on`, `voice_off` and `voice_toggle`: Turns voice chat on, off and toggles respectively. Uses `voice_enable` and `voice_modenable` internally to fully control voice chat.
 
 ## Optional Aliases
 
