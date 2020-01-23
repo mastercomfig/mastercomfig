@@ -74,7 +74,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 * **`bandwidth=3.0Mbps`**: 3.0Mbps game traffic bandwidth.
 * **`bandwidth=4.0Mbps`**: 4.0Mbps game traffic bandwidth.
 * **`bandwidth=unrestricted`**: A high rate that should be good for all game traffic (6.0Mbps).
-* **`bandwidth=max`**: The absolute maximum rate allowed by the game (10.0Mbps).
+* **`bandwidth=max`**: The absolute maximum rate allowed by the game (8.0Mbps).
 
 
 ### Downloads
