@@ -16,6 +16,10 @@ header {
     border-radius: 0
 }
 
+a.text-light.focus {
+    color: #cbd3da !important;
+}
+
 .img-separator {
     height: 40vh;
     margin-bottom: 2rem

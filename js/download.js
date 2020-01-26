@@ -66,6 +66,7 @@ function app() {
       $('#vpk-dl').off();
       vpkDownload.style.cursor = "not-allowed";
       downloading = true;
+      vpkDownload.classList.add("focus");
       $('#vpk-dl').html(vpkDownload.innerHTML.replace("Download", "Downloading").replace("VPKs", "VPKs..."));
   }
 
@@ -73,6 +74,7 @@ function app() {
       $('#vpk-dl').on('click', downloadClickEvent);
       vpkDownload.style.cursor = "pointer";
       downloading = false;
+      vpkDownload.classList.remove("focus");
       $('#vpk-dl').html(vpkDownload.innerHTML.replace("Downloading", "Download").replace("VPKs...", "VPKs"));
   }
 
