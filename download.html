@@ -38,17 +38,24 @@
     <meta name="twitter:image" content="https://www.mastercomfig.com/mastercomfig_banner.png">
   </head>
   <body class="dark-header">
-    <section class="jumbotron jumbotron-fluid text-light dark-header" style="margin-bottom: 1rem;padding-bottom: 0">
+    <section id="sponsor" class="container" style="padding-bottom: 1rem">
+        <div class="card">
+            <div class="card-body">
+                <strong>Want to sponsor mastercomfig and reserve a spot here?</strong> Contact me at mastercoms@tuta.io.
+            </div>
+        </div>
+    </section>
+    <section class="jumbotron jumbotron-fluid text-light dark-header" style="margin-bottom: 1rem;padding-bottom: 0;padding-top: 0">
         <div class="container d-flex align-items-center" style="min-height: 100%">
             <div class="align-middle">
-                <h1 class="display-4" id="title">Download mastercomfig</h1>
+                <h1 class="display-4" id="title"><span data-feather="download" class="feather-big"></span> Download mastercomfig</h1>
                 <div class="lead">
-                  <p><a href="https://docs.mastercomfig.com/en/stable/support_me/"><b>Support me</b>:</a> Learn how you can support more updates to mastercomfig!</p>
-                  <p><a href="https://docs.mastercomfig.com/en/stable/setup/clean_up/"><b>Initial Setup Instructions</b>:</a> Instructions on how to install mastercomfig and get it working with your setup.</p>
-                  <p><a href="https://docs.mastercomfig.com/en/stable/next_steps/update/"><b>Update Instructions</b>:</a> Instructions on how to update mastercomfig after you've already installed it.</p>
-                  <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest"><b>Changelog</b>:</a> Read about what's changed in the latest version.</p>
+                  <p><a href="https://docs.mastercomfig.com/en/stable/support_me/"><span data-feather="heart"></span> <b>Support me</b>:</a> Learn how you can support more updates to mastercomfig!</p>
+                  <p><a href="https://docs.mastercomfig.com/en/stable/setup/clean_up/"><span data-feather="hard-drive"></span> <b>Initial Setup Instructions</b>:</a> Instructions on how to install mastercomfig and get it working with your setup.</p>
+                  <p><a href="https://docs.mastercomfig.com/en/stable/next_steps/update/"><span data-feather="refresh-cw"></span> <b>Update Instructions</b>:</a> Instructions on how to update mastercomfig after you've already installed it.</p>
+                  <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest"><span data-feather="list"></span> <b>Changelog</b>:</a> Read about what's changed in the latest version.</p>
                 </div>
-                <h2>1. Choose your preset</h2>
+                <h2>1. <span data-feather="package"></span> Choose your preset</h2>
                 <div class="list-group" id="presets">
                   <a class="list-group-item list-group-item-action list-group-item-dark" id="ultra" href="#">
                     <h5 class="mb-1">Ultra</h5>
@@ -83,7 +90,7 @@
                   </a>
                 </div>
                 <hr>
-                <h2>2. Select any addons</h2>
+                <h2>2. <span data-feather="plus-square"></span> Select any addons</h2>
                 <form>
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="no-extra-models">
@@ -156,7 +163,7 @@
                   </div>
                 </form>
                 <hr>
-                <h2>3. Download your files</h2>
+                <h2>3. <span data-feather="archive"></span> Download your files</h2>
                 <p>Just drop them in your <code>tf/custom</code> folder and they'll automatically run.</p>
                 <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="vpk-dl" style="cursor: pointer"><span data-feather="download-cloud"></span>  Download Medium High preset and selected addons VPKs</a></p>
                 <a data-toggle="collapse" href="#collapseManual" role="button" aria-expanded="false" aria-controls="collapseManual">
@@ -194,7 +201,7 @@
         </div>
     </section>
     <footer class="container">
-        Copyright (c) 2016-2020 mastercoms
+        Copyright &copy; 2016-2020 mastercoms
         <br><br>
         Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo, Source, the Source logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.
         <br><br>
@@ -204,7 +211,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
     <script async src="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/js/dist/index.min.js,npm/bootstrap@4/js/dist/util.min.js,npm/bootstrap@4/js/dist/tab.min.js,npm/bootstrap@4/js/dist/collapse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4/dist/feather.min.js"></script>
+    <script defer src="js/feather.js"></script>
     <script defer src="js/download.js"></script>
-    <script defer src="js/feather.js">
   </body>
 </html>

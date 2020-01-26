@@ -154,7 +154,7 @@ function app() {
     }
     presetDownload.setAttribute('href', getPresetUrl());
     $("#preset-dl").html('<span data-feather="download"></span> Download {0} preset VPK'.format(presets.get(id))); // update preset text
-    feather.replace();
+    initFeather();
     // if not loading from storage, set recommended addons
     if (!no_set) {
         // reset all recommendable addons
@@ -173,7 +173,7 @@ function app() {
     version = data.tag_name;
     let versionName = version.indexOf('v') === 0 ? version.substr(1) : version; // some releases use the v prefix, ignore it
     // update title with version
-    document.getElementById('title').innerText = "Download mastercomfig " + versionName;
+    $('#title').html('<span data-feather="download"></span> Download mastercomfig ' + versionName);
     // if we have a stored preset, load it
     if (storage.getItem('preset')) {
       setPreset(storage.getItem('preset'), true);
