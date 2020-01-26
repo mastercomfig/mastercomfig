@@ -1,21 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#009688">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous">
-    <link rel="stylesheet" href="third_party/css/twentytwenty.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" integrity="sha256-akwTLZec/XAFvgYgVH1T5/369lhA2Efr22xzCNl1nHs=" crossorigin="anonymous">
+    <link ref="preload" as="style" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css,npm/zurb-twentytwenty@0.1.1/css/twentytwenty.min.css,npm/highlight.js@9/styles/atom-one-dark.min.css">
+    <link rel="preload" as="script" href="js/index.js">
+    <link ref="preload" as="style" href="css/main.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+    <link rel="prefetch" href="download.html">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css,npm/zurb-twentytwenty@0.1.1/css/twentytwenty.min.css,npm/highlight.js@9/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="favicon.ico">
 
     <title>mastercomfig</title>
+    <meta property="og:site_name" content="mastercomfig">
     <meta property="og:title" content="mastercomfig">
     <meta property="og:description" content="A modern Team Fortress 2 performance and customization config.">
+    <meta name="twitter:description" content="A modern Team Fortress 2 performance and customization config.">
+    <meta name="description" content="A modern Team Fortress 2 performance and customization config.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mastercomfig.com/">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="https://www.mastercomfig.com/">
+    <meta name="twitter:url" content="https://www.mastercomfig.com/">
+    <link rel="canonical" href="https://www.mastercomfig.com/">
+    <meta name="twitter:site" content="@mastercoms">
+    <meta name="twitter:creator" content="@mastercoms">
+    <meta property="og:image" content="https://www.mastercomfig.com/mastercomfig_banner.png">
+    <meta itemprop="image" content="https://www.mastercomfig.com/mastercomfig_banner.png">
+    <meta name="twitter:image" content="https://www.mastercomfig.com/mastercomfig_banner.png">
   </head>
   <body class="bg-dark">
     <header class="jumbotron jumbotron-fluid text-light home-header">
@@ -24,8 +42,10 @@
                 <h1 class="display-4">mastercomfig</h1>
                 <p class="lead">A modern Team Fortress 2 performance and customization config.</p>
                 <a class="btn btn-outline-primary btn-lg" href="/download">
-                    <span class="oi oi-data-transfer-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download
+                    <span data-feather="download"></span> Download
                 </a>
+                <br><br>
+                <p><a href="https://docs.mastercomfig.com/en/stable/">Docs</a> &bull; <a href="https://discord.gg/CuPb2zV">Discord</a> &bull; <a href="https://steamcommunity.com/groups/comfig">Steam Group</a></p>
             </div>
         </div>
     </header>
@@ -58,7 +78,7 @@
                     <p class="font-weight-light" style="font-size: 1rem">FPS = frames per second (higher is better). Measured on i7-8700K GTX1080 16GB 3200MT/s RAM SSD Linux using mastercoms' test <a href="https://docs.mastercomfig.com/en/stable/benchmarks/">benchmark</a>.</p>
                 </div>
                 <div class="col-md align-middle">
-                    <h1 class="display-5"><span class="oi oi-bolt" title="bolt" aria-hidden="true" style="font-size: 2rem"></span> Performance</h1>
+                    <h1 class="display-5"><span data-feather="zap"></span> Performance</h1>
                     <p class="lead">Get faster load times and a buttery smooth game at high frames with mastercomfig.</p>
                 </div>
             </div>
@@ -72,7 +92,7 @@
             <div class="container" style="height: 100%; padding-top: 4rem; padding-bottom: 4rem">
                 <div class="row d-flex align-items-center justify-content-center" style="height: 100%">
                     <div class="col-md-6 align-middle">
-                        <h1 class="display-5"><span class="oi oi-target" title="target" aria-hidden="true" style="font-size: 2rem"></span> Hitreg</h1>
+                        <h1 class="display-5"><span data-feather="crosshair"></span> Hitreg</h1>
                         <p class="lead">With mastercomfig's optimized networking settings that minimize choke and lag, you'll find yourself fragging more and hitting less 0 damage headshots.</p>
                     </div>
                 </div>
@@ -87,8 +107,8 @@
             <div class="row d-flex align-items-center justify-content-center" style="height: 100%">
                 <div class="col-md align-middle">
                     <div id="quality-compare" class="twentytwenty-container">
-                        <img src="img/koth_sawmill_performance.jpg" alt="koth_sawmill low">
-                        <img src="img/koth_sawmill_quality.jpg" alt="koth_sawmill ultra">
+                        <img class="lazy" data-src="img/koth_sawmill_performance.jpg" alt="koth_sawmill low">
+                        <img class="lazy" data-src="img/koth_sawmill_quality.jpg" alt="koth_sawmill ultra">
                     </div>
                     <br>
                     <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#compareModal">
@@ -97,7 +117,7 @@
                     <br>
                 </div>
                 <div class="col-md align-middle">
-                    <h1 class="display-5"><span class="oi oi-eye" title="eye" aria-hidden="true" style="font-size: 2rem"></span> Quality</h1>
+                    <h1 class="display-5"><span data-feather="eye"></span> Quality</h1>
                     <p class="lead">
                         Only the most unoptimized settings have been disabled by default in mastercomfig, so you don't have to sacrifice everything for performance.
                         Looking for more performance, or quality? Easily customize looks to your exact preference using the many config customization presets.
@@ -115,7 +135,7 @@
         <div class="container" style="height: 100%">
             <div class="row d-flex align-items-center justify-content-center" style="height: 100%">
                 <div class="col-lg-6 align-middle">
-                    <h1 class="display-5"><span class="oi oi-wrench" title="wrench" aria-hidden="true" style="font-size: 2rem"></span> Customization</h1>
+                    <h1 class="display-5"><span data-feather="sliders"></span> Customization</h1>
                     <p class="lead">
                         Easily customize the config to your needs with quality presets and the intuitive mastercomfig <a href="https://docs.mastercomfig.com/en/stable/customization/modules/">modules system</a>.<br>
                         Need more precision? Fine tune your game settings using mastercomfig's extensively documented user config template and <a href="https://docs.mastercomfig.com/en/stable/customization/custom_configs/">custom config system</a>.
@@ -155,16 +175,23 @@ tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
         </div>
     </section>
     <section class="container text-center text-light">
-        <div class="jumbotron bg-dark" style="border: 1px solid #f2f2f2; border-radius: 1px;box-shadow: 0 0 20px #000">
+        <div class="jumbotron bg-dark" style="border: 1px solid #f2f2f2; border-radius: 1px">
             <h1 class="display-4">Get frames. Get mastercomfig.</h1>
             <br>
             <a class="btn btn-primary btn-lg" href="/download">
-                <span class="oi oi-data-transfer-download" title="download" aria-hidden="true" style="font-size: 1rem"></span> Download mastercomfig
+                <span data-feather="download" class></span> Download mastercomfig
             </a>
             <br><br>
-            <a href="https://docs.mastercomfig.com/en/stable/" class="lead">Learn more</a>
+            <a href="https://docs.mastercomfig.com/en/stable/" class="lead">Learn more at our docs</a>
         </div>
     </section>
+    <footer class="container">
+        Copyright (c) 2016-2020 mastercoms
+        <br><br>
+        Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo, Source, the Source logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.
+        <br><br>
+        mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.
+    </footer>
 
     <div class="modal fade" id="compareModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
@@ -176,60 +203,21 @@ tf_quest_map_tuner_wobble_magnitude 0.01 // Enable red tuner at the bottom
           </div>
           <div class="modal-body">
             <div id="quality-compare-large" class="twentytwenty-container">
-                <img src="img/koth_sawmill_performance.jpg" alt="koth_sawmill low">
-                <img src="img/koth_sawmill_quality.jpg" alt="koth_sawmill ultra">
+                <img class="lazy" data-src="img/koth_sawmill_performance.jpg" alt="koth_sawmill low">
+                <img class="lazy" data-src="img/koth_sawmill_quality.jpg" alt="koth_sawmill ultra">
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js" integrity="sha256-VzXcD0HmV1s8RGdJ/yIf7YkZiOZrcxPphaDpwM++pSs=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js" integrity="sha256-O89HlAm2WdqzEdqsBihytS0wjt7OGPfbIaGMDaHFSHk=" crossorigin="anonymous"></script>
-    <script src="third_party/js/jquery.event.move.js"></script>
-    <script src="third_party/js/jquery.twentytwenty.js"></script>
-    <script>
-        // Init quality image compare
-        $(function() {
-            $("#quality-compare").twentytwenty({
-                before_label: 'Very Low',
-                after_label: 'Ultra'
-            });
-
-        });
-        // Init customization example highlighting
-        hljs.initHighlightingOnLoad();
-        // If we scroll down to the bars, do an anim
-        $(window).scroll(function() {
-            if ($('#comanglia-bar').visible()) {
-                document.getElementById('mastercomfig-bar').style.width = '100%';
-                document.getElementById('comanglia-bar').style.width = '95%';
-                document.getElementById('m0re-bar').style.width = '94%';
-                document.getElementById('chris-bar').style.width = '88%';
-                document.getElementById('rhapsody-bar').style.width = '83%';
-                $(window).off('scroll');
-            }
-        });
-        // If page loaded with bars visible, then still do the anim
-        if ($('#comanglia-bar').visible()) {
-            document.getElementById('mastercomfig-bar').style.width = '100%';
-            document.getElementById('comanglia-bar').style.width = '94%';
-            document.getElementById('m0re-bar').style.width = '93%';
-            document.getElementById('chris-bar').style.width = '87%';
-            document.getElementById('rhapsody-bar').style.width = '82%';
-            $(window).off('scroll');
-        }
-
-        $('#compareModal').on('shown.bs.modal', function () {
-          $("#quality-compare-large").twentytwenty({
-              before_label: 'Very Low',
-              after_label: 'Ultra'
-          });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3/dist/jquery.min.js,npm/jquery-visible@1,npm/zurb-twentytwenty@0/js/jquery.event.move.min.js,npm/zurb-twentytwenty@0.1.1/js/jquery.twentytwenty.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4/dist/feather.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/js/dist/index.min.js,npm/bootstrap@4/js/dist/util.min.js,npm/bootstrap@4/js/dist/modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/cpp.min.js" integrity="sha256-SKE+HaFesRrRL7n/cuFba0AhsMUqwA9vzo6mh6lRR6I=" crossorigin="anonymous"></script>
+    <script defer src="js/index.js"></script>
+    <script src="js/lazy.js"></script>
+    <script defer src="js/feather.js"></script>
   </body>
 </html>

@@ -1,22 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#009688">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous">
+    <link ref="preload" as="style" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css">
+    <link ref="preload" as="fetch" href="https://api.github.com/repositories/69422496/releases/latest">
+    <link rel="preload" as="script" href="js/download.js">
+    <link ref="preload" as="style" href="css/main.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+    <link rel="preconnect" href="https://api.github.com/" crossorigin>
+    <link rel="dns-prefetch" href="https://api.github.com/">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="favicon.ico">
 
     <title>mastercomfig download</title>
+    <meta property="og:site_name" content="mastercomfig">
     <meta property="og:title" content="mastercomfig download">
     <meta property="og:description" content="The download for mastercomfig: a modern Team Fortress 2 performance and customization config.">
+    <meta name="twitter:description" content="The download for mastercomfig: a modern Team Fortress 2 performance and customization config.">
+    <meta name="description" content="The download for mastercomfig: a modern Team Fortress 2 performance and customization config.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mastercomfig.com/download">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="https://www.mastercomfig.com/download">
+    <meta name="twitter:url" content="https://www.mastercomfig.com/download">
+    <link rel="canonical" href="https://www.mastercomfig.com/download">
+    <meta name="twitter:site" content="@mastercoms">
+    <meta name="twitter:creator" content="@mastercoms">
+    <meta property="og:image" content="https://www.mastercomfig.com/mastercomfig_banner.png">
+    <meta itemprop="image" content="https://www.mastercomfig.com/mastercomfig_banner.png">
+    <meta name="twitter:image" content="https://www.mastercomfig.com/mastercomfig_banner.png">
   </head>
   <body class="dark-header">
-    <header class="jumbotron jumbotron-fluid text-light dark-header">
+    <section class="jumbotron jumbotron-fluid text-light dark-header" style="margin-bottom: 1rem;padding-bottom: 0">
         <div class="container d-flex align-items-center" style="min-height: 100%">
             <div class="align-middle">
                 <h1 class="display-4" id="title">Download mastercomfig</h1>
@@ -136,249 +156,53 @@
                 <hr>
                 <h2>3. Download your files</h2>
                 <p>Just drop them in your <code>tf/custom</code> folder and they'll automatically run.</p>
-                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="vpk-dl" style="cursor: pointer"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Medium High preset and selected addons VPKs</a></p>
+                <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="vpk-dl" style="cursor: pointer"><span data-feather="download-cloud"></span>  Download Medium High preset and selected addons VPKs</a></p>
                 <a data-toggle="collapse" href="#collapseManual" role="button" aria-expanded="false" aria-controls="collapseManual">
                     Not working? Download manually
                 </a>
                 <div class="collapse" id="collapseManual">
                     <br>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="preset-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download preset VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-no-extra-models-addon.vpk" class="text-light" id="no-extra-models-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Extra Models addon VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-no-footsteps-addon.vpk" class="text-light" id="no-footsteps-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Footsteps addon VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-disable-pyroland-addon.vpk" class="text-light" id="disable-pyroland-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Disable Pyroland addon VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-no-soundscapes-addon.vpk" class="text-light" id="no-soundscapes-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Soundscapes addon VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-no-tutorial-addon.vpk" class="text-light" id="no-tutorial-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download No Tutorial addon VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-flat-mouse-addon.vpk" class="text-light" id="flat-mouse-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Flat Mouse addon VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-transparent-viewmodels-addon.vpk" class="text-light" id="transparent-viewmodels-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Transparent Viewmodels addon VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-experimental-addon.vpk" class="text-light" id="experimental-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Experimental addon VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Bad GPU addon VPK</a></p>
-                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-lowmem-addon.vpk" class="text-light" id="lowmem-dl" style="display: none"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download Low Memory addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest" class="text-light" id="preset-dl"><span data-feather="download"></span> Download preset VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-no-extra-models-addon.vpk" class="text-light" id="no-extra-models-dl" style="display: none"><span data-feather="download"></span> Download No Extra Models addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-no-footsteps-addon.vpk" class="text-light" id="no-footsteps-dl" style="display: none"><span data-feather="download"></span> Download No Footsteps addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-disable-pyroland-addon.vpk" class="text-light" id="disable-pyroland-dl" style="display: none"><span data-feather="download"></span> Download Disable Pyroland addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-no-soundscapes-addon.vpk" class="text-light" id="no-soundscapes-dl" style="display: none"><span data-feather="download"></span> Download No Soundscapes addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-no-tutorial-addon.vpk" class="text-light" id="no-tutorial-dl" style="display: none"><span data-feather="download"></span> Download No Tutorial addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-flat-mouse-addon.vpk" class="text-light" id="flat-mouse-dl" style="display: none"><span data-feather="download"></span> Download Flat Mouse addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-transparent-viewmodels-addon.vpk" class="text-light" id="transparent-viewmodels-dl" style="display: none"><span data-feather="download"></span> Download Transparent Viewmodels addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-experimental-addon.vpk" class="text-light" id="experimental-dl" style="display: none"><span data-feather="download"></span> Download Experimental addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-badgpu-addon.vpk" class="text-light" id="badgpu-dl" style="display: none"><span data-feather="download"></span> Download Bad GPU addon VPK</a></p>
+                    <p class="lead"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-lowmem-addon.vpk" class="text-light" id="lowmem-dl" style="display: none"><span data-feather="download"></span> Download Low Memory addon VPK</a></p>
                 </div>
                 <h6 style="padding-top: 16px">Additional mastercomfig config files</h6>
                 <p>You can put these in your <code>tf/cfg</code> folder to help you customize mastercomfig.</p>
-                <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/autoexec.cfg" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/autoexec.cfg empty file</a></p>
-                <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/modules.cfg" class="text-light" id="modules-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/modules.cfg template</a></p>
+                <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/autoexec.cfg" class="text-light" id="autoexec-dl"><span data-feather="download"></span> Download user/autoexec.cfg empty file</a></p>
+                <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/modules.cfg" class="text-light" id="modules-dl"><span data-feather="download"></span> Download user/modules.cfg template</a></p>
                 <a data-toggle="collapse" href="#collapseAdvanced" role="button" aria-expanded="false" aria-controls="collapseAdvanced">
                     Advanced files
                 </a>
                 <div class="collapse" id="collapseAdvanced">
                   <div class="card card-body bg-dark">
-                    <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/template.cfg" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download user/autoexec.cfg template file</a></p>
-                    <p style="margin-bottom: 0"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig.zip" class="text-light" id="autoexec-dl"><span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download mastercomfig zip package</a></p>
+                    <p><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/template.cfg" class="text-light" id="autoexec-dl"><span data-feather="download"></span> Download user/autoexec.cfg template file</a></p>
+                    <p style="margin-bottom: 0"><a href="https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig.zip" class="text-light" id="autoexec-dl"><span data-feather="download"></span> Download mastercomfig zip package</a></p>
                   </div>
                 </div>
                 <br><br>
             </div>
         </div>
-    </header>
+    </section>
+    <footer class="container">
+        Copyright (c) 2016-2020 mastercoms
+        <br><br>
+        Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo, Source, the Source logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.
+        <br><br>
+        mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.
+    </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-
-    <script>
-      "use strict";
-
-      $(function() {
-        app();
-      });
-
-      function app() {
-          // convenience format method for string
-          String.prototype.format = function() {
-            const args = arguments;
-            return this.replace(/{(\d+)}/g, function(match, number) {
-              return typeof args[number] !== 'undefined' ? args[number] : match;
-            });
-          };
-
-        var presets = new Map([
-            ["ultra", "Ultra"],
-            ["high", "High"],
-            ["medium-high", "Medium High"],
-            ["medium", "Medium"],
-            ["medium-low", "Medium Low"],
-            ["low", "Low"],
-            ["very-low", "Very Low"]
-        ]);
-
-        const recommendableAddons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial"];
-
-        var recommendedAddons = new Map();
-
-        function setRecommendedAddons(id, values) {
-            // don't set non-recommendable addons
-            let addons = values.filter(addon => recommendableAddons.indexOf(addon) !== -1);
-            if (addons.length != values.length) {
-                console.error("Attempted to set non-recommendable addon!");
-            }
-            recommendedAddons.set(id, addons);
-        }
-
-        setRecommendedAddons("ultra", []);
-        setRecommendedAddons("high", ["no-extra-models"]);
-        setRecommendedAddons("medium-high", ["no-extra-models"]);
-        setRecommendedAddons("medium", ["no-extra-models"]);
-        setRecommendedAddons("medium-low", ["no-extra-models"]);
-        setRecommendedAddons("low", ["no-extra-models", "disable-pyroland", "no-soundscapes"]);
-        setRecommendedAddons("very-low", ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial"]);
-
-        var downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-";
-        var addonUrl = downloadUrl + "{0}-addon.vpk";
-        var presetUrl = downloadUrl + "{0}-preset.vpk";
-
-        var vpkDownload = document.getElementById('vpk-dl');
-        var presetDownload = document.getElementById('preset-dl');
-
-        var version = null;
-
-        var addons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial", "flat-mouse", "transparent-viewmodels", "experimental", "badgpu", "lowmem"];
-        var selectedPreset = "medium-high";
-        var selections = [];
-
-        var storage = localStorage;
-
-        var downloading = false;
-
-        function downloadClickEvent() {
-            download();
-            $('#vpk-dl').off();
-            vpkDownload.style.cursor = "not-allowed";
-            downloading = true;
-            vpkDownload.innerHTML = vpkDownload.innerHTML.replace("Download", "Downloading").replace("VPKs", "VPKs..."); // hacks!
-        }
-
-        function bindDownloadClick() {
-            $('#vpk-dl').on('click', downloadClickEvent);
-            vpkDownload.style.cursor = "pointer";
-            downloading = false;
-            vpkDownload.innerHTML = vpkDownload.innerHTML.replace("Downloading", "Download").replace("VPKs...", "VPKs"); // hacks!
-        }
-
-        function getDownloadUrl(id, preset) {
-            return (preset ? presetUrl : addonUrl).format(id);
-        }
-
-        function getAddonUrl(id) {
-            return getDownloadUrl(id, false);
-        }
-
-        function getPresetUrl() {
-            return getDownloadUrl(selectedPreset, true);
-        }
-
-        function downloadUrls(urls) {
-            urls[0].then((result) => {
-                if (result.url !== "") {
-                    window.location = result.url;
-                }
-                if (urls.length > 1) {
-                    setTimeout(() => {
-                        return downloadUrls(urls.slice(1));
-                    }, 2000);
-                } else {
-                    bindDownloadClick();
-                }
-            });
-        }
-
-        function download() {
-            storage.setItem("lastVersion", version);
-
-            var downloads = [Promise.resolve({
-                url: ""
-            })];
-            downloads.push(Promise.resolve({
-                url: getPresetUrl()
-            }));
-            for (const selection of selections) {
-                downloads.push(Promise.resolve({
-                    url: getAddonUrl(selection)
-                }));
-            }
-            setTimeout(() => {
-                return downloadUrls(downloads);
-            }, 2000);
-        }
-
-        // update addon state based on checked
-        function updateAddon(id) {
-          setAddon(id, document.getElementById(id).checked);
-        }
-
-        // set addon enabled/disabled
-        function setAddon(id, checked) {
-          storage.setItem(id, checked);
-          checked = storage.getItem(id) === 'true';
-          if (checked) {
-              if (selections.indexOf(id) === -1) {
-                  selections.push(id);
-              }
-          } else {
-              selections = selections.filter(selection => selection !== id);
-          }
-          document.getElementById(id + "-dl").style.display = checked ? "initial" : "none";
-          document.getElementById(id).checked = checked;
-        }
-
-        function setPreset(id, no_set) {
-          storage.setItem('preset', id); // save preset selection
-          $(document.getElementById(id)).tab('show'); // visually select in tabs menu
-          selectedPreset = id; // save download ID
-          vpkDownload.removeAttribute('href'); // we don't need the static download anymore
-          if (!downloading) {
-              vpkDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset and selected addons VPKs'.format(presets.get(id)); // update download text
-          }
-          presetDownload.setAttribute('href', getPresetUrl());
-          presetDownload.innerHTML = '<span class="oi oi-data-transfer-download" title="download" aria-hidden="true"></span> Download {0} preset VPK'.format(presets.get(id)); // update preset text
-          // if not loading from storage, set recommended addons
-          if (!no_set) {
-              // reset all recommendable addons
-              recommendableAddons.forEach(function(addon) {
-                  setAddon(addon, false);
-              });
-              // set recommended addons
-              recommendedAddons.get(id).forEach(function(addon) {
-                  setAddon(addon, true);
-              });
-          }
-        }
-
-        // get latest release, and update page
-        $.get("https://api.github.com/repositories/69422496/releases/latest", function(data) {
-          version = data.tag_name;
-          let versionName = version.indexOf('v') === 0 ? version.substr(1) : version; // some releases use the v prefix, ignore it
-          // update title with version
-          document.getElementById('title').innerText = "Download mastercomfig " + versionName;
-          // if we have a stored preset, load it
-          if (storage.getItem('preset')) {
-            setPreset(storage.getItem('preset'), true);
-          } else {
-            setPreset('medium-high');
-          }
-          for (const id of addons) {
-            if (storage.getItem(id)) {
-              setAddon(id, storage.getItem(id))
-            } else {
-              setAddon(id, false);
-            }
-          }
-        }, "json");
-
-        $('#presets a').on('click', function(e) {
-          e.preventDefault();
-          setPreset(this.id);
-        });
-
-        bindDownloadClick();
-
-        $('#preset-dl').on('click', function() {
-            storage.setItem("lastVersion", version);
-        });
-
-        $("input[type='checkbox']").change(function() {
-          updateAddon(this.id);
-        });
-      }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/js/dist/index.min.js,npm/bootstrap@4/js/dist/util.min.js,npm/bootstrap@4/js/dist/tab.min.js,npm/bootstrap@4/js/dist/collapse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4/dist/feather.min.js"></script>
+    <script defer src="js/download.js"></script>
+    <script defer src="js/feather.js">
   </body>
 </html>
