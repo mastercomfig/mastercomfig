@@ -37,7 +37,9 @@ Make sure you don't have any infinite loops caused by an `exec autoexec` in your
 
 ## Preloading animation and/or model mods not working
 
-If you are trying to use this sort of mod and preload it to bypass `sv_pure`, people have found async disk loading to be incompatible with preloading. Install the Slow I/O addon to completely disable async loading, and thus fix this issue.
+If you are trying to use this sort of mod and preload it to bypass `sv_pure`, people have found async disk loading to be incompatible with preloading.
+
+Put `preload_enable` in your `autoexec.cfg` to disable some async disk loading features and fix preloading compatability.
 
 ## yttrium's viewmodels not preloading
 
