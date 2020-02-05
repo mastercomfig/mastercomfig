@@ -1,5 +1,10 @@
 # Troubleshooting
 
+This is a list of common issues users experience with mastercomfig, and how to solve them.
+
+If you find that you need more assistance, please reach out to our community on:
+[Discord](https://discord.gg/CuPb2zV) or [Steam](https://steamcommunity.com/groups/comfig).
+
 ## Viewmodels are not visible
 
 Add the following to your `user/autoexec.cfg`:
