@@ -111,8 +111,8 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 
 **Presets:**
 
-* `ultra`: Absolute maximum quality without caring about performance
-* `high`: Enables graphical features without making them very high quality
+* `ultra`: Absolute maximum quality, with even the slightest and most performance-intensive quality improvements included
+* `high`: Enables all graphical features without making them extremely high quality
 * `medium-high`: Disables unoptimized features and optimize the game without
   making it look bad
 * `medium`: The maximum performance you can get while enabling a few effects
@@ -212,7 +212,7 @@ to do basic testing on options.
 ### Bot match
 
 After the results are positive with the benchmark, measure your average FPS in a
-local 24 player bot match on `pl_upward`, highest difficulty.
+local 32 player bot match on `pl_upward`, highest difficulty.
 
 ### Casual match
 
