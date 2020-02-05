@@ -98,6 +98,11 @@ a:hover {
     background-color: #282b2d;
 }
 
+.list-group-item-dark.list-group-item-action:focus, .list-group-item-dark.list-group-item-action:hover {
+    color: #dddad5;
+    background-color: #2c2f31;
+}
+
 input {
     border-color: #575757;
     color: #e8e6e3;
