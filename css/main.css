@@ -88,19 +88,19 @@ a:hover {
 }
 
 .list-group-item-dark.list-group-item-action.active {
-    color: #fff;
-    background-color: #1c1e1f;
-    border-color: #59636c;
+    color: #fff !important;
+    background-color: #1c1e1f !important;
+    border-color: #59636c
 }
 
 .list-group-item-dark {
     color: #dddad5;
-    background-color: #282b2d;
+    background-color: #282b2d
 }
 
 .list-group-item-dark.list-group-item-action:focus, .list-group-item-dark.list-group-item-action:hover {
     color: #dddad5;
-    background-color: #2c2f31;
+    background-color: #2c2f31
 }
 
 input {
@@ -111,7 +111,7 @@ input {
 
 .custom-control-label::before {
     background-color: #181a1b;
-    border-color: #3d454c;
+    border-color: #3d454c
 }
 
 .download-preview {
