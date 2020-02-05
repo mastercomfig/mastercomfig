@@ -116,6 +116,11 @@ input {
     background-color: #181a1b
 }
 
+.custom-control-label::before {
+    background-color: #181a1b;
+    border-color: #3d454c;
+}
+
 @media only screen and (max-width: 960px) {
     .tooltip-inner {
         max-width: 50vw
