@@ -86,3 +86,17 @@ a:hover {
     background-color: #375e5b;
     border-color: #009688
 }
+
+.download-preview {
+    width: 100%
+}
+
+.tooltip-inner {
+    max-width: 40vw
+}
+
+@media only screen and (max-width: 960px) {
+    .tooltip-inner {
+        max-width: 50vw
+    }
+}
