@@ -11,3 +11,6 @@ sed -i '/^block_game_override_once/d' template.cfg
 sed -i -e 's/^\([^[:space:]\+\/\/].*\)/\/\/\1/g' template.cfg
 
 printf "\r\n" > autoexec.cfg
+
+printf "\n"
+
