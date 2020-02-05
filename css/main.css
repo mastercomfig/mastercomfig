@@ -87,18 +87,6 @@ a:hover {
     border-color: #009688
 }
 
-.download-preview {
-    width: 100%
-}
-
-.tooltip-inner {
-    max-width: 40vw
-}
-
-.tooltip {
-    opacity: 1 !important
-}
-
 .list-group-item-dark.list-group-item-action.active {
     color: #fff;
     background-color: #1c1e1f;
@@ -121,8 +109,20 @@ input {
     border-color: #3d454c;
 }
 
+.download-preview {
+    width: 100%
+}
+
+.tooltip-inner {
+    max-width: 35vw
+}
+
+.tooltip {
+    opacity: 1 !important
+}
+
 @media only screen and (max-width: 960px) {
     .tooltip-inner {
-        max-width: 50vw
+        max-width: 45vw
     }
 }
