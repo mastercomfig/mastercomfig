@@ -59,7 +59,7 @@ Controls how big packets are and how they are split up/compressed
 
 ### Bandwidth
 
-Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits).
+Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).
 
 **Note:** This does not increase data usage, just restricts how quickly data can be sent.
 
@@ -100,9 +100,9 @@ Controls how detailed objects are and how decorations fade in.
 
 Controls lighting fidelity: dynamic lights, how detailed lighting is, phong, rimlights, light averaging, lightwarps, and ambient boost.
 
-* **`lighting=very_low`**: No dynamic lights. Very inaccurate, blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost
-* **`lighting=low`**: No dynamic lights. Blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost.
-* **`lighting=medium`**: No dynamic lights. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost.
+* **`lighting=very_low`**: No dynamic lights. Very inaccurate, blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
+* **`lighting=low`**: No dynamic lights. Blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
+* **`lighting=medium`**: No dynamic lights. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=medium_high`**: No dynamic lights. Detailed lighting. No lightwarps.
 * **`lighting=high`**: Some dynamic lights. Detailed lighting. No lightwarps.
 * **`lighting=very_high`**: Some dynamic lights. Detailed lighting.
@@ -318,32 +318,11 @@ How intense the color tint is on the killstreak sheen glow for weapons.
 
 Controls texture quality
 
-* **`textures=very_low`**: Low texture quality, blocky textures
-* **`textures=low`**: Low texture quality
+* **`textures=very_low`**: Low texture quality, blocky textures, disables texture blending
+* **`textures=low`**: Low texture quality, disables texture blending
 * **`textures=medium`**: Medium texture quality
 * **`textures=high`**: High texture quality
 * **`textures=very_high`**: Very high texture quality
-
-### Texture blending
-
-Controls if textures blend together
-
-* **`texture_blending=off`**: Disables texture blending
-* **`texture_blending=on`**: Enables texture blending
-
-### Bumpmaps
-
-Controls bumpmapping on textures
-
-* **`bumpmap=off`**: Disables bumpmapping
-* **`bumpmap=on`**: Enables bumpmapping
-
-### Specular
-
-Control specular on textures
-
-* **`specular=off`**: Disables specular
-* **`specular=on`**: Enables specular
 
 ### Ropes
 
