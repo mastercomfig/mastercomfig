@@ -22,7 +22,7 @@ for P in "${presets[@]}"; do
     echo "exec comfig/addons" >> $autoexec_file
     echo "exec user/define_modules" >> $autoexec_file
     echo "exec user/modules" >> $autoexec_file
-    echo "exec modules.log" >> $autoexec_file
+    echo "exec modules.txt" >> $autoexec_file
     echo "run_modules" >> $autoexec_file
     echo "exec comfig/addons" >> $autoexec_file
     echo "exec user/autoexec" >> $autoexec_file

@@ -12,7 +12,7 @@ You can select modules in game using the console. Just enter the module you'd li
 
 For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
 
-**How does it work?** It logs things to a file called `tf/cfg/modules.log`, and then executes that `modules.log` as a config file.
+**How does it work?** It logs things to a file called `tf/cfg/modules.txt`, and then executes that `modules.txt` as a config file.
 
 ### Advanced
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
@@ -365,6 +365,18 @@ Toggle health/player info panels.
 * **`killstreaks=off`**: Disable killstreak banner
 * **`killstreaks=low`**: Enables killstreak solid banner
 * **`killstreaks=high`**: Enables killstreak translucent banner
+
+### HUD Achievements
+
+* **`hud_achievement=off`**: Disable achievement tracker panel completely
+* **`hud_achievement=on`**: Enable support for achievement tracker panel
+
+### Debug
+
+* **`debug=on`**: Enable all debug HUDs
+* **`debug=on_partial`**: Enable all but the noisiest debug HUDs
+* **`debug=minimal`**: Enable developer console
+* **`debug=off`**: Disable all debug features
 
 ### Outlines
 
