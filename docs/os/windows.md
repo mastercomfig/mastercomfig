@@ -27,3 +27,5 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 1. Choose your connection speed with the slider at the top.
 2. Choose the optimal setting at the bottom.
 3. Click apply changes.
+
+Use [LatencyMon](https://www.resplendence.com/latencymon) and [DPC Latency Checker](https://www.thesycon.de/eng/latency_check.shtml) to analyze latency issues caused by kernel-mode device drivers. If they report issues, try updating your network drivers or installing alternate drivers.
