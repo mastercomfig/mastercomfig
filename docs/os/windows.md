@@ -28,4 +28,8 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 2. Choose the optimal setting at the bottom.
 3. Click apply changes.
 
-Use [LatencyMon](https://www.resplendence.com/latencymon) and [DPC Latency Checker](https://www.thesycon.de/eng/latency_check.shtml) to analyze latency issues caused by kernel-mode device drivers. If they report issues, try updating your network drivers or installing alternate drivers.
+## Driver latency optimization
+
+Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as frequent stuttering. The user must sniff out exactly which drivers are causing latency.    
+Use [LatencyMon](https://www.resplendence.com/latencymon) and [DPC Latency Checker](https://www.thesycon.de/eng/latency_check.shtml) to analyze latency issues caused by kernel-mode device drivers. If they report issues, try updating your drivers or installing alternate drivers.  
+Alternatively, you can [switch your (compatible) drivers to MSI mode](https://forums.guru3d.com/threads/windows-line-based-vs-message-signaled-based-interrupts-msi-tool.378044/) and disable their interrupt limits, although this is for **advanced users only**.
