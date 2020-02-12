@@ -116,7 +116,7 @@ Default setting: based on which preset you are currently using.
 
 * **`lighting=very_low`**: No dynamic lights. Very inaccurate, blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=low`**: No dynamic lights. Blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=medium`**: No dynamic lights. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
+* **`lighting=medium`**: No dynamic lights. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost.
 * **`lighting=medium_high`**: No dynamic lights. Detailed lighting. No lightwarps.
 * **`lighting=high`**: Some dynamic lights. Detailed lighting. No lightwarps.
 * **`lighting=very_high`**: Some dynamic lights. Detailed lighting.
