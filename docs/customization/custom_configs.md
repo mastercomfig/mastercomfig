@@ -2,9 +2,7 @@
 
 mastercomfig overrides configs in `tf/cfg`. You'll have to move them to a new folder in `tf/cfg` called `user`. If you don't have this folder, you can make it.
 
-So, if you already have an `autoexec.cfg`, just move it to `tf/cfg/user/`. Make sure you don't have a pre-existing
-full blown config like Comanglia's or Chris' config or some network config in your `autoexec.cfg`, as that will
-conflict with mastercomfig.
+So, if you already have an `autoexec.cfg`, just move it to `tf/cfg/user/`. Make sure you don't have a pre-existing full blown config like Comanglia's or Chris' config or some network config in your `autoexec.cfg`, as that will conflict with mastercomfig.
 
 If you don't have an `autoexec.cfg`, you can [download a blank one](https://github.com/mastercoms/mastercomfig/releases/latest/download/autoexec.cfg) and move it to your `tf/cfg/user/` folder to override any settings in the config.
 
@@ -24,12 +22,11 @@ Custom addons run after presets, modules, and built-in mastercomfig addons, but 
 
 ## Utility Commands
 
-* `run_modules`: applies modules. useful for changing module levels in-game, and then applying them all at once.
-* `restore_preset`: restores modules back to preset defaults, without using user settings.
-* `restore_config`: runs all of mastercomfig and user configs again, resetting changes made in-game.
-* `version_comfig`: outputs the version of mastercomfig currently being used.
+* `run_modules`: Applies modules. useful for changing module levels in-game, and then applying them all at once.
+* `restore_preset`: Restores modules back to preset defaults, without using user settings.
+* `restore_config`: Runs all of mastercomfig and user configs again, resetting changes made in-game.
+* `version_comfig`: Outputs the version of mastercomfig currently being used.
 * `voice_on`, `voice_off` and `voice_toggle`: Turns voice chat on, off and toggles respectively. Uses `voice_enable` and `voice_modenable` internally to fully control voice chat.
-* `preload_enable`: Enables preloading for mods like animations, yttrium's viewmodels, and more
 * `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
 ## Optional Aliases
