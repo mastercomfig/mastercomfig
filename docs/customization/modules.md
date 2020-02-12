@@ -34,7 +34,7 @@ You can also create your own modules. Here are user versions of internal masterc
 
 Controls how fast you send and receive from the server.
 
-Default setting: **`packet_rate=standard`** (all presets).
+Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
 * **`packet_rate=congestion`**: A halved packet rate for congested networks, usually bad WiFi
 * **`packet_rate=conservative`**: A lower packet rate for slower or less reliable networks, usually WiFi or slow Ethernet (PoE, low bandwidth, etc.)
@@ -45,7 +45,7 @@ Default setting: **`packet_rate=standard`** (all presets).
 
 Controls how reliable to consider the snapshots you receive from the server to apply client side smoothing between snapshot receives.
 
-Default setting: **`snapshots=balanced`** (all presets).
+Default setting: **`snapshots=balanced`** (all presets, except Very Low).
 
 * **`snapshots=unreliable`**: Heavily protects against packet loss by using every 3rd snapshot
 * **`snapshots=safe`**: Safest option with minimal snapshot delay by using every other snapshot
@@ -56,7 +56,7 @@ Default setting: **`snapshots=balanced`** (all presets).
 
 Controls how big packets are and how they are split up/compressed.
 
-Default setting: **`packet_size=balanced`** (all presets).
+Default setting: **`packet_size=balanced`** (all presets, except Very Low).
 
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
 * **`packet_size=lowend`**: Uses big single packets while avoiding compression unless needed to avoid splitting up packets. This minimizes computations done on packets before sending.
@@ -315,14 +315,14 @@ Default setting: **`lowviolence=off`** (all presets).
 
 Controls the rendering of various small objects.
 
+Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade` settings to your class configs if they are different from your preset, or else they will be overridden.
+
 Default setting: based on which preset you are currently using.
 
 * **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings
 * **`props=medium`**: Disables client side props, disables foliage, default quality prop models
 * **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models
 * **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at a very high distance with fade in, max quality prop models regardless of distance
-
-Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade` settings to your class configs if they are different from your preset, or else they will be overridden.
 
 ### Ragdolls
 
@@ -412,14 +412,14 @@ Default setting: based on which preset you are currently using.
 
 Toggle health/player info panels.
 
-Default setting: **`hud_panels=on`** (all presets).
+Default setting: **`hud_panels=on`** (all presets, except Very Low).
 
 * **`hud_panels=off`**: Disables health/player info panels on hover.
 * **`hud_panels=on`**: Enables health/player info panels on hover.
 
 ### Messages
 
-Default setting: **`messages=enable`** (all presets).
+Default setting: **`messages=enable`** (all presets, except Very Low).
 
 * **`messages=disable`**: Disables all text messages
 * **`messages=userchat`**: Only displays user generated messages
@@ -427,14 +427,14 @@ Default setting: **`messages=enable`** (all presets).
 
 ### Killfeed
 
-Default setting: **`killfeed=on`** (all presets).
+Default setting: **`killfeed=on`** (all presets, except Very Low).
 
 * **`killfeed=off`**: Disables killfeed
 * **`killfeed=on`**: Enables killfeed
 
 ### Killstreaks
 
-Default setting: **`killstreaks=high`** (all presets).
+Default setting: **`killstreaks=high`** (all presets, except Very Low).
 
 * **`killstreaks=off`**: Disable killstreak banner
 * **`killstreaks=low`**: Enables killstreak solid banner
@@ -449,7 +449,7 @@ Default setting: **`hud_achievement=off`** (all presets).
 
 ### Debug
 
-Default setting: **`debug=minimal`** (all presets).
+Default setting: **`debug=minimal`** (all presets, except Very Low).
 
 * **`debug=on`**: Enable all debug HUDs
 * **`debug=on_partial`**: Enable all but the noisiest debug HUDs
