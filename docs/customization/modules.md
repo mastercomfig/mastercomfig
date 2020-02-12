@@ -34,6 +34,8 @@ You can also create your own modules. Here are user versions of internal masterc
 
 Controls how fast you send and receive from the server.
 
+Default setting: **`packet_rate=standard`** (all presets).
+
 * **`packet_rate=congestion`**: A halved packet rate for congested networks, usually bad WiFi
 * **`packet_rate=conservative`**: A lower packet rate for slower or less reliable networks, usually WiFi or slow Ethernet (PoE, low bandwidth, etc.)
 * **`packet_rate=balanced`**: A 60 packet rate, for getting rid of extra packets usually not displayed on 60Hz monitors.
@@ -43,6 +45,8 @@ Controls how fast you send and receive from the server.
 
 Controls how reliable to consider the snapshots you receive from the server to apply client side smoothing between snapshot receives.
 
+Default setting: based on which class you are currently playing.
+
 * **`snapshots=unreliable`**: Heavily protects against packet loss by using every 3rd snapshot
 * **`snapshots=safe`**: Safest option with minimal snapshot delay by using every other snapshot
 * **`snapshots=balanced`**: Even less snapshot delay with unreliable snapshot fallback to prevent infrequent packet loss issues
@@ -50,7 +54,9 @@ Controls how reliable to consider the snapshots you receive from the server to a
 
 ### Packet size
 
-Controls how big packets are and how they are split up/compressed
+Controls how big packets are and how they are split up/compressed.
+
+Default setting: **`packet_size=balanced`** (all presets).
 
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
 * **`packet_size=lowend`**: Uses big single packets while avoiding compression unless needed to avoid splitting up packets. This minimizes computations done on packets before sending.
@@ -62,6 +68,8 @@ Controls how big packets are and how they are split up/compressed
 Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).
 
 **Note:** This does not increase data usage, just restricts how quickly data can be sent.
+
+Default setting: **`bandwith=1.5Mbps`** (all presets).
 
 * **`bandwidth=restricted`**: Highly restricted game traffic for very bad Internet (192Kbps).
 * **`bandwidth=384Kbps`**: 384Kbps game traffic bandwidth.
@@ -79,6 +87,8 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 
 ### Downloads
 
+Default setting: **`download=mapsonly`** (all presets).
+
 * **`download=all`**: Download all custom files from servers
 * **`download=nosounds`**: Download everything but sounds from servers
 * **`download=mapsonly`**: Download only maps from servers
@@ -90,6 +100,8 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 
 Controls how detailed objects are and how decorations fade in.
 
+Default setting: based on which preset you are currently using.
+
 * **`lod=low`**: Low  model detail. Decorations are never drawn.
 * **`lod=medium`**: Low  model detail. Decorations pop in quickly
 * **`lod=medium_high`**: Medium  model detail. Decorations fade in gradually.
@@ -99,6 +111,8 @@ Controls how detailed objects are and how decorations fade in.
 ### Lighting
 
 Controls lighting fidelity: dynamic lights, how detailed lighting is, phong, rimlights, light averaging, lightwarps, and ambient boost.
+
+Default setting: based on which preset you are currently using.
 
 * **`lighting=very_low`**: No dynamic lights. Very inaccurate, blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=low`**: No dynamic lights. Blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
@@ -112,6 +126,8 @@ Controls lighting fidelity: dynamic lights, how detailed lighting is, phong, rim
 
 Controls shadow quality. Shadow limits affect rendered shadows. Shadows above the limit will be blobby.
 
+Default setting: based on which preset you are currently using.
+
 * **`shadows=off`**: No shadows.
 * **`shadows=very_low`**: Blobby shadows.
 * **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
@@ -121,18 +137,22 @@ Controls shadow quality. Shadow limits affect rendered shadows. Shadows above th
 
 ### Effects
 
-Controls weapon and other miscellaneous effects
+Controls weapon and other miscellaneous effects.
+
+**Note:** The way TF2 uses these settings is inconsistent and may not apply in all cases.
+
+Default setting: based on which preset you are currently using.
 
 * **`effects=low`**: disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes
 * **`effects=medium`**: disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes
 * **`effects=high`**: enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes
 * **`effects=ultra`**: enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes
 
-Note: the way TF2 uses these settings is inconsistent and may not apply in all cases.
-
 ### Water
 
-Controls water reflections
+Controls water reflections.
+
+Default setting: based on which preset you are currently using.
 
 * **`water=very_low`**: Makes water black
 * **`water=low`**: Makes water solid
@@ -144,7 +164,9 @@ Controls water reflections
 
 ### Particles
 
-Controls particle effects
+Controls particle effects.
+
+Default setting: based on which preset you are currently using.
 
 * **`particles=very_low`**: Collapses particles (including bullet tracers) together, makes flames invisible on every other flame stream, disables weather particles, reduces particle density, disables bullet impact flecks
 * **`particles=low`**: Disables weather particles, reduces particle density, disables bullet impact flecks
@@ -154,7 +176,9 @@ Controls particle effects
 
 ### General Post Processing
 
-Controls standard post processing effects
+Controls standard post processing effects.
+
+Default setting: based on which preset you are currently using.
 
 * **`post_processing=off`**: No post processing
 * **`post_processing=low`**: Enables basic color correction
@@ -164,7 +188,9 @@ Controls standard post processing effects
 
 ### Pyrovision
 
-Controls pyrovision visual effects
+Controls pyrovision visual effects.
+
+Default setting: based on which preset you are currently using.
 
 * **`pyrovision=low`**: Disables pyrovision vignette and skybox SSAO depth of field
 * **`pyrovision=medium`**: Enables static pyrovision vignette
@@ -172,7 +198,9 @@ Controls pyrovision visual effects
 
 ### Motion blur
 
-Controls blurring effect from rotation and movement
+Controls blurring effect from rotation and movement.
+
+Default setting: **`motion_blur=off`** (all presets).
 
 * **`motion_blur=off`**: Turns off motion blur
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly
@@ -180,7 +208,9 @@ Controls blurring effect from rotation and movement
 
 ### Antialiasing
 
-Controls additional antialiasing passes (software AA)
+Controls additional antialiasing passes (software AA).
+
+Default setting: based on which preset you are currently using.
 
 * **`aa=off`**: Turns off additional antialiasing
 * **`aa=on`**: Enhanced fence and grass antialiasing
@@ -188,6 +218,8 @@ Controls additional antialiasing passes (software AA)
 ### MSAA Antialiasing
 
 Controls the main hardware based MSAA antialiasing (and CSAA, if you have an Nvidia card that supports it).
+
+Default setting: based on which preset you are currently using.
 
 * **`aa_msaa=off`**: Turns off MSAA and CSAA
 * **`aa_msaa=2x`**: MSAA 2x
@@ -197,7 +229,9 @@ Controls the main hardware based MSAA antialiasing (and CSAA, if you have an Nvi
 
 ### Texture filtering
 
-Controls texture smoothing/filtering
+Controls texture smoothing/filtering.
+
+Default setting: based on which preset you are currently using.
 
 * **`texture_filter=bilinear`**: Bilinear filtering
 * **`texture_filter=trilinear`**: Trilinear filtering
@@ -208,7 +242,9 @@ Controls texture smoothing/filtering
 
 ### Characters
 
-Adjust characters
+Adjust characters details.
+
+Default setting: based on which preset you are currently using.
 
 * **`characters=very_low`**: Disables facial animations, no eyes or teeth
 * **`characters=low`**: Disables facial animations, enables eyes, disables teeth, disables eye movement and blinking
@@ -219,7 +255,11 @@ Adjust characters
 
 ### General decals
 
-Controls bullet holes and overall decal support
+Controls bullet holes and overall decal support.
+
+Note that in the Very Low preset, decals are forced invisible.
+
+Default setting: based on which preset you are currently using.
 
 * **`decals=off`**: Disables decals
 * **`decals=low`**: 9 max decals that hide at a medium range that can't overlap very much
@@ -227,11 +267,11 @@ Controls bullet holes and overall decal support
 * **`decals=high`**: 96 max decals that hide at a far away range that can overlap much more
 * **`decals=ultra`**: 2048 max decals (engine limit) that do not hide and can overlap with practically no limit
 
-Note that in the Very Low preset, decals are forced invisible.
-
 ### Model decals
 
-Controls blood on hurt players and some bullet decals on props
+Controls blood on hurt players and some bullet decals on props.
+
+Default setting: based on which preset you are currently using.
 
 * **`decals_models=off`**: Disable model decals
 * **`decals_models=low`**: Allow up to 9 model decals
@@ -239,19 +279,25 @@ Controls blood on hurt players and some bullet decals on props
 
 ### Map decals
 
-Controls decals placed by the map author
+Controls decals placed by the map author.
+
+Default setting: based on which preset you are currently using.
 
 * **`decals_art=off`**: Disables map decals
 * **`decals_art=on`**: Enables map decals
 
 ### Spray decals
 
-Controls decals sprayed by players
+Controls decals sprayed by players.
+
+Default setting: based on which preset you are currently using.
 
 * **`sprays=off`**: Completely disables downloading, uploading and displaying sprays
 * **`sprays=on`**: Allows sprays
 
 ### Gibs
+
+Default setting: based on which preset you are currently using.
 
 * **`gibs=off`**: Disables gibs
 * **`gibs=low`**: Max of 2 gib parts
@@ -260,12 +306,16 @@ Controls decals sprayed by players
 
 ### Low violence
 
+Default setting: **`lowviolence=off`** (all presets).
+
 * **`lowviolence=off`**: Normal gibs and blood
 * **`lowviolence=on`**: Turns on low violence mode. In TF2, this means birthday style gibs and blood.
 
 ### Props
 
-Controls the rendering of various small objects
+Controls the rendering of various small objects.
+
+Default setting: based on which preset you are currently using.
 
 * **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings
 * **`props=medium`**: Disables client side props, disables foliage, default quality prop models
@@ -276,7 +326,9 @@ Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade
 
 ### Ragdolls
 
-Control physics simulation and fading for bodies that spawn on death
+Control physics simulation and fading for bodies that spawn on death.
+
+Default setting: based on which preset you are currently using.
 
 * **`ragdolls=off`**: Disables ragdolls
 * **`ragdolls=medium`**: Enables standard ragdolls
@@ -284,14 +336,18 @@ Control physics simulation and fading for bodies that spawn on death
 
 ### 3D sky
 
-Controls the enhanced 3D skybox enabled in most maps
+Controls the enhanced 3D skybox that are present in most maps.
+
+Default setting: based on which preset you are currently using.
 
 * **`3dsky=off`**: Disables 3D sky
 * **`3dsky=on`**: Enables 3D sky
 
 ### Jigglebones
 
-Controls cloth and joint physics on some items like the fish and skull bat
+Controls cloth and joint physics on some items like the fish and skull bat.
+
+Default setting: based on which preset you are currently using.
 
 * **`jigglebones=off`**: Always disable jigglebones
 * **`jigglebones=on`**: Disable jigglebones only if the framerate is below 67FPS
@@ -301,6 +357,8 @@ Controls cloth and joint physics on some items like the fish and skull bat
 
 How fast the animation is on the killstreak sheen glow for weapons.
 
+Default setting: **`sheens_speed=slow`** (all presets).
+
 * **`sheens_speed=slow`**: Slow speed.
 * **`sheens_speed=medium`**: The standard speed.
 * **`sheens_speed=fast`**: Faster speed.
@@ -309,6 +367,8 @@ How fast the animation is on the killstreak sheen glow for weapons.
 
 How intense the color tint is on the killstreak sheen glow for weapons.
 
+Default setting: **`sheens_tint=high`** (all presets).
+
 * **`sheens_tint=low`**: Base tint.
 * **`sheens_tint=medium`**: Small tint boost.
 * **`sheens_tint=high`**: High tint boost.
@@ -316,7 +376,9 @@ How intense the color tint is on the killstreak sheen glow for weapons.
 
 ### Texture quality
 
-Controls texture quality
+Controls texture quality.
+
+Default setting: based on which preset you are currently using.
 
 * **`textures=very_low`**: Low texture quality, blocky textures, disables texture blending
 * **`textures=low`**: Low texture quality, disables texture blending
@@ -326,7 +388,9 @@ Controls texture quality
 
 ### Ropes
 
-Controls ropes for Mannpower grappling hook and decorations in maps
+Controls ropes for Mannpower grappling hook and decorations in maps.
+
+Default setting: based on which preset you are currently using.
 
 * **`ropes=off`**: Disables ropes
 * **`ropes=low`**: Basic ropes
@@ -337,7 +401,9 @@ Controls ropes for Mannpower grappling hook and decorations in maps
 
 ### Player model
 
-Toggle the live 3D player model in the corner of your screen
+Toggle the live 3D player model in the corner of your screen.
+
+Default setting: based on which preset you are currently using.
 
 * **`hud_player_model=off`**: Disables the player model
 * **`hud_player_model=on`**: Enables the player model
@@ -346,10 +412,14 @@ Toggle the live 3D player model in the corner of your screen
 
 Toggle health/player info panels.
 
+Default setting: **`hud_panels=on`** (all presets).
+
 * **`hud_panels=off`**: Disables health/player info panels on hover.
 * **`hud_panels=on`**: Enables health/player info panels on hover.
 
 ### Messages
+
+Default setting: **`messages=enable`** (all presets).
 
 * **`messages=disable`**: Disables all text messages
 * **`messages=userchat`**: Only displays user generated messages
@@ -357,10 +427,14 @@ Toggle health/player info panels.
 
 ### Killfeed
 
+Default setting: **`killfeed=on`** (all presets).
+
 * **`killfeed=off`**: Disables killfeed
 * **`killfeed=on`**: Enables killfeed
 
 ### Killstreaks
+
+Default setting: **`killstreaks=high`** (all presets).
 
 * **`killstreaks=off`**: Disable killstreak banner
 * **`killstreaks=low`**: Enables killstreak solid banner
@@ -368,10 +442,14 @@ Toggle health/player info panels.
 
 ### HUD Achievements
 
+Default setting: **`hud_achievement=off`** (all presets).
+
 * **`hud_achievement=off`**: Disable achievement tracker panel completely
 * **`hud_achievement=on`**: Enable support for achievement tracker panel
 
 ### Debug
+
+Default setting: **`debug=minimal`** (all presets).
 
 * **`debug=on`**: Enable all debug HUDs
 * **`debug=on_partial`**: Enable all but the noisiest debug HUDs
@@ -380,11 +458,15 @@ Toggle health/player info panels.
 
 ### Outlines
 
+Default setting: based on which preset you are currently using.
+
 * **`outlines=off`**: Disable outlines and nametags
 * **`outlines=low`**: Enable nametags, disable outlines
 * **`outlines=high`**: Enable nametags and outlines
 
 ### Map Background
+
+Default setting: **`dynamic_background=off`** (all presets).
 
 * **`dynamic_background=off`**: No main menu map background on startup
 * **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects)
@@ -393,10 +475,12 @@ Toggle health/player info panels.
 
 ## Sound modules
 
+Note that in the Low and Very Low presets, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
+
+Default setting: based on which preset you are currently using.
+
 * **`sound=low`**: Disable sound volume mixing, very low quality sound spatialization and positional effects, delays spatialization
 * **`sound=medium`**: Enables sound volume mixing, only basic sound spatialization and positional effects enabled, slightly delays spatialization
 * **`sound=high`**: Enables sound volume mixing, enables all sound spatialization and positional effects, slightly delays spatialization
 * **`sound=very_high`** Enables sound volume mixing, enables all sound spatialization and positional effects, enables pitch smoothing
 * **`sound=ultra`**: Enables sound volume mixing, enables enhanced sound spatialization and positional effects, immediately spatializes and traces sounds, enables pitch smoothing
-
-Note that in the Low and Very Low presets, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
