@@ -336,7 +336,7 @@ Default setting: based on which preset you are currently using.
 
 ### 3D sky
 
-Controls the enhanced 3D skybox that are present in most maps.
+Controls the enhanced 3D skybox that is present in most maps.
 
 Default setting: based on which preset you are currently using.
 
