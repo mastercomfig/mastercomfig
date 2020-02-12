@@ -45,7 +45,7 @@ Default setting: **`packet_rate=standard`** (all presets).
 
 Controls how reliable to consider the snapshots you receive from the server to apply client side smoothing between snapshot receives.
 
-Default setting: based on which class you are currently playing.
+Default setting: **`snapshots=balanced`** (all presets).
 
 * **`snapshots=unreliable`**: Heavily protects against packet loss by using every 3rd snapshot
 * **`snapshots=safe`**: Safest option with minimal snapshot delay by using every other snapshot
