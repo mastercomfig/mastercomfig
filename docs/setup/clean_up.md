@@ -3,7 +3,10 @@
 **NOTE: This will reset ALL settings. Make sure you back up your binds and other
 custom settings before you do this.**
 
-If you have already have a config, or want to remove mastercomfig, delete any
+**NOTE: These steps are no longer required to install mastercomfig,
+but is kept here to document how to completely reset TF2.**
+
+If you want to remove your config, delete any
 configs you may have in `tf/custom` and delete the `tf/cfg` folder.
 Then [verify your game files](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335)
 using Steam.

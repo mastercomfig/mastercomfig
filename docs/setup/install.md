@@ -1,16 +1,40 @@
-# Install
+# How to install mastercomfig
 
-[Download](https://mastercomfig.com/download) the VPK files of your choice and then
-drag them **directly** to your `tf/custom` folder. Do not put the VPKs
-in a folder inside your `custom` folder, put them in the `custom` folder itself.
-You don't have to rename anything either, just drag the files as is into `custom`.
+1. [Download](https://mastercomfig.com/download) the mastercomfig VPK files of your choice.
+2. Drag them to your `tf/custom` folder.
+3. Set these launch options: `-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -nohltv -particles 1 -primarysound -snoforceformat`. For more information, read [launch options customization guide](../customization/launch_options.md).
 
-The VPK includes everything needed for the config to run, so you don't need to
-have an autoexec or run it using anything. If you already have an autoexec,
-you'll definitely want to read on for more information on how to migrate
-to mastercomfig. **Don't edit the VPK either, a later step has customization instructions.**
+## Custom configs
+If you have any of the following files, you will have to do some extra steps to get them to work with mastercomfig:
 
-To get to `tf/custom`, right click Team Fortress 2 in your Steam library, click
-**Properties**, go to the **Local Files** tab, and then click the
-**Browse Local Files...** button. Then in the files app that appears, open the
-`tf` folder and then open the `custom` folder.
+```
+autoexec.cfg
+scout.cfg
+soldier.cfg
+pyro.cfg
+demoman.cfg
+heavyweapons.cfg
+engineer.cfg
+medic.cfg
+sniper.cfg
+spy.cfg
+```
+
+1. Create a `user` folder where these files are located (most likely `tf/cfg`).
+2. Drag these files into the newly created `user` folder.
+
+## Next Steps
+
+### Troubleshooting
+Encountering any issues? See the [troubleshooting guide](../next_steps/troubleshoot.md) for help.
+
+### Customization
+
+Want to personalize your TF2 even further?
+
+* See how you can [customize individual settings](../customization/custom_configs.md)
+* Want to easily customize a bunch of settings at once? [Check out the modules system](../customization/modules.md)
+* Tune your [launch options](../customization/launch_options.md) to get better performance and quality for your system
+* Get inspired by other people's [custom configs](../customization/custom_configs.md)
+* Take a look at some other [great TF2 modifications](../customization/see_also.md)
+* [Optimize your OS](../os/index.md) to squeeze out even more performance

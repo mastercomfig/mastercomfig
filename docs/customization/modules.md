@@ -2,9 +2,13 @@
 Modules are groups of related commands with specific values for a certain use case or quality level.
 
 ## How to use
-Modules are [used in presets](https://github.com/mastercoms/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in a `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example, `textures=high`.
+Modules are [used in presets](https://github.com/mastercoms/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in a `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example:
 
-You can [download the modules.cfg template](https://github.com/mastercoms/mastercomfig/releases/latest/download/modules.cfg) file and drag it into your `tf/cfg/user` folder to get started.
+```
+textures=high
+```
+
+This will set the texture quality to high.
 
 ### In game selection
 
@@ -17,7 +21,7 @@ For example, you could enter `=textures=high` to set your textures to high, and 
 ### Advanced
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures ""` in `user/modules.cfg`.
+If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will disable mastercomfig from running texture commands.
 
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
 
