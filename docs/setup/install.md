@@ -2,7 +2,7 @@
 
 1. [Download](https://mastercomfig.com/download) the mastercomfig VPK files of your choice.
 2. Go to your Steam library and right click on Team Fortress 2.
-3. Click properties.
+3. Click Properties.
 4. Click the Local Files tab.
 5. Click Browse Local Files...
 6. Navigate to the `tf/custom` folder.
