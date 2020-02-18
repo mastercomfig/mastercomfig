@@ -5,6 +5,7 @@ You can use user customization files to override specific settings in mastercomf
 These are `autoexec.cfg`, which runs at game launch, and the 9 class configs
 (`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
 `medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class.
+All of these files go into a folder called `user` you create in `tf/cfg`.
 
 If you don't have an `autoexec.cfg`, you can [download a blank one](https://github.com/mastercoms/mastercomfig/releases/latest/download/autoexec.cfg) and move it to your `tf/cfg/user/` folder to override any settings in the config.
 
