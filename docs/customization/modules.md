@@ -40,20 +40,17 @@ Controls how fast you send and receive from the server.
 
 Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
-* **`packet_rate=congestion`**: A halved packet rate for congested networks, usually bad WiFi
-* **`packet_rate=conservative`**: A lower packet rate for slower or less reliable networks, usually WiFi or slow Ethernet (PoE, low bandwidth, etc.)
-* **`packet_rate=balanced`**: A 60 packet rate, for getting rid of extra packets usually not displayed on 60Hz monitors.
+* **`packet_rate=congestion`**: A halved packet rate for congested networks, usually bad WiFi, or very slow CPUs
 * **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all servers.
 
 ### Snapshots
 
 Controls how reliable to consider the snapshots you receive from the server to apply client side smoothing between snapshot receives.
 
-Default setting: **`snapshots=balanced`** (all presets, except Very Low).
+Default setting: **`snapshots=safe`** (all presets, except Very Low).
 
 * **`snapshots=unreliable`**: Heavily protects against packet loss by using every 3rd snapshot
 * **`snapshots=safe`**: Safest option with minimal snapshot delay by using every other snapshot
-* **`snapshots=balanced`**: Even less snapshot delay with unreliable snapshot fallback to prevent infrequent packet loss issues
 * **`snapshots=lan`**: Very reliant on snapshots by using every snapshot. Only use on LAN.
 
 ### Packet size
