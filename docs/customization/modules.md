@@ -40,18 +40,20 @@ Controls how fast you send and receive from the server.
 
 Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
-* **`packet_rate=congestion`**: A halved packet rate for congested networks, usually bad WiFi, or very slow CPUs
+* **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad WiFi, or very slow CPUs
 * **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all servers.
 
 ### Snapshots
 
-Controls how reliable to consider the snapshots you receive from the server to apply client side smoothing between snapshot receives.
+Controls how reliable to consider the snapshots you receive from the server to apply client side buffering/smoothing between snapshot receives.
+Also known as linear interpolation (lerp or interp). Note: mastercomfig sets this automatically per class, but setting it in your `modules.cfg`
+will override this behavior.
 
 Default setting: **`snapshots=safe`** (all presets, except Very Low).
 
 * **`snapshots=unreliable`**: Heavily protects against packet loss by using every 3rd snapshot
 * **`snapshots=safe`**: Safest option with minimal snapshot delay by using every other snapshot
-* **`snapshots=lan`**: Very reliant on snapshots by using every snapshot. Only use on LAN.
+* **`snapshots=fast`**: Fastest option with a minimal buffering time to guard against
 
 ### Packet size
 
