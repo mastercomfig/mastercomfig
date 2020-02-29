@@ -19,6 +19,9 @@ If there's something you'd like to run for all of your class configs, you can ad
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
 * `voice_on`, `voice_off` and `voice_toggle`: Turns voice chat on, off and toggles respectively. Uses `voice_enable` and `voice_modenable` internally to fully control voice chat.
 * `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
+* `net_projectiles`: Use network settings optimized for projectiles.
+* `net_hitscan`: Use network settings optimized for hitscan bullets and melee.
+* `net_spy`: Use network settings optimized for Spy (`net_hitscan`, with more enforced precision)
 
 ## Additional Addons
 
