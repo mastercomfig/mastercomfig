@@ -52,7 +52,6 @@ Default setting: based on which class you are currently playing (in the Very Low
 
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
-* **`snapshot_buffer=balanced`**: Even less snapshot delay with unreliable snapshot fallback to prevent infrequent packet loss issues.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
 
 ### Packet size
