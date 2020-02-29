@@ -1,5 +1,10 @@
 # Windows
 
+## Disable Fullscreen Optimizations
+Source is known to be worse with fullscreen optimizations and thus you should disable it.
+
+Open your game folder through Steam. Then, right click on `hl2.exe`, click Properties, go to the Compatibility tab, and then check the box that says `Disable Fullscreen Optimizations`.
+
 ## Use High Performance power plan
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, you may have a Ryzen specific plan. Use that.
 
