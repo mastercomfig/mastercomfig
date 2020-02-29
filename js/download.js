@@ -53,7 +53,7 @@ function app() {
 
   var version = null;
 
-  var addons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial", "null-cancelling-movement", "flat-mouse", "transparent-viewmodels", "experimental", "badgpu", "lowmem"];
+  var addons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial", "null-cancelling-movement", "flat-mouse", "transparent-viewmodels", "badgpu", "lowmem"];
   var selectedPreset = "medium-high";
   var selections = [];
 
