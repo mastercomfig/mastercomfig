@@ -52,6 +52,7 @@ done
 if [ "$release" = true ] ; then
     find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
     find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
+    find . -name "*.cfg" | xargs sed -i '/^$/d'
     # Package into VPK
     for D in *; do
         if [ -d "${D}" ]; then
