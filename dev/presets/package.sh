@@ -48,7 +48,6 @@ for P in "${decals_depth[@]}"; do
     sed -i "/\"ConVar.mat_slopescaledepthbias_decal\"/ s/\"[-0.5]*\"/\"0.000001\"/" mastercomfig-"${P}"-preset/dxsupport_override.cfg
 done
 
-
 # Remove comments to save space
 if [ "$release" = true ] ; then
     find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
