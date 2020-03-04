@@ -50,9 +50,12 @@ done
 
 # Remove comments to save space
 if [ "$release" = true ] ; then
+    # remove comments, including indented comments
     find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
-    find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
-    find . -name "*.cfg" | xargs sed -i '/^$/d'
+    # remove leading and trailing whitespace
+    find . -name "*.cfg" | xargs sed -i 's/^[[:blank:]]*//;s/[[:blank:]]*$//'
+    # remove blank lines
+    find . -name "*.cfg" | xargs sed -i '/^\s*$/d'
     # Package into VPK
     for D in *; do
         if [ -d "${D}" ]; then
