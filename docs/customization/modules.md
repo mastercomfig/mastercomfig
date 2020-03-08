@@ -436,7 +436,7 @@ Default setting: **`killfeed=on`** (all presets, except Very Low).
 
 ### Killstreaks
 
-Default setting: **`killstreaks=high`** (all presets, except Very Low).
+Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
 * **`killstreaks=off`**: Disable killstreak banner.
 * **`killstreaks=low`**: Enables killstreak solid banner.
