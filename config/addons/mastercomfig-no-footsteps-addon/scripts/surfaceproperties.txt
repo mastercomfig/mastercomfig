@@ -4,7 +4,7 @@ default
 density 2000
 elasticity .25
 friction .8
-dampening 0.0"
+dampening .0
 stepleft
 stepright
 bulletimpact
