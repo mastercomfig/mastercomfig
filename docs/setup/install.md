@@ -7,7 +7,7 @@
 5. Click Browse Local Files...
 6. Navigate to the `tf/custom` folder.
 7. Drag the VPK files into this folder.
-8. Set these launch options: `-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -nohltv -particles 1 -primarysound -snoforceformat`. For more information, read [launch options customization guide](../customization/launch_options.md).
+8. Set these launch options: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1`. For more information, read [launch options customization guide](../customization/launch_options.md).
 
 ## Custom configs
 If you have any of the following files, you will have to do some extra steps to get them to work with mastercomfig:
