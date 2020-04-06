@@ -58,12 +58,12 @@ Default setting: based on which class you are currently playing.
 
 Controls how big packets are and how they are split up/compressed.
 
-Default setting: **`packet_size=balanced`** (all presets, except Very Low).
+Default setting: **`packet_size=big** (all presets).
 
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
-* **`packet_size=lowend`**: Uses big single packets while avoiding compression unless needed to avoid splitting up packets. This minimizes computations done on packets before sending.
 * **`packet_size=minimal`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
-* **`packet_size=balanced`**: Uses a reasonably large packet size limit that should work with most routers except the lowest end ones. Compresses minimally.
+* **`packet_size=balanced`**: Uses a reasonably large packet size limit that should work with most routers except the lowest end ones. No client-side compression.
+* **`packet_size=big`**: Uses big single packets to avoid splitting up packets, for use on very reliable connections and Internet routes. No client-side compression.
 
 ### Bandwidth
 
@@ -439,7 +439,7 @@ Default setting: **`killfeed=on`** (all presets, except Very Low).
 Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
 * **`killstreaks=off`**: Disable killstreak banner.
-* **`killstreaks=low`**: Enables killstreak solid banner.
+* **`killstreaks=low`**: Enables killstreak text with no banner.
 * **`killstreaks=high`**: Enables killstreak translucent banner.
 
 ### HUD Achievements

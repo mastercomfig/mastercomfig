@@ -5,7 +5,7 @@ click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
 
 ```
--novid -nojoy -nosteamcontroller -softparticlesdefaultoff -nohltv -particles 1 -primarysound -snoforceformat
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1
 ```
 
 into the box and click ok.
@@ -33,25 +33,28 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-dxlevel 90** : OpenGL Shader Model 2
 
 ## List of Launch Options
-**Recommended**: `-novid -nojoy -nosteamcontroller -softparticlesdefaultoff -nohltv -particles 1 -primarysound -snoforceformat`
+**Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
 * **-nosteamcontroller** : disable Steam controller system, faster startup, less memory usage and less input conflicts
-* **-softparticlesdefaultoff** : disable scene depth blending for particles and sprites, more FPS
 * **-nohltv** : disables SourceTV hosting, less resource usage
 * **-particles 1** : limits beam count to the minimum of 512
-* **-primarysound**: always use a direct hardware sound buffer (only works on 2 speakers or headphones), may cause sounds to not play. Reduces stuttering. Windows only.
-* **-snoforceformat**: do not set the hardware sound buffer format, may cause sounds to not play. Reduces stuttering and solves some minor issues with `-primarysound`. Windows only.
+* **-NoQueuedPacketThread** : skips creating a thread for sending large packets, which is unused on clients
+* **+cl_clean_textures_on_death 1** : Removes unused textures on death, rather than potentially every frame.
 
 ## Extra Launch Options
 * **-console** : displays console on startup
 * **-r_emulate_gl**: changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX
 * **-nostartupsound** : disable game music on main menu
 * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
+* **+cl_threaded_bone_setup 1** : Threaded bone setup for animations, improving performance. May cause crashes.
+* **+tf_killstreakeyes_minkills 1 +tf_killstreakeyes_maxkills 1** : Enable full killstreak eyes effect upon first kill.
+* **+tf_vm_min_invis 0.22** : At least, how invisible viewmodel will be when cloaked
+* **+tf_vm_max_invis 0.5** : At most, how invisible viewmodel will be when cloaked
 
 ## OpenGL Launch Options (Linux and macOS only)
-* **displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
+* **-displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
 * **-gl_enablesamplerobjects** : enhance texture preloading using sampler objects
 * **-gl_texclientstorage** : use driver host copies for textures, reduces memory usage. May cause issues with texture display.
 
