@@ -54,7 +54,7 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **+tf_vm_max_invis 0.5** : At most, how invisible viewmodel will be when cloaked
 
 ## OpenGL Launch Options (Linux and macOS only)
-* **displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
+* **-displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
 * **-gl_enablesamplerobjects** : enhance texture preloading using sampler objects
 * **-gl_texclientstorage** : use driver host copies for textures, reduces memory usage. May cause issues with texture display.
 
