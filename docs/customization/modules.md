@@ -439,7 +439,7 @@ Default setting: **`killfeed=on`** (all presets, except Very Low).
 Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
 * **`killstreaks=off`**: Disable killstreak banner.
-* **`killstreaks=low`**: Enables killstreak solid banner.
+* **`killstreaks=low`**: Enables killstreak text with no banner.
 * **`killstreaks=high`**: Enables killstreak translucent banner.
 
 ### HUD Achievements
