@@ -63,5 +63,5 @@ However, `-dxlevel 95` is your best bet and works for most people.
 
 ## Experimental Launch Options
 * **-gl_amd_pinned_memory** : use `AMD_pinned_memory` for efficient device memory handling. Experimental as its performance impact (negative or positive) is unknown. Linux only.
-* **-gl_nv_bindless_texturing** : use `NV_bindless_texture` for reduced overhead for managing bindings. Experimental as its Source implementation may not be complete. Linux only.
-* **-gl_enablesamplerobjects** : enhance texture preloading using sampler objects. Experimental as its performance impact (negative or positive) is unknown. Linux only.
+* **-gl_nv_bindless_texturing** : use `NV_bindless_texture` for reduced overhead for managing bindings. Experimental as its performance impact (negative or positive) is unknown and its Source implementation may not be complete. Linux only.
+* **-gl_enablesamplerobjects** : enhance texture preloading using sampler objects. Experimental as its performance impact (negative or positive) is unknown and its Source implementation may not be complete. Linux only.
