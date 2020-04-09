@@ -20,10 +20,8 @@ Read below about optional launch options and choosing your own DXLevel.
 !!! info
     These launch options should be added to first launch, and then removed.
 
-DXLevel Launch options are very system dependent so you will only find the best one by testing it yourself.
-
 === "Windows"
-    * **-dxlevel 100** : Use hardware to determine graphics capabilities and allow for DX10 card features (fast vertex textures and blending).
+    * **-dxlevel 100** : Use hardware to determine graphics capabilities and allow for DX10 card features.
 === "macOS/Linux"
     The DXLevel is automatically determined and cannot be set.
 
@@ -35,11 +33,9 @@ You can fake your graphics card to one TF2 checks for, in order to unlock better
 
 === "Windows"
     * **Intel** (Broadwater or higher (past ~2005)): `-force_device_id 0x2500`
-    * **Intel** (Broadwell or later): `-r_emulate_gl -force_vendor_id 1`
     * Other cards are already set automatically.
 === "macOS/Linux"
     * **Intel** (Broadwater or higher (past ~2005)): `-force_device_id 0x2500`
-    * **Intel** (Broadwell or later): `-force_vendor_id 1`
     * Other cards are already set automatically.
 
 ## List of Launch Options
