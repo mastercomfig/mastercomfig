@@ -33,8 +33,14 @@ TF2 may be looking for an outdated list of graphics cards to enable higher perfo
 
 You can fake your graphics card to one TF2 checks for, in order to unlock better graphics card usage using launch options.
 
-* **Intel** (Use with Broadwater or higher (past ~2005)): `-force_device_id 0x2500`
-* Other cards are already automatically set.
+=== "Windows"
+    * **Intel** (Broadwater or higher (past ~2005)): `-force_device_id 0x2500`
+    * **Intel** (Broadwell or later): `-r_emulate_gl -force_vendor_id 1`
+    * Other cards are already set automatically.
+=== "macOS/Linux"
+    * **Intel** (Broadwater or higher (past ~2005)): `-force_device_id 0x2500`
+    * **Intel** (Broadwell or later): `-force_vendor_id 1`
+    * Other cards are already set automatically.
 
 ## List of Launch Options
 **Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1 +mat_lodin_time 0`
