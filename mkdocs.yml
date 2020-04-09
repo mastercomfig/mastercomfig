@@ -62,7 +62,6 @@ theme:
     language: en
     features:
         - instant
-        - tabs
     name: material
     palette:
         primary: teal
