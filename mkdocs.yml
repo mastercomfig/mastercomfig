@@ -80,7 +80,7 @@ plugins:
     - git-revision-date-localized:
         type: timeago
 extra_css:
-  - 'stylesheets/extra.css'
+  - 'stylesheets/dark-theme-v5.css'
 extra:
     social:
         - icon: fontawesome/brands/github
