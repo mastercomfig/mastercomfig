@@ -5,7 +5,7 @@ click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
 
 ```
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1 +mat_lodin_time 0
 ```
 
 into the box and click ok.
@@ -33,7 +33,7 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-dxlevel 90** : OpenGL Shader Model 2
 
 ## List of Launch Options
-**Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1`
+**Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1 +mat_lodin_time 0`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
@@ -42,6 +42,7 @@ However, `-dxlevel 95` is your best bet and works for most people.
 * **-particles 1** : limits beam count to the minimum of 512
 * **-NoQueuedPacketThread** : skips creating a thread for sending large packets, which is unused on clients
 * **+cl_clean_textures_on_death 1** : Removes unused textures on death, rather than potentially every frame.
+* **+mat_lodin_time 0** : Time to fade in newly streamed-in texture quality. 0 disables. The fade transition is not very helpful, as it delays textures reaching their full quality. Sometimes, the effect is not even noticeable as the game loads in progressively higher quality textures, which acts as a discrete transition on its own.
 
 ## Extra Launch Options
 * **-console** : displays console on startup

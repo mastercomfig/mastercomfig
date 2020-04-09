@@ -41,6 +41,7 @@ nav:
         - Silly Launch Options: 'tf2/silly_launch_options.md'
         - Generating TF2 Data: 'tf2/README.md'
 markdown_extensions:
+    - admonition
     - smarty
     - toc:
         permalink: true
@@ -50,30 +51,44 @@ markdown_extensions:
         noclasses: True
         pygments_style: monokai
     - meta
-    - pymdownx.emoji
+    - pymdownx.emoji:
+        emoji_index: !!python/name:pymdownx.emoji.twemoji
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite:
+        style_plain_text: True
     - pymdownx.magiclink
     - pymdownx.smartsymbols
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - pymdownx.tilde
+    - pymdownx.superfences
+    - pymdownx.tabbed
 theme:
-    name: 'material'
+    language: en
+    features:
+        - instant
+        - tabs
+    name: material
     palette:
-        primary: 'teal'
-        accent: 'teal'
-    logo: 'img/logo.png'
-    favicon: 'img/logo.ico'
-repo_url: 'https://github.com/mastercoms/mastercomfig/'
-edit_uri: 'https://github.com/mastercoms/mastercomfig/edit/release/docs/'
+        primary: teal
+        accent: teal
+    logo: img/logo.png
+    favicon: img/logo.ico
+    icon:
+        repo: fontawesome/brands/github
+repo_name: GitHub
+repo_url: https://github.com/mastercoms/mastercomfig/
+edit_uri: https://github.com/mastercoms/mastercomfig/edit/release/docs/
+plugins:
+    - search
+    - minify:
+        minify_html: true
+    - git-revision-date-localized:
+        type: timeago
 extra_css:
   - 'stylesheets/extra.css'
-  - 'stylesheets/dark.css'
 extra:
-    repo_icon: 'github'
     social:
-        - type: 'github'
-          link: 'https://github.com/mastercoms/mastercomfig/'
-        - type: 'discord'
-          link: 'https://discord.gg/CuPb2zV'
-        - type: 'share-square'
-          link: 'https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config'
+        - icon: fontawesome/brands/github
+          link: https://github.com/mastercoms/mastercomfig/
+        - icon: fontawesome/brands/discord
+          link: https://discord.gg/CuPb2zV
+        - icon: fontawesome/brands/steam
+          link: https://steamcommunity.com/groups/comfig
