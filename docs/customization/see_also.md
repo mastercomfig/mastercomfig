@@ -1,3 +1,7 @@
+---
+description: Some awesome TF2 modifications which can be used alongside mastercomfig.
+---
+
 # See Also
 
 Here are a few awesome TF2 modifications:

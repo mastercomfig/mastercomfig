@@ -1,3 +1,7 @@
+---
+description: Having trouble with mastercomfig? Here's where to go to first for solutions.
+---
+
 # Troubleshooting
 
 This is a list of common issues users experience with mastercomfig, and how to solve them.
@@ -5,9 +9,17 @@ This is a list of common issues users experience with mastercomfig, and how to s
 If you find that you need more assistance, please reach out to our community on:
 [Discord](https://discord.gg/CuPb2zV) or [Steam](https://steamcommunity.com/groups/comfig).
 
+## Configs not working
+
+Go over the [installation steps](../setup/install.md) once again.
+
+Make sure the mastercomfig preset VPK is in the `tf/custom` folder.
+
+Make sure your TF2 configs are in the `cfg/user` folder.
+
 ## Viewmodels are not visible
 
-Add the following to your `user/autoexec.cfg`:
+Add the following to your `autoexec.cfg`:
 
 ```c
 viewmodel_fov 70
@@ -20,7 +32,7 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 This is a HUD initialization bug with TF2. You can fix it by running `hud_reloadscheme`.
 
-If you'd like this command to automatically run to fix this bug, you can put this in your `user/autoexec.cfg`:
+If you'd like this command to automatically run to fix this bug, you can put this in your `autoexec.cfg`:
 
 ```c
 alias game_overrides_once_c hud_reloadscheme
@@ -38,17 +50,19 @@ You will have to exit the game to reset the lock that competitive puts on the ga
 
 ## TF2 exits on startup
 
-Make sure you don't have any infinite loops caused by an `exec autoexec` in your custom configs (like in your `user/autoexec.cfg`). Additionally, make sure your custom configs don't contain `quit`, and that your launch options don't contain `+quit`.
+Make sure you don't have any infinite loops caused by an `exec autoexec` in your custom configs (like in your `autoexec.cfg`). Additionally, make sure your custom configs don't contain `quit`, and that your launch options don't contain `+quit`.
 
 ## Preloading animation and/or model mods not working
 
 If you are trying to use this sort of mod and preload it to bypass `sv_pure`, people have found async disk loading to be incompatible with preloading.
 
-Put `dynamic_background=itemtest` in your `modules.cfg` to disable some async disk loading features and fix preloading compatability.
+Put `mod_support=on` in your `modules.cfg` to disable some async disk loading features.
+
+You may also want to preload mods with the `dynamic_background=itemtest` module.
 
 ## yttrium's viewmodels not preloading
 
-If you use yttrium's viewmodels, the installer adds the preload commands to your `autoexec.cfg`. However, since mastercomfig doesn't use your `autoexec.cfg`, you'll have to add this to your `user/modules.cfg`:
+If you use yttrium's viewmodels, the installer adds the preload commands to your `autoexec.cfg`. However, since mastercomfig doesn't use your `autoexec.cfg`, you'll have to add this to your `modules.cfg`:
 
 ```c
 dynamic_background=preload
@@ -56,11 +70,11 @@ dynamic_background=preload
 
 ## TF2 crashing on a custom map
 
-If TF2 is crashing to desktop after a custom map loading or after picking a class on a custom map, enter `mat_phong 1` in console. The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. All Valve maps except for `rd_asteroid` don't use lightmapped props. More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
+If TF2 is crashing to desktop after a custom map loading or after picking a class on a custom map, add `mat_phong 1` to your `autoexec.cfg`. The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. All Valve maps except for `rd_asteroid` don't use lightmapped props. More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
 
 ## Item panels are taking too long to load
 
-Add `tf_time_loading_item_panels .0005` to `user/autoexec.cfg`.
+Add `tf_time_loading_item_panels .0005` to `autoexec.cfg`.
 
 ## Players' sprays are not working even with the module enabled
 
@@ -68,8 +82,12 @@ Players' sprays are treated like a decal in-game. To get sprays to work, you hav
 
 ## Particle-related errors in console
 
-Ignore these, as these are red herrings that happen in a clean TF2 installation and do not affect FPS.
+Ignore these, as these happen in a clean TF2 installation and only Valve can fix them.
 
 ## "Unknown command gl_\*" errors in console
 
 mastercomfig sets some OpenGL-related cvars, which are only available on Linux and macOS. Thus, these errors appear a few times when using mastercomfig on Windows. These errors are harmless and can be ignored safely.
+
+## "Unknown command cl_clean_textures_on_death", etc errors in console
+
+mastercomfig sets some development only cvars, which are only available to be set in the launch options. These errors are a bug, and the value _is_ set, despite what the console says.

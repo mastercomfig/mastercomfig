@@ -1,3 +1,7 @@
+---
+description: Some less useful launch options, just documented here because why not?
+---
+
 # Silly Launch Options
 These are launch options that take performance or making the game look bad too far and are not included in the config.
 

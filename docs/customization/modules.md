@@ -1,3 +1,7 @@
+---
+description: Easily customize mastercomfig to get the exact stuff you want without memorizing tons of commands!
+---
+
 # Modules
 Modules are groups of related commands with specific values for a certain use case or quality level.
 
@@ -11,7 +15,6 @@ textures=high
 This will set the texture quality to high.
 
 ### In game selection
-
 You can select modules in game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
 
 For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
@@ -19,6 +22,9 @@ For example, you could enter `=textures=high` to set your textures to high, and 
 **How does it work?** It logs things to a file called `tf/cfg/modules.txt`, and then executes that `modules.txt` as a config file.
 
 ### Advanced
+!!! warning
+    These steps are entirely optional and are only for advanced customization.
+
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
 If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will disable mastercomfig from running texture commands.
@@ -26,6 +32,9 @@ If you want to disable running a module entirely, you can put (for example) `ali
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
 
 ### Custom modules
+!!! warning
+    These steps are entirely optional and are only for advanced customization.
+
 You can also create your own modules. Here are user versions of internal mastercomfig definitions:
 
 * `comfig/comfig.cfg` (define module levels): `user/define_modules.cfg`
@@ -69,7 +78,8 @@ Default setting: **`packet_size=big** (all presets).
 
 Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).
 
-**Note:** This does not increase data usage, just restricts how quickly data can be sent.
+!!! note
+    This does not increase data usage, just restricts how quickly data can be sent.
 
 Default setting: **`bandwith=1.5Mbps`** (all presets).
 
@@ -141,7 +151,8 @@ Default setting: based on which preset you are currently using.
 
 Controls weapon and other miscellaneous effects.
 
-**Note:** The way TF2 uses these settings is inconsistent and may not apply in all cases.
+!!! note
+    The way TF2 uses these settings is inconsistent and may not apply in all cases.
 
 Default setting: based on which preset you are currently using.
 
@@ -473,7 +484,16 @@ Default setting: **`dynamic_background=off`** (all presets).
 * **`dynamic_background=off`**: No main menu map background on startup.
 * **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
 * **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
-* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
+* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.\
+
+## Mod Support
+
+Default setting: **`mod_support=off`** (all presets).
+
+You may want to also enable preloading using the [Map Background module](#map-background).
+
+* **`mod_support=off`**: Enables better file system performance at the cost of some mods causing crashes.
+* **`mod_support=on`**: Disables file system optimizations (may cause stutters during gameplay), but fixes crashes caused by some mods.
 
 ## Sound modules
 

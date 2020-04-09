@@ -1,3 +1,7 @@
+---
+description: A list of all console variables and commands on TF2 for Linux.
+---
+
 # Console Variables - Linux
 
 ```

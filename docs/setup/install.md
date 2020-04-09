@@ -1,3 +1,7 @@
+---
+description: Easy steps on how to install mastercomfig and get it set up properly.
+---
+
 # How to install mastercomfig
 
 1. [Download](https://mastercomfig.com/download) the mastercomfig VPK files of your choice.
@@ -27,6 +31,9 @@ spy.cfg
 
 1. Create a `user` folder where these files are located (most likely `tf/cfg`).
 2. Drag these files into the newly created `user` folder.
+
+!!! tip
+    Although not required, if you move any other files (for example, `binds.cfg`), you will have to update the `exec` command from `exec binds` to `exec user/binds`.
 
 ## Next Steps
 

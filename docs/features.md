@@ -1,3 +1,7 @@
+---
+description: A list of all mastercomfig features.
+---
+
 # Features
 
 ## Customization
@@ -38,13 +42,12 @@
 * Optimized memory usage
 
 ## Networking
-* Increased data rate and split rate
+* Increased data rate
 * Reduced choke
 * Reuses sockets if available
 * Optimizes prediction and interp systems for better hitreg
 * Client view smoothing
 * Increased client timeout
-* Matchmaking improvements and fixes
 * Increased max file size for extra content
 
 ## Sound

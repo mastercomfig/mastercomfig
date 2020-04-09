@@ -1,3 +1,7 @@
+---
+description: mastercomfig screenshots for all presets.
+---
+
 # Screenshots
 
 ## Ultra

@@ -1,3 +1,7 @@
+---
+description: All the help and inspiration that has helped mastercomfig be even better.
+---
+
 # Credits
 
 * [Chris](https://chrisdown.name/tf2/) for starting it all

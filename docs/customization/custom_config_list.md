@@ -1,3 +1,7 @@
+---
+description: Find out how the community is using mastercomfig.
+---
+
 # List of custom configs
 
 This is a list of mastercomfig custom configs by members of the community.

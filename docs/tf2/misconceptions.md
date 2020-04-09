@@ -1,3 +1,7 @@
+---
+description: Common misconceptions with TF2 that mastercomfig corrects.
+---
+
 # Misconceptions
 
 ## Bad launch options

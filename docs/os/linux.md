@@ -1,5 +1,10 @@
+---
+description: Learn how to optimize your Linux OS for better performance.
+---
+
 # Linux
-**Note: These instructions are only for Linux systems.**
+!!! info
+    These instructions are only for Linux systems.
 
 ## Kernel
 Try a desktop oriented kernel like [Liquorix](https://liquorix.net/) or [Zen](https://github.com/zen-kernel).
@@ -26,11 +31,11 @@ See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_me
 
 ## Native Libraries
 
-**Warning: While unlikely, it is unknown whether using native libraries is safe to do due to VAC (Valve Anti-Cheat). Continue at your own risk
-of having your account VAC banned, which is a permanent, non-negotiable ban that removes access to your
-inventory and prevents you from connecting to VAC-secured servers.**
+!!! warning
+    While unlikely, it is unknown whether using native libraries is safe to do due to VAC (Valve Anti-Cheat). Continue at your own risk of having your account VAC banned, which is a permanent, non-negotiable ban that removes access to your inventory and prevents you from connecting to VAC-secured servers.
 
-_This has nothing to do with mastercomfig. Mastercomfig is safe, and will not get you VAC banned._
+!!! note
+    This has nothing to do with mastercomfig. mastercomfig is safe, and will not get you VAC banned.
 
 Disabling the Steam runtime using through command line variables is not enough to use native libraries
 on TF2 as the TF2 launcher script shades in some libraries.
