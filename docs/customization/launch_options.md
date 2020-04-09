@@ -17,6 +17,7 @@ into the box and click ok.
 Read below about optional launch options and choosing your own DXLevel.
 
 ## DXLevel Launch Options
+
 !!! info
     These launch options should be added to first launch, and then removed.
 
