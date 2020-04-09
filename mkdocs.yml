@@ -2,8 +2,8 @@ site_name: mastercomfig docs
 site_author: mastercoms
 site_url: https://docs.mastercomfig.com/
 site_description: A modern Team Fortress 2 performance and customization config.
-copyright: Copyright &copy; 2016-2020 mastercoms<br><br>Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo, Source, the Source logo
-are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.<br><br>mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.
+copyright: 'Copyright &copy; 2016-2020 mastercoms<br><br>Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo, Source, the Source logo
+are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.<br><br>mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.'
 strict: true
 nav:
     - About:
