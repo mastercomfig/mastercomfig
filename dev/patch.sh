@@ -36,12 +36,12 @@ uploadFileToGitHub "./comfig/modules.cfg" "modules template"
 
 uploadFileToGitHub "./comfig/mastercomfig.zip" "mastercomfig zip package"
 
-tag=$(reponse | jq '.tag_name' | sed -e 's/^"//' -e 's/"$//')
+tag=$($response | jq '.tag_name' | sed -e 's/^"//' -e 's/"$//')
 
 git tag -d "$tag"
 git tag "$tag"
 
-git push origin :"$tag"
+git push -f origin :"$tag"
 git push origin "$tag"
 
 git fetch --tags
