@@ -36,7 +36,7 @@ uploadFileToGitHub "./comfig/modules.cfg" "modules template"
 
 uploadFileToGitHub "./comfig/mastercomfig.zip" "mastercomfig zip package"
 
-tag=$($response | jq '.tag_name' | sed -e 's/^"//' -e 's/"$//')
+tag=$(echo $response | jq '.tag_name' | sed -e 's/^"//' -e 's/"$//')
 
 git tag -d "$tag"
 git tag "$tag"
