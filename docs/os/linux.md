@@ -3,6 +3,7 @@ description: Learn how to optimize your Linux OS for better performance.
 ---
 
 # Linux
+
 !!! info
     These instructions are only for Linux systems.
 

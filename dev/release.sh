@@ -11,16 +11,20 @@ export release="true"
 
 ./package.sh
 
-echo Version:
-read version
+if [ "$patch" = true ] ; then
+    ./patch.sh
+else
+    echo Version:
+    read version
 
-echo Highlights:
-read highlights
+    echo Highlights:
+    read highlights
 
-echo Hours taken:
-read hours
+    echo Hours taken:
+    read hours
 
-./deploy.sh $version "$highlights"
-./announce.sh $version "$highlights" "$hours"
+    ./deploy.sh $version "$highlights"
+    ./announce.sh $version "$highlights" "$hours"
+fi
 
 printf "\n"

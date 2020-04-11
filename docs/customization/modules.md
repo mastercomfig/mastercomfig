@@ -22,6 +22,7 @@ For example, you could enter `=textures=high` to set your textures to high, and 
 **How does it work?** It logs things to a file called `tf/cfg/modules.txt`, and then executes that `modules.txt` as a config file.
 
 ### Advanced
+
 !!! warning
     These steps are entirely optional and are only for advanced customization.
 
@@ -32,6 +33,7 @@ If you want to disable running a module entirely, you can put (for example) `ali
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
 
 ### Custom modules
+
 !!! warning
     These steps are entirely optional and are only for advanced customization.
 
