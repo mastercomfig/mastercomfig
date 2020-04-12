@@ -82,7 +82,7 @@ You can fake your graphics card to one TF2 checks for, in order to unlock better
     * **-gl_amd_pinned_memory** : use `AMD_pinned_memory` for efficient device memory handling. :warning: **Experimental** as its performance impact (negative or positive) is unknown.
     * **-gl_nv_bindless_texturing** : use `NV_bindless_texture` for reduced overhead for managing bindings. :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete.
 
-## Niche Launch Options
+## Nice Launch Options
 * **-nouserclip** : uses software clipping instead of hardware user clip planes, FPS increase or decrease depends on your CPU+GPU and graphics API.
 * **-nosound** : disables sound, no performance boost unless your drivers are slow
 * **-small** : allow for resolutions smaller than 640x480
