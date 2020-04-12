@@ -311,7 +311,7 @@ Controls decals sprayed by players.
 Default setting: based on which preset you are currently using.
 
 * **`sprays=off`**: Completely disables downloading, uploading and displaying sprays.
-* **`sprays=on`**: Allows sprays.
+* **`sprays=on`**: Allows sprays. You must set a [Decals module](#general-decals) higher than `off` for it to work.
 
 ### Gibs
 
@@ -324,10 +324,10 @@ Default setting: based on which preset you are currently using.
 
 ### Low violence
 
-Default setting: **`lowviolence=off`** (all presets).
+Default setting: **`lowviolence=off`** (if gibs are on), and **`lowviolence=on`** (if gibs are off).
 
 * **`lowviolence=off`**: Normal gibs and blood.
-* **`lowviolence=on`**: Turns on low violence mode. In TF2, this means birthday style gibs and blood.
+* **`lowviolence=on`**: Turns on low violence mode. In TF2, this means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
 
 ### Props
 
