@@ -52,7 +52,7 @@ You will have to exit the game to reset the lock that competitive puts on the ga
 
 Make sure you don't have any infinite loops caused by an `exec autoexec` in your custom configs (like in your `autoexec.cfg`). Additionally, make sure your custom configs don't contain `quit`, and that your launch options don't contain `+quit`.
 
-## Preloading animation and/or model mods not working
+## Preloading animation and/or model mods not working or crashing
 
 If you are trying to use this sort of mod and preload it to bypass `sv_pure`, people have found async disk loading to be incompatible with preloading.
 
