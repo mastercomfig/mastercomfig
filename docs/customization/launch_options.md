@@ -32,12 +32,8 @@ TF2 may be looking for an outdated list of graphics cards to enable higher perfo
 
 You can fake your graphics card to one TF2 checks for, in order to unlock better graphics card usage using launch options.
 
-=== "Windows"
-    * **Intel** (Broadwater or higher (past ~2005)): `-force_device_id 0x2500`
-    * Other cards are already set automatically.
-=== "macOS/Linux"
-    * **Intel** (Broadwater or higher (past ~2005)): `-force_device_id 0x2500`
-    * Other cards are already set automatically.
+* **Intel** (Broadwater or higher (past ~2005)): `-force_device_id 0x2500`
+* Other cards are already set automatically.
 
 ## List of Launch Options
 **Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1 +mat_lodin_time 0`
@@ -82,7 +78,10 @@ You can fake your graphics card to one TF2 checks for, in order to unlock better
     * **-gl_amd_pinned_memory** : use `AMD_pinned_memory` for efficient device memory handling. :warning: **Experimental** as its performance impact (negative or positive) is unknown.
     * **-gl_nv_bindless_texturing** : use `NV_bindless_texture` for reduced overhead for managing bindings. :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete.
 
-## Niche Launch Options
+## Uncommon Launch Options
+
+These launch options do not need to be used by the vast majority of users, but they are here for the few that need them.
+
 * **-nouserclip** : uses software clipping instead of hardware user clip planes, FPS increase or decrease depends on your CPU+GPU and graphics API.
 * **-nosound** : disables sound, no performance boost unless your drivers are slow
 * **-small** : allow for resolutions smaller than 640x480
