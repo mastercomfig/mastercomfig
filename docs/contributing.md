@@ -1,3 +1,7 @@
+---
+description: Learn how to get involved with mastercomfig and help out!
+---
+
 # Contributing
 
 As an open source project, mastercomfig appreciates the community's help in improving it.
@@ -21,10 +25,14 @@ suggestions you have for the config.
 
 ## Contributing
 
-### Wiki
+### Docs
 
 Have a screenshot, workaround or anything else interesting you'd like to share?
-Contribute to the [wiki](https://github.com/mastercoms/mastercomfig/wiki).
+Contribute to the [docs](https://github.com/mastercoms/mastercomfig/tree/release/docs).
+
+### Support
+
+You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV), [Steam Discussions](https://steamcommunity.com/groups/comfig/discussions) or [teamfortress.tv](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
 
 ### Contributing to the Config
 
@@ -147,20 +155,16 @@ the navigation links to be generated properly.
 
 The `texture_preload_list.txt` is designed to tell Team Fortress 2 which
 textures to load on startup.
-~~Strip all nonexistent textures from the default one if there is a major
+Strip all nonexistent textures from the default one if there is a major
 TF2 update, and then add your changes. Preloaded textures should be common
-enough to warrant the extra startup time and memory usage.~~
-Currently, mastercomfig removes all textures from this list in order to
-increase FPS and reduce memory usage.
+enough to warrant the extra startup time and memory usage.
 
 ##### Client precache
 
 This is similar to the texture preload list, but it is for sounds and models.
-~~Also similarly to the texture preload list, strip any nonexistent entries
-and then add your chages, making sure that the entries in the precache are
-common enough to warrant the extra startup time and memory usage.~~
-Currently, mastercomfig removes all but the UI models from this file in order to
-increase FPS and reduce memory usage.
+Also similarly to the texture preload list, strip any nonexistent entries
+and then add your changes, making sure that the entries in the precache are
+common enough to warrant the extra startup time and memory usage.
 
 ##### Shader cache
 
@@ -227,6 +231,7 @@ in `dev/` called `mastercomfig-vars`, containing the following variables:
 export DISCORD_WEBHOOK="Discord webhook for config announcements"
 export GH_USERNAME="GitHub username used for authentication for release deployment"
 export GH_TOKEN="GitHub authentication token used for release deployment"
+export TF2_DIR="absolute path to your Team Fortress 2 directory"
 ```
 
 ## Code of Conduct
