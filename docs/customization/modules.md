@@ -497,8 +497,8 @@ Default setting: **`mod_support=off`** (all presets).
 
 You may want to also enable preloading using the [Map Background module](#map-background).
 
-* **`mod_support=off`**: Enables better file system performance at the cost of some mods causing crashes.
-* **`mod_support=on`**: Disables file system optimizations (may cause stutters during gameplay), but fixes crashes caused by some mods.
+* **`mod_support=off`**: Enables better file system performance at the cost of animation and model mods causing crashes.
+* **`mod_support=on`**: Disables file system optimizations (may cause stutters during gameplay, and longer map load times), but fixes crashes caused by animation and model mods.
 
 ## Sound modules
 
