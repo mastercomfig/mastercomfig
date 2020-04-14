@@ -8,6 +8,7 @@ strict: true
 nav:
     - About:
         - Home: 'index.md'
+        - FAQ: 'faq.md'
         - Support Me: 'support_me.md'
         - Help: 'help.md'
         - Features: 'features.md'
