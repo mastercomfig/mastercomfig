@@ -1,5 +1,9 @@
 # Contributing
 
+As an open source project, mastercomfig appreciates the community's help in improving it.
+
+We welcome contributions of any type or size, from anyone!
+
 ## Reporting issues
 
 We always welcome reporting issues, whether it be bug reports
@@ -17,10 +21,14 @@ suggestions you have for the config.
 
 ## Contributing
 
-### Wiki
+### Docs
 
 Have a screenshot, workaround or anything else interesting you'd like to share?
-Contribute to the [wiki](https://github.com/mastercoms/mastercomfig/wiki).
+Contribute to the [docs](https://github.com/mastercoms/mastercomfig/tree/release/docs).
+
+### Support
+
+You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV), [Steam Discussions](https://steamcommunity.com/groups/comfig/discussions) or [teamfortress.tv](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
 
 ### Contributing to the Config
 
@@ -34,11 +42,10 @@ changes based on simple hearsay or assumptions.
 Every setting and change should be based on information
 found in Team Fortress 2 [blog posts/patch notes](https://www.teamfortress.com/),
 the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/SDK_Docs),
-the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013) and the Source
-2007 source code leak, so make sure those are available to you before you start
-contributing. File overrides like `dxsupport_override.cfg`, the shader cache
-files and `texture_preload_list.txt` must be updated according to changes
-[tracked by Steam Database](https://github.com/SteamDatabase/GameTracking-TF2).
+the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013), 
+so make sure those are available to you before you start contributing.
+File overrides like DX support, shader cache, texture preload and client precache
+must be updated according to changes [tracked by Steam Database](https://github.com/SteamDatabase/GameTracking-TF2).
 
 #### Find a task
 
@@ -68,7 +75,7 @@ There are currently 4 categories for launch options:
   benefit all users
 * `Extra`: These are launch options people find to be personal preference or for
   use cases that cannot be applied to all users
-* `Niche`: These are launch options most people will not use, but will still
+* `Uncommon`: These are launch options most people will not use, but will still
   satisfy a valid use case
 * `Experimental`: These are launch options that are being tested to be moved
   elsewhere as their effects are not clear
@@ -134,10 +141,7 @@ UFO posters
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
-  with two or less threads
-* `badgpu`: Optimizations that generally do not affect quality for
-weak integrated graphics chips (Intel graphics) or
-weak/old GPUs (lower end made before 2007)
+* `badgpu`: Optimizations that generally do not affect quality for weak integrated graphics chips (Intel graphics) or weak/old GPUs (lower end made before 2007)
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower)
 
 **Modules:**
@@ -150,33 +154,28 @@ the navigation links to be generated properly.
 
 ##### Texture preload list
 
-The `texture_preload_list.txt` is designed to tell Team Fortress 2 which
+The `texture_preload_list.txt` file is designed to tell Team Fortress 2 which
 textures to load on startup.
-~~Strip all nonexistent textures from the default one if there is a major
+Strip all nonexistent textures from the default one if there is a major
 TF2 update, and then add your changes. Preloaded textures should be common
-enough to warrant the extra startup time and memory usage.~~
-Currently, mastercomfig removes all textures from this list in order to
-increase FPS and reduce memory usage.
+enough to warrant the extra startup time and memory usage.
 
 ##### Client precache
 
-This is similar to the texture preload list, but it is for sounds and models.
-~~Also similarly to the texture preload list, strip any nonexistent entries
-and then add your chages, making sure that the entries in the precache are
-common enough to warrant the extra startup time and memory usage.~~
-Currently, mastercomfig removes all but the UI models from this file in order to
-increase FPS and reduce memory usage.
+The `scripts/client_precache.txt` file is similar to the texture preload list, but it is for sounds and models.
+Also similarly to the texture preload list, strip any nonexistent entries
+and then add your changes, making sure that the entries in the precache are
+common enough to warrant the extra startup time and memory usage.
 
 ##### Shader cache
 
-This comes in two parts: the main shader cache at `shader_cache.cfg` and the
-OpenGL shader pair cache at `glshaders.cfg` and `glbaseshaders.cfg`. The main
-shader cache is a key value store for each shader, with the key being the
+The OpenGL shader pair cache is located at `glbaseshaders.cfg` and `glbaseshaders_osx.cfg`.
+The main shader cache is a key value store for each shader, with the key being the
 bytecode index and value being the bytecode size. This can be used to enable or
 disable shader caching for certain shaders. The OpenGL shader pair cache is a
 bit different, with the numbers being indices.
 
-##### DirectX support
+##### DX support
 
 Edit `dxsupport_override.cfg` and set hidden ConVars and other settings
 according to hardware and DirectX level. Make sure there are no updates to this
@@ -186,8 +185,13 @@ changes.
 ##### Game overrides
 
 Some ConVars are set from what the map author specified so we have to override them.
-This is currently done [in](https://github.com/mastercoms/mastercomfig/blob/release/dev/presets/package.sh#L51)
-the packaging process.
+This is currently done in modules.
+
+##### DX Support overrides
+
+Some ConVars cannot be set in-game, even with DX support definitions. Thus, some presets have
+[custom packaging overrides](https://github.com/mastercoms/mastercomfig/blob/release/dev/presets/package.sh#L39)
+to set the value in DX support.
 
 ### Making your pull request
 
@@ -211,7 +215,7 @@ to do basic testing on options.
 ### Bot match
 
 After the results are positive with the benchmark, measure your average FPS in a
-local 32 player bot match on `pl_upward`, highest difficulty.
+local 32 player bot match on `pl_upward`. (use `+maxplayers 32` in launch options).
 
 ### Casual match
 
@@ -232,4 +236,10 @@ in `dev/` called `mastercomfig-vars`, containing the following variables:
 export DISCORD_WEBHOOK="Discord webhook for config announcements"
 export GH_USERNAME="GitHub username used for authentication for release deployment"
 export GH_TOKEN="GitHub authentication token used for release deployment"
+export TF2_DIR="absolute path to your Team Fortress 2 directory"
 ```
+
+## Code of Conduct
+
+As a member of the mastercomfig community, in order to foster a more welcoming environment,
+you must abide by the [Code of Conduct](https://github.com/mastercoms/mastercomfig/blob/release/.github/CODE_OF_CONDUCT.md)
