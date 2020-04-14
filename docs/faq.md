@@ -12,6 +12,7 @@ It is a complete performance and customization scripting mod which requires many
 * Mannpower map script, which fixes grappling hook ropes being invisible on lower settings
 * Modular design which allows for an extensive user override system (modules, addons, configs), rather than having to redo edits every time mastercomfig updates
 * `mm_override` script, which fixes crashes while loading for Competitive matchmaking
+* Optimized preload configuration, which improves memory usage and load times
 * No messy cloud sync or config saving propagation which happens in the `cfg` folder
 
 Now, this only explains why mastercomfig is a mod, which can also be a folder, rather than explaining why mastercomfig is a VPK.
