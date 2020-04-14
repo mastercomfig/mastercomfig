@@ -174,10 +174,10 @@ common enough to warrant the extra startup time and memory usage.
 ##### Shader cache
 
 The OpenGL shader pair cache is located at `glbaseshaders.cfg` and `glbaseshaders_osx.cfg`.
-The main shader cache is a key value store for each shader, with the key being the
-bytecode index and value being the bytecode size. This can be used to enable or
-disable shader caching for certain shaders. The OpenGL shader pair cache is a
-bit different, with the numbers being indices.
+This is a value store for each shader program, which is an indexed subkey. The first value
+is the vertex shader name, the second is the pixel shader name, third is the vertex shader
+static index, fourth is the pixel shader static index, fifth is the vertex shader dynamic index
+and sixth is the pixel shader dynamic index.
 
 ##### DX support
 
