@@ -1,3 +1,7 @@
+---
+description: Learn how to benchmark TF2 and measure FPS scientifically.
+---
+
 # Benchmarks
 
 Benchmarking is the process through which you can scientifically measure the impact of changes to your system.
