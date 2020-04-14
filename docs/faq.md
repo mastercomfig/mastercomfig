@@ -1,3 +1,7 @@
+---
+description: Get answers to frequently asked questions about mastercomfig.
+---
+
 # Frequently Asked Questions
 
 ## Why does mastercomfig use a VPK?
