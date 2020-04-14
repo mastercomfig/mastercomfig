@@ -42,12 +42,6 @@ for P in "${dsp_off[@]}"; do
     sed -i "/\"ConVar.dsp_off\"/ s/\"[0]*\"/\"1\"/" mastercomfig-"${P}"-preset/dxsupport_override.cfg
 done
 
-# Hide decals on very low
-declare -a decals_depth=("very-low")
-for P in "${decals_depth[@]}"; do
-    sed -i "/\"ConVar.mat_slopescaledepthbias_decal\"/ s/\"[-0.5]*\"/\"0.000001\"/" mastercomfig-"${P}"-preset/dxsupport_override.cfg
-done
-
 # Remove comments to save space
 if [ "$release" = true ] ; then
     # remove comments, including indented comments
