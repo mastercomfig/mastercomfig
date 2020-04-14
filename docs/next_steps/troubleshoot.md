@@ -84,6 +84,25 @@ Players' sprays are treated like a decal in-game. To get sprays to work, you hav
 
 Ignore these, as these happen in a clean TF2 installation and only Valve can fix them.
 
+## I want another interp value
+
+mastercomfig sets optimal interp values. Interp is a low-level networking setting which controls how incoming packets are used by the client. Because packets have an inherent delay, and may not come at all due to issues along your route, low server framerate, server framerate variance, and ping fluctuations. Interp is a very sensitive networking setting which tunes your buffer for incoming packets. If you set it too low, you will get networking errors, resulting in worse hitreg, because of trying to use game packets which have not come in yet. 
+
+Imagine it like controlling the size of the gray bar in YouTube. If you set it too high, your video playback will be delayed. If you set it too low, then you will be constantly be encountering freezing in video playback as the video download tries to keep up with playback. In the case of TF2, when the client needs to use a new server game packet when there is not one, it will instead extrapolate movement based on previous data, assuming that everything is continuing on its same path, which can be wildly inaccurate.
+
+If you are worried about the delay being high, rest assured that the tick delay caused by interpolation is compensated for the following: hitscan, melee, backstabs, and medi-gun. Projectiles are simulated on the server, and thus are not compensated. Projectile spawns and despawns are not interpolated, which means that you may notice a client-side delay in projectiles exiting your barrel and subsequently impacting the target. In a game like TF2, this is not a huge issue, and you should be more worried about accuracy of game state rather than a few milliseconds of client-side delay.
+
+Now having said all that, you still have the option to change interp if you really want to and understand what you're doing. The best way to change interp is to use the snapshot buffer module, which has a few preset values for the most common use case of higher than normal packet loss. If you want a specific interp value, the best place to set it is in `game_overrides.cfg` (make sure it is in the `user` folder), like so:
+
+```c
+cl_interp_ratio x
+cl_interp x
+```
+
+One other thing to note is that client interp is determined by whichever is the greater of cl_interp_ratio divided by cl_updaterate, and the value of cl_interp. cl_interp_ratio and cl_interp have no interaction beyond that.
+
+Finally, if you do not believe anything said here, and think interp is horrible, try disabling it by putting `+cl_interpolate 0` in your launch options and watch in horror as everything stutters around, especially on higher refresh rate monitors. As you will find out, interp is a very needed solution for networked multiplayer games. Remove `cl_interpolate 0` from your launch options once you are done with this experiment.
+
 ## "Unknown command gl_\*" errors in console
 
 mastercomfig sets some OpenGL-related cvars, which are only available on Linux and macOS. Thus, these errors appear a few times when using mastercomfig on Windows. These errors are harmless and can be ignored safely.
