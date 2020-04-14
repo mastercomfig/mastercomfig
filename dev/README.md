@@ -54,5 +54,5 @@ This is a file that must be supplied by the user with the following entries:
 export DISCORD_WEBHOOK="Discord webhook for config announcements"
 export GH_USERNAME="GitHub username used for authentication for release deployment"
 export GH_TOKEN="GitHub authentication token used for release deployment"
-export TF2_DIR="path to Team Fortress 2 directory"
+export TF2_DIR="absolute path to Team Fortress 2 directory"
 ```
