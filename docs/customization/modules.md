@@ -262,6 +262,9 @@ Default setting: based on which preset you are currently using.
 
 Adjust characters details.
 
+!!! tip
+    Facial animations will only work on `lod=medium_high` and higher.
+
 Default setting: based on which preset you are currently using.
 
 * **`characters=very_low`**: Disables facial animations, no eyes or teeth.
