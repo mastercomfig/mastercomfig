@@ -27,6 +27,18 @@ If there's something you'd like to run for all of your class configs, you can ad
 * `net_hitscan`: Use network settings optimized for hitscan bullets and melee.
 * `net_spy`: Use network settings optimized for Spy (`net_hitscan`, with more enforced precision)
 
+## Changing your preset
+
+mastercomfig now supports selecting a preset after download. Add a file to your `user` folder called `pre_comfig.cfg`. In this file, put `alias preset "exec presets/preset_name"`, where `preset_name` is the name of the preset:
+
+* ultra
+* high
+* medium-high
+* medium-low
+* medium
+* low
+* very-low
+
 ## Additional Addons
 
 !!! warning
