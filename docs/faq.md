@@ -44,13 +44,13 @@ Now, this only explains why mastercomfig is a mod, which can also be a folder, r
     much more efficiently. Each subfolder is a new search path that must be checked each
     time the engine tries to open a file. So, for optimal load times, always use VPK files
     and don't make any subfolders in this folder!
-    
+
 !!! quote
     We search VPK files before ordinary folders, because most files will be found in
 		VPK and we can avoid making thousands of file system calls to attempt to open files
 		in folders where they don't exist. (Searching a VPK is much faster than making an operating
 		system call.)
-    
+
 * Modular design, which allows for contained custom settings and variants of mastercomfig
 
 ## Why does mastercomfig override my class configs?

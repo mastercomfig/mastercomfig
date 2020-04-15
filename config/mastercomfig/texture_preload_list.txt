@@ -760,4 +760,3 @@ models/weapons/c_models/c_ambassador/c_ambassador
 models/weapons/c_models/c_ambassador/c_ambassador_gold
 models/weapons/c_models/c_ambassador/c_ambassador_blue
 models/weapons/c_models/c_ambassador/c_ambassador_blue_gold
-materials/particle/flamethrowerfire/flamethrowerfire128
