@@ -51,7 +51,7 @@ if [ "$zip_package" != true ] ; then
     # remove blank lines
     find . -name "*.cfg" -o -name "*.txt" -o -name "*.res" | xargs sed -i '/^\s*$/d'
     # remove quotes from VDF key values TODO: don't remove empty quotes from surfaceproperties.txt
-    find . -name "mtp.cfg" -o -name "dxsupport*.cfg" -o -name "glbaseshaders*.cfg" \
+    find . -name "mtp.cfg" -o -name "glbaseshaders*.cfg" \
      -o -name "*.txt" -o -name "*.res" -and ! -name "surfaceproperties.txt" | xargs sed -i 's/"//g'
     # remove tabs from VDF key values
     find . -name "mtp.cfg" -o -name "dxsupport*.cfg" -o -name "glbaseshaders*.cfg" \
