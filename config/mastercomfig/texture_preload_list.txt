@@ -356,6 +356,7 @@ models/weapons/c_items/c_wrangler_xmas_blue
 models/weapons/c_items/c_wrangler_xmas_phongmask
 models/weapons/c_items/c_wrench
 models/weapons/c_items/c_wrench_gold
+models/weapons/v_rocketlauncher/v_rocketlauncher01_gold
 models/weapons/c_items/c_xms_backburner_horns
 models/weapons/c_items/c_xms_double_barrel
 models/weapons/c_items/c_xms_double_barrel_blue
@@ -382,6 +383,7 @@ models/weapons/c_models/c_flamethrower/c_flamethrower_blue
 models/weapons/c_models/c_flamethrower/c_flamethrower_exp
 models/weapons/c_models/c_flamethrower/c_flamethrower_gold
 models/weapons/c_models/c_grenadelauncher/c_grenadelauncher
+models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_exp
 models/weapons/c_models/c_grenadelauncher/c_grenadelauncher_gold
 models/weapons/c_models/c_knife/c_knife
 models/weapons/c_models/c_knife/c_knife_gold
@@ -753,3 +755,9 @@ models/workshop_partner/weapons/c_models/c_shogun_warpack/c_shogun_warpack_blu
 models/workshop_partner/weapons/c_models/c_shogun_warpack/c_shogun_warpack_red
 models/workshop_partner/weapons/c_models/c_tw_eagle/c_tw_eagle
 models/workshop_partner/weapons/v_models/v_hm_watch/v_hm_watch
+models/player/spy/spy_refractnormal
+models/weapons/c_models/c_ambassador/c_ambassador
+models/weapons/c_models/c_ambassador/c_ambassador_gold
+models/weapons/c_models/c_ambassador/c_ambassador_blue
+models/weapons/c_models/c_ambassador/c_ambassador_blue_gold
+materials/particle/flamethrowerfire/flamethrowerfire128

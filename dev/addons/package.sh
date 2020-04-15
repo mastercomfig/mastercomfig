@@ -19,13 +19,21 @@ done
 cp -rf ../../config/addons/* .
 
 # Remove comments to save space
-if [ "$release" = true ] ; then
+if [ "$zip_package" != true ] ; then
     # remove comments, including indented comments
-    find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
+    find . -name "*.cfg" -o -name "*.txt" -o -name "*.res" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
     # remove leading and trailing whitespace
-    find . -name "*.cfg" | xargs sed -i 's/^[[:blank:]]*//;s/[[:blank:]]*$//'
+    find . -name "*.cfg" -o -name "*.txt" -o -name "*.res" | xargs sed -i 's/^[[:blank:]]*//;s/[[:blank:]]*$//'
     # remove blank lines
-    find . -name "*.cfg" | xargs sed -i '/^\s*$/d'
+    find . -name "*.cfg" -o -name "*.txt" -o -name "*.res" | xargs sed -i '/^\s*$/d'
+    # remove quotes from VDF key values TODO: don't remove empty quotes from surfaceproperties.txt
+    find . -name "mtp.cfg" -o -name "dxsupport*.cfg" -o -name "glbaseshaders*.cfg" \
+     -o -name "*.txt" -o -name "*.res" -and ! -name "surfaceproperties.txt" | xargs sed -i 's/"//g'
+    # remove tabs from VDF key values
+    find . -name "mtp.cfg" -o -name "dxsupport*.cfg" -o -name "glbaseshaders*.cfg" \
+     -o -name "*.txt" -o -name "*.res" | xargs sed -e "s/[[:space:]]\+/ /g"
+    # remove EOF
+    find . -name "*.cfg" -o -name "*.txt" -o -name "*.res" | xargs perl -pi -e 'chomp if eof'
     # Package into VPK
     for D in *; do
         if [ -d "${D}" ]; then

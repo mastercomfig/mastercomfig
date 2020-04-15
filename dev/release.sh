@@ -3,11 +3,13 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
+export zip_package="true"
+
 ./package.sh
 rm -f comfig/mastercomfig.zip
 zip -9r comfig/mastercomfig.zip addons/ presets/ -x "*.sh"
 
-export release="true"
+unset zip_package
 
 ./package.sh
 
