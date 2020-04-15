@@ -10,9 +10,15 @@ rm */ -rf
 # Create .cfg addons
 declare -a addons=("badgpu" "lowmem" "transparent-viewmodels" "flat-mouse" "null-cancelling-movement")
 
-for A in "${addons[@]}"; do
-    mkdir -p mastercomfig-"${A}"-addon/cfg/addons
-    cp -f ../../config/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
+for F in ../../config/cfg/addons/*; do
+    if [ -f "${F}" ]; then
+        ext=${file##*.}
+        if [ "$ext" = cfg ]; then
+            A=$(basename $file .$ext)
+            mkdir -p mastercomfig-"${A}"-addon/cfg/addons
+            cp -f ../../config/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
+        fi
+    fi
 done
 
 # Copy over custom addons
