@@ -68,6 +68,8 @@ If you use yttrium's viewmodels, the installer adds the preload commands to your
 dynamic_background=preload
 ```
 
+Also be sure to delete the `autoexec.cfg` file created automatically in the TF2's `cfg` folder to avoid conflicts with the mastercomfig.
+
 ## TF2 crashing on a custom map
 
 If TF2 is crashing to desktop after a custom map loading or after picking a class on a custom map, add `mat_phong 1` to your `autoexec.cfg`. The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. All Valve maps except for `rd_asteroid` don't use lightmapped props. More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
