@@ -68,7 +68,7 @@ If you use yttrium's viewmodels, the installer adds the preload commands to your
 dynamic_background=preload
 ```
 
-Also be sure to delete the `autoexec.cfg` file created automatically in the TF2's `cfg` folder to avoid conflicts with the mastercomfig.
+You may also want to delete the `autoexec.cfg` created automatically in the TF2's `cfg` folder. It does not conflict with mastercomfig, since VPKs files will always overlap files in the `cfg` folder.
 
 ## TF2 crashing on a custom map
 
