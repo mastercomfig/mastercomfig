@@ -34,8 +34,8 @@ mastercomfig now supports selecting a preset after download. Add a file to your 
 * ultra
 * high
 * medium-high
-* medium-low
 * medium
+* medium-low
 * low
 * very-low
 
