@@ -507,7 +507,7 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 
 Default setting: based on which preset you are currently using.
 
-* **`sound=low`**: Disable sound volume mixing, disabled sound spatialization and positional effects, delays spatialization.
+* **`sound=low`**: Disables sound volume mixing and disables sound spatialization and positional effects.
 * **`sound=medium`**: Enables sound volume mixing, only basic sound spatialization and positional effects enabled, slightly delays spatialization.
 * **`sound=high`**: Enables sound volume mixing, enables all sound spatialization and positional effects, slightly delays spatialization.
 * **`sound=very_high`** Enables sound volume mixing, enables all sound spatialization and positional effects, enables pitch smoothing.
