@@ -19,6 +19,7 @@ Read below about optional launch options and choosing your own DXLevel.
 ## DXLevel Launch Options
 
 === "Windows"
+
 !!! info
     These launch options should be added to first launch, and then removed.
     * **-dxlevel 100** : Use hardware to determine graphics capabilities.
