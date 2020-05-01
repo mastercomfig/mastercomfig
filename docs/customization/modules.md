@@ -243,7 +243,7 @@ Default setting: based on which preset you are currently using.
 * **`aa_msaa=2x`**: MSAA 2x
 * **`aa_msaa=4x`**: MSAA 4x
 * **`aa_msaa=8x`**: MSAA 8x
-* **`aa_msaa=16xq_csaa`**: MSAA 8x + CSAA 2x if supported. MSAA 8x otherwise.
+* **`aa_msaa=16x`**: MSAA 8x + CSAA 2x if supported. MSAA 8x otherwise.
 
 ### Texture filtering
 
