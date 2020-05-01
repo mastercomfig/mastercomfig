@@ -505,9 +505,12 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 
 ## Sound modules
 
+!!! note
+    In the Low and Very Low preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
+
 Default setting: based on which preset you are currently using.
 
-* **`sound=low`**: Disables sound volume mixing and disables sound spatialization and positional effects.
+* **`sound=low`**: Disable sound volume mixing, very low quality sound spatialization and positional effects, delays spatialization.
 * **`sound=medium`**: Enables sound volume mixing, only basic sound spatialization and positional effects enabled, slightly delays spatialization.
 * **`sound=high`**: Enables sound volume mixing, enables all sound spatialization and positional effects, slightly delays spatialization.
 * **`sound=very_high`** Enables sound volume mixing, enables all sound spatialization and positional effects, enables pitch smoothing.
