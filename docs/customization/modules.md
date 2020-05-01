@@ -243,7 +243,7 @@ Default setting: based on which preset you are currently using.
 * **`aa_msaa=2x`**: MSAA 2x
 * **`aa_msaa=4x`**: MSAA 4x
 * **`aa_msaa=8x`**: MSAA 8x
-* **`aa_msaa=16xq_csaa`**: MSAA 8x + CSAA 2x if supported. MSAA 8x otherwise.
+* **`aa_msaa=16x`**: MSAA 8x + CSAA 2x if supported. MSAA 8x otherwise.
 
 ### Texture filtering
 
@@ -510,7 +510,7 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 
 Default setting: based on which preset you are currently using.
 
-* **`sound=low`**: Disable sound volume mixing, very low quality sound spatialization and positional effects, delays spatialization.
+* **`sound=low`**: Disables sound volume mixing, very low quality sound spatialization and positional effects, delays spatialization.
 * **`sound=medium`**: Enables sound volume mixing, only basic sound spatialization and positional effects enabled, slightly delays spatialization.
 * **`sound=high`**: Enables sound volume mixing, enables all sound spatialization and positional effects, slightly delays spatialization.
 * **`sound=very_high`** Enables sound volume mixing, enables all sound spatialization and positional effects, enables pitch smoothing.
