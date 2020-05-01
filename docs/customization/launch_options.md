@@ -22,9 +22,7 @@ Read below about optional launch options and choosing your own DXLevel.
 !!! info
     These launch options should be added to first launch, and then removed.
     * **-dxlevel 100** : Use hardware to determine graphics capabilities.
-=== "macOS"
-    * **-dxlevel 100** : Use hardware to determine graphics capabilities.
-=== "Linux"
+=== "macOS/Linux"
     The DXLevel is automatically determined and cannot be set.
 
 ## Force Card Launch Options
@@ -67,6 +65,7 @@ You can fake your graphics card to one TF2 checks for, in order to unlock better
     * **+tf_vm_min_invis 0.22** : At least, how invisible viewmodel will be when cloaked
     * **+tf_vm_max_invis 0.5** : At most, how invisible viewmodel will be when cloaked
     * **-displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
+    * **-glslcontrolflow** : Enable support for GLSL control flow. May cause rendering issues.
 
 === "Linux"
     * **-console** : displays console on startup
