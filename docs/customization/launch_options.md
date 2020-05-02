@@ -19,11 +19,10 @@ Read below about optional launch options and choosing your own DXLevel.
 ## DXLevel Launch Options
 
 === "Windows"
-
 !!! info
-    These launch options should be added to first launch, and then removed.
-
-    * **-dxlevel 100** : Use hardware to determine graphics capabilities.
+    This launch option should be added to first launch, and after quitting the game, be removed.
+!!!
+* **-dxlevel 100** : Use hardware to determine graphics capabilities.
 === "macOS/Linux"
     The DXLevel is automatically determined and cannot be set.
 
