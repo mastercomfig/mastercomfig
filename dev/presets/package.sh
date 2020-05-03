@@ -27,6 +27,7 @@ for F in ../../config/cfg/presets/*; do
             echo "exec comfig/addons" >> $autoexec_file
             echo "exec user/autoexec" >> $autoexec_file
             echo "exec comfig/select_modules" >> $autoexec_file
+            echo "exec comfig/finalize" >> $autoexec_file
         fi
     fi
 done
