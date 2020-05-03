@@ -14,8 +14,8 @@ textures=high
 
 This will set the texture quality to high.
 
-### In game selection
-You can select modules in game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
+### In main menu selection
+You can select modules in the main menu using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
 
 For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
 

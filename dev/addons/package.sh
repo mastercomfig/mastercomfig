@@ -18,12 +18,12 @@ for F in ../../config/cfg/addons/*; do
             A=$(basename $F .$ext)
             mkdir -p mastercomfig-"${A}"-addon/cfg/addons
             cp -f ../../config/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
-            echo "exec addons/${A}" >> $addons_cfg_path
+            echo "exec addons/${A}.cfg" >> $addons_cfg_path
         fi
     fi
 done
 
-echo "exec user/addons" >> $addons_cfg_path
+echo "exec user/addons.cfg" >> $addons_cfg_path
 
 # Copy over custom addons
 cp -rf ../../config/addons/* .

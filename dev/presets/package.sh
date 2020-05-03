@@ -16,18 +16,18 @@ for F in ../../config/cfg/presets/*; do
             cp -f ../../config/cfg/presets/*.cfg mastercomfig-"${P}"-preset/cfg/presets
             preset_file=mastercomfig-"${P}"-preset/cfg/presets/${P}.cfg
             autoexec_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
-            echo "alias preset \"exec presets/${P}\"" > $autoexec_file
-            echo "exec user/pre_comfig" >> $autoexec_file
-            echo "exec comfig/comfig" >> $autoexec_file
+            echo "alias preset \"exec presets/${P}.cfg\"" > $autoexec_file
+            echo "exec user/pre_comfig.cfg" >> $autoexec_file
+            echo "exec comfig/comfig.cfg" >> $autoexec_file
             echo "preset" >> $autoexec_file
-            echo "exec user/define_modules" >> $autoexec_file
-            echo "exec user/modules" >> $autoexec_file
+            echo "exec user/define_modules.cfg" >> $autoexec_file
+            echo "exec user/modules.cfg" >> $autoexec_file
             echo "exec modules.txt" >> $autoexec_file
             echo "run_modules" >> $autoexec_file
-            echo "exec comfig/addons" >> $autoexec_file
-            echo "exec user/autoexec" >> $autoexec_file
-            echo "exec comfig/select_modules" >> $autoexec_file
-            echo "exec comfig/finalize" >> $autoexec_file
+            echo "exec comfig/addons.cfg" >> $autoexec_file
+            echo "exec user/autoexec.cfg" >> $autoexec_file
+            echo "exec comfig/select_modules.cfg" >> $autoexec_file
+            echo "exec comfig/finalize.cfg" >> $autoexec_file
         fi
     fi
 done

@@ -33,7 +33,7 @@ spy.cfg
 2. Drag these files into the newly created `user` folder.
 
 !!! tip
-    Although not required, if you move any other files (for example, `binds.cfg`), you will have to update the `exec` command from `exec binds` to `exec user/binds`.
+    Although not required, if you move any other files (for example, `binds.cfg`), you will have to update the `exec` command from `exec binds.cfg` to `exec user/binds.cfg`.
 
 ## Next Steps
 
