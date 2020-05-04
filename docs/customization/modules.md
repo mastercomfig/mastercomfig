@@ -53,7 +53,6 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
 * **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad WiFi, or very slow CPUs.
 * **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
-* **`packet_rate=max`**: The maximum 100 packet rate which is supported by some modded servers.
 
 ### Snapshot Buffer
 
