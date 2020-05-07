@@ -11,7 +11,7 @@ These are `autoexec.cfg`, which runs at game launch, and the 9 class configs
 `medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class.
 All of these files go into a folder called `user` you create in `tf/cfg`.
 
-If you don't have an `autoexec.cfg`, you can [download a blank one](https://github.com/mastercoms/mastercomfig/releases/latest/download/autoexec.cfg) and move it to your `tf/cfg/user/` folder to override any settings in the config.
+If you don't have an `autoexec.cfg`, you can [download a blank one](https://github.com/mastercomfig/mastercomfig/releases/latest/download/autoexec.cfg) and move it to your `tf/cfg/user/` folder to override any settings in the config.
 
 If there's something you'd like to run for all of your class configs, you can add it to `tf/cfg/user/game_overrides.cfg`.
 
@@ -81,6 +81,6 @@ If you want to run something only the first time you spawn and never run again w
     These steps are entirely optional and are only for advanced customization.
 
 To get an idea about what to put in your `user/autoexec.cfg` and select options,
-you can download the user/autoexec.cfg template from the [latest release](https://github.com/mastercoms/mastercomfig/releases/latest).
+you can download the user/autoexec.cfg template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
 
 This config is only for advanced, fine tuned customization and is completely optional. Modules are recommended to be used for easy customization.

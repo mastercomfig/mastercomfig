@@ -24,7 +24,7 @@ suggestions you have for the config.
 ### Docs
 
 Have a screenshot, workaround or anything else interesting you'd like to share?
-Contribute to the [docs](https://github.com/mastercoms/mastercomfig/tree/release/docs).
+Contribute to the [docs](https://github.com/mastercomfig/mastercomfig/tree/release/docs).
 
 ### Support
 
@@ -88,12 +88,12 @@ Here's lists of launch options to help you out:
 * [Windows](https://docs.mastercomfig.com/en/stable/tf2/launchopts_win/)
 * [Linux](https://docs.mastercomfig.com/en/stable/tf2/launchopts_linux/)
 
-Information about generating them can be found [here](https://github.com/mastercoms/mastercomfig/tree/release/docs/tf2#launch_options).
+Information about generating them can be found [here](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#launch_options).
 
 ##### Comfig and presets
 
 Note: some additional information about the config can be found
-[here](https://github.com/mastercoms/mastercomfig/blob/release/config/README.md).
+[here](https://github.com/mastercomfig/mastercomfig/blob/release/config/README.md).
 
 Add options like this
 
@@ -107,7 +107,7 @@ As you can see, default ConVar values should be at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
-ConVars and commands are found using [these instructions](https://github.com/mastercoms/mastercomfig/tree/release/docs/tf2#making-your-own-cvar-list).
+ConVars and commands are found using [these instructions](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#making-your-own-cvar-list).
 
 Premade lists:
 
@@ -148,7 +148,7 @@ UFO posters
 
 If your settings affect quality in any way, create a new module or modify
 the existing modules if applicable, then add documentation for it at the
-[modules wiki page](https://github.com/mastercoms/mastercomfig/wiki/Modules).
+[modules wiki page](https://github.com/mastercomfig/mastercomfig/wiki/Modules).
 Use [this generator](https://github.com/ekalinin/github-markdown-toc) to get
 the navigation links to be generated properly.
 
@@ -190,13 +190,13 @@ This is currently done in modules.
 ##### DX Support overrides
 
 Some ConVars cannot be set in-game, even with DX support definitions. Thus, some presets have
-[custom packaging overrides](https://github.com/mastercoms/mastercomfig/blob/release/dev/presets/package.sh#L39)
+[custom packaging overrides](https://github.com/mastercomfig/mastercomfig/blob/release/dev/presets/package.sh#L39)
 to set the value in DX support.
 
 ### Making your pull request
 
 Yay! You made your changes and now it's time to send it off to be included in
-the config. Just [make a new pull request](https://github.com/mastercoms/mastercomfig/compare)
+the config. Just [make a new pull request](https://github.com/mastercomfig/mastercomfig/compare)
 and name it something nice and descriptive! In your post, include an explanation
 of the changes, why you made those changes, along with any other information you
 find important.
@@ -227,7 +227,7 @@ FPS in a filled casual match.
 Generally you won't have to do this, but you can generate VPK packages for all
 presets and addons. Use the `package.sh` script in the `dev/` folder. You can
 learn more about the dev scripts in
-[dev/README.md](https://github.com/mastercoms/mastercomfig/blob/release/dev/README.md).
+[dev/README.md](https://github.com/mastercomfig/mastercomfig/blob/release/dev/README.md).
 
 In order to successfully deploy and announce, you will have to create a new file
 in `dev/` called `mastercomfig-vars`, containing the following variables:
@@ -242,4 +242,4 @@ export TF2_DIR="absolute path to your Team Fortress 2 directory"
 ## Code of Conduct
 
 As a member of the mastercomfig community, in order to foster a more welcoming environment,
-you must abide by the [Code of Conduct](https://github.com/mastercoms/mastercomfig/blob/release/.github/CODE_OF_CONDUCT.md)
+you must abide by the [Code of Conduct](https://github.com/mastercomfig/mastercomfig/blob/release/.github/CODE_OF_CONDUCT.md)

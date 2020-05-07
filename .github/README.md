@@ -1,5 +1,5 @@
 ![Built with Love](https://forthebadge.com/images/badges/built-with-love.svg)
-[![Build Status](https://dev.azure.com/mastercoms/mastercomfig/_apis/build/status/mastercoms.mastercomfig?branchName=release)](https://dev.azure.com/mastercoms/mastercomfig/_build/latest?definitionId=1&branchName=release)
+[![Build Status](https://dev.azure.com/mastercomfig/mastercomfig/_apis/build/status/mastercoms.mastercomfig?branchName=release)](https://dev.azure.com/mastercomfig/mastercomfig/_build/latest?definitionId=1&branchName=release)
 [![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest)](https://docs.mastercomfig.com/)
 [![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay)](https://liberapay.com/mastercoms/)
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W510R1Q)
@@ -7,7 +7,7 @@
 [![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?style=flat-square)](https://steamcommunity.com/groups/comfig)
 [![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
 
-<img align="right" alt="mastercomfig logo" width="100" src="https://raw.githubusercontent.com/mastercoms/mastercomfig/gh-pages/favicon.png">
+<img align="right" alt="mastercomfig logo" width="100" src="https://raw.githubusercontent.com/mastercomfig/mastercomfig/gh-pages/favicon.png">
 
 # mastercomfig
 

@@ -72,8 +72,8 @@ theme:
     icon:
         repo: fontawesome/brands/github
 repo_name: GitHub
-repo_url: https://github.com/mastercoms/mastercomfig/
-edit_uri: https://github.com/mastercoms/mastercomfig/edit/release/docs/
+repo_url: https://github.com/mastercomfig/mastercomfig/
+edit_uri: https://github.com/mastercomfig/mastercomfig/edit/release/docs/
 plugins:
     - search
     - minify:
@@ -85,7 +85,7 @@ extra_css:
 extra:
     social:
         - icon: fontawesome/brands/github
-          link: https://github.com/mastercoms/mastercomfig/
+          link: https://github.com/mastercomfig/mastercomfig/
         - icon: fontawesome/brands/discord
           link: https://discord.gg/CuPb2zV
         - icon: fontawesome/brands/steam
