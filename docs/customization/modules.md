@@ -132,16 +132,13 @@ Default setting: based on which preset you are currently using.
 * **`lighting=low`**: No dynamic lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=medium`**: No dynamic lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
 * **`lighting=medium_high`**: No dynamic lights. Detailed lighting. No lightwarps.
-* **`lighting=high`**: Some dynamic lights. Detailed lighting. No lightwarps.
+* **`lighting=high`**: Some dynamic lights. Detailed lighting.
 * **`lighting=very_high`**: Some dynamic lights. Detailed lighting.
 * **`lighting=ultra`**: A lot of dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
 
 ### Lighting Ex
 
 Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
-
-!!! note
-    This module does not support in main menu selection, due to its effects.
 
 Default setting: **`lighting_ex=high`** (all presets except Very Low (**`lighting_ex=very_low`**) and Bad GPU addon (**`lighting_ex=low`**)).
 
