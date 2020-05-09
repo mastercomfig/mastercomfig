@@ -505,6 +505,8 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 
 ## Sound modules
 
+### Sound
+
 !!! note
     In the Low and Very Low preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
 
