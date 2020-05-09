@@ -518,6 +518,10 @@ Default setting: based on which preset you are currently using.
 
 ### Voice Chat
 
+!!! note
+    Disabling/Enabling the voice chat system while in-game when it is Enabled/Disabled will make you to have
+    to reconnect to the server that you are playing to make it work again.
+
 Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 * **`voice_chat=off`**: Disables the in-game voice chat system.
