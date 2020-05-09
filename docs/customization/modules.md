@@ -124,17 +124,30 @@ Default setting: based on which preset you are currently using.
 
 ### Lighting
 
-Controls lighting fidelity: dynamic lights, how detailed lighting is, phong, rimlights, light averaging, lightwarps, and ambient boost.
+Controls lighting fidelity: dynamic lights, how detailed lighting is, rimlights, light averaging, lightwarps, and ambient boost.
 
 Default setting: based on which preset you are currently using.
 
-* **`lighting=very_low`**: No dynamic lights. Very inaccurate, blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=low`**: No dynamic lights. Blocky lighting. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=medium`**: No dynamic lights. No light brightness smoothing, lightwarps, phong, rimlights or lighting brightness boost.
+* **`lighting=very_low`**: No dynamic lights. Very inaccurate lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
+* **`lighting=low`**: No dynamic lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
+* **`lighting=medium`**: No dynamic lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
 * **`lighting=medium_high`**: No dynamic lights. Detailed lighting. No lightwarps.
 * **`lighting=high`**: Some dynamic lights. Detailed lighting. No lightwarps.
 * **`lighting=very_high`**: Some dynamic lights. Detailed lighting.
 * **`lighting=ultra`**: A lot of dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
+
+### Lighting Ex
+
+Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
+
+!!! note
+    This module does not support in main menu selection, due to its effects.
+
+Default setting: **`lighting_ex=high`** (all presets except Very Low (**`lighting_ex=very_low`**) and Bad GPU addon (**`lighting_ex=low`**)).
+
+* **`lighting_ex=very_low`**: Blocky lighting. No phong.
+* **`lighting_ex=low`**: No phong, and light filtering.
+* **`lighting_ex=high`**: Phong lighting and light filtering.
 
 ### Shadows
 
@@ -353,7 +366,7 @@ Default setting: based on which preset you are currently using.
 
 * **`ragdolls=off`**: Disables ragdolls.
 * **`ragdolls=medium`**: Enables standard ragdolls.
-* **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time.
+* **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
 
 ### 3D sky
 

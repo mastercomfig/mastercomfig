@@ -23,18 +23,10 @@ Read below about optional launch options and choosing your own DXLevel.
 !!! info
     These launch options should be added to first launch, and then removed.
 
-    * **-dxlevel 100** : Use hardware to determine graphics capabilities.
+* **-dxlevel 100** : Use hardware to determine graphics capabilities.
+
 === "macOS/Linux"
     The DXLevel is automatically determined and cannot be set.
-
-## Force Card Launch Options
-
-TF2 may be looking for an outdated list of graphics cards to enable higher performance features.
-
-You can fake your graphics card to one TF2 checks for, in order to unlock better graphics card usage using launch options.
-
-* **Intel** (Broadwater or higher (past ~2005)): `-force_device_id 0x2500`
-* Other cards are already set automatically.
 
 ## List of Launch Options
 **Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1 +mat_lodin_time 0`
