@@ -505,6 +505,8 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 
 ## Sound modules
 
+### Sound
+
 !!! note
     In the Low and Very Low preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
 
@@ -515,3 +517,14 @@ Default setting: based on which preset you are currently using.
 * **`sound=high`**: Enables sound volume mixing, enables all sound spatialization and positional effects, slightly delays spatialization.
 * **`sound=very_high`** Enables sound volume mixing, enables all sound spatialization and positional effects, enables pitch smoothing.
 * **`sound=ultra`**: Enables sound volume mixing, enables enhanced sound spatialization and positional effects, immediately spatializes and traces sounds, enables pitch smoothing.
+
+### Voice Chat
+
+!!! note
+    Disabling/Enabling the voice chat system while in a server when it is Enabled/Disabled will
+    make you to have to reconnect to the server that you are playing to make it work again.
+
+Default setting: **`voice_chat=on`** (all presets, except Very Low).
+
+* **`voice_chat=off`**: Disables the in-game voice chat system.
+* **`voice_chat=on`**: Enables the in-game voice chat system.
