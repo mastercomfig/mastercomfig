@@ -492,7 +492,7 @@ Default setting: **`dynamic_background=off`** (all presets).
 * **`dynamic_background=off`**: No main menu map background on startup.
 * **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
 * **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
-* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.\
+* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 
 ## Mod Support
 
