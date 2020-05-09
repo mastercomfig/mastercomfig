@@ -21,7 +21,6 @@ If there's something you'd like to run for all of your class configs, you can ad
 * `restore_preset`: Restores modules back to preset defaults, without using user settings.
 * `restore_config`: Runs all of mastercomfig and user configs again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
-* `voice_on`, `voice_off` and `voice_toggle`: Turns voice chat on, off and toggles respectively. Uses `voice_enable` and `voice_modenable` internally to fully control voice chat.
 * `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
 ## Network alias
