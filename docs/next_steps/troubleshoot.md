@@ -58,9 +58,8 @@ If you are trying to use this sort of mod and preload it to bypass `sv_pure`, pe
 
 Put `mod_support=on` in your `modules.cfg` to disable some async disk loading features.
 
-You may also want to preload mods with the `dynamic_background=itemtest` module.
-
-If you are using yttrium's viewmodels, use `dynamic_background=preload` instead. You may also want to delete the `autoexec.cfg` created automatically in the TF2's `cfg` folder. It does not conflict with mastercomfig, since VPKs files will always overlap files in the `cfg` folder.
+You may also want to preload mods with the `dynamic_background=itemtest` module. If you are using yttrium's viewmodels, use `dynamic_background=preload` instead.
+You may also want to delete the `autoexec.cfg` created automatically in the TF2's `cfg` folder. It does not conflict with mastercomfig, since VPKs files will always overlap files in the `cfg` folder.
 
 ## TF2 crashing on a custom map
 
