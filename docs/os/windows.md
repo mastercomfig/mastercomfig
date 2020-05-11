@@ -15,6 +15,10 @@ More information: https://devblogs.microsoft.com/directx/demystifying-full-scree
 
 If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback) so they can improve it in the future.
 
+## Disable Game Mode
+
+Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information, and instructions on how to disable it.
+
 ## Use High Performance power plan
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, you may have a Ryzen specific plan. Use that.
 
@@ -32,7 +36,11 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 
 1. Choose your connection speed with the slider at the top.
 2. Choose the optimal setting at the bottom.
-3. Click apply changes.
+3. Click Apply Changes.
+
+!!! note
+    This may not do much for TF2, as its optimizations are largely for TCP, which only happens during connection,
+    with a small bit done for UDP, which is used during the actual game session.
 
 ## Driver latency optimization
 
