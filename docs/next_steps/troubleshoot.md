@@ -30,7 +30,7 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 ## %killername% and other HUD bugs
 
-This is a HUD initialization bug with TF2. You can fix it by running `hud_reloadscheme`.
+This is a HUD initialization bug with TF2. You can fix it by running `hud_reloadscheme` (once is enough).
 
 If you'd like this command to automatically run to fix this bug, you can put this in your `autoexec.cfg`:
 
@@ -58,16 +58,7 @@ If you are trying to use this sort of mod and preload it to bypass `sv_pure`, pe
 
 Put `mod_support=on` in your `modules.cfg` to disable some async disk loading features.
 
-You may also want to preload mods with the `dynamic_background=itemtest` module.
-
-## yttrium's viewmodels not preloading
-
-If you use yttrium's viewmodels, the installer adds the preload commands to your `autoexec.cfg`. However, since mastercomfig doesn't use your `autoexec.cfg`, you'll have to add this to your `modules.cfg`:
-
-```c
-dynamic_background=preload
-```
-
+You may also want to preload mods with the `dynamic_background=itemtest` module. If you are using yttrium's viewmodels, use `dynamic_background=preload` instead.
 You may also want to delete the `autoexec.cfg` created automatically in the TF2's `cfg` folder. It does not conflict with mastercomfig, since VPKs files will always overlap files in the `cfg` folder.
 
 ## TF2 crashing on a custom map
