@@ -36,7 +36,6 @@ done
 for D in *; do
     if [ -d "${D}" ]; then
         cp -rf ../../config/mastercomfig/* "${D}"/
-        rm -f "${D}"/cfg/server.cfg
     fi
 done
 
