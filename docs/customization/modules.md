@@ -388,8 +388,9 @@ Default setting: based on which preset you are currently using.
 
 How fast the animation is on the killstreak sheen glow for weapons.
 
-Default setting: **`sheens_speed=slow`** (all presets).
+Default setting: based on which preset you are currently using.
 
+* **`sheens_speed=off`**: Skips updating sheen glow animation.
 * **`sheens_speed=slow`**: Slow speed.
 * **`sheens_speed=medium`**: The standard speed.
 * **`sheens_speed=fast`**: Faster speed.
