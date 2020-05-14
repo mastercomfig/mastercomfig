@@ -21,4 +21,4 @@ Use the [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262) So
 
 Get Windows launch options: https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat
 
-Get Linux launch options: `find . -type f -name "*.so" | xargs strings | grep "^\-[a-ZA-Z]" | awk 'NF==1' | sort -u >> launch_options.txt`
+Get Linux launch options: `find . -type f -name "*.so" -o -name "hl2_linux" | xargs strings | grep "^\-[a-ZA-Z]" | awk 'NF==1' | sort -u >> launch_options.txt`

@@ -94,8 +94,6 @@ cl_interp x
 
 One other thing to note is that client interp is determined by whichever is the greater of cl_interp_ratio divided by cl_updaterate, and the value of cl_interp. cl_interp_ratio and cl_interp have no interaction beyond that.
 
-Finally, if you do not believe anything said here, and think interp is horrible, try disabling it by putting `+cl_interpolate 0` in your launch options and watch in horror as everything stutters around, especially on higher refresh rate monitors. As you will find out, interp is a very needed solution for networked multiplayer games. Remove `+cl_interpolate 0` from your launch options once you are done with this experiment.
-
 ## "Unknown command gl_\*" errors in console
 
 mastercomfig sets some OpenGL-related cvars, which are only available on Linux and macOS. Thus, these errors appear a few times when using mastercomfig on Windows. These errors are harmless and can be ignored safely.

@@ -4,6 +4,29 @@ description: Learn how to optimize your Windows OS for better performance.
 
 # Windows
 
+# Disable gibs and blood completely (true low violence mode)
+
+Usually, configs use workarounds to hide models and some particles associates with gore.
+
+However, these do not prevent the spawning logic of gore and in some cases, still allow some particles to be shown or enable silly gibs.
+What does block these is called [low violence mode](https://support.steampowered.com/kb_article.php?ref=5889-TIOV-0207).
+Normally, this is only able to used by certain accounts in specific restricted countries.
+
+On Windows only, you can disable gibs and blood completely through the registry.
+
+1. Open `regedit.exe`
+2. Navigate to the registry folder: `HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings`
+3. Modify the value of `User Token 2` to `1`.
+4. You now have true low violence mode enabled.
+
+You now can also use the official TF2 low violence content (`tf2_lv`):
+
+1. Open Steam console: <a href="steam://nav/console">steam://nav/console</a>
+2. Enter `download_depot 440 444`
+3. Wait for the depot to download.
+4. Move the contents of `steamapps/content/app_440/depot_444\tf` to `steamapps/common/Team Fortress 2/tf` (`tf2_lv_000.vpk` and `tf2_lv_dir.vpk`).
+5. The low violence VPK will be added to search paths by low violence mode, and will be loaded by the game.
+
 ## Disable Fullscreen Optimizations
 Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets near fullscreen performance with the fast alt-tabbing of windowed mode.
 

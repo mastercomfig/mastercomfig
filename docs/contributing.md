@@ -46,7 +46,7 @@ changes based on simple hearsay or assumptions.
 Every setting and change should be based on information
 found in Team Fortress 2 [blog posts/patch notes](https://www.teamfortress.com/),
 the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/SDK_Docs),
-the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013), 
+the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013),
 so make sure those are available to you before you start contributing.
 File overrides like DX support, shader cache, texture preload and client precache
 must be updated according to changes [tracked by Steam Database](https://github.com/SteamDatabase/GameTracking-TF2).
@@ -145,7 +145,7 @@ UFO posters
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
-* `badgpu`: Optimizations that generally do not affect quality for weak integrated graphics chips (Intel graphics) or weak/old GPUs (lower end made before 2007)
+* `badgpu`: Optimizations that generally do not affect quality for weak integrated graphics chips (Intel HD graphics) or weak/old GPUs (lower end made before 2007)
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower)
 
 **Modules:**

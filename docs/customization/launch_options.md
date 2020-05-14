@@ -9,7 +9,7 @@ click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
 
 ```
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1 +mat_lodin_time 0
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread
 ```
 
 into the box and click ok.
@@ -29,7 +29,7 @@ Read below about optional launch options and choosing your own DXLevel.
     The DXLevel is automatically determined and cannot be set.
 
 ## List of Launch Options
-**Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread +cl_clean_textures_on_death 1 +mat_lodin_time 0`
+**Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
@@ -37,8 +37,6 @@ Read below about optional launch options and choosing your own DXLevel.
 * **-nohltv** : disables SourceTV hosting, less resource usage
 * **-particles 1** : limits beam count to the minimum of 512
 * **-NoQueuedPacketThread** : skips creating a thread for sending large packets, which is unused on clients
-* **+cl_clean_textures_on_death 1** : Removes unused textures on death, rather than potentially every frame.
-* **+mat_lodin_time 0** : Time to fade in newly streamed-in texture quality. 0 disables. The fade transition is not very helpful, as it delays textures reaching their full quality. Sometimes, the effect is not even noticeable as the game loads in progressively higher quality textures, which acts as a discrete transition on its own.
 
 ## Extra Launch Options
 === "Windows"
@@ -46,28 +44,16 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-r_emulate_gl**: changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX.
     * **-nostartupsound** : disable game music on main menu
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
-    * **+cl_threaded_bone_setup 1** : Threaded bone setup for animations, improving performance. May cause crashes.
-    * **+tf_killstreakeyes_minkills 1 +tf_killstreakeyes_maxkills 1** : Enable full killstreak eyes effect upon first kill.
-    * **+tf_vm_min_invis 0.22** : At least, how invisible viewmodel will be when cloaked
-    * **+tf_vm_max_invis 0.5** : At most, how invisible viewmodel will be when cloaked
 
 === "macOS"
     * **-console** : displays console on startup
     * **-nostartupsound** : disable game music on main menu
-    * **+cl_threaded_bone_setup 1** : Threaded bone setup for animations, improving performance. May cause crashes.
-    * **+tf_killstreakeyes_minkills 1 +tf_killstreakeyes_maxkills 1** : Enable full killstreak eyes effect upon first kill.
-    * **+tf_vm_min_invis 0.22** : At least, how invisible viewmodel will be when cloaked
-    * **+tf_vm_max_invis 0.5** : At most, how invisible viewmodel will be when cloaked
     * **-displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
     * **-glslcontrolflow** : Enable support for GLSL control flow. May cause rendering issues.
 
 === "Linux"
     * **-console** : displays console on startup
     * **-nostartupsound** : disable game music on main menu
-    * **+cl_threaded_bone_setup 1** : Threaded bone setup for animations, improving performance. May cause crashes.
-    * **+tf_killstreakeyes_minkills 1 +tf_killstreakeyes_maxkills 1** : Enable full killstreak eyes effect upon first kill.
-    * **+tf_vm_min_invis 0.22** : At least, how invisible viewmodel will be when cloaked
-    * **+tf_vm_max_invis 0.5** : At most, how invisible viewmodel will be when cloaked
     * **-displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
     * **-gl_amd_pinned_memory** : use `AMD_pinned_memory` for efficient device memory handling. :warning: **Experimental** as its performance impact (negative or positive) is unknown.
     * **-gl_nv_bindless_texturing** : use `NV_bindless_texture` for reduced overhead for managing bindings. :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete.

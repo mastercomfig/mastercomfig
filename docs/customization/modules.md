@@ -14,8 +14,8 @@ textures=high
 
 This will set the texture quality to high.
 
-### In main menu selection
-You can select modules in the main menu using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
+### In game selection
+You can select modules in the main menu and game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
 
 For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
 
@@ -335,12 +335,12 @@ Default setting: based on which preset you are currently using.
 * **`gibs=medium`**: Default number of gibs.
 * **`gibs=high`**: Default number of gibs, gibs can burn.
 
-### Low violence
+### Silly gibs
 
-Default setting: **`lowviolence=off`** (if gibs are on), and **`lowviolence=on`** (if gibs are off).
+Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if gibs are off).
 
-* **`lowviolence=off`**: Normal gibs and blood.
-* **`lowviolence=on`**: Turns on low violence mode. In TF2, this means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
+* **`sillygibs=off`**: Normal gibs and blood.
+* **`sillygibs=on`**: Turns on low violence mode. In TF2, this means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
 
 ### Props
 
