@@ -4,15 +4,15 @@ description: Learn how to optimize your Windows OS for better performance.
 
 # Windows
 
-# Disable gibs and blood completely (true low violence mode)
+## Disable gore
 
 Usually, configs use workarounds to hide models and some particles associates with gore.
 
-However, these do not prevent the spawning logic of gore and in some cases, still allow some particles to be shown or enable silly gibs.
-What does block these is called [low violence mode](https://support.steampowered.com/kb_article.php?ref=5889-TIOV-0207).
+However, these do not prevent the spawning logic of gore and in some cases, still allow some particles to be shown, or enable silly gibs.
+What does block all gore is called [low violence mode](https://support.steampowered.com/kb_article.php?ref=5889-TIOV-0207).
 Normally, this is only able to used by certain accounts in specific restricted countries.
 
-On Windows only, you can disable gibs and blood completely through the registry.
+On Windows only, you can enable low violence mode through the registry.
 
 1. Open `regedit.exe`
 2. Navigate to the registry folder: `HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings`
@@ -24,8 +24,12 @@ You now can also use the official TF2 low violence content (`tf2_lv`):
 1. Open Steam console: <a href="steam://nav/console">steam://nav/console</a>
 2. Enter `download_depot 440 444`
 3. Wait for the depot to download.
-4. Move the contents of `steamapps/content/app_440/depot_444\tf` to `steamapps/common/Team Fortress 2/tf` (`tf2_lv_000.vpk` and `tf2_lv_dir.vpk`).
+4. Move the contents of `steamapps/content/app_440/depot_444\tf` (`tf2_lv_000.vpk` and `tf2_lv_dir.vpk`) to `steamapps/common/Team Fortress 2/tf`.
 5. The low violence VPK will be added to search paths by low violence mode, and will be loaded by the game.
+
+## Disable Game Mode
+
+Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information, and instructions on how to disable it.
 
 ## Disable Fullscreen Optimizations
 Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets near fullscreen performance with the fast alt-tabbing of windowed mode.
@@ -37,10 +41,6 @@ Open your game folder through Steam. Then, right click on `hl2.exe`, click Prope
 More information: https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/, https://reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub?context=3
 
 If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback) so they can improve it in the future.
-
-## Disable Game Mode
-
-Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information, and instructions on how to disable it.
 
 ## Use High Performance power plan
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, you may have a Ryzen specific plan. Use that.
