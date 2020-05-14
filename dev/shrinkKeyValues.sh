@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# credit: jane
+
 export LANG=C
 
 INPUT="$(<"$1")"
