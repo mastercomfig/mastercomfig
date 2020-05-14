@@ -91,8 +91,6 @@ nav_analyze_scripted                     : cmd      : , "sv", "cheat", "matsys" 
 obj_child_damage_factor                  : 0.25     : , "sv", "cheat", "launcher" : Factor applied to damage done to objects that are built on a buildpoint
 obj_damage_factor                        : 0        : , "sv", "cheat", "launcher" : Factor applied to all damage done to objects
 object_verbose                           : 0        : , "sv", "cheat", "launcher" : Debug object system.
-prec_clear                               : cmd      : , "norecord", "matsys" : Clean up demos directory (delete *_2.dem).
-prec_welcome                             : cmd      : , "norecord", "matsys" :
 publish_file_last_dir                    :          : , "a", "norecord", "cl", "matsys" :
 r_entity                                 : -1       : , "cheat", "launcher" :
 r_flashlight_version2                    : 0        : , "cheat", "launcher" :
