@@ -93,7 +93,3 @@ One other thing to note is that client interp is determined by whichever is the 
 ## "Unknown command gl_\*" errors in console
 
 mastercomfig sets some OpenGL-related cvars, which are only available on Linux and macOS. Thus, these errors appear a few times when using mastercomfig on Windows. These errors are harmless and can be ignored safely.
-
-## "Unknown command cl_clean_textures_on_death", etc errors in console
-
-mastercomfig sets some development only cvars, which are only available to be set in the launch options. These errors are a bug, and the value _is_ set, despite what the console says.
