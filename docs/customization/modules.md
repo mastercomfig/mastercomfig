@@ -132,19 +132,18 @@ Default setting: based on which preset you are currently using.
 * **`lighting=low`**: No dynamic lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=medium`**: No dynamic lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
 * **`lighting=medium_high`**: No dynamic lights. Detailed lighting. No lightwarps.
-* **`lighting=high`**: Some dynamic lights. Detailed lighting.
-* **`lighting=very_high`**: Some dynamic lights. Detailed lighting.
-* **`lighting=ultra`**: A lot of dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
+* **`lighting=high`**: 6 dynamic lights. Detailed lighting.
+* **`lighting=very_high`**: 12 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
+* **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
 
 ### Lighting Ex
 
 Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
-Default setting: **`lighting_ex=high`** (all presets except Very Low (**`lighting_ex=very_low`**) and Bad GPU addon (**`lighting_ex=low`**)).
+Default setting: **`lighting_ex=high`** (all presets except Very Low and Bad GPU addon (**`lighting_ex=low`**)).
 
-* **`lighting_ex=very_low`**: Blocky lighting. No phong.
-* **`lighting_ex=low`**: No phong, and light filtering.
-* **`lighting_ex=high`**: Phong lighting and light filtering.
+* **`lighting_ex=low`**: Phong off.
+* **`lighting_ex=high`**: Phong on.
 
 ### Shadows
 
