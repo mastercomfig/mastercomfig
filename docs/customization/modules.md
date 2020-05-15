@@ -198,13 +198,13 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, uses full particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post Processing
+### Post-processing
 
-Controls standard post processing effects.
+Controls standard post-processing effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`post_processing=off`**: No post processing.
+* **`post_processing=off`**: No post-processing.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
@@ -230,18 +230,18 @@ Default setting: **`motion_blur=off`** (all presets).
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
 * **`motion_blur=high`**: Motion blur fully enabled.
 
-### Antialiasing
+### Anti-aliasing
 
-Controls additional antialiasing passes.
+Controls additional anti-aliasing passes.
 
 Default setting: based on which preset you are currently using.
 
-* **`aa=off`**: Turns off additional antialiasing.
-* **`aa=on`**: Enhanced fence and grass antialiasing.
+* **`aa=off`**: Turns off additional anti-aliasing.
+* **`aa=on`**: Enhanced fence and grass anti-aliasing.
 
-### MSAA Antialiasing
+### MSAA Anti-aliasing
 
-Controls the main hardware based MSAA antialiasing (and CSAA, if you have an Nvidia card that supports it).
+Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an NVIDIA card that supports it).
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
@@ -283,63 +283,28 @@ Default setting: based on which preset you are currently using.
 * **`characters=high`**: Enables smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at a slightly increased range.
 * **`characters=ultra`**: Enables smooth facial animations, high quality models, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at all ranges.
 
-### General decals
+### Decals
 
-Controls bullet holes and overall decal support.
+Controls bullet holes, blood on hurt players, bullet decals on props, decals placed by the map author, and sprays.
 
 Note that in the Very Low preset, decals are forced invisible.
 
 Default setting: based on which preset you are currently using.
 
-* **`decals=off`**: Disables decals.
-* **`decals=low`**: 9 max decals that hide at a medium range that can't overlap very much.
-* **`decals=medium`** 96 max decals that hide at a medium range that can't overlap very much.
-* **`decals=high`**: 96 max decals that hide at a far away range that can overlap much more.
-* **`decals=ultra`**: 2048 max decals (engine limit) that do not hide and can overlap with practically no limit.
-
-### Model decals
-
-Controls blood on hurt players and some bullet decals on props.
-
-Default setting: based on which preset you are currently using.
-
-* **`decals_models=off`**: Disable model decals.
-* **`decals_models=low`**: Allow up to 9 model decals.
-* **`decals_models=high`**: Allow up to 32 model decals.
-
-### Map decals
-
-Controls decals placed by the map author.
-
-Default setting: based on which preset you are currently using.
-
-* **`decals_art=off`**: Disables map decals.
-* **`decals_art=on`**: Enables map decals.
-
-### Spray decals
-
-Controls decals sprayed by players.
-
-Default setting: based on which preset you are currently using.
-
-* **`sprays=off`**: Completely disables downloading, uploading and displaying sprays.
-* **`sprays=on`**: Allows sprays. You must set a [Decals module](#general-decals) higher than `off` for it to work.
+* **`decals=off`**: Disables decals, disables model decals, disables map decals and disables sprays.
+* **`decals=low`**: 9 max decals that hide at a medium range that can not overlap very much. Disables model decals, enables map decals and disables sprays.
+* **`decals=medium`** 96 max decals that hide at a medium range that can not overlap very much. Enables low model decals count, enables map decals and enables sprays.
+* **`decals=high`**: 96 max decals that hide at a far away range that can overlap much more. Enables high model decals count, enables map decals and enables sprays.
+* **`decals=ultra`**: 2048 max decals (engine limit) that do not hide and can overlap with practically no limit. Enables high model decals count, enables map decals and enables sprays.
 
 ### Gibs
 
 Default setting: based on which preset you are currently using.
 
-* **`gibs=off`**: Disables gibs.
-* **`gibs=low`**: Max of 2 gib parts.
-* **`gibs=medium`**: Default number of gibs.
-* **`gibs=high`**: Default number of gibs, gibs can burn.
-
-### Silly gibs
-
-Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if gibs are off).
-
-* **`sillygibs=off`**: Normal gibs and blood.
-* **`sillygibs=on`**: Turns on low violence mode. In TF2, this means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
+* **`gibs=off`**: Disables gibs and enables low violence mode (in TF2, low violence mode means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing).
+* **`gibs=low`**: Max of 2 gib parts. Disables low violence mode.
+* **`gibs=medium`**: Default number of gibs. Disables low violence mode.
+* **`gibs=high`**: Default number of gibs and gibs can burn. Disables low violence mode.
 
 ### Props
 
