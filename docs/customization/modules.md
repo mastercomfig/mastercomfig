@@ -14,7 +14,7 @@ textures=high
 
 This will set the texture quality to high.
 
-### In game selection
+### In-game selection
 You can select modules in the main menu and game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
 
 For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
@@ -293,8 +293,8 @@ Default setting: based on which preset you are currently using.
 
 * **`decals=off`**: Disables decals, disables model decals, disables map decals and disables sprays.
 * **`decals=low`**: 9 max decals that hide at a medium range that can not overlap very much. Disables model decals, enables map decals and disables sprays.
-* **`decals=medium`** 96 max decals that hide at a medium range that can not overlap very much. Enables low model decals count, enables map decals and enables sprays.
-* **`decals=high`**: 96 max decals that hide at a far away range that can overlap much more. Enables high model decals count, enables map decals and enables sprays.
+* **`decals=medium`** 32 max decals that hide at a medium range that can not overlap very much. Enables low model decals count, enables map decals and enables sprays.
+* **`decals=high`**: 80 max decals that hide at a far away range that can overlap much more. Enables high model decals count, enables map decals and enables sprays.
 * **`decals=ultra`**: 2048 max decals (engine limit) that do not hide and can overlap with practically no limit. Enables high model decals count, enables map decals and enables sprays.
 
 ### Gibs
