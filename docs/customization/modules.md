@@ -336,10 +336,10 @@ Default setting: based on which preset you are currently using.
 
 ### Silly gibs
 
-Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if gibs are off).
+Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if `gibs=off`).
 
 * **`sillygibs=off`**: Normal gibs and blood.
-* **`sillygibs=on`**: Turns on low violence mode. In TF2, this means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
+* **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
 
 ### Props
 
