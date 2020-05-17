@@ -67,7 +67,7 @@ Class configs are also a reliable way to periodically run some commands during a
 * `user/game_overrides` script for easy global class settings
 * `game_overrides_once_c` alias for running a script only once per game session
 * Fixing a networking issue with bumper cars (https://github.com/ValveSoftware/Source-1-Games/issues/2618)
-* Clearing decals periodically, to improve performance (if suppported by decals module)
+* Clearing decals periodically, to improve performance (if supported by decals module)
 * Overriding map specific detail prop and water fade distances
 
 **mastercomfig overrides class configs because:**
