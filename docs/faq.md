@@ -12,7 +12,7 @@ It is a complete performance and customization scripting mod which requires many
 
 * dxsupport overrides, which unlock `r_drawropes`, `fx_drawimpactdebris`, `fx_drawimpactdust`, `fx_drawimpactspark`, `tf_impactwatertimeenable`, `dsp_off`, `cl_particle_retire_cost` and `mat_slopescaledepthbias_decal`
     * These allow for performance improvements for ropes, particles, sound, and fixing a bug where 1 decal still appears even if decals are disabled
-* [class spawn scripts](#why-does-mastercomfig-override-my-class-configs), which allow for scripts to be run periodically during a match
+* [Class spawn scripts](#why-does-mastercomfig-override-my-class-configs), which allow for scripts to be run periodically during a match
 * Mannpower map script, which fixes grappling hook ropes being invisible on lower settings
 * Modular design which allows for an extensive user override system (modules, addons, configs), rather than having to redo edits every time mastercomfig updates
 * `mm_override` script, which fixes crashes while loading for Competitive matchmaking
@@ -67,6 +67,7 @@ Class configs are also a reliable way to periodically run some commands during a
 * `user/game_overrides` script for easy global class settings
 * `game_overrides_once_c` alias for running a script only once per game session
 * Fixing a networking issue with bumper cars (https://github.com/ValveSoftware/Source-1-Games/issues/2618)
+* Clearing decals periodically, to improve performance (if suppported by decals module)
 * Overriding map specific detail prop and water fade distances
 
 **mastercomfig overrides class configs because:**
