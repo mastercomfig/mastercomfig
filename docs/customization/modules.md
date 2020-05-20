@@ -120,7 +120,7 @@ Default setting: based on which preset you are currently using.
 * **`lod=medium`**: Low  model detail. Decorations pop in quickly.
 * **`lod=medium_high`**: Medium  model detail. Decorations fade in gradually.
 * **`lod=high`**: High model detail. Decorations fade out only when far away.
-* **`lod=ultra`**: Forces high model detail regardless of distance. Decorations fade out only when far away.
+* **`lod=ultra`**: Forces high model detail regardless of distance. Decorations fade out only when very far away.
 
 ### Lighting
 
@@ -156,7 +156,7 @@ Default setting: based on which preset you are currently using.
 * **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
 * **`shadows=medium`**: Up to 12 high quality shadows, and medium robot shadow distance.
 * **`shadows=high`**: Up to 18 high quality shadows, and high robot shadow distance.
-* **`shadows=ultra`**: Up to 32 high quality shadows, and high robot shadow distance.
+* **`shadows=ultra`**: Up to 32 high quality shadows, and very high robot shadow distance.
 
 ### Effects
 
@@ -192,9 +192,9 @@ Controls particle effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`particles=very_low`**: Collapses particles (including bullet tracers) together, makes flames invisible on every other flame stream, disables weather particles, reduces particle density, disables bullet impact flecks.
+* **`particles=very_low`**: Collapses particles (including bullet tracers) together, makes flames invisible on every other flame stream, disables weather particles, aggressively reduces particle density, disables bullet impact flecks.
 * **`particles=low`**: Disables weather particles, reduces particle density, disables bullet impact flecks.
-* **`particles=medium`**: Disables weather particles, reduces particle density, enables bullet impact flecks.
+* **`particles=medium`**: Disables weather particles, partially reduces particle density, enables bullet impact flecks.
 * **`particles=high`**: Enables weather particles, uses full particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
