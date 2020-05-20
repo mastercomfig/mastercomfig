@@ -120,7 +120,7 @@ Default setting: based on which preset you are currently using.
 * **`lod=medium`**: Low  model detail. Decorations pop in quickly.
 * **`lod=medium_high`**: Medium  model detail. Decorations fade in gradually.
 * **`lod=high`**: High model detail. Decorations fade out only when far away.
-* **`lod=ultra`**: Forces high model detail regardless of distance. Decorations fade out only when far away.
+* **`lod=ultra`**: Forces high model detail regardless of distance. Decorations fade out only when very far away.
 
 ### Lighting
 

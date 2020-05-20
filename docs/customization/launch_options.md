@@ -9,7 +9,7 @@ click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
 
 ```
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread
+-novid -nojoy -nosteamcontroller -nohltv -particles 1
 ```
 
 into the box and click ok.
@@ -39,14 +39,13 @@ Read below about optional launch options and choosing your own DXLevel.
     The DXLevel is automatically determined and cannot be set.
 
 ## List of Launch Options
-**Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -NoQueuedPacketThread`
+**Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
 * **-nosteamcontroller** : disable Steam controller system, faster startup, less memory usage and less input conflicts
 * **-nohltv** : disables SourceTV hosting, less resource usage
 * **-particles 1** : limits beam count to the minimum of 512
-* **-NoQueuedPacketThread** : skips creating a thread for sending large packets, which is unused on clients
 
 ## Extra Launch Options
 === "Windows"
