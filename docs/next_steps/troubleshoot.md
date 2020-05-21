@@ -60,7 +60,7 @@ Add `mod_support=on` to your `modules.cfg` to disable some async disk loading fe
 
 You may also want to preload mods with the `dynamic_background=itemtest` module. If you are using yttrium's viewmodels, use `dynamic_background=preload` instead.
 
-Optionally, you may delete any `autoexec.cfg` files created automatically in TF2's `cfg` folder. These won't conflict with mastercomfig, since VPKs files will always be chosen over files in the `cfg` folder.
+Optionally, you may delete any `autoexec.cfg` files created automatically in TF2's `cfg` folder. These won't conflict with mastercomfig, since files in VPKs will always be chosen over files in the `cfg` folder.
 
 ## TF2 crashing on a custom map
 
