@@ -301,10 +301,10 @@ Default setting: based on which preset you are currently using.
 
 Default setting: based on which preset you are currently using.
 
-* **`gibs=off`**: Disables gibs and enables low violence mode (in TF2, low violence mode means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing).
-* **`gibs=low`**: Max of 2 gib parts. Disables low violence mode.
-* **`gibs=medium`**: Default number of gibs. Disables low violence mode.
-* **`gibs=high`**: Default number of gibs and gibs can burn. Disables low violence mode.
+* **`gibs=off`**: Disables gibs and turns on silly gibs mode (in TF2, this means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing).
+* **`gibs=low`**: Max of 2 gib parts. Normal gibs and blood.
+* **`gibs=medium`**: Default number of gibs. Normal gibs and blood.
+* **`gibs=high`**: Default number of gibs and gibs can burn. Normal gibs and blood.
 
 ### Props
 
