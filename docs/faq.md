@@ -12,7 +12,7 @@ It is a complete performance and customization scripting mod which requires many
 
 * dxsupport overrides, which unlock `r_drawropes`, `fx_drawimpactdebris`, `fx_drawimpactdust`, `fx_drawimpactspark`, `tf_impactwatertimeenable`, `dsp_off`, `cl_particle_retire_cost` and `mat_slopescaledepthbias_decal`
     * These allow for performance improvements for ropes, particles, sound, and fixing a bug where 1 decal still appears even if decals are disabled
-* [class spawn scripts](#why-does-mastercomfig-override-my-class-configs), which allow for scripts to be run periodically during a match
+* [Class spawn scripts](#why-does-mastercomfig-override-my-class-configs), which allow for scripts to be run periodically during a match
 * Mannpower map script, which fixes grappling hook ropes being invisible on lower settings
 * Modular design which allows for an extensive user override system (modules, addons, configs), rather than having to redo edits every time mastercomfig updates
 * `mm_override` script, which fixes crashes while loading for Competitive matchmaking
