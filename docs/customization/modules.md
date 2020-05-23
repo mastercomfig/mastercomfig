@@ -6,15 +6,15 @@ description: Easily customize mastercomfig to get the exact stuff you want witho
 Modules are groups of related commands with specific values for a certain use case or quality level.
 
 ## How to use
-Modules are [used in presets](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in a `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example:
+Modules are [used in presets](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in the `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example:
 
 ```
 textures=high
 ```
 
-This will set the texture quality to high.
+This will set the texture quality to High.
 
-### In game selection
+### In-game selection
 You can select modules in the main menu and game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
 
 For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
@@ -140,7 +140,7 @@ Default setting: based on which preset you are currently using.
 
 Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
-Default setting: **`lighting_ex=high`** (all presets except Very Low and Bad GPU addon (**`lighting_ex=low`**)).
+Default setting: **`lighting_ex=high`** (all presets except Low, Very Low and Bad GPU addon (**`lighting_ex=low`**)).
 
 * **`lighting_ex=low`**: Phong off.
 * **`lighting_ex=high`**: Phong on.
@@ -198,13 +198,13 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, uses full particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post Processing
+### General Post-Processing
 
-Controls standard post processing effects.
+Controls standard post-processing effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`post_processing=off`**: No post processing.
+* **`post_processing=off`**: No post-processing.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
@@ -230,18 +230,18 @@ Default setting: **`motion_blur=off`** (all presets).
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
 * **`motion_blur=high`**: Motion blur fully enabled.
 
-### Antialiasing
+### Anti-aliasing
 
-Controls additional antialiasing passes.
+Controls additional anti-aliasing passes.
 
 Default setting: based on which preset you are currently using.
 
-* **`aa=off`**: Turns off additional antialiasing.
-* **`aa=on`**: Enhanced fence and grass antialiasing.
+* **`aa=off`**: Turns off additional anti-aliasing.
+* **`aa=on`**: Enhanced fence and grass anti-aliasing.
 
-### MSAA Antialiasing
+### MSAA Anti-aliasing
 
-Controls the main hardware based MSAA antialiasing (and CSAA, if you have an Nvidia card that supports it).
+Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an NVIDIA card that supports it).
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
@@ -293,8 +293,8 @@ Default setting: based on which preset you are currently using.
 
 * **`decals=off`**: Disables decals.
 * **`decals=low`**: 9 max decals that hide at a medium range that can't overlap very much.
-* **`decals=medium`** 96 max decals that hide at a medium range that can't overlap very much.
-* **`decals=high`**: 96 max decals that hide at a far away range that can overlap much more.
+* **`decals=medium`** 32 max decals that hide at a medium range that can't overlap very much.
+* **`decals=high`**: 80 max decals that hide at a far away range that can overlap much more.
 * **`decals=ultra`**: 2048 max decals (engine limit) that do not hide and can overlap with practically no limit.
 
 ### Model decals
@@ -336,7 +336,7 @@ Default setting: based on which preset you are currently using.
 
 ### Silly gibs
 
-Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if `gibs=off`).
+Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if gibs are off).
 
 * **`sillygibs=off`**: Normal gibs and blood.
 * **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
