@@ -45,7 +45,7 @@ More information: https://devblogs.microsoft.com/directx/demystifying-full-scree
 If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback) so they can improve it in the future.
 
 ## Use High Performance power plan
-Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, you may have a Ryzen specific plan. Use that.
+Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, use a Ryzen specific plan to correctly take advantage of CPPC2. Alternatively, a custom Ryzen power plan can be used to potentially achieve higher boost clocks: https://www.techpowerup.com/download/1usmus-custom-power-plan-ryzen-3000-zen-2/
 
 ## Disable Radeon Chill
 Radeon Chill is a power saving feature that introduces a variable framecap. Disable it in the Radeon Settings app:
