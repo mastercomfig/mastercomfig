@@ -14,12 +14,16 @@ textures=high
 
 This will set the texture quality to `high`.
 
-### In game selection
-You can select modules in the main menu and game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
+### In-game selection
+You can select modules in the main menu and game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart.
 
 For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
 
 **How does it work?** It logs things to a file called `tf/cfg/modules.txt`, and then executes that `modules.txt` as a config file.
+
+!!! warning
+    Addons can overwrite your settings, even if the settings are permanents. This is necessary
+    to make some addons work.
 
 ### Advanced
 
@@ -56,8 +60,10 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
 ### Snapshot Buffer
 
-Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.
-Also known as linear interpolation (lerp or interp). Note: mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
+Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives. Also known as linear interpolation (lerp or interp). 
+
+!!! note
+    mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
 
 Default setting: based on which class you are currently playing.
 
@@ -198,13 +204,13 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, uses full particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post Processing
+### Post-processing
 
-Controls standard post processing effects.
+Controls standard post-processing effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`post_processing=off`**: No post processing.
+* **`post_processing=off`**: No post-processing.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
@@ -230,18 +236,18 @@ Default setting: **`motion_blur=off`** (all presets).
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
 * **`motion_blur=high`**: Motion blur fully enabled.
 
-### Antialiasing
+### Anti-aliasing
 
-Controls additional antialiasing passes.
+Controls additional anti-aliasing passes.
 
 Default setting: based on which preset you are currently using.
 
-* **`aa=off`**: Turns off additional antialiasing.
-* **`aa=on`**: Enhanced fence and grass antialiasing.
+* **`aa=off`**: Turns off additional anti-aliasing.
+* **`aa=on`**: Enhanced fence and grass anti-aliasing.
 
-### MSAA Antialiasing
+### MSAA Anti-aliasing
 
-Controls the main hardware based MSAA antialiasing (and CSAA, if you have an Nvidia card that supports it).
+Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an NVIDIA card that supports it).
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
@@ -336,7 +342,7 @@ Default setting: based on which preset you are currently using.
 
 ### Silly gibs
 
-Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if `gibs=off`).
+Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if gibs are off).
 
 * **`sillygibs=off`**: Normal gibs and blood.
 * **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
@@ -530,7 +536,7 @@ Default setting: based on which preset you are currently using.
 
 ### Voice Chat
 
-!!! note
+!!! warning
     Disabling/Enabling the voice chat system while in a server when it is Enabled/Disabled will
     make you to have to reconnect to the server that you are playing to make it work again.
 
