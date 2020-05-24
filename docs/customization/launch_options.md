@@ -61,7 +61,8 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-glslcontrolflow** : Enable support for GLSL control flow. May cause rendering issues.
 
 === "Linux"
-    * **-arbmode** : prefer ARB extensions, less frame variance and higher FPS; NVIDIA seems most favorable, but is also good for the `amdgpu` driver
+    * **-arbmode** : set ToGL's drawing language to ARB instead of the default GLSL, less frame variance and higher FPS on NVIDIA
+    * **-glslcontrolflow** : static control flow has to be enabled to use ARB drawing, `-arbmode` will do nothing otherwise.
     * **-console** : displays console on startup
     * **-nostartupsound** : disable game music on main menu
     * **-displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
