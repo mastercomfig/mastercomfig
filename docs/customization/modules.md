@@ -538,3 +538,12 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
+
+## Input modules
+
+### Mouse limited capture workaround
+
+Default setting: **`limited_capture=off`** (all presets).
+
+* **`limited_capture=off`**: Mouse capture behavior is not changed.
+* **`limited_capture=on`**: Fixes your yaw getting stuck mid-way, or other mouse input issues. Testing on a Zen 2 machine running Windows 10 (1809) shown that this makes mouse movement decrease less FPS; setting `sensitivity` to its absolute minimum  on a local server with no players is recommended for testing this yourself.
