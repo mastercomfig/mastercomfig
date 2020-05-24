@@ -70,4 +70,6 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 ## Driver latency optimization
 
 Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as frequent stuttering. The user must sniff out exactly which drivers are causing latency.    
+Enabling Message Signaled Interrupts (PCIe MSI) for all drivers is a great way to lower DPC latency caused by drivers (ring0):
+https://github.com/CHEF-KOCH/MSI-utility \
 Use [LatencyMon](https://www.resplendence.com/latencymon) and [DPC Latency Checker](https://www.thesycon.de/eng/latency_check.shtml) to analyze latency issues caused by kernel-mode device drivers. If they report issues, try updating your drivers or installing alternate drivers.
