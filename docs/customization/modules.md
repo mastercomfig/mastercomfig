@@ -548,6 +548,13 @@ Default setting: **`limited_capture=off`** (all presets).
 * **`limited_capture=off`**: Mouse capture behavior is not changed.
 * **`limited_capture=on`**: Fixes your yaw getting stuck mid-way, or other mouse input issues. Testing on a Zen 2 machine running Windows 10 (1809) shown that this makes mouse movement decrease less FPS; setting `sensitivity` to its absolute minimum  on a local server with no players is recommended for testing this yourself.
 
+### Steam controller support
+
+Default setting: **`steam_controller=off`** (all presets).
+
+* **`steam_controller=off`**: Steam controllers will not work.
+* **`steam_controller=on`**: Steam controller functionality is enabled, even if `-nojoy` is present in the launch options.
+
 ## Misc modules
 
 ### Player statistics reset blocker
