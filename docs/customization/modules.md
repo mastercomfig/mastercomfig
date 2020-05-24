@@ -547,3 +547,10 @@ Default setting: **`limited_capture=off`** (all presets).
 
 * **`limited_capture=off`**: Mouse capture behavior is not changed.
 * **`limited_capture=on`**: Fixes your yaw getting stuck mid-way, or other mouse input issues. Testing on a Zen 2 machine running Windows 10 (1809) shown that this makes mouse movement decrease less FPS; setting `sensitivity` to its absolute minimum  on a local server with no players is recommended for testing this yourself.
+
+## Misc modules
+
+### Player statistics reset blocker
+
+* **`block_stats_reset=off`**: Allow player statistics to be reset.
+* **`block_stats_reset=on`**: Disallow player statistics to be reset; it can be allowed again by executing `=block_stats_reset=off` in the developer console.
