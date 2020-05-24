@@ -6,13 +6,13 @@ description: Easily customize mastercomfig to get the exact stuff you want witho
 Modules are groups of related commands with specific values for a certain use case or quality level.
 
 ## How to use
-Modules are [used in presets](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in a `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example:
+Modules are [used in presets](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in the `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example:
 
 ```
 textures=high
 ```
 
-This will set the texture quality to high.
+This will set the texture quality to `high`.
 
 ### In game selection
 You can select modules in the main menu and game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
@@ -140,7 +140,7 @@ Default setting: based on which preset you are currently using.
 
 Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
-Default setting: **`lighting_ex=high`** (all presets except Very Low and Bad GPU addon (**`lighting_ex=low`**)).
+Default setting: **`lighting_ex=high`** (all presets except Low, Very Low and Bad GPU addon (**`lighting_ex=low`**)).
 
 * **`lighting_ex=low`**: Phong off.
 * **`lighting_ex=high`**: Phong on.
@@ -293,8 +293,8 @@ Default setting: based on which preset you are currently using.
 
 * **`decals=off`**: Disables decals.
 * **`decals=low`**: 9 max decals that hide at a medium range that can't overlap very much.
-* **`decals=medium`** 96 max decals that hide at a medium range that can't overlap very much.
-* **`decals=high`**: 96 max decals that hide at a far away range that can overlap much more.
+* **`decals=medium`** 32 max decals that hide at a medium range that can't overlap very much.
+* **`decals=high`**: 80 max decals that hide at a far away range that can overlap much more.
 * **`decals=ultra`**: 2048 max decals (engine limit) that do not hide and can overlap with practically no limit.
 
 ### Model decals
