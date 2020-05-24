@@ -203,6 +203,4 @@ function app() {
   $("input[type='checkbox']").change(function() {
     updateAddon(this.id);
   });
-
-  $('[data-toggle="tooltip"]').tooltip();
 }
