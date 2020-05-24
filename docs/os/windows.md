@@ -32,6 +32,8 @@ You now can also use the official TF2 low violence content (`tf2_lv`):
 Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information, and instructions on how to disable it.
 
 ## Disable Fullscreen Optimizations
+
+!!! warning This will break G-SYNC for NVIDIA drivers; others variable rate technologies and GPU manufacturers are currently untested.
 Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets near fullscreen performance with the fast alt-tabbing of windowed mode.
 
 Source is known to be worse with fullscreen optimizations on some systems and thus you should disable it if you encounter problems.
