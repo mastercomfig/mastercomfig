@@ -61,7 +61,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-glslcontrolflow** : Enable support for GLSL control flow. May cause rendering issues.
 
 === "Linux"
-    * **-arbmode** : set ToGL's drawing language to ARB instead of the default GLSL, less frame variance and higher FPS on NVIDIA; forces fast [clipping](https://developer.valvesoftware.com/wiki/Clip_texture), which might cause graphical issues
+    * **-arbmode** : set ToGL's drawing language to ARB instead of the default GLSL, less frame variance and higher FPS on NVIDIA; forces fast [clipping](https://developer.valvesoftware.com/wiki/Clip_texture), which may cause graphical issues.
     * **-glslcontrolflow** : static control flow has to be enabled to use ARB drawing, `-arbmode` will do nothing otherwise.
     * **-console** : displays console on startup
     * **-nostartupsound** : disable game music on main menu
