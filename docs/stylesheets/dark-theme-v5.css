@@ -68,6 +68,11 @@ blockquote {
     background-color: #00000052;
 }
 
+.md-typeset .admonition,
+.md-typeset details {
+    color: #f8f8f2 !important;
+}
+
 html body .md-typeset .md-source-file {
   color: #f8f8f2 !important;
     background-color: #585858 !important;
@@ -255,4 +260,8 @@ td.linenos div.linenodiv {
 
 .md-typeset .tabbed-set > label {
     color: #777 !important;
+}
+
+.md-typeset a:hover {
+    color: var(--md-accent-fg-color) !important;
 }
