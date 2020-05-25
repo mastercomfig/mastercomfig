@@ -22,7 +22,7 @@ For example, you could enter `=textures=high` to set your textures to high, and 
 **How does it work?** It logs things to a file called `tf/cfg/modules.txt`, and then executes that `modules.txt` as a config file.
 
 !!! warning
-    Addons can overwrite your settings, even if the settings are permanents. This is necessary
+    Addons can overwrite your settings, even if they are permanent. This is necessary
     to make some addons work.
 
 ### Advanced
