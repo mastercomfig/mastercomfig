@@ -44,7 +44,7 @@ function app() {
   setRecommendedAddons("low", ["no-extra-models", "disable-pyroland", "no-soundscapes"]);
   setRecommendedAddons("very-low", ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial"]);
 
-  var downloadUrl = "https://github.com/mastercoms/mastercomfig/releases/latest/download/mastercomfig-";
+  var downloadUrl = "https://github.com/mastercomfig/mastercomfig/releases/latest/download/mastercomfig-";
   var addonUrl = downloadUrl + "{0}-addon.vpk";
   var presetUrl = downloadUrl + "{0}-preset.vpk";
 
