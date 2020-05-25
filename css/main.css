@@ -118,6 +118,10 @@ input {
     width: 100%
 }
 
+.tooltip {
+    opacity: 1 !important
+}
+
 .tooltip-inner {
     max-width: 35vw
 }

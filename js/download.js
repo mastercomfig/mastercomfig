@@ -107,7 +107,6 @@ function app() {
 
   function download() {
       storage.setItem("lastVersion", version);
-
       var downloads = [Promise.resolve({
           url: ""
       })];
@@ -119,9 +118,7 @@ function app() {
               url: getAddonUrl(selection)
           }));
       }
-      setTimeout(() => {
-          return downloadUrls(downloads);
-      }, 2000);
+      return downloadUrls(downloads);
   }
 
   // update addon state based on checked
