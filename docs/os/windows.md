@@ -33,9 +33,6 @@ Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D a
 
 ## Disable Fullscreen Optimizations
 
-!!! warning
-    This will break G-SYNC for NVIDIA drivers; others variable rate technologies and GPU manufacturers are currently untested.
-
 Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets near fullscreen performance with the fast alt-tabbing of windowed mode.
 
 Source is known to be worse with fullscreen optimizations on some systems and thus you should disable it if you encounter problems.
@@ -45,6 +42,9 @@ Open your game folder through Steam. Then, right click on `hl2.exe`, click Prope
 More information: https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/, https://reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub?context=3
 
 If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback) so they can improve it in the future.
+
+!!! tip
+    If you're using variable refresh rate (VRR) technology, like GSYNC, disabling Fullscreen Optimizations may break it, depending on your monitor, drivers and graphics card. So, if you experience problems with VRR after this, try reverting the change.
 
 ## Use High Performance power plan
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, use a Ryzen specific plan to correctly take advantage of CPPC2. Alternatively, a custom Ryzen power plan can be used to potentially achieve higher boost clocks: https://www.techpowerup.com/download/1usmus-custom-power-plan-ryzen-3000-zen-2/
@@ -73,5 +73,5 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 
 Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as frequent stuttering. The user must sniff out exactly which drivers are causing latency.    
 Enabling Message Signaled Interrupts (PCIe MSI) for all drivers is a great way to lower DPC latency caused by drivers (ring0):
-https://github.com/CHEF-KOCH/MSI-utility \
+https://forums.guru3d.com/threads/windows-line-based-vs-message-signaled-based-interrupts-msi-tool.378044/ \
 Use [LatencyMon](https://www.resplendence.com/latencymon) and [DPC Latency Checker](https://www.thesycon.de/eng/latency_check.shtml) to analyze latency issues caused by kernel-mode device drivers. If they report issues, try updating your drivers or installing alternate drivers.
