@@ -3,6 +3,8 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
+./update.sh || exit 1
+
 export zip_package="true"
 
 ./package.sh
