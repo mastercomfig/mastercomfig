@@ -89,8 +89,8 @@ Put your launch option in the appropriate section and if it's in the
 
 Here's lists of launch options to help you out:
 
-* [Windows](https://docs.mastercomfig.com/en/stable/tf2/launchopts_win/)
-* [Linux](https://docs.mastercomfig.com/en/stable/tf2/launchopts_linux/)
+* [Windows](https://docs.mastercomfig.com/en/latest/tf2/launchopts_win/)
+* [Linux](https://docs.mastercomfig.com/en/latest/tf2/launchopts_linux/)
 
 Information about generating them can be found [here](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#launch_options).
 
@@ -115,8 +115,8 @@ ConVars and commands are found using [these instructions](https://github.com/mas
 
 Premade lists:
 
-* [Windows](https://docs.mastercomfig.com/en/stable/tf2/cvarlist_win/)
-* [Linux](https://docs.mastercomfig.com/en/stable/tf2/cvarlist_linux/)
+* [Windows](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_win/)
+* [Linux](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_linux/)
 
 Add your alternatives uncommented in the applicable presets/addons, or use modules:
 

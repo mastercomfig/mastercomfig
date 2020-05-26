@@ -63,11 +63,12 @@ Class configs are also a reliable way to periodically run some commands during a
 
 **Instead, mastercomfig uses the class configs for:**
 
-* class specific network setting aliases (`net_hitscan`, `net_projectiles`, `net_spy`) for easy customization
+* Class specific network setting aliases (`net_hitscan`, `net_projectiles`, `net_spy`) for easy customization
 * `user/game_overrides` script for easy global class settings
 * `game_overrides_once_c` alias for running a script only once per game session
 * Fixing a networking issue with bumper cars (https://github.com/ValveSoftware/Source-1-Games/issues/2618)
-* Overriding map specific detail prop and water fade distances
+* Overriding map specific detail prop, water fade distances, and sound channel mode
+* Fixing the freezecam sound effect getting stuck sometimes
 
 **mastercomfig overrides class configs because:**
 
