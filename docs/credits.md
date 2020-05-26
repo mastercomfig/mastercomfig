@@ -12,7 +12,6 @@ description: All the help and inspiration that has helped mastercomfig be even b
   for providing an alternative to Chris-based configs
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
 * povohat for making the null-cancelling movement script
-* [Aar](https://www.youtube.com/user/Aarmastah) for making amazing videos about TF2 graphics customization and supporting this config
 * SteamDB for their excellent tools, including [Game Tracking for TF2](https://github.com/SteamDatabase/GameTracking-TF2)
 * [SourceMod](https://www.sourcemod.net/credits.php) for their extensive and easy to use modification system for Source
 * step for [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262)
