@@ -137,15 +137,13 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 
 **Addons:**
 
-* `no-extra-models`: Removes extra models like rockets in the background, UFOs and
-UFO posters
 * `no-footsteps`: Removes footstep sounds
 * `disable-pyroland`: Removes Pyroland map textures
 * `no-soundscapes`: Remove soundscapes (ambient map noise) and bird noises
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
-* `badgpu`: Optimizations that generally do not affect quality for weak integrated graphics chips (Intel HD graphics) or weak/old GPUs (lower end made before 2007)
+* `badgpu`: Optimizations that generally do not affect quality for weak integrated graphics chips (Intel HD graphics) or old GPUs (lower end made before 2007)
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower)
 
 **Modules:**
