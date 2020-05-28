@@ -1,7 +1,7 @@
 # These files are text files
-*.cfg text eol=crlf
-*.md text eol=crlf
-*.txt text eol=crlf
+*.cfg text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
 *.sh text eol=lf
 .git* text eol=lf
 
