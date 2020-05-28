@@ -23,7 +23,7 @@ function app() {
       ["very-low", "Very Low"]
   ]);
 
-  const recommendableAddons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial"];
+  const recommendableAddons = ["no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial"];
 
   var recommendedAddons = new Map();
 
@@ -37,12 +37,12 @@ function app() {
   }
 
   setRecommendedAddons("ultra", []);
-  setRecommendedAddons("high", ["no-extra-models"]);
-  setRecommendedAddons("medium-high", ["no-extra-models"]);
-  setRecommendedAddons("medium", ["no-extra-models"]);
-  setRecommendedAddons("medium-low", ["no-extra-models"]);
-  setRecommendedAddons("low", ["no-extra-models", "disable-pyroland", "no-soundscapes"]);
-  setRecommendedAddons("very-low", ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial"]);
+  setRecommendedAddons("high", []);
+  setRecommendedAddons("medium-high", ["]);
+  setRecommendedAddons("medium", []);
+  setRecommendedAddons("medium-low", []);
+  setRecommendedAddons("low", ["disable-pyroland", "no-soundscapes"]);
+  setRecommendedAddons("very-low", ["no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial"]);
 
   var downloadUrl = "https://github.com/mastercomfig/mastercomfig/releases/latest/download/mastercomfig-";
   var addonUrl = downloadUrl + "{0}-addon.vpk";
@@ -53,7 +53,7 @@ function app() {
 
   var version = null;
 
-  var addons = ["no-extra-models", "no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial", "null-cancelling-movement", "flat-mouse", "transparent-viewmodels", "badgpu", "lowmem"];
+  var addons = ["no-footsteps", "disable-pyroland", "no-soundscapes", "no-tutorial", "null-cancelling-movement", "flat-mouse", "transparent-viewmodels", "badgpu", "lowmem"];
   var selectedPreset = "medium-high";
   var selections = [];
 
