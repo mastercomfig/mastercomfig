@@ -1,9 +1,9 @@
 # These files are text files
 # user files
-*.cfg text eol=crlf
-*.md text eol=crlf
-*.txt text eol=crlf
-*.res text eol=crlf
+*.cfg text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.res text eol=lf
 
 # dev files
 *.sh text eol=lf
