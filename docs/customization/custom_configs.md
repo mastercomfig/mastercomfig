@@ -37,7 +37,7 @@ You can also re-alias them to use your own network settings.
 
 ## Changing your preset
 
-mastercomfig now supports selecting a preset after download. Add a file to your `user` folder called `pre_comfig.cfg`. In this file, put `alias preset "exec presets/preset_name.cfg"`, where `preset_name` is the name of the preset:
+mastercomfig now supports selecting a preset after download. Add a file to your `user` folder called `pre_comfig.cfg`. In this file, put `alias preset"exec presets/preset_name.cfg"`, where `preset_name` is the name of the preset:
 
 * ultra
 * high
@@ -47,27 +47,16 @@ mastercomfig now supports selecting a preset after download. Add a file to your 
 * low
 * very-low
 
-## Additional Addons
-
-!!! warning
-    These steps are entirely optional and are only for advanced customization.
-
-If you would like to distribute or create your own addon, you can create an addon CFG file, and then instruct users to add an exec for it to a `tf/cfg/user/addons.cfg`.
-
-So, for example, if you made an addon which customized the crosshair, you could name it `my-crosshair.cfg`, add it to the `tf/cfg/addons` folder and then add `exec addons/my-crosshair.cfg` to `tf/cfg/user/addons.cfg`.
-
-Custom addons run after presets, modules, and built-in mastercomfig addons, but before the user's autoexec.
-
 ## Optional Aliases
 
 !!! warning
     These steps are entirely optional and are only for advanced customization.
 
 You can change the name of your custom class configs using the `class_config_classname` alias.
-For example, you can put `alias class_config_heavyweapons "exec user/myheavy.cfg"` in `tf/cfg/user/autoexec.cfg` if you want to use the file `tf/cfg/user/myheavy.cfg` for Heavy.
+For example, you can put `alias class_config_heavyweapons"exec user/myheavy.cfg"` in `tf/cfg/user/autoexec.cfg` if you want to use the file `tf/cfg/user/myheavy.cfg` for Heavy.
 
 You can change the name of your custom game overrides config using the `game_overrides_c` alias.
-For example, you can put `alias game_overrides_c "exec user/mygameoverrides.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mygameoverrides.cfg`.
+For example, you can put `alias game_overrides_c"exec user/mygameoverrides.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mygameoverrides.cfg`.
 
 You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.

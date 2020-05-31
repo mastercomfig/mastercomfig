@@ -14,13 +14,6 @@ textures=high
 
 This will set the texture quality to `high`.
 
-### In game selection
-You can select modules in the main menu and game using the console. Just enter the module you'd like to select with a `=` before it. This selection will persist even after a restart!
-
-For example, you could enter `=textures=high` to set your textures to high, and to have it set to high in future launches as well.
-
-**How does it work?** It logs things to a file called `tf/cfg/modules.txt`, and then executes that `modules.txt` as a config file.
-
 ### Advanced
 
 !!! warning
@@ -31,17 +24,6 @@ Modules are backed with aliases, so you can easily use them in advanced customiz
 If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will disable mastercomfig from running texture commands.
 
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
-
-### Custom modules
-
-!!! warning
-    These steps are entirely optional and are only for advanced customization.
-
-You can also create your own modules. Here are user versions of internal mastercomfig definitions:
-
-* `comfig/comfig.cfg` (define module levels): `user/define_modules.cfg`
-* `comfig/modules_run.cfg` (apply modules): `user/modules_run.cfg`
-* `comfig/select_modules.cfg` (define in-game selection commands): `user/select_modules.cfg`
 
 ## Network modules
 

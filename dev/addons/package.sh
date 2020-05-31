@@ -23,8 +23,6 @@ for F in ../../config/cfg/addons/*; do
     fi
 done
 
-echo "exec user/addons.cfg" >> $addons_cfg_path
-
 # Copy over custom addons
 cp -rf ../../config/addons/* .
 
