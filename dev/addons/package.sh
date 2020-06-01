@@ -27,6 +27,7 @@ for F in ../../config/cfg/addons/*; do
             A=$(basename $F .$ext)
             mkdir -p mastercomfig-"${A}"-addon/cfg/addons
             cp -f ../../config/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
+            echo "alias addon_${addon_alias_map[$A]}" >> $addons_setup_cfg_path
             echo "exec addons/${A}.cfg" >> $addons_setup_cfg_path
             echo "addon_${addon_alias_map[$A]}" >> $addons_cfg_path
         fi
