@@ -38,7 +38,7 @@ function app() {
 
   setRecommendedAddons("ultra", []);
   setRecommendedAddons("high", []);
-  setRecommendedAddons("medium-high", ["]);
+  setRecommendedAddons("medium-high", []);
   setRecommendedAddons("medium", []);
   setRecommendedAddons("medium-low", []);
   setRecommendedAddons("low", ["disable-pyroland", "no-soundscapes"]);
