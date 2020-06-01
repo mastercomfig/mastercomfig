@@ -15,7 +15,7 @@ uploadFileToGitHub () {
     name=${1##*/}
     label=${2// /%20}
     url="$assets_url?name=$name&label=$label"
-    printf "$url\n"
+    echo "$url"
     curl -u $GH_USERNAME:$GH_TOKEN -X POST -H 'Content-type: application/octet-stream' \
       -T $file \
       "$url"
