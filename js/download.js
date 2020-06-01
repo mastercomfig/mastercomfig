@@ -166,7 +166,7 @@ function app() {
   }
 
   // get latest release, and update page
-  $.get("https://api.github.com/repositories/69422496/releases/latest", function(data) {
+  $.get("https://api.github.com/repos/mastercomfig/mastercomfig/releases/latest", function(data) {
     version = data.tag_name;
     let versionName = version.indexOf('v') === 0 ? version.substr(1) : version; // some releases use the v prefix, ignore it
     // update title with version
