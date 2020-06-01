@@ -138,7 +138,7 @@ Default setting: based on which preset you are currently using.
 * **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
 * **`shadows=medium`**: Up to 12 high quality shadows, and medium robot shadow distance.
 * **`shadows=high`**: Up to 18 high quality shadows, and high robot shadow distance.
-* **`shadows=ultra`**: Up to 32 high quality shadows, and very high robot shadow distance.
+* **`shadows=ultra`**: Up to 32 high quality shadows, and very high robot/Halloween boss shadow distance.
 
 ### Effects
 
