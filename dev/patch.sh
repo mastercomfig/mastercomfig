@@ -6,7 +6,7 @@ cd "$BINDIR"
 . ./mastercomfig-vars
 
 # Get latest release version
-response=$(curl https://api.github.com/repositories/$GH_REPO/releases/latest)
+response=$(curl https://api.github.com/repos/$GH_REPO/releases/latest)
 assets_url=$(echo $response | jq '.assets_url' | sed -e 's/^"//' -e 's/"$//' | sed "s/\bapi\b/uploads/g")
 
 # Upload files
