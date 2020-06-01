@@ -20,6 +20,7 @@ for F in ../../config/cfg/presets/*; do
             echo "exec user/pre_comfig.cfg" >> $autoexec_file
             echo "exec comfig/comfig.cfg" >> $autoexec_file
             echo "preset" >> $autoexec_file
+            echo "exec comfig/addons_setup.cfg" >> $autoexec_file
             echo "exec comfig/addons.cfg" >> $autoexec_file
             echo "exec user/modules.cfg" >> $autoexec_file
             echo "run_modules" >> $autoexec_file
