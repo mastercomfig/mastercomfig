@@ -94,15 +94,14 @@ Default setting: **`download=mapsonly`** (all presets).
 
 ### Level of detail
 
-Controls how detailed objects are and how decorations fade in.
+Controls how detailed models are.
 
 Default setting: based on which preset you are currently using.
 
-* **`lod=low`**: Low  model detail. Decorations are never drawn.
-* **`lod=medium`**: Low  model detail. Decorations pop in quickly.
-* **`lod=medium_high`**: Medium  model detail. Decorations fade in gradually.
-* **`lod=high`**: High model detail. Decorations fade out only when far away.
-* **`lod=ultra`**: Forces high model detail regardless of distance. Decorations fade out only when very far away.
+* **`lod=low`**: Low model detail.
+* **`lod=medium`**: Medium model detail.
+* **`lod=high`**: High model detail.
+* **`lod=ultra`**: Forces high model detail regardless of distance.
 
 ### Lighting
 
