@@ -3,7 +3,7 @@
 // Init quality image compare
 $(function() {
     $("#quality-compare").twentytwenty({
-        before_label: 'Very Low',
+        before_label: 'Low',
         after_label: 'Ultra'
     });
 });
@@ -35,7 +35,7 @@ if ($('#comanglia-bar').visible()) {
 
 $('#compareModal').on('shown.bs.modal', function () {
   $("#quality-compare-large").twentytwenty({
-      before_label: 'Very Low',
+      before_label: 'Low',
       after_label: 'Ultra'
   });
 });
