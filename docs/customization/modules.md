@@ -36,7 +36,7 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 * **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad WiFi, or very slow CPUs.
 * **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
 
-### Snapshot Buffer
+### Snapshot buffer
 
 Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.
 Also known as linear interpolation (lerp or interp). Note: mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
@@ -98,11 +98,10 @@ Controls how detailed objects are and how decorations fade in.
 
 Default setting: based on which preset you are currently using.
 
-* **`lod=low`**: Low  model detail. Decorations are never drawn.
-* **`lod=medium`**: Low  model detail. Decorations pop in quickly.
-* **`lod=medium_high`**: Medium  model detail. Decorations fade in gradually.
-* **`lod=high`**: High model detail. Decorations fade out only when far away.
-* **`lod=ultra`**: Forces high model detail regardless of distance. Decorations fade out only when very far away.
+* **`lod=low`**: Low  model detail.
+* **`lod=medium`**: Medium  model detail.
+* **`lod=high`**: High model detail.
+* **`lod=ultra`**: Forces high model detail regardless of distance.
 
 ### Lighting
 
@@ -180,13 +179,13 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, uses full particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post Processing
+### General Post-Processing
 
-Controls standard post processing effects.
+Controls standard post-processing effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`post_processing=off`**: No post processing.
+* **`post_processing=off`**: No post-processing.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
@@ -212,18 +211,18 @@ Default setting: **`motion_blur=off`** (all presets).
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
 * **`motion_blur=high`**: Motion blur fully enabled.
 
-### Antialiasing
+### Anti-aliasing
 
-Controls additional antialiasing passes.
+Controls additional anti-aliasing passes.
 
 Default setting: based on which preset you are currently using.
 
-* **`aa=off`**: Turns off additional antialiasing.
-* **`aa=on`**: Enhanced fence and grass antialiasing.
+* **`aa=off`**: Turns off additional anti-aliasing.
+* **`aa=on`**: Enhanced fence and grass anti-aliasing.
 
-### MSAA Antialiasing
+### MSAA Anti-aliasing
 
-Controls the main hardware based MSAA antialiasing (and CSAA, if you have an Nvidia card that supports it).
+Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an NVIDIA card that supports it).
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
@@ -331,10 +330,10 @@ Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade
 
 Default setting: based on which preset you are currently using.
 
-* **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings.
-* **`props=medium`**: Disables client side props, disables foliage, default quality prop models.
-* **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models.
-* **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at a very high distance with fade in, max quality prop models regardless of distance.
+* **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings. Decorations are never drawn.
+* **`props=medium`**: Disables client side props, disables foliage, default quality prop models. Decorations fade in gradually.
+* **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models. Decorations fade out only when far away.
+* **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at a very high distance with fade in, max quality prop models regardless of distance. Decorations fade out only when very far away.
 
 ### Ragdolls
 
