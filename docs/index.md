@@ -7,7 +7,7 @@
 [![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?style=flat-square)](https://steamcommunity.com/groups/comfig)
 [![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
 
-<img align="right" alt="mastercomfig logo" width="100" src="https://raw.githubusercontent.com/mastercomfig/mastercomfig/gh-pages/favicon.png">
+<img align="right" alt="mastercomfig logo" width="100" src="https://mastercomfig.com/favicon.png">
 
 # mastercomfig
 
