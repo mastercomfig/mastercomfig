@@ -252,7 +252,7 @@ Default setting: based on which preset you are currently using.
 Adjust characters details.
 
 !!! tip
-    Facial animations will only work on `lod=medium_high` and higher.
+    Facial animations will only work on `lod=medium` and higher.
 
 Default setting: based on which preset you are currently using.
 
