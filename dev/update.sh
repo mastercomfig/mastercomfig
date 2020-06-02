@@ -4,4 +4,4 @@ BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
 git switch release
-(git merge develop && git push) || (echo "Merge failed. Please push manually once resolved." && exit 1)
+(git pull && git merge develop && git push) || (echo "Merge failed. Please push manually once resolved." && exit 1)
