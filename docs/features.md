@@ -28,7 +28,6 @@ description: A list of all mastercomfig features.
 * Optimized ropes
 * Optimized OpenGL
 * Optimized item panel loading
-* Removed extra cosmetic map models (UFOs, invasion posters, rockets)
 
 ## Start up
 * Cleaned up texture preload list
