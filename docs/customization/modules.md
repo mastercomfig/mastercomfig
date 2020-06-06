@@ -53,10 +53,11 @@ Controls how big packets are and how they are split up/compressed.
 
 Default setting: **`packet_size=big`** (all presets).
 
+* **`packet_size=min`**: Uses the smallest packet size, which should be able to be processed by even the worst routers.
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
-* **`packet_size=minimal`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
-* **`packet_size=balanced`**: Uses a reasonably large packet size limit that should work with most routers except the lowest end ones. No client-side compression.
-* **`packet_size=big`**: Uses big single packets to avoid splitting up packets, for use on very reliable connections and Internet routes. No client-side compression.
+* **`packet_size=big`**: Uses a reasonably large packet size limit that should work with most reliable connections and Internet routes.
+* **`packet_size=saver`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
+* **`packet_size=speed`**: This prioritizes less CPU usage over data usage by disabling packet compression and avoiding split packets.
 
 ### Bandwidth
 
