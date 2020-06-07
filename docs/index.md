@@ -1,11 +1,10 @@
-![Built with Love](https://forthebadge.com/images/badges/built-with-love.svg)
-[![Build Status](https://dev.azure.com/mastercoms/mastercomfig/_apis/build/status/mastercoms.mastercomfig?branchName=release)](https://dev.azure.com/mastercoms/mastercomfig/_build/latest?definitionId=1&branchName=release)
-[![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest)](https://docs.mastercomfig.com/)
-[![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay)](https://liberapay.com/mastercoms/)
-[![Steam donate](https://img.shields.io/badge/Donate%20via-Steam-blue.svg?style=flat-square&logo=steam)](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N)
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W510R1Q)
+[![Build Status](https://img.shields.io/azure-devops/build/mastercoms/mastercomfig/1/release?style=flat-square)](https://dev.azure.com/mastercoms/mastercomfig/_build?definitionId=1)
+[![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest&style=flat-square)](https://docs.mastercomfig.com/)
+[![ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B.svg?logo=ko-fi&style=flat-square)](https://ko-fi.com/W7W510R1Q)
+[![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay&style=flat-square)](https://liberapay.com/mastercoms/)
+[![Steam donate](https://img.shields.io/badge/Donate%20via-Steam-00adee.svg?style=flat-square&logo=steam)](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N)
 [![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
-[![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?style=flat-square)](https://steamcommunity.com/groups/comfig)
+[![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
 [![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
 
 <img align="right" alt="mastercomfig logo" width="100" src="https://mastercomfig.com/favicon.png">
