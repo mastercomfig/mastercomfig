@@ -15,7 +15,7 @@ Thus, it's highly appreciated to benchmark mastercomfig and any changes you make
 1. Download [the benchmark file](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k).
 2. Move it to the `tf/` folder.
 3. Launch the game.
-4. Enter `alias game_overrides_once;timedemo benchmark_test`
+4. Enter `alias game_overrides_once;timedemo benchmark_test`.
 5. Record your timedemo output from the console `X frames X seconds X fps (X ms/f) X fps variability`.
 6. Repeat `timedemo benchmark_test` as many times as you like to decrease the effects of systemic variation.
 
