@@ -77,6 +77,10 @@ Add `tf_time_loading_item_panels .0005` to `autoexec.cfg`.
 
 Players' sprays are treated like a decal in-game. To get sprays to work, you have to set the `decals` module to at least `low`.
 
+## Grappling hook is invisible (in Mannpower and custom servers)
+
+Grappling hooks use ropes to show in-game. To get them to work, you have to set the `ropes` module to at least `low`.
+
 ## Particle-related errors in console
 
 Ignore these, as these happen in a clean TF2 installation and only Valve can fix them.
