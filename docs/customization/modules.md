@@ -68,6 +68,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 
 Default setting: **`bandwidth=1.5Mbps`** (all presets).
 
+* **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 * **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
 * **`bandwidth=384Kbps`**: 384Kbps game traffic bandwidth.
 * **`bandwidth=512Kbps`**: 512Kbps game traffic bandwidth.
