@@ -26,3 +26,5 @@ Here are a few awesome TF2 modifications:
   — Make viewmodels translucent
 * [Common scripts/binds](https://www.reddit.com/r/tf2scripthelp/wiki/commonscripts)
   — Some common and useful scripts/binds, like the null-cancelling movement script
+* [mastercomfig for Vortex](https://github.com/AtomicTEM/Mastercomfig-All-in-one-for-Vortex-Mod-Manager)
+  — An unofficial distribution of mastercomfig which supports [Vortex Mod Manager](https://www.nexusmods.com/about/vortex/)
