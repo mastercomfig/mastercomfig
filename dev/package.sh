@@ -3,6 +3,8 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "$BINDIR"
 
+rm -rf prerelease
+
 # Execute package scripts
 for D in *; do
     if [ -d "${D}" ]; then
@@ -20,6 +22,7 @@ if [ "$prerelease" == true ]; then
   cp addons/*.vpk prerelease/addons
   cp comfig/*.cfg prerelease/comfig
   cp comfig/*.zip prerelease/comfig
+  zip -9r prerelease/mastercomfig.zip addons/ presets/ comfig/
 fi
 
 printf "\n"
