@@ -16,5 +16,6 @@ This is a list of mastercomfig custom configs by members of the community.
 * [Jack Stanley](https://pastebin.com/L8Na9hPM)
 * [steph](https://github.com/TheSqrtMinus1/stephconfig)
 * [Rattlewrench](https://github.com/Rattlewrench/rattleconfig)
+* [m00n](https://github.com/m00n01/LunarConfig)
 * [alekny](https://github.com/alekny/alekny-mastercomfig-preset)
 * [NegativeOnion](https://github.com/NegativeOnion/Team-Fortress-2)
