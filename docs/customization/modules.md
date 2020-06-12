@@ -521,3 +521,12 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
+
+## Miscellaneous
+
+### Mastercomfig logo
+
+Default setting: **`logo=on`** (all presets, except Very Low).
+
+* **`logo=off`**: Does not print logo in console on startup.
+* **`logo=on`**: Prints logo in console on startup.
