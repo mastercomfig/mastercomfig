@@ -69,6 +69,7 @@ Class configs are also a reliable way to periodically run some commands during a
 * Overriding map specific detail prop, water fade distances, and sound channel mode
 * Fixing the freezecam sound effect getting stuck sometimes
 * Clearing all decals, including permananent ones inaccessible by other commands
+* Fixing client desync bugs periodically without interrupting demos
 
 **mastercomfig overrides class configs because:**
 
