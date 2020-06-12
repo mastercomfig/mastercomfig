@@ -26,7 +26,8 @@ for F in ../../config/cfg/presets/*; do
             printf "run_modules;" >> $autoexec_file
             printf "exec comfig/addons.cfg;" >> $autoexec_file
             printf "exec user/autoexec.cfg;" >> $autoexec_file
-            printf "exec comfig/finalize.cfg" >> $autoexec_file
+            printf "exec comfig/finalize.cfg;" >> $autoexec_file
+            printf "exec comfig/echo.cfg" >> $autoexec_file
         fi
     fi
 done
