@@ -296,7 +296,7 @@ Controls decals placed by the map author.
 Default setting: based on which preset you are currently using.
 
 * **`decals_art=off`**: Disables map decals.
-* **`decals_art=on`**: Enables map decals.
+* **`decals_art=on`**: Enables map decals, and blocks full decal clearing done by mastercomfig periodically.
 
 ### Spray decals
 
@@ -305,7 +305,7 @@ Controls decals sprayed by players.
 Default setting: based on which preset you are currently using.
 
 * **`sprays=off`**: Completely disables downloading, uploading and displaying sprays.
-* **`sprays=on`**: Allows sprays. You must set a [Decals module](#general-decals) higher than `off` for it to work.
+* **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. You must set a [Decals module](#general-decals) higher than `off` for it to work.
 
 ### Gibs
 

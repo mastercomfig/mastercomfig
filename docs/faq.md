@@ -68,6 +68,7 @@ Class configs are also a reliable way to periodically run some commands during a
 * Fixing a networking issue with bumper cars (https://github.com/ValveSoftware/Source-1-Games/issues/2618)
 * Overriding map specific detail prop, water fade distances, and sound channel mode
 * Fixing the freezecam sound effect getting stuck sometimes
+* Clearing all decals, including permananent ones inaccessible by other commands
 
 **mastercomfig overrides class configs because:**
 
