@@ -8,8 +8,6 @@ description: All the help and inspiration that has helped mastercomfig be even b
 * [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
   continuing what Chris started and helping a bit with my config
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
-* [Felik](https://www.teamfortress.tv/44076/se-config-framework-feliks-config-3)
-  for providing an alternative to Chris-based configs
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
 * povohat for making the null-cancelling movement script
 * SteamDB for their excellent tools, including [Game Tracking for TF2](https://github.com/SteamDatabase/GameTracking-TF2)

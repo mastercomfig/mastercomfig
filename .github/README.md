@@ -5,7 +5,6 @@
 [![Steam donate](https://img.shields.io/badge/Donate%20via-Steam-00adee.svg?style=flat-square&logo=steam)](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N)
 [![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
 [![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
-[![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
 
 <img align="right" alt="mastercomfig logo" width="100" src="https://mastercomfig.com/favicon.png">
 
@@ -48,8 +47,6 @@ If you are not able to support me through the above methods, that's fine too! Yo
 * [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
   continuing what Chris started and helping a bit with my config
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
-* [Felik](https://www.teamfortress.tv/44076/se-config-framework-feliks-config-3)
-  for providing an alternative to Chris-based configs
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
 * povohat for making the null-cancelling movement script
 * SteamDB for their excellent tools, including [Game Tracking for TF2](https://github.com/SteamDatabase/GameTracking-TF2)
