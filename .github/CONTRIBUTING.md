@@ -96,7 +96,7 @@ Note: some additional information about the config can be found
 
 Add options like this
 
-```
+```c
 convar 0 // What the command does and a bit about what this default
          // value does, possibly with why it is the default
 //convar 1 // What this alternative does

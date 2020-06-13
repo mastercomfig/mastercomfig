@@ -1,6 +1,6 @@
 ---
 description: Learn how to optimize your Windows OS for better performance.
----
+...
 
 # Windows
 
@@ -50,14 +50,17 @@ If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms
     If you're using variable refresh rate (VRR) technology, like GSYNC, disabling Fullscreen Optimizations may break it, depending on your monitor, drivers and graphics card. So, if you experience problems with VRR after this, try reverting the change.
 
 ## Use High Performance power plan
+
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, use a Ryzen specific plan to correctly take advantage of CPPC2. Alternatively, [a custom Ryzen power plan](https://www.techpowerup.com/download/1usmus-custom-power-plan-ryzen-3000-zen-2/) can be used to potentially achieve higher boost clocks.
 
 ## Disable Radeon Chill
+
 Radeon Chill is a power saving feature that introduces a variable framecap. Disable it in the Radeon Settings app:
 
 Go to the Gaming tab, then set global settings or for Team Fortress 2 only if you want to use Chill elsewhere and finally turn Chill off.
 
 ## Disable Unnecessary Services
+
 You can use the [W10Privacy tool](https://www.winprivacy.de/deutsch-start/download/) to reduce disk load and other workloads to [improve performance](https://www.phoronix.com/scan.php?page=article&item=windows10-w10priv-wsl).
 
 ## Networking optimization

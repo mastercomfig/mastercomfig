@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run script within the directory
 BINDIR=$(dirname "$(readlink -fn "$0")")
-cd "$BINDIR"
+cd "${BINDIR}" || exit 2
 
 cp -f "../../config/mastercomfig/cfg/comfig/comfig.cfg" ./template.cfg
 cp -f "../../config/templates/modules.cfg" ./modules.cfg

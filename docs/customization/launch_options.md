@@ -1,6 +1,6 @@
 ---
 description: Tune Team Fortress 2 and mastercomfig further with launch options.
----
+...
 
 # Launch Options
 
@@ -8,7 +8,7 @@ Right click Team Fortress 2 in your Steam library, click **Properties** and
 click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
 
-```
+```c
 -novid -nojoy -nosteamcontroller -nohltv -particles 1
 ```
 
@@ -39,6 +39,7 @@ Read below about optional launch options and choosing your own DXLevel.
     The DXLevel is automatically determined and cannot be set.
 
 ## List of Launch Options
+
 **Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1`
 
 * **-novid** : disables Valve startup logo, saves time
@@ -48,19 +49,23 @@ Read below about optional launch options and choosing your own DXLevel.
 * **-particles 1** : limits beam count to the minimum of 512
 
 ## Extra Launch Options
+
 === "Windows"
+
     * **-console** : displays console on startup
     * **-r_emulate_gl**: changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX.
     * **-nostartupsound** : disable game music on main menu
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
 
 === "macOS"
+
     * **-console** : displays console on startup
     * **-nostartupsound** : disable game music on main menu
     * **-displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).
     * **-glslcontrolflow** : Enable support for GLSL control flow. May cause rendering issues.
 
 === "Linux"
+
     * **-console** : displays console on startup
     * **-nostartupsound** : disable game music on main menu
     * **-displayindex x** : use the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default).

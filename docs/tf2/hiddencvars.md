@@ -4,7 +4,7 @@ description: A list of all hidden console variables and commands on TF2ds for Li
 
 # Hidden console variables
 
-```
+```c
 sm_cvarlist /unlisted /defaults /file
 --------------
 __screenshot_internal                    : cmd      : , "norecord", "matsys" : Internal command to take a screenshot without renumbering or notifying Steam.

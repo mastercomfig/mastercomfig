@@ -1,6 +1,6 @@
 ---
 description: Having trouble with mastercomfig? Here's where to go to first for solutions.
----
+...
 
 # Troubleshooting
 
@@ -91,7 +91,7 @@ mastercomfig sets some OpenGL-related cvars, which are only available on Linux a
 
 ## I want another interp value
 
-**TL;DR:** mastercomfig has the (currently known) best interp values, and you really shouldn't mess with them unless you know *exactly* what you're doing.
+**TL;DR:** mastercomfig has the (currently known) best interp values, and you really shouldn't mess with them unless you know _exactly_ what you're doing.
 
 mastercomfig sets optimal interp values. Interp is a low-level networking setting which controls how incoming packets are used by the client. Packets have an inherent delay, and may not come at all due to issues along your route, low server framerate, server framerate variance, and ping fluctuations. Interp is a very sensitive networking setting which tunes your buffer for incoming packets. If you set it too low, you will get networking errors, resulting in worse hitreg, because of trying to use game packets which have not come in yet.
 

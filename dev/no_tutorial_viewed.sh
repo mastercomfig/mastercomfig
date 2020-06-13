@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run script within the directory
 BINDIR=$(dirname "$(readlink -fn "$0")")
-cd "$BINDIR"
+cd "${BINDIR}" || exit 2
 . ./mastercomfig-vars
 
 cp -f ./generate_viewed.sh "${TF2_DIR}/tf/maps"

@@ -1,6 +1,6 @@
 ---
 description: Find out how you can get help with mastercomfig.
----
+...
 
 # Help
 

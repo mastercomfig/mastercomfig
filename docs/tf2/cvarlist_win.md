@@ -4,7 +4,7 @@ description: A list of all console variables and commands on TF2 for Linux.
 
 # Console Variables - Windows
 
-```
+```c
 cvar list
 --------------
 _autosave                                : cmd      :                  : Autosave

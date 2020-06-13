@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run script within the directory
 BINDIR=$(dirname "$(readlink -fn "$0")")
-cd "$BINDIR"
+cd "${BINDIR}" || exit 2
 
 rm -rf prerelease
 
@@ -9,11 +9,11 @@ rm -rf prerelease
 for D in *; do
     if [ -d "${D}" ]; then
         echo "Packaging ${D}"
-        ${D}/package.sh
+        "${D}/package.sh"
     fi
 done
 
-if [ "$prerelease" == true ]; then
+if [ "${prerelease:=false}" == true ]; then
   mkdir prerelease
   mkdir prerelease/presets
   mkdir prerelease/addons

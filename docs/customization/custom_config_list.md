@@ -1,6 +1,6 @@
 ---
 description: Find out how the community is using mastercomfig.
----
+...
 
 # List of custom configs
 

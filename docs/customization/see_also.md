@@ -1,6 +1,6 @@
 ---
 description: Some awesome TF2 modifications which can be used alongside mastercomfig.
----
+...
 
 # See Also
 
@@ -8,23 +8,33 @@ Here are a few awesome TF2 modifications:
 
 * [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
   — Makes TF2 a lot cleaner and simpler, includes Nohats
+
 * [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases)
   —  Fix issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons
+
 * [No explosion smoke script](https://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
+
 * [No muzzleflash](https://www.teamfortress.tv/25647/no-explosion-smoke-script/?page=7#182)
   — Comes with no explosion smoke script and removes muzzle flashes from guns
+
 * [Particle Limitation Pack](https://www.teamfortress.tv/22586/particle-limitation-pack)
   — Reduce certain particles
+
 * [VTF Crosshair Pack](https://www.teamfortress.tv/35367/vtf-crosshair-pack)
   — New custom crosshairs
+
 * [SteamPriorityLauncher](https://github.com/Leo40Git/SteamPriorityLauncher)
   — A launcher for launching Steam games, such as TF2, with different priorities
+
 * [yttrium's viewmodels](https://www.teamfortress.tv/34834/yttriums-competitive-viewmodels)
   — Customize hiding individual viewmodels
+
 * [Transparent Viewmodels](https://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
   — Make viewmodels translucent
+
 * [Common scripts/binds](https://www.reddit.com/r/tf2scripthelp/wiki/commonscripts)
   — Some common and useful scripts/binds, like the null-cancelling movement script
+
 * [mastercomfig for Vortex](https://github.com/AtomicTEM/Mastercomfig-All-in-one-for-Vortex-Mod-Manager)
   — An unofficial distribution of mastercomfig which supports [Vortex Mod Manager](https://www.nexusmods.com/about/vortex/)

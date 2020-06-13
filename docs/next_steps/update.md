@@ -1,6 +1,6 @@
 ---
 description: How to update mastercomfig to the latest version
----
+...
 
 # Update
 

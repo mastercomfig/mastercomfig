@@ -1,6 +1,6 @@
 ---
 description: Learn how to do advanced customization and scripting with mastercomfig.
----
+...
 
 # Customization
 

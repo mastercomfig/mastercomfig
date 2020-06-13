@@ -1,14 +1,16 @@
 ---
 description: Easily customize mastercomfig to get the exact stuff you want without memorizing tons of commands!
----
+...
 
 # Modules
+
 Modules are groups of related commands with specific values for a certain use case or quality level.
 
 ## How to use
+
 Modules are [used in presets](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in the `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example:
 
-```
+```c
 textures=high
 ```
 

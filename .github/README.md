@@ -46,6 +46,7 @@ If you are not able to support me through the above methods, that's fine too! Yo
 * [Chris](https://chrisdown.name/tf2/) for starting it all
 * [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
   continuing what Chris started and helping a bit with my config
+
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
 * povohat for making the null-cancelling movement script
@@ -61,10 +62,12 @@ If you are not able to support me through the above methods, that's fine too! Yo
   Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
   maximsmol, Fraklin, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
   DapperTrapper, Tene, mambo, Sakii, Leo40, micwoj92, ghost-420 and perhaps many others)
+
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics
+
 * and to Valve, for making and updating (for over a decade!) the best class-based FPS to date with so
-  much customizability on top
+  much customization on top
 
 ## Legal
 
