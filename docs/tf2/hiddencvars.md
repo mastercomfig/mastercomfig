@@ -1,6 +1,6 @@
 ---
 description: A list of all hidden console variables and commands on TF2ds for Linux.
----
+...
 
 # Hidden console variables
 

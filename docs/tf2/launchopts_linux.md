@@ -1,6 +1,6 @@
 ---
 description: A list of all launch options on TF2 for Linux.
----
+...
 
 # Launch Options - Linux
 
