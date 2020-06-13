@@ -1,6 +1,6 @@
 ---
 description: Learn how to benchmark TF2 and measure FPS scientifically.
----
+...
 
 # Benchmarks
 

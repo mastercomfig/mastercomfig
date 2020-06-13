@@ -1,6 +1,6 @@
 ---
 description: Go further than just mastercomfig by tuning your performance at the OS level.
----
+...
 
 # Operating system optimizations
 

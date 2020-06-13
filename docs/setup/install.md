@@ -1,6 +1,6 @@
 ---
 description: Easy steps on how to install mastercomfig and get it set up properly.
----
+...
 
 # How to install mastercomfig
 
@@ -14,9 +14,10 @@ description: Easy steps on how to install mastercomfig and get it set up properl
 8. Set these launch options: `-novid -nojoy -nosteamcontroller -nohltv -particles 1`. For more information, read the [launch options customization guide](../customization/launch_options.md).
 
 ## Custom configs
+
 If you have any of the following files, you will have to do some extra steps to get them to work with mastercomfig:
 
-```
+```txt
 autoexec.cfg
 scout.cfg
 soldier.cfg
@@ -38,6 +39,7 @@ spy.cfg
 ## Next Steps
 
 ### Troubleshooting
+
 Encountering any issues? See the [troubleshooting guide](../next_steps/troubleshoot.md) for help.
 
 ### Customization

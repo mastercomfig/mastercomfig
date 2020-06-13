@@ -1,21 +1,28 @@
 ---
 description: Get answers to frequently asked questions about mastercomfig.
----
+...
 
 # Frequently Asked Questions
 
 ## Why does mastercomfig use a VPK?
+
 mastercomfig is not just a configuration file like older FPS configs which only use autoexec.cfg.
 It is a complete performance and customization scripting mod which requires many custom files to work.
 
 **Here are some of the features that mastercomfig gains, by being a mod rather a configuration file:**
 
 * dxsupport overrides, which unlock `r_drawropes`, `fx_drawimpactdebris`, `fx_drawimpactdust`, `fx_drawimpactspark`, `tf_impactwatertimeenable`, `dsp_off`, `cl_particle_retire_cost` and `mat_slopescaledepthbias_decal`
-    * These allow for performance improvements for ropes, particles, sound, and fixing a bug where 1 decal still appears even if decals are disabled
+
+  * These allow for performance improvements for ropes, particles, sound, and fixing a bug where 1 decal still appears even if decals are disabled
+
 * [Class spawn scripts](#why-does-mastercomfig-override-my-class-configs), which allow for scripts to be run periodically during a match
+
 * Modular design which allows for an extensive user override system (modules, addons, configs), rather than having to redo edits every time mastercomfig updates
+
 * `mm_override` script, which fixes crashes while loading for Competitive matchmaking
+
 * Optimized preload configuration, which improves memory usage and load times
+
 * No messy cloud sync or config saving propagation which happens in the `cfg` folder
 
 Now, this only explains why mastercomfig is a mod, which can also be a folder, rather than explaining why mastercomfig is a VPK.
@@ -27,9 +34,9 @@ Now, this only explains why mastercomfig is a mod, which can also be a folder, r
 
 !!! quote
     First, mount all user customizations. This will search for VPKs and subfolders
-		and mount them in alphabetical order. The easiest way to distribute a mod is to
-		pack up the custom content into a VPK. To "install" a mod, just drop it in this
-		folder.
+    and mount them in alphabetical order. The easiest way to distribute a mod is to
+    pack up the custom content into a VPK. To "install" a mod, just drop it in this
+    folder.
 
 * Better performance, as stated by Valve:
 
@@ -46,9 +53,9 @@ Now, this only explains why mastercomfig is a mod, which can also be a folder, r
 
 !!! quote
     We search VPK files before ordinary folders, because most files will be found in
-		VPK and we can avoid making thousands of file system calls to attempt to open files
-		in folders where they don't exist. (Searching a VPK is much faster than making an operating
-		system call.)
+    VPK and we can avoid making thousands of file system calls to attempt to open files
+    in folders where they don't exist. (Searching a VPK is much faster than making an operating
+    system call.)
 
 * Modular design, which allows for contained custom settings and variants of mastercomfig
 
@@ -65,9 +72,14 @@ Class configs are also a reliable way to periodically run some commands during a
 * Class specific network setting aliases (`net_hitscan`, `net_projectiles`, `net_spy`) for easy customization
 * `user/game_overrides` script for easy global class settings
 * `game_overrides_once_c` alias for running a script only once per game session
-* Fixing a networking issue with bumper cars (https://github.com/ValveSoftware/Source-1-Games/issues/2618)
+* Fixing [a networking issue](https://github.com/ValveSoftware/Source-1-Games/issues/2618) with bumper cars
 * Overriding map specific detail prop, water fade distances, and sound channel mode
 * Fixing the freezecam sound effect getting stuck sometimes
+* Clearing all decals, including permananent ones inaccessible by other commands
+* Fixing client desync bugs periodically without interrupting demos
+* Improving load times after first map load
+* Fixing cases where animation and model mods can stop working after many server loads
+* Fixing issues where animation and models mods could be reset
 
 **mastercomfig overrides class configs because:**
 

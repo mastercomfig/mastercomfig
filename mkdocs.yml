@@ -65,9 +65,10 @@ theme:
         - instant
     name: material
     palette:
+        scheme: slate
         primary: teal
         accent: teal
-    logo: img/logo.png
+    logo: img/logo.svg
     favicon: img/logo.ico
     icon:
         repo: fontawesome/brands/github
@@ -79,9 +80,7 @@ plugins:
     - minify:
         minify_html: true
     - git-revision-date-localized:
-        type: timeago
-extra_css:
-  - 'stylesheets/dark-theme-v5.css'
+        type: date
 extra:
     social:
         - icon: fontawesome/brands/github

@@ -1,6 +1,6 @@
 ---
 description: How to update mastercomfig to the latest version
----
+...
 
 # Update
 
@@ -12,5 +12,4 @@ replacing the old files.
 This config gets updates frequently, so to get the latest improvements, make
 sure you check here for new releases frequently, or you can get notifications
 about updates on the [Discord](https://discord.gg/CuPb2zV),
-[Steam Group](https://steamcommunity.com/groups/comfig) (or its [Steam Chat](https://s.team/chat/IM8fJTnx)) or the
-[teamfortress.tv thread](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
+[Steam Group](https://steamcommunity.com/groups/comfig), or its [Steam Chat](https://s.team/chat/IM8fJTnx).

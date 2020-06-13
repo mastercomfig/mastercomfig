@@ -9,112 +9,112 @@ OUTPUT=""
 
 CONTROL="{}\""
 WHITESPACE=$' \r\n\t'
-NOSPACE="$WHITESPACE$CONTROL"
+NOSPACE="${WHITESPACE}${CONTROL}"
 MUSTQUOTE=$'[ \r\n\t{}]'
 
 i=0
 c=""
 readC () {
-	((i++))
+  ((i++))
 
-	read -rN1 c
+  read -rN1 c
 }
 
 seek () {
-	(( i += "$1" ))
+  (( i += "$1" ))
 
-	exec <<< "${INPUT:i}"
+  exec <<< "${INPUT:i}"
 }
 
 charIn () {
-	case "$2" in
-		*"$1"*) return 0;;
-		*) return 1;;
-	esac
+  case "$2" in
+    *"$1"*) return 0;;
+    *) return 1;;
+  esac
 }
 
 writeToken () {
-	if [ -z "$1" ]
-		then OUTPUT+="\"\""
-	elif [[ "$1" =~ $MUSTQUOTE ]]
-		then OUTPUT+="\"$1\""
-	else
-		charIn "${OUTPUT: -1}" "$NOSPACE" || OUTPUT+=" "
+  if [ -z "$1" ]
+    then OUTPUT+="\"\""
+  elif [[ "$1" =~ ${MUSTQUOTE} ]]
+    then OUTPUT+="\"$1\""
+  else
+    charIn "${OUTPUT: -1}" "${NOSPACE}" || OUTPUT+=" "
 
-		OUTPUT+="$1"
-	fi
+    OUTPUT+="$1"
+  fi
 }
 
 eatComments () {
-	if [ "$c" = "/" ]
-		then readC
+  if [ "${c}" = "/" ]
+    then readC
 
-		if [ "$c" = "/" ]
-			then while readC
-				do [ "$c" = $'\n' ] && return 0
-			done
-		fi
+    if [ "${c}" = "/" ]
+      then while readC
+        do [ "${c}" = $'\n' ] && return 0
+      done
+    fi
 
-		seek -1
-	fi
+    seek -1
+  fi
 
-	return 1
+  return 1
 }
 
 readToken () {
-	if [ "$c" = "{" ]
-		then OUTPUT+="{"
-		readNodes
-		return
-	fi
+  if [ "${c}" = "{" ]
+    then OUTPUT+="{"
+    readNodes
+    return
+  fi
 
-	if [ "$c" = "\"" ]
-		then token=""
+  if [ "${c}" = "\"" ]
+    then token=""
 
-		while readC
-			do if [ "$c" = "\"" ]
-				then writeToken "$token"
-				return
-			fi
+    while readC
+      do if [ "${c}" = "\"" ]
+        then writeToken "${token}"
+        return
+      fi
 
-			token+="$c"
-		done
-	fi
+      token+="${c}"
+    done
+  fi
 
-	token="$c"
+  token="${c}"
 
-	while readC
-		do eatComments && continue
+  while readC
+    do eatComments && continue
 
-		if charIn "$c" "$CONTROL"
-			then seek -1
-			writeToken "$token"
-			return
-		fi
+    if charIn "${c}" "${CONTROL}"
+      then seek -1
+      writeToken "${token}"
+      return
+    fi
 
-		if charIn "$c" "$WHITESPACE"
-			then writeToken "$token"
-			return
-		fi
+    if charIn "${c}" "${WHITESPACE}"
+      then writeToken "${token}"
+      return
+    fi
 
-		token+="$c"
-	done
+    token+="${c}"
+  done
 }
 
 readNodes () {
-	while readC
-		do
+  while readC
+    do
 
-		[ "$c" = "}" ] && OUTPUT+="}" && return
+    [ "${c}" = "}" ] && OUTPUT+="}" && return
 
-		charIn "$c" "$WHITESPACE" && continue
+    charIn "${c}" "${WHITESPACE}" && continue
 
-		eatComments && continue
+    eatComments && continue
 
-		readToken
-	done
+    readToken
+  done
 }
 
-readNodes <<< "$INPUT"
+readNodes <<< "${INPUT}"
 
-echo -n "$OUTPUT" > "$1"
+echo -n "${OUTPUT}" > "$1"

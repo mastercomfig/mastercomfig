@@ -1,6 +1,6 @@
 ---
 description: Help me work on and improve mastercomfig!
----
+...
 
 # Support me
 

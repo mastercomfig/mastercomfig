@@ -1,6 +1,6 @@
 ---
 description: A list of all launch options on TF2 for Linux.
----
+...
 
 # Launch Options - Linux
 
@@ -8,7 +8,7 @@ description: A list of all launch options on TF2 for Linux.
     **Not all these "launch options" are guaranteed to be actual launch options!**
     Extracting strings from an executable is a finicky and error-prone process, and as such, some unrelated strings may have slipped through the cracks.
 
-```
+```txt
 -abs
 -abs(
 -all

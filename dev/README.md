@@ -1,4 +1,5 @@
 # Dev scripts
+
 This folder contains scripts to build release files and manage releases.
 
 ## No Tutorial Viewed
@@ -10,10 +11,12 @@ Attacking!") and map intro movies. It does this by temporarily copying
 resultant `viewed.res` into the No Tutorial addon's `media` folder.
 
 ## Packaging
+
 This creates the necessary files for releases (VPKs for addons and presets,
 and the autoexecs for cfg.tf).
 
 ### Presets
+
 This collects the common files from the config folder, then generates an
 `autoexec.cfg` that executes `comfig/comfig.cfg`, the appropriate preset, all addons
 (which will skip execution if not preset) and `user/autoexec.cfg`. Overrides are then
@@ -48,9 +51,11 @@ This will send an announcement to a Discord channel, and generate BBCode from
 the supplied version and highlights text.
 
 ## mastercomfig-vars
+
 This is a file that must be supplied by the user with the following entries:
 
 ```bash
+#!/bin/sh
 export DISCORD_WEBHOOK="Discord webhook for config announcements"
 export GH_USERNAME="GitHub username used for authentication for release deployment"
 export GH_TOKEN="GitHub authentication token used for release deployment"

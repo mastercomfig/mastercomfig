@@ -1,33 +1,34 @@
 #!/bin/bash
 # Run script within the directory
 BINDIR=$(dirname "$(readlink -fn "$0")")
-cd "$BINDIR"
+cd "${BINDIR}" || exit 2
 
 # Delete old VPKs and folders
-rm *.vpk -f
-rm */ -rf
+rm -f -- *.vpk
+rm -rf -- */
 
 for F in ../../config/cfg/presets/*; do
     if [ -f "${F}" ]; then
         ext=${F##*.}
-        if [ "$ext" = cfg ]; then
-            P=$(basename $F .$ext)
+        if [ "${ext}" = cfg ]; then
+            P=$(basename "${F}" ."${ext}")
             mkdir -p mastercomfig-"${P}"-preset/cfg/presets
             cp -f ../../config/cfg/presets/*.cfg mastercomfig-"${P}"-preset/cfg/presets
-            preset_file=mastercomfig-"${P}"-preset/cfg/presets/${P}.cfg
             autoexec_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
-            printf "alias preset\"exec presets/${P}.cfg\";" > $autoexec_file
-            printf "exec user/pre_comfig.cfg;" >> $autoexec_file
-            printf "exec comfig/comfig.cfg;" >> $autoexec_file
-            printf "preset;" >> $autoexec_file
-            printf "exec comfig/addons_setup.cfg;" >> $autoexec_file
-            printf "exec comfig/addons.cfg;" >> $autoexec_file
-            printf "exec user/modules.cfg;" >> $autoexec_file
-            printf "run_modules;" >> $autoexec_file
-            printf "exec comfig/addons.cfg;" >> $autoexec_file
-            printf "exec user/autoexec.cfg;" >> $autoexec_file
-            printf "exec comfig/finalize.cfg;" >> $autoexec_file
-            printf "exec comfig/echo.cfg" >> $autoexec_file
+            {
+              printf "alias preset\"exec presets/%s.cfg\";" "${P}"
+              printf "exec user/pre_comfig.cfg;"
+              printf "exec comfig/comfig.cfg;"
+              printf "preset;"
+              printf "exec comfig/addons_setup.cfg;"
+              printf "exec comfig/addons.cfg;"
+              printf "exec user/modules.cfg;"
+              printf "run_modules;"
+              printf "exec comfig/addons.cfg;"
+              printf "exec user/autoexec.cfg;"
+              printf "exec comfig/finalize.cfg;"
+              printf "exec comfig/echo.cfg"
+            } > "${autoexec_file}"
         fi
     fi
 done

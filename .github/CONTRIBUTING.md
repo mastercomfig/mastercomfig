@@ -14,7 +14,6 @@ to suit your needs and improve the config for everyone!
 
 mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
-[teamfortress.tv](https://www.teamfortress.tv/user/mastercoms),
 [Reddit](https://www.reddit.com/user/mastercoms) or by email at
 mastercoms@tuta.io. I'd be happy to chat about any problems or
 suggestions you have for the config.
@@ -97,7 +96,7 @@ Note: some additional information about the config can be found
 
 Add options like this
 
-```
+```c
 convar 0 // What the command does and a bit about what this default
          // value does, possibly with why it is the default
 //convar 1 // What this alternative does

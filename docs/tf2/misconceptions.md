@@ -1,10 +1,11 @@
 ---
 description: Common misconceptions with TF2 that mastercomfig corrects.
----
+...
 
 # Misconceptions
 
 ## Bad launch options
+
 * `-noipx` : Does not exist and never existed in Source.
 * `-heapsize` : Does not exist. It never really worked in Source and was removed in an old update.
 * `-nocrashdialog` : Does not improve FPS, plus it makes crashes harder to troubleshoot.
@@ -19,11 +20,13 @@ description: Common misconceptions with TF2 that mastercomfig corrects.
 * `-NOPROCESSHEAP` : This was a workaround for a bug that only happened for a short time in CS:GO, and it decreases performance. There is absolutely no reason to use this anymore.
 
 ## Resolution and windows launch options
+
 * `-fullscreen -w -h -full -sw -window -windowed -width -height`
 
 These launch options may be creating an improper video mode, which is not preferred by the material system and can reduce performance. Try settings these options through the settings window instead.
 
 ## Bad CVars
+
 * `mat_shadowstate` : Does not exist
 * `mat_parallaxmap` : Not used
 * `rate 60000` : This is lower than the TF2 default rate of `80000`. TF2 default network settings are already on the low-end. Why would you set rate lower, especially when you're increasing packet rates? (`cl_updaterate 66`, `cl_cmdrate 66`)?

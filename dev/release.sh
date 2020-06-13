@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run script within the directory
 BINDIR=$(dirname "$(readlink -fn "$0")")
-cd "$BINDIR"
+cd "${BINDIR}" || exit 2
 
 ./update.sh || exit 1
 
@@ -15,20 +15,20 @@ unset zip_package
 
 ./package.sh
 
-if [ "$patch" = true ] ; then
+if [ "${patch:=false}" = true ] ; then
     ./patch.sh
 else
     echo Version:
-    read version
+    read -r version
 
     echo Highlights:
-    read highlights
+    read -r highlights
 
     echo Hours taken:
-    read hours
+    read -r hours
 
-    ./deploy.sh $version "$highlights"
-    ./announce.sh $version "$highlights" "$hours"
+    ./deploy.sh "${version}" "${highlights}"
+    ./announce.sh "${version}" "${highlights}" "${hours}"
 fi
 
 printf "\n"
