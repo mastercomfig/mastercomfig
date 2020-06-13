@@ -1,8 +1,9 @@
----
+...
 description: Some less useful launch options, just documented here because why not?
----
+...
 
 # Silly Launch Options
+
 These are launch options that take performance or making the game look bad too far and are not included in the config.
 
 * `-nops2b` : uses pixel shaders 2.0 instead of 2.0b, makes fog thicker, more frames on really old/bad GPUs, will decrease FPS on others. It also causes some visual artifacts when using transparent viewmodels, like blurry scope and killcam ghosting.

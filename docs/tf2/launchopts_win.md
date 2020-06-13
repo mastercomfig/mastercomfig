@@ -1,6 +1,6 @@
----
+...
 description: A list of all launch options on TF2 for Windows.
----
+...
 
 # Launch Options - Windows
 

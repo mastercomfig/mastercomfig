@@ -1,4 +1,4 @@
-# linter:
+linter:
 # # https://help.sider.review/getting-started/custom-configuration
 
 #   # https://help.sider.review/tools/others/misspell
@@ -24,15 +24,20 @@
 #     severity: "error"
 #     norc: true
 
-#   # https://help.sider.review/tools/markdown/remark-lint
-#   remark_lint:
-#     target: docs/
-#     ext: md,markdown
-#     rc-path: config/.remarkrc
-#     ignore-path: config/.remarkignore
-#     use:
-#       - remark-lint-file-extension
-#       - remark-lint-no-heading-punctuation
+# https://help.sider.review/tools/markdown/remark-lint
+   remark_lint:
+     target: .
+     ext: md,markdown
+     rc-path: .remarkrc
+     ignore-path: .remarkignore
+     use:
+       - remark-lint-blockquote-identation
+       - remark-lint-code-block-style
+       - remark-lint-definition-case
+       - remark-lint
+       - remark-lint-file-extension
+       - remark-lint-no-heading-punctuation
+       - remark-lint-fenced-code-flag
 
 # # https://help.sider.review/getting-started/custom-configuration#ignore
 # ignore:

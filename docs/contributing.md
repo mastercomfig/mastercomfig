@@ -20,25 +20,23 @@ mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
 [teamfortress.tv](https://www.teamfortress.tv/user/mastercoms),
 [Reddit](https://www.reddit.com/user/mastercoms) or by email at
-mastercoms@tuta.io. I'd be happy to chat about any problems or
+[mastercoms@tuta.io](mailto:mastercoms@tuta.io). I'd be happy to chat about any problems or
 suggestions you have for the config.
 
-## Contributing
-
-### Docs
+## Docs
 
 Have a screenshot, workaround or anything else interesting you'd like to share?
 Contribute to the [docs](https://github.com/mastercomfig/mastercomfig/tree/release/docs).
 
-### Support
+## Support
 
 You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV), [Steam Discussions](https://steamcommunity.com/groups/comfig/discussions) or [teamfortress.tv](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
 
-### Contributing to the Config
+## Config
 
 Want to contribute to the config itself? Start here!
 
-#### Getting started
+### Getting started
 
 This config has a certain standard of quality for references and will not accept
 changes based on simple hearsay or assumptions.
@@ -51,20 +49,20 @@ so make sure those are available to you before you start contributing.
 File overrides like DX support, shader cache, texture preload and client precache
 must be updated according to changes [tracked by Steam Database](https://github.com/SteamDatabase/GameTracking-TF2).
 
-#### Find a task
+### Find a task
 
 There might be TODOs within the files that need to be completed, issues that
 need to be closed or maybe something new you came up with. For any of these,
 make sure you communicate that you're going contribute to resolve that issue or
 implement that feature so that there isn't any duplicated work going on.
 
-#### Making changes
+### Making changes
 
 First things first: use spaces (no tabs) and CRLF line endings for configs, and
 continue the Valve convention in the other file overrides. Ensure no trailing
 space at the end of lines. Max line length should be 100.
 
-##### Launch options
+#### Launch options
 
 Launch options are documented on the wiki and are formatted like this:
 
@@ -94,14 +92,14 @@ Here's lists of launch options to help you out:
 
 Information about generating them can be found [here](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#launch_options).
 
-##### Comfig and presets
+#### Comfig and presets
 
 Note: some additional information about the config can be found
 [here](https://github.com/mastercomfig/mastercomfig/blob/release/config/README.md).
 
 Add options like this
 
-```
+```cpp
 convar 0 // What the command does and a bit about what this default
          // value does, possibly with why it is the default
 //convar 1 // What this alternative does
@@ -111,16 +109,16 @@ As you can see, default ConVar values should be at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
-ConVars and commands are found using [these instructions](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#making-your-own-cvar-list).
+##### CVarlist
 
-Premade lists:
+ConVars and commands are found using [these instructions](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#making-your-own-cvar-list).
 
 * [Windows](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_win/)
 * [Linux](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_linux/)
 
 Add your alternatives uncommented in the applicable presets/addons, or use modules:
 
-**Presets:**
+##### Presets
 
 * `ultra`: Absolute maximum quality, with even the slightest and most performance-intensive quality improvements included
 * `high`: Enables all graphical features without making them extremely high quality
@@ -135,7 +133,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `very-low`: Negatively affects playability by a lot and disables very
   essential features in desperation for performance
 
-**Addons:**
+##### Addons
 
 * `no-footsteps`: Removes footstep sounds
 * `disable-pyroland`: Removes Pyroland map textures
@@ -146,7 +144,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `badgpu`: Optimizations that generally do not affect quality for weak integrated graphics chips (Intel HD graphics) or old GPUs (lower end made before 2007)
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower)
 
-**Modules:**
+##### Modules
 
 If your settings affect quality in any way, create a new module or modify
 the existing modules if applicable, then add documentation for it at the
@@ -154,7 +152,7 @@ the existing modules if applicable, then add documentation for it at the
 Use [this generator](https://github.com/ekalinin/github-markdown-toc) to get
 the navigation links to be generated properly.
 
-##### Texture preload list
+#### Texture preload list
 
 The `texture_preload_list.txt` file is designed to tell Team Fortress 2 which
 textures to load on startup.
@@ -162,14 +160,14 @@ Strip all nonexistent textures from the default one if there is a major
 TF2 update, and then add your changes. Preloaded textures should be common
 enough to warrant the extra startup time and memory usage.
 
-##### Client precache
+#### Client precache
 
 The `scripts/client_precache.txt` file is similar to the texture preload list, but it is for sounds and models.
 Also similarly to the texture preload list, strip any nonexistent entries
 and then add your changes, making sure that the entries in the precache are
 common enough to warrant the extra startup time and memory usage.
 
-##### Shader cache
+#### Shader cache
 
 The OpenGL shader pair cache is located at `glbaseshaders.cfg` and `glbaseshaders_osx.cfg`.
 This is a value store for each shader program, which is an indexed subkey. The first value
@@ -177,19 +175,19 @@ is the vertex shader name, the second is the pixel shader name, third is the ver
 static index, fourth is the pixel shader static index, fifth is the vertex shader dynamic index
 and sixth is the pixel shader dynamic index.
 
-##### DX support
+#### DX support
 
 Edit `dxsupport_override.cfg` and set hidden ConVars and other settings
 according to hardware and DirectX level. Make sure there are no updates to this
 file from the game repository (unlikely, was last updated in 2013) before making
 changes.
 
-##### Game overrides
+#### Game overrides
 
 Some ConVars are set from what the map author specified so we have to override them.
 This is currently done in modules.
 
-##### DX Support overrides
+#### DX Support overrides
 
 Some ConVars cannot be set in-game, even with DX support definitions. Thus, some presets have
 [custom packaging overrides](https://github.com/mastercomfig/mastercomfig/blob/release/dev/presets/package.sh#L39)
@@ -203,23 +201,23 @@ and name it something nice and descriptive! In your post, include an explanation
 of the changes, why you made those changes, along with any other information you
 find important.
 
-## Testing Config Changes
+### Testing Config Changes
 
 There are several steps you should take before making or accepting changes to
-the config. You can use Fraps or MSI Afterburner to get a FPS measurement of
+the config. You can use Fraps or MSI Afterburner to get an FPS measurement of
 matches.
 
-### Benchmarking
+#### Benchmarking
 
 Use [mastercoms' new test benchmark](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k)
 to do basic testing on options.
 
-### Bot match
+#### Bot match
 
 After the results are positive with the benchmark, measure your average FPS in a
 local 32 player bot match on `pl_upward`. (use `+maxplayers 32` in launch options).
 
-### Casual match
+#### Casual match
 
 After the results are positive with the local bot match, measure your average
 FPS in a filled casual match.

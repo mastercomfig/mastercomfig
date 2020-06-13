@@ -6,7 +6,7 @@ description: Find out how the community is using mastercomfig.
 
 This is a list of mastercomfig custom configs by members of the community.
 
-***
+---
 
 * [mastercoms' cfg and custom files](https://github.com/mastercoms/configs/tree/master/games/tf2)
 * [JarateKing's jarconfig](https://github.com/JarateKing/jarconfig)
