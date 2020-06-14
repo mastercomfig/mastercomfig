@@ -30,8 +30,8 @@ for F in ../../config/cfg/addons/*; do
             {
               echo "alias addon_${addon_alias_map[${A}]}"
               echo "exec addons/${A}.cfg"
-              echo "addon_${addon_alias_map[${A}]}"
             } >> "${addons_setup_cfg_path}"
+            echo "addon_${addon_alias_map[${A}]}" >> $addons_cfg_path
         fi
     fi
 done
