@@ -15,8 +15,8 @@ if [ "${folder}" = "maps" ]; then
     for M in *; do
         ext="${M##*.}"
         if [ -f "${M}" ] && [ "${ext}" = "bsp" ]; then
+          name="${M%.*}"
           {
-            name="${M%.*}"
             echo "	${name}"
             echo "	{"
             echo "		\"viewed\"		\"${VIEW_COUNT}\""
