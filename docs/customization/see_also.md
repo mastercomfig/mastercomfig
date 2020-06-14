@@ -6,7 +6,7 @@ description: Some awesome TF2 modifications which can be used alongside masterco
 
 Here are a few awesome TF2 modifications:
 
-* [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
+* [CleanTF2+](https://github.com/JarateKing/CleanTF2plus)
   — Makes TF2 a lot cleaner and simpler, includes Nohats
 * [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases)
   —  Fix issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons
@@ -20,7 +20,7 @@ Here are a few awesome TF2 modifications:
   — New custom crosshairs
 * [SteamPriorityLauncher](https://github.com/Leo40Git/SteamPriorityLauncher)
   — A launcher for launching Steam games, such as TF2, with different priorities
-* [yttrium's viewmodels](https://www.teamfortress.tv/34834/yttriums-competitive-viewmodels)
+* [yttrium's viewmodels](https://github.com/Yttrium-tYcLief/CompVMInstaller/releases)
   — Customize hiding individual viewmodels
 * [Transparent Viewmodels](https://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
   — Make viewmodels translucent
