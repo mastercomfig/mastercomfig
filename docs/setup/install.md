@@ -49,4 +49,4 @@ Want to personalize your TF2 even further?
 * Tune your [launch options](../customization/launch_options.md) to get better performance and quality for your system
 * Get inspired by other people's [custom configs](../customization/custom_configs.md)
 * Take a look at some other [great TF2 modifications](../customization/see_also.md)
-* [Optimize your OS](../os/index.md) to squeeze out even more performance
+* Optimize your [Windows](../os/windows.md) or [Linux based](../os/linux.md) operating system to squeeze out even more performance
