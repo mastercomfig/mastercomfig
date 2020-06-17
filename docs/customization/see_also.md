@@ -6,7 +6,7 @@ description: Some awesome TF2 modifications which can be used alongside masterco
 
 Here are a few awesome TF2 modifications:
 
-* [CleanTF2+](https://www.teamfortress.tv/51736/cleantf2-nohats-flat-textures-etc)
+* [CleanTF2+](https://github.com/JarateKing/CleanTF2plus)
   — Makes TF2 a lot cleaner and simpler, includes Nohats
 
 * [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases)
@@ -27,7 +27,7 @@ Here are a few awesome TF2 modifications:
 * [SteamPriorityLauncher](https://github.com/Leo40Git/SteamPriorityLauncher)
   — A launcher for launching Steam games, such as TF2, with different priorities
 
-* [yttrium's viewmodels](https://www.teamfortress.tv/34834/yttriums-competitive-viewmodels)
+* [yttrium's viewmodels](https://github.com/Yttrium-tYcLief/CompVMInstaller/releases)
   — Customize hiding individual viewmodels
 
 * [Transparent Viewmodels](https://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
@@ -38,3 +38,9 @@ Here are a few awesome TF2 modifications:
 
 * [mastercomfig for Vortex](https://github.com/AtomicTEM/Mastercomfig-All-in-one-for-Vortex-Mod-Manager)
   — An unofficial distribution of mastercomfig which supports [Vortex Mod Manager](https://www.nexusmods.com/about/vortex/)
+
+* [Static Ambassador Crosshair](https://github.com/juniorsgithub/tf2-static-ambassador-crosshair)
+  — Replace the dynamic crosshair resize of the Ambassador inaccuracy indicator with a static crosshair
+
+* [Loadouts Script](https://github.com/juniorsgithub/tf2-loadouts-script)
+  — An "advanced" TF2 loadouts and resupply script.
