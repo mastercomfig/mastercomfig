@@ -355,6 +355,7 @@ cl_drawshadowtexture                     : 0        : , "cheat", "cl"  :
 cl_dump_particle_stats                   : cmd      :                  : dump particle profiling info to particle_profile.csv
 cl_dynamiccrosshair                      : 1        : , "a", "cl"      :
 cl_ejectbrass                            : 1        :                  :
+cl_enable_text_chat                      : 1        : , "a", "cl"      : Enable text chat in this game
 cl_ent_absbox                            : cmd      :                  : Displays the client's absbox for the entity under the crosshair.
 cl_ent_bbox                              : cmd      :                  : Displays the client's bounding box for the entity under the crosshair.
 cl_ent_rbox                              : cmd      :                  : Displays the client's render box for the entity under the crosshair.
@@ -3588,5 +3589,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3580 total convars/concommands
+3581 total convars/concommands
 ```

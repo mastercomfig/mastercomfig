@@ -70,12 +70,12 @@ description: A list of all launch options on TF2 for Linux.
 -disable_srgbtex
 -disallowhwmorph
 -displayindex
+-D!j
 -dontusegamedir
 -dti
 -duck
 -dumplongticks
 -dumpvidmemstats
--Dus
 -Dw&
 -dxlevel
 -edit
@@ -136,12 +136,11 @@ description: A list of all launch options on TF2 for Linux.
 -graph
 -grenade1
 -grenade2
--h~2
 -heapcheck
 -height
 -helpme
 -helpme_server
--h<i
+-H=i
 -hideconsole
 -HOST_HUNKLEVEL-
 -hushsteam
@@ -247,6 +246,7 @@ description: A list of all launch options on TF2 for Linux.
 -nowatchdog
 -nulldevice
 -outdir
+-p2p
 -p4changelistlabel
 -p4skip
 -p4skipchangelistlabel
@@ -258,6 +258,7 @@ description: A list of all launch options on TF2 for Linux.
 -pixel_offset_y
 -port
 -posedebug
+-p+p
 -precachefontchars
 -precachefontintlchars
 -preload
@@ -327,6 +328,7 @@ description: A list of all launch options on TF2 for Linux.
 -toconsole
 -tools
 -trackdeletions
+-T*t
 -tvmasteronly
 -ugcpath
 -use
@@ -358,6 +360,7 @@ description: A list of all launch options on TF2 for Linux.
 -windowed
 -window_name_suffix
 -x'
+-X$w
 -Xt!
 -zoom
 ```
