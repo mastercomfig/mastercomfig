@@ -6,7 +6,7 @@ description: Learn how to optimize your Windows OS for better performance.
 
 ## Disable gore
 
-Usually, configs use workarounds to hide models and some particles associates with gore.
+Usually, configs use workarounds to hide models and some particles associated with gore.
 
 However, these do not prevent the spawning logic of gore and in some cases, still allow some particles to be shown, or enable silly gibs.
 What does block all gore is called [low violence mode](https://support.steampowered.com/kb_article.php?ref=5889-TIOV-0207).
@@ -19,7 +19,7 @@ On Windows only, you can enable low violence mode through the registry.
 3. Modify the value of `User Token 2` to `1`.
 4. You now have true low violence mode enabled.
 
-You now can also use the official TF2 low violence content (`tf2_lv`):
+With low violence now enabled, you can use the official TF2 low violence content (`tf2_lv`):
 
 1. Open Steam console: [steam://nav/console](steam://nav/console)
 2. Enter `download_depot 440 444`
