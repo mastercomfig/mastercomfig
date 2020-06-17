@@ -6,7 +6,6 @@ linter:
      exclude:
        - "**/*.cfg"
      locale: US
-     ignore: center,behavior
 
 #   # https://help.sider.review/tools/shellscript/shellcheck
 #   shellcheck:
@@ -23,7 +22,6 @@ linter:
      target: .
      ext: md,markdown
      rc-path: .remarkrc
-     ignore-path: .remarkignore
 #     use:
 #       - remark-lint-blockquote-identation
 
