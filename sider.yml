@@ -22,8 +22,8 @@ linter:
      target: .
      ext: md,markdown
      rc-path: .remarkrc
-#     use:
-#       - remark-lint-blockquote-identation
+     use:
+      - remark-lint-checkbox-content-indent
 
 # # https://help.sider.review/getting-started/custom-configuration#ignore
 # ignore:
