@@ -437,9 +437,9 @@ Default setting: **`hud_panels=on`** (all presets, except Very Low).
 
 Default setting: **`messages=enable`** (all presets, except Very Low).
 
-* **`messages=disable`**: Disables all text messages.
-* **`messages=userchat`**: Only displays user generated messages.
-* **`messages=enable`**: Enables all text messages.
+* **`messages=disable`**: Disables text chat.
+* **`messages=team`**: Only hear text chat from players on your team.
+* **`messages=enable`**: Enables text chat.
 
 ### Killfeed
 
