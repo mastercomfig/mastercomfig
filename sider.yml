@@ -23,7 +23,7 @@ linter:
      ext: md,markdown
      rc-path: .remarkrc
      use:
-      - remark-lint-checkbox-content-indent
+       - remark-lint-checkbox-content-indent
 
 # # https://help.sider.review/getting-started/custom-configuration#ignore
 # ignore:
