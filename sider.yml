@@ -5,6 +5,9 @@ linter:
    misspell:
      locale: US
 
+   languagetool:
+     ext: [.md, .cfg, .sh, .yml]
+
 # https://help.sider.review/tools/shellscript/shellcheck
    shellcheck:
      target: "dev/**/*.sh"
