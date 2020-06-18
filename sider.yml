@@ -8,11 +8,9 @@ linter:
      locale: US
 
 #   # https://help.sider.review/tools/shellscript/shellcheck
-#   shellcheck:
-#     target: "src/**/*.{sh,bash}"
-#     include: "SC2104,SC2105"
-#     exclude: "SC1000,SC1118"
-#     enable: "all"
+   shellcheck:
+     target: "dev/**/*.sh"
+     enable: "all"
 #     shell: "bash"
 #     severity: "error"
 #     norc: true
