@@ -33,7 +33,7 @@ Since modules aliases act like normal commands, they can also be used in console
 
 Ensures setting compatibility with SourceTV.
 
-Default setting: **`sourcetv=on` (all presets).
+Default setting: **`sourcetv=on`** (all presets).
 
 * **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
 * **`sourcetv=on`**: Keeps compatibility with SourceTV.
