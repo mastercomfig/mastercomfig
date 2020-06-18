@@ -1,13 +1,11 @@
 linter:
-# # https://help.sider.review/getting-started/custom-configuration
+# https://help.sider.review/getting-started/custom-configuration
 
 # https://help.sider.review/tools/others/misspell
    misspell:
-     exclude:
-       - "**/*.cfg"
      locale: US
 
-#   # https://help.sider.review/tools/shellscript/shellcheck
+# https://help.sider.review/tools/shellscript/shellcheck
    shellcheck:
      target: "dev/**/*.sh"
      enable: "all"
@@ -19,16 +17,3 @@ linter:
      target: .
      ext: md
      rc-path: .remarkrc
-
-# # https://help.sider.review/getting-started/custom-configuration#ignore
-# ignore:
-#   - "*.pdf"
-#   - "*.mp4"
-#   - "images/**"
-
-# # https://help.sider.review/getting-started/custom-configuration#branchesexclude
-# branches:
-#   exclude:
-#     - master
-#     - development
-#     - /^release-.*$/
