@@ -29,6 +29,15 @@ Since modules aliases act like normal commands, they can also be used in console
 
 ## Network modules
 
+### SourceTV Compatibility
+
+Ensures setting compatibility with SourceTV.
+
+Default setting: **`sourcetv=on` (all presets).
+
+* **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
+* **`sourcetv=on`**: Keeps compatibility with SourceTV.
+
 ### Packet rate
 
 Controls how fast you send and receive from the server.

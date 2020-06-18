@@ -81,6 +81,8 @@ plugins:
         minify_html: true
     - git-revision-date-localized:
         type: date
+extra_javascript:
+    - js/widescreen.min.js
 extra:
     social:
         - icon: fontawesome/brands/github
