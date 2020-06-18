@@ -11,9 +11,8 @@ linter:
    shellcheck:
      target: "dev/**/*.sh"
      enable: "all"
-#     shell: "bash"
-#     severity: "error"
-#     norc: true
+     severity: "style"
+     norc: true
 
 # https://help.sider.review/tools/markdown/remark-lint
    remark_lint:
