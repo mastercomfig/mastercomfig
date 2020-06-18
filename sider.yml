@@ -18,10 +18,8 @@ linter:
 # https://help.sider.review/tools/markdown/remark-lint
    remark_lint:
      target: .
-     ext: md,markdown
+     ext: md
      rc-path: .remarkrc
-#     use:
-#       - remark-lint-blockquote-identation
 
 # # https://help.sider.review/getting-started/custom-configuration#ignore
 # ignore:
