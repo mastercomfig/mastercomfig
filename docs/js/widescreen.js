@@ -1,4 +1,4 @@
-if (window.location.path.indexOf("cvar") !== -1 || window.location.path.indexOf("launchopts") !== -1) {
+if (window.location.pathname.indexOf("cvar") !== -1 || window.location.path.indexOf("launchopts") !== -1) {
   // https://github.com/squidfunk/mkdocs-material/issues/619#issuecomment-348610715
   var styles = `
     @media only screen and (min-width: 76.25em) {
