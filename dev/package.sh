@@ -22,7 +22,7 @@ if [ "${prerelease:=false}" == true ]; then
   cp addons/*.vpk prerelease/addons
   cp comfig/*.cfg prerelease/comfig
   cp comfig/*.zip prerelease/comfig
-  zip -9r prerelease/mastercomfig.zip addons/ presets/ comfig/
+  (cd prerelease && zip -9r mastercomfig.zip addons/ presets/ comfig/)
 fi
 
 printf "\n"
