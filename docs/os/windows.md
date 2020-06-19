@@ -41,7 +41,7 @@ Open your game folder through Steam. Then, right click on `hl2.exe`, click Prope
 
 More information: https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/, https://reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub?context=3
 
-If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback) so they can improve it in the future.
+If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
 
 !!! tip
     If you're using variable refresh rate (VRR) technology, like GSYNC, disabling Fullscreen Optimizations may break it, depending on your monitor, drivers and graphics card. So, if you experience problems with VRR after this, try reverting the change.
