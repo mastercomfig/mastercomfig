@@ -212,18 +212,18 @@ Default setting: **`motion_blur=off`** (all presets).
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
 * **`motion_blur=high`**: Motion blur fully enabled.
 
-### Antialiasing
+### Anti-aliasing
 
-Controls additional antialiasing passes.
+Controls additional anti-aliasing passes.
 
 Default setting: based on which preset you are currently using.
 
-* **`aa=off`**: Turns off additional antialiasing.
-* **`aa=on`**: Enhanced fence and grass antialiasing.
+* **`aa=off`**: Turns off additional anti-aliasing.
+* **`aa=on`**: Enhanced fence and grass anti-aliasing.
 
-### MSAA Antialiasing
+### MSAA Anti-aliasing
 
-Controls the main hardware based MSAA antialiasing (and CSAA, if you have an Nvidia card that supports it).
+Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an Nvidia card that supports it).
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
@@ -333,7 +333,7 @@ Default setting: based on which preset you are currently using.
 
 * **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings.
 * **`props=medium`**: Disables client side props, disables foliage, default quality prop models.
-* **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models.
+* **`props=high`**: Enables ambient lighting and decals on static props, enables some of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models.
 * **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at a very high distance with fade in, max quality prop models regardless of distance.
 
 ### Ragdolls
