@@ -333,7 +333,7 @@ Default setting: based on which preset you are currently using.
 
 * **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings.
 * **`props=medium`**: Disables client side props, disables foliage, default quality prop models.
-* **`props=high`**: Enables ambient lighting and decals on static props, enables some of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models.
+* **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models.
 * **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at a very high distance with fade in, max quality prop models regardless of distance.
 
 ### Ragdolls
