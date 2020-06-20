@@ -499,7 +499,7 @@ Default setting: **`dynamic_background=off`** (all presets).
 
 ## Mod Support
 
-Default setting: **`mod_support=off`** (all presets).
+Default setting: **`mod_support=on`** (all presets).
 
 You may want to also enable preloading using the [Map Background module](#map-background).
 
