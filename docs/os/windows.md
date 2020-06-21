@@ -4,29 +4,6 @@ description: Learn how to optimize your Windows OS for better performance.
 
 # Windows
 
-## Disable gore
-
-Usually, configs use workarounds to hide models and some particles associates with gore.
-
-However, these do not prevent the spawning logic of gore and in some cases, still allow some particles to be shown, or enable silly gibs.
-What does block all gore is called [low violence mode](https://support.steampowered.com/kb_article.php?ref=5889-TIOV-0207).
-Normally, this is only able to used by certain accounts in specific restricted countries.
-
-On Windows only, you can enable low violence mode through the registry.
-
-1. Open `regedit.exe`
-2. Navigate to the registry folder: `HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings`
-3. Modify the value of `User Token 2` to `1`.
-4. You now have true low violence mode enabled.
-
-You now can also use the official TF2 low violence content (`tf2_lv`):
-
-1. Open Steam console: <a href="steam://nav/console">steam://nav/console</a>
-2. Enter `download_depot 440 444`
-3. Wait for the depot to download.
-4. Move the contents of `steamapps/content/app_440/depot_444\tf` (`tf2_lv_000.vpk` and `tf2_lv_dir.vpk`) to `steamapps/common/Team Fortress 2/tf`.
-5. The low violence VPK will be added to search paths by low violence mode, and will be loaded by the game.
-
 ## Disable Game Mode
 
 Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information, and instructions on how to disable it.
