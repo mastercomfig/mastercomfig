@@ -11,7 +11,7 @@ description: Common misconceptions with TF2 that mastercomfig corrects.
 * `+exec autoexec` : autoexec.cfg is already ran on startup, there is no need to run it again
 * `+map_background` : Team Fortress 2 has a much more advanced preload system now, so map backgrounds are not needed. If you are using them to bypass sv_pure through preloading, that's fine.
 * `-dxlevel 98` : This is only supported on Xbox 360. Will fallback to `dxlevel 95` functionality on PC.
-* `-dxlevel 82` : This was an old DXLevel only used by certain ancient-by-today's-standards NVidia cards. It does not do anything anymore.
+* `-dxlevel 82` : This was an old DXLevel only used by certain ancient-by-today's-standards NVIDIA cards. It does not do anything anymore.
 * `-limitvsconst` : limits the hardware vertex shader constants to 256, possibly below hardware capabilities, which does save a bit of resources, but with more constants available, faster shader modes can be used
 * `-threads` : The Source Engine automatically determines the value for this, and caps it at 3, due to performance issues with higher values. Valve also [recommends](https://www.reddit.com/r/GlobalOffensive/comments/5y8r7v/in_depth_discussion_of_the_threads_launch_option/dep5yno) removing this launch option.
 * `-high` : High is a priority mode in Windows that is only recommended for short-lived, time critical threads. It can unbalance resource usage and decrease performance. Close applications on your PC instead.

@@ -223,7 +223,7 @@ Default setting: based on which preset you are currently using.
 
 ### MSAA Anti-aliasing
 
-Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an Nvidia card that supports it).
+Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an NVIDIA card that supports it).
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
