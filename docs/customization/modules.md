@@ -33,7 +33,7 @@ Controls how fast you send and receive from the server.
 
 Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
-* **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad WiFi, or very slow CPUs.
+* **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad Wi-Fi, or very slow CPUs.
 * **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
 
 ### Snapshot Buffer
