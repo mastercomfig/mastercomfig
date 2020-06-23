@@ -21,7 +21,7 @@ You can find more information on [DirectX Developer Blog](https://devblogs.micro
 If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
 
 !!! tip
-    If you're using variable refresh rate (VRR) technology, like GSYNC, disabling Fullscreen Optimizations may break it, depending on your monitor, drivers and graphics card. So, if you experience problems with VRR after this, try reverting the change.
+    If you're using variable refresh rate (VRR) technology, like G-SYNC, disabling Fullscreen Optimizations may break it, depending on your monitor, drivers and graphics card. So, if you experience problems with VRR after this, try reverting the change.
 
 ## Use High Performance power plan
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, use a Ryzen specific plan to correctly take advantage of CPPC2. Alternatively, a [custom Ryzen power plan](https://www.techpowerup.com/download/1usmus-custom-power-plan-ryzen-3000-zen-2/) can be used to potentially achieve higher boost clocks.
