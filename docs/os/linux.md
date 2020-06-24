@@ -14,7 +14,7 @@ Try a desktop oriented kernel like [Liquorix](https://liquorix.net/) or [Zen](ht
 Use either the `performance`, `schedutil` or `ondemand` governors when playing TF2 by using `cpupower frequency-set -g performance`, for example. You can see available governors for your CPU with `cpupower frequency-info`.
 
 ## GameMode
-[GameMode](https://github.com/FeralInteractive/gamemode) is a handy utility released by Feral Interactive, which will change the CPU Governor from the default cpu governer to `performance`. Recent updates allow it to change a games' "nice priority", which will give the game more resources to work with.
+[GameMode](https://github.com/FeralInteractive/gamemode) is a handy utility released by Feral Interactive, which will change the CPU Governor from the default CPU governor to `performance`. Recent updates allow it to change a games' "nice priority", which will give the game more resources to work with.
 
 ## irqbalance
 Balance IRQ interrupts across multiple cores by installing the `irqbalance` package on your distro and enabling the `irqbalance` service. This package is installed on most debian-based OS's by default, like Ubuntu and Linux Mint.
@@ -63,6 +63,6 @@ To disable this shader process, simply make two empty files: `glbaseshaders.cfg`
 then put them in `TF2_FOLDER/tf/custom/mastercomfig`.
 
 You can also disable Steam's shader pre-caching, which downloads shaders that match your hardware configuration.
-To disable this option go to `Steam > Settings > Shader Pre-Caching` and Uncheck "Enable Shader Pre-Caching".
+To disable this option go to `Steam > Settings > Shader Pre-Caching` and uncheck "Enable Shader Pre-Caching".
 
 To re-enable the shader process, simply delete `glshaders.cfg` and `glbaseshaders.cfg`.
