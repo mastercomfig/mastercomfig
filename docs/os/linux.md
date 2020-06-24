@@ -17,7 +17,7 @@ Use either the `performance`, `schedutil` or `ondemand` governors when playing T
 
 ## GameMode
 
-[GameMode](https://github.com/FeralInteractive/gamemode) is a handy utility released by Feral Interactive, which will change the CPU Governor from the default cpu governer to `performance`. Recent updates allow it to change a games' "nice priority", which will give the game more resources to work with.
+[GameMode](https://github.com/FeralInteractive/gamemode) is a handy utility released by Feral Interactive, which will change the CPU Governor from the default CPU governor to `performance`. Recent updates allow it to change a games' "nice priority", which will give the game more resources to work with.
 
 ## irqbalance
 

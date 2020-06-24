@@ -17,7 +17,7 @@ If there's something you'd like to run for all of your class configs, you can ad
 
 ## Utility Commands
 
-* `run_modules`: Applies modules. useful for changing module levels in-game, and then applying them all at once.
+* `run_modules`: Applies modules. Useful for changing module levels in-game, and then applying them all at once.
 * `restore_preset`: Restores modules back to preset defaults, without using user settings.
 * `restore_config`: Runs all of mastercomfig and user configs again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
@@ -71,4 +71,4 @@ If you want to run something only the first time you spawn and never run again w
 To get an idea about what to put in your `user/autoexec.cfg` and select options,
 you can download the user/autoexec.cfg template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
 
-This config is only for advanced, fine tuned customization and is completely optional. Modules are recommended to be used for easy customization.
+This config is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for easy customization.
