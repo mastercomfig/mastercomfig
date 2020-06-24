@@ -63,6 +63,6 @@ To disable this shader process, simply make two empty files: `glbaseshaders.cfg`
 then put them in `TF2_FOLDER/tf/custom/mastercomfig`.
 
 You can also disable Steam's shader pre-caching, which downloads shaders that match your hardware configuration.
-To disable this option go to `Steam > Settings > Shader Pre-Caching` and Uncheck "Enable Shader Pre-Caching".
+To disable this option go to `Steam > Settings > Shader Pre-Caching` and uncheck "Enable Shader Pre-Caching".
 
 To re-enable the shader process, simply delete `glshaders.cfg` and `glbaseshaders.cfg`.
