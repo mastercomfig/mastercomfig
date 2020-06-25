@@ -478,6 +478,17 @@ Default setting: based on which preset you are currently using.
 * **`outlines=low`**: Enable nametags, disable outlines.
 * **`outlines=high`**: Enable nametags and outlines.
 
+## Mod Support Modules
+
+### Mod Support
+
+Default setting: **`mod_support=off`** (all presets).
+
+You may want to also enable preloading using the Map Background module.
+
+* **`mod_support=off`**: Enables better file system performance at the cost of animation and model mods causing crashes.
+* **`mod_support=on`**: Disables file system optimizations (may cause stutters during gameplay, and longer map load times), but fixes crashes caused by animation and model mods.
+
 ### Map Background
 
 Default setting: **`dynamic_background=off`** (all presets).
@@ -486,15 +497,6 @@ Default setting: **`dynamic_background=off`** (all presets).
 * **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
 * **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
 * **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
-
-## Mod Support
-
-Default setting: **`mod_support=off`** (all presets).
-
-You may want to also enable preloading using the [Map Background module](#map-background).
-
-* **`mod_support=off`**: Enables better file system performance at the cost of animation and model mods causing crashes.
-* **`mod_support=on`**: Disables file system optimizations (may cause stutters during gameplay, and longer map load times), but fixes crashes caused by animation and model mods.
 
 ## Sound modules
 
