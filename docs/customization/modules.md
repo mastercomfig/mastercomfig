@@ -6,13 +6,17 @@ description: Easily customize mastercomfig to get the exact stuff you want witho
 Modules are groups of related commands with specific values for a certain use case or quality level.
 
 ## How to use
-Modules are [used in presets](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets) to set quality levels and can also be used in the `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. Just put your desired module level in `user/modules.cfg`. For example:
+
+Modules are used in presets to set quality levels and can also be used in the `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. You can find out what modules does your preset use [here](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets). To set custom module value just put it in `user/modules.cfg`. For example:
 
 ```
 textures=high
 ```
 
 This will set the texture quality to `high`.
+
+!!! note
+    If you do not have `user` folder you should create it. Template `modules.cfg` file can be downloaded [here](https://github.com/mastercomfig/mastercomfig/releases/latest/download/modules.cfg)
 
 ### Advanced
 
