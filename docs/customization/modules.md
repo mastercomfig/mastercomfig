@@ -7,7 +7,7 @@ Modules are groups of related commands with specific values for a certain use ca
 
 ## How to use
 
-Modules are used in presets to set quality levels and can also be used in the `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. You can find out what modules does your preset use [here](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets). To set custom module value just put it in `user/modules.cfg`. For example:
+Modules are used in presets to set quality levels and can also be used in your very own `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. You can find out what modules does your preset use [here](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets). To set custom module value just put it in `user/modules.cfg`. For example:
 
 ```
 textures=high
