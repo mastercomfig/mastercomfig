@@ -16,7 +16,7 @@ textures=high
 will set the texture quality to `high`.
 
 !!! note
-    If you do not have `user` folder you should create it. Template `modules.cfg` file can be downloaded [here](https://github.com/mastercomfig/mastercomfig/releases/latest/download/modules.cfg)
+    If you do not have `user` folder you should create it. Same principle applies to `modules.cfg` file.
 
 ### Advanced
 
