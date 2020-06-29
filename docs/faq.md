@@ -65,7 +65,7 @@ Class configs are also a reliable way to periodically run some commands during a
 * Class specific network setting aliases (`net_hitscan`, `net_projectiles`, `net_spy`) for easy customization
 * `user/game_overrides` script for easy global class settings
 * `game_overrides_once_c` alias for running a script only once per game session
-* Fixing a networking issue with bumper cars (https://github.com/ValveSoftware/Source-1-Games/issues/2618)
+* Fixing a [networking issue](https://github.com/ValveSoftware/Source-1-Games/issues/2618) with bumper cars
 * Overriding map specific detail prop, water fade distances, and sound channel mode
 * Fixing the freezecam sound effect getting stuck sometimes
 
