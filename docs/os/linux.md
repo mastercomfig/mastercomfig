@@ -43,7 +43,7 @@ See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_me
 !!! note
     This has nothing to do with mastercomfig. mastercomfig is safe, and will not get you VAC banned.
 
-Disabling the Steam runtime using through command line variables is not enough to use native libraries
+The automatic Steam runtime host library pinning is not enough to use native libraries
 on TF2 as the TF2 launcher script shades in some libraries.
 
 Go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0`, and `libtcmalloc_minimal.so.4`.
