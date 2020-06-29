@@ -4,6 +4,11 @@ description: Learn how to optimize your Windows OS for better performance.
 
 # Windows
 
+## Enable Hardware-accelerated GPU scheduling
+
+A new feature in Windows 10 May 2020 Update (version 2020) is hardware-accelerated GPU scheduling, which lets the GPU handle its own memory instead of Windows,
+thereby reducing latency and improving performance. You can learn how to enable it with [this guide](https://www.neowin.net/news/how-to-enable-hardware-accelerated-gpu-scheduling-on-windows-10-may-2020-update/).
+
 ## Disable Game Mode
 
 Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information and instructions on how to disable it.
