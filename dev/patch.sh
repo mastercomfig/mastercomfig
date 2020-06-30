@@ -35,12 +35,13 @@ do
     basename=""
 done <   <(find . -name '*.vpk' -print0)
 
-uploadFileToGitHub "./comfig/template.cfg" "user config template"
+uploadFileToGitHub "./comfig/autoexec_template.cfg" "user config template"
 
 uploadFileToGitHub "./comfig/autoexec.cfg" "empty autoexec file"
 
-uploadFileToGitHub "./comfig/modules.cfg" "modules template"
+uploadFileToGitHub "./comfig/modules.cfg" "empty modules file"
 
+uploadFileToGitHub "./comfig/modules_template.cfg" "modules template"
 uploadFileToGitHub "./comfig/mastercomfig.zip" "mastercomfig zip package"
 
 tag=$(echo "${response}" | jq '.tag_name' | sed -e 's/^"//' -e 's/"$//')
