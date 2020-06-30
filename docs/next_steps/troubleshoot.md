@@ -79,7 +79,7 @@ Players' sprays are treated like a decal in-game. To get sprays to work, you hav
 
 ## Why don't my killstreak sheens show?
 
-On presets Low and Very Low, killstreak sheens are disabled by default. To enable killstreak sheens use the module `sheens_speed=slow`.
+On the Very Low preset, killstreak sheens are disabled by default. To enable killstreak sheens use the module `sheens_speed=slow`.
 
 ## Grappling hook is invisible (in Mannpower and custom servers)
 
