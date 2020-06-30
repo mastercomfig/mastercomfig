@@ -77,6 +77,10 @@ Add `tf_time_loading_item_panels .0005` to `autoexec.cfg`.
 
 Players' sprays are treated like a decal in-game. To get sprays to work, you have to set the `decals` module to at least `low`.
 
+## Why don't my killstreak sheens show? 
+
+On presets Low and Very Low, killstreak sheens are disabled by default. To enable killstreak sheens use the module `sheens_speed=medium`.
+
 ## Grappling hook is invisible (in Mannpower and custom servers)
 
 Grappling hooks use ropes to show in-game. To get them to work, you have to set the `ropes` module to at least `low`.
