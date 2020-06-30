@@ -61,7 +61,7 @@ If you are not able to support me through the above methods, that's fine too! Yo
 * The community for their continued support, advice and benchmarks. (Special
   Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby,
   Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
-  maximsmol, Fraklin, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
+  maximsmol, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
   DapperTrapper, Tene, mambo, Sakii, Leo40, micwoj92, ghost-420 and perhaps many others)
 
 * The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page)
