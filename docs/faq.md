@@ -38,6 +38,8 @@ Now, this only explains why mastercomfig is a mod, which can also be a folder, r
     pack up the custom content into a VPK. To "install" a mod, just drop it in this
     folder.
 
+[Source](https://github.com/SteamDatabase/GameTracking-TF2/blob/master/tf/gameinfo.txt)
+
 * Better performance, as stated by Valve:
 
 !!! quote
@@ -51,11 +53,15 @@ Now, this only explains why mastercomfig is a mod, which can also be a folder, r
     time the engine tries to open a file. So, for optimal load times, always use VPK files
     and don't make any subfolders in this folder!
 
+[Source](https://github.com/SteamDatabase/GameTracking-TF2/blob/master/tf/custom/readme.txt)
+
 !!! quote
     We search VPK files before ordinary folders, because most files will be found in
     VPK and we can avoid making thousands of file system calls to attempt to open files
     in folders where they don't exist. (Searching a VPK is much faster than making an operating
     system call.)
+
+[Source](https://github.com/SteamDatabase/GameTracking-TF2/blob/master/tf/gameinfo.txt)
 
 * Modular design, which allows for contained custom settings and variants of mastercomfig
 
