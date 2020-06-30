@@ -92,10 +92,6 @@ mastercomfig had a desktop app called mastercomfig 7. It was discontinued becaus
 
 A future app is being planned to avoid these problems, and to support more features.
 
-## Why don't my killstreak sheens show? 
-
-On presets Low and Very Low, killstreak sheens are disabled by default. To enable killstreak sheens use the module `sheens_speed=medium`.
-
 ## How can I get help with mastercomfig?
 
 Check the [troubleshooting guide](next_steps/troubleshoot.md) for more info.
