@@ -48,13 +48,9 @@ function uploadAssets {
       basename=""
   done <   <(find . -name '*.vpk' -print0)
 
-  uploadFileToGitHub "./comfig/autoexec_template.cfg" "user config template"
-
-  uploadFileToGitHub "./comfig/autoexec.cfg" "empty autoexec file"
-
-  uploadFileToGitHub "./comfig/modules.cfg" "empty modules file"
-
+  uploadFileToGitHub "./template/template.zip" "user template"
   uploadFileToGitHub "./comfig/modules_template.cfg" "modules template"
+  uploadFileToGitHub "./comfig/autoexec_template.cfg" "autoexec template"
   uploadFileToGitHub "./comfig/mastercomfig.zip" "mastercomfig zip package"
 }
 

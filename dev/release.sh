@@ -3,7 +3,9 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
 
-./update.sh || exit 1
+if [ "${prerelease:=false}" == false ]; then
+  ./update.sh || exit 1
+fi
 
 export zip_package="true"
 
@@ -15,7 +17,11 @@ unset zip_package
 
 ./package.sh
 
-if [ "${patch:=false}" = true ] ; then
+if [ "${prerelease:=false}" == true ]; then
+  exit 0
+fi
+
+if [ "${patch:=false}" = true ]; then
     ./patch.sh
 else
     echo Version:

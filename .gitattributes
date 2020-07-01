@@ -1,6 +1,6 @@
 # These files are text files
 # user files
-*.cfg text eol=lf
+*.cfg text
 *.md text eol=lf
 *.txt text eol=lf
 *.res text eol=lf

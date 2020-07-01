@@ -3,7 +3,7 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
 
-rm -rf prerelease
+rm -rf -- prerelease/
 
 # Execute package scripts
 for D in *; do
@@ -13,16 +13,18 @@ for D in *; do
     fi
 done
 
-if [ "${prerelease:=false}" == true ]; then
+if [ "${prerelease:=false}" == true ] && [ "${zip_package:=false}" == false ]; then
   mkdir prerelease
   mkdir prerelease/presets
   mkdir prerelease/addons
   mkdir prerelease/comfig
+  mkdir prerelease/template
   cp presets/*.vpk prerelease/presets
   cp addons/*.vpk prerelease/addons
   cp comfig/*.cfg prerelease/comfig
   cp comfig/*.zip prerelease/comfig
-  (cd prerelease && zip -9r mastercomfig.zip addons/ presets/ comfig/)
+  cp template/*.zip prerelease/template
+  (cd prerelease && zip -9r mastercomfig.zip addons/ presets/ comfig/ template/)
 fi
 
 printf "\n"
