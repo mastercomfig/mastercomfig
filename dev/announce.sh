@@ -18,7 +18,7 @@ post_body="[url=https://mastercomfig.com/download]$1[/url] released with $2.\n\n
 printf "\n"
 
 echo "BBCode announcement for tf.tv and Steam Group:"
-printf "%s" "${post_body}"
+printf "${post_body}"
 
 printf "\n"
 
@@ -27,6 +27,6 @@ plain_text="$1 released with $2.\n\nDownload: https://mastercomfig.com/download\
 printf "\n"
 
 echo "Plain text (for Steam Chat):"
-printf "%s" "${plain_text}"
+printf "${plain_text}"
 
 printf "\n"
