@@ -6,10 +6,12 @@ description: Learn how to optimize your Windows OS for better performance.
 
 ## Enable Hardware-accelerated GPU scheduling
 
-A new feature in Windows 10 May 2020 Update (version 2004) is hardware-accelerated GPU scheduling, which lets the GPU handle its own memory instead of Windows,
+A new feature in Windows 10 May 2020 Update (version 2004) is hardware-accelerated GPU scheduling, which lets the GPU handle its own task scheduling instead of Windows,
 thereby reducing latency and improving performance. You can learn how to enable it with [this guide](https://www.neowin.net/news/how-to-enable-hardware-accelerated-gpu-scheduling-on-windows-10-may-2020-update/).
 
 If you are curious about what this feature exactly does, you can read [this tech blog](https://devblogs.microsoft.com/directx/hardware-accelerated-gpu-scheduling/) from Microsoft for more details.
+
+If you experience problems or reduced performance from this feature, turn it off and [submit feedback](https://aka.ms/submitgameperformancefeedback).
 
 ## Disable Game Mode
 
