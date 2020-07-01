@@ -1038,6 +1038,7 @@ load_itempreset                          : cmd      :                  : Equip a
 loadcommentary                           : cmd      :                  :
 loader_dump_table                        : cmd      :                  :
 loader_spew_info                         : 0        :                  : 0:Off, 1:Timing, 2:Completions, 3:Late Completions, 4:Purges, -1:All
+lockplayername                           : cmd      :                  : Prevent name changes for this userID.
 loader_spew_info_ex                      : 0        :                  : (internal)
 lod_TransitionDist                       : 800      : , "cl"           :
 log                                      : cmd      :                  : Enables logging to file, console, and udp < on | off >.
@@ -2460,6 +2461,10 @@ sv_bonus_map_challenge_update            : cmd      :                  : Updates
 sv_bonus_map_complete                    : cmd      :                  : Completes a bonus map.
 sv_bonus_map_unlock                      : cmd      :                  : Locks a bonus map.
 sv_cacheencodedents                      : 1        :                  : If set to 1, does an optimization to prevent extra SendTable_Encode calls.
+sv_chat_bucket_size_tier1                : 4        : , "sv"           : The maxmimum size of the short term chat msg bucket.
+sv_chat_bucket_size_tier2                : 30       : , "sv"           : The maxmimum size of the long term chat msg bucket.
+sv_chat_seconds_per_msg_tier1            : 3        : , "sv"           : The number of seconds to accrue an additional short term chat msg.
+sv_chat_seconds_per_msg_tier2            : 10       : , "sv"           : The number of seconds to accrue an additional long term chat msg.
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
 sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
 sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate and sv_maxcmdrate.
@@ -3589,5 +3594,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3581 total convars/concommands
+3586 total convars/concommands
 ```
