@@ -3,7 +3,7 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
 
-rm -rf -- *.cfg *.zip
+rm -rf -- *.cfg
 
 cp -f "../../config/mastercomfig/cfg/comfig/comfig.cfg" ./autoexec_template.cfg
 sed -i '/^echo/d' autoexec_template.cfg
