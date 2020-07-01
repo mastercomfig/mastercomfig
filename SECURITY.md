@@ -4,8 +4,8 @@
 
 | Version   | Supported          |
 | --------- | ------------------ |
-| 8.102.x   | :white_check_mark: |
-| < 8.102.0 | :x:                |
+| 8.103.x   | :white_check_mark: |
+| < 8.103.0 | :x:                |
 
 ## Reporting a Vulnerability
 
