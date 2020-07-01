@@ -6,6 +6,7 @@
 dev/addons/mastercomfig*
 dev/presets/mastercomfig*
 dev/mastercomfig*
+mastercomfig-vars
 /dev/**/*.cfg
 addons_setup.cfg
 addons.cfg
