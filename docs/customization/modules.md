@@ -487,6 +487,7 @@ Controls text chat, which displays player messages and voice messages.
 Default setting: **`messages=enable`** (all presets, except Very Low).
 
 * **`messages=disable`**: Disables text chat.
+* **`messages=hide`**: Hides text chat.
 * **`messages=enable`**: Enables text chat.
 
 ### Killfeed
