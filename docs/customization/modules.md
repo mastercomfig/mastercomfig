@@ -283,7 +283,9 @@ Default setting: based on which preset you are currently using.
 
 Controls bullet holes and overall decal support.
 
-Note that in the Very Low preset, decals are forced invisible.
+!!! note
+
+    In the Very Low preset, decals are forced invisible.
 
 Default setting: based on which preset you are currently using.
 
@@ -424,6 +426,38 @@ Default setting: based on which preset you are currently using.
 * **`ropes=low`**: Basic ropes.
 * **`ropes=high`**: Ropes with smoothing and basic subdivisions.
 * **`ropes=ultra`**: Ropes with max smoothing, increased subdivisions, collision checks and wind simulation.
+
+### FPS Cap
+
+Controls the highest frame rate (FPS/frames per second) that the game can reach.
+
+You can set it lower for faster load times, more consistent frame rate, and lower power usage.
+
+Setting it higher can reduce input delay.
+
+!!! warning
+
+    Although it is common advice to set this based on your display's refresh rate,
+    the only thing you need to consider is having the FPS cap greater than or equal to
+    your monitor's refresh rate to get the full effect of your monitor. Otherwise, it will
+    solely a determination based on your preference as described above.
+
+Default setting: **`fpscap=1000`** (all presets).
+
+* **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
+* **`fpscap=30`**: Sets FPS cap to 30FPS.
+* **`fpscap=60`**: Sets FPS cap to 60FPS.
+* **`fpscap=120`**: Sets FPS cap to 120FPS.
+* **`fpscap=144`**: Sets FPS cap to 144FPS.
+* **`fpscap=160`**: Sets FPS cap to 160FPS.
+* **`fpscap=165`**: Sets FPS cap to 165FPS.
+* **`fpscap=180`**: Sets FPS cap to 180FPS.
+* **`fpscap=200`**: Sets FPS cap to 200FPS.
+* **`fpscap=240`**: Sets FPS cap to 240FPS.
+* **`fpscap=300`**: Sets FPS cap to 300FPS.
+* **`fpscap=360`**: Sets FPS cap to 360FPS.
+* **`fpscap=1000`**: Sets FPS cap to 1000FPS (maximum safe value).
+* **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
 
 ## HUD modules
 
