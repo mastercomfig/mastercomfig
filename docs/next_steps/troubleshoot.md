@@ -40,7 +40,7 @@ alias game_overrides_once_c hud_reloadscheme
 
 The command will only run on the first time you spawn in a match.
 
-## Last update disabled my chat
+## My chat is disabled
 
 One of [recent TF2 updates](https://www.teamfortress.com/post.php?id=62459) introduced new commands to disable chat. mastercomfig was updated shortly after to accommodate to this change. In the result, the Very Low preset disables chat completely. If you are using Very Low preset or `messages=off` module, you can fix that by adding `messages=on` to your `modules.cfg` file. To disable chat the old way you can use `hud_saytext_time 0` command.
 
