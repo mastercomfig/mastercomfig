@@ -40,6 +40,11 @@ alias game_overrides_once_c hud_reloadscheme
 
 The command will only run on the first time you spawn in a match.
 
+## My chat is disabled
+
+[A TF2 update](https://www.teamfortress.com/post.php?id=62459) introduced the ability to completely disable text chat. mastercomfig was updated shortly after to accommodate this change, with the Very Low preset disabling chat completely. If you are using Very Low preset or the `messages=off` module, you can re-enable chat by adding `messages=on` to your `modules.cfg` file. To disable chat the old way you can use the `hud_saytext_time 0` command.
+
+
 ## TF2 crashes when entering a Competitive Mode match
 
 According to the [Official FAQ](https://www.teamfortress.com/meetyourmatch/faq/), Competitive Mode requires DirectX 9. Make sure your `dxlevel` is set to 90 or above (see [here](../customization/launch_options/#dxlevel-launch-options) for instructions).
