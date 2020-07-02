@@ -42,7 +42,7 @@ The command will only run on the first time you spawn in a match.
 
 ## My chat is disabled
 
-[A TF2 update](https://www.teamfortress.com/post.php?id=62459) introduced the ability to completely disable text chat. mastercomfig was updated shortly after to accommodate this change, with the Very Low preset disabling chat completely. If you are using Very Low preset or the `messages=disable` module, you can re-enable chat by adding `messages=enable` to your `modules.cfg` file. To disable chat the old way you can use the `messages=hide` command.
+[A TF2 update](https://www.teamfortress.com/post.php?id=62459) introduced the ability to completely disable text chat. mastercomfig was updated shortly after to accommodate this change, with the Very Low preset disabling chat completely. If you are using Very Low preset or the `messages=disable` module, you can re-enable chat by adding `messages=enable` to your `modules.cfg` file. To disable chat the old way you can use the `messages=hide` module.
 
 ## TF2 crashes when entering a Competitive Mode match
 
