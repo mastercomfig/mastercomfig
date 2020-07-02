@@ -447,6 +447,7 @@ Default setting: **`fpscap=1000`** (all presets).
 * **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
 * **`fpscap=30`**: Sets FPS cap to 30FPS.
 * **`fpscap=60`**: Sets FPS cap to 60FPS.
+* **`fpscap=75`**: Sets FPS cap to 75FPS.
 * **`fpscap=120`**: Sets FPS cap to 120FPS.
 * **`fpscap=144`**: Sets FPS cap to 144FPS.
 * **`fpscap=160`**: Sets FPS cap to 160FPS.
