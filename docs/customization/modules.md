@@ -481,6 +481,8 @@ Default setting: **`hud_panels=on`** (all presets, except Very Low).
 
 ### Messages
 
+Controls text chat, which displays player messages and voice messages.
+
 Default setting: **`messages=enable`** (all presets, except Very Low).
 
 * **`messages=disable`**: Disables text chat.
@@ -488,12 +490,16 @@ Default setting: **`messages=enable`** (all presets, except Very Low).
 
 ### Killfeed
 
+Controls death and objective notifications in the top right corner.
+
 Default setting: **`killfeed=on`** (all presets, except Very Low).
 
 * **`killfeed=off`**: Disables killfeed.
 * **`killfeed=on`**: Enables killfeed.
 
 ### Killstreaks
+
+Controls banners that appear at the top center of the screen, notifying you of a player's killstreak.
 
 Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
@@ -503,12 +509,16 @@ Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
 ### HUD Achievements
 
+Controls the HUD achievements tracker.
+
 Default setting: **`hud_achievement=off`** (all presets).
 
 * **`hud_achievement=off`**: Disable achievement tracker panel completely.
 * **`hud_achievement=on`**: Enable support for achievement tracker panel.
 
 ### Debug
+
+Controls various debugging displays and console.
 
 Default setting: **`debug=minimal`** (all presets, except Very Low).
 
@@ -519,6 +529,8 @@ Default setting: **`debug=minimal`** (all presets, except Very Low).
 
 ### Outlines
 
+Controls the outlines that appear through walls for players and some objectives (payload, CTF briefcase).
+
 Default setting: based on which preset you are currently using.
 
 * **`outlines=off`**: Disable outlines and nametags.
@@ -527,6 +539,8 @@ Default setting: based on which preset you are currently using.
 
 ### Map Background
 
+Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
+
 Default setting: **`dynamic_background=off`** (all presets).
 
 * **`dynamic_background=off`**: No main menu map background on startup.
@@ -534,18 +548,31 @@ Default setting: **`dynamic_background=off`** (all presets).
 * **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
 * **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 
+### Logo
+
+Controls the mastercomfig logo which appears in console on start up.
+
+Default setting: **`logo=on`** (all presets, except Very Low).
+
+* **`logo=off`**: Does not print logo in console on startup.
+* **`logo=on`**: Prints logo in console on startup.
+
 ## Mod Support
+
+Ensures compatibility with animation and model mods.
 
 Default setting: **`mod_support=on`** (all presets).
 
 You may want to also enable preloading using the [Map Background module](#map-background).
 
-* **`mod_support=off`**: Enables better file system performance at the cost of animation and model mods causing crashes.
-* **`mod_support=on`**: Disables file system optimizations (may cause stutters during gameplay, and longer map load times), but fixes crashes caused by animation and model mods.
+* **`mod_support=off`**: Enables better file system performance for faster first map loads, at the cost of animation and model mods causing crashes.
+* **`mod_support=on`**: Disables file system optimizations for the first map load, making it slower, but fixes crashes caused by animation and model mods.
 
 ## Sound modules
 
 ### Sound
+
+Controls a variety of sound effects, including spatialization and positional effects.
 
 !!! note
     In the Low and Very Low preset VPKs, spatialization and positional effects (called [DSP](https://developer.valvesoftware.com/wiki/DSP) in the Source Engine) are completely disabled.
@@ -560,6 +587,8 @@ Default setting: based on which preset you are currently using.
 
 ### Voice Chat
 
+Controls player voice chat.
+
 !!! warning
     Turning on the voice chat system while in a server will
     require a reconnect.
@@ -568,12 +597,3 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
-
-## Miscellaneous
-
-### Mastercomfig logo
-
-Default setting: **`logo=on`** (all presets, except Very Low).
-
-* **`logo=off`**: Does not print logo in console on startup.
-* **`logo=on`**: Prints logo in console on startup.
