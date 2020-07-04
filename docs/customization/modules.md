@@ -484,11 +484,11 @@ Default setting: **`hud_panels=on`** (all presets, except Very Low).
 
 Controls text chat, which displays player messages and voice messages.
 
-Default setting: **`messages=enable`** (all presets, except Very Low).
+Default setting: **`messages=on`** (all presets, except Very Low).
 
-* **`messages=disable`**: Disables text chat.
+* **`messages=off`**: Disables text chat.
 * **`messages=hide`**: Hides text chat.
-* **`messages=enable`**: Enables text chat.
+* **`messages=on`**: Enables text chat.
 
 ### Killfeed
 
