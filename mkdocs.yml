@@ -15,6 +15,7 @@ nav:
         - Screenshots: 'screenshots.md'
         - Benchmarks: 'benchmarks.md'
         - Contributing: 'contributing.md'
+        - Security: 'security.md'
         - Credits: 'credits.md'
     - Setup:
         - Clean Up: 'setup/clean_up.md'
