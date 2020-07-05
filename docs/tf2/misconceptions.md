@@ -6,22 +6,22 @@ description: Common misconceptions with TF2 that mastercomfig corrects.
 
 ## Bad launch options
 
-* `-noipx` : Does not exist and never existed in Source.
-* `-heapsize` : Does not exist. It never really worked in Source and was removed in an old update.
-* `-nocrashdialog` : Does not improve FPS, plus it makes crashes harder to troubleshoot.
-* `+exec autoexec` : autoexec.cfg is already ran on startup, there is no need to run it again
-* `+map_background` : Team Fortress 2 has a much more advanced preload system now, so map backgrounds are not needed. If you are using them to bypass sv_pure through preloading, that's fine.
-* `-dxlevel 98` : This is only supported on Xbox 360. Will fallback to `dxlevel 95` functionality on PC.
-* `-dxlevel 82` : This was an old DXLevel only used by certain ancient-by-today's-standards NVIDIA cards. It does not do anything anymore.
-* `-limitvsconst` : limits the hardware vertex shader constants to 256, possibly below hardware capabilities, which does save a bit of resources, but with more constants available, faster shader modes can be used
-* `-threads` : The Source Engine automatically determines the value for this, and caps it at 3, due to performance issues with higher values. Valve also [recommends](https://www.reddit.com/r/GlobalOffensive/comments/5y8r7v/in_depth_discussion_of_the_threads_launch_option/dep5yno) removing this launch option.
-* `-high` : High is a priority mode in Windows that is only recommended for short-lived, time critical threads. It can unbalance resource usage and decrease performance. Close applications on your PC instead.
-* `-nod3d9ex` : Do not disable extensions which improve resource management, speeding up alt-tabs and improving memory usage! Ages ago, drivers did not support this option very well, and people recommended disabling it, but now, it is all good and there is no reason to use this launch option.
-* `-NOPROCESSHEAP` : This was a workaround for a bug that only happened for a short time in CS:GO, and it decreases performance. There is absolutely no reason to use this anymore.
+* **-noipx** : does not exist and never existed in Source
+* **-heapsize** : does not exist. It never really worked in Source and was removed in an old update
+* **-nocrashdialog** : does not improve FPS, plus it makes crashes harder to troubleshoot
+* **+exec autoexec** : autoexec.cfg is already ran on startup, there is no need to run it again
+* **+map_background** : Team Fortress 2 has a much more advanced preload system now, so map backgrounds are not needed. If you are using them to bypass sv_pure through preloading, that's fine
+* **-dxlevel 98** : this is only supported on Xbox 360. Will fallback to `dxlevel 95` functionality on PC
+* **-dxlevel 82** : this was an old DXLevel only used by certain ancient-by-today's-standards NVIDIA cards. It does not do anything anymore
+* **-limitvsconst** : limits the hardware vertex shader constants to 256, possibly below hardware capabilities, which does save a bit of resources, but with more constants available, faster shader modes can be used
+* **-threads** : the Source Engine automatically determines the value for this, and caps it at 3, due to performance issues with higher values. Valve also [recommends](https://www.reddit.com/r/GlobalOffensive/comments/5y8r7v/in_depth_discussion_of_the_threads_launch_option/dep5yno) removing this launch option
+* **-high** : high is a priority mode in Windows that is only recommended for short-lived, time critical threads. It can unbalance resource usage and decrease performance. Close applications on your PC instead
+* **-nod3d9ex** : does not disable extensions which improve resource management, speeding up alt-tabs and improving memory usage! Ages ago, drivers did not support this option very well, and people recommended disabling it, but now, it is all good and there is no reason to use this launch option
+* **-NOPROCESSHEAP** : this was a workaround for a bug that only happened for a short time in CS:GO, and it decreases performance. There is absolutely no reason to use this anymore
 
 ## Resolution and windows launch options
 
-* `-fullscreen -w -h -full -sw -window -windowed -width -height`
+* **-fullscreen -w -h -full -sw -window -windowed -width -height**
 
 These launch options may be creating an improper video mode, which is not preferred by the material system and can reduce performance. Try settings these options through the settings window instead.
 
