@@ -61,7 +61,7 @@ space at the end of lines. Max line length should be 100.
 
 ##### Launch options
 
-Launch options are documented on the wiki and are formatted like this:
+Launch options are documented on the docs and are formatted like this:
 
 `**-launchoption** : launch option description`
 
@@ -145,7 +145,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 
 If your settings affect quality in any way, create a new module or modify
 the existing modules if applicable, then add documentation for it at the
-[modules wiki page](https://github.com/mastercomfig/mastercomfig/wiki/Modules).
+[modules docs page](https://docs.mastercomfig.com/en/latest/customization/modules/).
 Use [this generator](https://github.com/ekalinin/github-markdown-toc) to get
 the navigation links to be generated properly.
 
