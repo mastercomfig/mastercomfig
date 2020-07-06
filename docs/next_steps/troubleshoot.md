@@ -23,7 +23,7 @@ Add the following to your `autoexec.cfg`:
 
 ```c
 viewmodel_fov 70
-r_drawviemodel 1
+r_drawviewmodel 1
 ```
 
 Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
