@@ -106,7 +106,7 @@ punctuation unless using multiple sentences.
 
 ##### CVarlist
 
-ConVars and commands are found using [these instructions](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#making-your-own-cvar-list).
+ConVars and commands are found using [these instructions](https://docs.mastercomfig.com/en/latest/tf2/#making-your-own-cvar-list).
 
 * [Windows](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_win/)
 * [Linux](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_linux/)
