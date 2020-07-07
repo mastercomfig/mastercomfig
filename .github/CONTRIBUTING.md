@@ -187,7 +187,7 @@ This is currently done in modules.
 ##### DX Support overrides
 
 Some ConVars cannot be set in-game, even with DX support definitions. Thus, some presets have
-[custom packaging overrides](https://github.com/mastercomfig/mastercomfig/blob/release/dev/presets/package.sh#L39)
+[custom packaging overrides](https://github.com/mastercomfig/mastercomfig/blob/release/dev/presets/package.sh#L52)
 to set the value in DX support.
 
 ### Making your pull request
