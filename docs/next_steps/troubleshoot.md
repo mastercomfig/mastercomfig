@@ -11,6 +11,9 @@ If you find that you need more assistance, please reach out to our community on
 
 ## mastercomfig isn't loading! / My custom configs aren't loading!
 
+!!! tip
+    Make sure that these are .cfg files and not .txt or .txt.cfg, you can enable file name extentions in windows 10 explorer and it will make any future configuration easier. To enable this, open the **File Explorer**, click the **View** tab and click on the box next to **File name extensions**.
+
 Go over the [installation steps](../setup/install.md) once again.
 
 Make sure the mastercomfig preset VPK is in the `tf/custom` folder.
