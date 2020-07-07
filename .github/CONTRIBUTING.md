@@ -106,7 +106,7 @@ As you can see, default ConVar values should be at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
-ConVars and commands are found using [these instructions](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#making-your-own-cvar-list).
+ConVars and commands are found using [these instructions](https://docs.mastercomfig.com/en/latest/tf2/#making-your-own-cvar-list).
 
 Premade lists:
 
