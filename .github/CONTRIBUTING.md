@@ -70,7 +70,7 @@ letter.
 
 There are currently 4 categories for launch options:
 
-* `Launch Options`: These are launch options everyone should be using, as they
+* `Recommended`: These are launch options everyone should be using, as they
   benefit all users
 * `Extra`: These are launch options people find to be personal preference or for
   use cases that cannot be applied to all users
