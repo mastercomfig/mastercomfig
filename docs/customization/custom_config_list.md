@@ -12,7 +12,7 @@ This is a list of mastercomfig custom configs by members of the community.
 * [JarateKing's jarconfig](https://github.com/JarateKing/jarconfig)
 * [starter config](https://github.com/rufio-tf2/starter-config)
 * [Leo40](https://github.com/Leo40Git/TF2Config)
-* [Mothership](https://github.com/MotherShip808/Mothership-s-TF2-Configs)
+* [Mothership](https://github.com/MotherShip808/Mothership-CFG)
 * [rm](https://pastebin.com/xCsARMVY)
 * [Jack Stanley](https://pastebin.com/L8Na9hPM)
 * [steph](https://github.com/TheSqrtMinus1/stephconfig)
