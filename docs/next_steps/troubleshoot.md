@@ -46,7 +46,7 @@ The command will only run on the first time you spawn in a match.
 
 ## TF2 crashes when entering a Competitive Mode match
 
-According to the [Official FAQ](https://www.teamfortress.com/meetyourmatch/faq/), Competitive Mode requires DirectX 9. Make sure your `dxlevel` is set to 90 or above (see [here](../customization/launch_options/#dxlevel-launch-options) for instructions).
+According to the [Official FAQ](https://www.teamfortress.com/meetyourmatch/faq/), Competitive Mode requires DirectX 9. Make sure your `dxlevel` is set to 90 or above (see [here](../../customization/launch_options/#dxlevel-launch-options) for instructions).
 
 Additionally, Competitive Mode locks a bunch of settings that are normally only accessible via the console.  
 Run `mm_override` in the console on the main menu before joining a Competitive Mode match to make the config compatible.  
