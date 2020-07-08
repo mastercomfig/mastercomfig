@@ -38,9 +38,9 @@ Read below about optional launch options and choosing your own DXLevel.
 
     The DXLevel is automatically determined and cannot be set.
 
-## List of Launch Options
+## Recommended Launch Options
 
-**Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
