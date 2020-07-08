@@ -80,7 +80,7 @@ There are currently 4 categories for launch options:
   elsewhere as their effects are not clear
 
 Put your launch option in the appropriate section and if it's in the
-`Launch Options` section, add it to the launch options line for easy copying.
+`Recommended` section, add it to the launch options line for easy copying.
 
 Here's lists of launch options to help you out:
 
