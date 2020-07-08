@@ -11,7 +11,7 @@ These are `autoexec.cfg`, which runs at game launch, and the 9 class configs
 `medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class.
 All of these files go into a folder called `user` you create in `tf/cfg`.
 
-If you don't have these files, you can download the [mastercomfig template](https://github.com/mastercomfig/mastercomfig/releases/latest/download/template.cfg) and move the `user` folder to your `tf/cfg/` folder to customize the config.
+If you don't have these files, you can download the [mastercomfig template](https://github.com/mastercomfig/mastercomfig/releases/latest/download/autoexec_template.cfg) and move the `user` folder to your `tf/cfg/` folder to customize the config.
 
 If there's something you'd like to run for all of your class configs, you can add it to `tf/cfg/user/game_overrides.cfg`.
 
