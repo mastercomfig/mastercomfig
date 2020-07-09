@@ -11,6 +11,9 @@ If you find that you need more assistance, please reach out to our community on
 
 ## mastercomfig isn't loading! / My custom configs aren't loading!
 
+!!! tip
+    These should be `.cfg` files and not `.txt` or `.txt.cfg`. To ensure this, you can enable file name extensions in Windows and it will make any future configuration easier. Open the start menu, search for `Folder Options` and then select the first result. In the opened options window, go to the View tab, and under Advanced settings, uncheck Hide extensions for known file types. Finally, click ok.
+
 Go over the [installation steps](../setup/install.md) once again.
 
 Make sure the mastercomfig preset VPK is in the `tf/custom` folder.
