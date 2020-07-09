@@ -34,7 +34,7 @@ This is an addon which removes soundscapes (ambient map noise). It is used in th
 
 This is an addon which skips tutorial messages and map introduction videos. It is used only in the `very-low` preset by default.
 
-### mastercomfig-null-cancelling-movement-addon
+### mastercomfig-null-canceling-movement-addon
 
 This is an addon which makes movement commands instantly respond on keypress, rather than using axis based values.
 
