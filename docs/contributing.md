@@ -72,13 +72,13 @@ letter.
 
 There are currently 4 categories for launch options:
 
-* `Launch Options`: These are launch options everyone should be using, as they benefit all users
+* `Recommended`: These are launch options everyone should be using, as they benefit all users
 * `Extra`: These are launch options people find to be personal preference or for use cases that cannot be applied to all users
 * `Uncommon`: These are launch options most people will not use, but will still satisfy a valid use case
 * `Experimental`: These are launch options that are being tested to be moved elsewhere as their effects are not clear
 
 Put your launch option in the appropriate section and if it's in the
-`Launch Options` section, add it to the launch options line for easy copying.
+`Recommended` section, add it to the launch options line for easy copying.
 
 Here's lists of launch options to help you out:
 
