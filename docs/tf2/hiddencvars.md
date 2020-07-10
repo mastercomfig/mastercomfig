@@ -1,5 +1,5 @@
 ---
-description: A list of all hidden console variables and commands on TF2ds for Linux.
+description: A list of all hidden console variables and commands in TF2.
 ...
 
 # Hidden console variables
