@@ -98,7 +98,7 @@ Default setting: **`bandwidth=1.5Mbps`** (all presets).
 
 ### Downloads
 
-Default setting: by default mastercomfig does not set this module, so it will be set to whatever setting you had before.
+Default setting: not set.
 
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
