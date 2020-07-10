@@ -69,6 +69,6 @@ If you want to run something only the first time you spawn and never run again w
     These steps are entirely optional and are only for advanced customization.
 
 To get an idea about what to put in your `user/autoexec.cfg` and select options,
-you can download the autoexec template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
+you can download the [autoexec template](https://github.com/mastercomfig/mastercomfig/releases/latest/download/autoexec_template.cfg).
 
-This config is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for easy customization.
+This template is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for easy customization.
