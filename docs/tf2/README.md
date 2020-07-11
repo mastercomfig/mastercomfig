@@ -1,12 +1,18 @@
 # TF2 documentation generation
 
-## cvarlist_linux
+## Premade lists
 
-A list of Linux TF2 cvars.
+You can view premade cvar lists, launch options lists and  hidden cvar list.
 
-## cvarlist_win
+[Linux cvar list](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_linux)
 
-A list of Windows TF2 cvars.
+[Linux launch option list](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_linux)
+
+[Windows cvar list](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_win)
+
+[Windows Launch option list](https://docs.mastercomfig.com/en/latest/tf2/launchopts_win)
+
+[Hidden cvar list](https://docs.mastercomfig.com/en/latest/tf2/hiddencvars)
 
 ## Making your own cvar list
 
@@ -15,12 +21,12 @@ A list of Windows TF2 cvars.
 3. Remove launch options, add mastercomfig again.
 4. Copy and paste `tf/console.log` cvarlist.
 
-## hiddencvars
+## Making your own hidden cvar list
 
 Use the [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262) SourceMod plugin.
 
-## launch_options
+## Making your own launch options list
 
-Get Windows launch options: [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
+On Windows you can use[GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat) script.
 
-Get Linux launch options: `find . -type f \( -name "*.so" -o -name "hl2_linux" \) -print0 | xargs -0 strings | grep "^\-[a-ZA-Z]" | awk 'NF==1' | sort -u > launch_options.txt`
+On Linux you can use following commands: `find . -type f \( -name "*.so" -o -name "hl2_linux" \) -print0 | xargs -0 strings | grep "^\-[a-ZA-Z]" | awk 'NF==1' | sort -u > launch_options.txt`
