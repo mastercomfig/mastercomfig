@@ -85,7 +85,7 @@ Here's lists of launch options to help you out:
 * [Windows](https://docs.mastercomfig.com/en/latest/tf2/launchopts_win/)
 * [Linux](https://docs.mastercomfig.com/en/latest/tf2/launchopts_linux/)
 
-Information about generating them can be found [here](https://docs.mastercomfig.com/en/latest/tf2/#launch_options).
+Information about generating them can be found [here](https://docs.mastercomfig.com/en/latest/tf2/#making-your-own-launch-options-list).
 
 #### Comfig and presets
 
