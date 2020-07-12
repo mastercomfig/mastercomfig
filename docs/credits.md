@@ -35,7 +35,7 @@ description: All the help and inspiration that has helped mastercomfig be even b
   maximsmol, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
   DapperTrapper, Tene, mambo, Sakii, Leo40, micwoj92, ghost-420, m00n01 and perhaps many others)
 
-* The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page)
+* The [Valve Developer Community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics
 
 * and to Valve, for making and updating (for over a decade!) the best class-based FPS to date with so

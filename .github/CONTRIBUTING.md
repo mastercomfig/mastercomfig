@@ -70,7 +70,7 @@ letter.
 
 There are currently 4 categories for launch options:
 
-* `Launch Options`: These are launch options everyone should be using, as they
+* `Recommended`: These are launch options everyone should be using, as they
   benefit all users
 * `Extra`: These are launch options people find to be personal preference or for
   use cases that cannot be applied to all users
@@ -80,14 +80,14 @@ There are currently 4 categories for launch options:
   elsewhere as their effects are not clear
 
 Put your launch option in the appropriate section and if it's in the
-`Launch Options` section, add it to the launch options line for easy copying.
+`Recommended` section, add it to the launch options line for easy copying.
 
 Here's lists of launch options to help you out:
 
 * [Windows](https://docs.mastercomfig.com/en/latest/tf2/launchopts_win/)
 * [Linux](https://docs.mastercomfig.com/en/latest/tf2/launchopts_linux/)
 
-Information about generating them can be found [here](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#launch_options).
+Information about generating them can be found [here](https://docs.mastercomfig.com/en/latest/tf2/#making-your-own-launch-options-list).
 
 ##### Comfig and presets
 
@@ -106,7 +106,7 @@ As you can see, default ConVar values should be at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
-ConVars and commands are found using [these instructions](https://github.com/mastercomfig/mastercomfig/tree/release/docs/tf2#making-your-own-cvar-list).
+ConVars and commands are found using [these instructions](https://docs.mastercomfig.com/en/latest/tf2/#making-your-own-cvar-list).
 
 Premade lists:
 
@@ -187,7 +187,7 @@ This is currently done in modules.
 ##### DX Support overrides
 
 Some ConVars cannot be set in-game, even with DX support definitions. Thus, some presets have
-[custom packaging overrides](https://github.com/mastercomfig/mastercomfig/blob/release/dev/presets/package.sh#L39)
+[custom packaging overrides](https://github.com/mastercomfig/mastercomfig/blob/release/dev/presets/package.sh#L52)
 to set the value in DX support.
 
 ### Making your pull request

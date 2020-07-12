@@ -11,6 +11,9 @@ If you find that you need more assistance, please reach out to our community on
 
 ## mastercomfig isn't loading! / My custom configs aren't loading!
 
+!!! tip
+    These should be `.cfg` files and not `.txt` or `.cfg.txt`. To ensure this, you can enable file name extensions in Windows and it will make any future configuration easier. Open the start menu, search for `Folder Options` and then select the first result. In the opened options window, go to the View tab, and under Advanced settings, uncheck Hide extensions for known file types. Finally, click ok.
+
 Go over the [installation steps](../setup/install.md) once again.
 
 Make sure the mastercomfig preset VPK is in the `tf/custom` folder.
@@ -23,7 +26,7 @@ Add the following to your `autoexec.cfg`:
 
 ```c
 viewmodel_fov 70
-r_drawviemodel 1
+r_drawviewmodel 1
 ```
 
 Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
@@ -46,7 +49,7 @@ The command will only run on the first time you spawn in a match.
 
 ## TF2 crashes when entering a Competitive Mode match
 
-According to the [Official FAQ](https://www.teamfortress.com/meetyourmatch/faq/), Competitive Mode requires DirectX 9. Make sure your `dxlevel` is set to 90 or above (see [here](../customization/launch_options/#dxlevel-launch-options) for instructions).
+According to the [Official FAQ](https://www.teamfortress.com/meetyourmatch/faq/), Competitive Mode requires DirectX 9. Make sure your `dxlevel` is set to 90 or above (see [here](../../customization/launch_options/#dxlevel-launch-options) for instructions).
 
 Additionally, Competitive Mode locks a bunch of settings that are normally only accessible via the console.  
 Run `mm_override` in the console on the main menu before joining a Competitive Mode match to make the config compatible.  

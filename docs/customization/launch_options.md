@@ -38,9 +38,9 @@ Read below about optional launch options and choosing your own DXLevel.
 
     The DXLevel is automatically determined and cannot be set.
 
-## List of Launch Options
+## Recommended Launch Options
 
-**Recommended**: `-novid -nojoy -nosteamcontroller -nohltv -particles 1`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
@@ -62,15 +62,16 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
-    * **-glslcontrolflow** : enables support for GLSL control flow. May cause rendering issues
+    * **-glslcontrolflow** : enables support for GLSL control flow. :warning: **Experimental** as it may cause rendering issues
 
 === "Linux"
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
-    * **-gl_amd_pinned_memory** : uses `AMD_pinned_memory` for efficient device memory handling :warning: **Experimental** as its performance impact (negative or positive) is unknown.
-    * **-gl_nv_bindless_texturing** : uses `NV_bindless_texture` for reduced overhead for managing bindings :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete.
+    * **-gl_enablesamplerobjects** : enables OpenGL sampler objects :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete
+    * **-gl_amd_pinned_memory** : uses `AMD_pinned_memory` for efficient device memory handling :warning: **Experimental** as its performance impact (negative or positive) is unknown
+    * **-gl_nv_bindless_texturing** : uses `NV_bindless_texture` for reduced overhead for managing bindings :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete
 
 ## Uncommon Launch Options
 

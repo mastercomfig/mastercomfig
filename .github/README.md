@@ -4,8 +4,8 @@
 [![ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B.svg?logo=ko-fi&style=flat-square)](https://ko-fi.com/W7W510R1Q)
 [![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay&style=flat-square)](https://liberapay.com/mastercoms/)
 [![Steam donate](https://img.shields.io/badge/Donate%20via-Steam-00adee.svg?style=flat-square&logo=steam)](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N)
-[![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
-[![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
+[![Join the Discord chat](https://img.shields.io/badge/Discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
+[![Join the Steam Group](https://img.shields.io/badge/Steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
 
 <img align="right" alt="mastercomfig logo" width="100" src="https://mastercomfig.com/img/mastercomfig_logo.svg">
 
@@ -64,7 +64,7 @@ If you are not able to support me through the above methods, that's fine too! Yo
   maximsmol, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
   DapperTrapper, Tene, mambo, Sakii, Leo40, micwoj92, ghost-420, m00n01 and perhaps many others)
 
-* The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page)
+* The [Valve Developer Community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics
 
 * and to Valve, for making and updating (for over a decade!) the best class-based FPS to date with so
