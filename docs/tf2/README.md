@@ -27,6 +27,6 @@ Use the [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262) So
 
 ## Making your own launch options list
 
-On Windows you can use[GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat) script.
+On Windows you can use [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat) script.
 
 On Linux you can use following commands: `find . -type f \( -name "*.so" -o -name "hl2_linux" \) -print0 | xargs -0 strings | grep "^\-[a-ZA-Z]" | awk 'NF==1' | sort -u > launch_options.txt`
