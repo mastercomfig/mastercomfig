@@ -127,10 +127,11 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 
 * `no-footsteps`: Removes footstep sounds
 * `disable-pyroland`: Removes Pyroland map textures
-* `no-soundscapes`: Remove soundscapes (ambient map noise) and bird noises
+* `no-soundscapes`: Removes soundscapes (ambient map noise) and bird noises
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
+* `null-cancelling-movement`: Prevents you from stopping, when you press two opposing direction keys.
 * `badgpu`: Optimizations that generally do not affect quality for weak integrated graphics chips (Intel HD graphics) or old GPUs (lower end made before 2007)
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower)
 
