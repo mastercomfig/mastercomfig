@@ -220,20 +220,25 @@ local 32 player bot match on `pl_upward`. (use `+maxplayers 32` in launch option
 After the results are positive with the local bot match, measure your average
 FPS in a filled casual match.
 
-## Packaging and Releases
+## Packaging
 
 Generally you won't have to do this, but you can generate VPK packages for all
 presets and addons. Use the `package.sh` script in the `dev/` folder. You can
 learn more about the dev scripts in
 [dev/README.md](https://github.com/mastercomfig/mastercomfig/blob/release/dev/README.md).
 
-In order to successfully deploy and announce, you will have to create a new file
-in `dev/` called `mastercomfig-vars`, containing the following variables:
+In order to successfully package presets and addons you need:
+
+* Installed TF2 and Steam with all dependencies
+* bash and basic UNIX tools
+* [VPC](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
+* dos2unix
+
+Additionally, to generate No Tutorial addon, you will need to create a new file
+in `dev/` called `mastercomfig-vars`, containing the following:
 
 ```bash
-export DISCORD_WEBHOOK="Discord webhook for config announcements"
-export GH_USERNAME="GitHub username used for authentication for release deployment"
-export GH_TOKEN="GitHub authentication token used for release deployment"
+#!/bin/sh
 export TF2_DIR="absolute path to your Team Fortress 2 directory"
 ```
 
