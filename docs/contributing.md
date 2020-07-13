@@ -234,6 +234,18 @@ in `dev/` called `mastercomfig-vars`, containing the following:
 #!/bin/sh
 export TF2_DIR="absolute path to your Team Fortress 2 directory"
 ```
+## Release and announce scripts
+
+If you want to test the scripts that upload to github and/or announce in discord, 
+you should append following to your `mastercomfig-vars` file:
+
+```
+export DISCORD_WEBHOOK="Discord webhook for config announcements"
+export GH_USERNAME="GitHub username used for authentication for release deployment"
+export GH_TOKEN="GitHub authentication token used for release deployment"
+```
+
+
 
 ## Code of Conduct
 
