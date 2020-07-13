@@ -244,7 +244,7 @@ export TF2_DIR="absolute path to your Team Fortress 2 directory"
 
 ## Release and announce scripts
 
-If you want to test the scripts that upload to github and/or announce in discord, 
+If you want to test the scripts that upload to GitHub and/or announce in Discord, 
 you should append following to your `mastercomfig-vars` file:
 
 ```bash
