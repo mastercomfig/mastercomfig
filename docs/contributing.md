@@ -224,7 +224,7 @@ In order to successfully package presets and addons you need:
 
 * Installed TF2 and Steam with all dependencies
 * bash and basic UNIX tools
-* [VPC](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
+* [VPK](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
 * dos2unix
 
 Additionally, to generate No Tutorial addon, you will need to create a new file
