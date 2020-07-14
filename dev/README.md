@@ -2,6 +2,14 @@
 
 This folder contains scripts to build release files and manage releases.
 
+# VPK
+
+Packaging presets and addons requires a `vpk` script installed to your binaries.
+See [VDC](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix).
+
+Please note that you should change the script to point to Team Fortress 2 folder, otherwise 
+it will generate the VPK's multiple times if you have multiple Source Engine games installed.
+
 ## No Tutorial Viewed
 
 `no_tutorial_viewed.sh` generates `viewed.res` for the No Tutorial addon, by
@@ -24,16 +32,10 @@ copied on top of the common files.
 
 Each preset's folder is then packaged into a VPK.
 
-This requires a `vpk` script installed to your binaries.
-See [VDC](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix).
-
 ### Addons
 
 This script collects the files from the various addons and generates a
 VPK for each.
-
-This requires a `vpk` script installed to your binaries.
-See [VDC](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix).
 
 ## Releases
 
