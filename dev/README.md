@@ -2,7 +2,7 @@
 
 This folder contains scripts to build release files and manage releases.
 
-# VPK
+## VPK
 
 Packaging presets and addons requires a `vpk` script installed to your binaries.
 See [VDC](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix).
