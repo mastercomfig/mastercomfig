@@ -21,7 +21,7 @@ description: All the help and inspiration that has helped mastercomfig be even b
 
 * step for [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262)
 
-* AVEYO for [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
+* AveYo for [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
 
 * Perkzitos for continued support and bug fixes to the config
 
