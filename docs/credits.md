@@ -23,7 +23,7 @@ description: All the help and inspiration that has helped mastercomfig be even b
 
 * AVEYO for [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
 
-* Perkzitos for continued support and bug fixes to the config
+* Tiagoquix for continued support and bug fixes to the config
 
 * jane for the shrinkKeyValues bash script
 
