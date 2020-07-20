@@ -55,7 +55,7 @@ If you are not able to support me through the above methods, that's fine too! Yo
 * [SourceMod](https://www.sourcemod.net/credits.php) for their extensive and easy to use modification system for Source
 * step for [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262)
 * AVEYO for [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
-* Perkzitos for continued support and bug fixes to the config
+* Tiagoquix for continued support and bug fixes to the config
 * jane for the shrinkKeyValues bash script
 * Fraklin for screenshots of the config
 * The community for their continued support, advice and benchmarks. (Special
