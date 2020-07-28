@@ -37,12 +37,6 @@ See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_me
 
 ## Native Libraries
 
-!!! warning
-    While unlikely, it is unknown whether using native libraries is safe to do due to VAC (Valve Anti-Cheat). Continue at your own risk of having your account VAC banned, which is a permanent, non-negotiable ban that removes access to your inventory and prevents you from connecting to VAC-secured servers.
-
-!!! note
-    This has nothing to do with mastercomfig. mastercomfig is safe, and will not get you VAC banned.
-
 The automatic Steam runtime host library pinning is not enough to use native libraries
 on TF2 as the TF2 launcher script shades in some libraries.
 
