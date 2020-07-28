@@ -188,9 +188,9 @@ Controls particle effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`particles=very_low`**: Collapses particles (including bullet tracers) together, makes flames invisible on every other flame stream, disables weather particles, aggressively reduces particle density, disables bullet impact flecks.
-* **`particles=low`**: Disables weather particles, reduces particle density, disables bullet impact flecks.
-* **`particles=medium`**: Disables weather particles, partially reduces particle density, enables bullet impact flecks.
+* **`particles=very_low`**: Collapses particles (including bullet tracers) together, makes flames invisible on every other flame stream, disables weather particles, reduces particle density/quality, disables bullet impact flecks.
+* **`particles=low`**: Disables weather particles, reduces particle density/quality, disables bullet impact flecks.
+* **`particles=medium`**: Disables weather particles, reduces particle density/quality, enables bullet impact flecks.
 * **`particles=high`**: Enables weather particles, barely reduces particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
