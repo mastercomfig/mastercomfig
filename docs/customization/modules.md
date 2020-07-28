@@ -204,7 +204,7 @@ Default setting: based on which preset you are currently using.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
-* **`post_processing=ultra`**: Enables precise HDR and bloom.
+* **`post_processing=ultra`**: Enables standard HDR and bloom.
 
 ### Pyrovision
 
