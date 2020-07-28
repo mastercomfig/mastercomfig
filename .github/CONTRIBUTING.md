@@ -139,7 +139,6 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `null-cancelling-movement`: Prevents you from stopping, when you press two opposing direction keys.
-* `badgpu`: Optimizations that generally do not affect quality for weak integrated graphics chips (Intel HD graphics) or old GPUs (lower end made before 2007)
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower)
 
 **Modules:**
@@ -244,7 +243,7 @@ export TF2_DIR="absolute path to your Team Fortress 2 directory"
 
 ## Release and announce scripts
 
-If you want to test the scripts that upload to GitHub and/or announce in Discord, 
+If you want to test the scripts that upload to GitHub and/or announce in Discord,
 you should append following to your `mastercomfig-vars` file:
 
 ```bash

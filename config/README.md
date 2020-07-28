@@ -6,10 +6,6 @@ This folder contains the original files for the config, used for creating the `.
 
 These are folders with addon files.
 
-### mastercomfig-badgpu-addon
-
-This is an addon which tweaks the config to work better on integrated graphics cards and old GPUs.
-
 ### mastercomfig-disable-pyroland-addon
 
 This is an addon which removes Pyroland map textures. It is used in the `low` and `very-low` presets by default.
