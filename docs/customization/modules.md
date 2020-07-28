@@ -124,10 +124,10 @@ Controls lighting fidelity: dynamic lights, how detailed lighting is, rimlights,
 
 Default setting: based on which preset you are currently using.
 
-* **`lighting=very_low`**: No dynamic lights. Very inaccurate lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=low`**: No dynamic lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=medium`**: No dynamic lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-* **`lighting=medium_high`**: No dynamic lights. Detailed lighting. No lightwarps.
+* **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
+* **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
+* **`lighting=medium`**: No dynamic lights. Skips lesser brightness half of dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
+* **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting. No lightwarps.
 * **`lighting=high`**: 6 dynamic lights. Detailed lighting.
 * **`lighting=very_high`**: 12 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
 * **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
@@ -204,7 +204,6 @@ Default setting: based on which preset you are currently using.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
-* **`post_processing=ultra`**: Enables standard HDR and bloom.
 
 ### Pyrovision
 
