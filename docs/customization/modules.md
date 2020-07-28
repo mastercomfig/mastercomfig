@@ -136,7 +136,7 @@ Default setting: based on which preset you are currently using.
 
 Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
-Default setting: **`lighting_ex=high`** (all presets except Low, Very Low and Bad GPU addon (**`lighting_ex=low`**)).
+Default setting: **`lighting_ex=high`** (all presets except Low and Very Low (**`lighting_ex=low`**)).
 
 * **`lighting_ex=low`**: Phong off.
 * **`lighting_ex=high`**: Phong on.
