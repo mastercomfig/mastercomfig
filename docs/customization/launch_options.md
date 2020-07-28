@@ -9,7 +9,7 @@ click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -disallowhwmorph
 ```
 
 into the box and click ok.
