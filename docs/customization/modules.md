@@ -536,6 +536,7 @@ Default setting: based on which preset you are currently using.
 
 * **`outlines=off`**: Disable outlines and nametags.
 * **`outlines=low`**: Enable nametags, disable outlines.
+* **`outlines=medium`**: Disable nametags and player outlines, enable objective outlines.
 * **`outlines=high`**: Enable nametags and outlines.
 
 ### Map Background
