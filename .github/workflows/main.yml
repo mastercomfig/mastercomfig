@@ -8,9 +8,9 @@ on:
       - '.github/*'
       - '.github/ISSUE_TEMPLATE/**'
       - '.remarkrc'
-      - '*.md'
-      - '*.yml'
-      - '*.json'
+      - '/*.md'
+      - '/*.yml'
+      - '/*.json'
   pull_request:
     branches: [ develop, release ]
 
