@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [ release ]
+    paths-ignore:
+      - 'docs/**'
+      - '.github/**'
+      - '.remarkrc'
+      - '*.md'
+      - '*.yml'
+      - '*.json'
+  pull_request:
+    branches: [ develop, release ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+      with:
+        clean: false
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install vpk
+    - name: Build mastercomfig
+      run: dev/package.sh
+      env:
+        prerelease: true
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: mastercomfig
+        if-no-files-found: error
+        path: dev/prerelease/mastercomfig.zip
+          
