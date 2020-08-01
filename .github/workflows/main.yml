@@ -50,5 +50,8 @@ jobs:
       with:
         name: mastercomfig
         if-no-files-found: error
-        path: dev/prerelease/mastercomfig.zip
-          
+        path: |
+          prerelease/presets
+          prerelease/addons
+          prerelease/comfig
+          prerelease/template
