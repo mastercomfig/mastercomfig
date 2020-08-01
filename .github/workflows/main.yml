@@ -2,10 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [ release ]
+    branches: [ develop, release ]
     paths-ignore:
       - 'docs/**'
       - '.github/**'
+      - '!.github/workflows/**'
       - '.remarkrc'
       - '*.md'
       - '*.yml'
@@ -27,8 +28,19 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install vpk
+        sudo dpkg --add-architecture i386
+        sudo apt-get update
+        echo steam steam/question select "I AGREE" | sudo debconf-set-selections
+        echo steam steam/license note '' | sudo debconf-set-selections
+        sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install steamcmd dos2unix lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386
+        /usr/games/steamcmd +login anonymous +force_install_dir ./tf2 +app_update 232250 validate +quit
+        sudo bash -c 'cat <<\EOF >> /usr/local/bin/vpk
+        #!/bin/bash
+        VPK_LINUX=$(find "${HOME}" -type f -iname "vpk_linux32" -print | head -n 1)
+        VALVE_LIB_DIR=$(dirname "${VPK_LINUX}")
+        LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
+        EOF'
+        sudo chmod +x /usr/local/bin/vpk
     - name: Build mastercomfig
       run: dev/package.sh
       env:
