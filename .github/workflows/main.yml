@@ -8,9 +8,9 @@ on:
       - '.github/**'
       - '!.github/workflows/**'
       - '.remarkrc'
-      - '/*.md'
-      - '/*.yml'
-      - '/*.json'
+      - '*.md'
+      - '*.yml'
+      - '*.json'
   pull_request:
     branches: [ develop, release ]
 
