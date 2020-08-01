@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Merge release -> develop
-      uses: everlytic/branch-merge
+      uses: everlytic/branch-merge@master
       with:
         target_branch: develop
