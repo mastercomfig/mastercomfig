@@ -46,6 +46,7 @@ jobs:
       env:
         prerelease: true
     - name: Upload artifacts
+      if:  github.event_name != 'push' || github.ref != 'refs/heads/develop'
       uses: actions/upload-artifact@v2
       with:
         name: mastercomfig
