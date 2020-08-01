@@ -24,7 +24,8 @@ copied on top of the common files.
 
 Each preset's folder is then packaged into a VPK.
 
-This requires [ValvePython/vpk](https://github.com/ValvePython/vpk) to be installed.
+This requires a `vpk` script installed to your binaries.
+See [VDC](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix).
 
 ### Addons
 
