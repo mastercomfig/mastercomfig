@@ -51,7 +51,7 @@ jobs:
         name: mastercomfig
         if-no-files-found: error
         path: |
-          prerelease/presets
-          prerelease/addons
-          prerelease/comfig
-          prerelease/template
+          dev/prerelease/presets
+          dev/prerelease/addons
+          dev/prerelease/comfig
+          dev/prerelease/template
