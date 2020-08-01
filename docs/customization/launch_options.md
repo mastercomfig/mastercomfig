@@ -47,6 +47,7 @@ Read below about optional launch options and choosing your own DXLevel.
 * **-nosteamcontroller** : disables Steam controller system, faster startup, less memory usage and less input conflicts
 * **-nohltv** : disables SourceTV hosting, less resource usage
 * **-particles 1** : limits beam count to the minimum of 512
+* **-disallowhwmorph** : optimizes a check for something that is always disabled
 
 ## Extra Launch Options
 
