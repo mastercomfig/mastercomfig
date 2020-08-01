@@ -84,10 +84,10 @@ Put your launch option in the appropriate section and if it's in the
 
 Here's lists of launch options to help you out:
 
-* [Windows](https://docs.mastercomfig.com/en/latest/tf2/launchopts_win/)
-* [Linux](https://docs.mastercomfig.com/en/latest/tf2/launchopts_linux/)
+* [Windows](https://docs.mastercomfig.com/page/tf2/launchopts_win/)
+* [Linux](https://docs.mastercomfig.com/page/tf2/launchopts_linux/)
 
-Information about generating them can be found [here](https://docs.mastercomfig.com/en/latest/tf2/#making-your-own-launch-options-list).
+Information about generating them can be found [here](https://docs.mastercomfig.com/page/tf2/#making-your-own-launch-options-list).
 
 ##### Comfig and presets
 
@@ -106,12 +106,12 @@ As you can see, default ConVar values should be at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
-ConVars and commands are found using [these instructions](https://docs.mastercomfig.com/en/latest/tf2/#making-your-own-cvar-list).
+ConVars and commands are found using [these instructions](https://docs.mastercomfig.com/page/tf2/#making-your-own-cvar-list).
 
 Premade lists:
 
-* [Windows](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_win/)
-* [Linux](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_linux/)
+* [Windows](https://docs.mastercomfig.com/page/tf2/cvarlist_win/)
+* [Linux](https://docs.mastercomfig.com/page/tf2/cvarlist_linux/)
 
 Add your alternatives uncommented in the applicable presets/addons, or use modules:
 
@@ -145,7 +145,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 
 If your settings affect quality in any way, create a new module or modify
 the existing modules if applicable, then add documentation for it at the
-[modules docs page](https://docs.mastercomfig.com/en/latest/customization/modules/).
+[modules docs page](https://docs.mastercomfig.com/page/customization/modules/).
 Use [this generator](https://github.com/ekalinin/github-markdown-toc) to get
 the navigation links to be generated properly.
 

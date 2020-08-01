@@ -4,11 +4,11 @@
 
 You can view premade cvarlists, launch options lists and hidden cvarlists.
 
-* [Windows cvarlist](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_win)
-* [Windows Launch option list](https://docs.mastercomfig.com/en/latest/tf2/launchopts_win)
-* [Linux cvarlist](https://docs.mastercomfig.com/en/latest/tf2/cvarlist_linux)
-* [Linux launch option list](https://docs.mastercomfig.com/en/latest/tf2/launchopts_linux)
-* [Hidden cvarlist](https://docs.mastercomfig.com/en/latest/tf2/hiddencvars)
+* [Windows cvarlist](https://docs.mastercomfig.com/page/tf2/cvarlist_win)
+* [Windows Launch option list](https://docs.mastercomfig.com/page/tf2/launchopts_win)
+* [Linux cvarlist](https://docs.mastercomfig.com/page/tf2/cvarlist_linux)
+* [Linux launch option list](https://docs.mastercomfig.com/page/tf2/launchopts_linux)
+* [Hidden cvarlist](https://docs.mastercomfig.com/page/tf2/hiddencvars)
 
 ## Making your own cvar list
 
