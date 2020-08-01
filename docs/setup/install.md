@@ -11,7 +11,7 @@ description: Easy steps on how to install mastercomfig and get it set up properl
 5. Click Browse Local Files...
 6. Navigate to the `tf/custom` folder.
 7. Drag the VPK files into this folder.
-8. Set these launch options: `-novid -nojoy -nosteamcontroller -nohltv -particles 1`. For more information, read the [launch options customization guide](../customization/launch_options.md).
+8. Set these launch options: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -disallowhwmorph`. For more information, read the [launch options customization guide](../customization/launch_options.md).
 
 ## Custom configs
 
