@@ -42,7 +42,7 @@ jobs:
         EOF'
         sudo chmod +x /usr/local/bin/vpk
     - name: Build mastercomfig
-      run: dev/package.sh
+      run: dev/release.sh
       env:
         prerelease: true
     - name: Upload artifacts
