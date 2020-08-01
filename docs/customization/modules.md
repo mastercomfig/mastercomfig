@@ -441,6 +441,14 @@ Setting it higher can reduce input delay.
     your monitor's refresh rate to get the full effect of your monitor. Otherwise, it will
     solely a determination based on your preference as described above.
 
+!!! warning
+
+    This module is only provided for general convenience and accessibility. The built-in FPS cap
+    in Team Fortress 2 has precision problems depending on your CPU (e.g. Intel Skylake platform and above)
+    as well as accuracy problems on Windows due to usage of millisecond timers. It is recommended you use
+    a more reliable FPS cap tool, like [Rivatuner](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)
+    and set `fpscap=unlimited` to disable the in-game FPS cap.
+
 Default setting: **`fpscap=1000`** (all presets).
 
 * **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
