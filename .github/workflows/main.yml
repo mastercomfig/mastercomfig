@@ -5,8 +5,8 @@ on:
     branches: [ develop, release ]
     paths-ignore:
       - 'docs/**'
-      - '.github/**'
-      - '!.github/workflows/**'
+      - '.github/*'
+      - '.github/ISSUE_TEMPLATE/**'
       - '.remarkrc'
       - '*.md'
       - '*.yml'
