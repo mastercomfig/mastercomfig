@@ -9,7 +9,7 @@ click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -disallowhwmorph
+-novid -nojoy -nosteamcontroller -nohltv -particles 1
 ```
 
 into the box and click ok.
@@ -40,7 +40,7 @@ Read below about optional launch options and choosing your own DXLevel.
 
 ## Recommended Launch Options
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -disallowhwmorph`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
