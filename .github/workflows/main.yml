@@ -40,6 +40,7 @@ jobs:
         sudo bash -c 'cat <<\EOF >> /usr/local/bin/vpk
         LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
         EOF'
+        sudo cat /usr.local/bin/vpk
         sudo chmod +x /usr/local/bin/vpk
     - name: Build mastercomfig
       run: dev/release.sh
