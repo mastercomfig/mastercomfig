@@ -32,7 +32,7 @@ jobs:
         /usr/games/steamcmd +login anonymous +force_install_dir ./tf2 +download_depot 232250 232256 +quit
         export VPK_LINUX=$(find "${HOME}" -type f -iname "vpk_linux32" -print | head -n 1)
         export VALVE_LIB_DIR=$(dirname "${VPK_LINUX}")
-        sudo bash -c 'cat <<EOF > /usr/local/bin/vpk
+        sudo bash -Ec 'cat <<EOF > /usr/local/bin/vpk
         #!/bin/bash
         VPK_LINUX=${VPK_LINUX}
         VALVE_LIB_DIR=${VALVE_LIB_DIR}
