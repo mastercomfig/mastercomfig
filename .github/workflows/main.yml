@@ -22,20 +22,15 @@ jobs:
     - uses: actions/checkout@v2
       with:
         clean: false
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
     - name: Install dependencies
       run: |
         sudo dpkg --add-architecture i386
         sudo apt-get update
         echo steam steam/question select "I AGREE" | sudo debconf-set-selections
         echo steam steam/license note '' | sudo debconf-set-selections
-        sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install steamcmd dos2unix lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1 lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386
+        sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install steamcmd dos2unix
         /usr/games/steamcmd +login anonymous +force_install_dir ./tf2 +download_depot 232250 232256 +quit
-        export VPK_LINUX=$(find "${HOME}" -type f -iname "vpk_linux32" -print0 | head -zn 1)
-        echo $VPK_LINUX
+        export VPK_LINUX=$(find "${HOME}" -type f -iname "vpk_linux32" -print | head -n 1)
         export VALVE_LIB_DIR=$(dirname "${VPK_LINUX}")
         sudo bash -c 'cat <<\EOF >> /usr/local/bin/vpk
         #!/bin/bash
