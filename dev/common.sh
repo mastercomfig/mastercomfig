@@ -1,5 +1,4 @@
 #!/bin/bash
-
 function cleanItems {
   if [ "${zip_package:=false}" != true ] ; then
     # remove comments, including indented comments

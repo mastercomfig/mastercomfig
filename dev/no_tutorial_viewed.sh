@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 # Run script within the directory
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
