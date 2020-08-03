@@ -22,9 +22,16 @@ jobs:
     - uses: actions/checkout@v2
       with:
         clean: false
+    - name: Cache
+      uses: actions/cache@v2.1.0
+      with:
+        path: |
+          /home/runner/.steam
+        key: cache-1
     - name: Install dependencies
       run: |
         sudo dpkg --add-architecture i386
+        sudo apt-get update
         echo steam steam/question select "I AGREE" | sudo debconf-set-selections
         echo steam steam/license note '' | sudo debconf-set-selections
         sudo DEBIAN_FRONTEND=noninteractive apt-get -yq --no-install-recommends install steamcmd dos2unix
