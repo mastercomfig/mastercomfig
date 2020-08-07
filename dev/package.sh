@@ -24,8 +24,9 @@ if [ "${prerelease:=false}" == true ] && [ "${zip_package:=false}" == false ]; t
   cp comfig/*.cfg prerelease/comfig
   cp comfig/*.zip prerelease/comfig
   cp template/*.zip prerelease/template
+  cp ../LICENSE.md prerelease/LICENSE.md
   if [ "${CI:=false}" == false ]; then
-    (cd prerelease && zip -9r mastercomfig.zip addons/ presets/ comfig/ template/)
+    (cd prerelease && zip -9r mastercomfig.zip addons/ presets/ comfig/ template/ LICENSE.md)
   fi
 fi
 
