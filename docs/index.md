@@ -1,13 +1,13 @@
-![Built with Love](https://forthebadge.com/images/badges/built-with-love.svg)
-[![Build Status](https://dev.azure.com/mastercoms/mastercomfig/_apis/build/status/mastercoms.mastercomfig?branchName=release)](https://dev.azure.com/mastercoms/mastercomfig/_build/latest?definitionId=1&branchName=release)
-[![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest)](https://docs.mastercomfig.com/)
-[![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay)](https://liberapay.com/mastercoms/)
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W510R1Q)
-[![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
-[![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?style=flat-square)](https://steamcommunity.com/groups/comfig)
-[![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
+[![Build Status](https://img.shields.io/github/workflow/status/mastercomfig/mastercomfig/CI?style=flat-square)](https://github.com/mastercomfig/mastercomfig/actions?query=workflow%3ACI)
+[![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest&style=flat-square)](https://docs.mastercomfig.com/)
+[![Downloads](https://img.shields.io/github/downloads/mastercomfig/mastercomfig/latest/total.svg?style=flat-square)](https://mastercomfig.com/download)
+[![ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B.svg?logo=ko-fi&style=flat-square)](https://ko-fi.com/W7W510R1Q)
+[![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay&style=flat-square)](https://liberapay.com/mastercoms/)
+[![Steam donate](https://img.shields.io/badge/Donate%20via-Steam-00adee.svg?style=flat-square&logo=steam)](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N)
+[![Join the Discord chat](https://img.shields.io/badge/Discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
+[![Join the Steam Group](https://img.shields.io/badge/Steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
 
-<img align="right" alt="mastercomfig logo" width="100" src="https://raw.githubusercontent.com/mastercoms/mastercomfig/gh-pages/favicon.png">
+<img align="right" alt="mastercomfig logo" width="100" src="https://mastercomfig.com/img/mastercomfig_logo.svg">
 
 # mastercomfig
 
@@ -32,7 +32,11 @@ future update.
 
 ## Support me
 
-You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-Fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
+You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
+
+You can use Ko-fi to get [a config commission](https://ko-fi.com/mastercoms/commissions), where I personally tune a config just for your preferences and PC setup. I can also do this via a trade for 3 keys. There is also an addon where I can do advanced scripting at your request (6 keys if paying via trade).
+
+Finally, you can buy early access to the config for a month through [Ko-fi](https://ko-fi.com/mastercoms/shop). This will give you access to more frequent updates released throughout the month, rather than the monthly stable releases of the config.
 
 You have my endless gratitude if you support me with money or gift items, and this support encourages me so much!
 

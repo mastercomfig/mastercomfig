@@ -1,16 +1,21 @@
-site_name: 'mastercomfig'
-site_url: 'https://docs.mastercomfig.com/'
-site_description: 'A modern Team Fortress 2 performance and customization config.'
-copyright: 'Copyright (c) 2016-2019 mastercoms<br><br>Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress
-logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.<br><br>mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.'
+site_name: mastercomfig docs
+site_author: mastercoms
+site_url: https://docs.mastercomfig.com/
+site_description: A modern Team Fortress 2 performance and customization config.
+copyright: 'Copyright &copy; 2016-2020 mastercoms<br><br>Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo, Source, the Source logo
+are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.<br><br>mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.'
 strict: true
 nav:
     - About:
         - Home: 'index.md'
+        - FAQ: 'faq.md'
         - Support Me: 'support_me.md'
         - Help: 'help.md'
         - Features: 'features.md'
         - Screenshots: 'screenshots.md'
+        - Benchmarks: 'benchmarks.md'
+        - Contributing: 'contributing.md'
+        - Security: 'security.md'
         - Credits: 'credits.md'
     - Setup:
         - Clean Up: 'setup/clean_up.md'
@@ -38,34 +43,52 @@ nav:
         - Silly Launch Options: 'tf2/silly_launch_options.md'
         - Generating TF2 Data: 'tf2/README.md'
 markdown_extensions:
+    - admonition
     - smarty
     - toc:
         permalink: true
-    - codehilite
+    - codehilite:
+        guess_lang: False
+        use_pygments: True
+        noclasses: True
+        pygments_style: monokai
     - meta
     - pymdownx.emoji
+    - pymdownx.inlinehilite:
+        style_plain_text: True
     - pymdownx.magiclink
     - pymdownx.smartsymbols
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - pymdownx.tilde
+    - pymdownx.superfences
+    - pymdownx.tabbed
 theme:
-    name: 'material'
+    language: en
+    features:
+        - instant
+    name: material
     palette:
-        primary: 'teal'
-        accent: 'teal'
-    logo: 'img/logo.png'
-    favicon: 'img/logo.ico'
-repo_url: 'https://github.com/mastercoms/mastercomfig/'
-edit_uri: 'https://github.com/mastercoms/mastercomfig/edit/release/docs/'
-extra_css:
-  - 'stylesheets/extra.css'
+        scheme: slate
+        primary: teal
+        accent: teal
+    logo: img/logo.svg
+    favicon: img/logo.ico
+    icon:
+        repo: fontawesome/brands/github
+repo_name: GitHub
+repo_url: https://github.com/mastercomfig/mastercomfig/
+edit_uri: https://github.com/mastercomfig/mastercomfig/edit/release/docs/
+plugins:
+    - search
+    - minify:
+        minify_html: true
+    - git-revision-date-localized:
+        type: date
+extra_javascript:
+    - js/widescreen.min.js
 extra:
-    repo_icon: 'github'
     social:
-        - type: 'github'
-          link: 'https://github.com/mastercoms/mastercomfig/'
-        - type: 'discord'
-          link: 'https://discord.gg/CuPb2zV'
-        - type: 'share-square'
-          link: 'https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config'
+        - icon: fontawesome/brands/github
+          link: https://github.com/mastercomfig/mastercomfig/
+        - icon: fontawesome/brands/discord
+          link: https://discord.gg/CuPb2zV
+        - icon: fontawesome/brands/steam
+          link: https://steamcommunity.com/groups/comfig

@@ -1,17 +1,40 @@
 #!/bin/bash
 # Run script within the directory
 BINDIR=$(dirname "$(readlink -fn "$0")")
-cd "$BINDIR"
+cd "${BINDIR}" || exit 2
+
+if [ "${prerelease:=false}" == false ] && [ "${minor_release:=false}" == false ]; then
+  ./update.sh || exit 1
+fi
+
+export zip_package="true"
+
+./package.sh
+rm -f comfig/mastercomfig.zip
+zip -9r comfig/mastercomfig.zip addons/ presets/ -x "*.sh"
+
+unset zip_package
 
 ./package.sh
 
-echo Version:
-read version
+if [ "${prerelease:=false}" == true ]; then
+  exit 0
+fi
 
-echo Highlights:
-read highlights
+if [ "${patch:=false}" = true ]; then
+    ./patch.sh
+else
+    echo Version:
+    read -r version
 
-./deploy.sh $version "$highlights"
-./announce.sh $version "$highlights"
+    echo Highlights:
+    read -r highlights
+
+    echo Hours taken:
+    read -r hours
+
+    ./deploy.sh "${version}" "${highlights}"
+    ./announce.sh "${version}" "${highlights}" "${hours}"
+fi
 
 printf "\n"

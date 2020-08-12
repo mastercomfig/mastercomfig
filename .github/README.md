@@ -1,13 +1,13 @@
-![Built with Love](https://forthebadge.com/images/badges/built-with-love.svg)
-[![Build Status](https://dev.azure.com/mastercoms/mastercomfig/_apis/build/status/mastercoms.mastercomfig?branchName=release)](https://dev.azure.com/mastercoms/mastercomfig/_build/latest?definitionId=1&branchName=release)
-[![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest)](https://docs.mastercomfig.com/)
-[![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay)](https://liberapay.com/mastercoms/)
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W510R1Q)
-[![Join the Discord chat](https://img.shields.io/badge/discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
-[![Join the Steam Group](https://img.shields.io/badge/steam-mastercomfig-00adee.svg?style=flat-square)](https://steamcommunity.com/groups/comfig)
-[![Follow the tf.tv thread](https://img.shields.io/badge/tftv-mastercomfig-4577a1.svg?style=flat-square)](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config)
+[![Build Status](https://img.shields.io/github/workflow/status/mastercomfig/mastercomfig/CI?style=flat-square)](https://github.com/mastercomfig/mastercomfig/actions?query=workflow%3ACI)
+[![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest&style=flat-square)](https://docs.mastercomfig.com/)
+[![Downloads](https://img.shields.io/github/downloads/mastercomfig/mastercomfig/latest/total.svg?style=flat-square)](https://github.com/mastercomfig/mastercomfig/releases/latest/)
+[![ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B.svg?logo=ko-fi&style=flat-square)](https://ko-fi.com/W7W510R1Q)
+[![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay&style=flat-square)](https://liberapay.com/mastercoms/)
+[![Steam donate](https://img.shields.io/badge/Donate%20via-Steam-00adee.svg?style=flat-square&logo=steam)](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N)
+[![Join the Discord chat](https://img.shields.io/badge/Discord-mastercomfig-7289da.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
+[![Join the Steam Group](https://img.shields.io/badge/Steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
 
-<img align="right" alt="mastercomfig logo" width="100" src="https://raw.githubusercontent.com/mastercoms/mastercomfig/gh-pages/favicon.png">
+<img align="right" alt="mastercomfig logo" width="100" src="https://mastercomfig.com/img/mastercomfig_logo.svg">
 
 # mastercomfig
 
@@ -32,11 +32,11 @@ future update.
 
 ## Docs
 
-For more information, including installation steps, check out [the docs](https://docs.mastercomfig.com/en/latest/).
+For more information, including installation steps, check out [the docs](https://docs.mastercomfig.com/page/).
 
 ## Support me
 
-You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-Fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
+You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
 You have my endless gratitude if you support me with money or gift items, and this support encourages me so much!
 
@@ -47,20 +47,28 @@ If you are not able to support me through the above methods, that's fine too! Yo
 * [Chris](https://chrisdown.name/tf2/) for starting it all
 * [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
   continuing what Chris started and helping a bit with my config
+
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
-* [Felik](https://www.teamfortress.tv/44076/se-config-framework-feliks-config-3)
-  for providing an alternative to Chris-based configs
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
-* [Aar](https://www.youtube.com/user/Aarmastah) for making amazing videos about TF2 graphics customization and supporting this config
+* povohat for making the null-cancelling movement script
+* SteamDB for their excellent tools, including [Game Tracking for TF2](https://github.com/SteamDatabase/GameTracking-TF2)
+* [SourceMod](https://www.sourcemod.net/credits.php) for their extensive and easy to use modification system for Source
+* step for [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262)
+* AveYo for [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
+* Tiagoquix for continued support and bug fixes to the config
+* jane for the shrinkKeyValues bash script
+* Fraklin for screenshots of the config
 * The community for their continued support, advice and benchmarks. (Special
   Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby,
   Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
-  maximsmol, Fraklin, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
-  DapperTrapper, Tene, mambo, Perkzitos, Sakii, Leo40 and perhaps many others)
-* The [Valve Developer community](https://developer.valvesoftware.com/wiki/Main_Page)
+  maximsmol, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
+  DapperTrapper, Tene, mambo, Sakii, Leo40, micwoj92, ghost-420, m00n01 and perhaps many others)
+
+* The [Valve Developer Community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics
+
 * and to Valve, for making and updating (for over a decade!) the best class-based FPS to date with so
-  much customizability on top
+  much customization on top
 
 ## Legal
 

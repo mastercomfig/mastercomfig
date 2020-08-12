@@ -1,0 +1,16 @@
+name: Repo
+
+on:
+  push:
+    branches: [ release ]
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Merge release -> develop
+      uses: everlytic/branch-merge@master
+      with:
+        target_branch: develop
+        github_token: ${{ secrets.REPO_TOKEN }}

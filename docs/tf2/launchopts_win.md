@@ -1,9 +1,14 @@
+---
+description: A list of all launch options on TF2 for Windows.
+...
+
 # Launch Options - Windows
 
-**Not all these "launch options" are guaranteed to be actual launch options!**
-Extracting strings from an executable is a finicky and error-prone process, and as such, some unrelated strings may have slipped through the cracks.
+!!! bug
+    **Not all these "launch options" are guaranteed to be actual launch options!**
+    Extracting strings from an executable is a finicky and error-prone process, and as such, some unrelated strings may have slipped through the cracks.
 
-```
+```txt
 -adapter
 -all
 -all_languages

@@ -1,18 +1,22 @@
+---
+description: Find out how the community is using mastercomfig.
+...
+
 # List of custom configs
 
 This is a list of mastercomfig custom configs by members of the community.
 
-***
+---
 
 * [mastercoms' cfg and custom files](https://github.com/mastercoms/configs/tree/master/games/tf2)
 * [JarateKing's jarconfig](https://github.com/JarateKing/jarconfig)
 * [starter config](https://github.com/rufio-tf2/starter-config)
-* [Mothership](https://github.com/MotherShip808/Mothership-s-TF2-Configs)
-* [Soldier_engie-demo](https://cdn.discordapp.com/attachments/389102232747900929/427964448544784384/custom.cfg)
-* [sage](https://pastebin.com/kjgjwzNS)
-* [Ringo](https://pastebin.com/78FytNUc)
-* [Zee](https://pastebin.com/7viqyaJx)
-* [schaden](https://pastebin.com/V3fUgSUG)
+* [Leo40](https://github.com/Leo40Git/TF2Config)
+* [Mothership](https://github.com/MotherShip808/Mothership-CFG)
 * [rm](https://pastebin.com/xCsARMVY)
-* [Jack Stanley](https://pastebin.com/raw/L8Na9hPM)
-* [steph](https://github.com/TheSqrtMinus1/stephconfig)
+* [Jack Stanley](https://pastebin.com/L8Na9hPM)
+* [steph](https://github.com/sapphonie/stephconfig)
+* [Rattlewrench](https://github.com/Rattlewrench/rattleconfig)
+* [m00n](https://github.com/m00n01/LunarConfig)
+* [alekny](https://github.com/alekny/alekny-mastercomfig-preset)
+* [NegativeOnion](https://github.com/NegativeOnion/Team-Fortress-2)

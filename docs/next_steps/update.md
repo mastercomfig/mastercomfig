@@ -1,3 +1,7 @@
+---
+description: How to update mastercomfig to the latest version
+...
+
 # Update
 
 When a new release comes out, check out the
@@ -5,8 +9,10 @@ When a new release comes out, check out the
 then download the latest files and drag them into your `tf/custom` folder,
 replacing the old files.
 
+There may be extra steps listed in the changelog for that release, so make
+sure you stay up to date with the changes to mastercomfig.
+
 This config gets updates frequently, so to get the latest improvements, make
 sure you check here for new releases frequently, or you can get notifications
 about updates on the [Discord](https://discord.gg/CuPb2zV),
-[Steam Group](https://steamcommunity.com/groups/comfig) (or its Steam Chat) or the
-[teamfortress.tv thread](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
+[Steam Group](https://steamcommunity.com/groups/comfig), or its [Steam Chat](https://s.team/chat/IM8fJTnx).

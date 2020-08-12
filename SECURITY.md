@@ -2,15 +2,16 @@
 
 ## Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 8.0.x   | :white_check_mark: |
-| < 8.0.x | :x:                |
+| Version   | Supported          |
+| --------- | ------------------ |
+| 8.105.x   | :white_check_mark: |
+| 8.104.x   | :white_check_mark: |
+| < 8.104.0 | :x:                |
 
 ## Reporting a Vulnerability
 
 If you find a security vulnerability in the download of the config, execution of the config,
-or something else, contact mastercoms through email directly: mastercoms@tuta.io.
+or something else, contact mastercoms through email directly: [mastercoms@tuta.io](mailto:mastercoms@tuta.io).
 
 If you have a solution for the issue, attach it as a patch file to the email.
 

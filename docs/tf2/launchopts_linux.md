@@ -1,9 +1,14 @@
+---
+description: A list of all launch options on TF2 for Linux.
+...
+
 # Launch Options - Linux
 
-**Not all these "launch options" are guaranteed to be actual launch options!**
-Extracting strings from an executable is a finicky and error-prone process, and as such, some unrelated strings may have slipped through the cracks.
+!!! bug
+    **Not all these "launch options" are guaranteed to be actual launch options!**
+    Extracting strings from an executable is a finicky and error-prone process, and as such, some unrelated strings may have slipped through the cracks.
 
-```
+```txt
 -abs
 -abs(
 -all
@@ -65,8 +70,8 @@ Extracting strings from an executable is a finicky and error-prone process, and 
 -disable_srgbtex
 -disallowhwmorph
 -displayindex
+-D!j
 -dontusegamedir
--dqd
 -dti
 -duck
 -dumplongticks
@@ -90,10 +95,8 @@ Extracting strings from an executable is a finicky and error-prone process, and 
 -forward
 -freq
 -frozen
--fs_log
 -fs_logbins
 -fs_nopreloaddata
--fs_target
 -full
 -fullscreen
 -g15
@@ -133,14 +136,13 @@ Extracting strings from an executable is a finicky and error-prone process, and 
 -graph
 -grenade1
 -grenade2
--h?d
 -heapcheck
 -height
 -helpme
 -helpme_server
+-H=i
 -hideconsole
 -HOST_HUNKLEVEL-
--H&s
 -hushsteam
 -I]%
 -ignoredxsupportcfg
@@ -165,13 +167,11 @@ Extracting strings from an executable is a finicky and error-prone process, and 
 -k_ItemPurgatoryResponse_Finalize_BackpackFull
 -klook
 -kServerModificationItemResponse_InternalError
--l?d
 -leakcheck
 -limitvsconst
 -log_opened_files
 -lookdown
 -lookup
--L&s
 -makedevshots
 -makereslists
 -mat_aaquality
@@ -246,26 +246,23 @@ Extracting strings from an executable is a finicky and error-prone process, and 
 -nowatchdog
 -nulldevice
 -outdir
--p(
+-p2p
 -p4changelistlabel
 -p4skip
 -p4skipchangelistlabel
--PAd
+-P6I
 -particles
--p?d
 -phonehome
 -pidfile
 -pixel_offset_x
 -pixel_offset_y
--PLd
--Pmv
 -port
 -posedebug
+-p+p
 -precachefontchars
 -precachefontintlchars
 -preload
 -profile
--P&s
 -publicbuild
 -quickconvert
 -quickswitch
@@ -320,20 +317,18 @@ Extracting strings from an executable is a finicky and error-prone process, and 
 -Target
 -targetdummy
 -taunt
--T?d
 -team
 -teleport
 -tempcontent
--testscript
 -textmessagedebug
 -textmode
 -threads
 -timedemo_comment
 -timedemoloop
--tis
 -toconsole
 -tools
 -trackdeletions
+-T*t
 -tvmasteronly
 -ugcpath
 -use
@@ -356,6 +351,7 @@ Extracting strings from an executable is a finicky and error-prone process, and 
 -voicerecord
 -vproject
 -VUUU
+-wait_for_debugger
 -walk
 -WarningsAsErrors
 -wavonly
@@ -363,9 +359,8 @@ Extracting strings from an executable is a finicky and error-prone process, and 
 -window
 -windowed
 -window_name_suffix
--X'
--x?d
--xis
+-x'
+-X$w
 -Xt!
 -zoom
 ```

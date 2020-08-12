@@ -1,31 +1,45 @@
 #!/bin/bash
 # Run script within the directory
 BINDIR=$(dirname "$(readlink -fn "$0")")
-cd "$BINDIR"
+cd "${BINDIR}" || exit 2
 
 # Delete old VPKs and folders
-rm *.vpk -f
-rm */ -rf
+rm -f -- *.vpk
+rm -rf -- */
 
-# Create .cfg addons
-declare -a addons=("badgpu" "lowmem" "transparent-viewmodels" "no-tutorial" "flat-mouse")
+addons_setup_cfg_path=../../config/mastercomfig/cfg/comfig/addons_setup.cfg
+addons_cfg_path=../../config/mastercomfig/cfg/comfig/addons.cfg
+rm -f "${addons_setup_cfg_path}" "${addons_cfg_path}"
+touch "${addons_setup_cfg_path}" "${addons_cfg_path}"
 
-for A in "${addons[@]}"; do
-    mkdir -p mastercomfig-"${A}"-addon/cfg/addons
-    cp -f ../../config/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
+declare -A addon_alias_map
+addon_alias_map[flat-mouse]="flat-mouse"
+addon_alias_map[lowmem]="lowmem"
+addon_alias_map[no-tutorial]="no-tutorial"
+addon_alias_map[null-cancelling-movement]="null-movement"
+addon_alias_map[transparent-viewmodels]="transparent-vm"
+
+for F in ../../config/cfg/addons/*; do
+    if [ -f "${F}" ]; then
+        ext=${F##*.}
+        if [ "${ext}" = cfg ]; then
+            A=$(basename "${F}" ."${ext}")
+            mkdir -p mastercomfig-"${A}"-addon/cfg/addons
+            cp -f ../../config/cfg/addons/"${A}".cfg mastercomfig-"${A}"-addon/cfg/addons/"${A}".cfg
+            {
+              echo "alias addon_${addon_alias_map[${A}]}"
+              echo "exec addons/${A}.cfg"
+            } >> "${addons_setup_cfg_path}"
+            echo "addon_${addon_alias_map[${A}]}" >> $addons_cfg_path
+        fi
+    fi
 done
-
-find . -name "*.cfg" | xargs sed -i '/^[[:blank:]]*\/\//d;s/\/\/.*//'
-find . -name "*.cfg" | xargs sed -i '/^[[:space:]]*$/d'
 
 # Copy over custom addons
 cp -rf ../../config/addons/* .
 
-# Package into VPK
-for D in *; do
-    if [ -d "${D}" ]; then
-        vpk "${D}"
-    fi
-done
+. ../common.sh
+
+cleanAndPackage
 
 printf "\n"

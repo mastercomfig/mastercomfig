@@ -1,6 +1,10 @@
+---
+description: A list of all console variables and commands on TF2 for Linux.
+...
+
 # Console Variables - Linux
 
-```
+```c
 cvar list
 --------------
 _autosave                                : cmd      :                  : Autosave
@@ -351,6 +355,7 @@ cl_drawshadowtexture                     : 0        : , "cheat", "cl"  :
 cl_dump_particle_stats                   : cmd      :                  : dump particle profiling info to particle_profile.csv
 cl_dynamiccrosshair                      : 1        : , "a", "cl"      :
 cl_ejectbrass                            : 1        :                  :
+cl_enable_text_chat                      : 1        : , "a", "cl"      : Enable text chat in this game
 cl_ent_absbox                            : cmd      :                  : Displays the client's absbox for the entity under the crosshair.
 cl_ent_bbox                              : cmd      :                  : Displays the client's bounding box for the entity under the crosshair.
 cl_ent_rbox                              : cmd      :                  : Displays the client's render box for the entity under the crosshair.
@@ -1033,6 +1038,7 @@ load_itempreset                          : cmd      :                  : Equip a
 loadcommentary                           : cmd      :                  :
 loader_dump_table                        : cmd      :                  :
 loader_spew_info                         : 0        :                  : 0:Off, 1:Timing, 2:Completions, 3:Late Completions, 4:Purges, -1:All
+lockplayername                           : cmd      :                  : Prevent name changes for this userID.
 loader_spew_info_ex                      : 0        :                  : (internal)
 lod_TransitionDist                       : 800      : , "cl"           :
 log                                      : cmd      :                  : Enables logging to file, console, and udp < on | off >.
@@ -1627,6 +1633,7 @@ net_start                                : cmd      :                  : Inits m
 net_status                               : cmd      :                  : Shows current network status
 net_udp_rcvbuf                           : 131072   :                  : Default UDP receive buffer size
 net_usesocketsforloopback                : 0        :                  : Use network sockets layer even for listen server local player's packets (multiplayer only).
+net_warningthrottle                      : 5        :                  : Network warning throttling to specified Hz rate
 next                                     : 0        : , "cheat"        : Set to 1 to advance to next frame ( when singlestep == 1 )
 nextdemo                                 : cmd      :                  : Play next demo in sequence.
 nextlevel                                : 0        : , "sv", "nf"     : If set to a valid map name, will trigger a changelevel to the specified map at the end of the round
@@ -2454,6 +2461,10 @@ sv_bonus_map_challenge_update            : cmd      :                  : Updates
 sv_bonus_map_complete                    : cmd      :                  : Completes a bonus map.
 sv_bonus_map_unlock                      : cmd      :                  : Locks a bonus map.
 sv_cacheencodedents                      : 1        :                  : If set to 1, does an optimization to prevent extra SendTable_Encode calls.
+sv_chat_bucket_size_tier1                : 4        : , "sv"           : The maxmimum size of the short term chat msg bucket.
+sv_chat_bucket_size_tier2                : 30       : , "sv"           : The maxmimum size of the long term chat msg bucket.
+sv_chat_seconds_per_msg_tier1            : 3        : , "sv"           : The number of seconds to accrue an additional short term chat msg.
+sv_chat_seconds_per_msg_tier2            : 10       : , "sv"           : The number of seconds to accrue an additional long term chat msg.
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
 sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
 sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate and sv_maxcmdrate.
@@ -3583,5 +3594,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3579 total convars/concommands
+3586 total convars/concommands
 ```
