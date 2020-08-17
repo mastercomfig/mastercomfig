@@ -132,6 +132,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `null-cancelling-movement`: Prevents you from stopping, when you press two opposing direction keys.
+* `azerty-null-cancelling-movement`: Version of null-cancelling-movement for users with AZERTY keyboards rather than QWERTY.
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (4GB and lower)
 
 ##### Modules
