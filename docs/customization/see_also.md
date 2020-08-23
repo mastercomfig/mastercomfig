@@ -30,7 +30,7 @@ Here are a few awesome TF2 modifications:
 * [yttrium's viewmodels](https://github.com/Yttrium-tYcLief/CompVMInstaller/releases)
   — Customize hiding individual viewmodels
   
-  !!! info
+!!! info
 
     The yytrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. That file is not needed and you should use **`dynamic_background=preload`** module instead.
 
