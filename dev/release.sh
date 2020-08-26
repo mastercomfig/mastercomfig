@@ -6,7 +6,7 @@ set -e
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
 
-if [ "${prerelease:=false}" == false ]; then
+if [ "${prerelease:=false}" == false ] && [ "${minor_release:=false}" == false ]; then
   ./update.sh || exit 1
 fi
 

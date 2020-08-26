@@ -92,7 +92,7 @@ Information about generating them can be found [here](https://docs.mastercomfig.
 Note: some additional information about the config can be found
 [here](https://github.com/mastercomfig/mastercomfig/blob/release/config/README.md).
 
-Add options like this
+Add options like this:
 
 ```c
 convar 0 // What the command does and a bit about what this default
