@@ -64,6 +64,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
     * **-glslcontrolflow** : enables support for GLSL control flow. :warning: **Experimental** as it may cause rendering issues
     * **-glmenableclipplanes** : used to disable AMD driver workaround which reduces performance :warning: **Experimental** as it may cause crashes
+    * **-snd_openal** : uses OpenAL instead of Mac Audio Queue, which can reduce latency and provide improved audio effects. :warning: **Experimental** as it is unsupported by Valve
 
 === "Linux"
 
