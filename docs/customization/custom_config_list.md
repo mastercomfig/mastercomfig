@@ -15,7 +15,7 @@ This is a list of mastercomfig custom configs by members of the community.
 * [Mothership](https://github.com/MotherShip808/Mothership-CFG)
 * [rm](https://pastebin.com/xCsARMVY)
 * [Jack Stanley](https://pastebin.com/L8Na9hPM)
-* [steph](https://github.com/sapphonie/stephconfig)
+* [sapphonie](https://github.com/sapphonie/tf2-custom-folder/tree/master/_CONFIGS/cfg)
 * [Rattlewrench](https://github.com/Rattlewrench/rattleconfig)
 * [m00n](https://github.com/m00n01/LunarConfig)
 * [alekny](https://github.com/alekny/alekny-mastercomfig-preset)
