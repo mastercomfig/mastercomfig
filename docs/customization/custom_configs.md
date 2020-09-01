@@ -58,6 +58,13 @@ The default binding for the null cancelling movement addon is WASD, but you can 
 * `move_bind=asdf`: The classic ASDF layout (A/S forward/back, D/F left/right)
 * `move_bind=vim`: Vim mode! HJKL, as in Vim (K/J forward/back, H/L left/right).
 
+If you want a different or more advanced binding, you can use the aliases:
+
+* Forward: `+mf`
+* Left: `+ml`
+* Backward:  `+mb`
+* Right: `+mr`
+
 ## Optional Aliases
 
 !!! warning
