@@ -62,7 +62,7 @@ If you want a different or more advanced binding, you can use the aliases:
 
 * Forward: `+mf`
 * Left: `+ml`
-* Backward:  `+mb`
+* Backward: `+mb`
 * Right: `+mr`
 
 ## Optional Aliases
