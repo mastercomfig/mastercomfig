@@ -37,7 +37,7 @@ You can also re-alias them to use your own network settings.
 
 ## Changing your preset
 
-mastercomfig now supports selecting a preset after download. Add a file to your `user` folder called `pre_comfig.cfg`. In this file, put `alias preset"exec presets/preset_name.cfg"`, where `preset_name` is the name of the preset:
+mastercomfig now supports selecting a preset after download. Add a file to your `user` folder called `pre_comfig.cfg`. In this file, put your desired preset as `preset=your_preset`. Preset names are:
 
 * ultra
 * high

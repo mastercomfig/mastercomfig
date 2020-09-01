@@ -16,7 +16,8 @@ for F in ../../config/cfg/presets/*; do
       cp -f ../../config/cfg/presets/*.cfg mastercomfig-"${P}"-preset/cfg/presets
       autoexec_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
       {
-        printf "alias preset\"exec presets/%s.cfg\";" "${P}"
+        printf "exec comfig/define_presets.cfg;"
+        printf "preset=%s;" "${P}"
         printf "exec user/pre_comfig.cfg;"
         printf "exec comfig/comfig.cfg;"
         printf "preset;"
