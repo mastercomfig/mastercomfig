@@ -6,7 +6,7 @@ description: Get answers to frequently asked questions about mastercomfig.
 
 ## What is the mastercomfig way of doing things?
 
-Some people often get initially frustrated about mastercomfig, since it doesn't work like a traditional config, and when you try to use it like you one, you may encounter more problems.
+Some people often get initially frustrated about mastercomfig, since it doesn't work like a traditional config, and when you try to use it like one, you may encounter more problems.
 
 Generally, think of mastercomfig in "layers" rather than things you need to edit directly. You edit things by overriding things in your user "layer". Your user layer consists of a user modules layer, autoexec layer, game overrides layer, and class config layer. Modules override mastercomfig/preset modules layer. Autoexec layer overrides mastercomfig/addons layer. Game overrides layer overrides mastercomfig game overrides (run on game join/every time you change class), and per-class networking settings, for all classes. Class config layer overrides mastercomfig game overrides (class configs run after game overrides) and per-class networking settings, for a single class.
 
