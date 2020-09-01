@@ -2,7 +2,6 @@ precache
 {
 	"model"			"sprites/white.vmt"
 	"model"			"sprites/physbeam.vmt"
-
 	"model"			"models/vgui/UI_team01.mdl"
 	"model"			"models/vgui/UI_class01.mdl"
 	"model"			"models/vgui/UI_welcome01_screen.mdl"
@@ -15,6 +14,5 @@ precache
 	"model"			"models/vgui/ui_arenadoor01.mdl"
 	"model"			"models/vgui/versus_doors.mdl"
 	"model"			"models/props_ui/banner.mdl"
-
 	"model"			"models/items/medkit_small.mdl"
 }
