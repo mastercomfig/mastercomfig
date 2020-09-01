@@ -49,7 +49,7 @@ mastercomfig now supports selecting a preset after download. Add a file to your 
 
 ## Null cancelling movement addon binds
 
-The default binding for the null cancelling movement is WASD, but you can use `user/modules.cfg` to select a new binding:
+The default binding for the null cancelling movement addon is WASD, but you can use `user/modules.cfg` to select a new binding:
 
 * `move_bind=wasd`: The standard WASD layout (default).
 * `move_bind=esdf`: The alternative ESDF layout.
