@@ -547,6 +547,17 @@ Default setting: based on which preset you are currently using.
 * **`outlines=medium`**: Disable nametags and player outlines, enable objective outlines.
 * **`outlines=high`**: Enable nametags and outlines.
 
+### Map Background
+
+Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
+
+Default setting: **`dynamic_background=off`** (all presets).
+
+* **`dynamic_background=off`**: No main menu map background on startup.
+* **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
+* **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
+* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
+
 ## Sound modules
 
 ### Sound
@@ -578,17 +589,6 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
 ## Miscellaneous modules
-
-### Map Background
-
-Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
-
-Default setting: **`dynamic_background=off`** (all presets).
-
-* **`dynamic_background=off`**: No main menu map background on startup.
-* **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
-* **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
-* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 
 ### Logo
 
