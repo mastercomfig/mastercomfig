@@ -525,17 +525,6 @@ Default setting: **`hud_achievement=off`** (all presets).
 * **`hud_achievement=off`**: Disable achievement tracker panel completely.
 * **`hud_achievement=on`**: Enable support for achievement tracker panel.
 
-### Debug
-
-Controls various debugging displays and console.
-
-Default setting: **`debug=minimal`** (all presets, except Very Low).
-
-* **`debug=on`**: Enable all debug HUDs.
-* **`debug=on_partial`**: Enable all but the noisiest debug HUDs.
-* **`debug=minimal`**: Enable developer console.
-* **`debug=off`**: Disable all debug features.
-
 ### Outlines
 
 Controls the outlines that appear through walls for players and some objectives (payload, CTF briefcase).
@@ -546,37 +535,6 @@ Default setting: based on which preset you are currently using.
 * **`outlines=low`**: Enable nametags, disable outlines.
 * **`outlines=medium`**: Disable nametags and player outlines, enable objective outlines.
 * **`outlines=high`**: Enable nametags and outlines.
-
-### Map Background
-
-Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
-
-Default setting: **`dynamic_background=off`** (all presets).
-
-* **`dynamic_background=off`**: No main menu map background on startup.
-* **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
-* **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
-* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
-
-### Logo
-
-Controls the mastercomfig logo which appears in console on start up.
-
-Default setting: **`logo=on`** (all presets, except Very Low).
-
-* **`logo=off`**: Does not print logo in console on startup.
-* **`logo=on`**: Prints logo in console on startup.
-
-## Mod Support
-
-Ensures compatibility with animation and model mods.
-
-Default setting: **`mod_support=on`** (all presets).
-
-You may want to also enable preloading using the [Map Background module](#map-background).
-
-* **`mod_support=off`**: Enables better file system performance for faster first map loads, at the cost of animation and model mods causing crashes.
-* **`mod_support=on`**: Disables file system optimizations for the first map load, making it slower, but fixes crashes caused by animation and model mods.
 
 ## Sound modules
 
@@ -607,3 +565,63 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
+
+## Miscellaneous modules
+
+### Debug
+
+Controls various debugging displays and console.
+
+Default setting: **`debug=minimal`** (all presets, except Very Low).
+
+* **`debug=on`**: Enable all debug HUDs.
+* **`debug=on_partial`**: Enable all but the noisiest debug HUDs.
+* **`debug=minimal`**: Enable developer console.
+* **`debug=off`**: Disable all debug features.
+
+### Map Background
+
+Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
+
+Default setting: **`dynamic_background=off`** (all presets).
+
+* **`dynamic_background=off`**: No main menu map background on startup.
+* **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
+* **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
+* **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
+
+### Logo
+
+Controls the mastercomfig logo which appears in console on start up.
+
+Default setting: **`logo=on`** (all presets, except Very Low).
+
+* **`logo=off`**: Does not print logo in console on startup.
+* **`logo=on`**: Prints logo in console on startup.
+
+### Mod Support
+
+Ensures compatibility with animation and model mods.
+
+Default setting: **`mod_support=on`** (all presets).
+
+You may want to also enable preloading using the [Map Background module](#map-background).
+
+* **`mod_support=off`**: Enables better file system performance for faster first map loads, at the cost of animation and model mods causing crashes.
+* **`mod_support=on`**: Disables file system optimizations for the first map load, making it slower, but fixes crashes caused by animation and model mods.
+
+### Movement Binds
+
+!!! warning
+    This module requires the Null Movement addon in order to function
+
+Changes the keys that are used to move while the Null Movement addon is installed, if your preferred movement keys are not listed here, you can edit them manually outside of modules.cfg. Instructions for doing so can be found [here](https://docs.mastercomfig.com/en/latest/customization/custom_configs/#null-cancelling-movement-addon-binds).
+
+Default setting: **`move_bind=wasd`** (all presets).
+
+* **`move_bind=wasd`**: Set movement keys to WASD (default).
+* **`move_bind=esdf`**: Set movement keys to ESDF.
+* **`move_bind=zqsd`**: Set movement keys to ZQSD (default for AZERTY keyboards).
+* **`move_bind=arrows`**: Set movement keys to the Arrow Keys.
+* **`move_bind=asdf`**: Set movement keys to ASDF (A/S forward/back, D/F left/right).
+* **`move_bind=vim`**: Set movement keys to HJKL (K/J forward/back, H/L left/right).
