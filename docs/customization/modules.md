@@ -525,6 +525,17 @@ Default setting: **`hud_achievement=off`** (all presets).
 * **`hud_achievement=off`**: Disable achievement tracker panel completely.
 * **`hud_achievement=on`**: Enable support for achievement tracker panel.
 
+### Debug
+
+Controls various debugging displays and console.
+
+Default setting: **`debug=minimal`** (all presets, except Very Low).
+
+* **`debug=on`**: Enable all debug HUDs.
+* **`debug=on_partial`**: Enable all but the noisiest debug HUDs.
+* **`debug=minimal`**: Enable developer console.
+* **`debug=off`**: Disable all debug features.
+
 ### Outlines
 
 Controls the outlines that appear through walls for players and some objectives (payload, CTF briefcase).
@@ -567,17 +578,6 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
 ## Miscellaneous modules
-
-### Debug
-
-Controls various debugging displays and console.
-
-Default setting: **`debug=minimal`** (all presets, except Very Low).
-
-* **`debug=on`**: Enable all debug HUDs.
-* **`debug=on_partial`**: Enable all but the noisiest debug HUDs.
-* **`debug=minimal`**: Enable developer console.
-* **`debug=off`**: Disable all debug features.
 
 ### Map Background
 
