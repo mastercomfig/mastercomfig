@@ -47,24 +47,6 @@ mastercomfig now supports selecting a preset after download. Add a file to your 
 * low
 * very-low
 
-## Null cancelling movement addon binds
-
-The default binding for the null cancelling movement addon is WASD, but you can use `user/modules.cfg` to select a new binding:
-
-* `move_bind=wasd`: The standard WASD layout (default).
-* `move_bind=esdf`: The alternative ESDF layout.
-* `move_bind=zqsd`: WASD for AZERTY keyboards.
-* `move_bind=arrows`: The classic arrow keys layout.
-* `move_bind=asdf`: The classic ASDF layout (A/S forward/back, D/F left/right).
-* `move_bind=vim`: Vim mode! HJKL, as in Vim (K/J forward/back, H/L left/right).
-
-If you want a different or more advanced binding, you can use the aliases:
-
-* Forward: `+mf`
-* Left: `+ml`
-* Backward: `+mb`
-* Right: `+mr`
-
 ## Optional Aliases
 
 !!! warning

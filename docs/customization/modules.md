@@ -615,7 +615,20 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 !!! warning
     This module requires the Null Movement addon in order to function
 
-Changes the keys that are used to move while the Null Movement addon is installed, if your preferred movement keys are not listed here, you can edit them manually outside of modules.cfg. Instructions for doing so can be found [here](https://docs.mastercomfig.com/en/latest/customization/custom_configs/#null-cancelling-movement-addon-binds).
+Changes the keys that are used to move while the Null Movement addon is installed. 
+If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:
+
+* Forward: `+mf`
+* Left: `+ml`
+* Backward: `+mb`
+* Right: `+mr`
+
+Example:
+
+* Forward: `bind w +mf`
+* Left: `bind a +ml`
+* Backward: `bind s +mb`
+* Right: `bind d +mr`
 
 Default setting: **`move_bind=wasd`** (all presets).
 
