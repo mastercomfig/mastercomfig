@@ -1,10 +1,10 @@
 {
   "networking": {
-    "display": "Networking"
+    "display": "Networking",
     "modules": [
       {
         "name": "sourcetv",
-        "display": "SourceTV Compatibility"
+        "display": "SourceTV Compatibility",
         "description": "Ensures compatibility with SourceTV spectating.",
         "type": "switch",
         "values": [
@@ -52,7 +52,7 @@
       {
         "name": "packet_size",
         "display": "Packet Size",
-        "description": "Controls how big packets are and how they are split up/compressed."
+        "description": "Controls how big packets are and how they are split up/compressed.",
         "type": "select",
         "values": [
           {
