@@ -590,15 +590,6 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 ## Miscellaneous modules
 
-### Logo
-
-Controls the mastercomfig logo which appears in console on start up.
-
-Default setting: **`logo=on`** (all presets, except Very Low).
-
-* **`logo=off`**: Does not print logo in console on startup.
-* **`logo=on`**: Prints logo in console on startup.
-
 ### Mod Support
 
 Ensures compatibility with animation and model mods.
@@ -610,12 +601,21 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 * **`mod_support=off`**: Enables better file system performance for faster first map loads, at the cost of animation and model mods causing crashes.
 * **`mod_support=on`**: Disables file system optimizations for the first map load, making it slower, but fixes crashes caused by animation and model mods.
 
+### Logo
+
+Controls the mastercomfig logo which appears in console on start up.
+
+Default setting: **`logo=on`** (all presets, except Very Low).
+
+* **`logo=off`**: Does not print logo in console on startup.
+* **`logo=on`**: Prints logo in console on startup.
+
 ### Movement Binds
 
 !!! warning
     This module requires the Null Movement addon in order to function
 
-Changes the keys that are used to move while the Null Movement addon is installed. 
+Changes the keys that are used to move while the Null Movement addon is installed.
 If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:
 
 * Forward: `+mf`
