@@ -16,7 +16,7 @@ This is an addon which tweaks mouse settings for stabler and consistent mouse in
 
 ### mastercomfig-lowmem-addon
 
-This is an addon which aggressively reduces memory usage for low memory systems.
+This is an addon which aggressively reduces memory usage for low memory systems(2GB and lower).
 
 ### mastercomfig-no-footsteps-addon
 
