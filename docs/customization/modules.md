@@ -34,16 +34,16 @@ Since modules aliases act like normal commands, they can also be used in console
 
 ### SourceTV Compatibility
 
-Ensures setting compatibility with SourceTV.
+Ensures compatibility with SourceTV spectating.
 
 Default setting: **`sourcetv=on`** (all presets).
 
 * **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
 * **`sourcetv=on`**: Keeps compatibility with SourceTV.
 
-### Packet rate
+### Packet Rate
 
-Controls how fast you send and receive from the server.
+Controls how fast you send to and receive from the server.
 
 Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
@@ -97,6 +97,8 @@ Default setting: **`bandwidth=1.5Mbps`** (all presets).
 * **`bandwidth=8.0Mbps`**: 8.0Mbps game traffic bandwidth. Absolute maximum allowed by the game.
 
 ### Downloads
+
+Filters what custom content is allowed to be downloaded from the server.
 
 Default setting: not set.
 
