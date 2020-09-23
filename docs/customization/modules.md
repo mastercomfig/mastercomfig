@@ -489,6 +489,16 @@ Default setting: **`hud_panels=on`** (all presets, except Very Low).
 * **`hud_panels=off`**: Disables health/player info panels on hover.
 * **`hud_panels=on`**: Enables health/player info panels on hover.
 
+## Match HUD
+
+Toggle match status HUD at the top of the screen.
+
+Default setting **`match_hud=on`** (all presets, except Very Low).
+
+* **`match_hud=off`**: Disables match status HUD.
+* **`match_hud=on`**: Enables match status HUD.
+
+
 ### Messages
 
 Controls text chat, which displays player messages and voice messages.
