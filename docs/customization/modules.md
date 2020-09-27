@@ -36,10 +36,10 @@ Since modules aliases act like normal commands, they can also be used in console
 
 Ensures compatibility with SourceTV spectating.
 
-Default setting: **`sourcetv_compatibility=on`** (all presets).
+Default setting: **`sourcetv=on`** (all presets).
 
-* **`sourcetv_compatibility=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
-* **`sourcetv_compatibility=on`**: Keeps compatibility with SourceTV.
+* **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
+* **`sourcetv=on`**: Keeps compatibility with SourceTV.
 
 ### Packet Rate
 
