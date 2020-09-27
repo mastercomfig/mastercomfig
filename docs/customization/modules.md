@@ -36,10 +36,10 @@ Since modules aliases act like normal commands, they can also be used in console
 
 Ensures compatibility with SourceTV spectating.
 
-Default setting: **`sourcetv=on`** (all presets).
+Default setting: **`sourcetv_compatibility=on`** (all presets).
 
-* **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
-* **`sourcetv=on`**: Keeps compatibility with SourceTV.
+* **`sourcetv_compatibility=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
+* **`sourcetv_compatibility=on`**: Keeps compatibility with SourceTV.
 
 ### Packet Rate
 
@@ -454,19 +454,20 @@ Setting it higher can reduce input delay.
 Default setting: **`fpscap=1000`** (all presets).
 
 * **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
-* **`fpscap=30`**: Sets FPS cap to 30FPS.
-* **`fpscap=60`**: Sets FPS cap to 60FPS.
-* **`fpscap=75`**: Sets FPS cap to 75FPS.
-* **`fpscap=120`**: Sets FPS cap to 120FPS.
-* **`fpscap=144`**: Sets FPS cap to 144FPS.
-* **`fpscap=160`**: Sets FPS cap to 160FPS.
-* **`fpscap=165`**: Sets FPS cap to 165FPS.
-* **`fpscap=180`**: Sets FPS cap to 180FPS.
-* **`fpscap=200`**: Sets FPS cap to 200FPS.
-* **`fpscap=240`**: Sets FPS cap to 240FPS.
-* **`fpscap=300`**: Sets FPS cap to 300FPS.
-* **`fpscap=360`**: Sets FPS cap to 360FPS.
-* **`fpscap=1000`**: Sets FPS cap to 1000FPS (maximum safe value).
+* **`fpscap=30`**: Sets FPS cap to 30 FPS.
+* **`fpscap=60`**: Sets FPS cap to 60 FPS.
+* **`fpscap=75`**: Sets FPS cap to 75 FPS.
+* **`fpscap=120`**: Sets FPS cap to 120 FPS.
+* **`fpscap=144`**: Sets FPS cap to 144 FPS.
+* **`fpscap=160`**: Sets FPS cap to 160 FPS.
+* **`fpscap=165`**: Sets FPS cap to 165 FPS.
+* **`fpscap=180`**: Sets FPS cap to 180 FPS.
+* **`fpscap=200`**: Sets FPS cap to 200 FPS.
+* **`fpscap=240`**: Sets FPS cap to 240 FPS.
+* **`fpscap=300`**: Sets FPS cap to 300 FPS.
+* **`fpscap=360`**: Sets FPS cap to 360 FPS.
+* **`fpscap=400`**: Sets FPS cap to 400 FPS.
+* **`fpscap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
 * **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
 
 ## HUD modules
@@ -625,7 +626,7 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 ### Movement Binds
 
 !!! warning
-    This module requires the Null Movement addon in order to function
+    This module requires the Null Movement addon in order to function.
 
 Changes the keys that are used to move while the Null Movement addon is installed.
 If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:
