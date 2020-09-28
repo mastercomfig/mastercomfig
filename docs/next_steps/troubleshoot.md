@@ -61,9 +61,7 @@ Make sure you don't have any infinite loops caused by an `exec autoexec` in your
 
 ## Preloading animation and/or model mods not working or crashing
 
-If you're trying to preload a mod to bypass `sv_pure`, async disk loading has been found to be incompatible with this.
-
-Add `mod_support=on` to your `modules.cfg` to disable some async disk loading features.
+If you're trying to preload a mod to bypass `sv_pure`, async disk loading has been found to be incompatible with this. Fortunately, the config has mod support enabled by default, so you don't have to worry about this.
 
 You may also want to preload mods with the `dynamic_background=itemtest` module. If you are using yttrium's viewmodels, use `dynamic_background=preload` instead.
 
