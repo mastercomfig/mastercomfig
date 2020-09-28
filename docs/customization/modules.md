@@ -557,7 +557,7 @@ Default setting: based on which preset you are currently using.
 * **`outlines=off`**: Disable all outlines.
 * **`outlines=low`**: Enable objective outlines.
 * **`outlines=medium`**: Enable objective outlines and spectator outlines.
-* **`outlines=high`**: Enable objetive outlines, player outlines upon respawning and spectator outlines.
+* **`outlines=high`**: Enable objective outlines, teammates outlines upon respawning and spectator outlines.
 
 ### Map Background
 
