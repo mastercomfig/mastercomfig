@@ -138,7 +138,7 @@ Default setting: based on which preset you are currently using.
 
 Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
-Default setting: **`lighting_ex=high`** (all presets except Low and Very Low (**`lighting_ex=low`**)).
+Default setting: **`lighting_ex=high`** (all presets, except Low and Very Low).
 
 * **`lighting_ex=low`**: Phong off.
 * **`lighting_ex=high`**: Phong on.
@@ -196,13 +196,13 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, barely reduces particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post Processing
+### General Post-Processing
 
-Controls standard post processing effects.
+Controls standard post-processing effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`post_processing=off`**: No post processing.
+* **`post_processing=off`**: No post-processing.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
@@ -335,7 +335,7 @@ Default setting: based on which preset you are currently using.
 
 ### Silly gibs
 
-Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if `gibs=off`).
+Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if gibs are off).
 
 * **`sillygibs=off`**: Normal gibs and blood.
 * **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
@@ -387,7 +387,7 @@ Default setting: based on which preset you are currently using.
 
 How fast the animation is on the killstreak sheen glow for weapons.
 
-Default setting: based on which preset you are currently using.
+Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
 
 * **`sheens_speed=off`**: Skips updating sheen glow animation.
 * **`sheens_speed=slow`**: Slow speed.
@@ -498,7 +498,6 @@ Default setting **`match_hud=on`** (all presets, except Very Low).
 
 * **`match_hud=off`**: Disables match status HUD.
 * **`match_hud=on`**: Enables match status HUD.
-
 
 ### Messages
 
