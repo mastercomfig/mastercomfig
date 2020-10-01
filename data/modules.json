@@ -369,9 +369,6 @@
         ]
       },
       {
-
-      },
-      {
         "name": "sprays",
         "display": "Spray Decals",
         "type": "switch",
