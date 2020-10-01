@@ -3,7 +3,7 @@
     "modules": [
       {
         "name": "lod",
-        "display": "Model Quality",
+        "display": "Level of Detail",
         "values": [
           {
             "value": "low"
@@ -222,7 +222,7 @@
       },
       {
         "name": "texture_filter",
-        "display": "Texture filtering",
+        "display": "Texture Filtering",
         "values": [
           {
             "value": "bilinear"
@@ -289,7 +289,7 @@
       },
       {
         "name": "sprays",
-        "display": "Spray decals",
+        "display": "Spray Decals",
         "type": "switch",
         "values": [
           {
@@ -319,7 +319,7 @@
       },
       {
         "name": "sillygibs",
-        "display": "Silly gibs",
+        "display": "Silly Gibs",
         "type": "switch",
         "values": [
           {
@@ -363,6 +363,10 @@
             "value": "high"
           }
         ]
+      },
+      {
+        "name": "3dsky",
+        "display": "3D Sky"
       },
       {
         "name": "fpscap"
