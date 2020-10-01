@@ -5,9 +5,43 @@
       {
         "name": "lod",
         "display": "Model Quality"
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
       },
       {
         "name": "shadows"
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
       },
       {
         "name": "characters"
@@ -16,30 +50,186 @@
         "name": "gore"
       },
       {
-        "name": "water"
+        "name": "water",
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "medium_high"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "very_high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
       },
       {
-        "name": "aa"
+        "name": "aa_msaa",
+        "display": "MSAA Anti-aliasing",
+        "type": "slider",
+        "values": [
+          {
+            "value": "2x"
+          },
+          {
+            "value": "4x"
+          },
+          {
+            "value": "8x"
+          }
+        ]
+      },
+      {
+        "name": "aa",
+        "display": "Anti-aliasing",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
         "name": "decals"
       },
       {
-        "name": "effects"
+        "name": "effects",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
       },
       {
-        "name": "post_processing"
+        "name": "particles"
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {﻿
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "post_processing",
+        "display": "General Post Processing",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "pyrovision",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
       },
       {
         "name": "lighting",
-        "display": "Shader Quality"
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "medium_high"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "very_high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "lighting_ex",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
       },
       {
         "name": "props",
-        "display": "World and Prop Detail"
+        "display": "Prop Detail"
       },
       {
-        "name": "motion_blur"
+        "name": "motion_blur",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
       },
       {
         "name": "fpscap"
@@ -132,7 +322,6 @@
       },
       {
         "name": "packet_rate",
-        "display": "Packet Rate",
         "description": "Controls how fast you send to and receive from the server.",
         "type": "group",
         "values": [
@@ -146,7 +335,6 @@
       },
       {
         "name": "snapshot_buffer",
-        "display": "Snapshot Buffer",
         "description": "Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.",
         "advanced_display": "Also known as linear interpolation (lerp or interp). mastercomfig sets this automatically per class, but setting this module will override this behavior.",
         "tags": ["advanced"],
@@ -165,9 +353,7 @@
       },
       {
         "name": "packet_size",
-        "display": "Packet Size",
         "description": "Controls how big packets are and how they are split up/compressed.",
-        "type": "select",
         "values": [
           {
             "value": "small"
@@ -188,7 +374,6 @@
       },
       {
         "name": "bandwidth",
-        "display": "Bandwidth",
         "description": "Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).",
         "advanced_display": "This does not increase data usage, just restricts how quickly data can be sent.",
         "type": "slider",
@@ -196,7 +381,6 @@
       },
       {
         "name": "downloads",
-        "display": "Downloads",
         "description": "Filters what custom content is allowed to be downloaded from the server.",
         "type": "group",
         "values": [

@@ -238,7 +238,7 @@ Default setting: based on which preset you are currently using.
 
 ### MSAA Anti-aliasing
 
-Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an NVIDIA card that supports it).
+Controls the main hardware based MSAA anti-aliasing.
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
@@ -249,7 +249,6 @@ Default setting: based on which preset you are currently using.
 * **`aa_msaa=2x`**: MSAA 2x
 * **`aa_msaa=4x`**: MSAA 4x
 * **`aa_msaa=8x`**: MSAA 8x
-* **`aa_msaa=16x`**: MSAA 8x + CSAA 2x if supported. MSAA 8x otherwise.
 
 ### Texture filtering
 
@@ -285,7 +284,6 @@ Default setting: based on which preset you are currently using.
 Controls bullet holes and overall decal support.
 
 !!! note
-
     In the Very Low preset, decals are forced invisible.
 
 Default setting: based on which preset you are currently using.
