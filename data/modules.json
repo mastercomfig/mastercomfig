@@ -3,7 +3,7 @@
     "modules": [
       {
         "name": "lod",
-        "display": "Model Quality"
+        "display": "Model Quality",
         "values": [
           {
             "value": "low"
@@ -20,7 +20,44 @@
         ]
       },
       {
-        "name": "shadows"
+        "name": "lighting",
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "medium_high"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "very_high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "lighting_ex",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "shadows",
         "values": [
           {
             "value": "off"
@@ -43,10 +80,21 @@
         ]
       },
       {
-        "name": "characters"
-      },
-      {
-        "name": "gore"
+        "name": "effects",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
       },
       {
         "name": "water",
@@ -75,56 +123,7 @@
         ]
       },
       {
-        "name": "aa_msaa",
-        "display": "MSAA Anti-aliasing",
-        "type": "slider",
-        "values": [
-          {
-            "value": "2x"
-          },
-          {
-            "value": "4x"
-          },
-          {
-            "value": "8x"
-          }
-        ]
-      },
-      {
-        "name": "aa",
-        "display": "Anti-aliasing",
-        "type": "switch",
-        "values": [
-          {
-            "value": "off"
-          },
-          {
-            "value": "on"
-          }
-        ]
-      },
-      {
-        "name": "decals"
-      },
-      {
-        "name": "effects",
-        "values": [
-          {
-            "value": "low"
-          },
-          {
-            "value": "medium"
-          },
-          {
-            "value": "high"
-          },
-          {
-            "value": "ultra"
-          }
-        ]
-      },
-      {
-        "name": "particles"
+        "name": "particles",
         "values": [
           {
             "value": "very_low"
@@ -176,7 +175,77 @@
         ]
       },
       {
-        "name": "lighting",
+        "name": "motion_blur",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "aa",
+        "display": "Anti-aliasing",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "aa_msaa",
+        "display": "MSAA Anti-aliasing",
+        "type": "slider",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "2x"
+          },
+          {
+            "value": "4x"
+          },
+          {
+            "value": "8x"
+          }
+        ]
+      },
+      {
+        "name": "texture_filter",
+        "display": "Texture filtering",
+        "values": [
+          {
+            "value": "bilinear"
+          },
+          {
+            "value": "trilinear"
+          },
+          {
+            "value": "aniso2x"
+          },
+          {
+            "value": "aniso4x"
+          },
+          {
+            "value": "aniso8x"
+          },
+          {
+            "value": "aniso16x"
+          }
+        ]
+      },
+      {
+        "name": "characters",
         "values": [
           {
             "value": "very_low"
@@ -194,7 +263,24 @@
             "value": "high"
           },
           {
-            "value": "very_high"
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "decals",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
           },
           {
             "value": "ultra"
@@ -202,10 +288,29 @@
         ]
       },
       {
-        "name": "lighting_ex",
+        "name": "sprays",
+        "display": "Spray decals",
+        "type": "switch",
         "values": [
           {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "gibs",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
             "value": "low"
+          },
+          {
+            "value": "medium"
           },
           {
             "value": "high"
@@ -213,17 +318,46 @@
         ]
       },
       {
-        "name": "props",
-        "display": "Prop Detail"
+        "name": "sillygibs",
+        "display": "Silly gibs",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "motion_blur",
+        "name": "props",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "ragdolls",
         "values": [
           {
             "value": "off"
           },
           {
             "value": "low"
+          },
+          {
+            "value": "medium"
           },
           {
             "value": "high"
@@ -260,23 +394,11 @@
         "name": "match_hud"
       },
       {
-        "name": "net_stats"
-      },
-      {
         "name": "hud_achievement"
       },
       {
         "name": "debug"
-      },
-      {
-        "name": "hud_fps"
-      },
-      {
-        "name": "hud_battery"
-      },
-      {
-        "name": "hud_pos"
-      },
+      }
     ]
   },
   "sound": {
@@ -395,7 +517,7 @@
             "value": "none"
           }
         ]
-      },
+      }
     ]
   }
 }
