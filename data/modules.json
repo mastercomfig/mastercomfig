@@ -298,20 +298,7 @@
         "name": "aa_msaa",
         "display": "MSAA Anti-aliasing",
         "type": "slider",
-        "values": [
-          {
-            "value": "off"
-          },
-          {
-            "value": "2x"
-          },
-          {
-            "value": "4x"
-          },
-          {
-            "value": "8x"
-          }
-        ]
+        "values": ["off", "2x", "4x", "8x"]
       },
       {
         "name": "texture_filter",
@@ -362,6 +349,7 @@
       },
       {
         "name": "decals",
+        "display": "General Decals",
         "values": [
           {
             "value": "off"
@@ -379,6 +367,9 @@
             "value": "ultra"
           }
         ]
+      },
+      {
+
       },
       {
         "name": "sprays",
