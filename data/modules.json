@@ -1,6 +1,5 @@
 {
   "graphics": {
-    "display": "graphics",
     "modules": [
       {
         "name": "lod",
@@ -237,7 +236,7 @@
     ]
   },
   "hud": {
-    "display": "HUD and UI",
+    "display": "HUD",
     "modules": [
       {
         "name": "hud_player_model"
@@ -304,7 +303,6 @@
     ]
   },
   "networking": {
-    "display": "Networking",
     "modules": [
       {
         "name": "sourcetv",
