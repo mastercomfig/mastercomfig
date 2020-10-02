@@ -318,16 +318,20 @@
             "value": "trilinear"
           },
           {
-            "value": "aniso2x"
+            "value": "aniso2x",
+            "display": "Anisotropic 2x"
           },
           {
-            "value": "aniso4x"
+            "value": "aniso4x",
+            "display": "Anisotropic 4x"
           },
           {
-            "value": "aniso8x"
+            "value": "aniso8x",
+            "display": "Anisotropic 8x"
           },
           {
-            "value": "aniso16x"
+            "value": "aniso16x",
+            "display": "Anisotropic 16x"
           }
         ]
       },
@@ -807,19 +811,23 @@
         "name": "move_bind",
         "values": [
           {
-            "value": "wasd"
+            "value": "wasd",
+            "display": "WASD"
           },
           {
-            "value": "esdf"
+            "value": "esdf",
+            "display": "ESDF"
           },
           {
-            "value": "zqsd"
+            "value": "zqsd",
+            "display": "ZQSD"
           },
           {
             "value": "arrows"
           },
           {
-            "value": "asdf"
+            "value": "asdf",
+            "display": "ASDf"
           },
           {
             "value": "vim"
