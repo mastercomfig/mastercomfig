@@ -51,7 +51,7 @@
     "medium": "medium",
     "medium-high": "medium",
     "high": "high",
-    "effects": "ultra"
+    "ultra": "ultra"
   },
   "water": {
     "very-low": "very_low",
