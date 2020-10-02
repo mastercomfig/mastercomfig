@@ -1,0 +1,253 @@
+{
+  "sourcetv": {
+    "default": "on"
+  },
+  "packet_rate": {
+    "default": "standard",
+    "very-low": "congestion"
+  },
+  "snapshot_buffer": {
+    "default": "auto"
+  },
+  "packet_size": {
+    "default": "big"
+  },
+  "bandwidth": {
+    "default": "1.5Mbps"
+  },
+  "download": {
+    "default": "auto"
+  },
+  "lod": {
+    "default": "low",
+    "medium-high": "high",
+    "high": "high",
+    "ultra": "ultra"
+  },
+  "lighting": {
+    "very-low": "very_low",
+    "low": "low",
+    "medium-low": "medium",
+    "medium": "medium_high",
+    "medium-high": "medium_high",
+    "high": "very_high",
+    "ultra": "ultra"
+  },
+  "lighting_ex": {
+    "default": "high",
+    "very-low": "low",
+    "low": "low",
+    "medium-low": "low"
+  },
+  "shadows": {
+    "default": "off",
+    "medium": "medium",
+    "medium-high": "medium",
+    "high": "high",
+    "ultra": "ultra"
+  },
+  "effects": {
+    "default": "low",
+    "medium": "medium",
+    "medium-high": "medium",
+    "high": "high",
+    "effects": "ultra"
+  },
+  "water": {
+    "very-low": "very_low",
+    "low": "low",
+    "medium-low": "medium",
+    "medium": "medium",
+    "medium-high": "high",
+    "high": "very_high",
+    "ultra": "ultra"
+  },
+  "particles": {
+    "default": "low",
+    "very-low": "very_low",
+    "medium-high": "medium",
+    "high": "high",
+    "ultra": "ultra"
+  },
+  "post_processing": {
+    "default": "off",
+    "medium": "low",
+    "medium-high": "high",
+    "high": "high",
+    "ultra": "high"
+  },
+  "pyrovision": {
+    "default": "low",
+    "medium-high": "medium",
+    "high": "high",
+    "ultra": "high"
+  },
+  "motion_blur": {
+    "default": "off"
+  },
+  "aa": {
+    "default": "off",
+    "medium-high": "on",
+    "high": "on",
+    "ultra": "on"
+  },
+  "aa_msaa": {
+    "default": "off",
+    "medium-high": "4x",
+    "high": "8x",
+    "ultra": "8x"
+  },
+  "texture_filter": {
+    "default": "trilinear",
+    "very-low": "bilinear",
+    "low": "bilinear",
+    "medium-high": "aniso4x",
+    "high": "aniso8x",
+    "ultra": "aniso16x"
+  },
+  "characters": {
+    "default": "low",
+    "very-low": "very_low",
+    "low": "very_low",
+    "medium-high": "high",
+    "high": "high",
+    "ultra": "ultra"
+  },
+  "decals": {
+    "default": "off",
+    "medium": "low",
+    "medium-high": "low",
+    "high": "medium",
+    "ultra": "ultra"
+  },
+  "decals_models": {
+    "default": "off",
+    "high": "low",
+    "ultra": "high"
+  },
+  "decals_art": {
+    "default": "on",
+    "very-low": "off",
+    "low", "off",
+    "medium-low": "off"
+  },
+  "sprays": {
+    "default": "off",
+    "medium-high": "on",
+    "high": "on",
+    "ultra": "on"
+  },
+  "sillygibs": {
+    "default": "auto",
+  },
+  "gibs": {
+    "default": "off",
+    "medium-high": "low",
+    "high": "medium",
+    "ultra": "high"
+  },
+  "props": {
+    "default": "medium",
+    "very-low": "low",
+    "high": "high",
+    "ultra": "ultra"
+  },
+  "ragdolls": {
+    "default": "off",
+    "medium-high": "medium",
+    "high": "high",
+    "ultra": "high"
+  },
+  "3dsky": {
+    "default": "off",
+    "high": "on",
+    "ultra": "on"
+  },
+  "jigglebones": {
+    "default": "off",
+    "medium-high": "on",
+    "high": "on",
+    "ultra": "force_on"
+  },
+  "sheens_speed": {
+    "default": "slow",
+    "very-low": "off"
+  },
+  "sheens_tint": {
+    "default": "high"
+  },
+  "textures": {
+    "default": "very_low",
+    "medium-low": "low",
+    "medium": "medium",
+    "medium-high": "high",
+    "high": "very_high",
+    "ultra": "very_high"
+  },
+  "ropes": {
+    "default": "off",
+    "medium-high": "low",
+    "high": "high",
+    "ultra": "ultra"
+  },
+  "fpscap": {
+    "default": "1000"
+  },
+  "hud_player_model": {
+    "default": "off",
+    "high": "on",
+    "ultra": "on"
+  },
+  "hud_panels": {
+    "default": "on",
+    "very-low": "off"
+  },
+  "match_hud": {
+    "default": "on",
+    "very-low": "off"
+  },
+  "messages": {
+    "default": "on",
+    "very-low": "off"
+  },
+  "killfeed": {
+    "default": "on",
+    "very-low": "off"
+  },
+  "killstreaks": {
+    "default": "high"
+  },
+  "hud_achievement": {
+    "default": "on",
+    "very-low": "off"
+  },
+  "debug": {
+    "default": "minimal",
+    "very-low": "off"
+  },
+  "outlines",
+  "dynamic_background": {
+    "default": "off"
+  },
+  "sound": {
+    "default": "low",
+    "medium": "medium",
+    "medium-high": "high",
+    "high": "very_high",
+    "ultra": "ultra"
+  },
+  "voice_chat": {
+    "default" "on",
+    "very-low": "off"
+  },
+  "mod_support": {
+    "default": "on"
+  },
+  "logo": {
+    "default" "on",
+    "very-low": "off"
+  },
+  "move_bind": {
+    "default": "wasd"
+  }
+}

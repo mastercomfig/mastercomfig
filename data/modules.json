@@ -34,6 +34,9 @@
         "tags": ["advanced"],
         "values": [
           {
+            "value": "auto"
+          },
+          {
             "value": "low"
           },
           {
@@ -73,9 +76,13 @@
         "values": ["128Kbps", "192Kbps", "384Kbps", "512Kbps", "768Kbps", "1.0Mbps", "1.5Mbps", "2.0Mbps","2.5Mbps", "3.0Mbps", "4.0Mbps", "6.0Mbps", "8.0Mbps"]
       },
       {
-        "name": "downloads",
+        "name": "download",
+        "display": "Downloads",
         "description": "Filters what custom content is allowed to be downloaded from the server.",
         "values": [
+          {
+            "value": "auto"
+          },
           {
             "value": "all"
           },
@@ -369,6 +376,34 @@
         ]
       },
       {
+        "name": "decals_models",
+        "display": "Model Decals",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "decals_art",
+        "display": "Map Decals",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
         "name": "sprays",
         "display": "Spray Decals",
         "type": "switch",
@@ -403,6 +438,9 @@
         "display": "Silly Gibs",
         "type": "switch",
         "values": [
+          {
+            "value": "auto"
+          },
           {
             "value": "off"
           },
@@ -447,10 +485,156 @@
       },
       {
         "name": "3dsky",
-        "display": "3D Sky"
+        "display": "3D Sky",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "fpscap"
+        "name": "jigglebones",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          },
+          {
+            "value": "force_on"
+          }
+        ]
+      },
+      {
+        "name": "sheens_speed",
+        "display": "Killstreak Sheens Speed",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "slow"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "fast"
+          }
+        ]
+      },
+      {
+        "name": "sheens_tint",
+        "display": "Killstreak Sheens Tint Intensity",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "full"
+          }
+        ]
+      },
+      {
+        "name": "textures",
+        "display": "Texture Quality",
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "very_high"
+          }
+        ]
+      },
+      {
+        "name": "ropes",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "fpscap",
+        "display": "FPS Cap",
+        "type": "slider",
+        "values": [
+          {
+            "value": "powersaver"
+          },
+          {
+            "value": "30"
+          },
+          {
+            "value": "60"
+          },
+          {
+            "value": "75"
+          },
+          {
+            "value": "120"
+          },
+          {
+            "value": "144"
+          },
+          {
+            "value": "160"
+          },
+          {
+            "value": "160"
+          },
+          {
+            "value": "180"
+          },
+          {
+            "value": "200"
+          },
+          {
+            "value": "240"
+          },
+          {
+            "value": "300"
+          },
+          {
+            "value": "360"
+          },
+          {
+            "value": "1000"
+          },
+          {
+            "value": "unlimited"
+          }
+        ]
       }
     ]
   },
@@ -458,54 +642,235 @@
     "display": "HUD",
     "modules": [
       {
-        "name": "hud_player_model"
+        "name": "hud_player_model",
+        "display": "Player model",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "outlines"
+        "name": "hud_panels",
+        "display": "Panels",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "map_background"
+        "name": "match_hud",
+        "display": "Match HUD",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "killfeed"
+        "name": "messages",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "hide"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "messages"
+        "name": "killfeed",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "hud_panels"
+        "name": "killstreaks",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
       },
       {
-        "name": "match_hud"
+        "name": "hud_achievement",
+        "display": "HUD Achievements",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "hud_achievement"
+        "name": "debug",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "minimal"
+          },
+          {
+            "value": "on_partial"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "debug"
+        "name": "outlines",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "dynamic_background",
+        "display": "Map Background",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "preload"
+          },
+          {
+            "value": "itemtest"
+          },
+          {
+            "value": "dustbowl"
+          }
+        ]
       }
     ]
   },
   "sound": {
     "modules": [
       {
-        "name": "sound"
+        "name": "sound",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "very_high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
       },
       {
-        "name": "voice_chat"
+        "name": "voice_chat",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       }
     ]
   },
   "misc": {
     "modules": [
       {
-        "name": "mod_support"
+        "name": "mod_support",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "logo"
+        "name": "logo",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
       },
       {
-        "name": "move_bind"
+        "name": "move_bind",
+        "values": [
+          {
+            "value": "wasd"
+          },
+          {
+            "value": "esdf"
+          },
+          {
+            "value": "zqsd"
+          },
+          {
+            "value": "arrows"
+          },
+          {
+            "value": "asdf"
+          },
+          {
+            "value": "vim"
+          }
+        ]
       }
     ]
   }

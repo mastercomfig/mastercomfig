@@ -1038,8 +1038,8 @@ load_itempreset                          : cmd      :                  : Equip a
 loadcommentary                           : cmd      :                  :
 loader_dump_table                        : cmd      :                  :
 loader_spew_info                         : 0        :                  : 0:Off, 1:Timing, 2:Completions, 3:Late Completions, 4:Purges, -1:All
-lockplayername                           : cmd      :                  : Prevent name changes for this userID.
 loader_spew_info_ex                      : 0        :                  : (internal)
+lockplayername                           : cmd      :                  : Prevent name changes for this userID.
 lod_TransitionDist                       : 800      : , "cl"           :
 log                                      : cmd      :                  : Enables logging to file, console, and udp < on | off >.
 log_verbose_enable                       : 0        : , "sv"           : Set to 1 to enable verbose server log on the server.
@@ -3193,7 +3193,11 @@ tf_populator_debug                       : 0        : , "sv", "cheat"  :
 tf_populator_health_multiplier           : 1        : , "sv", "cheat", "rep", "norecord" :
 tf_powerup_max_charge_time               : 30       : , "sv", "cheat"  :
 tf_powerup_mode                          : 0        : , "sv", "nf"     : Enable/disable powerup mode. Not compatible with Mann Vs Machine mode
+tf_powerup_mode_dominant_multiplier      : 4        : , "sv", "cheat"  : The multiple by which a player must exceed the median kills by in order to be considered dominant
+tf_powerup_mode_imbalance_consecutive_min_players : 10       : , "sv", "cheat"  : Minimum number of players on the server before consecutive imbalance measures trigger team balancing
+tf_powerup_mode_imbalance_consecutive_time : 1500     : , "sv", "cheat"  : Teams are balanced if consecutive imbalance measures for the same team are triggered in less time (seconds)
 tf_powerup_mode_imbalance_delta          : 24       : , "sv", "cheat"  : Powerup kill score lead one team must have before imbalance measures are initiated
+tf_powerup_mode_killcount_timer_length   : 300      : , "sv", "cheat"  : How long to wait between kill count tests that determine if a player is dominating
 tf_preround_push_from_damage_enable      : 0        : , "sv"           : If enabled, this will allow players using certain type of damage to move during pre-round freeze time.
 tf_quest_map_intro_viewed                : 0        : , "a", "cl"      :
 tf_quest_map_tuner_wobble_magnitude      : 0        : , "cl"           :
@@ -3594,5 +3598,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3586 total convars/concommands
+3590 total convars/concommands
 ```
