@@ -128,7 +128,7 @@
   "decals_art": {
     "default": "on",
     "very-low": "off",
-    "low", "off",
+    "low": "off",
     "medium-low": "off"
   },
   "sprays": {
@@ -138,7 +138,7 @@
     "ultra": "on"
   },
   "sillygibs": {
-    "default": "auto",
+    "default": "auto"
   },
   "gibs": {
     "default": "off",
@@ -225,7 +225,13 @@
     "default": "minimal",
     "very-low": "off"
   },
-  "outlines",
+  "outlines": {
+    "default": "low",
+    "very-low": "off",
+    "low": "off",
+    "high": "high",
+    "ultra": "high"
+  },
   "dynamic_background": {
     "default": "off"
   },
@@ -237,14 +243,14 @@
     "ultra": "ultra"
   },
   "voice_chat": {
-    "default" "on",
+    "default": "on",
     "very-low": "off"
   },
   "mod_support": {
     "default": "on"
   },
   "logo": {
-    "default" "on",
+    "default": "on",
     "very-low": "off"
   },
   "move_bind": {
