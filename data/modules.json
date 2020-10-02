@@ -809,6 +809,7 @@
       },
       {
         "name": "move_bind",
+        "display": "Movement Binds",
         "values": [
           {
             "value": "wasd",
