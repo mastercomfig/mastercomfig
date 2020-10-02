@@ -440,7 +440,6 @@
       {
         "name": "sillygibs",
         "display": "Silly Gibs",
-        "type": "switch",
         "values": [
           {
             "value": "auto"
