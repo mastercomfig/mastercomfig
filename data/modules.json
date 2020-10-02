@@ -111,7 +111,6 @@
     ]
   },
   "networking": {
-    "display": "Networking",
     "modules": [
       {
         "name": "sourcetv",
@@ -129,9 +128,7 @@
       },
       {
         "name": "packet_rate",
-        "display": "Packet Rate",
         "description": "Controls how fast you send to and receive from the server.",
-        "type": "group",
         "values": [
           {
             "value": "congestion"
@@ -143,12 +140,13 @@
       },
       {
         "name": "snapshot_buffer",
-        "display": "Snapshot Buffer",
         "description": "Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.",
         "advanced_display": "Also known as linear interpolation (lerp or interp). mastercomfig sets this automatically per class, but setting this module will override this behavior.",
         "tags": ["advanced"],
-        "type": "group",
         "values": [
+          {
+            "value": "auto"
+          },
           {
             "value": "low"
           },
@@ -162,9 +160,7 @@
       },
       {
         "name": "packet_size",
-        "display": "Packet Size",
         "description": "Controls how big packets are and how they are split up/compressed.",
-        "type": "select",
         "values": [
           {
             "value": "small"
@@ -185,18 +181,19 @@
       },
       {
         "name": "bandwidth",
-        "display": "Bandwidth",
         "description": "Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).",
         "advanced_display": "This does not increase data usage, just restricts how quickly data can be sent.",
         "type": "slider",
         "values": ["128Kbps", "192Kbps", "384Kbps", "512Kbps", "768Kbps", "1.0Mbps", "1.5Mbps", "2.0Mbps","2.5Mbps", "3.0Mbps", "4.0Mbps", "6.0Mbps", "8.0Mbps"]
       },
       {
-        "name": "downloads",
+        "name": "download",
         "display": "Downloads",
         "description": "Filters what custom content is allowed to be downloaded from the server.",
-        "type": "group",
         "values": [
+          {
+            "value": "auto"
+          },
           {
             "value": "all"
           },
@@ -211,6 +208,744 @@
           }
         ]
       },
+    ]
+  },
+  "graphics": {
+    "modules": [
+      {
+        "name": "lod",
+        "display": "Level of Detail",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "lighting",
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "medium_high"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "very_high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "lighting_ex",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "shadows",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "effects",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "water",
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "medium_high"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "very_high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "particles",
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "post_processing",
+        "display": "General Post Processing",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "pyrovision",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "motion_blur",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "aa",
+        "display": "Anti-aliasing",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "aa_msaa",
+        "display": "MSAA Anti-aliasing",
+        "type": "slider",
+        "values": ["off", "2x", "4x", "8x"]
+      },
+      {
+        "name": "texture_filter",
+        "display": "Texture Filtering",
+        "values": [
+          {
+            "value": "bilinear"
+          },
+          {
+            "value": "trilinear"
+          },
+          {
+            "value": "aniso2x",
+            "display": "Anisotropic 2x"
+          },
+          {
+            "value": "aniso4x",
+            "display": "Anisotropic 4x"
+          },
+          {
+            "value": "aniso8x",
+            "display": "Anisotropic 8x"
+          },
+          {
+            "value": "aniso16x",
+            "display": "Anisotropic 16x"
+          }
+        ]
+      },
+      {
+        "name": "characters",
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "medium_high"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "decals",
+        "display": "General Decals",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "decals_models",
+        "display": "Model Decals",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "decals_art",
+        "display": "Map Decals",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "sprays",
+        "display": "Spray Decals",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "gibs",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "sillygibs",
+        "display": "Silly Gibs",
+        "type": "switch",
+        "values": [
+          {
+            "value": "auto"
+          },
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "props",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "ragdolls",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "3dsky",
+        "display": "3D Sky",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "jigglebones",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          },
+          {
+            "value": "force_on"
+          }
+        ]
+      },
+      {
+        "name": "sheens_speed",
+        "display": "Killstreak Sheens Speed",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "slow"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "fast"
+          }
+        ]
+      },
+      {
+        "name": "sheens_tint",
+        "display": "Killstreak Sheens Tint Intensity",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "full"
+          }
+        ]
+      },
+      {
+        "name": "textures",
+        "display": "Texture Quality",
+        "values": [
+          {
+            "value": "very_low"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "very_high"
+          }
+        ]
+      },
+      {
+        "name": "ropes",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "fpscap",
+        "display": "FPS Cap",
+        "type": "slider",
+        "values": ["powersaver", "30", "60", "75", "120", "144", "160", "165", "180", "200", "240", "300", "400", "1000", "unlimited"]
+      }
+    ]
+  },
+  "hud": {
+    "display": "HUD",
+    "modules": [
+      {
+        "name": "hud_player_model",
+        "display": "Player model",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "hud_panels",
+        "display": "Panels",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "match_hud",
+        "display": "Match HUD",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "messages",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "hide"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "killfeed",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "killstreaks",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "hud_achievement",
+        "display": "HUD Achievements",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "debug",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "minimal"
+          },
+          {
+            "value": "on_partial"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "outlines",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "dynamic_background",
+        "display": "Map Background",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "preload"
+          },
+          {
+            "value": "itemtest"
+          },
+          {
+            "value": "dustbowl"
+          }
+        ]
+      }
+    ]
+  },
+  "sound": {
+    "modules": [
+      {
+        "name": "sound",
+        "values": [
+          {
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "very_high"
+          },
+          {
+            "value": "ultra"
+          }
+        ]
+      },
+      {
+        "name": "voice_chat",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      }
+    ]
+  },
+  "misc": {
+    "modules": [
+      {
+        "name": "mod_support",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "logo",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "move_bind",
+        "display": "Movement Binds",
+        "values": [
+          {
+            "value": "wasd",
+            "display": "WASD"
+          },
+          {
+            "value": "esdf",
+            "display": "ESDF"
+          },
+          {
+            "value": "zqsd",
+            "display": "ZQSD"
+          },
+          {
+            "value": "arrows"
+          },
+          {
+            "value": "asdf",
+            "display": "ASDf"
+          },
+          {
+            "value": "vim"
+          }
+        ]
+      }
     ]
   }
 }
