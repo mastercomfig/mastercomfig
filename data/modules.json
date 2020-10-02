@@ -588,52 +588,7 @@
         "name": "fpscap",
         "display": "FPS Cap",
         "type": "slider",
-        "values": [
-          {
-            "value": "powersaver"
-          },
-          {
-            "value": "30"
-          },
-          {
-            "value": "60"
-          },
-          {
-            "value": "75"
-          },
-          {
-            "value": "120"
-          },
-          {
-            "value": "144"
-          },
-          {
-            "value": "160"
-          },
-          {
-            "value": "160"
-          },
-          {
-            "value": "180"
-          },
-          {
-            "value": "200"
-          },
-          {
-            "value": "240"
-          },
-          {
-            "value": "300"
-          },
-          {
-            "value": "360"
-          },
-          {
-            "value": "1000"
-          },
-          {
-            "value": "unlimited"
-          }
+        "values": ["powersaver", "30", "60", "75", "120", "144", "160", "165", "180", "200", "240", "300", "400", "1000", "unlimited"]
         ]
       }
     ]

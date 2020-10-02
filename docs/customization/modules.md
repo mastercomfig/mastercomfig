@@ -466,7 +466,7 @@ Default setting: **`fpscap=1000`** (all presets).
 * **`fpscap=200`**: Sets FPS cap to 200FPS.
 * **`fpscap=240`**: Sets FPS cap to 240FPS.
 * **`fpscap=300`**: Sets FPS cap to 300FPS.
-* **`fpscap=360`**: Sets FPS cap to 360FPS.
+* **`fpscap=400`**: Sets FPS cap to 400FPS.
 * **`fpscap=1000`**: Sets FPS cap to 1000FPS (maximum safe value).
 * **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
 
