@@ -55,8 +55,9 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.
 Also known as linear interpolation (lerp or interp). Note: mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
 
-Default setting: based on which class you are currently playing.
+Default setting: **`snapshot_buffer=auto`** (all presets).
 
+* **`snapshot_buffer=auto`**: Automatically
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
@@ -100,8 +101,9 @@ Default setting: **`bandwidth=1.5Mbps`** (all presets).
 
 Filters what custom content is allowed to be downloaded from the server.
 
-Default setting: not set.
+Default setting: **`download=auto`**.
 
+* **`download=auto`**: Whatever the user set in game settings.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
@@ -152,8 +154,8 @@ Default setting: based on which preset you are currently using.
 * **`shadows=off`**: No shadows.
 * **`shadows=very_low`**: Blobby shadows.
 * **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
-* **`shadows=medium`**: Up to 12 high quality shadows, and medium robot shadow distance.
-* **`shadows=high`**: Up to 18 high quality shadows, and high robot shadow distance.
+* **`shadows=medium`**: Up to 8 high quality shadows, and medium robot shadow distance.
+* **`shadows=high`**: Up to 16 high quality shadows, and high robot shadow distance.
 * **`shadows=ultra`**: Up to 32 high quality shadows, and very high robot/Halloween boss shadow distance.
 
 ### Effects
@@ -238,7 +240,7 @@ Default setting: based on which preset you are currently using.
 
 ### MSAA Anti-aliasing
 
-Controls the main hardware based MSAA anti-aliasing (and CSAA, if you have an NVIDIA card that supports it).
+Controls the main hardware based MSAA anti-aliasing.
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
@@ -249,7 +251,6 @@ Default setting: based on which preset you are currently using.
 * **`aa_msaa=2x`**: MSAA 2x
 * **`aa_msaa=4x`**: MSAA 4x
 * **`aa_msaa=8x`**: MSAA 8x
-* **`aa_msaa=16x`**: MSAA 8x + CSAA 2x if supported. MSAA 8x otherwise.
 
 ### Texture filtering
 
@@ -285,16 +286,15 @@ Default setting: based on which preset you are currently using.
 Controls bullet holes and overall decal support.
 
 !!! note
-
     In the Very Low preset, decals are forced invisible.
 
 Default setting: based on which preset you are currently using.
 
 * **`decals=off`**: Disables decals.
-* **`decals=low`**: 9 max decals that hide at a medium range that can't overlap very much.
-* **`decals=medium`** 32 max decals that hide at a medium range that can't overlap very much.
-* **`decals=high`**: 80 max decals that hide at a far away range that can overlap much more.
-* **`decals=ultra`**: 2048 max decals (engine limit) that do not hide and can overlap with practically no limit.
+* **`decals=low`**: 9 max decals that can overlap.
+* **`decals=medium`** 32 max decals that can overlap.
+* **`decals=high`**: 80 max decals that can overlap.
+* **`decals=ultra`**: 2048 max decals (engine limit) that can overlap with practically no limit.
 
 ### Model decals
 
@@ -335,8 +335,9 @@ Default setting: based on which preset you are currently using.
 
 ### Silly gibs
 
-Default setting: **`sillygibs=off`** (if gibs are on), and **`sillygibs=on`** (if gibs are off).
+Default setting: **`sillygibs=auto`**.
 
+* **`sillygibs=auto`**: Automatically choose the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
 * **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
 
@@ -453,7 +454,7 @@ Setting it higher can reduce input delay.
 
 Default setting: **`fpscap=1000`** (all presets).
 
-* **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
+* **`fpscap=powersaver`**: Sets FPS cap to half of your monitor's refresh rate.
 * **`fpscap=30`**: Sets FPS cap to 30 FPS.
 * **`fpscap=60`**: Sets FPS cap to 60 FPS.
 * **`fpscap=75`**: Sets FPS cap to 75 FPS.
@@ -494,6 +495,10 @@ Default setting: **`hud_panels=on`** (all presets, except Very Low).
 
 Toggle match status HUD at the top of the screen.
 
+!!! note
+    It's highly recommended to use this module, as the built-in console variable
+    does not work properly when turning off directly.
+
 Default setting **`match_hud=on`** (all presets, except Very Low).
 
 * **`match_hud=off`**: Disables match status HUD.
@@ -532,7 +537,7 @@ Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
 Controls the HUD achievements tracker.
 
-Default setting: **`hud_achievement=off`** (all presets).
+Default setting: **`hud_achievement=on`** (all presets, except Very Low).
 
 * **`hud_achievement=off`**: Disable achievement tracker panel completely.
 * **`hud_achievement=on`**: Enable support for achievement tracker panel.
