@@ -228,9 +228,10 @@
     "very-low": "off"
   },
   "outlines": {
-    "default": "low",
-    "very-low": "off",
-    "low": "off",
+    "default": "off",
+    "medium-low": "low",
+    "medium": "medium",
+    "medium-high": "medium",
     "high": "high",
     "ultra": "high"
   },
