@@ -63,7 +63,7 @@ Make sure you don't have any infinite loops caused by an `exec autoexec` in your
 
 If you're trying to preload a mod to bypass `sv_pure`, async disk loading has been found to be incompatible with this.
 
-Add `mod_support=on` to your `modules.cfg` to disable some async disk loading features.
+Make sure you do not have `mod_support=off` in your `modules.cfg` to avoid enabling some async disk loading features.
 
 You may also want to preload mods with the `dynamic_background=itemtest` module. If you are using yttrium's viewmodels, use `dynamic_background=preload` instead.
 
