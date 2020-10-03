@@ -215,7 +215,9 @@
     "very-low": "off"
   },
   "killstreaks": {
-    "default": "high"
+    "default": "high",
+    "very-low": "off",
+    "low": "low"
   },
   "hud_achievement": {
     "default": "on",
