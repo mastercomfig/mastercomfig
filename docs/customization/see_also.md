@@ -12,6 +12,9 @@ Here are a few awesome TF2 modifications:
 * [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases)
   —  Fix issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons
 
+* [No-Hats-Mod bgum](https://github.com/Fedora31/no-hats-bgum)
+  —  Remove cosmetics like hats, botkillers, skins, and much more
+
 * [No explosion smoke script](https://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
 
