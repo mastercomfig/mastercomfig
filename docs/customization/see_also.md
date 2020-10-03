@@ -13,7 +13,7 @@ Here are a few awesome TF2 modifications:
   —  Fix issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons
 
 * [No-Hats-Mod bgum](https://github.com/Fedora31/no-hats-bgum)
-  —  Alongside No-Hats also includes additional vpks like no botkiller, no skins for weapons, and much more.
+  —  Remove cosmetics like hats, botkillers, skins, and much more
 
 * [No explosion smoke script](https://www.teamfortress.tv/25647/no-explosion-smoke-script)
   — Get cleaner particles for explosions
