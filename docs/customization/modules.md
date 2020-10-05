@@ -17,7 +17,7 @@ textures=high
 will set the texture quality to `high`.
 
 !!! note
-    If you do not have `user` folder you should create it. Same principle applies to the `autoexec.cfg` file.
+    If you do not have `user` folder you should create it. Same principle applies to the `modules.cfg` file.
 
 ### Advanced
 
@@ -53,11 +53,11 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 ### Snapshot Buffer
 
 Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.
-Also known as linear interpolation (lerp or interp). Note: by default, mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
+Also known as linear interpolation (lerp or interp). Note: by mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value based on which class you are currently playing.
+* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class.
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
@@ -344,8 +344,6 @@ Default setting: **`sillygibs=auto`**.
 ### Props
 
 Controls the rendering of various small objects.
-
-Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade` settings to your class configs if they are different from your preset, or else they will be overridden. You probably won't change these console variables' values, and if you don't want to, you don't need to, since mastercomfig sets the appropriated values automatically.
 
 Default setting: based on which preset you are currently using.
 
