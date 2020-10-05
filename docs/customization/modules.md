@@ -17,7 +17,7 @@ textures=high
 will set the texture quality to `high`.
 
 !!! note
-    If you do not have `user` folder you should create it. Same principle applies to `modules.cfg` file.
+    If you do not have `user` folder you should create it. Same principle applies to the `autoexec.cfg` file.
 
 ### Advanced
 
@@ -53,11 +53,11 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 ### Snapshot Buffer
 
 Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.
-Also known as linear interpolation (lerp or interp). Note: mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
+Also known as linear interpolation (lerp or interp). Note: by default, mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-* **`snapshot_buffer=auto`**: Automatically
+* **`snapshot_buffer=auto`**: Automatically sets interpolation based on which class you are currently playing.
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
@@ -70,7 +70,7 @@ Default setting: **`packet_size=big`** (all presets).
 
 * **`packet_size=small`**: Uses the smallest packet size, which should be able to be processed by even the worst routers.
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
-* **`packet_size=big`**: Uses a reasonably large packet size limit that should work with most reliable connections and Internet routes.
+* **`packet_size=big`**: Uses a reasonably large packet size limit that should work with most reliable connections and internet routes.
 * **`packet_size=saver`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
 * **`packet_size=speed`**: This prioritizes less CPU usage over data usage by disabling packet compression and avoiding split packets.
 
@@ -103,7 +103,7 @@ Filters what custom content is allowed to be downloaded from the server.
 
 Default setting: **`download=auto`**.
 
-* **`download=auto`**: Whatever the user set in game settings.
+* **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads every custom thing from community servers.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
@@ -198,13 +198,13 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, barely reduces particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post Processing
+### General Post-Processing
 
-Controls standard post processing effects.
+Controls standard post-processing effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`post_processing=off`**: No post processing.
+* **`post_processing=off`**: No post-processing.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
@@ -345,7 +345,7 @@ Default setting: **`sillygibs=auto`**.
 
 Controls the rendering of various small objects.
 
-Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade` settings to your class configs if they are different from your preset, or else they will be overridden.
+Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade` settings to your class configs if they are different from your preset, or else they will be overridden. You probably won't change these console variables' values, and if you don't want to, you don't need to, since mastercomfig sets the appropriated values automatically.
 
 Default setting: based on which preset you are currently using.
 
