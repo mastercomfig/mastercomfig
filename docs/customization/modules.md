@@ -57,7 +57,7 @@ Also known as linear interpolation (lerp or interp). Note: by default, mastercom
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-* **`snapshot_buffer=auto`**: Automatically sets interpolation based on which class you are currently playing.
+* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value based on which class you are currently playing.
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
