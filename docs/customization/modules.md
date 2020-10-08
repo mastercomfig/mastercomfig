@@ -490,7 +490,7 @@ Default setting: **`hud_panels=on`** (all presets, except Very Low).
 * **`hud_panels=off`**: Disables health/player info panels on hover.
 * **`hud_panels=on`**: Enables health/player info panels on hover.
 
-## Match HUD
+### Match HUD
 
 Toggle match status HUD at the top of the screen.
 
