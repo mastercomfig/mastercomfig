@@ -57,7 +57,7 @@ Also known as linear interpolation (lerp or interp). Note: mastercomfig sets thi
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-* **`snapshot_buffer=auto`**: Automatically set the best interpolation value per class.
+* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class.
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
@@ -103,11 +103,11 @@ Filters what custom content is allowed to be downloaded from the server.
 
 Default setting: **`download=auto`**.
 
-* **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads all custom files from community servers.
+* **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads all custom files from servers.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
-* **`download=none`**: Download no custom files from servers.
+* **`download=none`**: Don't download any custom files from servers.
 
 ## Rendering modules
 
@@ -236,7 +236,7 @@ Controls additional anti-aliasing passes.
 Default setting: based on which preset you are currently using.
 
 * **`aa=off`**: Turns off additional anti-aliasing.
-* **`aa=on`**: Enhanced fence and grass anti-aliasing.
+* **`aa=on`**: Enables enhanced fence and grass anti-aliasing.
 
 ### MSAA Anti-aliasing
 
@@ -302,7 +302,7 @@ Controls blood on hurt players and some bullet decals on props.
 
 Default setting: based on which preset you are currently using.
 
-* **`decals_models=off`**: Disable model decals.
+* **`decals_models=off`**: Disables model decals.
 * **`decals_models=low`**: Allow up to 9 model decals.
 * **`decals_models=high`**: Allow up to 32 model decals.
 
@@ -337,7 +337,7 @@ Default setting: based on which preset you are currently using.
 
 Default setting: **`sillygibs=auto`**.
 
-* **`sillygibs=auto`**: Automatically choose the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
+* **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
 * **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
 
@@ -378,9 +378,9 @@ Controls cloth and joint physics on some items like the fish and skull bat.
 
 Default setting: based on which preset you are currently using.
 
-* **`jigglebones=off`**: Always disable jigglebones.
-* **`jigglebones=on`**: Disable jigglebones only if the framerate is below 67FPS.
-* **`jigglebones=force_on`**: Never disable jigglebones.
+* **`jigglebones=off`**: Always disables jigglebones.
+* **`jigglebones=on`**: Disables jigglebones only if the framerate is below 67FPS.
+* **`jigglebones=force_on`**: Never disables jigglebones.
 
 ### Killstreak Sheens Speed
 
@@ -526,7 +526,7 @@ Controls banners that appear at the top center of the screen, notifying you of a
 
 Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
-* **`killstreaks=off`**: Disable killstreak banner.
+* **`killstreaks=off`**: Disables killstreak banner.
 * **`killstreaks=low`**: Enables killstreak text with no banner.
 * **`killstreaks=high`**: Enables killstreak translucent banner.
 
@@ -536,8 +536,8 @@ Controls the HUD achievements tracker.
 
 Default setting: **`hud_achievement=on`** (all presets, except Very Low).
 
-* **`hud_achievement=off`**: Disable achievement tracker panel completely.
-* **`hud_achievement=on`**: Enable support for achievement tracker panel.
+* **`hud_achievement=off`**: Disables achievement tracker panel completely.
+* **`hud_achievement=on`**: Enables support for achievement tracker panel.
 
 ### Debug
 
@@ -545,10 +545,10 @@ Controls various debugging displays and console.
 
 Default setting: **`debug=minimal`** (all presets, except Very Low).
 
-* **`debug=on`**: Enable all debug HUDs.
-* **`debug=on_partial`**: Enable all but the noisiest debug HUDs.
-* **`debug=minimal`**: Enable developer console.
-* **`debug=off`**: Disable all debug features.
+* **`debug=on`**: Enables all debug HUDs.
+* **`debug=on_partial`**: Enables all but the noisiest debug HUDs.
+* **`debug=minimal`**: Enables developer console.
+* **`debug=off`**: Disables all debug features.
 
 ### Outlines
 
@@ -556,10 +556,10 @@ Controls the outlines that appear through walls for players and some objectives 
 
 Default setting: based on which preset you are currently using.
 
-* **`outlines=off`**: Disable outlines and nametags.
-* **`outlines=low`**: Enable nametags, disable outlines.
-* **`outlines=medium`**: Disable nametags and player outlines, enable objective outlines.
-* **`outlines=high`**: Enable nametags and outlines.
+* **`outlines=off`**: Disables outlines and nametags.
+* **`outlines=low`**: Enables nametags, disable outlines.
+* **`outlines=medium`**: Disables nametags and player outlines, enable objective outlines.
+* **`outlines=high`**: Enables nametags and outlines.
 
 ### Map Background
 
@@ -646,9 +646,9 @@ Example:
 
 Default setting: **`move_bind=wasd`** (all presets).
 
-* **`move_bind=wasd`**: Set movement keys to WASD (default).
-* **`move_bind=esdf`**: Set movement keys to ESDF.
-* **`move_bind=zqsd`**: Set movement keys to ZQSD (default for AZERTY keyboards).
-* **`move_bind=arrows`**: Set movement keys to the Arrow Keys.
-* **`move_bind=asdf`**: Set movement keys to ASDF (A/S forward/back, D/F left/right).
-* **`move_bind=vim`**: Set movement keys to HJKL (K/J forward/back, H/L left/right).
+* **`move_bind=wasd`**: Sets movement keys to WASD (default).
+* **`move_bind=esdf`**: Sets movement keys to ESDF.
+* **`move_bind=zqsd`**: Sets movement keys to ZQSD (default for AZERTY keyboards).
+* **`move_bind=arrows`**: Sets movement keys to the Arrow Keys.
+* **`move_bind=asdf`**: Sets movement keys to ASDF (A/S forward/back, D/F left/right).
+* **`move_bind=vim`**: Sets movement keys to HJKL (K/J forward/back, H/L left/right).
