@@ -106,7 +106,7 @@ Class configs are also a reliable way to periodically run some commands during a
 
 mastercomfig had a desktop app called mastercomfig 7. It was discontinued because it was too hard to maintain and update.
 
-Since mastercomfig 9 [the download website](https://mastercomfig.com/download) has functionality which resembles the app.
+Since mastercomfig 9, [the download website](https://mastercomfig.com/download) has features which resembles the application.
 
 ## How can I get help with mastercomfig?
 
