@@ -57,7 +57,7 @@ Also known as linear interpolation (lerp or interp). Note: mastercomfig sets thi
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class.
+* **`snapshot_buffer=auto`**: Automatically set the best interpolation value per class.
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
@@ -103,7 +103,7 @@ Filters what custom content is allowed to be downloaded from the server.
 
 Default setting: **`download=auto`**.
 
-* **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads every custom thing from community servers.
+* **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads all custom files from community servers.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
