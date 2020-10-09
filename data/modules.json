@@ -243,8 +243,8 @@
         ]
       },
       {
-        "name": "post_processing",
-        "display": "General Post Processing",
+        "name": "post-processing",
+        "display": "General Post-Processing",
         "values": [
           {
             "value": "off"
