@@ -102,11 +102,11 @@ Class configs are also a reliable way to periodically run some commands during a
 * Every path in the game can only have one file associated with it, due to how Source handles mods
 * Drag and drop installation, especially for those who do not want to mess with configs
 
-## Why is there no mastercomfig application?
+## Why is there no mastercomfig app?
 
-mastercomfig had a desktop application called mastercomfig 7. It was discontinued because it was too hard to maintain and update.
+mastercomfig had a desktop app called mastercomfig 7. It was discontinued because it was too hard to maintain and update.
 
-Since mastercomfig 9, [the download website](https://mastercomfig.com/download) has features which resembles the application.
+Since mastercomfig 9, [the download website](https://mastercomfig.com/download) has features which resembles the app.
 
 ## How can I get help with mastercomfig?
 
