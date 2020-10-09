@@ -21,7 +21,7 @@ It is a complete performance and customization scripting mod which requires many
 
 **Here are some of the features that mastercomfig gains, by being a mod rather a configuration file:**
 
-* dxsupport overrides, which unlock `r_drawropes`, `fx_drawimpactdebris`, `fx_drawimpactdust`, `fx_drawimpactspark`, `tf_impactwatertimeenable`, `dsp_off`, `cl_particle_retire_cost` and `mat_slopescaledepthbias_decal`
+* dxsupport overrides, which unlocks `r_drawropes`, `fx_drawimpactdebris`, `fx_drawimpactdust`, `fx_drawimpactspark`, `tf_impactwatertimeenable`, `dsp_off`, `cl_particle_retire_cost` and `mat_slopescaledepthbias_decal`
 
   * These allow for performance improvements for ropes, particles, sound, and fixing a bug where 1 decal still appears even if decals are disabled
 
@@ -102,9 +102,9 @@ Class configs are also a reliable way to periodically run some commands during a
 * Every path in the game can only have one file associated with it, due to how Source handles mods
 * Drag and drop installation, especially for those who do not want to mess with configs
 
-## Why is there no mastercomfig app?
+## Why is there no mastercomfig application?
 
-mastercomfig had a desktop app called mastercomfig 7. It was discontinued because it was too hard to maintain and update.
+mastercomfig had a desktop application called mastercomfig 7. It was discontinued because it was too hard to maintain and update.
 
 Since mastercomfig 9, [the download website](https://mastercomfig.com/download) has features which resembles the application.
 
