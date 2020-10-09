@@ -21,7 +21,7 @@ description: A list of all mastercomfig features.
 * Optimized shadows
 * Optimized particles
 * Optimized water
-* Optimized post processing effects
+* Optimized post-processing effects
 * Optimized anti-aliasing and texture filtering
 * Optimized characters
 * Optimized decals
