@@ -198,16 +198,16 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, barely reduces particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post Processing
+### General Post-Processing
 
-Controls standard post processing effects.
+Controls standard post-processing effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`post_processing=off`**: No post processing.
-* **`post_processing=low`**: Enables basic color correction.
-* **`post_processing=medium`**: Enables LDR bloom.
-* **`post_processing=high`**: Enables standard HDR and bloom.
+* **`post-processing=off`**: No post-processing.
+* **`post-processing=low`**: Enables basic color correction.
+* **`post-processing=medium`**: Enables LDR bloom.
+* **`post-processing=high`**: Enables standard HDR and bloom.
 
 ### Pyrovision
 
