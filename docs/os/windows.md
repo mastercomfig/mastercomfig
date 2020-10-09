@@ -77,7 +77,7 @@ Nahimic is an audio effects software preinstalled on some gaming laptops and des
 
 ## Intel Panel Self Refresh
 
-Intel Panel Self Refresh can ruin frame latency and timings. Disable it Power options within your Intel graphics settings app.
+Intel Panel Self Refresh can ruin frame latency and timings, especially on hybrid (Optimus) laptops. Disable it Power options within your Intel graphics settings app.
 
 ## Driver latency optimization
 
