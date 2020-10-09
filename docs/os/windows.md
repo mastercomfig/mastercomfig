@@ -75,6 +75,10 @@ Nahimic is an audio effects software preinstalled on some gaming laptops and des
 5. Open Nahimic service.
 6. Select `Startup type:` `Disabled`.
 
+## Intel Panel Self Refresh
+
+Intel Panel Self Refresh can ruin frame latency and timings. Disable it Power options within your Intel graphics settings app.
+
 ## Driver latency optimization
 
 Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as frequent stuttering. The user must sniff out exactly which drivers are causing latency.
