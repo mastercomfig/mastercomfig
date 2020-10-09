@@ -62,7 +62,8 @@ If you are not able to support me through the above methods, that's fine too! Yo
   Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby,
   Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
   maximsmol, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
-  DapperTrapper, Tene, mambo, Sakii, Leo40, micwoj92, ghost-420, m00n01 and perhaps many others)
+  DapperTrapper, Tene, mambo, Sakii, Leo40, micwoj92, ghost-420, m00n01,
+  scrambl-d, xNanochip, torkel104, soluss,  NekoAlosama, Naxeron, fiend and perhaps many others)
 
 * The [Valve Developer Community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics
