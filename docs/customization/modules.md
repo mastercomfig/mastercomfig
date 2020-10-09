@@ -52,8 +52,7 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
 ### Snapshot Buffer
 
-Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.
-Also known as linear interpolation (lerp or interp). Note: mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
+Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives. Also known as linear interpolation (lerp or interp).
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
