@@ -69,7 +69,7 @@
     "high": "high",
     "ultra": "ultra"
   },
-  "post_processing": {
+  "post-processing": {
     "default": "off",
     "medium": "low",
     "medium-high": "high",
