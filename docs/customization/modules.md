@@ -100,7 +100,7 @@ Default setting: **`bandwidth=1.5Mbps`** (all presets).
 
 Filters what custom content is allowed to be downloaded from the server.
 
-Default setting: **`download=auto`**.
+Default setting: **`download=auto`** (all presets).
 
 * **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads all custom files from servers.
 * **`download=all`**: Download all custom files from servers.
