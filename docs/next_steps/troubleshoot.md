@@ -33,7 +33,7 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 ## %killername% and other HUD bugs
 
-This is a HUD initialization bug with TF2. You can fix it by running `hud_reloadscheme`. Running it once every match is enough.
+This is a HUD initialization bug with TF2. You can fix it by running `hud_reloadscheme`. Running it once after joining a match is enough.
 
 If you'd like this command to be run automatically, you can put this in your `autoexec.cfg`:
 
