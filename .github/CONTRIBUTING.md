@@ -255,4 +255,4 @@ export GH_TOKEN="GitHub authentication token used for release deployment"
 ## Code of Conduct
 
 As a member of the mastercomfig community, in order to foster a more welcoming environment,
-you must abide by the [Code of Conduct](https://github.com/mastercomfig/mastercomfig/blob/release/.github/CODE_OF_CONDUCT.md)
+you must abide by the [Code of Conduct](https://github.com/mastercomfig/mastercomfig/blob/release/.github/CODE_OF_CONDUCT.md).
