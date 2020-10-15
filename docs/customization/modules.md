@@ -17,7 +17,7 @@ textures=high
 will set the texture quality to `high`.
 
 !!! note
-    If you do not have `user` folder you should create it. Same principle applies to `modules.cfg` file.
+    If you do not have `user` folder you should create it. Same principle applies to the `modules.cfg` file.
 
 ### Advanced
 
@@ -52,12 +52,11 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
 ### Snapshot Buffer
 
-Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.
-Also known as linear interpolation (lerp or interp). Note: mastercomfig sets this automatically per class, but setting it in your `modules.cfg` will override this behavior.
+Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives. Also known as linear interpolation (lerp or interp).
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-* **`snapshot_buffer=auto`**: Automatically
+* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class.
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
@@ -70,7 +69,7 @@ Default setting: **`packet_size=big`** (all presets).
 
 * **`packet_size=small`**: Uses the smallest packet size, which should be able to be processed by even the worst routers.
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
-* **`packet_size=big`**: Uses a reasonably large packet size limit that should work with most reliable connections and Internet routes.
+* **`packet_size=big`**: Uses a reasonably large packet size limit that should work with most reliable connections and internet routes.
 * **`packet_size=saver`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
 * **`packet_size=speed`**: This prioritizes less CPU usage over data usage by disabling packet compression and avoiding split packets.
 
@@ -101,13 +100,13 @@ Default setting: **`bandwidth=1.5Mbps`** (all presets).
 
 Filters what custom content is allowed to be downloaded from the server.
 
-Default setting: **`download=auto`**.
+Default setting: **`download=auto`** (all presets).
 
-* **`download=auto`**: Whatever the user set in game settings.
+* **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads all custom files from servers.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
-* **`download=none`**: Download no custom files from servers.
+* **`download=none`**: Don't download any custom files from servers.
 
 ## Rendering modules
 
@@ -198,13 +197,13 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, barely reduces particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post Processing
+### General Post-Processing
 
-Controls standard post processing effects.
+Controls standard post-processing effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`post_processing=off`**: No post processing.
+* **`post_processing=off`**: No post-processing.
 * **`post_processing=low`**: Enables basic color correction.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
@@ -236,7 +235,7 @@ Controls additional anti-aliasing passes.
 Default setting: based on which preset you are currently using.
 
 * **`aa=off`**: Turns off additional anti-aliasing.
-* **`aa=on`**: Enhanced fence and grass anti-aliasing.
+* **`aa=on`**: Enables enhanced fence and grass anti-aliasing.
 
 ### MSAA Anti-aliasing
 
@@ -302,7 +301,7 @@ Controls blood on hurt players and some bullet decals on props.
 
 Default setting: based on which preset you are currently using.
 
-* **`decals_models=off`**: Disable model decals.
+* **`decals_models=off`**: Disables model decals.
 * **`decals_models=low`**: Allow up to 9 model decals.
 * **`decals_models=high`**: Allow up to 32 model decals.
 
@@ -337,15 +336,13 @@ Default setting: based on which preset you are currently using.
 
 Default setting: **`sillygibs=auto`**.
 
-* **`sillygibs=auto`**: Automatically choose the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
+* **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
 * **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
 
 ### Props
 
 Controls the rendering of various small objects.
-
-Keep in mind that you must add your preferred `cl_detaildist` and `cl_detailfade` settings to your class configs if they are different from your preset, or else they will be overridden.
 
 Default setting: based on which preset you are currently using.
 
@@ -380,9 +377,9 @@ Controls cloth and joint physics on some items like the fish and skull bat.
 
 Default setting: based on which preset you are currently using.
 
-* **`jigglebones=off`**: Always disable jigglebones.
-* **`jigglebones=on`**: Disable jigglebones only if the framerate is below 67FPS.
-* **`jigglebones=force_on`**: Never disable jigglebones.
+* **`jigglebones=off`**: Always disables jigglebones.
+* **`jigglebones=on`**: Disables jigglebones only if the framerate is below 67FPS.
+* **`jigglebones=force_on`**: Never disables jigglebones.
 
 ### Killstreak Sheens Speed
 
@@ -490,7 +487,7 @@ Default setting: **`hud_panels=on`** (all presets, except Very Low).
 * **`hud_panels=off`**: Disables health/player info panels on hover.
 * **`hud_panels=on`**: Enables health/player info panels on hover.
 
-## Match HUD
+### Match HUD
 
 Toggle match status HUD at the top of the screen.
 
@@ -528,7 +525,7 @@ Controls banners that appear at the top center of the screen, notifying you of a
 
 Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
-* **`killstreaks=off`**: Disable killstreak banner.
+* **`killstreaks=off`**: Disables killstreak banner.
 * **`killstreaks=low`**: Enables killstreak text with no banner.
 * **`killstreaks=high`**: Enables killstreak translucent banner.
 
@@ -538,8 +535,8 @@ Controls the HUD achievements tracker.
 
 Default setting: **`hud_achievement=on`** (all presets, except Very Low).
 
-* **`hud_achievement=off`**: Disable achievement tracker panel completely.
-* **`hud_achievement=on`**: Enable support for achievement tracker panel.
+* **`hud_achievement=off`**: Disables achievement tracker panel completely.
+* **`hud_achievement=on`**: Enables support for achievement tracker panel.
 
 ### Debug
 
@@ -547,10 +544,10 @@ Controls various debugging displays and console.
 
 Default setting: **`debug=minimal`** (all presets, except Very Low).
 
-* **`debug=on`**: Enable all debug HUDs.
-* **`debug=on_partial`**: Enable all but the noisiest debug HUDs.
-* **`debug=minimal`**: Enable developer console.
-* **`debug=off`**: Disable all debug features.
+* **`debug=on`**: Enables all debug HUDs.
+* **`debug=on_partial`**: Enables all but the noisiest debug HUDs.
+* **`debug=minimal`**: Enables developer console.
+* **`debug=off`**: Disables all debug features.
 
 ### Outlines
 
@@ -558,10 +555,10 @@ Controls the outlines that appear through walls for players and some objectives 
 
 Default setting: based on which preset you are currently using.
 
-* **`outlines=off`**: Disable outlines and nametags.
-* **`outlines=low`**: Enable nametags, disable outlines.
-* **`outlines=medium`**: Disable nametags and player outlines, enable objective outlines.
-* **`outlines=high`**: Enable nametags and outlines.
+* **`outlines=off`**: Disables outlines and nametags.
+* **`outlines=low`**: Enables nametags, disable outlines.
+* **`outlines=medium`**: Disables nametags and player outlines, enable objective outlines.
+* **`outlines=high`**: Enables nametags and outlines.
 
 ### Map Background
 
@@ -648,9 +645,9 @@ Example:
 
 Default setting: **`move_bind=wasd`** (all presets).
 
-* **`move_bind=wasd`**: Set movement keys to WASD (default).
-* **`move_bind=esdf`**: Set movement keys to ESDF.
-* **`move_bind=zqsd`**: Set movement keys to ZQSD (default for AZERTY keyboards).
-* **`move_bind=arrows`**: Set movement keys to the Arrow Keys.
-* **`move_bind=asdf`**: Set movement keys to ASDF (A/S forward/back, D/F left/right).
-* **`move_bind=vim`**: Set movement keys to HJKL (K/J forward/back, H/L left/right).
+* **`move_bind=wasd`**: Sets movement keys to WASD (default).
+* **`move_bind=esdf`**: Sets movement keys to ESDF.
+* **`move_bind=zqsd`**: Sets movement keys to ZQSD (default for AZERTY keyboards).
+* **`move_bind=arrows`**: Sets movement keys to the Arrow Keys.
+* **`move_bind=asdf`**: Sets movement keys to ASDF (A/S forward/back, D/F left/right).
+* **`move_bind=vim`**: Sets movement keys to HJKL (K/J forward/back, H/L left/right).

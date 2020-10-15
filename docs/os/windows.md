@@ -60,6 +60,25 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
     This may not do much for TF2, as its optimizations are largely for TCP, which only happens during connection,
     with a small bit done for UDP, which is used during the actual game session.
 
+## Disable Overlays
+
+Big idea: disable as many overlays as possible. They interrupt the rendering process with their own, which can severely affect performance in many causes. Common examples of overlays are: Discord and Nahimic.
+
+### Disabling Nahimic
+
+Nahimic is an audio effects software preinstalled on some gaming laptops and desktops, from manufacturers like Alienware, Dell, MSI, and ASUS ROG. Its overlay is especially inefficient, and causes FPS drops and generally lower FPS even when it is turned off. It is notoriously hard to uninstall, so you will have better luck disabling the driver through the following steps:
+
+1. Open Device Manager
+2. Expand `Software Components`
+3. Right click and disable anything along the lines of `A-Volute Audio Effects Component`.
+4. Open Services.
+5. Open Nahimic service.
+6. Select `Startup type:` `Disabled`.
+
+## Intel Panel Self Refresh
+
+Intel Panel Self Refresh can ruin frame latency and timings, especially on hybrid (Optimus) laptops. Disable it Power options within your Intel graphics settings app.
+
 ## Driver latency optimization
 
 Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as frequent stuttering. The user must sniff out exactly which drivers are causing latency.
