@@ -80,10 +80,6 @@ More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.2
 
 Add `tf_time_loading_item_panels .0005` to `autoexec.cfg`.
 
-## Players' sprays are not working even with the module enabled
-
-Players' sprays are treated like a decal in-game. To get sprays to work, you have to set the `decals` module to at least `low`.
-
 ## Why don't my killstreak sheens show?
 
 On the Very Low preset, killstreak sheens are disabled by default. To enable killstreak sheens use the module `sheens_speed=slow`.
