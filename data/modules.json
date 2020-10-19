@@ -87,10 +87,12 @@
             "value": "all"
           },
           {
-            "value": "nosounds"
+            "value": "nosounds",
+            "display": "No sounds"
           },
           {
-            "value": "mapsonly"
+            "value": "mapsonly",
+            "display": "Maps only"
           },
           {
             "value": "none"
