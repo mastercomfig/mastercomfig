@@ -94,7 +94,7 @@ Ignore these, as these happen in a clean TF2 installation and only Valve can fix
 
 ## "Unknown command gl_\*" errors in console
 
-mastercomfig sets some OpenGL-related cvars, which are only available on Linux and macOS. Thus, these errors appear a few times when using mastercomfig on Windows. These errors are harmless and can be ignored safely.
+mastercomfig sets some OpenGL-related cvars, which are only available on Linux and macOS. Thus, these errors appear a few times when using mastercomfig on Windows. These errors are harmless and can be ignored safely. However, you can disable running the commands by putting `opengl=skip` into your `modules.cfg`.
 
 ## I want another interp value
 
