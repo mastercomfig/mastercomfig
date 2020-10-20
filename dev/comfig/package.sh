@@ -10,6 +10,8 @@ sed -i '/^echo/d' autoexec_template.cfg
 sed -i '/^alias/d' autoexec_template.cfg
 sed -i '/^block_game_overrides_once/d' autoexec_template.cfg
 sed -i -e 's/^\([^[:space:]\+\/\/].*\)/\/\/\1/g' autoexec_template.cfg
+sed -i 's/^[[:blank:]]*//;s/[[:blank:]]*$//' autoexec_template.cfg
+sed -i '/^\s*$/d' autoexec_template.cfg
 cp -f "../../config/templates/modules/modules.cfg" ./modules_template.cfg
 
 printf "\n"

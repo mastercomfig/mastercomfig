@@ -594,6 +594,18 @@
         "display": "FPS Cap",
         "type": "slider",
         "values": ["powersaver", "30", "60", "75", "120", "144", "160", "165", "180", "200", "240", "300", "360", "400", "1000", "unlimited"]
+      },
+      {
+        "name": "opengl",
+        "display": "OpenGL",
+        "values": [
+          {
+            "value": "skip"
+          },
+          {
+            "value": "default"
+          }
+        ]
       }
     ]
   },

@@ -30,7 +30,7 @@ If you want to disable running a module entirely, you can put (for example) `ali
 
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
 
-## Network modules
+## Networking modules
 
 ### SourceTV Compatibility
 
@@ -108,7 +108,7 @@ Default setting: **`download=auto`** (all presets).
 * **`download=mapsonly`**: Download only maps from servers.
 * **`download=none`**: Don't download any custom files from servers.
 
-## Rendering modules
+## Graphics modules
 
 ### Level of detail
 
@@ -467,6 +467,15 @@ Default setting: **`fpscap=1000`** (all presets).
 * **`fpscap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
 * **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
 
+### OpenGL
+
+Controls whether mastercomfig should apply OpenGL optimizations or not.
+
+Default setting: **`opengl=default`** (all presets).
+
+* **`opengl=skip`**: Skips applying OpenGL optimizations. Helpful for users who run on Windows, which does not have OpenGL.
+* **`opengl=default`**: Applies OpenGL optimizations.
+
 ## HUD modules
 
 ### Player model
@@ -601,7 +610,7 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
-## Miscellaneous modules
+## Misc modules
 
 ### Mod Support
 

@@ -193,6 +193,9 @@
   "fpscap": {
     "default": "1000"
   },
+  "opengl": {
+    "default": "default"
+  },
   "hud_player_model": {
     "default": "off",
     "high": "on",
