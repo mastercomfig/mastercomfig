@@ -576,7 +576,7 @@ Controls the live map that appears in the background of the main menu. Some opti
 Default setting: **`dynamic_background=off`** (all presets).
 
 * **`dynamic_background=off`**: No main menu map background on startup.
-* **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
+* **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **Warning: use this only for yttrium's preloading. If you want to preload anything else, then use the `itemtest` setting. The probability that you don't have the `preload_room` map is big.**
 * **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
 * **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 
