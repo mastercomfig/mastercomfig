@@ -6,6 +6,8 @@ set -e
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
 
+git pull
+
 . ./mastercomfig-vars
 
 # Get latest release version
