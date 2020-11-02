@@ -20,6 +20,8 @@ export assets_url=$(echo "${response}" | jq '.assets_url' | sed -e 's/^"//' -e '
 
 uploadAssets
 
+printf "\n"
+
 tag=$(echo "${response}" | jq '.tag_name' | sed -e 's/^"//' -e 's/"$//')
 
 git tag -d "${tag}"
