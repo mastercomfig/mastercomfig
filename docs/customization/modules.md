@@ -329,7 +329,7 @@ Controls decals sprayed by players.
 Default setting: based on which preset you are currently using.
 
 * **`sprays=off`**: Completely disables downloading, uploading and displaying sprays.
-* **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. If the `decals` module is `off`, this setting (`sprays=on`) will set it to the `low` level.
+* **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. If the `decals` module is `off`, this will set it to the `low` level.
 
 ### Gibs
 
