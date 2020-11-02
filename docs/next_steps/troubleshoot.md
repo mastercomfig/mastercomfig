@@ -61,13 +61,11 @@ Make sure you don't have any infinite loops caused by an `exec autoexec` in your
 
 ## Preloading animation and/or model mods not working or crashing
 
-If you're trying to preload a mod to bypass `sv_pure`, async disk loading has been found to be incompatible with this.
+If you're trying to preload a mod to bypass `sv_pure`, async disk loading has been found to be incompatible with this. Make sure you do not have `mod_support=off` in your `modules.cfg` to avoid enabling some async disk loading features. The `mod_support` module is enabled in all presets by default.
 
-Make sure you do not have `mod_support=off` in your `modules.cfg` to avoid enabling some async disk loading features.
+You may also want to preload mods with the `dynamic_background=itemtest` module. **If** you are using yttrium's viewmodels, use `dynamic_background=preload` instead.
 
-You may also want to preload mods with the `dynamic_background=itemtest` module. If you are using yttrium's viewmodels, use `dynamic_background=preload` instead.
-
-Optionally, you may delete any `autoexec.cfg` files created automatically in TF2's `cfg` folder. These won't conflict with mastercomfig, since files in VPKs will always be chosen over files in the `cfg` folder.
+Optionally, you may delete any `autoexec.cfg` files created automatically in TF2's `cfg` folder by the yttrium's viewmodels program. These won't conflict with mastercomfig, since files in VPKs will always be chosen over files in the `cfg` folder.
 
 ## TF2 crashing on a custom map
 

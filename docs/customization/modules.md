@@ -147,7 +147,7 @@ Default setting: based on which preset you are currently using.
 
 Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
-Default setting: **`lighting_ex=high`** (all presets, except Low and Very Low).
+Default setting: **`lighting_ex=high`** (all presets, except Medium Low, Low and Very Low).
 
 * **`lighting_ex=low`**: Phong off.
 * **`lighting_ex=high`**: Phong on.
@@ -584,7 +584,7 @@ Controls the live map that appears in the background of the main menu. Some opti
 Default setting: **`dynamic_background=off`** (all presets).
 
 * **`dynamic_background=off`**: No main menu map background on startup.
-* **`dynamic_background=preload`**: `preload_room` map background for yttrium preloading (auto disconnects).
+* **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **Warning: use this only for yttrium's preloading. If you want to preload anything else, use the `itemtest` setting. The probability that you don't have the `preload_room` map is big.**
 * **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
 * **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 
