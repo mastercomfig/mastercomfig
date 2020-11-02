@@ -23,11 +23,11 @@ for F in ../../config/cfg/presets/*; do
         printf "preset;"
         printf "exec comfig/addons_setup.cfg;"
         printf "exec comfig/addons.cfg;"
-        printf "exec modules_c;"
+        printf "modules_c;"
         printf "exec comfig/echo.cfg;"
         printf "run_modules;"
         printf "exec comfig/addons.cfg;"
-        printf "exec user/autoexec.cfg;"
+        printf "autoexec_c;"
         printf "exec comfig/finalize.cfg"
       } > "${autoexec_file}"
     fi

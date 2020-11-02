@@ -24,11 +24,19 @@ will set the texture quality to `high`.
 !!! warning
     These steps are entirely optional and are only for advanced customization.
 
+#### Module level aliases
+
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
 If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will disable mastercomfig from running texture commands.
 
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
+
+#### Module user layer alias
+
+The modules you choose in `user/modules.cfg` are executed by the `modules_c` alias.
+
+This means that you can change this alias in game, and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_user`.
 
 ## Networking modules
 

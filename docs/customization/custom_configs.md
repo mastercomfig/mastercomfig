@@ -18,6 +18,7 @@ If there's something you'd like to run for all of your class configs, you can ad
 ## Utility Commands
 
 * `run_modules`: Applies modules. Useful for changing module levels in-game, and then applying them all at once.
+* `apply_user`: Runs user modules, applies modules and then runs user autoexec. Useful for changing your user preferences in-game.
 * `restore_preset`: Restores modules back to preset defaults, without using user settings.
 * `restore_config`: Runs all of mastercomfig and user configs again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
@@ -51,6 +52,11 @@ mastercomfig now supports selecting a preset after download. Add a file to your 
 
 !!! warning
     These steps are entirely optional and are only for advanced customization.
+
+You can change the name of your `user/autoexec` using the `autoexec_c` alias and the name of your `user/modules.cfg` using the `modules_c` alias.
+This means your user preferences can have multiple different options, sort of like presets, but for your own preferences! Change these aliases
+in-game and use the `apply_user` command to apply your new user selections. This can be used for having different quality choices or game configurations for
+different scenarios or mood.
 
 You can change the name of your custom class configs using the `class_config_classname` alias.
 For example, you can put `alias class_config_heavyweapons"exec user/myheavy.cfg"` in `tf/cfg/user/autoexec.cfg` if you want to use the file `tf/cfg/user/myheavy.cfg` for Heavy.
