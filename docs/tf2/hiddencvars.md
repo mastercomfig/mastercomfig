@@ -432,5 +432,5 @@ weapon_medigun_construction_rate         : 10       : , "sv", "cheat", "rep", "l
 weapon_medigun_damage_modifier           : 1.5      : , "sv", "cheat", "rep", "launcher" : Scales the damage a player does while being healed with the medigun.
 weapon_medigun_resist_num_chunks         : 4        : , "sv", "cheat", "rep", "launcher" : How many uber bar chunks the vaccinator has.
 --------------
-426 total convars/concommands
+424 total convars/concommands
 ```
