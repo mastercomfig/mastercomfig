@@ -27,7 +27,7 @@ It is a complete performance and customization scripting mod which requires many
 
 * [Class spawn scripts](#why-does-mastercomfig-override-my-class-configs), which allow for scripts to be run periodically during a match
 
-* Modular design which allows for an extensive user override system (modules, addons, configs), rather than having to redo edits every time mastercomfig updates
+* Modular design which allows for an extensive user override system (modules, addons, configs), rather than having to redo edits every time mastercomfig updates and not know what edits you made from the base config
 
 * `mm_override` script, which fixes crashes while loading for Competitive matchmaking
 
