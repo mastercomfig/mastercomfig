@@ -19,7 +19,7 @@ Here are a few awesome TF2 modifications:
   — Get cleaner particles for explosions
 
 * [No muzzle flashes](https://github.com/ghost-420/no-muzzleflashes)
-  — Removes muzzleflash sprites and particles from all weapons, and selectively from sentry guns. 
+  — Removes muzzleflash sprites and particles from all weapons, and selectively from sentry guns
 
 * [Particle Limitation Pack](https://www.teamfortress.tv/22586/particle-limitation-pack)
   — Reduce certain particles
@@ -50,4 +50,4 @@ Here are a few awesome TF2 modifications:
   — Replace the dynamic crosshair resize of the Ambassador inaccuracy indicator with a static crosshair
 
 * [Loadouts Script](https://github.com/juniorsgithub/tf2-loadouts-script)
-  — An "advanced" TF2 loadouts and resupply script.
+  — An "advanced" TF2 loadouts and resupply script
