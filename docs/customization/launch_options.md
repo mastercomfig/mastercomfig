@@ -9,7 +9,7 @@ click the **Set Launch Options...** button. In the window that appears, remove
 anything that's in there and paste
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars
 ```
 
 into the box and click ok.
@@ -40,13 +40,14 @@ Read below about optional launch options and choosing your own DXLevel.
 
 ## Recommended Launch Options
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
 * **-nosteamcontroller** : disables Steam controller system, faster startup, less memory usage and less input conflicts
 * **-nohltv** : disables SourceTV hosting, less resource usage
 * **-particles 1** : limits beam count to the minimum of 512
+* **-precachefontchars** : precaches font rendering for common characters
 
 ## Extra Launch Options
 
