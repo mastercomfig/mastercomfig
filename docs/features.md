@@ -29,13 +29,16 @@ description: A list of all mastercomfig features.
 * Optimized props
 * Optimized ropes
 * Optimized OpenGL
+* Optimized outlines
 * Optimized item panel loading
 
 ## Start up
 
 * Cleaned up texture preload list
 * Cleaned up client precache
+* Cleaned up console output
 * Increased memory for OpenGL shader cache
+* Optimized start up time
 
 ## Memory/IO
 
@@ -46,6 +49,7 @@ description: A list of all mastercomfig features.
 
 ## Networking
 
+* Reduced latency of client commands (opening class menu, switching spectators, kill, status, pause, and more!)
 * Increased data rate
 * Reduced choke
 * Reuses sockets if available
@@ -65,3 +69,8 @@ description: A list of all mastercomfig features.
 ## Input
 
 * Optional same sensitivity for scope and other mouse enhancements
+
+# Security
+
+* Prevents aimbots from joining local servers
+* Prevents players from joining your party and spamming the party chat, causing lag
