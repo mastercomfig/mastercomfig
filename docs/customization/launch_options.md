@@ -56,7 +56,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-r_emulate_gl** : changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX
     * **-nostartupsound** : disables game music on main menu
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`
-    * **-no_texture_stream** : disables texture streaming. Useful if you are a powerful system not under video memory pressure.
+    * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
 
 === "macOS"
 
