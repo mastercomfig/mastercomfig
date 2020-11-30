@@ -17,7 +17,7 @@ textures=high
 will set the texture quality to `high`.
 
 !!! note
-    If you do not have `user` folder you should create it. Same principle applies to the `modules.cfg` file.
+    If you do not have the `user` folder, you should create it. Same principle applies to the `modules.cfg` file.
 
 ### Advanced
 
@@ -28,9 +28,9 @@ will set the texture quality to `high`.
 
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will disable mastercomfig from running texture commands.
+If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will prevent mastercomfig from running texture commands.
 
-Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
+Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran a module command by entering `run_modules` into the console.
 
 #### Module user layer alias
 
@@ -40,7 +40,7 @@ This means that you can change this alias in game, and have multiple versions of
 
 ## Networking modules
 
-### SourceTV Compatibility
+### SourceTV compatibility
 
 Ensures compatibility with SourceTV spectating.
 
@@ -49,7 +49,7 @@ Default setting: **`sourcetv=on`** (all presets).
 * **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
 * **`sourcetv=on`**: Keeps compatibility with SourceTV.
 
-### Packet Rate
+### Packet rate
 
 Controls how fast you send to and receive from the server.
 
@@ -58,7 +58,7 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 * **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad Wi-Fi, or very slow CPUs.
 * **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
 
-### Snapshot Buffer
+### Snapshot buffer
 
 Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives. Also known as linear interpolation (lerp or interp).
 
@@ -160,10 +160,10 @@ Default setting: based on which preset you are currently using.
 
 * **`shadows=off`**: No shadows.
 * **`shadows=very_low`**: Blobby shadows.
-* **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
-* **`shadows=medium`**: Up to 8 high quality shadows, and medium robot shadow distance.
-* **`shadows=high`**: Up to 16 high quality shadows, and high robot shadow distance.
-* **`shadows=ultra`**: Up to 32 high quality shadows, and very high robot/Halloween boss shadow distance.
+* **`shadows=low`**: Up to 4 low quality shadows, and low robot/Halloween boss shadow distance.
+* **`shadows=medium`**: Up to 10 high quality shadows, and medium robot/Halloween boss shadow distance.
+* **`shadows=high`**: Up to 16 high quality shadows, and high robot/Halloween boss shadow distance.
+* **`shadows=ultra`**: Up to 24 high quality shadows, and very high robot/Halloween boss shadow distance.
 
 ### Effects
 
@@ -205,7 +205,7 @@ Default setting: based on which preset you are currently using.
 * **`particles=high`**: Enables weather particles, barely reduces particle density, enables bullet impact flecks.
 * **`particles=ultra`**: Enables weather particles, uses full particle density, enables the new bullet impact effects system, enables bullet impact flecks.
 
-### General Post-Processing
+### General post-processing
 
 Controls standard post-processing effects.
 
@@ -238,26 +238,18 @@ Default setting: **`motion_blur=off`** (all presets).
 
 ### Anti-aliasing
 
-Controls additional anti-aliasing passes.
-
-Default setting: based on which preset you are currently using.
-
-* **`aa=off`**: Turns off additional anti-aliasing.
-* **`aa=on`**: Enables enhanced fence and grass anti-aliasing.
-
-### MSAA Anti-aliasing
-
-Controls the main hardware based MSAA anti-aliasing.
+Controls the main hardware based MSAA anti-aliasing and additional anti-aliasing passes.
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
 
 Default setting: based on which preset you are currently using.
 
-* **`aa_msaa=off`**: Turns off MSAA and CSAA.
-* **`aa_msaa=2x`**: MSAA 2x
-* **`aa_msaa=4x`**: MSAA 4x
-* **`aa_msaa=8x`**: MSAA 8x
+* **`anti_aliasing=off`**: Turns off all forms of anti-aliasing.
+* **`anti_aliasing=on`**: Only enables [alpha to coverage](https://en.wikipedia.org/wiki/Alpha_to_coverage).
+* **`anti_aliasing=msaa_2x`**: Enables alpha to coverage and MSAA 2x.
+* **`anti_aliasing=msaa_4x`**: Enables alpha to coverage and MSAA 4x.
+* **`anti_aliasing=msaa_8x`**: Enables alpha to coverage and MSAA 8x.
 
 ### Texture filtering
 
@@ -389,7 +381,7 @@ Default setting: based on which preset you are currently using.
 * **`jigglebones=on`**: Disables jigglebones only if the framerate is below 67FPS.
 * **`jigglebones=force_on`**: Never disables jigglebones.
 
-### Killstreak Sheens Speed
+### Killstreak sheens speed
 
 How fast the animation is on the killstreak sheen glow for weapons.
 
@@ -400,7 +392,7 @@ Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
 * **`sheens_speed=medium`**: The standard speed.
 * **`sheens_speed=fast`**: Faster speed.
 
-### Killstreak Sheens Tint Intensity
+### Killstreak sheens tint intensity
 
 How intense the color tint is on the killstreak sheen glow for weapons.
 
@@ -434,7 +426,7 @@ Default setting: based on which preset you are currently using.
 * **`ropes=high`**: Ropes with smoothing and basic subdivisions.
 * **`ropes=ultra`**: Ropes with max smoothing, increased subdivisions, collision checks and wind simulation.
 
-### FPS Cap
+### FPS cap
 
 Controls the highest frame rate (FPS/frames per second) that the game can reach.
 
@@ -547,7 +539,7 @@ Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 * **`killstreaks=low`**: Enables killstreak text with no banner.
 * **`killstreaks=high`**: Enables killstreak translucent banner.
 
-### HUD Achievements
+### HUD achievements
 
 Controls the HUD achievements tracker.
 
@@ -562,10 +554,10 @@ Controls various debugging displays and console.
 
 Default setting: **`debug=minimal`** (all presets, except Very Low).
 
-* **`debug=on`**: Enables all debug HUDs.
-* **`debug=on_partial`**: Enables all but the noisiest debug HUDs.
-* **`debug=minimal`**: Enables developer console.
 * **`debug=off`**: Disables all debug features.
+* **`debug=minimal`**: Enables developer console.
+* **`debug=on_partial`**: Sets `cl_showpos 1`, `net_graph 1`, and enables developer console.
+* **`debug=on`**: Enables all debug HUDs.
 
 ### Outlines
 
@@ -606,7 +598,7 @@ Default setting: based on which preset you are currently using.
 * **`sound=very_high`** Enables sound volume mixing, enables all sound spatialization and positional effects, immediately spatializes and traces sounds, enables pitch smoothing.
 * **`sound=ultra`**: Enables sound volume mixing, enables enhanced sound spatialization and positional effects, immediately spatializes and traces sounds, enables pitch smoothing.
 
-### Voice Chat
+### Voice chat
 
 Controls player voice chat.
 
@@ -619,9 +611,9 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
-## Misc modules
+## Miscellaneous modules
 
-### Mod Support
+### Mod support
 
 Ensures compatibility with animation and model mods.
 
@@ -641,10 +633,10 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 * **`logo=off`**: Does not print logo in console on startup.
 * **`logo=on`**: Prints logo in console on startup.
 
-### Movement Binds
+### Movement binds
 
 !!! warning
-    This module requires the Null-Cancelling Movement addon in order to function
+    This module requires the Null-Cancelling Movement addon in order to function.
 
 Changes the keys that are used to move while the Null-Cancelling Movement addon is installed.
 If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:
