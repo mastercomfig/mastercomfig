@@ -90,5 +90,3 @@ Use [LatencyMon](https://www.resplendence.com/latencymon) and [DPC Latency Check
 ## Nvidia Control Panel Settings (Can be translated to AMD Radeon Settings)
 
 [Nvidia Control Panel Optimization](https://www.youtube.com/watch?v=ugadZ86uTik) Does an excellent job explaining how to configure the Nvidia control panel and goes over each setting in depth and why to use it/not use it. Many settings in the Nvidia control panel are shared with the Radeon panel so you can go off of this guide for it as well.
-
-
