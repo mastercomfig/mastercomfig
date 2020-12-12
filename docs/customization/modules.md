@@ -137,10 +137,10 @@ Default setting: based on which preset you are currently using.
 
 * **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-* **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting. No lightwarps.
-* **`lighting=high`**: 6 dynamic lights. Detailed lighting.
-* **`lighting=very_high`**: 12 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
+* **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, rimlights or lighting brightness boost.
+* **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting.
+* **`lighting=high`**: 8 dynamic lights. Detailed lighting.
+* **`lighting=very_high`**: 16 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
 * **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
 
 ### Lighting Ex
@@ -334,11 +334,11 @@ Default setting: based on which preset you are currently using.
 
 ### Silly gibs
 
-Default setting: **`sillygibs=auto`**.
+Default setting: **`silly_gibs=auto`**.
 
-* **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
-* **`sillygibs=off`**: Normal gibs and blood.
-* **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
+* **`silly_gibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
+* **`silly_gibs=off`**: Normal gibs and blood.
+* **`silly_gibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
 
 ### Props
 
@@ -570,7 +570,7 @@ Default setting: based on which preset you are currently using.
 * **`outlines=medium`**: Disables nametags and player outlines, enable objective outlines.
 * **`outlines=high`**: Enables nametags and outlines.
 
-### Map Background
+### Dynamic background
 
 Controls the live map that appears in the background of the main menu. Some options automatically exit immediately, for the sake of preloading assets.
 
