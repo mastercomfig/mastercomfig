@@ -16,7 +16,7 @@ description: Common misconceptions with TF2 that mastercomfig corrects.
 * **-limitvsconst** : Limits the hardware vertex shader constants to 256, possibly below hardware capabilities, which does save a bit of resources. But with more constants available, faster shader modes can be used.
 * **-threads** : The Source Engine automatically determines the value for this, and caps it at 3, due to performance issues with higher values. Valve also [recommends](https://www.reddit.com/r/GlobalOffensive/comments/5y8r7v/in_depth_discussion_of_the_threads_launch_option/dep5yno) removing this launch option.
 * **-high** : High is a priority mode in Windows that is only recommended for short-lived, time critical threads. It can unbalance resource usage and decrease performance. Close applications on your PC instead.
-* **-nod3d9ex** : Disable extensions which improve resource management, speed up alt-tabs and improve memory usage. Ages ago, drivers did not support this option very well, and people recommended disabling it. But now, it is all good and there is no reason to use this launch option.
+* **-nod3d9ex** : Disables extensions which improve resource management, speeds up alt-tabs and improves memory usage. Ages ago, drivers did not support this option very well, and people recommended disabling it. But now, it is all good and there is no reason to use this launch option.
 * **-NOPROCESSHEAP** : This was a workaround for a bug that only happened for a short time in CS:GO, and it decreases performance. There is absolutely no reason to use this anymore.
 
 ## Resolution and windows launch options
