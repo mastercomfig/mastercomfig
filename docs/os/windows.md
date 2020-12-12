@@ -64,7 +64,7 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 
 Big idea: disable as many overlays as possible. They interrupt the rendering process with their own, which can severely affect performance in many causes. Common examples of overlays are: Discord and Nahimic.
 
-### Disabling Nahimic
+## Disabling Nahimic
 
 Nahimic is an audio effects software preinstalled on some gaming laptops and desktops, from manufacturers like Alienware, Dell, MSI, and ASUS ROG. Its overlay is especially inefficient, and causes FPS drops and generally lower FPS even when it is turned off. It is notoriously hard to uninstall, so you will have better luck disabling the driver through the following steps:
 
@@ -86,3 +86,9 @@ Badly programmed kernel-mode device drivers might cause latency issues, which le
 [Enabling Message Signaled Interrupts (PCIe MSI)](https://forums.guru3d.com/threads/windows-line-based-vs-message-signaled-based-interrupts-msi-tool.378044/) for all drivers is a great way to lower DPC latency caused by drivers (ring0). If you have an NVIDIA card, you can use [NVCleanstall](https://www.techpowerup.com/download/techpowerup-nvcleanstall/) to enable this, with the added benefit of fully customizing your driver install.
 
 Use [LatencyMon](https://www.resplendence.com/latencymon) and [DPC Latency Checker](https://www.thesycon.de/eng/latency_check.shtml) to analyze latency issues caused by kernel-mode device drivers. If they report issues, try updating your drivers or installing alternate drivers.
+
+## Nvidia Control Panel Settings (Can be translated to AMD Radeon Settings)
+
+[Nvidia Control Panel Optimization](https://www.youtube.com/watch?v=ugadZ86uTik) Does an excellent job explaining how to configure the Nvidia control panel and goes over each setting in depth and why to use it/not use it. Many settings in the Nvidia control panel are shared with the Radeon panel so you can go off of this guide for it as well.
+
+
