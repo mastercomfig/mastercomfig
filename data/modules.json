@@ -3,7 +3,7 @@
     "modules": [
       {
         "name": "sourcetv",
-        "display": "SourceTV Compatibility",
+        "display": "SourceTV compatibility",
         "description": "Ensures compatibility with SourceTV spectating.",
         "type": "switch",
         "values": [
@@ -17,6 +17,7 @@
       },
       {
         "name": "packet_rate",
+		"display": "Packet rate",
         "description": "Controls how fast you send to and receive from the server.",
         "values": [
           {
@@ -29,26 +30,27 @@
       },
       {
         "name": "snapshot_buffer",
+		"display": "Snapshot buffer",
         "description": "Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.",
-        "advanced_display": "Also known as linear interpolation (lerp or interp). mastercomfig sets this automatically per class, but setting this module will override this behavior.",
-        "tags": ["advanced"],
+        "advanced_display": "Also known as linear interpolation (lerp or interp).",
         "values": [
           {
             "value": "auto"
           },
           {
-            "value": "low"
+            "value": "high"
           },
           {
             "value": "safe"
           },
           {
-            "value": "high"
+            "value": "low"
           }
         ]
       },
       {
         "name": "packet_size",
+		"display": "Packet size",
         "description": "Controls how big packets are and how they are split up/compressed.",
         "values": [
           {
@@ -70,6 +72,7 @@
       },
       {
         "name": "bandwidth",
+		"display": "Bandwidth",
         "description": "Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).",
         "advanced_display": "This does not increase data usage, just restricts how quickly data can be sent.",
         "type": "slider",
@@ -105,7 +108,7 @@
     "modules": [
       {
         "name": "lod",
-        "display": "Level of Detail",
+        "display": "Level of detail",
         "values": [
           {
             "value": "low"
@@ -123,6 +126,7 @@
       },
       {
         "name": "lighting",
+		"display": "Lighting",
         "values": [
           {
             "value": "very_low"
@@ -149,6 +153,7 @@
       },
       {
         "name": "lighting_ex",
+		"display": "Lighting Ex",
         "values": [
           {
             "value": "low"
@@ -160,6 +165,7 @@
       },
       {
         "name": "shadows",
+		"display": "Shadows",
         "values": [
           {
             "value": "off"
@@ -183,6 +189,7 @@
       },
       {
         "name": "effects",
+		"display": "Effects",
         "values": [
           {
             "value": "low"
@@ -200,6 +207,7 @@
       },
       {
         "name": "water",
+		"display": "Water",
         "values": [
           {
             "value": "very_low"
@@ -226,6 +234,7 @@
       },
       {
         "name": "particles",
+		"display": "Particles",
         "values": [
           {
             "value": "very_low"
@@ -246,7 +255,7 @@
       },
       {
         "name": "post_processing",
-        "display": "General Post Processing",
+        "display": "General post-processing",
         "values": [
           {
             "value": "off"
@@ -264,6 +273,7 @@
       },
       {
         "name": "pyrovision",
+		"display": "Pyrovision",
         "values": [
           {
             "value": "low"
@@ -278,6 +288,7 @@
       },
       {
         "name": "motion_blur",
+		"display": "Motion blur",
         "values": [
           {
             "value": "off"
@@ -291,27 +302,14 @@
         ]
       },
       {
-        "name": "aa",
+        "name": "anti_aliasing",
         "display": "Anti-aliasing",
-        "type": "switch",
-        "values": [
-          {
-            "value": "off"
-          },
-          {
-            "value": "on"
-          }
-        ]
-      },
-      {
-        "name": "aa_msaa",
-        "display": "MSAA Anti-aliasing",
         "type": "slider",
-        "values": ["off", "2x", "4x", "8x"]
+        "values": ["off", "on", "msaa_2x", "msaa_4x", "msaa_8x"]
       },
       {
         "name": "texture_filter",
-        "display": "Texture Filtering",
+        "display": "Texture filtering",
         "values": [
           {
             "value": "bilinear"
@@ -321,24 +319,25 @@
           },
           {
             "value": "aniso2x",
-            "display": "Anisotropic 2x"
+            "display": "Anisotropic filtering 2x"
           },
           {
             "value": "aniso4x",
-            "display": "Anisotropic 4x"
+            "display": "Anisotropic filtering 4x"
           },
           {
             "value": "aniso8x",
-            "display": "Anisotropic 8x"
+            "display": "Anisotropic filtering 8x"
           },
           {
             "value": "aniso16x",
-            "display": "Anisotropic 16x"
+            "display": "Anisotropic filtering 16x"
           }
         ]
       },
       {
         "name": "characters",
+		"display": "Characters",
         "values": [
           {
             "value": "very_low"
@@ -362,7 +361,7 @@
       },
       {
         "name": "decals",
-        "display": "General Decals",
+        "display": "General decals",
         "values": [
           {
             "value": "off"
@@ -383,7 +382,7 @@
       },
       {
         "name": "decals_models",
-        "display": "Model Decals",
+        "display": "Model decals",
         "values": [
           {
             "value": "off"
@@ -398,7 +397,7 @@
       },
       {
         "name": "decals_art",
-        "display": "Map Decals",
+        "display": "Map decals",
         "type": "switch",
         "values": [
           {
@@ -411,7 +410,7 @@
       },
       {
         "name": "sprays",
-        "display": "Spray Decals",
+        "display": "Spray decals",
         "type": "switch",
         "values": [
           {
@@ -424,6 +423,7 @@
       },
       {
         "name": "gibs",
+		"display": "Gibs",
         "values": [
           {
             "value": "off"
@@ -441,7 +441,7 @@
       },
       {
         "name": "sillygibs",
-        "display": "Silly Gibs",
+        "display": "Silly gibs",
         "values": [
           {
             "value": "auto"
@@ -456,6 +456,7 @@
       },
       {
         "name": "props",
+		"display": "Props",
         "values": [
           {
             "value": "low"
@@ -473,6 +474,7 @@
       },
       {
         "name": "ragdolls",
+		"display": "Ragdolls",
         "values": [
           {
             "value": "off"
@@ -503,6 +505,7 @@
       },
       {
         "name": "jigglebones",
+		"display": "Jigglebones",
         "values": [
           {
             "value": "off"
@@ -517,7 +520,7 @@
       },
       {
         "name": "sheens_speed",
-        "display": "Killstreak Sheens Speed",
+        "display": "Killstreak sheens speed",
         "values": [
           {
             "value": "off"
@@ -535,7 +538,7 @@
       },
       {
         "name": "sheens_tint",
-        "display": "Killstreak Sheens Tint Intensity",
+        "display": "Killstreak sheens tint intensity",
         "values": [
           {
             "value": "low"
@@ -553,7 +556,7 @@
       },
       {
         "name": "textures",
-        "display": "Texture Quality",
+        "display": "Texture quality",
         "values": [
           {
             "value": "very_low"
@@ -574,6 +577,7 @@
       },
       {
         "name": "ropes",
+		"display": "Ropes",
         "values": [
           {
             "value": "off"
@@ -653,6 +657,7 @@
       },
       {
         "name": "messages",
+		"display": "Messages",
         "values": [
           {
             "value": "off"
@@ -667,6 +672,7 @@
       },
       {
         "name": "killfeed",
+		"display": "Killfeed",
         "type": "switch",
         "values": [
           {
@@ -679,6 +685,7 @@
       },
       {
         "name": "killstreaks",
+		"display": "Killstreaks",
         "values": [
           {
             "value": "off"
@@ -693,7 +700,7 @@
       },
       {
         "name": "hud_achievement",
-        "display": "HUD Achievements",
+        "display": "HUD achievements",
         "type": "switch",
         "values": [
           {
@@ -706,6 +713,7 @@
       },
       {
         "name": "debug",
+		"display": "Debug",
         "values": [
           {
             "value": "off"
@@ -723,6 +731,7 @@
       },
       {
         "name": "outlines",
+		"display": "Outlines",
         "values": [
           {
             "value": "off"
@@ -740,7 +749,7 @@
       },
       {
         "name": "dynamic_background",
-        "display": "Map Background",
+        "display": "Dynamic background",
         "values": [
           {
             "value": "off"
@@ -762,6 +771,7 @@
     "modules": [
       {
         "name": "sound",
+		"display": "Sound"
         "values": [
           {
             "value": "low"
@@ -782,6 +792,7 @@
       },
       {
         "name": "voice_chat",
+		"display": "Voice chat",
         "type": "switch",
         "values": [
           {
@@ -798,6 +809,7 @@
     "modules": [
       {
         "name": "mod_support",
+		"display": "Mod support",
         "type": "switch",
         "values": [
           {
@@ -810,6 +822,7 @@
       },
       {
         "name": "logo",
+		"display": "Logo",
         "type": "switch",
         "values": [
           {
@@ -822,7 +835,7 @@
       },
       {
         "name": "move_bind",
-        "display": "Movement Binds",
+        "display": "Movement binds",
         "values": [
           {
             "value": "wasd",
