@@ -771,7 +771,7 @@
     "modules": [
       {
         "name": "sound",
-		"display": "Sound"
+		"display": "Sound",
         "values": [
           {
             "value": "low"
