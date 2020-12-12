@@ -32,9 +32,15 @@ If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms
 !!! tip
     If you're using variable refresh rate (VRR) technology, like G-SYNC, disabling Fullscreen Optimizations may break it, depending on your monitor, drivers and graphics card. So, if you experience problems with VRR after this, try reverting the change.
 
-## Use High Performance power plan
+## Use High Performance power plan on PC and Balanced on Laptops
 
-Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, use a Ryzen specific plan to correctly take advantage of CPPC2. Alternatively, a [custom Ryzen power plan](https://www.techpowerup.com/download/1usmus-custom-power-plan-ryzen-3000-zen-2/) can be used to potentially achieve higher boost clocks.
+Open Power Options and select High Performance on your PC, on your laptop select Balanced. Using High Performance on a laptop may kill your laptop battery much faster than balanced and unless you need the minimal performance it offers use Balanced. High Performance offers very little in terms of increasing performance on a desktop but may reduce stutters depending on hardware.
+
+Ultimate performance is for test machines for companies and does nothing to improve performance beyond what High Performance does. 
+
+[Truth about the ultimate performance plan](https://www.youtube.com/watch?v=lAuRrwEkr9g) Explains why the ultimate performance plan does nothing and why balanced is preferable to high performance on laptops.
+
+For AMD Ryzen users, use a Ryzen specific plan to correctly take advantage of CPPC2. Alternatively, a [custom Ryzen power plan](https://www.techpowerup.com/download/1usmus-custom-power-plan-ryzen-3000-zen-2/) can be used to potentially achieve higher boost clocks.
 
 ## Disable Radeon Chill
 
