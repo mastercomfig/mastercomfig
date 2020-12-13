@@ -17,7 +17,7 @@
       },
       {
         "name": "packet_rate",
-		"display": "Packet rate",
+	"display": "Packet rate",
         "description": "Controls how fast you send to and receive from the server.",
         "values": [
           {
@@ -30,7 +30,7 @@
       },
       {
         "name": "snapshot_buffer",
-		"display": "Snapshot buffer",
+	"display": "Snapshot buffer",
         "description": "Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.",
         "advanced_display": "Also known as linear interpolation (lerp or interp).",
         "values": [
@@ -50,7 +50,7 @@
       },
       {
         "name": "packet_size",
-		"display": "Packet size",
+	"display": "Packet size",
         "description": "Controls how big packets are and how they are split up/compressed.",
         "values": [
           {
@@ -72,7 +72,7 @@
       },
       {
         "name": "bandwidth",
-		"display": "Bandwidth",
+	"display": "Bandwidth",
         "description": "Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).",
         "advanced_display": "This does not increase data usage, just restricts how quickly data can be sent.",
         "type": "slider",
@@ -126,7 +126,7 @@
       },
       {
         "name": "lighting",
-		"display": "Lighting",
+	"display": "Lighting",
         "values": [
           {
             "value": "very_low"
@@ -153,7 +153,7 @@
       },
       {
         "name": "lighting_ex",
-		"display": "Lighting Ex",
+	"display": "Lighting Ex",
         "values": [
           {
             "value": "low"
@@ -165,7 +165,7 @@
       },
       {
         "name": "shadows",
-		"display": "Shadows",
+	"display": "Shadows",
         "values": [
           {
             "value": "off"
@@ -189,7 +189,7 @@
       },
       {
         "name": "effects",
-		"display": "Effects",
+	"display": "Effects",
         "values": [
           {
             "value": "low"
@@ -207,7 +207,7 @@
       },
       {
         "name": "water",
-		"display": "Water",
+	"display": "Water",
         "values": [
           {
             "value": "very_low"
@@ -234,7 +234,7 @@
       },
       {
         "name": "particles",
-		"display": "Particles",
+	"display": "Particles",
         "values": [
           {
             "value": "very_low"
@@ -273,7 +273,7 @@
       },
       {
         "name": "pyrovision",
-		"display": "Pyrovision",
+	"display": "Pyrovision",
         "values": [
           {
             "value": "low"
@@ -288,7 +288,7 @@
       },
       {
         "name": "motion_blur",
-		"display": "Motion blur",
+	"display": "Motion blur",
         "values": [
           {
             "value": "off"
@@ -306,25 +306,25 @@
         "display": "Anti-aliasing",
         "type": "slider",
         "values": [
-		  {
-			"value": "off"
-		  },
-		  {
-			"value": "on"
-		  },
-		  {
-			"value": "msaa_2x",
-			"display": "MSAA 2x"
-		  },
-		  {
-			"value": "msaa_4x",
-			"display": "MSAA 4x"
-		  },
-		  {
-			"value": "msaa_8x",
-			"display": "MSAA 8x"
-		  }
-		]
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          },
+          {
+            "value": "msaa_2x",
+            "display": "MSAA 2x"
+          },
+          {
+            "value": "msaa_4x",
+            "display": "MSAA 4x"
+          },
+          {
+            "value": "msaa_8x",
+            "display": "MSAA 8x"
+          }
+        ]
       },
       {
         "name": "texture_filter",
@@ -356,7 +356,7 @@
       },
       {
         "name": "characters",
-		"display": "Characters",
+	"display": "Characters",
         "values": [
           {
             "value": "very_low"
@@ -442,7 +442,7 @@
       },
       {
         "name": "gibs",
-		"display": "Gibs",
+	"display": "Gibs",
         "values": [
           {
             "value": "off"
@@ -475,7 +475,7 @@
       },
       {
         "name": "props",
-		"display": "Props",
+	"display": "Props",
         "values": [
           {
             "value": "low"
@@ -493,7 +493,7 @@
       },
       {
         "name": "ragdolls",
-		"display": "Ragdolls",
+	"display": "Ragdolls",
         "values": [
           {
             "value": "off"
@@ -510,8 +510,8 @@
         ]
       },
       {
-        "name": "3dsky",
-        "display": "3D Sky",
+        "name": "3d_sky",
+        "display": "3D sky",
         "type": "switch",
         "values": [
           {
@@ -524,7 +524,7 @@
       },
       {
         "name": "jigglebones",
-		"display": "Jigglebones",
+	"display": "Jigglebones",
         "values": [
           {
             "value": "off"
@@ -596,7 +596,7 @@
       },
       {
         "name": "ropes",
-		"display": "Ropes",
+	"display": "Ropes",
         "values": [
           {
             "value": "off"
@@ -676,7 +676,7 @@
       },
       {
         "name": "messages",
-		"display": "Messages",
+	"display": "Messages",
         "values": [
           {
             "value": "off"
@@ -691,7 +691,7 @@
       },
       {
         "name": "killfeed",
-		"display": "Killfeed",
+	"display": "Killfeed",
         "type": "switch",
         "values": [
           {
@@ -704,7 +704,7 @@
       },
       {
         "name": "killstreaks",
-		"display": "Killstreaks",
+	"display": "Killstreaks",
         "values": [
           {
             "value": "off"
@@ -732,7 +732,7 @@
       },
       {
         "name": "debug",
-		"display": "Debug",
+	"display": "Debug",
         "values": [
           {
             "value": "off"
@@ -750,7 +750,7 @@
       },
       {
         "name": "outlines",
-		"display": "Outlines",
+	"display": "Outlines",
         "values": [
           {
             "value": "off"
@@ -790,7 +790,7 @@
     "modules": [
       {
         "name": "sound",
-		"display": "Sound",
+	"display": "Sound",
         "values": [
           {
             "value": "low"
@@ -811,7 +811,7 @@
       },
       {
         "name": "voice_chat",
-		"display": "Voice chat",
+	"display": "Voice chat",
         "type": "switch",
         "values": [
           {
@@ -828,7 +828,7 @@
     "modules": [
       {
         "name": "mod_support",
-		"display": "Mod support",
+	"display": "Mod support",
         "type": "switch",
         "values": [
           {
@@ -841,7 +841,7 @@
       },
       {
         "name": "logo",
-		"display": "Logo",
+	"display": "Logo",
         "type": "switch",
         "values": [
           {
