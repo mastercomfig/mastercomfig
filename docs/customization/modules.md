@@ -447,26 +447,26 @@ Setting it higher can reduce input delay.
     in Team Fortress 2 has precision problems depending on your CPU (e.g. Intel Skylake platform and above)
     as well as accuracy problems on Windows due to usage of millisecond timers. It is recommended you use
     a more reliable FPS cap tool, like [Rivatuner](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)
-    and set `fpscap=unlimited` to disable the in-game FPS cap.
+    and set `fps_cap=unlimited` to disable the in-game FPS cap.
 
-Default setting: **`fpscap=1000`** (all presets).
+Default setting: **`fps_cap=1000`** (all presets).
 
-* **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
-* **`fpscap=30`**: Sets FPS cap to 30 FPS.
-* **`fpscap=60`**: Sets FPS cap to 60 FPS.
-* **`fpscap=75`**: Sets FPS cap to 75 FPS.
-* **`fpscap=120`**: Sets FPS cap to 120 FPS.
-* **`fpscap=144`**: Sets FPS cap to 144 FPS.
-* **`fpscap=160`**: Sets FPS cap to 160 FPS.
-* **`fpscap=165`**: Sets FPS cap to 165 FPS.
-* **`fpscap=180`**: Sets FPS cap to 180 FPS.
-* **`fpscap=200`**: Sets FPS cap to 200 FPS.
-* **`fpscap=240`**: Sets FPS cap to 240 FPS.
-* **`fpscap=300`**: Sets FPS cap to 300 FPS.
-* **`fpscap=360`**: Sets FPS cap to 360 FPS.
-* **`fpscap=400`**: Sets FPS cap to 400 FPS.
-* **`fpscap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
-* **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
+* **`fps_cap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
+* **`fps_cap=30`**: Sets FPS cap to 30 FPS.
+* **`fps_cap=60`**: Sets FPS cap to 60 FPS.
+* **`fps_cap=75`**: Sets FPS cap to 75 FPS.
+* **`fps_cap=120`**: Sets FPS cap to 120 FPS.
+* **`fps_cap=144`**: Sets FPS cap to 144 FPS.
+* **`fps_cap=160`**: Sets FPS cap to 160 FPS.
+* **`fps_cap=165`**: Sets FPS cap to 165 FPS.
+* **`fps_cap=180`**: Sets FPS cap to 180 FPS.
+* **`fps_cap=200`**: Sets FPS cap to 200 FPS.
+* **`fps_cap=240`**: Sets FPS cap to 240 FPS.
+* **`fps_cap=300`**: Sets FPS cap to 300 FPS.
+* **`fps_cap=360`**: Sets FPS cap to 360 FPS.
+* **`fps_cap=400`**: Sets FPS cap to 400 FPS.
+* **`fps_cap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
+* **`fps_cap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000 FPS in meaningful game scenarios.
 
 ### OpenGL
 
