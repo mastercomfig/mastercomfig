@@ -368,8 +368,8 @@ Controls the enhanced 3D skybox that is present in most maps.
 
 Default setting: based on which preset you are currently using.
 
-* **`3dsky=off`**: Disables 3D sky.
-* **`3dsky=on`**: Enables 3D sky.
+* **`3d_sky=off`**: Disables 3D sky.
+* **`3d_sky=on`**: Enables 3D sky.
 
 ### Jigglebones
 
