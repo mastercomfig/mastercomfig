@@ -594,8 +594,8 @@
         ]
       },
       {
-        "name": "fpscap",
-        "display": "FPS Cap",
+        "name": "fps_cap",
+        "display": "FPS cap",
         "type": "slider",
         "values": ["powersaver", "30", "60", "75", "120", "144", "160", "165", "180", "200", "240", "300", "360", "400", "1000", "unlimited"]
       },
