@@ -4,7 +4,7 @@ description: Learn how to optimize your Windows OS for better performance.
 
 # Windows
 
-## Enable Hardware-accelerated GPU scheduling
+## Enable Hardware-accelerated GPU Scheduling
 
 A new feature in Windows 10 May 2020 Update (version 2004) is hardware-accelerated GPU scheduling, which lets the GPU handle its own task scheduling instead of Windows,
 thereby reducing latency and improving performance. You can learn how to enable it with [this guide](https://www.neowin.net/news/how-to-enable-hardware-accelerated-gpu-scheduling-on-windows-10-may-2020-update/).
@@ -32,7 +32,7 @@ If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms
 !!! tip
     If you're using variable refresh rate (VRR) technology, like G-SYNC, disabling Fullscreen Optimizations may break it, depending on your monitor, drivers and graphics card. So, if you experience problems with VRR after this, try reverting the change.
 
-## Use High Performance power plan
+## Use High Performance Power Plan
 
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, use a Ryzen specific plan to correctly take advantage of CPPC2. Alternatively, a [custom Ryzen power plan](https://www.techpowerup.com/download/1usmus-custom-power-plan-ryzen-3000-zen-2/) can be used to potentially achieve higher boost clocks.
 
@@ -48,7 +48,7 @@ Radeon Chill is a power saving feature that introduces a variable framecap. You 
 
 You can use the [W10Privacy tool](https://www.winprivacy.de/deutsch-start/download/) to reduce disk load and other workloads to [improve performance](https://www.phoronix.com/scan.php?page=article&item=windows10-w10priv-wsl).
 
-## Networking optimization
+## Networking Optimization
 
 Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your internet settings.
 
@@ -79,7 +79,7 @@ Nahimic is an audio effects software preinstalled on some gaming laptops and des
 
 Intel Panel Self Refresh can ruin frame latency and timings, especially on hybrid (Optimus) laptops. Disable it Power options within your Intel graphics settings app.
 
-## Driver latency optimization
+## Driver Latency Optimization
 
 Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as frequent stuttering. The user must sniff out exactly which drivers are causing latency.
 
@@ -87,8 +87,16 @@ Badly programmed kernel-mode device drivers might cause latency issues, which le
 
 Use [LatencyMon](https://www.resplendence.com/latencymon) and [DPC Latency Checker](https://www.thesycon.de/eng/latency_check.shtml) to analyze latency issues caused by kernel-mode device drivers. If they report issues, try updating your drivers or installing alternate drivers.
 
-## Nvidia Control Panel Settings (Can be translated to AMD Radeon Settings)
+## Nvidia/AMD Control Panel Settings
 
-[Nvidia Control Panel Optimization](https://www.youtube.com/watch?v=ugadZ86uTik) Does an excellent job explaining how to configure the Nvidia control panel and goes over each setting in depth and why to use it/not use it. Many settings in the Nvidia control panel are shared with the Radeon panel so you can go off of this guide for it as well.
+Here will be listed a few documents detailing optimal settings.
 
-Nvidia SILK is a new setting on the default Panel, turn it to low or off, any higher increases latency significantly.
+[DESCRIPTION](https://docs.google.com/document/d/1-k14uBdWv3RDIfdfvR6ICCA9wYgUYjflgd-NJkIFIiI/edit?usp=sharing): Describes each setting in a general overview
+
+[POTATO](https://docs.google.com/document/d/1vCimhfmBbGuhiuyclbKyFw6BtFddVEFjplvlZOkQV7Y/edit?usp=sharing): Potato Options
+
+[PERFORMANCE](https://docs.google.com/document/d/14LbLlM_c8c2d6HItoWNQEfsd_UPg5tKAax2HAQPuBbY/edit?usp=sharing): Performance for good PCs
+
+[BALANCED](https://docs.google.com/document/d/1Y1ynvC528Y1Rb6udwR0RL-UpesmePkKGYJWSV1XcFnI/edit?usp=sharing): Keeps it looking nice without destroying your performance
+
+[EYE CANDY](https://docs.google.com/document/d/16CJUpC7FcHtUSLgsAyvu6AuOaX380juLnV1IzifT8X0/edit?usp=sharing)If your PC can handle it this will made TF2 look a lot better.
