@@ -327,19 +327,19 @@
           },
           {
             "value": "aniso2x",
-            "display": "Anisotropic Filtering 2x"
+            "display": "Anisotropic filtering 2x"
           },
           {
             "value": "aniso4x",
-            "display": "Anisotropic Filtering 4x"
+            "display": "Anisotropic filtering 4x"
           },
           {
             "value": "aniso8x",
-            "display": "Anisotropic Filtering 8x"
+            "display": "Anisotropic filtering 8x"
           },
           {
             "value": "aniso16x",
-            "display": "Anisotropic Filtering 16x"
+            "display": "Anisotropic filtering 16x"
           }
         ]
       },
