@@ -246,7 +246,7 @@
       },
       {
         "name": "post_processing",
-        "display": "General Post Processing",
+        "display": "General Post-Processing",
         "values": [
           {
             "value": "off"
@@ -620,7 +620,7 @@
     "modules": [
       {
         "name": "hud_player_model",
-        "display": "Player model",
+        "display": "Player Model",
         "type": "switch",
         "values": [
           {
