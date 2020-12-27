@@ -31,6 +31,16 @@ r_drawviewmodel 1
 
 Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
+## Black artifacts all over the screen on Linux
+
+This is a bug with later versions of Mesa. You can fix it by setting the following in `autoexec.cfg`:
+
+```c
+mat_phong 1
+mat_specular 1
+mat_bumpmap 1
+```
+
 ## %killername% and other HUD bugs
 
 This is a HUD initialization bug with TF2. You can fix it by running `hud_reloadscheme`. Running it once after joining a match is enough.
