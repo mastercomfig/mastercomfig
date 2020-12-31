@@ -67,9 +67,6 @@ Launch options are documented on the docs and are formatted like this:
 
 `**-launchoption** : launch option description`
 
-Make sure the description is not sentence case and starts with a lowercase
-letter.
-
 There are currently 4 categories for launch options:
 
 * `Recommended`: These are launch options everyone should be using, as they benefit all users
