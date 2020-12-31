@@ -13,25 +13,6 @@ If you are curious about what this feature exactly does, you can read [this tech
 
 If you experience problems or reduced performance from this feature, turn it off and [submit feedback](https://aka.ms/submitgameperformancefeedback).
 
-## Disable Game Mode
-
-Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information and instructions on how to disable it.
-
-## Disable Fullscreen Optimizations
-
-Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets near fullscreen performance with the fast alt-tabbing of windowed mode.
-
-Source is known to be worse with fullscreen optimizations on some systems and thus you should disable it if you encounter problems.
-
-Open your game folder through Steam. Then, right click on `hl2.exe`, click Properties, go to the Compatibility tab, and then check the box that says `Disable Fullscreen Optimizations`.
-
-You can find more information on the [DirectX Developer Blog](https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/) and in [this Reddit thread](https://old.reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub/?context=3).
-
-If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
-
-!!! tip
-    If you're using variable refresh rate (VRR) technology, like G-SYNC, disabling Fullscreen Optimizations may break it, depending on your monitor, drivers and graphics card. So, if you experience problems with VRR after this, try reverting the change.
-
 ## Use High Performance power plan
 
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen users, use a Ryzen specific plan to correctly take advantage of CPPC2. Alternatively, a [custom Ryzen power plan](https://www.techpowerup.com/download/1usmus-custom-power-plan-ryzen-3000-zen-2/) can be used to potentially achieve higher boost clocks.
