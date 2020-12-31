@@ -98,7 +98,7 @@ convar 0 // What the command does and a bit about what this default
 ```
 
 As you can see, default ConVar values should be at the beginning, with
-alternatives coming after. Unlike the launch options, use sentence case. Avoid
+alternatives coming after. Use sentence case and avoid
 punctuation unless using multiple sentences.
 
 ##### CVarlist
