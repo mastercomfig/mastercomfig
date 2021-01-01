@@ -30,20 +30,19 @@
       {
         "name": "snapshot_buffer",
         "description": "Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.",
-        "advanced_display": "Also known as linear interpolation (lerp or interp). mastercomfig sets this automatically per class, but setting this module will override this behavior.",
-        "tags": ["advanced"],
+        "advanced_display": "Also known as linear interpolation (lerp or interp).",
         "values": [
           {
             "value": "auto"
           },
           {
-            "value": "low"
+            "value": "high"
           },
           {
             "value": "safe"
           },
           {
-            "value": "high"
+            "value": "low"
           }
         ]
       },
@@ -246,7 +245,7 @@
       },
       {
         "name": "post_processing",
-        "display": "General Post Processing",
+        "display": "General Post-Processing",
         "values": [
           {
             "value": "off"
@@ -292,7 +291,7 @@
       },
       {
         "name": "aa",
-        "display": "Anti-aliasing",
+        "display": "Anti-Aliasing",
         "type": "switch",
         "values": [
           {
@@ -305,7 +304,7 @@
       },
       {
         "name": "aa_msaa",
-        "display": "MSAA Anti-aliasing",
+        "display": "MSAA Anti-Aliasing",
         "type": "slider",
         "values": ["off", "2x", "4x", "8x"]
       },
@@ -321,19 +320,19 @@
           },
           {
             "value": "aniso2x",
-            "display": "Anisotropic 2x"
+            "display": "Anisotropic filtering 2x"
           },
           {
             "value": "aniso4x",
-            "display": "Anisotropic 4x"
+            "display": "Anisotropic filtering 4x"
           },
           {
             "value": "aniso8x",
-            "display": "Anisotropic 8x"
+            "display": "Anisotropic filtering 8x"
           },
           {
             "value": "aniso16x",
-            "display": "Anisotropic 16x"
+            "display": "Anisotropic filtering 16x"
           }
         ]
       },
@@ -614,7 +613,7 @@
     "modules": [
       {
         "name": "hud_player_model",
-        "display": "Player model",
+        "display": "Player Model",
         "type": "switch",
         "values": [
           {
