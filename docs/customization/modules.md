@@ -300,7 +300,7 @@ Default setting: based on which preset you are currently using.
 * **`decals=off`**: Disables decals.
 * **`decals=low`**: 9 max decals that can overlap.
 * **`decals=medium`** 32 max decals that can overlap.
-* **`decals=high`**: 80 max decals that can overlap.
+* **`decals=high`**: 96 max decals that can overlap.
 * **`decals=ultra`**: 2048 max decals (engine limit) that can overlap with practically no limit.
 
 ### Model decals
