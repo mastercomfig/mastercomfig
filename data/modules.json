@@ -714,9 +714,6 @@
             "value": "minimal"
           },
           {
-            "value": "on_partial"
-          },
-          {
             "value": "on"
           }
         ]
