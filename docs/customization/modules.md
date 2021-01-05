@@ -139,8 +139,8 @@ Default setting: based on which preset you are currently using.
 * **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
 * **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting. No lightwarps.
-* **`lighting=high`**: 6 dynamic lights. Detailed lighting.
-* **`lighting=very_high`**: 12 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
+* **`lighting=high`**: 8 dynamic lights. Detailed lighting.
+* **`lighting=very_high`**: 16 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
 * **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
 
 ### Lighting Ex
@@ -162,8 +162,8 @@ Default setting: based on which preset you are currently using.
 * **`shadows=very_low`**: Blobby shadows.
 * **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
 * **`shadows=medium`**: Up to 8 high quality shadows, and medium robot shadow distance.
-* **`shadows=high`**: Up to 16 high quality shadows, and high robot shadow distance.
-* **`shadows=ultra`**: Up to 32 high quality shadows, and very high robot/Halloween boss shadow distance.
+* **`shadows=high`**: Up to 12 high quality shadows, and high robot shadow distance.
+* **`shadows=ultra`**: Up to 24 high quality shadows, and very high robot/Halloween boss shadow distance.
 
 ### Effects
 
