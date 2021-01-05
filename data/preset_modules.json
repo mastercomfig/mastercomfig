@@ -49,7 +49,7 @@
   "effects": {
     "default": "low",
     "medium": "medium",
-    "medium-high": "medium",
+    "medium-high": "high",
     "high": "high",
     "ultra": "ultra"
   },
@@ -78,7 +78,7 @@
   },
   "pyrovision": {
     "default": "low",
-    "medium-high": "medium",
+    "medium-high": "high",
     "high": "high",
     "ultra": "high"
   },
@@ -87,6 +87,7 @@
   },
   "aa": {
     "default": "off",
+    "medium": "on",
     "medium-high": "on",
     "high": "on",
     "ultra": "on"
@@ -116,13 +117,14 @@
   "decals": {
     "default": "off",
     "medium": "low",
-    "medium-high": "low",
-    "high": "medium",
+    "medium-high": "medium",
+    "high": "high",
     "ultra": "ultra"
   },
   "decals_models": {
     "default": "off",
-    "high": "low",
+    "medium-high": "low",
+    "high": "high",
     "ultra": "high"
   },
   "decals_art": {
@@ -142,8 +144,8 @@
   },
   "gibs": {
     "default": "off",
-    "medium-high": "low",
-    "high": "medium",
+    "medium-high": "medium",
+    "high": "high",
     "ultra": "high"
   },
   "props": {
@@ -160,6 +162,7 @@
   },
   "3dsky": {
     "default": "off",
+    "medium-high": "on",
     "high": "on",
     "ultra": "on"
   },
@@ -186,7 +189,9 @@
   },
   "ropes": {
     "default": "off",
-    "medium-high": "low",
+    "medium-low": "low",
+    "medium": "low",
+    "medium-high": "high",
     "high": "high",
     "ultra": "ultra"
   },
@@ -198,6 +203,7 @@
   },
   "hud_player_model": {
     "default": "off",
+    "medium-high": "on",
     "high": "on",
     "ultra": "on"
   },
@@ -231,11 +237,11 @@
     "very-low": "off"
   },
   "outlines": {
-    "default": "low",
+    "default": "high",
     "very-low": "off",
     "low": "off",
-    "high": "high",
-    "ultra": "high"
+    "medium-low": "low",
+    "medium": "low"
   },
   "dynamic_background": {
     "default": "off"
