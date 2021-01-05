@@ -67,6 +67,9 @@ Launch options are documented on the docs and are formatted like this:
 
 `**-launchoption** : launch option description`
 
+Make sure the description is not sentence case and starts with a lowercase
+letter.
+
 There are currently 4 categories for launch options:
 
 * `Recommended`: These are launch options everyone should be using, as they benefit all users
@@ -98,7 +101,7 @@ convar 0 // What the command does and a bit about what this default
 ```
 
 As you can see, default ConVar values should be at the beginning, with
-alternatives coming after. Use sentence case and avoid
+alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
 ##### CVarlist
