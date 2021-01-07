@@ -238,7 +238,7 @@ Default setting: **`motion_blur=off`** (all presets).
 
 ### Anti-Aliasing
 
-Controls the main hardware based MSAA anti-aliasing and additional anti-aliasing passes.
+Controls additional anti-aliasing passes (a.k.a. alpha to coverage) and the main hardware based MSAA anti-aliasing.
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
