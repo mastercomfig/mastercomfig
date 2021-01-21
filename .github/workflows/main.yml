@@ -27,7 +27,7 @@ jobs:
       with:
         path: |
           /home/runner/.steam
-        key: cache-1
+        key: ${{ runner.os }}-cache
     - name: Install dependencies
       run: |
         sudo dpkg --add-architecture i386
@@ -53,7 +53,6 @@ jobs:
       env:
         prerelease: true
     - name: Upload artifacts
-      if:  github.event_name != 'push' || github.ref != 'refs/heads/develop'
       uses: actions/upload-artifact@v2
       with:
         name: mastercomfig
