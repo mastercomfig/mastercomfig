@@ -7,47 +7,47 @@ description: Some awesome TF2 modifications which can be used alongside masterco
 Here are a few awesome TF2 modifications:
 
 * [CleanTF2+](https://github.com/JarateKing/CleanTF2plus)
-  — Makes TF2 a lot cleaner and simpler. Includes NoHats.
+  — Makes TF2 a lot cleaner and simpler, includes NoHats
 
 * [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases)
-  — Fixes issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons.
+  — Fixes issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons
 
 * [No-Hats-Mod bgum](https://github.com/Fedora31/no-hats-bgum)
-  — Removes cosmetics like hats, botkillers, skins, and much more.
+  — Removes cosmetics like hats, botkillers, skins, and much more
 
 * [No explosion smoke script](https://www.teamfortress.tv/25647/no-explosion-smoke-script)
-  — Get cleaner particles for explosions.
+  — Get cleaner particles for explosions
 
 * [No muzzle flashes](https://github.com/ghost-420/no-muzzleflashes)
-  — Removes muzzleflash sprites and particles from all weapons, and from sentry guns (if preferred).
+  — Removes muzzleflash sprites and particles from all weapons, and from sentry guns (if preferred)
 
 * [Particle Limitation Pack](https://www.teamfortress.tv/22586/particle-limitation-pack)
-  — Reduces certain particles.
+  — Reduces certain particles
 
 * [VTF Crosshair Pack](https://www.teamfortress.tv/35367/vtf-crosshair-pack)
-  — New custom crosshairs.
+  — New custom crosshairs
 
 * [SteamPriorityLauncher](https://github.com/Leo40Git/SteamPriorityLauncher)
-  — A launcher for launching Steam games, such as TF2, with different priorities.
+  — A launcher for launching Steam games, such as TF2, with different priorities
 
 * [yttrium's viewmodels](https://github.com/Yttrium-tYcLief/CompVMInstaller/releases)
-  — Customize hiding individual viewmodels.
+  — Customize hiding individual viewmodels
   
 !!! info
 
     The yttrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. You may delete it if you want, since it is not used and not needed. You should use the **`dynamic_background=preload`** module instead.
 
 * [Transparent Viewmodels](https://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
-  — Makes viewmodels translucent.
+  — Makes viewmodels translucent
 
 * [Common scripts/binds](https://www.reddit.com/r/tf2scripthelp/wiki/commonscripts)
-  — Some common and useful scripts/binds, like the null-cancelling movement script.
+  — Some common and useful scripts/binds, like the null-cancelling movement script
 
 * [mastercomfig for Vortex](https://github.com/AtomicTEM/Mastercomfig-All-in-one-for-Vortex-Mod-Manager)
-  — An unofficial distribution of mastercomfig which supports [Vortex Mod Manager](https://www.nexusmods.com/about/vortex/).
+  — An unofficial distribution of mastercomfig which supports [Vortex Mod Manager](https://www.nexusmods.com/about/vortex/)
 
 * [Static Ambassador Crosshair](https://github.com/juniorsgithub/tf2-static-ambassador-crosshair)
-  — Replaces the dynamic crosshair resize of the Ambassador inaccuracy indicator with a static crosshair.
+  — Replaces the dynamic crosshair resize of the Ambassador inaccuracy indicator with a static crosshair
 
 * [Loadouts Script](https://github.com/juniorsgithub/tf2-loadouts-script)
-  — An "advanced" TF2 loadouts and resupply script.
+  — An "advanced" TF2 loadouts and resupply script
