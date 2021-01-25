@@ -218,13 +218,13 @@ Default setting: based on which preset you are currently using.
 
 ### Pyrovision
 
-Controls pyrovision visual effects.
+Controls Pyrovision visual effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`pyrovision=low`**: Disables pyrovision vignette and skybox SSAO depth of field.
-* **`pyrovision=medium`**: Enables static pyrovision vignette.
-* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic pyrovision vignette.
+* **`pyrovision=low`**: Disables Pyrovision vignette and skybox SSAO depth of field.
+* **`pyrovision=medium`**: Enables static Pyrovision vignette.
+* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic Pyrovision vignette.
 
 ### Motion Blur
 
