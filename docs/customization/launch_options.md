@@ -50,28 +50,28 @@ Read below about optional launch options and choosing your own DXLevel.
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
-    * **-r_emulate_gl** : changes rendering pipeline to accommodate OpenGL quirks and support levels. Still runs using DirectX.
-    * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
+    * **-r_emulate_gl** : changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX
+    * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
 
 === "macOS"
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
-    * **-displayindex x** : uses the monitor at the specified display index. Starts at `1`. `0` is the primary display (and the default).
-    * **-glslcontrolflow** : enables support for GLSL control flow. :warning: **Experimental** as it may cause rendering issues.
-    * **-glmenableclipplanes** : used to disable AMD driver workaround which reduces performance. It may cause crashes.
-    * **-snd_openal** : uses OpenAL instead of Mac Audio Queue, which can reduce latency and provide improved audio effects. :warning: **Experimental** as it is unsupported by Valve.
+    * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
+    * **-glslcontrolflow** : enables support for GLSL control flow. :warning: **Experimental** as it may cause rendering issues
+    * **-glmenableclipplanes** : used to disable AMD driver workaround which reduces performance :warning: **Experimental** as it may cause crashes
+    * **-snd_openal** : uses OpenAL instead of Mac Audio Queue, which can reduce latency and provide improved audio effects. :warning: **Experimental** as it is unsupported by Valve
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
 
 === "Linux"
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
-    * **-displayindex x** : uses the monitor at the specified display index. Starts at `1`. `0` is the primary display (and the default).
-    * **-gl_enablesamplerobjects** : enables OpenGL sampler objects. :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete.
-    * **-gl_amd_pinned_memory** : uses `AMD_pinned_memory` for efficient device memory handling. :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete.
-    * **-gl_nv_bindless_texturing** : uses `NV_bindless_texture` for reduced overhead for managing bindings. :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete.
+    * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
+    * **-gl_enablesamplerobjects** : enables OpenGL sampler objects :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete
+    * **-gl_amd_pinned_memory** : uses `AMD_pinned_memory` for efficient device memory handling :warning: **Experimental** as its performance impact (negative or positive) is unknown
+    * **-gl_nv_bindless_texturing** : uses `NV_bindless_texture` for reduced overhead for managing bindings :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
 
 ## Uncommon Launch Options
