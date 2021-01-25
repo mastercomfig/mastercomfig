@@ -27,12 +27,7 @@ Read below about optional launch options and choosing your own DXLevel.
 
 === "macOS"
 
-    !!! info
-        These launch options should be added to first launch, and then removed.
-
-    **-dxlevel 90** : uses DX9 with Shader Model 2
-
-    **-dxlevel 92** : uses DX9 with some Shader Model 3
+    The DXLevel is automatically determined and cannot be set.
 
 === "Linux"
 
