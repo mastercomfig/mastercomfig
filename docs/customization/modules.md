@@ -236,28 +236,20 @@ Default setting: **`motion_blur=off`** (all presets).
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
 * **`motion_blur=high`**: Motion blur fully enabled.
 
-### Anti-aliasing
+### Anti-Aliasing
 
-Controls additional anti-aliasing passes.
-
-Default setting: based on which preset you are currently using.
-
-* **`aa=off`**: Turns off additional anti-aliasing.
-* **`aa=on`**: Enables enhanced fence and grass anti-aliasing.
-
-### MSAA Anti-aliasing
-
-Controls the main hardware based MSAA anti-aliasing.
+Controls additional anti-aliasing passes (a.k.a. alpha to coverage) and the main hardware based MSAA anti-aliasing.
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
 
 Default setting: based on which preset you are currently using.
 
-* **`aa_msaa=off`**: Turns off MSAA and CSAA.
-* **`aa_msaa=2x`**: MSAA 2x
-* **`aa_msaa=4x`**: MSAA 4x
-* **`aa_msaa=8x`**: MSAA 8x
+* **`anti_aliasing=off`**: Turns off all forms of anti-aliasing.
+* **`anti_aliasing=on`**: Only enables [alpha to coverage](https://en.wikipedia.org/wiki/Alpha_to_coverage).
+* **`anti_aliasing=msaa_2x`**: Enables alpha to coverage and MSAA 2x.
+* **`anti_aliasing=msaa_4x`**: Enables alpha to coverage and MSAA 4x.
+* **`anti_aliasing=msaa_8x`**: Enables alpha to coverage and MSAA 8x.
 
 ### Texture filtering
 
