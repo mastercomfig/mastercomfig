@@ -1,4 +1,14 @@
-// A lot of launch options here seem to be only for MacOS. Should I move them to a MacOS launch option list or just keep them in the linux launch op list?
+---
+description: A list of all launch options on TF2 for Linux.
+...
+
+# Launch Options - Linux
+
+!!! Note
+    **These launch options have been extracted from the 2020 source code leak of TF2 as of 1/28/21 6:58PM.** 
+	This means that the list of executable launch options can change overtime as a result! Treat this list as a hint instead of a full list.
+
+```
 -yieldcycles
 -glmdisableclipplanes
 -glmenableclipplanes
@@ -268,3 +278,4 @@
 -vguimessages
 -disable_matsurf_noculls
 -noquicktime
+```
