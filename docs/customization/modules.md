@@ -28,9 +28,9 @@ will set the texture quality to `high`.
 
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will disable mastercomfig from running texture commands.
+If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will prevent mastercomfig from running texture commands.
 
-Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup before you ran the module commands by entering `run_modules` into console.
+Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup by entering `run_modules` into the console.
 
 #### Module user layer alias
 
@@ -69,7 +69,7 @@ Default setting: **`snapshot_buffer=auto`** (all presets).
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
 
-### Packet size
+### Packet Size
 
 Controls how big packets are and how they are split up/compressed.
 
@@ -118,7 +118,7 @@ Default setting: **`download=auto`** (all presets).
 
 ## Graphics modules
 
-### Level of detail
+### Level of Detail
 
 Controls how detailed models are.
 
@@ -137,8 +137,8 @@ Default setting: based on which preset you are currently using.
 
 * **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-* **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting. No lightwarps.
+* **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, rimlights or lighting brightness boost.
+* **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting.
 * **`lighting=high`**: 6 dynamic lights. Detailed lighting.
 * **`lighting=very_high`**: 12 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
 * **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
@@ -160,10 +160,10 @@ Default setting: based on which preset you are currently using.
 
 * **`shadows=off`**: No shadows.
 * **`shadows=very_low`**: Blobby shadows.
-* **`shadows=low`**: Up to 4 low quality shadows, and low robot shadow distance.
-* **`shadows=medium`**: Up to 8 high quality shadows, and medium robot shadow distance.
-* **`shadows=high`**: Up to 16 high quality shadows, and high robot shadow distance.
-* **`shadows=ultra`**: Up to 32 high quality shadows, and very high robot/Halloween boss shadow distance.
+* **`shadows=low`**: Up to 3 low quality shadows.
+* **`shadows=medium`**: Up to 7 high quality shadows, and low robot/Halloween boss shadow distance.
+* **`shadows=high`**: Up to 11 high quality shadows, and medium robot/Halloween boss shadow distance.
+* **`shadows=ultra`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance.
 
 ### Effects
 
@@ -218,15 +218,15 @@ Default setting: based on which preset you are currently using.
 
 ### Pyrovision
 
-Controls pyrovision visual effects.
+Controls Pyrovision visual effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`pyrovision=low`**: Disables pyrovision vignette and skybox SSAO depth of field.
-* **`pyrovision=medium`**: Enables static pyrovision vignette.
-* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic pyrovision vignette.
+* **`pyrovision=low`**: Disables Pyrovision vignette and skybox SSAO depth of field.
+* **`pyrovision=medium`**: Enables static Pyrovision vignette.
+* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic Pyrovision vignette.
 
-### Motion blur
+### Motion Blur
 
 Controls blurring effect from rotation and movement.
 
@@ -251,7 +251,7 @@ Default setting: based on which preset you are currently using.
 * **`anti_aliasing=msaa_4x`**: Enables alpha to coverage and MSAA 4x.
 * **`anti_aliasing=msaa_8x`**: Enables alpha to coverage and MSAA 8x.
 
-### Texture filtering
+### Texture Filtering
 
 Controls texture smoothing/filtering.
 
@@ -280,7 +280,7 @@ Default setting: based on which preset you are currently using.
 * **`characters=high`**: Enables smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at a slightly increased range.
 * **`characters=ultra`**: Enables smooth facial animations, high quality models, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at all ranges.
 
-### General decals
+### General Decals
 
 Controls bullet holes and overall decal support.
 
@@ -295,7 +295,7 @@ Default setting: based on which preset you are currently using.
 * **`decals=high`**: 80 max decals that can overlap.
 * **`decals=ultra`**: 2048 max decals (engine limit) that can overlap with practically no limit.
 
-### Model decals
+### Model Decals
 
 Controls blood on hurt players and some bullet decals on props.
 
@@ -305,7 +305,7 @@ Default setting: based on which preset you are currently using.
 * **`decals_models=low`**: Allow up to 9 model decals.
 * **`decals_models=high`**: Allow up to 32 model decals.
 
-### Map decals
+### Map Decals
 
 Controls decals placed by the map author.
 
@@ -314,7 +314,7 @@ Default setting: based on which preset you are currently using.
 * **`decals_art=off`**: Disables map decals.
 * **`decals_art=on`**: Enables map decals, and blocks full decal clearing done by mastercomfig periodically.
 
-### Spray decals
+### Spray Decals
 
 Controls decals sprayed by players.
 
@@ -332,7 +332,7 @@ Default setting: based on which preset you are currently using.
 * **`gibs=medium`**: Default number of gibs.
 * **`gibs=high`**: Default number of gibs, gibs can burn.
 
-### Silly gibs
+### Silly Gibs
 
 Default setting: **`sillygibs=auto`**.
 
@@ -362,7 +362,7 @@ Default setting: based on which preset you are currently using.
 * **`ragdolls=medium`**: Enables standard physics ragdolls.
 * **`ragdolls=high`**: Enables physics ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
 
-### 3D sky
+### 3D Sky
 
 Controls the enhanced 3D skybox that is present in most maps.
 
@@ -403,7 +403,7 @@ Default setting: **`sheens_tint=high`** (all presets).
 * **`sheens_tint=high`**: High tint boost.
 * **`sheens_tint=full`**: Maximum tint boost.
 
-### Texture quality
+### Texture Quality
 
 Controls texture quality.
 
@@ -479,7 +479,7 @@ Default setting: **`opengl=default`** (all presets).
 
 ## HUD modules
 
-### Player model
+### Player Model
 
 Toggle the live 3D player model in the corner of your screen.
 
@@ -554,10 +554,10 @@ Controls various debugging displays and console.
 
 Default setting: **`debug=minimal`** (all presets, except Very Low).
 
-* **`debug=on`**: Enables all debug HUDs.
-* **`debug=on_partial`**: Enables all but the noisiest debug HUDs.
-* **`debug=minimal`**: Enables developer console.
 * **`debug=off`**: Disables all debug features.
+* **`debug=minimal`**: Enables developer console.
+* **`debug=on_partial`**: Enables all but the noisiest debug HUDs.
+* **`debug=on`**: Enables all debug HUDs.
 
 ### Outlines
 
@@ -636,7 +636,7 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 ### Movement Binds
 
 !!! warning
-    This module requires the Null-Cancelling Movement addon in order to function
+    This module requires the Null-Cancelling Movement addon in order to function.
 
 Changes the keys that are used to move while the Null-Cancelling Movement addon is installed.
 If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:
