@@ -6,9 +6,9 @@ description: A list of all launch options on TF2 for Windows.
 
 !!! Note
     **These launch options have been extracted from the 2020 source code leak of TF2 as of 1/28/21 6:58PM.** 
-	This means that the list of executable launch options can change overtime as a result! Treat this list as a hint instead of a full list.
+    This means that the list of executable launch options can change overtime as a result! Treat this list as a hint instead of a full list.
 
-```
+```txt
 -yieldcycles
 -nomousegrab
 -mousegrab
