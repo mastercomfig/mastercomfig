@@ -111,7 +111,7 @@ ConVars and commands are found using [these instructions](https://docs.mastercom
 * [Windows](https://docs.mastercomfig.com/page/tf2/cvarlist_win/)
 * [Linux](https://docs.mastercomfig.com/page/tf2/cvarlist_linux/)
 
-Add your alternatives uncommented in the applicable presets/addons, or use modules:
+Add your alternatives uncommented in the applicable presets/addons, or use modules.
 
 ##### Presets
 
@@ -131,7 +131,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
-* `null-cancelling-movement`: Prevents you from stopping, when you press two opposing direction keys.
+* `null-cancelling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (2GB and lower)
 
 ##### Modules

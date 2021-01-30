@@ -291,23 +291,29 @@
         ]
       },
       {
-        "name": "aa",
-        "display": "Anti-aliasing",
-        "type": "switch",
+        "name": "anti_aliasing",
+        "display": "Anti-Aliasing",
+        "type": "slider",
         "values": [
           {
             "value": "off"
           },
           {
             "value": "on"
+          },
+          {
+            "value": "msaa_2x",
+            "display": "MSAA 2x"
+          },
+          {
+            "value": "msaa_4x",
+            "display": "MSAA 4x"
+          },
+          {
+            "value": "msaa_8x",
+            "display": "MSAA 8x"
           }
         ]
-      },
-      {
-        "name": "aa_msaa",
-        "display": "MSAA Anti-aliasing",
-        "type": "slider",
-        "values": ["off", "2x", "4x", "8x"]
       },
       {
         "name": "texture_filter",
