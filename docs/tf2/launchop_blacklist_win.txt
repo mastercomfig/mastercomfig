@@ -55,7 +55,6 @@
 -particles
 -PjWW
 -posedebug
--precachefontintlchars
 -quickswitch
 -reload
 -right
