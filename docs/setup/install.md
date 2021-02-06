@@ -8,7 +8,7 @@ description: Easy steps on how to install mastercomfig and get it set up properl
 2. Go to your Steam library and right click on Team Fortress 2.
 3. Click Properties.
 4. Click the Local Files tab.
-5. Click Browse Local Files...
+5. Click Browse...
 6. Navigate to the `tf/custom` folder.
 7. Drag the VPK files into this folder.
 8. Set these launch options: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`. For more information, read the [launch options customization guide](../customization/launch_options.md).
