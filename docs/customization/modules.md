@@ -329,6 +329,7 @@ Default setting: based on which preset you are currently using.
 
 * **`gibs=off`**: Disables gibs.
 * **`gibs=low`**: Max of 2 gib parts.
+* **`gibs=medium_low`**: Max of 4 gib parts.
 * **`gibs=medium`**: Default number of gibs.
 * **`gibs=high`**: Default number of gibs, gibs can burn.
 
