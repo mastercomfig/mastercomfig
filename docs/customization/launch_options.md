@@ -26,12 +26,7 @@ Read below about optional launch options and choosing your own DXLevel.
 
 === "macOS"
 
-    !!! info
-        These launch options should be added to first launch, and then removed.
-
-    **-dxlevel 90** : uses DX9 with Shader Model 2
-
-    **-dxlevel 92** : uses DX9 with some Shader Model 3
+    The DXLevel is automatically determined and cannot be set.
 
 === "Linux"
 
@@ -53,8 +48,8 @@ Read below about optional launch options and choosing your own DXLevel.
 === "Windows"
 
     * **-console** : displays console on startup
-    * **-r_emulate_gl** : changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX
     * **-nostartupsound** : disables game music on main menu
+    * **-r_emulate_gl** : changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
 

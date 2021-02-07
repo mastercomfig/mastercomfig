@@ -85,17 +85,11 @@
   "motion_blur": {
     "default": "off"
   },
-  "aa": {
+  "anti_aliasing": {
     "default": "off",
-    "medium-high": "on",
-    "high": "on",
-    "ultra": "on"
-  },
-  "aa_msaa": {
-    "default": "off",
-    "medium-high": "4x",
-    "high": "8x",
-    "ultra": "8x"
+    "medium-high": "msaa_4x",
+    "high": "msaa_8x",
+    "ultra": "msaa_8x"
   },
   "texture_filter": {
     "default": "trilinear",
