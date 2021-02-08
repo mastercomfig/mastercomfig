@@ -610,7 +610,7 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
-## Misc modules
+## Miscellaneous modules
 
 ### Mod Support
 
