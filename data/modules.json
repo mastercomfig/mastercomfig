@@ -813,13 +813,16 @@
         "display": "Party Join Mode",
         "values": [
           {
-            "value": "open"
+            "value": "open",
+            "display": "Open party"
           },
           {
-            "value": "request"
+            "value": "request",
+            "display": "Request-only party"
           },
           {
-            "value": "invite"
+            "value": "invite",
+            "display": "Invite-only party"
           }
         ]
       },
