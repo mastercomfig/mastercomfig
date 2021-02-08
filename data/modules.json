@@ -809,7 +809,7 @@
         ]
       },
       {
-        "name": "party_mode"
+        "name": "party_mode",
         "display": "Party Join Mode",
         "values": [
           {
