@@ -639,7 +639,7 @@ Controls the privacy of your party.
 Default setting: **`party_mode=request`** (all presets).
 
 * **`party_mode=open`**: Open party (your friends can join at anytime).
-* **`party_mode=request`**: Request-only party (your friends can only join if they request).
+* **`party_mode=request`**: Request-only party (your friends can only join if they request or if you invite them).
 * **`party_mode=invite`**: Invite-only party (your friends can only join if you invite them).
 
 ### Logo
