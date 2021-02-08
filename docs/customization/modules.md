@@ -632,6 +632,16 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 * **`mod_support=off`**: Enables better file system performance for faster first map loads, at the cost of animation and model mods causing crashes.
 * **`mod_support=on`**: Disables file system optimizations for the first map load, making it slower, but fixes crashes caused by animation and model mods.
 
+### Party Join Mode
+
+Controls the privacy of your party.
+
+Default setting: **`party_mode=request`** (all presets).
+
+* **`party_mode=open`**: Open party (your friends can join at anytime).
+* **`party_mode=request`**: Request-only party (your friends can only join if they request).
+* **`party_mode=invite`**: Invite-only party (your friends can only join if you invite them).
+
 ### Logo
 
 Controls the mastercomfig logo which appears in console on start up.
