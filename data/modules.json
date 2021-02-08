@@ -809,6 +809,21 @@
         ]
       },
       {
+        "name": "party_mode"
+        "display": "Party Join Mode",
+        "values": [
+          {
+            "value": "open"
+          },
+          {
+            "value": "request"
+          },
+          {
+            "value": "invite"
+          }
+        ]
+      },
+      {
         "name": "logo",
         "type": "switch",
         "values": [
