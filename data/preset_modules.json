@@ -254,6 +254,9 @@
   "mod_support": {
     "default": "on"
   },
+  "party_mode": {
+    "default": "request"
+  },
   "logo": {
     "default": "on",
     "very-low": "off"
