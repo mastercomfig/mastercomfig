@@ -634,7 +634,7 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 
 ### Party Join Mode
 
-Controls the privacy of your party.
+Controls the privacy of your Casual/Competitive party.
 
 Default setting: **`party_mode=request`** (all presets).
 
