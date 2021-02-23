@@ -9,7 +9,7 @@ description: Learn how to optimize your Linux OS for better performance.
 
 ## Kernel
 
-Try a desktop oriented kernel like [Liquorix](https://liquorix.net/) or [Zen](https://github.com/zen-kernel).
+Try a desktop oriented kernel like [Liquorix](https://liquorix.net/), [Zen](https://github.com/zen-kernel) or [Xanmod](https://xanmod.org/).
 
 ## cpupower
 
