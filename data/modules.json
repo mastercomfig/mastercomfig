@@ -818,6 +818,24 @@
         ]
       },
       {
+        "name": "party_mode",
+        "display": "Party Join Mode",
+        "values": [
+          {
+            "value": "open",
+            "display": "Open party"
+          },
+          {
+            "value": "request",
+            "display": "Request-only party"
+          },
+          {
+            "value": "invite",
+            "display": "Invite-only party"
+          }
+        ]
+      },
+      {
         "name": "logo",
         "type": "switch",
         "values": [
