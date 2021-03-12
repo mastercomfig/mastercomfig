@@ -39,6 +39,7 @@ jobs:
         sudo bash -Ec '
         export VPK_LINUX=$(find "${HOME}" -type f -iname "vpk_linux32" -print | head -n 1)
         export VALVE_LIB_DIR=$(dirname "${VPK_LINUX}")
+        echo ${HOME}
         echo $VPK_LINUX
         cat <<EOF > /usr/local/bin/vpk
         #!/bin/bash
