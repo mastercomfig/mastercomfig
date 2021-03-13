@@ -40,7 +40,7 @@ jobs:
         sudo apt-get update
         echo steam steam/question select "I AGREE" | sudo debconf-set-selections
         echo steam steam/license note '' | sudo debconf-set-selections
-        sudo DEBIAN_FRONTEND=noninteractive apt-get -yq --no-install-recommends install steamcmd parallel
+        sudo DEBIAN_FRONTEND=noninteractive apt-get -yq --no-install-recommends install steamcmd
         /usr/games/steamcmd +login anonymous +download_depot 232250 232256 +quit
         sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
         #!/bin/bash
@@ -52,7 +52,6 @@ jobs:
     - name: Install dependencies
       if: steps.cache.outputs.cache-hit == 'true'
       run: |
-        sudo apt-get -yq --no-install-recommends install parallel
         sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
         #!/bin/bash
         VPK_LINUX=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
