@@ -54,7 +54,7 @@ jobs:
       run: |
         sudo dpkg --add-architecture i386
         sudo apt-get update
-        sudo apt-get -yq --no-install-recommends install libstdc++6:i386 parallel
+        sudo apt-get -yq --no-install-recommends install parallel
         sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
         #!/bin/bash
         VPK_LINUX=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
