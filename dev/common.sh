@@ -54,11 +54,15 @@ function uploadAssets {
 function packageItems {
   if [ "${zip_package:=false}" != true ] ; then
       # Package into VPK
-      for D in *; do
-          if [ -d "${D}" ]; then
-              vpk "${D}"
-          fi
-      done
+      if hash parallel &> /dev/null ; then
+        ls -d */ | parallel vpk {}
+      else
+        for D in *; do
+            if [ -d "${D}" ]; then
+                vpk "${D}"
+            fi
+        done
+      fi
   fi
 }
 
