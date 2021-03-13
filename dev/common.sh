@@ -10,8 +10,6 @@ function cleanItems {
     # remove quotes from VDF key values TODO: don't remove empty quotes or spaced strings
     find . \( -name "mtp.cfg" -o -name "dxsupport*.cfg" -o -name "glbaseshaders*.cfg" \
      -o -name "*.txt" -and ! -name "texture_preload_list.txt" -o -name "*.res" \) -print0 | xargs -0 -I{} ../shrink_key_values.sh {}
-    # remove CR
-    find . \( -name "*.cfg" -o -name "*.txt" -o -name "*.res" \) -print0 | xargs -0 dos2unix -q
     # Remove newlines from VDF key values
     find . \( -name "mtp.cfg" -o -name "dxsupport*.cfg" -o -name "glbaseshaders*.cfg" \
      -o -name "*.txt" -and ! -name "texture_preload_list.txt" -o -name "*.res" \) -print0 | xargs -0 sed -i -z 's/\n/ /g'
