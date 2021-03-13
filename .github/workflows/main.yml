@@ -52,8 +52,6 @@ jobs:
     - name: Install dependencies
       if: steps.cache.outputs.cache-hit == 'true'
       run: |
-        sudo dpkg --add-architecture i386
-        sudo apt-get update
         sudo apt-get -yq --no-install-recommends install parallel
         sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
         #!/bin/bash
