@@ -10,8 +10,6 @@ function cleanItems {
     # remove quotes from VDF key values TODO: don't remove empty quotes or spaced strings
     find . \( -name "mtp.cfg" -o -name "dxsupport*.cfg" -o -name "glbaseshaders*.cfg" \
      -o -name "*.txt" -and ! -name "texture_preload_list.txt" -o -name "*.res" \) -print0 | xargs -0 -I{} ../shrink_key_values.sh {}
-    # remove CR
-    find . \( -name "*.cfg" -o -name "*.txt" -o -name "*.res" \) -print0 | xargs -0 dos2unix -q
     # Remove newlines from VDF key values
     find . \( -name "mtp.cfg" -o -name "dxsupport*.cfg" -o -name "glbaseshaders*.cfg" \
      -o -name "*.txt" -and ! -name "texture_preload_list.txt" -o -name "*.res" \) -print0 | xargs -0 sed -i -z 's/\n/ /g'
@@ -56,11 +54,15 @@ function uploadAssets {
 function packageItems {
   if [ "${zip_package:=false}" != true ] ; then
       # Package into VPK
-      for D in *; do
-          if [ -d "${D}" ]; then
-              vpk "${D}"
-          fi
-      done
+      if hash parallel &> /dev/null ; then
+        ls -d */ | parallel vpk {}
+      else
+        for D in *; do
+            if [ -d "${D}" ]; then
+                vpk "${D}"
+            fi
+        done
+      fi
   fi
 }
 

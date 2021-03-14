@@ -65,9 +65,9 @@ Controls how reliable to consider the snapshots you receive from the server to a
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
 * **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class.
-* **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
-* **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
+* **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
+* **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
 
 ### Packet Size
 
@@ -329,6 +329,7 @@ Default setting: based on which preset you are currently using.
 
 * **`gibs=off`**: Disables gibs.
 * **`gibs=low`**: Max of 2 gib parts.
+* **`gibs=medium_low`**: Max of 4 gib parts.
 * **`gibs=medium`**: Default number of gibs.
 * **`gibs=high`**: Default number of gibs, gibs can burn.
 
@@ -622,6 +623,16 @@ You may want to also enable preloading using the [Map Background module](#map-ba
 
 * **`mod_support=off`**: Enables better file system performance for faster first map loads, at the cost of animation and model mods causing crashes.
 * **`mod_support=on`**: Disables file system optimizations for the first map load, making it slower, but fixes crashes caused by animation and model mods.
+
+### Party Join Mode
+
+Controls the privacy of your Casual/Competitive party.
+
+Default setting: **`party_mode=request`** (all presets).
+
+* **`party_mode=open`**: Open party (your friends can join anytime).
+* **`party_mode=request`**: Request-only party (your friends can only join if they request or if you invite them).
+* **`party_mode=invite`**: Invite-only party (your friends can only join if you invite them).
 
 ### Logo
 
