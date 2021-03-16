@@ -33,13 +33,14 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 ## Black artifacts all over the screen on Linux
 
-This is a bug with later versions of Mesa. You can fix it by setting the following in `autoexec.cfg`:
+This is a bug with later versions of Mesa (versions 20.2.0 and onwards). You can fix it by setting the following in `autoexec.cfg`:
 
 ```c
 mat_phong 1
 mat_specular 1
 mat_bumpmap 1
 ```
+Note that this bug should be fixed as of [Mesa version 21.0](https://gitlab.freedesktop.org/mesa/mesa/-/issues/3514#note_841674), but your distro may not have an up to date version.
 
 ## %killername% and other HUD bugs
 
