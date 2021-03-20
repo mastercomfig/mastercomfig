@@ -299,9 +299,6 @@
             "value": "off"
           },
           {
-            "value": "on"
-          },
-          {
             "value": "msaa_2x",
             "display": "MSAA 2x"
           },
