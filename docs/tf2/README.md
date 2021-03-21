@@ -25,4 +25,4 @@ Use the [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262) So
 
 On Windows you can use the [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat) script.
 
-On Linux you can use following commands: `find . -type f \( -name "*.so" -o -name "hl2_linux" \) -print0 | xargs -0 strings | grep "^\-[a-ZA-Z]" | awk 'NF==1' | sort -u > launch_options.txt`
+On Linux you can use following commands: `find . -type f \( -name "*.so" -o -name "hl2_linux" \) -print0 | xargs -0 strings | grep "^\-[A-Za-z]" | awk 'NF==1' | sort -u > launch_options.txt`
