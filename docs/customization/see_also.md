@@ -8,6 +8,9 @@ Here are a few awesome TF2 modifications:
 
 * [CleanTF2+](https://github.com/JarateKing/CleanTF2plus)
   — Makes TF2 a lot cleaner and simpler, includes NoHats
+  
+* [Paysus Animation Overhauls](https://steamcommunity.com/groups/PaysusSkins)
+  — First person animation mods which greatly enhance the animations
 
 * [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases)
   — Fixes issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons
