@@ -315,6 +315,7 @@
       {
         "name": "texture_filter",
         "display": "Texture Filtering",
+        "type": "slider",
         "values": [
           {
             "value": "bilinear"
