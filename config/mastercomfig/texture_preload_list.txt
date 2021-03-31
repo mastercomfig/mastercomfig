@@ -726,7 +726,6 @@ models/workshop/weapons/c_models/c_xms_giftwrap/c_xms_giftwrap_blue
 models/workshop/weapons/c_models/c_xms_gloves/c_xms_gloves
 models/workshop/weapons/c_models/c_xms_gloves/c_xms_gloves_blue
 models/workshop/weapons/c_models/c_xms_gloves/c_xms_gloves_normal
-models/workshop/weapons/c_models/c_xms_gloves/c_xms_gloves_ushanka
 models/workshop_partner/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower
 models/workshop_partner/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower_blue
 models/workshop_partner/weapons/c_models/c_bet_rocketlauncher/c_bet_rocketlauncher
