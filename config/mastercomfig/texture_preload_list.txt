@@ -1,10 +1,3 @@
-models/bots/boss_bot/tank_tracks
-models/bots/boss_bot/tankbody1
-models/bots/boss_bot/tankbody1_damage1
-models/bots/boss_bot/tankbody1_damage2
-models/bots/boss_bot/tankbody1_damage3
-models/bots/boss_bot/tankbody2
-models/bots/boss_bot/tankbody2_final
 models/bots/demo/demo_bot_blue
 models/bots/demo/demo_bot_exp
 models/bots/demo/demo_bot_head_blue
@@ -57,12 +50,6 @@ models/bots/spy/spy_bot_body_blue
 models/bots/spy/spy_bot_body_red
 models/bots/spy/spy_bot_head_blue
 models/bots/spy/spy_bot_head_red
-models/bots/tw2/boss_bot/tw2_tankbody1
-models/bots/tw2/boss_bot/tw2_tankbody1_damage1
-models/bots/tw2/boss_bot/tw2_tankbody1_damage2
-models/bots/tw2/boss_bot/tw2_tankbody1_damage3
-models/bots/tw2/boss_bot/tw2_tankbody2
-models/bots/tw2/boss_bot/tw2_tankbody2_final
 models/buildables/dispenser/disp_blueprint_build
 models/buildables/dispenser/disp_blueprint_model
 models/buildables/dispenser/dispenser
