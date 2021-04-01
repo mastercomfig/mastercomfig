@@ -84,10 +84,6 @@ If TF2 is crashing to desktop after a custom map loading or after picking a clas
 The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. No Valve map uses lightmapped props, excluding `rd_asteroid`.  
 More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
 
-## Item panels are taking too long to load
-
-Add `tf_time_loading_item_panels .0005` to `autoexec.cfg`.
-
 ## Why don't my killstreak sheens show?
 
 On the Very Low preset, killstreak sheens are disabled by default. To enable killstreak sheens use the module `sheens_speed=slow`.
