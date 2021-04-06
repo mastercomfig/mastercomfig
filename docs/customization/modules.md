@@ -137,7 +137,7 @@ Default setting: based on which preset you are currently using.
 
 * **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, rimlights or lighting brightness boost.
+* **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
 * **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting.
 * **`lighting=high`**: 6 dynamic lights. Detailed lighting.
 * **`lighting=very_high`**: 12 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
@@ -161,9 +161,10 @@ Default setting: based on which preset you are currently using.
 * **`shadows=off`**: No shadows.
 * **`shadows=very_low`**: Blobby shadows.
 * **`shadows=low`**: Up to 3 low quality shadows.
-* **`shadows=medium`**: Up to 7 high quality shadows, and low robot/Halloween boss shadow distance.
-* **`shadows=high`**: Up to 11 high quality shadows, and medium robot/Halloween boss shadow distance.
-* **`shadows=ultra`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance.
+* **`shadows=medium`**: Up to 7 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
+* **`shadows=high`**: Up to 11 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
+* **`shadows=very_high`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
+* **`shadows=ultra`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
 
 ### Effects
 
