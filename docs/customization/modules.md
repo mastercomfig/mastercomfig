@@ -290,10 +290,10 @@ Controls bullet holes and overall decal support.
 Default setting: based on which preset you are currently using.
 
 * **`decals=off`**: Disables decals.
-* **`decals=low`**: 9 max decals that can overlap.
-* **`decals=medium`** 32 max decals that can overlap.
-* **`decals=high`**: 80 max decals that can overlap.
-* **`decals=ultra`**: 2048 max decals (engine limit) that can overlap with practically no limit.
+* **`decals=low`**: 9 max decals.
+* **`decals=medium`** 32 max decals.
+* **`decals=high`**: 80 max decals.
+* **`decals=ultra`**: 2048 max decals (engine limit).
 
 ### Model Decals
 
