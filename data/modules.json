@@ -177,6 +177,9 @@
             "value": "high"
           },
           {
+            "value": "very_high"
+          },
+          {
             "value": "ultra"
           }
         ]
