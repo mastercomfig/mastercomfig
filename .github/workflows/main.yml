@@ -11,8 +11,6 @@ on:
       - '*.md'
       - '*.yml'
       - '*.json'
-  pull_request:
-    branches: [ develop, release ]
 
 jobs:
   build:
