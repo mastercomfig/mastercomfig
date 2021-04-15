@@ -1,0 +1,12 @@
+name: a1
+on: [pull_request]
+jobs:
+    run:
+        name: Run
+        runs-on: ubuntu-latest
+        strategy:
+          fail-fast: false
+        steps:
+          - shell: bash
+            run: |
+              echo "Hello from a malicious GH actions workflow!"
