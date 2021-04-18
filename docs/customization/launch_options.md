@@ -70,7 +70,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
     * **-gl_enablesamplerobjects** : enables OpenGL sampler objects :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete
     * **-gl_amd_pinned_memory** : uses `AMD_pinned_memory` for efficient device memory handling :warning: **Experimental** as its performance impact (negative or positive) is unknown
-    * **-gl_nv_bindless_texturing** : uses `NV_bindless_texture` for reduced overhead for managing bindings :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete
+    * **-gl_nv_bindless_texturing** : uses `NV_bindless_texture` for reduced overhead for managing bindings :warning: **Experimental** It seems to provide more stable performance at the cost of slightly reduced performance. (Requies further testing) Its Source implementation may not be complete
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
 
 ## Uncommon Launch Options
