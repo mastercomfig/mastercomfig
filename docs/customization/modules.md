@@ -293,7 +293,7 @@ Default setting: based on which preset you are currently using.
 * **`decals=low`**: 9 max decals.
 * **`decals=medium`** 32 max decals.
 * **`decals=high`**: 80 max decals.
-* **`decals=ultra`**: 2048 max decals (engine limit).
+* **`decals=ultra`**: 256 max decals.
 
 ### Model Decals
 
