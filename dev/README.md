@@ -62,3 +62,13 @@ export GH_TOKEN="GitHub authentication token used for release deployment"
 export GH_REPO="GitHub repository in the format owner/repo"
 export TF2_DIR="absolute path to Team Fortress 2 directory"
 ```
+
+## Environment variables
+
+The dev scripts use a variety of environment variables to control their behavior:
+
+* `zip_package`: used to mark the non-VPK generation stage of the packaging step, for the `mastercomfig zip package` release asset
+* `prerelease`: generates a pre-release zip containing all release assets, and does not announce, deploy or update the release branch
+* `minor_release`: skip updating the release branch in the release script
+* `patch`: makes the release script patch the current release. currently, this still requires the maintainer to republish the release on GitHub using the new tagged draft.
+* `CI`: used to mark CI specific tasks to skip or do. for example, it skips zipping the pre-release as GitHub Actions zips artifacts
