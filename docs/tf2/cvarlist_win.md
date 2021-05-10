@@ -1,5 +1,5 @@
 ---
-description: A list of all console variables and commands on TF2 for Linux.
+description: A list of all console variables and commands on TF2 for Windows.
 ...
 
 # Console Variables - Windows

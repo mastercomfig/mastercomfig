@@ -16,7 +16,7 @@ for D in *; do
     fi
 done
 
-if [ "${prerelease:=false}" == true ] && [ "${zip_package:=false}" == false ]; then
+if [ "${prerelease:=false}" = true ] && [ "${zip_package:=false}" = false ]; then
   mkdir prerelease
   mkdir prerelease/presets
   mkdir prerelease/addons
@@ -28,7 +28,7 @@ if [ "${prerelease:=false}" == true ] && [ "${zip_package:=false}" == false ]; t
   cp comfig/*.zip prerelease/comfig
   cp template/*.zip prerelease/template
   cp ../LICENSE.md prerelease/LICENSE.md
-  if [ "${CI:=false}" == false ]; then
+  if [ "${CI:=false}" = false ]; then
     (cd prerelease && zip -9r mastercomfig.zip addons/ presets/ comfig/ template/ LICENSE.md)
   fi
 fi

@@ -6,7 +6,7 @@ set -e
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
 
-if [ "${prerelease:=false}" == false ] && [ "${minor_release:=false}" == false ]; then
+if [ "${prerelease:=false}" = false ] && [ "${minor_release:=false}" = false ] && [ "${CI:=false}" = false ]; then
   ./update.sh || exit 1
 fi
 
@@ -20,13 +20,16 @@ unset zip_package
 
 ./package.sh
 
-if [ "${prerelease:=false}" == true ]; then
+if [ "${prerelease:=false}" = true ]; then
   exit 0
 fi
 
 if [ "${patch:=false}" = true ]; then
     ./patch.sh
 else
+  if [ "${CI:=false}" = true ]; then
+    { IFS= read -r version && IFS= read -r highlights && IFS= read -r hours } < info.txt
+  else
     echo Version:
     read -r version
 
@@ -35,9 +38,10 @@ else
 
     echo Hours taken:
     read -r hours
+  fi
 
-    ./deploy.sh "${version}" "${highlights}"
-    ./announce.sh "${version}" "${highlights}" "${hours}"
+  ./deploy.sh "${version}" "${highlights}"
+  ./announce.sh "${version}" "${highlights}" "${hours}"
 fi
 
 printf "\n"
