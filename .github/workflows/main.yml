@@ -11,7 +11,7 @@ on:
       - '*.md'
       - '*.yml'
       - '*.json'
-    tags: '*'
+    tags: '**'
 
 jobs:
   build:
@@ -58,17 +58,23 @@ jobs:
         LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
         EOF'
         sudo chmod +x /usr/local/bin/vpk
+    - name: Check tag
+      id: check-tag
+      run: |
+        if [[ ${{ github.event.ref }} == refs/tags/* ]]; then
+          echo ::set-output name=release::true
+        fi
     - name: Build mastercomfig (prerelease)
       run: dev/release.sh
-      if: ${{ github.ref != refs/tags/* }}
+      if: ${{ steps.check-tag.outputs.release != 'true' }}
       env:
         prerelease: true
     - name: Build mastercomfig (release)
       run: dev/release.sh
-      if: ${{ github.ref == refs/tags/* }}
+      if: ${{ steps.check-tag.outputs.release == 'true' }}
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
-      if: ${{ github.ref != refs/tags/* }}
+      if: ${{ steps.check-tag.outputs.release != 'true' }}
       with:
         name: mastercomfig
         if-no-files-found: error
