@@ -32,7 +32,7 @@ jobs:
           ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/libtcmalloc_minimal.so.4
         key: ${{ runner.os }}-cache-2
     - name: Install dependencies (with Steam)
-      if: steps.cache.outputs.cache-hit != 'true'
+      if: ${{ steps.cache.outputs.cache-hit != 'true' }}
       run: |
         sudo dpkg --add-architecture i386
         sudo apt-get update
@@ -48,7 +48,7 @@ jobs:
         EOF'
         sudo chmod +x /usr/local/bin/vpk
     - name: Install dependencies
-      if: steps.cache.outputs.cache-hit == 'true'
+      if: ${{ steps.cache.outputs.cache-hit == 'true' }}
       run: |
         sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
         #!/bin/bash
@@ -57,12 +57,17 @@ jobs:
         LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
         EOF'
         sudo chmod +x /usr/local/bin/vpk
-    - name: Build mastercomfig
+    - name: Build mastercomfig (prerelease)
       run: dev/release.sh
+      if: ${{ github.ref != refs/tags/* }}
       env:
         prerelease: true
+    - name: Build mastercomfig (release)
+      run: dev/release.sh
+      if: ${{ github.ref == refs/tags/* }}
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
+      if: ${{ github.ref != refs/tags/* }}
       with:
         name: mastercomfig
         if-no-files-found: error
