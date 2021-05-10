@@ -11,6 +11,7 @@ on:
       - '*.md'
       - '*.yml'
       - '*.json'
+    tags: '*'
 
 jobs:
   build:
