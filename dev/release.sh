@@ -27,6 +27,9 @@ fi
 if [ "${patch:=false}" = true ]; then
     ./patch.sh
 else
+  if [ "${CI:=false}" = true ]; then
+    { IFS= read -r version && IFS= read -r highlights && IFS= read -r hours } < info.txt
+  else
     echo Version:
     read -r version
 
@@ -35,9 +38,10 @@ else
 
     echo Hours taken:
     read -r hours
+  fi
 
-    ./deploy.sh "${version}" "${highlights}"
-    ./announce.sh "${version}" "${highlights}" "${hours}"
+  ./deploy.sh "${version}" "${highlights}"
+  ./announce.sh "${version}" "${highlights}" "${hours}"
 fi
 
 printf "\n"
