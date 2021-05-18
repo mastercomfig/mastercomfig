@@ -109,9 +109,9 @@
   },
   "decals": {
     "default": "off",
-    "medium": "low",
-    "medium-high": "low",
-    "high": "medium",
+    "medium": "medium",
+    "medium-high": "medium_high",
+    "high": "high",
     "ultra": "ultra"
   },
   "decals_models": {
