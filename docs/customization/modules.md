@@ -292,7 +292,8 @@ Default setting: based on which preset you are currently using.
 * **`decals=off`**: Disables decals.
 * **`decals=low`**: 9 max decals.
 * **`decals=medium`** 32 max decals.
-* **`decals=high`**: 80 max decals.
+* **`decals=medium`** 64 max decals.
+* **`decals=high`**: 128 max decals.
 * **`decals=ultra`**: 256 max decals.
 
 ### Model Decals
