@@ -557,7 +557,7 @@ Default setting: **`debug=minimal`** (all presets, except Very Low).
 
 * **`debug=off`**: Disables all debug features.
 * **`debug=minimal`**: Enables developer console.
-* **`debug=on_partial`**: Enables all but the noisiest debug HUDs.
+* **`debug=on_partial`**: Enables developer console and cl_showpos.
 * **`debug=on`**: Enables all debug HUDs.
 
 ### Outlines
