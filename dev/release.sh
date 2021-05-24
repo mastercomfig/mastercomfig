@@ -28,7 +28,7 @@ if [ "${patch:=false}" = true ]; then
     ./patch.sh
 else
   if [ "${CI:=false}" = true ]; then
-    { IFS= read -r version && IFS= read -r highlights && IFS= read -r hours } < info.txt
+    ( { IFS= read -r version && IFS= read -r highlights && IFS= read -r hours } < info.txt )
   else
     echo Version:
     read -r version
