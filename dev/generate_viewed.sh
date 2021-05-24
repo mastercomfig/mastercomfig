@@ -24,7 +24,7 @@ if [ "${folder}" = "maps" ]; then
             echo "	{"
             echo "		\"viewed\"		\"${VIEW_COUNT}\""
             echo "	}"
-          } > "${viewed}"
+          } >> "${viewed}"
         fi
     done
     echo "}" >> "${viewed}"

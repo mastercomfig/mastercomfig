@@ -128,6 +128,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	cp_overgrown_rc7b
+	{
+		"viewed"		"16"
+	}
 	cp_powerhouse
 	{
 		"viewed"		"16"
@@ -140,6 +144,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	cp_snowlodge_b5
+	{
+		"viewed"		"16"
+	}
 	cp_snowplow
 	{
 		"viewed"		"16"
@@ -149,6 +157,10 @@ viewed.res
 		"viewed"		"16"
 	}
 	cp_steel
+	{
+		"viewed"		"16"
+	}
+	cp_stoneyridge_rc2
 	{
 		"viewed"		"16"
 	}
@@ -201,6 +213,14 @@ viewed.res
 		"viewed"		"16"
 	}
 	ctf_sawmill
+	{
+		"viewed"		"16"
+	}
+	ctf_snowfall_final
+	{
+		"viewed"		"16"
+	}
+	ctf_snowfort
 	{
 		"viewed"		"16"
 	}
@@ -264,6 +284,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	koth_megalo
+	{
+		"viewed"		"16"
+	}
 	koth_moonshine_event
 	{
 		"viewed"		"16"
@@ -284,6 +308,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	koth_slaughter_b1b
+	{
+		"viewed"		"16"
+	}
 	koth_slaughter_event
 	{
 		"viewed"		"16"
@@ -292,11 +320,19 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	koth_undergrove_event
+	{
+		"viewed"		"16"
+	}
 	koth_viaduct
 	{
 		"viewed"		"16"
 	}
 	koth_viaduct_event
+	{
+		"viewed"		"16"
+	}
+	koth_whitewinter_c1
 	{
 		"viewed"		"16"
 	}
@@ -352,6 +388,10 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	pd_snowville_event
+	{
+		"viewed"		"16"
+	}
 	pd_watergate
 	{
 		"viewed"		"16"
@@ -364,11 +404,19 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	pl_bloodwater
+	{
+		"viewed"		"16"
+	}
 	pl_borneo
 	{
 		"viewed"		"16"
 	}
 	pl_cactuscanyon
+	{
+		"viewed"		"16"
+	}
+	pl_eclipse_rc2
 	{
 		"viewed"		"16"
 	}
@@ -388,11 +436,19 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
+	pl_hasslecastle
+	{
+		"viewed"		"16"
+	}
 	pl_hoodoo_final
 	{
 		"viewed"		"16"
 	}
 	pl_millstone_event
+	{
+		"viewed"		"16"
+	}
+	pl_pier
 	{
 		"viewed"		"16"
 	}
@@ -409,6 +465,10 @@ viewed.res
 		"viewed"		"16"
 	}
 	plr_hightower_event
+	{
+		"viewed"		"16"
+	}
+	plr_hightower_snow_rc2
 	{
 		"viewed"		"16"
 	}
@@ -437,6 +497,10 @@ viewed.res
 		"viewed"		"16"
 	}
 	pl_upward
+	{
+		"viewed"		"16"
+	}
+	pl_wutville_event
 	{
 		"viewed"		"16"
 	}
