@@ -1,0 +1,1128 @@
+{
+  "modules": {
+    "graphics.models": {
+      "name": "Model Detail",
+      "description": "The detail of 3D objects and how they fade into view at a distance.",
+      "levels": {
+        "low": {
+          "values": {
+            "lod_TransitionDist": -1,
+            "cl_jiggle_bone_framerate_cutoff": 0,
+            "r_lod": -1,
+            "r_rootlod": 2
+          },
+          "description": "Lowest model quality. Objects will look basic and fade out quickly."
+        },
+        "medium": {
+          "values": {
+            "lod_TransitionDist": -5000,
+            "cl_jiggle_bone_framerate_cutoff": 0,
+            "r_lod": -1,
+            "r_rootlod": 1
+          },
+          "description": "Medium model quality."
+        },
+        "high": {
+          "values": {
+            "lod_TransitionDist": 800,
+            "cl_jiggle_bone_framerate_cutoff": 67,
+            "r_lod": -1,
+            "r_rootlod": 0
+          },
+          "description": "High model quality."
+        },
+        "ultra": {
+          "values": {
+            "lod_TransitionDist": 1000,
+            "cl_jiggle_bone_framerate_cutoff": 67,
+            "r_lod": 0,
+            "r_rootlod": 0
+          },
+          "description": "Highest model quality. Models will always be at their highest quality with no pop in."
+        }
+      }
+    },
+    "graphics.world": {
+      "name": "World Detail",
+      "description": "The extra props, grass, skybox and detail objects in the world.",
+      "levels": {
+        "low": {
+          "values": {
+            "cl_phys_props_enable": 0,
+            "r_drawdetailprops": 0,
+            "r_staticprop_lod": 7,
+            "r_3dsky": 0,
+            "rope_rendersolid": 0,
+            "r_ropetranslucent": 0
+          },
+          "detail_props": "none",
+          "dxsupport": "ropes-off",
+          "extra-models": "none"
+        },
+        "medium": {
+          "values": {
+            "cl_phys_props_enable": 0,
+            "r_drawdetailprops": 0,
+            "r_staticprop_lod": -1,
+            "r_3dsky": 0,
+            "rope_rendersolid": 0,
+            "r_ropetranslucent": 0
+          },
+          "detail_props": "none",
+          "dxsupport": "ropes-off",
+          "extra-models": "none"
+        },
+        "high": {
+          "values": {
+            "cl_phys_props_enable": 1,
+            "cl_phys_props_max": 20,
+            "cl_phys_props_respawndist": 3000,
+            "cl_phys_props_respawnrate": 120,
+            "r_drawdetailprops": 1,
+            "r_staticprop_lod": -1,
+            "r_3dsky": 1,
+            "rope_rendersolid": 1,
+            "r_ropetranslucent": 1,
+            "rope_collide": 1,
+            "rope_wind_dist": 0,
+            "rope_subdiv": 2
+          },
+          "detail_props": "high",
+          "dxsupport": "ropes-on",
+          "extra-models": "none"
+        },
+        "ultra": {
+          "values": {
+            "cl_phys_props_enable": 1,
+            "cl_phys_props_max": 300,
+            "cl_phys_props_respawndist": 3000,
+            "cl_phys_props_respawnrate": 120,
+            "r_drawdetailprops": 1,
+            "r_staticprop_lod": 0,
+            "r_3dsky": 1,
+            "rope_rendersolid": 1,
+            "r_ropetranslucent": 1,
+            "rope_collide": 2,
+            "rope_wind_dist": 1000,
+            "rope_subdiv": 7
+          },
+          "detail_props": "ultra",
+          "dxsupport": "ropes-on"
+        }
+      }
+    },
+    "graphics.shaders": {
+      "name": "Shader Quality",
+      "description": "The quality of the lighting of objects and characters.",
+      "levels": {
+        "low": {
+          "values": {
+            "r_pixelvisibility_partial": 0,
+            "r_worldlightmin": 0.9,
+            "r_lightaverage": 0,
+            "r_dynamic": 0,
+            "mat_disable_lightwarp": 1,
+            "rope_averagelight": 0,
+            "r_worldlights": 0,
+            "mat_filterlightmaps": 0,
+            "mat_reducefillrate": 1,
+            "mat_phong": 0
+          },
+          "description": "The lowest quality lighting and shading. May make players hard to see."
+        },
+        "medium": {
+          "values": {
+            "r_pixelvisibility_partial": 0,
+            "r_worldlightmin": 0.004,
+            "r_lightaverage": 1,
+            "r_dynamic": 0,
+            "mat_disable_lightwarp": 1,
+            "rope_averagelight": 1,
+            "r_worldlights": 0,
+            "mat_filterlightmaps": 1,
+            "mat_reducefillrate": 1,
+            "mat_phong": 0
+          },
+          "description": "Low quality shading with very slight light detail."
+        },
+        "high": {
+          "values": {
+            "r_pixelvisibility_partial": 1,
+            "r_worldlightmin": 0.0008,
+            "r_lightaverage": 1,
+            "r_ambientboost": 1,
+            "r_ambientmin": 0.3,
+            "r_rimlight": 1,
+            "r_dynamic": 0,
+            "mat_disable_lightwarp": 0,
+            "rope_averagelight": 1,
+            "r_worldlights": 2,
+            "mat_filterlightmaps": 1,
+            "mat_reducefillrate": 0,
+            "mat_phong": 1
+          },
+          "description": "High quality shading and lighting with boosted lighting effects."
+        },
+        "ultra": {
+          "values": {
+            "r_pixelvisibility_partial": 1,
+            "r_worldlightmin": 0.0002,
+            "r_lightaverage": 1,
+            "r_ambientboost": 1,
+            "r_ambientmin": 0.6,
+            "r_rimlight": 1,
+            "r_dynamic": 1,
+            "r_maxdlights": 17,
+            "mat_disable_lightwarp": 0,
+            "rope_averagelight": 1,
+            "r_worldlights": 4,
+            "mat_filterlightmaps": 1,
+            "mat_reducefillrate": 0,
+            "mat_phong": 1
+          },
+          "description": "The highest quality lighting and lighting effects. The extra detail looks nice and may help with visibility of objects and players."
+        }
+      }
+    },
+    "graphics.textures": {
+      "description": "Texture quality is how detailed the images on 3D models and terrain are. Higher quality textures will be streamed in and put more pressure on memory and your graphics card.",
+      "levels": {
+        "very_low": {
+          "description": "Textures are at their lowest quality and have all visual effects disabled.",
+          "values": {
+            "mat_disable_fancy_blending": 1,
+            "mat_filtertextures": 0,
+            "mat_bumpmap": 0,
+            "mat_specular": 0,
+            "mat_trilinear": 0,
+            "mat_forceaniso": 1,
+            "mat_picmip": 2
+          }
+        },
+        "low": {
+          "values": {
+            "mat_disable_fancy_blending": 1,
+            "mat_filtertextures": 1,
+            "mat_bumpmap": 1,
+            "mat_specular": 1,
+            "mat_trilinear": 1,
+            "mat_forceaniso": 1,
+            "mat_picmip": 2
+          }
+        },
+        "medium": {
+          "values": {
+            "mat_disable_fancy_blending": 0,
+            "mat_filtertextures": 1,
+            "mat_bumpmap": 1,
+            "mat_specular": 1,
+            "mat_trilinear": 1,
+            "mat_forceaniso": 2,
+            "mat_picmip": 1
+          }
+        },
+        "high": {
+          "values": {
+            "mat_disable_fancy_blending": 0,
+            "mat_filtertextures": 1,
+            "mat_bumpmap": 1,
+            "mat_specular": 1,
+            "mat_trilinear": 1,
+            "mat_forceaniso": 8,
+            "mat_picmip": 0
+          }
+        },
+        "ultra": {
+          "values": {
+            "mat_disable_fancy_blending": 0,
+            "mat_filtertextures": 1,
+            "mat_bumpmap": 1,
+            "mat_specular": 1,
+            "mat_trilinear": 1,
+            "mat_forceaniso": 16,
+            "mat_picmip": -1
+          }
+        }
+      }
+    },
+    "graphics.shadows": {
+      "description": "Shadows on objects improve the look and help with depth perception. They require additional processing power, more memory and graphical performance as you go up in quality.",
+      "levels": {
+        "off": {
+          "values": {
+            "r_shadows": 0,
+            "r_shadowrendertotexture": 0,
+            "r_flashlightdepthtexture": 0,
+            "r_flashlightrender": 0
+          },
+          "description": "No shadows. Having no shadows will increase graphical performance."
+        },
+        "low": {
+          "values": {
+            "r_shadows": 1,
+            "r_shadowrendertotexture": 0,
+            "r_flashlightdepthtexture": 0,
+            "cl_blobbyshadows": 1,
+            "r_shadowmaxrendered": 8,
+            "r_flashlightrender": 0
+          },
+          "description": "Blobby shadows. Having some form of shadows helps gameplay."
+        },
+        "medium": {
+          "values": {
+            "r_shadows": 1,
+            "r_shadowrendertotexture": 0,
+            "r_flashlightdepthtexture": 0,
+            "cl_blobbyshadows": 0,
+            "r_shadowmaxrendered": 12,
+            "r_flashlightrender": 0
+          },
+          "description": "Simple shadows."
+        },
+        "high": {
+          "values": {
+            "r_shadows": 1,
+            "r_shadowrendertotexture": 1,
+            "r_flashlightdepthtexture": 0,
+            "cl_blobbyshadows": 0,
+            "r_shadowmaxrendered": 18,
+            "r_flashlightrender": 1
+          },
+          "description": "High quality model shadows."
+        },
+        "ultra": {
+          "values": {
+            "r_shadows": 1,
+            "r_shadowrendertotexture": 1,
+            "r_flashlightdepthtexture": 1,
+            "r_flashlightdepthres": 1024,
+            "cl_blobbyshadows": 0,
+            "r_shadowmaxrendered": 32,
+            "r_flashlightrender": 1
+          },
+          "description": "Highest quality shadows. Shadows will look the best, but it has the most performance impact."
+        }
+      }
+    },
+    "graphics.effects": {
+      "description": "Various other graphical effects like particles and bullet tracer lines that only appear in specific situations.",
+      "levels": {
+        "low": {
+          "values": {
+            "r_drawtracers_firstperson": 0,
+            "tracer_extra": 0,
+            "cl_show_splashes": 0,
+            "cl_fasttempentcollision": 9999,
+            "tf_particles_disable_weather": 1,
+            "mat_reduceparticles": 1,
+            "cl_new_impact_effects": 0,
+            "r_drawflecks": 0
+          },
+          "dxsupport": "particles-low",
+          "description": "Reduced particle effects and bullet tracers. Best performance, but has the least visual cues."
+        },
+        "medium": {
+          "level": "medium",
+          "values": {
+            "r_drawtracers_firstperson": 1,
+            "tracer_extra": 1,
+            "cl_show_splashes": 1,
+            "cl_fasttempentcollision": 20,
+            "tf_particles_disable_weather": 1,
+            "mat_reduceparticles": 1,
+            "cl_new_impact_effects": 0,
+            "r_drawflecks": 1
+          },
+          "dxsupport": "particles-low",
+          "description": "Most gameplay effecting particle effects turned on at low quality."
+        },
+        "high": {
+          "level": "high",
+          "values": {
+            "r_drawtracers_firstperson": 1,
+            "tracer_extra": 1,
+            "cl_show_splashes": 1,
+            "cl_fasttempentcollision": 10,
+            "tf_particles_disable_weather": 0,
+            "mat_reduceparticles": 0,
+            "cl_new_impact_effects": 1,
+            "r_drawflecks": 1
+          },
+          "dxsupport": "particles-high",
+          "description": "All particle effects turned on at maximum quality. Shows more effects and requires more graphical performance."
+        }
+      }
+    },
+    "graphics.water": {
+      "description": "The quality of water and its reflections.",
+      "levels": {
+        "very_low": {
+          "values": {
+            "r_WaterDrawReflection": 0,
+            "r_WaterDrawRefraction": 0,
+            "r_waterforceexpensive": 0
+          },
+          "cheap_water": "full",
+          "description": "Water will be rendered as an opaque surface."
+        },
+        "low": {
+          "values": {
+            "r_WaterDrawReflection": 1,
+            "r_WaterDrawRefraction": 1,
+            "r_waterforceexpensive": 0
+          },
+          "cheap_water": "partial",
+          "description": "Water will be shown with simplicity."
+        },
+        "medium": {
+          "values": {
+            "r_WaterDrawReflection": 1,
+            "r_WaterDrawRefraction": 1,
+            "r_waterforceexpensive": 0,
+            "r_waterforcereflectentities": 0
+          },
+          "cheap_water": "minimal",
+          "description": "Water has simple world reflections."
+        },
+        "high": {
+          "values": {
+            "r_WaterDrawReflection": 1,
+            "r_WaterDrawRefraction": 1,
+            "r_waterforceexpensive": 0,
+            "r_waterforcereflectentities": 1
+          },
+          "cheap_water": "off",
+          "description": "Water will reflect moving objects and players as well as the world."
+        },
+        "ultra": {
+          "values": {
+            "r_WaterDrawReflection": 1,
+            "r_WaterDrawRefraction": 1,
+            "r_waterforceexpensive": 1,
+            "r_waterforcereflectentities": 1
+          },
+          "cheap_water": "off",
+          "description": "Water will be at its highest quality with full reflections."
+        }
+      }
+    },
+    "graphics.post_processing": {
+      "description": "Additional visuals put on top of the image.",
+      "levels": {
+        "off": {
+          "values": {
+            "mat_colorcorrection": 0,
+            "mat_postprocessing_combine": 0,
+            "mat_hdr_level": 0
+          },
+          "description": "No post processing effects are enabled. This gives the best graphical performance and least visual extras."
+        },
+        "low": {
+          "values": {
+            "mat_colorcorrection": 1,
+            "mat_postprocessing_combine": 1,
+            "mat_hdr_level": 0
+          },
+          "description": "A simple color adjustment effect is enabled for more natural colors."
+        },
+        "medium": {
+          "values": {
+            "mat_colorcorrection": 1,
+            "mat_postprocessing_combine": 1,
+            "mat_hdr_level": 1
+          },
+          "description": "Color correction and bloom is enabled for natural and boosted colors."
+        },
+        "high": {
+          "values": {
+            "mat_colorcorrection": 1,
+            "mat_postprocessing_combine": 1,
+            "mat_hdr_level": 2
+          },
+          "description": "Color correction and HDR bloom is enabled for a vivid picture."
+        },
+        "ultra": {
+          "values": {
+            "mat_postprocessing_combine": 1,
+            "mat_hdr_level": 3
+          },
+          "description": "Post processing is set to its most accurate and highest quality levels. This gives great visuals at the cost of graphical performance."
+        }
+      }
+    },
+    "graphics.pyrovision": {
+      "description": "Extra effects when in Pyrovision.",
+      "levels": {
+        "low": {
+          "values": {
+            "pyro_dof": 0,
+            "pyro_vignette": 0
+          },
+          "pyrovision-textures": "off",
+          "description": "Basic Pyrovision effects like particles and sounds. Lowest performance impact for Pyrovision."
+        },
+        "medium": {
+          "values": {
+            "pyro_dof": 0,
+            "pyro_vignette": 0
+          },
+          "description": "Basic Pyrovision with Pyroland textures."
+        },
+        "high": {
+          "values": {
+            "pyro_dof": 0,
+            "pyro_vignette": 1
+          },
+          "description": "Pyrovision with white edge border along with base Pyroland effects."
+        },
+        "ultra": {
+          "values": {
+            "pyro_dof": 1,
+            "pyro_vignette": 2
+          },
+          "description": "All Pyrovision effects enabled with enhanced skybox shading and a dynamic edge border. Has the highest performance impact for Pyrovision."
+        }
+      }
+    },
+    "graphics.motion_blur": {
+      "description": "Blurs the image from movement.",
+      "levels": {
+        "off": {
+          "values": {
+            "mat_motion_blur_enabled": 0
+          },
+          "description": "Motion blur is turned off, which results in exact visuals even when moving and the greatest graphical performance."
+        },
+        "high": {
+          "values": {
+            "mat_motion_blur_enabled": 1,
+            "mat_motion_blur_falling_intensity": 0,
+            "mat_motion_blur_forward_enabled": 0,
+            "mat_motion_blur_percent_of_screen_max": 1,
+            "mat_motion_blur_rotation_intensity": 0.05,
+            "mat_motion_blur_strength": 0.8
+          },
+          "description": "A small amount of motion blur is enabled, with no additional blur effects."
+        },
+        "ultra": {
+          "values": {
+            "mat_motion_blur_enabled": 1,
+            "mat_motion_blur_falling_intensity": 1,
+            "mat_motion_blur_falling_max": 15,
+            "mat_motion_blur_falling_min": 5,
+            "mat_motion_blur_forward_enabled": 1,
+            "mat_motion_blur_percent_of_screen_max": 2.5,
+            "mat_motion_blur_rotation_intensity": 0.05,
+            "mat_motion_blur_strength": 0.8
+          },
+          "description": "A normal amount of motion blur, with all additional blur effects enabled. Results in smoother frame motion but uses some additional graphical power."
+        }
+      }
+    },
+    "graphics.antialiasing": {
+      "name": "Anti-Aliasing",
+      "description": "Smooths out rough edges and reduces shimmering.",
+      "levels": {
+        "off": {
+          "values": {
+            "mat_alphacoverage": 0,
+            "rope_smooth": 0,
+            "mat_software_aa_strength": 0,
+            "mat_software_aa_strength_vgui": 0,
+            "mat_antialias": 1,
+            "mat_aaquality": 0
+          },
+          "description": "No anti-aliasing done, best performance. There will be jagged edges and fences will be harder to see through."
+        },
+        "fxaa_low": {
+          "values": {
+            "mat_alphacoverage": 1,
+            "rope_smooth": 1,
+            "mat_software_aa_strength": 1,
+            "mat_software_aa_strength_vgui": 1,
+            "mat_software_aa_quality": 0,
+            "mat_antialias": 1,
+            "mat_aaquality": 0
+          },
+          "name": "FXAA Low"
+        },
+        "fxaa_high": {
+          "values": {
+            "mat_alphacoverage": 1,
+            "rope_smooth": 1,
+            "mat_software_aa_strength": 1,
+            "mat_software_aa_strength_vgui": 1,
+            "mat_software_aa_quality": 1,
+            "mat_antialias": 1,
+            "mat_aaquality": 0
+          },
+          "name": "FXAA High"
+        },
+        "msaa_2x": {
+          "values": {
+            "mat_alphacoverage": 1,
+            "rope_smooth": 1,
+            "mat_software_aa_strength": 0,
+            "mat_software_aa_strength_vgui": -1,
+            "mat_software_aa_quality": 1,
+            "mat_antialias": 2,
+            "mat_aaquality": 0
+          },
+          "name": "MSAA 2x"
+        },
+        "msaa_4x": {
+          "values": {
+            "mat_alphacoverage": 1,
+            "rope_smooth": 1,
+            "mat_software_aa_strength": 0,
+            "mat_software_aa_strength_vgui": -1,
+            "mat_software_aa_quality": 1,
+            "mat_antialias": 4,
+            "mat_aaquality": 0
+          },
+          "name": "MSAA 4x"
+        },
+        "msaa_8x": {
+          "values": {
+            "mat_alphacoverage": 1,
+            "rope_smooth": 1,
+            "mat_software_aa_strength": 0,
+            "mat_software_aa_strength_vgui": -1,
+            "mat_software_aa_quality": 1,
+            "mat_antialias": 8,
+            "mat_aaquality": 0
+          },
+          "name": "MSAA 8x"
+        },
+        "msaa_16x": {
+          "values": {
+            "mat_alphacoverage": 1,
+            "rope_smooth": 1,
+            "mat_software_aa_strength": 0,
+            "mat_software_aa_strength_vgui": -1,
+            "mat_software_aa_quality": 1,
+            "mat_antialias": 8,
+            "mat_aaquality": 2
+          },
+          "name": "MSAA 16x",
+          "description": "The highest quality MSAA and the most intensive. Only compatible with Nvidia cards due to usage of CSAA."
+        }
+      }
+    },
+    "graphics.characters": {
+      "name": "Character Detail",
+      "description": "How detailed character models and facial expressions are.",
+      "levels": {
+        "low": {
+          "values": {
+            "r_flex": 0,
+            "flex_rules": 0,
+            "flex_smooth": 0,
+            "phonemefilter": 0.001,
+            "phonemesnap": 0,
+            "r_teeth": 0,
+            "r_eyes": 0,
+            "tf_clientsideeye_lookats": 0,
+            "blink_duration": 0,
+            "anim_3wayblend": 0,
+            "ai_expression_optimization": 1,
+            "ai_expression_frametime": 0
+          },
+          "description": "The least intensive character detail, with no facial features like eyes or expressions."
+        },
+        "medium": {
+          "values": {
+            "r_flex": 0,
+            "flex_rules": 0,
+            "flex_smooth": 0,
+            "phonemefilter": 0.001,
+            "phonemesnap": 0,
+            "r_teeth": 0,
+            "r_eyes": 1,
+            "tf_clientsideeye_lookats": 1,
+            "blink_duration": 0.2,
+            "anim_3wayblend": 0,
+            "ai_expression_optimization": 1,
+            "ai_expression_frametime": 0
+          }
+        },
+        "high": {
+          "values": {
+            "r_flex": 1,
+            "flex_rules": 1,
+            "flex_smooth": 1,
+            "phonemefilter": 0.08,
+            "phonemesnap": 2,
+            "r_teeth": 1,
+            "r_eyes": 1,
+            "tf_clientsideeye_lookats": 1,
+            "blink_duration": 0.2,
+            "anim_3wayblend": 1,
+            "ai_expression_optimization": 1,
+            "ai_expression_frametime": 0.0151
+          }
+        },
+        "ultra": {
+          "values": {
+            "r_flex": 1,
+            "flex_rules": 1,
+            "flex_smooth": 1,
+            "phonemefilter": 0.08,
+            "phonemesnap": 7,
+            "r_teeth": 1,
+            "r_eyes": 1,
+            "tf_clientsideeye_lookats": 1,
+            "blink_duration": 0.2,
+            "anim_3wayblend": 1,
+            "ai_expression_optimization": 0
+          },
+          "description": "The highest detailed character models. Character details and facial expressions are always shown at their highest quality."
+        }
+      }
+    },
+    "graphics.decals": {
+      "description": "The overlay textures from bullet holes, blood on characters. Requires more memory and graphical performance.",
+      "levels": {
+        "off": {
+          "values": {
+            "r_decals": 0,
+            "mp_decals": 0,
+            "r_drawmodeldecals": 0,
+            "r_renderoverlayfragment": 0,
+            "r_decalstaticprops": 0,
+            "r_drawbatchdecals": 0
+          }
+        },
+        "low": {
+          "description": "A minimal amount of decals to check spread patterns.",
+          "values": {
+            "r_decals": 9,
+            "mp_decals": 9,
+            "r_decal_cover_count": 1,
+            "r_decal_overlap_area": 0.4,
+            "r_decal_overlap_count": 0,
+            "r_renderoverlayfragment": 0,
+            "r_decalstaticprops": 0,
+            "r_decal_cullsize": 200,
+            "r_drawbatchdecals": 0
+          }
+        },
+        "medium": {
+          "values": {
+            "r_decals": 32,
+            "mp_decals": 32,
+            "r_decal_cover_count": 1,
+            "r_decal_overlap_area": 0.4,
+            "r_decal_overlap_count": 0,
+            "r_renderoverlayfragment": 1,
+            "r_overlayfademin": 1000,
+            "r_overlayfademax": 1200,
+            "r_drawmodeldecals": 1,
+            "r_maxmodeldecal": 9,
+            "r_decalstaticprops": 1,
+            "r_decal_cullsize": 15,
+            "r_drawbatchdecals": 0
+          }
+        },
+        "high": {
+          "values": {
+            "r_decals": 96,
+            "mp_decals": 96,
+            "r_decal_cover_count": 4,
+            "r_decal_overlap_area": 0.8,
+            "r_decal_overlap_count": 3,
+            "r_renderoverlayfragment": 1,
+            "r_overlayfademin": 1100,
+            "r_overlayfademax": 1350,
+            "r_drawmodeldecals": 1,
+            "r_maxmodeldecal": 32,
+            "r_decalstaticprops": 1,
+            "r_decal_cullsize": 15,
+            "r_drawbatchdecals": 1
+          }
+        },
+        "ultra": {
+          "description": "The maximum amount of decals.",
+          "values": {
+            "r_decals": 2048,
+            "mp_decals": 2048,
+            "r_decal_cover_count": 8,
+            "r_decal_overlap_area": 1,
+            "r_decal_overlap_count": 8,
+            "r_renderoverlayfragment": 1,
+            "r_overlayfademin": 1750,
+            "r_overlayfademax": 2000,
+            "r_drawmodeldecals": 1,
+            "r_maxmodeldecal": 32,
+            "r_decalstaticprops": 1,
+            "r_decal_cullsize": 5,
+            "r_drawbatchdecals": 1
+          }
+        }
+      }
+    },
+    "graphics.sprays": {
+      "description": "Graphics sprayed onto surfaces by players.",
+      "levels": {
+        "off": {
+          "values": {
+            "cl_allowdownload": 0,
+            "cl_allowupload": 0,
+            "r_spray_lifetime": 0,
+            "cl_playerspraydisable": 1
+          }
+        },
+        "on": {
+          "values": {
+            "cl_allowdownload": 1,
+            "cl_allowupload": 1,
+            "r_spray_lifetime": 2,
+            "cl_playerspraydisable": 0
+          }
+        }
+      }
+    },
+    "graphics.gibs": {
+      "description": "The gore associated with players blowing up due to high explosive damage. Increases models rendered and physics simulated.",
+      "levels": {
+        "off": {
+          "values": {
+            "cl_burninggibs": 0,
+            "props_break_max_pieces": 0
+          }
+        },
+        "medium": {
+          "values": {
+            "cl_burninggibs": 0,
+            "props_break_max_pieces": 2
+          }
+        },
+        "high": {
+          "values": {
+            "cl_burninggibs": 0,
+            "props_break_max_pieces": -1
+          }
+        },
+        "ultra": {
+          "description": "Gibs will be shown, and will be burning if the player gibbed while on fire.",
+          "values": {
+            "cl_burninggibs": 1,
+            "violence_hgibs": 1,
+            "props_break_max_pieces": -1
+          }
+        }
+      }
+    },
+    "graphics.ragdolls": {
+      "description": "Dead bodies which have their physics simulated.",
+      "levels": {
+        "off": {
+          "values": {
+            "cl_ragdoll_fade_time": 0,
+            "cl_ragdoll_forcefade": 1,
+            "cl_ragdoll_physics_enable": 0
+          }
+        },
+        "medium": {
+          "values": {
+            "cl_ragdoll_fade_time": 3,
+            "cl_ragdoll_forcefade": 0,
+            "cl_ragdoll_physics_enable": 1,
+            "ragdoll_sleepaftertime": 1.0
+          }
+        },
+        "high": {
+          "values": {
+            "cl_ragdoll_fade_time": 15,
+            "cl_ragdoll_forcefade": 0,
+            "cl_ragdoll_physics_enable": 1,
+            "ragdoll_sleepaftertime": 2.5
+          }
+        }
+      }
+    },
+    "HUD.general": {
+      "no-data": true
+    },
+    "HUD.backpack": {
+      "no-data": true
+    },
+    "HUD.outlines": {
+      "description": "The outlines on objects, spectating and allies on spawn.",
+      "levels": {
+        "off": {
+          "description": "No outlines will be shown.",
+          "values": {
+            "glow_outline_effect_enable": 0,
+            "tf_enable_glows_after_respawn": 0,
+            "tf_spec_xray_disable": 1
+          }
+        },
+        "medium": {
+          "description": "Outlines will not be drawn, but name tags will be shown through walls.",
+          "values": {
+            "glow_outline_effect_enable": 0,
+            "tf_enable_glows_after_respawn": 1,
+            "tf_spec_xray_disable": 0
+          }
+        },
+        "high": {
+          "description": "Outlines and name tags will be shown.",
+          "values": {
+            "glow_outline_effect_enable": 1,
+            "tf_enable_glows_after_respawn": 0,
+            "tf_spec_xray_disable": 0
+          }
+        }
+      }
+    },
+    "sound.quality": {
+      "description": "The quality of sound and positional effects.",
+      "levels": {
+        "very_low": {
+          "description": "All sound effects and positional audio are disabled and additional sound reduction is applied.",
+          "values": {
+            "snd_disable_mixer_duck": 1,
+            "snd_pitchquality": 0,
+            "dsp_slow_cpu": 1,
+            "snd_spatialize_roundrobin": 3,
+            "dsp_room": 0,
+            "dsp_facingaway": 0,
+            "dsp_speaker": 0,
+            "dsp_water": 0,
+            "dsp_spatial": 0,
+            "snd_cull_duplicates": 3,
+            "voice_steal": 1
+          },
+          "dxsupport": "sound-low"
+        },
+        "low": {
+          "description": "All sound effects and positional audio are disabled.",
+          "values": {
+            "snd_disable_mixer_duck": 1,
+            "snd_pitchquality": 0,
+            "dsp_slow_cpu": 1,
+            "snd_spatialize_roundrobin": 3,
+            "dsp_room": 0,
+            "dsp_facingaway": 0,
+            "dsp_speaker": 0,
+            "dsp_water": 0,
+            "dsp_spatial": 0,
+            "snd_cull_duplicates": 0,
+            "voice_steal": 2
+          },
+          "dxsupport": "sound-low"
+        },
+        "medium": {
+          "values": {
+            "snd_disable_mixer_duck": 0,
+            "snd_pitchquality": 0,
+            "dsp_slow_cpu": 1,
+            "snd_spatialize_roundrobin": 2,
+            "dsp_room": 0,
+            "dsp_facingaway": 0,
+            "dsp_speaker": 0,
+            "dsp_water": 0,
+            "dsp_spatial": 40,
+            "snd_cull_duplicates": 0,
+            "voice_steal": 2
+          },
+          "dxsupport": "sound-high"
+        },
+        "high": {
+          "values": {
+            "snd_disable_mixer_duck": 0,
+            "snd_pitchquality": 1,
+            "dsp_slow_cpu": 0,
+            "snd_spatialize_roundrobin": 1,
+            "dsp_room": 0,
+            "dsp_facingaway": 30,
+            "dsp_speaker": 50,
+            "dsp_water": 14,
+            "dsp_spatial": 40,
+            "snd_cull_duplicates": 0,
+            "voice_steal": 2
+          },
+          "dxsupport": "sound-high"
+        },
+        "ultra": {
+          "description": "All sound effects and positional audio are enabled and turned to their highest quality. Uses the most processing power (CPU).",
+          "values": {
+            "snd_disable_mixer_duck": 0,
+            "snd_pitchquality": 1,
+            "dsp_slow_cpu": 0,
+            "snd_spatialize_roundrobin": 0,
+            "dsp_room": 1,
+            "dsp_facingaway": 31,
+            "dsp_speaker": 50,
+            "dsp_water": 16,
+            "dsp_spatial": 40,
+            "snd_cull_duplicates": 0,
+            "voice_steal": 2
+          },
+          "dxsupport": "sound-high"
+        }
+      }
+    },
+    "sound.footsteps": {
+      "description": "Controls if footsteps play at all.",
+      "levels": {
+        "on": {
+          "values": {
+          }
+        },
+        "off": {
+          "values": {
+          },
+          "footsteps": "off"
+        }
+      }
+    },
+    "sound.ambient_noise": {
+      "description": "Controls the soundscapes (ambient noise) of maps playing.",
+      "levels": {
+        "on": {
+          "values": {
+          }
+        },
+        "off": {
+          "values": {
+          },
+          "soundscapes": "off"
+        }
+      }
+    },
+    "networking.packet_buffer": {
+      "description": "How long the client smooths communication from the server.",
+      "levels": {
+        "very_high": {
+          "name": "Very High smoothing",
+          "description": "A very high smoothing time to ensure a safe connection for those on very unstable connections.",
+          "values": {
+            "cl_interp_ratio": 4
+          },
+          "interp_ratio": 4
+        },
+        "high": {
+          "name": "High smoothing",
+          "description": "A high smoothing time to ensure a safe connection for those on unstable connections.",
+          "values": {
+            "cl_interp_ratio": 3
+          },
+          "interp_ratio": 3
+        },
+        "standard": {
+          "name": "Standard smoothing",
+          "description": "The standard smoothing time, reliable for all but the most unstable connections.",
+          "values": {
+            "cl_interp_ratio": 2.1
+          },
+          "interp_ratio": 2.1
+        },
+        "balanced": {
+          "name": "Balanced smoothing",
+          "description": "A short smoothing time that is mostly reliable.",
+          "values": {
+            "cl_interp_ratio": 1.294117
+          },
+          "interp_ratio": 1.2941176
+        },
+        "lan": {
+          "name": "Local network smoothing",
+          "description": "The shortest smoothing time, very unreliable.",
+          "values": {
+            "cl_interp_ratio": 1
+          },
+          "interp_ratio": 1
+        }
+      }
+    },
+    "networking.packet_rate": {
+      "description": "How fast the client and server communicate.",
+      "levels": {
+        "low": {
+          "description": "A third of the max packet rate.",
+          "values": {
+            "cl_updaterate": 22,
+            "cl_cmdrate": 21
+          },
+          "update_rate": 22,
+          "rel_rate": 3
+        },
+        "medium": {
+          "description": "Half of the max packet rate.",
+          "values": {
+            "cl_updaterate": 33,
+            "cl_cmdrate": 32
+          },
+          "update_rate": 33,
+          "rel_rate": 2
+        },
+        "high": {
+          "description": "The max packet rate. Uses the most internet, but communicates data faster.",
+          "values": {
+            "cl_updaterate": 66,
+            "cl_cmdrate": 65
+          },
+          "update_rate": 66,
+          "rel_rate": 1
+        }
+      }
+    },
+    "networking.packet_size": {
+      "description": "How much Internet bandwidth the client uses",
+      "levels": {
+        "bad_router": {
+          "description": "Minimizes packet size to ensure reliable delivery on bad routers/modems",
+          "values": {
+            "net_compresspackets": 1,
+            "net_compresspackets_minsize": 128,
+            "net_maxroutable": 956,
+            "net_maxfragments": 956
+          }
+        },
+        "low_end": {
+          "description": "Minimizes computations done on the client",
+          "values": {
+            "net_compresspackets": 1,
+            "net_compresspackets_minsize": 1261,
+            "net_maxroutable": 1260,
+            "net_maxfragments": 1260
+          }
+        },
+        "minimal": {
+          "description": "Minimizes Internet usage",
+          "values": {
+            "net_compresspackets": 1,
+            "net_compresspackets_minsize": 128,
+            "net_maxroutable": 1260,
+            "net_maxfragments": 1260
+          }
+        },
+        "standard": {
+          "description": "The optimal packet settings for most users",
+          "values": {
+            "net_compresspackets": 1,
+            "net_compresspackets_minsize": 128,
+            "net_maxroutable": 1200,
+            "net_maxfragments": 1200
+          }
+        }
+      }
+    },
+    "networking.rate": {
+      "description": "How much data can the client use per second",
+      "hidden": true,
+      "levels": {
+        "default": {
+          "values": {
+            "rate": 196608,
+            "net_splitpacket_maxrate": 196608,
+            "net_maxcleartime": 0.020345,
+            "net_splitrate": 2
+          }
+        }
+      }
+    }
+  }
+}
