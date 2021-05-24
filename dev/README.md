@@ -63,6 +63,8 @@ export GH_REPO="GitHub repository in the format owner/repo"
 export TF2_DIR="absolute path to Team Fortress 2 directory"
 ```
 
+You may also opt to set these variables in your system environment.
+
 ## Environment variables
 
 The dev scripts use a variety of environment variables to control their behavior:

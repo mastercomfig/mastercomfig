@@ -45,25 +45,29 @@ If you are not able to support me through the above methods, that's fine too! Yo
 ## Credits
 
 * [Chris](https://chrisdown.name/tf2/) for starting it all
+
 * [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
   continuing what Chris started and helping a bit with my config
 
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
+
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
+
 * povohat for making the null-cancelling movement script
+
 * SteamDB for their excellent tools, including [Game Tracking for TF2](https://github.com/SteamDatabase/GameTracking-TF2)
+
 * [SourceMod](https://www.sourcemod.net/credits.php) for their extensive and easy to use modification system for Source
+
 * step for [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262)
+
 * AveYo for [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
+
 * Tiagoquix for continued support and bug fixes to the config
+
 * jane for the shrinkKeyValues bash script
+
 * Fraklin for screenshots of the config
-* The community for their continued support, advice and benchmarks. (Special
-  Mentions to: amazoc, JackStanley, Setsul, Hopps, fagoatse, ZeRo5, stabby,
-  Whisker, Vantavimeow, osvaldo, DarkNecrid, steph, Thole, gemm, sage, Malkraz,
-  maximsmol, UnnoTed, Mothership, Mike, Skorp, Smoutebollen, Goatz,
-  DapperTrapper, Tene, mambo, Sakii, Leo40, micwoj92, ghost-420, m00n01,
-  scrambl-d, xNanochip, torkel104, soluss,  NekoAlosama, Naxeron, fiend and perhaps many others)
 
 * The [Valve Developer Community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics

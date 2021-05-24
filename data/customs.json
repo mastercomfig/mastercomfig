@@ -1,0 +1,224 @@
+{
+  "entries": {
+    "LOD": {
+      "category": "graphics.models",
+      "data": {
+        "type": "selector",
+        "value": [
+          {
+            "name": "low",
+            "values": {
+              "r_lod": -1,
+              "r_rootlod": 2
+            }
+          },
+          {
+            "name": "medium",
+            "values": {
+              "r_lod": -1,
+              "r_rootlod": 1
+            }
+          },
+          {
+            "name": "high",
+            "values": {
+              "r_lod": -1,
+              "r_rootlod": 0
+            }
+          },
+          {
+            "name": "ultra",
+            "values": {
+              "r_lod": 0,
+              "r_rootlod": 0
+            }
+          }
+        ]
+      }
+    },
+    "jigglebones": {
+      "category": "graphics.models",
+      "description": "The minimum framerate needed for showing jigglebones like the fish viewmodel. 0 to disable always.",
+      "data": {
+        "type": "stepper",
+        "value": {
+          "cvar": "cl_jiggle_bone_framerate_cutoff",
+          "min": "0",
+          "max": "240"
+        }
+      }
+    },
+    "grass": {
+      "category": "graphics.world",
+      "data": {
+        "type": "selector",
+        "value": [
+          {
+            "name": "off",
+            "values": {
+              "r_drawdetailprops": 0
+            },
+            "detail_props": "none"
+          },
+          {
+            "name": "high",
+            "values": {
+              "r_drawdetailprops": 1
+            },
+            "detail_props": "high"
+          },
+          {
+            "name": "ultra",
+            "values": {
+              "r_drawdetailprops": 1
+            },
+            "detail_props": "ultra"
+          }
+        ]
+      }
+    },
+    "3D_sky": {
+      "category": "graphics.world",
+      "data": {
+        "type": "toggle",
+        "value": ["r_3dsky"]
+      }
+    },
+    "props": {
+      "category": "graphics.world",
+      "data": {
+        "type": "toggle",
+        "value": ["cl_phys_props_enable"]
+      }
+    },
+    "ropes": {
+      "category": "graphics.world",
+      "data": {
+        "type": "selector",
+        "value": [
+          {
+            "name": "off",
+            "values": {
+              "rope_rendersolid": 0,
+              "r_ropetranslucent": 0
+            },
+            "dxsupport": "ropes-off"
+          },
+          {
+            "name": "on",
+            "values": {
+              "rope_rendersolid": 1,
+              "r_ropetranslucent": 1
+            },
+            "dxsupport": "ropes-on"
+          }
+        ]
+      }
+    },
+    "texture_filter": {
+      "category": "graphics.textures",
+      "description": "Adjusts the quality of textures, especially ones further away.",
+      "data": {
+        "type": "selector",
+        "value": [
+          {
+            "name": "bilinear",
+            "values": {
+              "mat_trilinear": 0,
+              "mat_forceaniso": 1
+            }
+          },
+          {
+            "name": "trilinear",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 1
+            }
+          },
+          {
+            "name": "Anisotropic Filtering 2x",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 2
+            }
+          },
+          {
+            "name": "Anisotropic Filtering 4x",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 4
+            }
+          },
+          {
+            "name": "Anisotropic Filtering 8x",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 8
+            }
+          },
+          {
+            "name": "Anisotropic Filtering 16x",
+            "values": {
+              "mat_trilinear": 1,
+              "mat_forceaniso": 16
+            }
+          }
+        ]
+      }
+    },
+    "art_decals": {
+      "category": "graphics.decals",
+      "data": {
+        "type": "toggle",
+        "value": ["r_renderoverlayfragment"]
+      }
+    },
+    "art_decal_fade": {
+      "category": "graphics.decals",
+      "data": {
+        "type": "toggle",
+        "value": ["r_overlayfadeenable"]
+      }
+    },
+    "3D_HUD_playermodel": {
+      "category": "HUD.general",
+      "data": {
+        "type": "toggle",
+        "value": ["cl_hud_playerclass_use_playermodel "]
+      }
+    },
+    "killfeed": {
+      "category": "HUD.general",
+      "description": "The time that each killfeed item lasts in seconds.",
+      "data": {
+        "type": "stepper",
+        "value": {
+          "cvar": "hud_deathnotice_time",
+          "min": 0,
+          "max": 12
+        }
+      }
+    },
+    "Show_spectated_player_items": {
+      "category": "HUD.backpack",
+      "data": {
+        "type": "toggle",
+        "value": ["cl_spec_carrieditems"]
+      }
+    },
+    "Alphabetically_sort_loadout_options": {
+      "category": "HUD.backpack",
+      "data": {
+        "type": "toggle",
+        "value": ["tf_item_selection_panel_sort_type"]
+      }
+    },
+    "Item_rarity_borders": {
+      "category": "HUD.backpack",
+      "data": {
+        "type": "toggle",
+        "value": ["cl_showbackpackrarities"]
+      }
+    }
+  }
+}

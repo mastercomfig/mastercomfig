@@ -1,0 +1,158 @@
+{
+  "entries": {
+    "hardware.gpu.type": {
+      "Intel": {
+        "r_occludeemaxarea": 2.5,
+        "r_occluderminarea": 1,
+        "mat_tonemapping_occlusion_use_stencil": 1,
+        "mat_max_worldmesh_vertices": 8192,
+        "r_glint_procedural": 1,
+        "mat_postprocess_x": 1,
+        "mat_postprocess_y": 1,
+        "violence_hgibs": 1,
+        "violence_hblood": 1
+      },
+      "Dedicated": {
+        "r_occludeemaxarea": 1.5,
+        "r_occluderminarea": 6.5,
+        "mat_postprocess_x": 4,
+        "mat_postprocess_y": 4,
+        "violence_hgibs": 1,
+        "violence_hblood": 1
+      }
+    },
+    "hardware.cpu.cores": [
+     {
+       "max": 1,
+       "suffix": " cores",
+       "values": {
+         "mat_queue_mode": -1,
+         "snd_mix_async": 0,
+         "snd_async_fullyasync": 0,
+         "snd_async_minsize": 2097152
+       }
+      },
+      {
+        "max": 2,
+       "suffix": " cores",
+        "values": {
+          "snd_mix_async": 0,
+          "snd_async_fullyasync": 0,
+          "snd_async_minsize": 262144
+        }
+      }
+    ],
+    "hardware.cpu.speed": [
+      {
+        "max": 1.7,
+        "suffix": "GHz",
+        "values": {
+          "cl_smooth": 0,
+          "net_splitrate": 1,
+          "snd_delay_sound_shift": 0.03,
+          "snd_mixahead": 0.1,
+          "tf_time_loading_item_panels": 0.0001
+        }
+      },
+      {
+        "min": 2.4,
+        "suffix": "GHz",
+        "values": {
+          "net_splitrate": 1,
+          "snd_mixahead": 0.08
+        }
+      },
+      {
+        "min": 3.2,
+        "suffix": "GHz",
+        "values": {
+          "net_splitrate": 2
+        }
+      },
+      {
+        "min": 4,
+        "suffix": "GHz",
+        "values": {
+          "net_splitrate": 3,
+          "snd_delay_sound_shift": 0.008
+        }
+      },
+      {
+        "min": 4.7,
+        "suffix": "GHz",
+        "values": {
+          "net_splitrate": 4,
+          "snd_delay_sound_shift": 0.005,
+          "tf_time_loading_item_panels": 0.0005
+        }
+      },
+      {
+        "min": 5.2,
+        "suffix": "GHz",
+        "values": {
+          "net_splitrate": 8,
+          "snd_delay_sound_shift": 0.005,
+          "tf_time_loading_item_panels": 0.0005
+        }
+      }
+    ],
+    "hardware.memory.size.available": [
+      {
+        "max": 0.5,
+        "suffix": "GB",
+        "values": {
+          "cl_always_flush_models": 1,
+          "mat_bufferprimitives": 0
+        }
+      },
+      {
+        "min": 2,
+        "suffix": "GB",
+        "values": {
+          "lzma_persistent_buffer": 1,
+          "mem_max_heapsize": 512
+        }
+      },
+      {
+        "min": 4,
+        "suffix": "GB",
+        "values": {
+          "lzma_persistent_buffer": 1,
+          "mem_max_heapsize": 640,
+          "datacachesize": 512
+        }
+      }
+    ],
+    "hardware.disk.type": {
+      "SSD": {
+        "mod_load_anims_async": 1,
+        "mod_load_mesh_async": 1,
+        "mod_load_vcollide_async": 1,
+        "mod_touchalldata": 0
+      },
+      "HDD": {
+        "mod_load_anims_async": 1,
+        "mod_load_mesh_async": 1
+      }
+    },
+    "software.os.name": {
+      "Linux": {
+        "gl_pow2_tempmem": 1,
+        "gl_mtglflush_at_tof": 1,
+        "gl_debug_output": 0,
+        "gl_magnify_resolve_mode": 1,
+        "gl_paircache_rows_lg2": 11,
+        "gl_paircache_ways_lg2": 5,
+        "net_queued_packet_thread": 0
+      },
+      "Darwin": {
+        "gl_pow2_tempmem": 1,
+        "gl_mtglflush_at_tof": 1,
+        "gl_debug_output": 0,
+        "gl_magnify_resolve_mode": 1,
+        "gl_paircache_rows_lg2": 11,
+        "gl_paircache_ways_lg2": 5
+      }
+    }
+  }
+}

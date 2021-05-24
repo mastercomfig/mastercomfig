@@ -3,7 +3,7 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
 
-. ./mastercomfig-vars
+. ./mastercomfig-vars || echo "Using system environment for mastercomfig vars."
 
 # Announce on Discord #releases
 

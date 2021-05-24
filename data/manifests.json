@@ -1,0 +1,35 @@
+{
+  "version": "7.0.0-a.16",
+  "config-dir": "../config/",
+  "build-dir": "../build/",
+  "sources-dir": "../config/mastercomfig/",
+  "patches-dir": "../config/patches/",
+  "manifests": {
+    "presets": ["presets.json"],
+    "cvars": ["cvars.json"],
+    "modules": ["modules.json"],
+    "comfig": ["comfig.json"],
+    "customs": ["customs.json"],
+    "dynamic": ["dynamic.json"]
+  },
+  "patches": [
+    {
+      "source": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-TF2/master/tf/tf2_misc_dir/texture_preload_list.txt",
+      "patch": "optimize-texture-preload-list",
+      "base-dir": true,
+      "dest": "texture_preload_list.txt"
+    },
+    {
+      "source": "https://github.com/SteamDatabase/GameTracking-TF2/raw/master/tf/tf2_misc_dir/scripts/client_precache.txt",
+      "patch": "optimize-client_precache",
+      "base-dir": true,
+      "dest": "scripts/client_precache.txt"
+    },
+    {
+      "source": "https://github.com/SteamDatabase/GameTracking-TF2/raw/master/tf/tf2_misc_dir/glbaseshaders.cfg",
+      "patch": "optimize-glshaders",
+      "base-dir": true,
+      "dest": "glbaseshaders.cfg"
+    }
+  ]
+}
