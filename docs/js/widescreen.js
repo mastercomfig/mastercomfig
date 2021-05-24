@@ -13,6 +13,7 @@ if (window.location.pathname.indexOf("cvar") !== -1 || window.location.pathname.
         margin-left: 0;
         -webkit-transform: none;
         transform: none;
+        display: none !important;
       }
     }
   `;
