@@ -87,7 +87,7 @@ plugins:
   - git-revision-date-localized:
       type: date
 extra_javascript:
-  - js/widescreen.min.js
+  - js/widescreen.js
 extra:
   social:
     - icon: fontawesome/brands/github
