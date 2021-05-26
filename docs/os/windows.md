@@ -13,6 +13,12 @@ If you are curious about what this feature exactly does, you can read [this tech
 
 If you experience problems or reduced performance from this feature, turn it off and [submit feedback](https://aka.ms/submitgameperformancefeedback).
 
+## Enable Variable refresh rate
+
+A bew feature in Windows 10 may 2021 Update (version 21H1) is Variable refresh rate (VRR). VRR is the exact same thing as G-Sync or Freesync, which gets your refresh rate to fluctuate with your framerate, removing screen tearing and nullifying the use of VSync, a more archaeic technology which limits your framerate to your refresh rate to remove screen tearing, but at an increase in latency.
+
+You can enable this in the same Graphics UI as Hardware-accelerated GPU scheduling.
+
 ## Disable Game Mode
 
 Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information and instructions on how to disable it.
