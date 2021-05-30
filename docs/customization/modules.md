@@ -114,7 +114,7 @@ Default setting: **`download=auto`** (all presets).
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
-* **`download=none`**: Don't download any custom files from servers.
+* **`download=none`**: Do not download any custom files from servers.
 
 ## Graphics modules
 
@@ -506,7 +506,7 @@ Toggle match status HUD at the top of the screen.
     It's highly recommended to use this module, as the built-in console variable
     does not work properly when turning off directly.
 
-Default setting **`match_hud=on`** (all presets, except Very Low).
+Default setting: **`match_hud=on`** (all presets, except Very Low).
 
 * **`match_hud=off`**: Disables match status HUD.
 * **`match_hud=on`**: Enables match status HUD.
