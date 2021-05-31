@@ -220,8 +220,8 @@
     "default": "on",
     "very-low": "off"
   },
-  "debug": {
-    "default": "minimal",
+  "console": {
+    "default": "on",
     "very-low": "off"
   },
   "outlines": {

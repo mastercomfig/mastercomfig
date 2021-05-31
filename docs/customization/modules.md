@@ -548,16 +548,14 @@ Default setting: **`hud_achievement=on`** (all presets, except Very Low).
 * **`hud_achievement=off`**: Disables achievement tracker panel completely.
 * **`hud_achievement=on`**: Enables support for achievement tracker panel.
 
-### Debug
+### Console
 
-Controls various debugging displays and console.
+Controls console.
 
-Default setting: **`debug=minimal`** (all presets, except Very Low).
+Default setting: **`console=on`** (all presets, except Very Low).
 
-* **`debug=off`**: Disables all debug features.
-* **`debug=minimal`**: Enables developer console.
-* **`debug=on_partial`**: Enables all but the noisiest debug HUDs.
-* **`debug=on`**: Enables all debug HUDs.
+* **`console=off`**: Disables developer console.
+* **`console=on`**: Enables developer console.
 
 ### Outlines
 

@@ -712,16 +712,11 @@
         ]
       },
       {
-        "name": "debug",
+        "name": "console",
+        "type": "switch",
         "values": [
           {
             "value": "off"
-          },
-          {
-            "value": "minimal"
-          },
-          {
-            "value": "on_partial"
           },
           {
             "value": "on"
