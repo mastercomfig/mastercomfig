@@ -73,11 +73,10 @@ Default setting: **`snapshot_buffer=auto`** (all presets).
 
 Controls how big packets are and how they are split up/compressed.
 
-Default setting: **`packet_size=big`** (all presets).
+Default setting: **`packet_size=speed`** (all presets).
 
 * **`packet_size=small`**: Uses the smallest packet size, which should be able to be processed by even the worst routers.
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
-* **`packet_size=big`**: Uses a reasonably large packet size limit that should work with most reliable connections and internet routes.
 * **`packet_size=saver`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
 * **`packet_size=speed`**: This prioritizes less CPU usage over data usage by disabling packet compression and avoiding split packets.
 
@@ -88,7 +87,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 !!! note
     This does not increase data usage, just restricts how quickly data can be sent.
 
-Default setting: **`bandwidth=1.5Mbps`** (all presets).
+Default setting: **`bandwidth=762Kbps`** (all presets).
 
 * **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 * **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
