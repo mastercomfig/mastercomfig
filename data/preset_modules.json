@@ -10,10 +10,10 @@
     "default": "auto"
   },
   "packet_size": {
-    "default": "big"
+    "default": "speed"
   },
   "bandwidth": {
-    "default": "1.5Mbps"
+    "default": "762Mbps"
   },
   "download": {
     "default": "auto"
