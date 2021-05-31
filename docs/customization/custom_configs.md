@@ -104,3 +104,47 @@ To get an idea about what to put in your `user/autoexec.cfg` and select options,
 you can download the autoexec template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
 
 This config is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for easy customization.
+
+## Debug Commands
+
+mastercomfig provides a set of handy debugging commands used during mastercomfig's development to analyze several aspects of the game.
+
+### General
+
+* `debug_output`: Turn on developer only output. Shows various warnings about potential issues, and outputs console to the corner of the screen.
+
+### Gameplay Testing
+
+* `debug_instant_respawn`: Turns on fully instant respawn.
+* `debug_invulnerable`: Toggles buddha mode (health cannot go below 1).
+* `debug_bots`: Fills the server with bots with AI.
+* `debug_target`: Adds a target bot, which can be damaged infinitely.
+
+### Rendering
+
+* `debug_occlusion`: Turns on debugging of the occlusion system.
+* `debug_pixelvis`: Turns on debugging of the pixel visibility system.
+* `debug_fillrate`: Shows overdraw from repeated passes.
+* `debug_matsys_reload`: Reloads material system.
+
+### Sound
+
+* `debug_sound_loads`: Dumps the current state of the sound memory pool, and enables debug output for sound loads.
+* `debug_sound_dsp`: Enables debug output of DSP parameters of sounds, and enables visualization for automatic room DSP, if it is enabled.
+
+### Network
+* `debug_network_packets`: Enables spew of each network packet sent and received, including compression information if relevant.
+* `debug_network_drops`: Enables debug output of outdated or duplicate packets.
+* `debug_network_graph`: Enables the full networking graph, which displays information about packet volume, interp timings, and packet rates.
+* `debug_network_pred`: Enables network prediction error logging.
+
+### FPS
+
+* `debug_fps`: Enables the basic networking graph, which is handy for seeing FPS. Note that the graph has a noticeable performance impact.
+* `debug_fps_range`: Enables full FPS counter, which shows absolute FPS mins and maxes. You can re-run this command to reset the mins and maxes.
+
+### Profiling
+
+* `debug_vprof_spikes`: Logs spikes below 100FPS (can be adjusted with `alias debug_vprof_spike"vprof_dump_spikes 100"`) to `tf/vprof_spikes.log` (can be adjusted with `alias debug_vprof_log_spike"con_logfile vprof_spike.log"`).
+* `debug_vprof_timings`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). Can be re-run to reset timings data.
+* `debug_vprof_off`: Turns off profiling.
