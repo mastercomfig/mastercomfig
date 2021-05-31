@@ -48,7 +48,7 @@ a override alias, which is run during game overrides, and an override option, wh
 
 So, for example, if you are using a lower lighting module, and do not want blocky lighting, you can add `alias lightmaps_override` to your `autoexec.cfg`.
 
-Or, if you are using a lower water module, but do not want to use cheap water, you can add `alias cheap_water_override cheap_water-never`.
+Or, if you are using a lower water module, but do not want to use cheap water, you can add `alias cheap_water_override cheap_water_never`.
 
 ## Network alias
 
