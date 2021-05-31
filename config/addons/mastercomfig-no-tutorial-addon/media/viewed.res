@@ -128,10 +128,6 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
-	cp_overgrown_rc7b
-	{
-		"viewed"		"16"
-	}
 	cp_powerhouse
 	{
 		"viewed"		"16"
@@ -144,10 +140,6 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
-	cp_snowlodge_b5
-	{
-		"viewed"		"16"
-	}
 	cp_snowplow
 	{
 		"viewed"		"16"
@@ -157,10 +149,6 @@ viewed.res
 		"viewed"		"16"
 	}
 	cp_steel
-	{
-		"viewed"		"16"
-	}
-	cp_stoneyridge_rc2
 	{
 		"viewed"		"16"
 	}
@@ -217,10 +205,6 @@ viewed.res
 		"viewed"		"16"
 	}
 	ctf_snowfall_final
-	{
-		"viewed"		"16"
-	}
-	ctf_snowfort
 	{
 		"viewed"		"16"
 	}
@@ -308,10 +292,6 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
-	koth_slaughter_b1b
-	{
-		"viewed"		"16"
-	}
 	koth_slaughter_event
 	{
 		"viewed"		"16"
@@ -329,10 +309,6 @@ viewed.res
 		"viewed"		"16"
 	}
 	koth_viaduct_event
-	{
-		"viewed"		"16"
-	}
-	koth_whitewinter_c1
 	{
 		"viewed"		"16"
 	}
@@ -416,10 +392,6 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
-	pl_eclipse_rc2
-	{
-		"viewed"		"16"
-	}
 	pl_enclosure_final
 	{
 		"viewed"		"16"
@@ -456,30 +428,6 @@ viewed.res
 	{
 		"viewed"		"16"
 	}
-	plr_bananabay
-	{
-		"viewed"		"16"
-	}
-	plr_hightower
-	{
-		"viewed"		"16"
-	}
-	plr_hightower_event
-	{
-		"viewed"		"16"
-	}
-	plr_hightower_snow_rc2
-	{
-		"viewed"		"16"
-	}
-	plr_nightfall_final
-	{
-		"viewed"		"16"
-	}
-	plr_pipeline
-	{
-		"viewed"		"16"
-	}
 	pl_rumble_event
 	{
 		"viewed"		"16"
@@ -501,6 +449,26 @@ viewed.res
 		"viewed"		"16"
 	}
 	pl_wutville_event
+	{
+		"viewed"		"16"
+	}
+	plr_bananabay
+	{
+		"viewed"		"16"
+	}
+	plr_hightower
+	{
+		"viewed"		"16"
+	}
+	plr_hightower_event
+	{
+		"viewed"		"16"
+	}
+	plr_nightfall_final
+	{
+		"viewed"		"16"
+	}
+	plr_pipeline
 	{
 		"viewed"		"16"
 	}
