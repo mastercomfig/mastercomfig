@@ -24,6 +24,32 @@ If there's something you'd like to run for all of your class configs, you can ad
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
 * `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
+## Game Overrides
+
+Some modules set something called game overrides, which apply settings that override map or in-game only settings that can't be applied at launch.
+
+If you want to override this part of the module, you will have to use their game override alias in `tf/cfg/user/autoexec.cfg`. This is comprised of
+a override alias, which is run during game overrides, and an override option, which actually contains the settings which is run by the override alias.
+
+* `lighting`: Uses `lightmaps_override` to control if lighting is blocky or smoothed out
+    * `lightmaps_off`: Makes lighting blocky
+* `shadows`: Uses `shadowlod_override` to control the model quality shadows render with
+    * `shadowlod_low`: Uses the lowest model quality to render shadows
+    * `shadowlod_high`: Uses the highest model quality (at root LOD) to render shadows
+* `water`: Uses `cheap_water_override` to control the low quality water fade distance
+    * `cheap_water_full`: Always uses fully cheap water
+    * `cheap_water_partial`: Always uses partially cheap water, uses fully cheap water at a short distance
+    * `cheap_water_minimal`: Uses partially cheap water at a short distance, uses fully cheap water at a further distance
+    * `cheap_water_never`: Never uses any kind of cheap water
+* `props`: Uses `detail_props_override` to control grass/detail prop rendering and its render distance
+    * `detail_props_none`: Disables detail props
+    * `detail_props_medium`: Enables detail props, at a far distance, with no fade in
+    * `detail_props_full`: Enables detail props, at a far distance, with a gentle fade in
+
+So, for example, if you are using a lower lighting module, and do not want blocky lighting, you can add `alias lightmaps_override` to your `autoexec.cfg`.
+
+Or, if you are using a lower water module, but do not want to use cheap water, you can add `alias cheap_water_override cheap_water_never`.
+
 ## Network alias
 
 These aliases are used by mastercomfig to apply network settings per class.
