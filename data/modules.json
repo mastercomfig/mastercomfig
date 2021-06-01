@@ -712,7 +712,8 @@
         ]
       },
       {
-        "name": "console",
+        "name": "dev_console",
+        "display": "Developer Console",
         "type": "switch",
         "values": [
           {
