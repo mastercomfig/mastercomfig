@@ -548,14 +548,14 @@ Default setting: **`hud_achievement=on`** (all presets, except Very Low).
 * **`hud_achievement=off`**: Disables achievement tracker panel completely.
 * **`hud_achievement=on`**: Enables support for achievement tracker panel.
 
-### Console
+### Developer Console
 
-Controls console.
+Controls the developer console.
 
-Default setting: **`console=on`** (all presets, except Very Low).
+Default setting: **`dev_console=on`** (all presets, except Very Low).
 
-* **`console=off`**: Disables developer console.
-* **`console=on`**: Enables developer console.
+* **`dev_console=off`**: Disables developer console.
+* **`dev_console=on`**: Enables developer console.
 
 ### Outlines
 
