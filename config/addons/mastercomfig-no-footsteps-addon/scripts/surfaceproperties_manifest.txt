@@ -1,4 +1,4 @@
-surfaceproperties_manifest
+soundscapes_manifest
 {
 	"file"		"scripts/surfaceproperties.txt"
 }
