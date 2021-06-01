@@ -220,7 +220,7 @@
     "default": "on",
     "very-low": "off"
   },
-  "console": {
+  "dev_console": {
     "default": "on",
     "very-low": "off"
   },
