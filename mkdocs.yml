@@ -35,7 +35,7 @@ nav:
       - Windows: os/windows.md
       - Linux: os/linux.md
   - Next Steps:
-      - Troubleshooting: next_steps/troubleshoot.md
+      - Quick Fixes: next_steps/troubleshoot.md
       - Update: next_steps/update.md
   - TF2 Documentation:
       - Misconceptions: tf2/misconceptions.md
