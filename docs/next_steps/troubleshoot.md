@@ -2,7 +2,7 @@
 description: Having trouble with mastercomfig? Here's where to go to first for solutions.
 ...
 
-# Troubleshooting
+# Quick Fixes
 
 This is a list of common issues users experience with mastercomfig, and how to solve them.
 
@@ -41,17 +41,13 @@ mat_specular 1
 mat_bumpmap 1
 ```
 
-## %killername% and other HUD bugs
+## Lighting/shadows are blocky
 
-This is a HUD initialization bug with TF2. You can fix it by running `hud_reloadscheme`. Running it once after joining a match is enough.
+In an update to mastercomfig, the config was fixed to correctly apply the lightmap filtering setting which controls if baked shadows are smoothed out.
 
-If you'd like this command to be run automatically, you can put this in your `autoexec.cfg`:
+You can re-enable the lightmap filtering and get smooth shadows by adding `alias lightmaps_override` to your `autoexec.cfg`.
 
-```c
-alias game_overrides_once_c hud_reloadscheme
-```
-
-The command will only run on the first time you spawn in a match.
+View [Game Overrides](../../customization/custom_configs/#game-overrides) for more information.
 
 ## My chat is disabled
 
