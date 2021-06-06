@@ -27,7 +27,7 @@ function uploadFileToGitHub {
 
 function uploadAssets {
   if [ -z "${release_tag}" ]; then
-    echo "Release tag null. Not continuing."
+    echo "Release tag unset. Not continuing."
     exit 3
   fi
 
