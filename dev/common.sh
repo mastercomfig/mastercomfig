@@ -21,18 +21,13 @@ function cleanItems {
 
 function uploadFileToGitHub {
     file=$1
-    name=${1##*/}
     label=${2// /%20}
-    url="${assets_url}?name=${name}&label=${label}"
-    echo "${url}"
-    curl -u "${GH_USERNAME}:${GH_TOKEN}" -X POST -H 'Content-type: application/octet-stream' \
-      -T "${file}" \
-      "${url}"
+    gh release upload ${release_tag} "${file}#${label}" --clobber
 }
 
 function uploadAssets {
-  if [ "${assets_url}" == null ]; then
-    echo "Assets URL null. Not continuing."
+  if [ -z "${release_tag}" ]; then
+    echo "Release tag null. Not continuing."
     exit 3
   fi
 

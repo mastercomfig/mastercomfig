@@ -42,6 +42,8 @@ else
     read -r hours
   fi
 
+  export release_tag=${version}
+
   ./deploy.sh "${version}" "${highlights}"
   ./announce.sh "${version}" "${highlights}" "${hours}"
 fi

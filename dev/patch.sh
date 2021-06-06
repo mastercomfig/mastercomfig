@@ -12,22 +12,19 @@ git push
 . ./mastercomfig-vars
 
 # Get latest release version
-response=$(curl "https://api.github.com/repos/${GH_REPO}/releases/latest")
-export assets_url=$(echo "${response}" | jq '.assets_url' | sed -e 's/^"//' -e 's/"$//' | sed "s/\bapi\b/uploads/g")
+if [ -z ${release_tag} ]; then
+    export release_tag=$(gh release view ${release_tag} --json tagName -q .tagName)
+fi
+
+# Move the tag
+git tag -f "${release_tag}"
+git push -f origin "${release_tag}"
+
+printf "\n"
 
 # Upload files
 . ./common.sh
 
 uploadAssets
-
-printf "\n"
-
-tag=$(echo "${response}" | jq '.tag_name' | sed -e 's/^"//' -e 's/"$//')
-
-git tag -d "${tag}"
-git tag "${tag}"
-
-git push -f origin :"${tag}"
-git push origin "${tag}"
 
 printf "\n"
