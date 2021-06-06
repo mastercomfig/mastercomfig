@@ -617,10 +617,11 @@ Ensures compatibility with animation and model mods.
 
 Default setting: **`mod_support=on`** (all presets).
 
-You may want to also enable preloading using the [Map Background module](#map-background).
+!!! info
+    You may want to also enable preloading using the [Map Background module](#map-background).
 
-* **`mod_support=off`**: Enables better file system performance for faster first map loads, at the cost of animation and model mods causing crashes.
-* **`mod_support=on`**: Disables file system optimizations for the first map load, making it slower, but fixes crashes caused by animation and model mods.
+* **`mod_support=off`**: Does not block settings that may cause crashes with animation and model mods.
+* **`mod_support=on`**: Blocks settings that may cause crashes with animation and model mods.
 
 ### Party Join Mode
 
