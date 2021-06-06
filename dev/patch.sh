@@ -9,7 +9,7 @@ cd "${BINDIR}" || exit 2
 git pull
 git push
 
-. ./mastercomfig-vars
+. ./mastercomfig-vars || echo "Using system environment for mastercomfig vars."
 
 # Get latest release version
 if [ -z ${release_tag} ]; then
