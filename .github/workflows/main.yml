@@ -74,6 +74,3 @@ jobs:
       if: ${{ steps.check-tag.outputs.release == 'true' }}
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        GH_USERNAME: ${{ secrets.GH_USERNAME }}
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        GH_REPO: mastercomfig/mastercomfig
