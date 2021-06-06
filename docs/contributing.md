@@ -235,6 +235,7 @@ In order to successfully package presets and addons you need:
 * bash and basic UNIX tools
 * [VPK](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
 * [gh](https://cli.github.com/)
+  * You must authenticate beforehand, e.g. using [gh auth login](https://cli.github.com/manual/gh_auth_login), or the `GH_TOKEN` env var
 * GNU parallel (optional)
 
 Additionally, to generate No Tutorial addon, you will need to create a new file

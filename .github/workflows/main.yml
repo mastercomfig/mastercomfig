@@ -69,8 +69,10 @@ jobs:
       if: ${{ steps.check-tag.outputs.release != 'true' }}
       env:
         prerelease: true
+        GH_TOKEN: ${{secrets.REPO_TOKEN}}
     - name: Build mastercomfig (release)
       run: dev/release.sh
       if: ${{ steps.check-tag.outputs.release == 'true' }}
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        GH_TOKEN: ${{secrets.REPO_TOKEN}}
