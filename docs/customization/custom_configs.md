@@ -50,7 +50,7 @@ So, for example, if you are using a lower lighting module, and do not want block
 
 Or, if you are using a lower water module, but do not want to use cheap water, you can add `alias cheap_water_override cheap_water_never`.
 
-## Network alias
+## Network aliases
 
 These aliases are used by mastercomfig to apply network settings per class.
 
