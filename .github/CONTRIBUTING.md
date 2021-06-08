@@ -234,6 +234,8 @@ In order to successfully package presets and addons you need:
 * Installed TF2 and Steam with all dependencies
 * bash and basic UNIX tools
 * [VPK](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
+* [gh](https://cli.github.com/)
+  * You must authenticate beforehand, e.g. using [gh auth login](https://cli.github.com/manual/gh_auth_login), or the `GH_TOKEN` env var
 * GNU parallel (optional)
 
 Additionally, to generate No Tutorial addon, you will need to create a new file
@@ -253,9 +255,6 @@ you should append following to your `mastercomfig-vars` file:
 
 ```bash
 export DISCORD_WEBHOOK="Discord webhook for config announcements"
-export GH_USERNAME="GitHub username used for authentication for release deployment"
-export GH_TOKEN="GitHub authentication token used for release deployment"
-export GH_REPO="GitHub repository in the format owner/repo"
 ```
 
 These variables can also come from your system environment.

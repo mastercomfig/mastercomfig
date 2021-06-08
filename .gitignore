@@ -10,7 +10,6 @@ mastercomfig-vars
 /dev/**/*.cfg
 addons_setup.cfg
 addons.cfg
-prerelease
 
 # node
 node_modules/

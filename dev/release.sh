@@ -21,10 +21,10 @@ unset zip_package
 ./package.sh
 
 if [ "${prerelease:=false}" = true ]; then
-  exit 0
+  export release_tag=dev
 fi
 
-if [ "${patch:=false}" = true ]; then
+if [ "${patch:=false}" = true ] || [ "${prerelease:=false}" = true ]; then
     ./patch.sh
 else
   if [ "${CI:=false}" = true ]; then
@@ -41,6 +41,8 @@ else
     echo Hours taken:
     read -r hours
   fi
+
+  export release_tag=${version}
 
   ./deploy.sh "${version}" "${highlights}"
   ./announce.sh "${version}" "${highlights}" "${hours}"

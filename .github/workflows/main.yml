@@ -69,22 +69,10 @@ jobs:
       if: ${{ steps.check-tag.outputs.release != 'true' }}
       env:
         prerelease: true
+        GH_TOKEN: ${{secrets.REPO_TOKEN}}
     - name: Build mastercomfig (release)
       run: dev/release.sh
       if: ${{ steps.check-tag.outputs.release == 'true' }}
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        GH_USERNAME: ${{ secrets.GH_USERNAME }}
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        GH_REPO: mastercomfig/mastercomfig
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v2
-      if: ${{ steps.check-tag.outputs.release != 'true' }}
-      with:
-        name: mastercomfig
-        if-no-files-found: error
-        path: |
-          dev/prerelease/presets
-          dev/prerelease/addons
-          dev/prerelease/comfig
-          dev/prerelease/template
+        GH_TOKEN: ${{secrets.REPO_TOKEN}}
