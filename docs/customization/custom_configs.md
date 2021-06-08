@@ -50,7 +50,7 @@ So, for example, if you are using a lower lighting module, and do not want block
 
 Or, if you are using a lower water module, but do not want to use cheap water, you can add `alias cheap_water_override cheap_water_never`.
 
-## Network aliases
+## Network Aliases
 
 These aliases are used by mastercomfig to apply network settings per class.
 
@@ -64,7 +64,7 @@ You can also re-alias them to use your own network settings.
 
 ## Changing your preset
 
-mastercomfig now supports selecting a preset after download. Add a file to your `user` folder called `pre_comfig.cfg`. In this file, put your desired preset as `preset=preset-name`. Preset names are:
+mastercomfig supports selecting a preset after download. Add a file to your `user` folder called `pre_comfig.cfg`. In this file, put your desired preset as `preset=preset-name`. Preset names are:
 
 * ultra
 * high
