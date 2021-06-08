@@ -62,7 +62,7 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 
 Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives. Also known as linear interpolation (lerp or interp).
 
-Default setting: **`snapshot_buffer=auto`** (all presets).
+Default setting: **`snapshot_buffer=low`** (all presets).
 
 * **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.

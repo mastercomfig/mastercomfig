@@ -7,7 +7,7 @@
     "very-low": "congestion"
   },
   "snapshot_buffer": {
-    "default": "auto"
+    "default": "low"
   },
   "packet_size": {
     "default": "speed"
