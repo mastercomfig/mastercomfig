@@ -15,9 +15,7 @@ touch "${addons_setup_cfg_path}" "${addons_cfg_path}"
 declare -A addon_alias_map
 addon_alias_map[flat-mouse]="flat-mouse"
 addon_alias_map[lowmem]="lowmem"
-addon_alias_map[no-tutorial]="no-tutorial"
 addon_alias_map[null-cancelling-movement]="null-movement"
-addon_alias_map[transparent-viewmodels]="transparent-vm"
 
 for F in ../../config/cfg/addons/*; do
     if [ -f "${F}" ]; then
