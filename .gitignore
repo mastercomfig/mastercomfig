@@ -10,6 +10,7 @@ mastercomfig-vars
 /dev/**/*.cfg
 addons_setup.cfg
 addons.cfg
+dev/template.md
 
 # node
 node_modules/
