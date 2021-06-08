@@ -8,8 +8,8 @@ description: Security policy of mastercomfig.
 
 | Version   | Supported          |
 | --------- | ------------------ |
-| 9.3.x     | :white_check_mark: |
-| < 9.3.x   | :x:                |
+| 9.4.x     | :white_check_mark: |
+| < 9.4.x   | :x:                |
 
 ## Reporting a Vulnerability
 
