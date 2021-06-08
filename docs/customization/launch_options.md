@@ -22,8 +22,8 @@ Read below about optional launch options and choosing your own DXLevel.
     !!! info
         These launch options should be added to first launch, and then removed.
 
-    **-dxlevel 80** : DirectX 8, Pixel Shader 1.1. Uses outdated rendering methods which do not take full advantage of hardware.
-    **-dxlevel 100** : DirectX 9, Pixel Shader 2.0b. Uses hardware to determine graphics capabilities. (recommended)
+     * **-dxlevel 80** : DirectX 8, Pixel Shader 1.1. Uses outdated rendering methods which do not take full advantage of hardware.
+     * **-dxlevel 100** : DirectX 9, Pixel Shader 2.0b. Uses hardware to determine graphics capabilities. (recommended)
 
 === "macOS"
 
