@@ -76,4 +76,6 @@ If you are not able to support her through the above methods, that's fine too! Y
 Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress
 logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.
 
-mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.
+GMOD is owned by Facepunch
+
+mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation nor Facepunch.
