@@ -32,9 +32,9 @@ For more information, including installation steps, check out [the docs](https:/
 
 You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
-You have my endless gratitude if you support me with money or gift items, and this support encourages me so much!
+You have her endless gratitude if you support her with money or gift items, and this support encourages her so much!
 
-If you are not able to support me through the above methods, that's fine too! Your thank yous are always cherished and mean so much to me.
+If you are not able to support her through the above methods, that's fine too! Your thank yous are always cherished and mean so much to her.
 
 ## Credits
 
