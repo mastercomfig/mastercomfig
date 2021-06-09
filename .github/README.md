@@ -1,6 +1,4 @@
-[![Build Status](https://img.shields.io/github/workflow/status/mastercomfig/mastercomfig/CI?style=flat-square&logo=mastercomfig)](https://github.com/mastercomfig/mastercomfig/actions?query=workflow%3ACI)
 [![Docs](https://readthedocs.org/projects/mastercomfig/badge/?version=latest&style=flat-square)](https://docs.mastercomfig.com/)
-[![Downloads](https://img.shields.io/github/downloads/mastercomfig/mastercomfig/latest/total.svg?style=flat-square&logo=mastercomfig)](https://mastercomfig.com/app)
 [![Ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B.svg?logo=ko-fi&style=flat-square)](https://ko-fi.com/mastercoms)
 [![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay&style=flat-square)](https://liberapay.com/mastercoms/)
 [![Steam donate](https://img.shields.io/badge/Donate%20via-Steam-00adee.svg?style=flat-square&logo=steam)](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N)
@@ -11,18 +9,14 @@
 
 # mastercomfig
 
-Welcome to [mastercomfig](https://mastercomfig.com/), a modern Team Fortress 2 performance and customization config.
+Welcome to [mastercomfig](https://mastercomfig.com/)-gmod, a modern GMOD performance and customization config, forked from https://github.com/mastercomfig/mastercomfig.
 
 This config is by default for modern PCs and aims to disable heavily unoptimized
 features and adjust other settings where it does not affect behavior or visuals
 noticeably. However, the config is documented extensively and also has presets
 so that you may adjust settings to your needs/preferences.
 
-You may find that this config makes TF2 a lot smoother, eliminates stuttering,
-reduces load times and increases FPS. This is because this config is heavily
-tuned and the commands and values are based on TF2's source code, rather than
-just experiments, guesswork and trying to understand the vague/non-existent
-documentation.
+This is a fork of the TF2 comfig with variables updated for GMOD values.
 
 The config is constantly updated with tweaks, new features and documentation
 improvements — iterated upon based on user feedback and benchmarks. So if you
@@ -34,7 +28,7 @@ future update.
 
 For more information, including installation steps, check out [the docs](https://docs.mastercomfig.com/page/).
 
-## Support me
+## Support her
 
 You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
@@ -74,6 +68,8 @@ If you are not able to support me through the above methods, that's fine too! Yo
 
 * and to Valve, for making and updating (for over a decade!) the best class-based FPS to date with so
   much customization on top
+  
+* Mastercoms
 
 ## Legal
 
