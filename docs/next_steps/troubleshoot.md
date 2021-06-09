@@ -82,7 +82,7 @@ More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.2
 
 ## Why don't my killstreak sheens show?
 
-On the Very Low preset, killstreak sheens are disabled by default. To enable killstreak sheens use the module `sheens_speed=slow`.
+On the Very Low preset, killstreak sheens are disabled by default. To enable killstreak sheens, use the module `sheens_speed=slow`.
 
 ## Grappling hook is invisible (in Mannpower and custom servers)
 
