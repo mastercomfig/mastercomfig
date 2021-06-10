@@ -66,6 +66,7 @@ You can also re-alias them to use your own network settings.
 
 mastercomfig supports selecting a preset after download. Add a file to your `user` folder called `pre_comfig.cfg`. In this file, put your desired preset as `preset=preset-name`. Preset names are:
 
+* none
 * ultra
 * high
 * medium-high
