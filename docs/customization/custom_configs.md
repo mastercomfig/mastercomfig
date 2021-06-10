@@ -74,6 +74,8 @@ mastercomfig supports selecting a preset after download. Add a file to your `use
 * low
 * very-low
 
+You can check the current selected preset by entering `preset_level` into console.
+
 ## Optional Aliases
 
 !!! warning

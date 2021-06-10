@@ -19,6 +19,18 @@ will set the texture quality to `high`.
 !!! note
     If you do not have `user` folder you should create it. Same principle applies to the `modules.cfg` file.
 
+## Check Module Level Selection
+
+You can check what module level you have selected for a module by entering `module_level` into console. For example, `textures_level` will output:
+
+```c
+textures=high
+```
+
+or similar.
+
+You can also view selected levels for all modules by entering `module_levels` into console.
+
 ### Advanced
 
 !!! warning
@@ -358,9 +370,9 @@ Control physics simulation and fading for bodies that spawn on death.
 Default setting: based on which preset you are currently using.
 
 * **`ragdolls=off`**: Disables ragdolls.
-* **`ragdolls=low`**: Enables physics ragdolls with an instant fade out time.
+* **`ragdolls=low`**: Enables ragdolls with a quick fade out time.
 * **`ragdolls=medium`**: Enables standard physics ragdolls.
-* **`ragdolls=high`**: Enables physics ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
+* **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
 
 ### 3D Sky
 
