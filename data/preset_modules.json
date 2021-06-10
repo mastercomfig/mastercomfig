@@ -25,6 +25,7 @@
     "ultra": "ultra"
   },
   "lighting": {
+    "default": "medium_high",
     "very-low": "very_low",
     "low": "low",
     "medium-low": "medium",
@@ -54,6 +55,7 @@
     "ultra": "ultra"
   },
   "water": {
+    "default": "high",
     "very-low": "very_low",
     "low": "low",
     "medium-low": "medium",

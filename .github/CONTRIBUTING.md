@@ -115,6 +115,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 
 ##### Presets
 
+* `none`: Special preset which skips setting quality options
 * `ultra`: Absolute maximum quality, with even the slightest and most performance-intensive quality improvements included
 * `high`: Enables all graphical features without making them extremely high quality
 * `medium-high`: Disables unoptimized features and optimize the game without making it look bad
