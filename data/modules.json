@@ -318,10 +318,12 @@
         "type": "slider",
         "values": [
           {
-            "value": "bilinear"
+            "value": "bilinear",
+            "display": "Bilinear filtering"
           },
           {
-            "value": "trilinear"
+            "value": "trilinear",
+            "display": "Trilinear filtering"
           },
           {
             "value": "aniso2x",
