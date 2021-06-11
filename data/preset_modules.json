@@ -22,7 +22,8 @@
     "default": "low",
     "medium-high": "high",
     "high": "high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "lighting": {
     "default": "medium_high",
@@ -32,27 +33,31 @@
     "medium": "medium_high",
     "medium-high": "medium_high",
     "high": "very_high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "lighting_ex": {
     "default": "high",
     "very-low": "low",
     "low": "low",
-    "medium-low": "low"
+    "medium-low": "low",
+    "none": ""
   },
   "shadows": {
     "default": "off",
     "medium": "medium",
     "medium-high": "medium",
     "high": "high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "effects": {
     "default": "low",
     "medium": "medium",
     "medium-high": "medium",
     "high": "high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "water": {
     "default": "high",
@@ -62,36 +67,42 @@
     "medium": "medium",
     "medium-high": "high",
     "high": "very_high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "particles": {
     "default": "low",
     "very-low": "very_low",
     "medium-high": "medium",
     "high": "high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "post_processing": {
     "default": "off",
     "medium": "low",
     "medium-high": "high",
     "high": "high",
-    "ultra": "high"
+    "ultra": "high",
+    "none": ""
   },
   "pyrovision": {
     "default": "low",
     "medium-high": "medium",
     "high": "high",
-    "ultra": "high"
+    "ultra": "high",
+    "none": ""
   },
   "motion_blur": {
-    "default": "off"
+    "default": "off",
+    "none": ""
   },
   "anti_aliasing": {
     "default": "off",
     "medium-high": "msaa_4x",
     "high": "msaa_8x",
-    "ultra": "msaa_8x"
+    "ultra": "msaa_8x",
+    "none": ""
   },
   "texture_filter": {
     "default": "trilinear",
@@ -99,7 +110,8 @@
     "low": "bilinear",
     "medium-high": "aniso4x",
     "high": "aniso8x",
-    "ultra": "aniso16x"
+    "ultra": "aniso16x",
+    "none": ""
   },
   "characters": {
     "default": "low",
@@ -107,31 +119,36 @@
     "low": "very_low",
     "medium-high": "high",
     "high": "high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "decals": {
     "default": "off",
     "medium": "low",
     "medium-high": "low",
     "high": "medium",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "decals_models": {
     "default": "off",
     "high": "low",
-    "ultra": "high"
+    "ultra": "high",
+    "none": ""
   },
   "decals_art": {
     "default": "on",
     "very-low": "off",
     "low": "off",
-    "medium-low": "off"
+    "medium-low": "off",
+    "none": ""
   },
   "sprays": {
     "default": "off",
     "medium-high": "on",
     "high": "on",
-    "ultra": "on"
+    "ultra": "on",
+    "none": ""
   },
   "sillygibs": {
     "default": "auto"
@@ -140,30 +157,35 @@
     "default": "off",
     "medium-high": "low",
     "high": "medium",
-    "ultra": "high"
+    "ultra": "high",
+    "none": ""
   },
   "props": {
     "default": "medium",
     "very-low": "low",
     "high": "high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "ragdolls": {
     "default": "off",
     "medium-high": "medium",
     "high": "high",
-    "ultra": "high"
+    "ultra": "high",
+    "none": ""
   },
   "3dsky": {
     "default": "off",
     "high": "on",
-    "ultra": "on"
+    "ultra": "on",
+    "none": ""
   },
   "jigglebones": {
     "default": "off",
     "medium-high": "on",
     "high": "on",
-    "ultra": "force_on"
+    "ultra": "force_on",
+    "none": ""
   },
   "sheens_speed": {
     "default": "slow",
@@ -178,13 +200,15 @@
     "medium": "medium",
     "medium-high": "high",
     "high": "very_high",
-    "ultra": "very_high"
+    "ultra": "very_high",
+    "none": ""
   },
   "ropes": {
     "default": "off",
     "medium-high": "low",
     "high": "high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "fpscap": {
     "default": "1000"
@@ -195,7 +219,8 @@
   "hud_player_model": {
     "default": "off",
     "high": "on",
-    "ultra": "on"
+    "ultra": "on",
+    "none": ""
   },
   "hud_panels": {
     "default": "on",
@@ -231,7 +256,8 @@
     "very-low": "off",
     "low": "off",
     "high": "high",
-    "ultra": "high"
+    "ultra": "high",
+    "none": ""
   },
   "dynamic_background": {
     "default": "off"
@@ -241,7 +267,8 @@
     "medium": "medium",
     "medium-high": "high",
     "high": "very_high",
-    "ultra": "ultra"
+    "ultra": "ultra",
+    "none": ""
   },
   "voice_chat": {
     "default": "on",
