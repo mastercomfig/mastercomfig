@@ -270,10 +270,10 @@ Default setting: based on which preset you are currently using.
 
 * **`texture_filter=bilinear`**: Bilinear filtering
 * **`texture_filter=trilinear`**: Trilinear filtering
-* **`texture_filter=aniso2x`**: Anisotropic filtering 2x
-* **`texture_filter=aniso4x`**: Anisotropic filtering 4x
-* **`texture_filter=aniso8x`**: Anisotropic filtering 8x
-* **`texture_filter=aniso16x`**: Anisotropic filtering 16x
+* **`texture_filter=aniso_2x`**: Anisotropic filtering 2x
+* **`texture_filter=aniso_4x`**: Anisotropic filtering 4x
+* **`texture_filter=aniso_8x`**: Anisotropic filtering 8x
+* **`texture_filter=aniso_16x`**: Anisotropic filtering 16x
 
 ### Characters
 
