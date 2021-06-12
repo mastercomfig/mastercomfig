@@ -49,6 +49,10 @@ You can re-enable the lightmap filtering and get smooth shadows by adding `alias
 
 View [Game Overrides](../../customization/custom_configs/#game-overrides) for more information.
 
+## Ragdolls aren't instantly disappearing
+
+In 9.5.0, there was a bug fix to `ragdolls=off`, to avoid the issue where ragdolls would still be present on the map and accumulate over time, causing performance issues. The cost of this was compared to the very short physics initialization and simulation, and it was determined that it would be better to avoid a leak from ragdolls never getting deleted by enabling physics on ragdolls. You can get the old behavior by using `cl_ragdoll_physics_enable 0` in `autoexec.cfg`, at the cost of this increased overhead, if you prefer the visuals.
+
 ## My chat is disabled
 
 [A TF2 update](https://www.teamfortress.com/post.php?id=62459) introduced the ability to completely disable text chat. mastercomfig was updated shortly after to accommodate this change, with the Very Low preset disabling chat completely. If you are using Very Low preset or the `messages=off` module, you can re-enable chat by adding `messages=on` to your `modules.cfg` file. To disable chat the old way you can use the `messages=hide` module.
