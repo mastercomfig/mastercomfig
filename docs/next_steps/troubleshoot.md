@@ -51,7 +51,7 @@ View [Game Overrides](../../customization/custom_configs/#game-overrides) for mo
 
 ## Ragdolls aren't instantly disappearing
 
-In 9.5.0, there was a bug fix to `ragdolls=off`, to avoid the issue where ragdolls would still be present on the map and accumulate over time, causing performance issues. The cost of this was compared to the very short physics initialization and simulation, and it was determined that it would be better to avoid a leak from ragdolls never getting deleted by enabling physics on ragdolls. You can get the old behavior by using `cl_ragdoll_physics_enable 0` in `autoexec.cfg`, at the cost of this increased overhead, if you prefer the visuals.
+There was a bug fix to `ragdolls=off`, to avoid the issue where ragdolls would still be present on the map and accumulate over time, causing performance issues. The cost of this was compared to the very short physics initialization and simulation, and it was determined that it would be better to avoid a leak from ragdolls never getting deleted by enabling physics on ragdolls. You can get the old behavior by using `ragdolls=hidden` in `modules.cfg`, at the cost of this increased overhead, if you prefer the visuals.
 
 ## My chat is disabled
 
