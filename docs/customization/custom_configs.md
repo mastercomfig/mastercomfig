@@ -115,7 +115,7 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 ### General
 
 * `debug_output`: Turn on developer only output. Shows various warnings about potential issues, and outputs console to the corner of the screen.
-* `debug_output_toggle`: Cycle through all 4 modes for developer only ouput. Different modes display different amounts of information.
+* `debug_output_toggle`: Cycle through all 4 modes for developer only output. Different modes display different amounts of information.
 * `debug_output_1`: Enable developer only output level 1
 * `debug_output_2`: Enable developer only output level 2
 * `debug_output_3`: Enable developer only output level 3
