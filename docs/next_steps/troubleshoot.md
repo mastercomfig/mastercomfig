@@ -39,13 +39,14 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 ## Black artifacts all over the screen on Linux
 
-This is a bug with later versions of Mesa. You can fix it by setting the following in `autoexec.cfg`:
+This is a bug with later versions of Mesa. You can fix it by setting the following in your `modules.cfg`:
 
 ```c
-mat_phong 1
-mat_specular 1
-mat_bumpmap 1
+lighting=medium
+lighting_ex=high
 ```
+
+You can use any value higher than `lighting=medium` if you prefer, but not lower.
 
 ## Lighting/shadows are blocky
 
@@ -85,12 +86,12 @@ Optionally, you may delete any `autoexec.cfg` files created automatically in TF2
 
 ## TF2 crashing on a custom map
 
-If TF2 is crashing to desktop after a custom map loading or after picking a class on a custom map, add `mat_phong 1` to your `autoexec.cfg`.
+If TF2 is crashing to desktop after a custom map loading or after picking a class on a custom map, add `lighting_ex=high` to your `modules.cfg`.
 
 The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. No Valve map uses lightmapped props, excluding `rd_asteroid`.  
 More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
 
-## Item panels are taking too long to load
+## Item panels aren't loading
 
 Add `tf_time_loading_item_panels .0005` to `autoexec.cfg`.
 
