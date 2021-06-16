@@ -56,7 +56,7 @@ This is a file that must be supplied by the user with the following entries:
 
 ```bash
 #!/bin/sh
-export DISCORD_WEBHOOK="Discord webhook for config announcements"
+export DISCORD_WEBHOOK="Discord webhook for release notifications"
 export TF2_DIR="absolute path to Team Fortress 2 directory"
 ```
 

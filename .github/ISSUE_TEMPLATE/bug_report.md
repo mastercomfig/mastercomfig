@@ -17,8 +17,8 @@ Tell us the steps on how to recreate the bug.
 If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
-* Config version<!-- don't say latest, say the actual version, found by running `version_comfig` in console -->:
-* Config preset and addon(s):
+* mastercomfig version<!-- don't say latest, say the actual version, found by running `version_comfig` in console -->:
+* Preset and addon(s):
 * Custom values (if any):
 * DX level:
 * Launch options:
