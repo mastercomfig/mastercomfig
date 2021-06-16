@@ -11,24 +11,13 @@
 
 # mastercomfig
 
-Welcome to [mastercomfig](https://mastercomfig.com/), a modern Team Fortress 2 performance and customization config.
+Welcome to [mastercomfig](https://mastercomfig.com/), a modern customization framework.
 
-This config is by default for modern PCs and aims to disable heavily unoptimized
-features and adjust other settings where it does not affect behavior or visuals
-noticeably. However, the config is documented extensively and also has presets
-so that you may adjust settings to your needs/preferences.
+mastercomfig is a modern customization framework, and aims to disable heavily unoptimized features and adjust other settings where it does not affect behavior or visuals noticeably. mastercomfig is documented extensively and also has advanced customization features so that you may adjust settings to your needs/preferences.
 
-You may find that this config makes TF2 a lot smoother, eliminates stuttering,
-reduces load times and increases FPS. This is because this config is heavily
-tuned and the commands and values are based on TF2's source code, rather than
-just experiments, guesswork and trying to understand the vague/non-existent
-documentation.
+You may find that mastercomfig makes TF2 a lot smoother, eliminates stuttering, reduces load times and increases FPS. This is because mastercomfig is heavily tuned and the commands and values are based on TF2's source code, rather than just experiments, guesswork and trying to understand the vague/non-existent documentation.
 
-The config is constantly updated with tweaks, new features and documentation
-improvements — iterated upon based on user feedback and benchmarks. So if you
-think there's an unoptimal value, or if it's just as simple as a comment being
-confusing to you, report the problem and you'll most likely see a fix in a
-future update.
+mastercomfig is constantly updated with tweaks, new features and documentation improvements — iterated upon based on user feedback and benchmarks. So if you think there's an unoptimal value, or if it's just as simple as a comment being confusing to you, report the problem and you'll most likely see a fix in a future update.
 
 ## Docs
 
@@ -47,7 +36,7 @@ If you are not able to support me through the above methods, that's fine too! Yo
 * [Chris](https://chrisdown.name/tf2/) for starting it all
 
 * [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
-  continuing what Chris started and helping a bit with my config
+  continuing what Chris started and providing me with assistance
 
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
 
@@ -63,11 +52,11 @@ If you are not able to support me through the above methods, that's fine too! Yo
 
 * AveYo for [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
 
-* Tiagoquix for continued support and bug fixes to the config
+* Tiagoquix for continued support and bug fixes
 
 * jane for the shrinkKeyValues bash script
 
-* Fraklin for screenshots of the config
+* Fraklin for screenshots
 
 * The [Valve Developer Community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics

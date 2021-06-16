@@ -13,7 +13,7 @@ description: Security policy of mastercomfig.
 
 ## Reporting a Vulnerability
 
-If you find a security vulnerability in the download of the config, execution of the config,
+If you find a security vulnerability in the mastercomfig app, execution of mastercomfig,
 or something else, contact mastercoms through email directly: [mastercoms@tuta.io](mailto:mastercoms@tuta.io).
 
 If you have a solution for the issue, attach it as a patch file to the email.

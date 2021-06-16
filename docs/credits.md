@@ -7,7 +7,7 @@ description: All the help and inspiration that has helped mastercomfig be even b
 * [Chris](https://chrisdown.name/tf2/) for starting it all
 
 * [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
-  continuing what Chris started and helping a bit with my config
+  continuing what Chris started and providing me with assistance
 
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
 
@@ -23,11 +23,11 @@ description: All the help and inspiration that has helped mastercomfig be even b
 
 * AveYo for [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
 
-* Tiagoquix for continued support and bug fixes to the config
+* Tiagoquix for continued support and bug fixes
 
 * jane for the shrinkKeyValues bash script
 
-* Fraklin for screenshots of the config
+* Fraklin for screenshots
 
 * The [Valve Developer Community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of Source Engine console variables and mechanics
