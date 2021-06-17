@@ -12,7 +12,7 @@ We welcome contributions of any type or size, from anyone!
 
 We always welcome reporting issues, whether it be bug reports
 or feature requests, you can help guide the development of mastercomfig
-to suit your needs and improve the config for everyone!
+to suit your needs and improve mastercomfig for everyone!
 
 ## Contact the maintainer
 
@@ -20,7 +20,7 @@ mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
 [Reddit](https://www.reddit.com/user/mastercoms) or by email at
 [mastercoms@tuta.io](mailto:mastercoms@tuta.io). I'd be happy to chat about any problems or
-suggestions you have for the config.
+suggestions you have for mastercomfig.
 
 ## Docs
 
@@ -37,7 +37,7 @@ Want to contribute to the config itself? Start here!
 
 ### Getting started
 
-This config has a certain standard of quality for references and will not accept
+The config has a certain standard of quality for references and will not accept
 changes based on simple hearsay or assumptions.
 
 Every setting and change should be based on information
@@ -255,7 +255,7 @@ If you want to test the scripts that upload to GitHub and/or announce in Discord
 you should append following to your `mastercomfig-vars` file:
 
 ```bash
-export DISCORD_WEBHOOK="Discord webhook for config announcements"
+export DISCORD_WEBHOOK="Discord webhook for release notifications"
 ```
 
 These variables can also come from your system environment.

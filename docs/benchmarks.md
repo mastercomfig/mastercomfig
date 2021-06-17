@@ -21,7 +21,7 @@ Thus, it's highly appreciated to benchmark mastercomfig and any changes you make
 
 ## Benchmark data
 
-mastercomfig provides a service for recording benchmark data so that we can improve the config together based on data.
+mastercomfig provides a service for recording benchmark data so that we can improve it together based on data.
 
 [**Submission form**](https://airtable.com/shrckjh0jqeZdeIYN)
 
