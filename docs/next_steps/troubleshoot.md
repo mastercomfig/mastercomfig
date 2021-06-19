@@ -24,7 +24,7 @@ Make sure your TF2 configs (`autoexec.cfg`, `modules.cfg`, etc) are in the `cfg/
 
 Consider the following instructions from Valve to analyze your overheating issue:
 
-> Most Valve games have a built-in command for monitoring your CPU speed. If you add "+cpu_frequency_monitoring 2" to your launch options then the CPU's speed will be measured every two seconds. The measured frequency is compared to how fast Windows says that the CPU is running and this percentage is displayed in the `cl_showfps` and `net_graph` displays. Under normal circumstances this percentage should be 90% or higher. If the displayed CPU frequency percentage drops below about 80-85% then it suggests that your CPU may be overheating and being thermally throttled. If it drops below 50-55% then you may have a serious problem. If this percentage is above 100% this means that your CPU is overclocking itself (TurboCore or TurboBoost) and is running well. If these CPU slowdowns happen when your game is running slowly then it is reasonable to assume that they are the cause and that your CPU is overheating. CPU overheating can be caused by overclocking, insufficient cooling, insufficient airflow, failing or dirty fans, or other causes. Since this is a hardware problem (a properly designed PC should never overheat) the only solutions are hardware fixes, such as a better heat sink, better ventilation, etc.
+>Most Valve games have a built-in command for monitoring your CPU speed. If you add "+cpu_frequency_monitoring 2" to your launch options then the CPU's speed will be measured every two seconds. The measured frequency is compared to how fast Windows says that the CPU is running and this percentage is displayed in the `cl_showfps` and `net_graph` displays. Under normal circumstances this percentage should be 90% or higher. If the displayed CPU frequency percentage drops below about 80-85% then it suggests that your CPU may be overheating and being thermally throttled. If it drops below 50-55% then you may have a serious problem. If this percentage is above 100% this means that your CPU is overclocking itself (TurboCore or TurboBoost) and is running well. If these CPU slowdowns happen when your game is running slowly then it is reasonable to assume that they are the cause and that your CPU is overheating. CPU overheating can be caused by overclocking, insufficient cooling, insufficient airflow, failing or dirty fans, or other causes. Since this is a hardware problem (a properly designed PC should never overheat), the only solutions are hardware fixes, such as a better heat sink, better ventilation, etc.
 
 ## Viewmodels are not visible
 
@@ -39,12 +39,11 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 ## Black artifacts all over the screen on Linux
 
-This is a bug with later versions of Mesa. You can fix it by setting the following in `autoexec.cfg`:
+This is a bug with later versions of Mesa. You can fix it by adding `lighting_ex=high` to your `modules.cfg` and setting the following in your `autoexec.cfg`:
 
 ```c
-mat_phong 1
-mat_specular 1
 mat_bumpmap 1
+mat_specular 1
 ```
 
 ## Lighting/shadows are blocky
@@ -85,7 +84,7 @@ Optionally, you may delete any `autoexec.cfg` files created automatically in TF2
 
 ## TF2 crashing on a custom map
 
-If TF2 is crashing to desktop after a custom map loading or after picking a class on a custom map, add `mat_phong 1` to your `autoexec.cfg`.
+If TF2 is crashing to desktop after a custom map loading or after picking a class on a custom map, add `lighting_ex=high` to your `modules.cfg`.
 
 The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. No Valve map uses lightmapped props, excluding `rd_asteroid`.  
 More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
