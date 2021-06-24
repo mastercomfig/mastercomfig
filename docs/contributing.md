@@ -194,10 +194,10 @@ Some ConVars cannot be set in-game, even with DX support definitions. Thus, some
 [custom packaging overrides](https://github.com/mastercomfig/mastercomfig/blob/release/dev/presets/package.sh#L52)
 to set the value in DX support.
 
-### Making your pull request
+### Creating your pull request
 
 Yay! You made your changes and now it's time to send it off to be included in
-the config. [Make a new pull request](https://github.com/mastercomfig/mastercomfig/compare)
+the config. [Create a new pull request](https://github.com/mastercomfig/mastercomfig/compare)
 and name it something nice and descriptive! In your post, include an explanation
 of the changes, why you made those changes, along with any other information you
 find important.

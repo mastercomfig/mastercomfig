@@ -15,7 +15,7 @@ or something else, contact mastercoms through email directly: [mastercoms@tuta.i
 If you have a solution for the issue, attach it as a patch file to the email.
 
 You can expect a reply within 24 hours of your report with the next steps of action
-regarding the vulnerability. This may include a request to submit a pull request to
+regarding the vulnerability. This may include a request to create a pull request to
 resolve the vulnerability if applicable.
 
 You must not disclose the vulnerability publicly unless you have not received a response after 1 month.
