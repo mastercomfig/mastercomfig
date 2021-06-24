@@ -22,7 +22,7 @@ You can expect a reply within 24 hours of your report with the next steps of act
 regarding the vulnerability. This may include a request to submit a pull request to
 resolve the vulnerability if applicable.
 
-You should not disclose the vulnerability publicly unless you have not received a response after 1 month.
+You must not disclose the vulnerability publicly unless you have not received a response after 1 month.
 
 If the vulnerability is declined, you may post it publicly after 48 hours of its declination, unless the
 declination is retracted within that time period.

@@ -23,7 +23,7 @@ Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are
 
 Source is known to be worse with fullscreen optimizations on some systems and thus you should disable it if you encounter problems.
 
-Open your game folder through Steam. Then, right click on `hl2.exe`, click Properties, go to the Compatibility tab, and then check the box that says `Disable Fullscreen Optimizations`.
+Open your game folder through Steam. Then, right click on `hl2.exe`, click Properties, go to the Compatibility tab, and then select the box that says `Disable Fullscreen Optimizations`.
 
 You can find more information on the [DirectX Developer Blog](https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/) and in [this Reddit thread](https://old.reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub/?context=3).
 

@@ -1,5 +1,5 @@
 ---
-description: Some less useful launch options, just documented here because why not?
+description: Some less useful launch options documented here because why not?
 ...
 
 # Silly Launch Options

@@ -15,15 +15,15 @@ Welcome to [mastercomfig](https://mastercomfig.com/), a modern customization fra
 
 mastercomfig is a modern customization framework, and aims to disable heavily unoptimized features and adjust other settings where it does not affect behavior or visuals noticeably. mastercomfig is documented extensively and also has advanced customization features so that you may adjust settings to your needs/preferences.
 
-You may find that mastercomfig makes TF2 a lot smoother, eliminates stuttering, reduces load times and increases FPS. This is because mastercomfig is heavily tuned and the commands and values are based on TF2's source code, rather than just experiments, guesswork and trying to understand the vague/non-existent documentation.
+You may find that mastercomfig makes TF2 a lot smoother, eliminates stuttering, reduces load times and increases FPS. This is because mastercomfig is heavily tuned and the commands and values are based on TF2's source code, rather than experiments, guesswork and trying to understand the vague/non-existent documentation.
 
-mastercomfig is constantly updated with tweaks, new features and documentation improvements — iterated upon based on user feedback and benchmarks. So if you think there's an unoptimal value, or if it's just as simple as a comment being confusing to you, report the problem and you'll most likely see a fix in a future update.
+mastercomfig is constantly updated with tweaks, new features and documentation improvements — iterated upon based on user feedback and benchmarks. So if you think there's an unoptimal value, or if it's as simple as a comment being confusing to you, report the problem and you'll most likely see a fix in a future update.
 
 ## Support me
 
 You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
-<!-- You can use Ko-fi to get [a config commission](https://ko-fi.com/mastercoms/commissions), where I personally tune a config just for your preferences and PC setup. I can also do this via a trade for 3 keys. There is also an addon where I can do advanced scripting at your request (6 keys if paying via trade). -->
+<!-- You can use Ko-fi to get [a config commission](https://ko-fi.com/mastercoms/commissions), where I personally tune a config exactly to your preferences and PC setup. I can also do this with a trade for 3 keys. There is also an addon where I can do advanced scripting at your request (6 keys if paying with a trade). -->
 
 <!-- Finally, you can buy early access to the config for a month through [Ko-fi](https://ko-fi.com/mastercoms/shop). This will give you access to more frequent updates released throughout the month, rather than the monthly stable releases of the config. -->
 

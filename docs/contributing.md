@@ -40,7 +40,7 @@ Want to contribute to the config itself? Start here!
 The config has a certain standard of quality for references and will not accept
 changes based on simple hearsay or assumptions.
 
-Every setting and change should be based on information
+Every setting and change must be based on information
 found in Team Fortress 2 [blog posts/patch notes](https://www.teamfortress.com/),
 the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/SDK_Docs),
 the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013),
@@ -59,7 +59,7 @@ implement that feature so that there isn't any duplicated work going on.
 
 First things first: use spaces (no tabs) and CRLF line endings for configs, and
 continue the Valve convention in the other file overrides. Ensure no trailing
-space at the end of lines. Max line length should be 100.
+space at the end of lines.
 
 #### Launch options
 
@@ -78,7 +78,7 @@ There are currently 4 categories for launch options:
 * `Experimental`: These are launch options that are being tested to be moved elsewhere as their effects are not clear
 
 Put your launch option in the appropriate section and if it's in the
-`Recommended` section, add it to the launch options line for easy copying.
+`Recommended` section, add it to the launch options line for copying.
 
 Here's lists of launch options to help you out:
 
@@ -100,7 +100,7 @@ convar 0 // What the command does and a bit about what this default
 //convar 1 // What this alternative does
 ```
 
-As you can see, default ConVar values should be at the beginning, with
+As you can see, default ConVar values are at the beginning, with
 alternatives coming after. Unlike the launch options, use sentence case. Avoid
 punctuation unless using multiple sentences.
 
@@ -158,7 +158,7 @@ and to `config/templates/modules/modules.cfg`.
 The `texture_preload_list.txt` file is designed to tell Team Fortress 2 which
 textures to load on startup.
 Strip all nonexistent textures from the default one if there is a major
-TF2 update, and then add your changes. Preloaded textures should be common
+TF2 update, and then add your changes. Preloaded textures must be common
 enough to warrant the extra startup time and memory usage.
 
 #### Client precache
@@ -197,14 +197,14 @@ to set the value in DX support.
 ### Making your pull request
 
 Yay! You made your changes and now it's time to send it off to be included in
-the config. Just [make a new pull request](https://github.com/mastercomfig/mastercomfig/compare)
+the config. [Make a new pull request](https://github.com/mastercomfig/mastercomfig/compare)
 and name it something nice and descriptive! In your post, include an explanation
 of the changes, why you made those changes, along with any other information you
 find important.
 
 ### Testing Config Changes
 
-There are several steps you should take before making or accepting changes to
+There are several steps it is recommended you take before making or accepting changes to
 the config. You can use Fraps or MSI Afterburner to get an FPS measurement of
 matches.
 
@@ -230,13 +230,13 @@ presets and addons. Use the `package.sh` script in the `dev/` folder. You can
 learn more about the dev scripts in
 [dev/README.md](https://github.com/mastercomfig/mastercomfig/blob/release/dev/README.md).
 
-In order to successfully package presets and addons you need:
+To successfully package presets and addons you need:
 
 * Installed TF2 and Steam with all dependencies
 * bash and basic UNIX tools
 * [VPK](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
 * [gh](https://cli.github.com/)
-  * You must authenticate beforehand, e.g. using [gh auth login](https://cli.github.com/manual/gh_auth_login), or the `GH_TOKEN` env var
+  * You must authenticate beforehand, for example using [gh auth login](https://cli.github.com/manual/gh_auth_login), or the `GH_TOKEN` env var
 * GNU parallel (optional)
 
 Additionally, to generate No Tutorial addon, you will need to create a new file
@@ -252,7 +252,7 @@ This variable can also come from your system environment.
 ## Release and announce scripts
 
 If you want to test the scripts that upload to GitHub and/or announce in Discord,
-you should append following to your `mastercomfig-vars` file:
+append following to your `mastercomfig-vars` file:
 
 ```bash
 export DISCORD_WEBHOOK="Discord webhook for release notifications"
@@ -262,5 +262,5 @@ These variables can also come from your system environment.
 
 ## Code of Conduct
 
-As a member of the mastercomfig community, in order to foster a more welcoming environment,
+As a member of the mastercomfig community, to foster a more welcoming environment,
 you must abide by the [Code of Conduct](https://github.com/mastercomfig/mastercomfig/blob/release/.github/CODE_OF_CONDUCT.md).

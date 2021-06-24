@@ -10,7 +10,7 @@ Some people often get initially frustrated about mastercomfig, since it doesn't 
 
 Generally, think of mastercomfig in "layers" rather than things you need to edit directly. You edit things by overriding things in your user "layer". Your user layer consists of a user modules layer, autoexec layer, game overrides layer, and class config layer. Modules override mastercomfig/preset modules layer. Autoexec layer overrides mastercomfig/addons layer. Game overrides layer overrides mastercomfig game overrides (run on game join/every time you change class), and per-class networking settings, for all classes. Class config layer overrides mastercomfig game overrides (class configs run after game overrides) and per-class networking settings, for a single class.
 
-This layered approach means that the config's settings are more managed (i.e. most things are done for you, with you just changing a few things based on your own preference, so that settings don't conflict for best possible stability and performance), and contained (you can easily drop in a new version of mastercomfig, and your layers will remain in your user folder, so you don't have to re-edit anything whenever you change a version). See the next few questions for more details.
+This layered approach means that the config's settings are more managed (that is most things are done for you, with you changing a few things based on your own preference, so that settings don't conflict for best possible stability and performance), and contained (you can easily drop in a new version of mastercomfig, and your layers will remain in your user folder, so you don't have to re-edit anything whenever you change a version). See the next few questions for more details.
 
 With this approach, you'll find yourself reading documentation more rather than digging through config files, checking to see how you can do something or change a setting when you encounter something you'd like changed. However, the GitHub source is a good reference for some things. For example, you can see the many comments within the main [comfig.cfg](https://github.com/mastercomfig/mastercomfig/blob/release/config/mastercomfig/cfg/comfig/comfig.cfg) for information about settings within mastercomfig, as well as how to override individual things at a finer level than with modules. But be careful about compatibility conflicts between different console variables in this case! You can see what modules are used [in your preset](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets) so you only override modules that you need.
 
@@ -85,8 +85,8 @@ Class configs are also a reliable way to periodically run some commands during a
 
 **Instead, mastercomfig uses the class configs for:**
 
-* Class specific network setting aliases (`net_hitscan`, `net_projectiles`, `net_spy`) for easy customization
-* `user/game_overrides.cfg` script for easy global class settings
+* Class specific network setting aliases (`net_hitscan`, `net_projectiles`, `net_spy`) for customization
+* `user/game_overrides.cfg` script for global class settings
 * `game_overrides_once_c` alias for running a script only once per game session
 * Fixing [a networking issue](https://github.com/ValveSoftware/Source-1-Games/issues/2618) with bumper cars
 * Overriding map specific detail prop, water fade distances, and sound channel mode
@@ -104,4 +104,4 @@ Class configs are also a reliable way to periodically run some commands during a
 
 ## How can I get help with mastercomfig?
 
-Check the [troubleshooting guide](next_steps/troubleshoot.md) for more info.
+Check the [Quick Fixes guide](next_steps/troubleshoot.md) for more info.
