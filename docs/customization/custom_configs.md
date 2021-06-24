@@ -106,7 +106,7 @@ If you want to run something only the first time you spawn and never run again w
 To get an idea about what to put in your `user/autoexec.cfg` and select options,
 you can download the autoexec template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
 
-This config is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for easy customization.
+This config is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for granular customization.
 
 ## Debug Commands
 
@@ -114,7 +114,7 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 
 ### General
 
-* `debug_output`: Turn on developer only output (`debug_output_1`). Shows various warnings about potential issues, and outputs console to the corner of the screen.
+* `debug_output`: Enable developer only output (`debug_output_1`). Shows various warnings about potential issues, and outputs console to the corner of the screen.
 * `debug_output_toggle`: Cycle through all 4 modes (including disabled) for developer only output. Different modes display different amounts of information.
 * `debug_output_display`: Display console output in the corner of the screen without showing additional information.
 * `debug_output_1`: Enable developer only output level 1.

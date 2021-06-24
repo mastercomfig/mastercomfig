@@ -8,7 +8,7 @@ Modules are groups of related commands with specific values for a certain use ca
 
 ## How to use
 
-Modules are used in presets to set quality levels and can also be used in your very own `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. You can find out what module levels your preset uses by [viewing their respective cfg file](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets). To set a custom module level, just put it in `user/modules.cfg`. For example:
+Modules are used in presets to set quality levels and can also be used in your very own `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. You can find out what module levels your preset uses by [viewing their respective cfg file](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets). To set a custom module level, put it in `user/modules.cfg`. For example:
 
 ```c
 textures=high
@@ -17,7 +17,7 @@ textures=high
 will set the texture quality to `high`.
 
 !!! note
-    If you do not have `user` folder you should create it. Same principle applies to the `modules.cfg` file.
+    If you do not have `user` folder, create one. The same goes for the `modules.cfg` file.
 
 ## Check Module Level Selection
 
@@ -87,8 +87,8 @@ Controls how big packets are and how they are split up/compressed.
 
 Default setting: **`packet_size=speed`** (all presets).
 
-* **`packet_size=small`**: Uses the smallest packet size, which should be able to be processed by even the worst routers.
-* **`packet_size=conservative`**: Uses a smaller, safe packet size that should be able to be processed by most routers, even lower end ones.
+* **`packet_size=small`**: Uses the smallest packet size, that will most likely be processed by even the worst routers.
+* **`packet_size=conservative`**: Uses a smaller, safe packet size that will most likely be processed by most routers, even lower end ones.
 * **`packet_size=saver`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
 * **`packet_size=speed`**: This prioritizes less CPU usage over data usage by disabling packet compression and avoiding split packets.
 
@@ -97,7 +97,7 @@ Default setting: **`packet_size=speed`** (all presets).
 Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).
 
 !!! note
-    This does not increase data usage, just restricts how quickly data can be sent.
+    This does not increase data usage, only restricts how quickly data can be sent.
 
 Default setting: **`bandwidth=762Kbps`** (all presets).
 
@@ -456,7 +456,7 @@ Setting it higher can reduce input delay.
 !!! warning
 
     This module is only provided for general convenience and accessibility. The built-in FPS cap
-    in Team Fortress 2 has precision problems depending on your CPU (e.g. Intel Skylake platform and above)
+    in Team Fortress 2 has precision problems depending on your CPU (such as Intel Skylake platform and above)
     as well as accuracy problems on Windows due to usage of millisecond timers. It is recommended you use
     a more reliable FPS cap tool, like [Rivatuner](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)
     and set `fpscap=unlimited` to disable the in-game FPS cap.
@@ -506,8 +506,8 @@ Toggle health/player info panels.
 
 Default setting: **`hud_panels=on`** (all presets, except Very Low).
 
-* **`hud_panels=off`**: Disables health/player info panels on hover.
-* **`hud_panels=on`**: Enables health/player info panels on hover.
+* **`hud_panels=off`**: Disables health/player info panels that appear when looking at a player.
+* **`hud_panels=on`**: Enables health/player info panels that appear when looking at a player.
 
 ### Match HUD
 
@@ -657,7 +657,7 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 ### Movement Binds
 
 !!! warning
-    This module requires the Null-Cancelling Movement addon in order to function.
+    This module requires the Null-Cancelling Movement addon to work.
 
 Changes the keys that are used to move while the Null-Cancelling Movement addon is installed.
 If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:

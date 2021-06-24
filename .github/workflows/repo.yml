@@ -1,4 +1,4 @@
-name: Repo
+name: Merge release -> develop
 
 on:
   push:

@@ -10,7 +10,7 @@ description: A list of all mastercomfig features.
 * Extensive commenting for different options
 * Presets to easily fit your use case
 * Extra optional customization settings
-* Modular config system to allow for easy updating
+* Modular config system to allow for fast updating
 
 ## Rendering
 
