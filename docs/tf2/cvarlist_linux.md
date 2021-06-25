@@ -2627,7 +2627,9 @@ sv_vote_issue_restart_game_cooldown      : 300      : , "sv"           : Minimum
 sv_vote_issue_scramble_teams_allowed     : 1        : , "sv"           : Can players call votes to scramble the teams?
 sv_vote_issue_scramble_teams_cooldown    : 1200     : , "sv"           : Minimum time before another scramble vote can occur (in seconds).
 sv_vote_kick_ban_duration                : 20       : , "sv"           : The number of minutes a vote ban should last. (0 = Disabled)
-sv_vote_quorum_ratio                     : 0        : , "sv", "nf"     : The minimum ratio of eligible players needed to pass a vote.  Min 0.5, Max 1.0.
+sv_vote_late_join_cooldown               : 300      : , "sv"           : Length of the vote-creation cooldown when joining the server after the grace period has expired
+sv_vote_late_join_time                   : 90       : , "sv"           : Grace period after the match starts before players who join the match receive a vote-creation cooldown
+sv_vote_quorum_ratio                     : 0        : , "sv", "nf"     : The minimum ratio of eligible players needed to pass a vote.  Min 0.1, Max 1.0.
 sv_vote_ui_hide_disabled_issues          : 1        : , "sv"           : Suppress listing of disabled issues in the vote setup screen.
 sys_minidumpexpandedspew                 : 1        :                  :
 sys_minidumpspewlines                    : 500      :                  : Lines of crash dump console spew to keep.
@@ -2678,6 +2680,7 @@ tf_airblast_cray_reflect_cost_coeff      : 0        : , "sv", "cheat"  : What po
 tf_airblast_cray_reflect_relative        : 0        : , "sv", "cheat"  : If set, the relative, rather than absolute, target velocity is considered for reflection.
 tf_airblast_cray_stun_amount             : 0        : , "sv", "cheat"  : Amount of control loss to apply if stun_duration is set.
 tf_airblast_cray_stun_duration           : 0        : , "sv", "cheat"  : If set, apply this duration of stun when initially hit by an airblast.  Does not apply to repeated airblasts.
+tf_allow_player_name_change              : 1        : , "sv", "nf"     : Allow player name changes.
 tf_allow_player_use                      : 0        : , "sv", "nf"     : Allow players to execute +use while playing.
 tf_allow_server_hibernation              : 1        : , "sv"           : Allow the server to hibernate when empty.
 tf_allow_sliding_taunt                   : 0        : , "sv"           : 1 - Allow player to slide for a bit after taunting
@@ -3183,7 +3186,6 @@ tf_passtime_throwspeed_spy               : 900      : , "sv", "nf", "rep" :
 tf_passtime_throwspeed_velocity_scale    : 0        : , "sv", "nf", "rep" : How much player velocity to add when tossing (0=none 1=100%)
 tf_player_drop_bonus_ducks               : -1       : , "sv", "rep"    : -1 Default (Holiday-based) 0 - Force off 1 - Force on
 tf_player_movement_restart_freeze        : 1        : , "sv", "rep"    : When set, prevent player movement during round restart
-tf_player_name_change_time               : 60       : , "sv", "nf"     : Seconds between name changes.
 tf_player_spell_drop_on_death_rate       : 0        : , "sv", "rep"    :
 tf_playergib                             : 1        : , "sv", "nf"     : Allow player gibbing. 0: never, 1: normal, 2: always
 tf_playround                             : cmd      :                  : Play the selected round  Argument: {round name given by 'tf_listrounds' command}
@@ -3193,9 +3195,9 @@ tf_populator_debug                       : 0        : , "sv", "cheat"  :
 tf_populator_health_multiplier           : 1        : , "sv", "cheat", "rep", "norecord" :
 tf_powerup_max_charge_time               : 30       : , "sv", "cheat"  :
 tf_powerup_mode                          : 0        : , "sv", "nf"     : Enable/disable powerup mode. Not compatible with Mann Vs Machine mode
-tf_powerup_mode_dominant_multiplier      : 4        : , "sv", "cheat"  : The multiple by which a player must exceed the median kills by in order to be considered dominant
+tf_powerup_mode_dominant_multiplier      : 3        : , "sv", "cheat"  : The multiple by which a player must exceed the median kills by in order to be considered dominant
 tf_powerup_mode_imbalance_consecutive_min_players : 10       : , "sv", "cheat"  : Minimum number of players on the server before consecutive imbalance measures trigger team balancing
-tf_powerup_mode_imbalance_consecutive_time : 1500     : , "sv", "cheat"  : Teams are balanced if consecutive imbalance measures for the same team are triggered in less time (seconds)
+tf_powerup_mode_imbalance_consecutive_time : 1200     : , "sv", "cheat"  : Teams are balanced if consecutive imbalance measures for the same team are triggered in less time (seconds)
 tf_powerup_mode_imbalance_delta          : 24       : , "sv", "cheat"  : Powerup kill score lead one team must have before imbalance measures are initiated
 tf_powerup_mode_killcount_timer_length   : 300      : , "sv", "cheat"  : How long to wait between kill count tests that determine if a player is dominating
 tf_preround_push_from_damage_enable      : 0        : , "sv"           : If enabled, this will allow players using certain type of damage to move during pre-round freeze time.
@@ -3598,5 +3600,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3590 total convars/concommands
+3592 total convars/concommands
 ```
