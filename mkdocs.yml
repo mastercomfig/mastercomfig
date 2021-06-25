@@ -114,6 +114,7 @@ plugins:
       type: date
       fallback_to_build_date: true
 extra_javascript:
+  - js/widescreen.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tables.js
 extra:
