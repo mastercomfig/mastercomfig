@@ -44,6 +44,7 @@ Read below about optional launch options and choosing your own DXLevel.
 * **-particles 1** : limits beam count to the minimum of 512
 * **-precachefontchars** : precaches font rendering for common characters
 * **-noquicktime** : disables initializing Quicktime. If you use the replay rendering feature, do not use this
+
 ## Extra Launch Options
 
 === "Windows"
