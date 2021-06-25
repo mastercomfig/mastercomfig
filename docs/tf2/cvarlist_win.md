@@ -355,6 +355,7 @@ cl_drawshadowtexture                     : 0        : , "cheat", "cl"  :
 cl_dump_particle_stats                   : cmd      :                  : dump particle profiling info to particle_profile.csv
 cl_dynamiccrosshair                      : 1        : , "a", "cl"      :
 cl_ejectbrass                            : 1        :                  :
+cl_enable_text_chat                      : 1        : , "a", "cl"      : Enable text chat in this game
 cl_ent_absbox                            : cmd      :                  : Displays the client's absbox for the entity under the crosshair.
 cl_ent_bbox                              : cmd      :                  : Displays the client's bounding box for the entity under the crosshair.
 cl_ent_rbox                              : cmd      :                  : Displays the client's render box for the entity under the crosshair.
@@ -998,6 +999,7 @@ loadcommentary                           : cmd      :                  :
 loader_dump_table                        : cmd      :                  :
 loader_spew_info                         : 0        :                  : 0:Off, 1:Timing, 2:Completions, 3:Late Completions, 4:Purges, -1:All
 loader_spew_info_ex                      : 0        :                  : (internal)
+lockplayername                           : cmd      :                  : Prevent name changes for this userID.
 lod_TransitionDist                       : 800      : , "cl"           :
 log                                      : cmd      :                  : Enables logging to file, console, and udp < on | off >.
 log_verbose_enable                       : 0        : , "sv"           : Set to 1 to enable verbose server log on the server.
@@ -1597,6 +1599,7 @@ net_start                                : cmd      :                  : Inits m
 net_status                               : cmd      :                  : Shows current network status
 net_udp_rcvbuf                           : 131072   :                  : Default UDP receive buffer size
 net_usesocketsforloopback                : 0        :                  : Use network sockets layer even for listen server local player's packets (multiplayer only).
+net_warningthrottle                      : 5        :                  : Network warning throttling to specified Hz rate
 next                                     : 0        : , "cheat"        : Set to 1 to advance to next frame ( when singlestep == 1 )
 nextdemo                                 : cmd      :                  : Play next demo in sequence.
 nextlevel                                : 0        : , "sv", "nf"     : If set to a valid map name, will trigger a changelevel to the specified map at the end of the round
@@ -1815,7 +1818,7 @@ r_flashlightambient                      : 0        : , "cheat", "cl"  :
 r_flashlightclip                         : 0        : , "cheat"        :
 r_flashlightconstant                     : 0        : , "cheat", "cl"  :
 r_flashlightculldepth                    : 1        :                  :
-r_flashlightdepthres                     : 256      : , "cl"           :
+r_flashlightdepthres                     : 512      : , "cl"           :
 r_flashlightdepthtexture                 : 1        :                  :
 r_flashlightdrawclip                     : 0        : , "cheat"        :
 r_flashlightdrawdepth                    : 0        :                  :
@@ -2355,7 +2358,7 @@ snd_showstart                            : 0        : , "cheat"        :
 snd_ShowThreadFrameTime                  : 0        :                  :
 snd_soundmixer                           : 0        :                  :
 snd_spatialize_roundrobin                : 0        :                  : Lowend optimization: if nonzero, spatialize only a fraction of sound channels each frame. 1/2^x of channels will be spatialized per frame.
-snd_surround_speakers                    : 2        :                  :
+snd_surround_speakers                    : 7        :                  :
 snd_visualize                            : 0        : , "cheat"        : Show sounds location in world
 snd_vox_captiontrace                     : 0        :                  : Shows sentence name for sentences which are set not to show captions.
 snd_vox_globaltimeout                    : 300      :                  :
@@ -2423,6 +2426,10 @@ sv_bonus_map_challenge_update            : cmd      :                  : Updates
 sv_bonus_map_complete                    : cmd      :                  : Completes a bonus map.
 sv_bonus_map_unlock                      : cmd      :                  : Locks a bonus map.
 sv_cacheencodedents                      : 1        :                  : If set to 1, does an optimization to prevent extra SendTable_Encode calls.
+sv_chat_bucket_size_tier1                : 4        : , "sv"           : The maxmimum size of the short term chat msg bucket.
+sv_chat_bucket_size_tier2                : 30       : , "sv"           : The maxmimum size of the long term chat msg bucket.
+sv_chat_seconds_per_msg_tier1            : 3        : , "sv"           : The number of seconds to accrue an additional short term chat msg.
+sv_chat_seconds_per_msg_tier2            : 10       : , "sv"           : The number of seconds to accrue an additional long term chat msg.
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
 sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
 sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate and sv_maxcmdrate.
@@ -2547,7 +2554,7 @@ sv_teststepsimulation                    : 1        : , "sv"           :
 sv_thinktimecheck                        : 0        : , "sv"           : Check for thinktimes all on same timestamp.
 sv_timeout                               : 65       :                  : After this many seconds without a message from a client, the client is dropped
 sv_turbophysics                          : 0        : , "sv", "rep"    : Turns on turbo physics
-sv_unlockedchapters                      : 1        : , "a"            : Highest unlocked game chapter.
+sv_unlockedchapters                      : 99       : , "a"            : Highest unlocked game chapter.
 sv_usercmd_custom_random_seed            : 1        : , "sv", "cheat"  : When enabled server will populate an additional random seed independent of the client
 sv_vehicle_autoaim_scale                 : 8        : , "sv"           :
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
@@ -2585,7 +2592,9 @@ sv_vote_issue_restart_game_cooldown      : 300      : , "sv"           : Minimum
 sv_vote_issue_scramble_teams_allowed     : 1        : , "sv"           : Can players call votes to scramble the teams?
 sv_vote_issue_scramble_teams_cooldown    : 1200     : , "sv"           : Minimum time before another scramble vote can occur (in seconds).
 sv_vote_kick_ban_duration                : 20       : , "sv"           : The number of minutes a vote ban should last. (0 = Disabled)
-sv_vote_quorum_ratio                     : 0        : , "sv", "nf"     : The minimum ratio of eligible players needed to pass a vote.  Min 0.5, Max 1.0.
+sv_vote_late_join_cooldown               : 300      : , "sv"           : Length of the vote-creation cooldown when joining the server after the grace period has expired
+sv_vote_late_join_time                   : 90       : , "sv"           : Grace period after the match starts before players who join the match receive a vote-creation cooldown
+sv_vote_quorum_ratio                     : 0        : , "sv", "nf"     : The minimum ratio of eligible players needed to pass a vote.  Min 0.1, Max 1.0.
 sv_vote_ui_hide_disabled_issues          : 1        : , "sv"           : Suppress listing of disabled issues in the vote setup screen.
 sys_minidumpexpandedspew                 : 1        :                  :
 sys_minidumpspewlines                    : 500      :                  : Lines of crash dump console spew to keep.
@@ -2636,6 +2645,7 @@ tf_airblast_cray_reflect_cost_coeff      : 0        : , "sv", "cheat"  : What po
 tf_airblast_cray_reflect_relative        : 0        : , "sv", "cheat"  : If set, the relative, rather than absolute, target velocity is considered for reflection.
 tf_airblast_cray_stun_amount             : 0        : , "sv", "cheat"  : Amount of control loss to apply if stun_duration is set.
 tf_airblast_cray_stun_duration           : 0        : , "sv", "cheat"  : If set, apply this duration of stun when initially hit by an airblast.  Does not apply to repeated airblasts.
+tf_allow_player_name_change              : 1        : , "sv", "nf"     : Allow player name changes.
 tf_allow_player_use                      : 0        : , "sv", "nf"     : Allow players to execute +use while playing.
 tf_allow_server_hibernation              : 1        : , "sv"           : Allow the server to hibernate when empty.
 tf_allow_sliding_taunt                   : 0        : , "sv"           : 1 - Allow player to slide for a bit after taunting
@@ -3141,7 +3151,6 @@ tf_passtime_throwspeed_spy               : 900      : , "sv", "nf", "rep" :
 tf_passtime_throwspeed_velocity_scale    : 0        : , "sv", "nf", "rep" : How much player velocity to add when tossing (0=none 1=100%)
 tf_player_drop_bonus_ducks               : -1       : , "sv", "rep"    : -1 Default (Holiday-based) 0 - Force off 1 - Force on
 tf_player_movement_restart_freeze        : 1        : , "sv", "rep"    : When set, prevent player movement during round restart
-tf_player_name_change_time               : 60       : , "sv", "nf"     : Seconds between name changes.
 tf_player_spell_drop_on_death_rate       : 0        : , "sv", "rep"    :
 tf_playergib                             : 1        : , "sv", "nf"     : Allow player gibbing. 0: never, 1: normal, 2: always
 tf_playround                             : cmd      :                  : Play the selected round  Argument: {round name given by 'tf_listrounds' command}
@@ -3151,7 +3160,11 @@ tf_populator_debug                       : 0        : , "sv", "cheat"  :
 tf_populator_health_multiplier           : 1        : , "sv", "cheat", "rep", "norecord" :
 tf_powerup_max_charge_time               : 30       : , "sv", "cheat"  :
 tf_powerup_mode                          : 0        : , "sv", "nf"     : Enable/disable powerup mode. Not compatible with Mann Vs Machine mode
+tf_powerup_mode_dominant_multiplier      : 3        : , "sv", "cheat"  : The multiple by which a player must exceed the median kills by in order to be considered dominant
+tf_powerup_mode_imbalance_consecutive_min_players : 10       : , "sv", "cheat"  : Minimum number of players on the server before consecutive imbalance measures trigger team balancing
+tf_powerup_mode_imbalance_consecutive_time : 1200     : , "sv", "cheat"  : Teams are balanced if consecutive imbalance measures for the same team are triggered in less time (seconds)
 tf_powerup_mode_imbalance_delta          : 24       : , "sv", "cheat"  : Powerup kill score lead one team must have before imbalance measures are initiated
+tf_powerup_mode_killcount_timer_length   : 300      : , "sv", "cheat"  : How long to wait between kill count tests that determine if a player is dominating
 tf_preround_push_from_damage_enable      : 0        : , "sv"           : If enabled, this will allow players using certain type of damage to move during pre-round freeze time.
 tf_quest_map_intro_viewed                : 0        : , "a", "cl"      :
 tf_quest_map_tuner_wobble_magnitude      : 0        : , "cl"           :
@@ -3535,7 +3548,7 @@ wc_destroy                               : cmd      :                  : When in
 wc_destroy_undo                          : cmd      :                  : When in WC edit mode restores the last deleted node
 wc_link_edit                             : cmd      :                  :
 weapon_showproficiency                   : 0        : , "sv"           :
-windows_speaker_config                   : 4        : , "a"            :
+windows_speaker_config                   : 7        : , "a"            :
 wipe_nav_attributes                      : cmd      :                  : Clear all nav attributes of selected area.
 writeid                                  : cmd      :                  : Writes a list of permanently-banned user IDs to banned_user.cfg.
 writeip                                  : cmd      :                  : Save the ban list to banned_ip.cfg.
@@ -3559,5 +3572,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3551 total convars/concommands
+3564 total convars/concommands
 ```
