@@ -235,8 +235,6 @@ description: A list of all launch options on TF2 for Windows.
 -usereslistfile
 -UseStandardError
 -usetcp
--use_action_slot_item
--use_action_slot_item_server
 -vcrplayback
 -vcrrecord
 -vguifocus
