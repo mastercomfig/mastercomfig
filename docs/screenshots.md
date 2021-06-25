@@ -6,31 +6,31 @@ description: mastercomfig screenshots for all presets.
 
 ## Ultra
 
-![sawmill ultra](https://mastercomfig.com/img/presets/ultra.png)
+![sawmill ultra](https://mastercomfig.com/img/presets/ultra.png){ loading=lazy }
 
 ## High
 
-![sawmill high](https://mastercomfig.com/img/presets/high.png)
+![sawmill high](https://mastercomfig.com/img/presets/high.png){ loading=lazy }
 
 ## Medium High
 
-![sawmill medium high](https://mastercomfig.com/img/presets/medium-high.png)
+![sawmill medium high](https://mastercomfig.com/img/presets/medium-high.png){ loading=lazy }
 
 ## Medium
 
-![sawmill medium](https://mastercomfig.com/img/presets/medium.png)
+![sawmill medium](https://mastercomfig.com/img/presets/medium.png){ loading=lazy }
 
 ## Medium Low
 
-![sawmill medium low](https://mastercomfig.com/img/presets/medium-low.png)
+![sawmill medium low](https://mastercomfig.com/img/presets/medium-low.png){ loading=lazy }
 
 ## Low
 
-![sawmill low](https://mastercomfig.com/img/presets/low.png)
+![sawmill low](https://mastercomfig.com/img/presets/low.png){ loading=lazy }
 
 ## Very Low
 
-![sawmill very low](https://mastercomfig.com/img/presets/very-low.png)
+![sawmill very low](https://mastercomfig.com/img/presets/very-low.png){ loading=lazy }
 
 ## Screenshot Config
 

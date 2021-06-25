@@ -47,52 +47,74 @@ nav:
       - Silly Launch Options: tf2/silly_launch_options.md
       - Generating TF2 Data: tf2/README.md
 markdown_extensions:
+  - abbr
   - admonition
+  - pymdownx.details
   - smarty
   - toc:
       permalink: true
-  - codehilite:
-      guess_lang: false
-      use_pygments: true
-      noclasses: true
-      pygments_style: monokai
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
   - meta
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.emoji
   - pymdownx.inlinehilite:
       style_plain_text: true
   - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.smartsymbols
   - pymdownx.superfences
   - pymdownx.tabbed
+  - footnotes
+  - attr_list
 theme:
   language: en
   features:
-    - instant
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - header.autohide
+    - toc.integrate
   name: material
   palette:
-    scheme: slate
-    primary: teal
-    accent: teal
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
   logo: img/logo.svg
   favicon: img/logo.ico
-  icon:
-    repo: fontawesome/brands/github
-repo_name: GitHub
-repo_url: 'https://github.com/mastercomfig/mastercomfig/'
 edit_uri: 'https://github.com/mastercomfig/mastercomfig/edit/release/docs/'
 plugins:
   - search
+  - macros
   - minify:
       minify_html: true
   - git-revision-date-localized:
       type: date
+      fallback_to_build_date: true
 extra_javascript:
-  - js/widescreen.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: 'https://github.com/mastercomfig/mastercomfig/'
     - icon: fontawesome/brands/discord
+      name: Discord
       link: 'https://discord.gg/CuPb2zV'
     - icon: fontawesome/brands/steam
+      name: Steam Group
       link: 'https://steamcommunity.com/groups/comfig'
