@@ -78,6 +78,8 @@ theme:
     - navigation.instant
     - navigation.sections
     - navigation.top
+    - navigation.tabs
+    - navigation.expand
     - header.autohide
     - toc.integrate
   name: material
@@ -98,7 +100,11 @@ theme:
         name: Switch to dark mode
   logo: img/logo.svg
   favicon: img/logo.ico
-edit_uri: 'https://github.com/mastercomfig/mastercomfig/edit/release/docs/'
+  icon:
+      repo: fontawesome/brands/github
+repo_name: GitHub
+repo_url: 'https://github.com/mastercomfig/mastercomfig/'
+edit_uri: 'edit/release/docs/'
 plugins:
   - search
   - macros
