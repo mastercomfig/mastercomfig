@@ -113,7 +113,6 @@ plugins:
         pt: Português (Brasil)
         ru: Pусский
         es: Español
-        pl: Polski
         fr: Français
   - search
   - macros
