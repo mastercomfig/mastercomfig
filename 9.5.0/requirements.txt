@@ -1,6 +1,0 @@
-mike
-mkdocs-material
-mkdocs-minify-plugin
-mkdocs-redirects
-mkdocs-macros-plugin
-mkdocs-git-revision-date-localized-plugin
