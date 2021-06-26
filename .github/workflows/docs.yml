@@ -7,6 +7,8 @@ on:
       - docs
       - mkdocs.yml
       - .github/workflows/docs.yml
+  pull_request:
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -19,13 +21,21 @@ jobs:
         python-version: 3.x
     - name: Update pip
       run: python -m pip install -U pip setuptools
+    - name: Set Git author
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
     - name: Install dependencies
       run: pip install -Ur docs/requirements.txt
     - name: Build docs (latest)
-      if: ${{ github.ref == 'refs/heads/release' }}
+      if: ${{ github.event_name == push && github.ref == 'refs/heads/release' }}
       run: mike deploy -u $(git describe --tags --abbrev=0) latest
     - name: Build docs (develop)
-      if: ${{ github.ref == 'refs/heads/develop' }}
+      if: ${{ github.event_name == push && github.ref == 'refs/heads/develop' }}
       run: mike deploy -u dev
+    - name: Build docs
+      if: ${{ github.event_name == pull_request }}
+      run: mike deploy -u latest
     - name: Deploy
       run: git push origin gh-pages:gh-pages
+      if: ${{ github.event_name == push }}
