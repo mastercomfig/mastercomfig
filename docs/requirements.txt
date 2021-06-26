@@ -1,4 +1,5 @@
 mike
+mkdocs-static-i18n
 mkdocs-material
 mkdocs-minify-plugin
 mkdocs-redirects
