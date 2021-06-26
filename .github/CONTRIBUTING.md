@@ -44,6 +44,16 @@ For example, `index.ru.md` or `logo.ru.png`.
 
 You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV), [Steam Discussions](https://steamcommunity.com/groups/comfig/discussions) or [teamfortress.tv](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
 
+## Website
+
+## 
+
+## Translating the config
+
+You can contribute to config translations by [adding echo definitions to your language](https://github.com/mastercomfig/mastercomfig/tree/develop/config/mastercomfig/cfg/lang). See [the English file](https://github.com/mastercomfig/mastercomfig/tree/develop/config/mastercomfig/cfg/lang/en.cfg) for an example.
+
+You can add a new language to the config by [adding it to the definitions](https://github.com/mastercomfig/mastercomfig/tree/develop/config/mastercomfig/cfg/comfig/define_langs.cfg).
+
 ## Config
 
 Want to contribute to the config itself? Start here!
