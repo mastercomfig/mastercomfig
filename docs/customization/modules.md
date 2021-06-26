@@ -657,9 +657,9 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 ### Movement Binds
 
 !!! warning
-    This module requires the Null-Cancelling Movement addon to work.
+    This module requires the Null-canceling Movement addon to work.
 
-Changes the keys that are used to move while the Null-Cancelling Movement addon is installed.
+Changes the keys that are used to move while the Null-canceling Movement addon is installed.
 If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:
 
 * Forward: `+mf`

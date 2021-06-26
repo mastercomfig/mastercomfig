@@ -4,8 +4,6 @@ linter:
 # https://help.sider.review/tools/others/misspell
   misspell:
     locale: US
-    ignore:
-      - cancelling
 
 # https://help.sider.review/tools/others/languagetool
   languagetool:

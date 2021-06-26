@@ -44,7 +44,7 @@ Here are a few awesome TF2 modifications:
   — Makes viewmodels translucent
 
 * [Common scripts/binds](https://www.reddit.com/r/tf2scripthelp/wiki/commonscripts)
-  — Some common and useful scripts/binds, like the null-cancelling movement script
+  — Some common and useful scripts/binds, like the null-canceling movement script
 
 * [Static Ambassador Crosshair](https://github.com/juniorsgithub/tf2-static-ambassador-crosshair)
   — Replaces the dynamic crosshair resize of the Ambassador inaccuracy indicator with a static crosshair

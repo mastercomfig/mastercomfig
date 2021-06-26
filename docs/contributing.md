@@ -132,7 +132,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
 * `transparent-viewmodels`: Enables support for transparent viewmodels
-* `null-cancelling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
+* `null-canceling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (2GB and lower)
 
 ##### Modules
