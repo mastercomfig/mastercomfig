@@ -5,11 +5,14 @@ on:
     branches: [ develop, release ]
     paths:
       - docs
+      - mkdocs.yml
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - uses: actions/setup-python@v2
       with:
         python-version: 3.x
@@ -18,4 +21,4 @@ jobs:
     - name: Install dependencies
       run: pip install docs/requirements.txt
     - name: Build and deploy docs
-      run: mike deploy -u $(git describe --tags --abbrev=0) latest
+      run: mike deploy -pu $(git describe --tags --abbrev=0) latest
