@@ -21,7 +21,24 @@ suggestions you have for mastercomfig.
 ## Docs
 
 Have a screenshot, workaround or anything else interesting you'd like to share?
-Contribute to the [docs](https://github.com/mastercomfig/mastercomfig/tree/release/docs).
+
+Are you a translator who wishes to add or improve content in your own language?
+
+Contribute to the docs by clicking the edit button on any page you'd like to change!
+
+You can also take a look at [the full source folder](https://github.com/mastercomfig/mastercomfig/tree/release/docs) to add new files or take a look around.
+
+## Adding a new language
+
+You can view currently supported languages [here](https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/?h=i18n#site-language).
+
+Add your language plus its native name to `plugins.i18n.languages` in `mkdocs.yml`.
+
+## Adding content in a language
+
+Add a `.[lang]` before the file type.
+
+For example, `index.ru.md` or `logo.ru.png`.
 
 ## Support
 

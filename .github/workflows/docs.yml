@@ -9,6 +9,8 @@ on:
       - .github/workflows/docs.yml
   pull_request:
 
+concurrency: ${{ github.repository }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
