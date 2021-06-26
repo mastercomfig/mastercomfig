@@ -29,13 +29,10 @@ jobs:
       run: pip install -Ur docs/requirements.txt
     - name: Build docs (latest)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/release' }}
-      run: mike deploy -u $(git describe --tags --abbrev=0) latest
+      run: mike deploy -up $(git describe --tags --abbrev=0) latest
     - name: Build docs (develop)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/develop' }}
-      run: mike deploy -u dev
+      run: mike deploy -up dev
     - name: Build docs
       if: ${{ github.event_name == 'pull_request' }}
       run: mike deploy -u latest
-    - name: Deploy
-      run: git push origin gh-pages:gh-pages
-      if: ${{ github.event_name == 'push' }}
