@@ -106,6 +106,15 @@ repo_name: GitHub
 repo_url: 'https://github.com/mastercomfig/mastercomfig/'
 edit_uri: 'edit/release/docs/'
 plugins:
+  - i18n:
+      default_language: en
+      languages:
+        en: English
+        pt: Português
+        ru: Pусский
+        es: Español
+        pl: Polski
+        fr: Français
   - search
   - macros
   - minify:
