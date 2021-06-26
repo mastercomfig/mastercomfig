@@ -104,4 +104,4 @@ Class configs are also a reliable way to periodically run some commands during a
 
 ## How can I get help with mastercomfig?
 
-Check the [Quick Fixes guide](next_steps/troubleshoot.md) for more info.
+Check the [Quick Fixes guide](next_steps/quick_fixes.md) for more info.

@@ -40,7 +40,7 @@ spy.cfg
 
 ### Quick Fixes
 
-Encountering any issues? See the [Quick Fixes guide](../next_steps/troubleshoot.md) for help.
+Encountering any issues? See the [Quick Fixes guide](../next_steps/quick_fixes.md) for help.
 
 ### Customization
 
