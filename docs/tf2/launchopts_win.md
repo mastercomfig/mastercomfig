@@ -210,10 +210,6 @@ description: A list of all launch options on TF2 for Windows.
 -sv_pure_verify_hashes
 -sw
 -swapcores
--targetdummy
--taunt
--team
--teleport
 -tempcontent
 -textmessagedebug
 -textmode
@@ -227,7 +223,6 @@ description: A list of all launch options on TF2 for Windows.
 -u2f
 -ugcpath
 -unbuffered_io
--use
 -usedevshotsfile
 -useforcedmparms
 -uselogdir
@@ -239,7 +234,6 @@ description: A list of all launch options on TF2 for Windows.
 -vcrrecord
 -vguifocus
 -vguimessages
--vgui_drawtree
 -voicerecord
 -vproject
 -vr
