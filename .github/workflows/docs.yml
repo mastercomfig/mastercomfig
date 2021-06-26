@@ -1,0 +1,21 @@
+name: docs
+
+on:
+  push:
+    branches: [ develop, release ]
+    paths:
+      - docs
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - name: Update pip
+      run: python -m pip install -U pip setuptools
+    - name: Install dependencies
+      run: pip install docs/requirements.txt
+    - name: Build and deploy docs
+      run: mike deploy -u $(git describe --tags --abbrev=0) latest
