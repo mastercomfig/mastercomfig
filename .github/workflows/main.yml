@@ -62,23 +62,23 @@ jobs:
         sudo chmod +x /usr/local/bin/vpk
     - name: Check tag
       id: check-tag
-      if: ${{ github.event_name == push }}
+      if: ${{ github.event_name == 'push' }}
       run: |
         if [[ ${{ github.event.ref }} == refs/tags/* ]]; then
           echo ::set-output name=release::true
         fi
     - name: Build mastercomfig (prerelease)
       run: dev/release.sh
-      if: ${{ github.event_name == push && steps.check-tag.outputs.release != 'true' }}
+      if: ${{ github.event_name == 'push' && steps.check-tag.outputs.release != 'true' }}
       env:
         prerelease: true
         GH_TOKEN: ${{secrets.REPO_TOKEN}}
     - name: Build mastercomfig (release)
       run: dev/release.sh
-      if: ${{ github.event_name == push && steps.check-tag.outputs.release == 'true' }}
+      if: ${{ github.event_name == 'push' && steps.check-tag.outputs.release == 'true' }}
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         GH_TOKEN: ${{secrets.REPO_TOKEN}}
     - name: Build mastercomfig
       run: dev/package.sh
-      if: ${{ github.event_name == pull_request }}
+      if: ${{ github.event_name == 'pull_request' }}
