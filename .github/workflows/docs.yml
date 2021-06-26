@@ -6,6 +6,7 @@ on:
     paths:
       - docs
       - mkdocs.yml
+      - .github/workflows/docs.yml
 jobs:
   deploy:
     runs-on: ubuntu-latest
