@@ -37,4 +37,4 @@ jobs:
       run: mike deploy -up dev
     - name: Build docs
       if: ${{ github.event_name == 'pull_request' }}
-      run: mike deploy -u latest
+      run: mike deploy -u $(git describe --tags) latest
