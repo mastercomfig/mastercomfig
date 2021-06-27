@@ -110,6 +110,7 @@ plugins:
       default_language: en
       languages:
         en: English
+        pl: Polish
         pt: Português
         ru: Pусский
         es: Español
