@@ -654,6 +654,19 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 * **`logo=off`**: Does not print logo in console on startup.
 * **`logo=on`**: Prints logo in console on startup.
 
+### Language
+
+Controls the language mastercomfig outputs with.
+
+Default setting: **`lang=en`** (all presets).
+
+* **`lang=en`**: English
+* **`lang=pt`**: Português (Portugese)
+* **`lang=ru`**: Pусский (Russian)
+* **`lang=es`**: Español (Spanish)
+* **`lang=fr`**: Français (French)
+* **`lang=hr`**: Hrvatski (Croatian)
+
 ### Movement Binds
 
 !!! warning
