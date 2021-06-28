@@ -50,7 +50,9 @@ The modules you choose in `user/modules.cfg` are executed by the `modules_c` ali
 
 This means that you can change this alias in game, and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_user`.
 
-## Language
+## Language modules
+
+### Language
 
 Controls the language mastercomfig outputs with.
 
@@ -359,7 +361,7 @@ Default setting: based on which preset you are currently using.
 
 ### Silly Gibs
 
-Default setting: **`sillygibs=auto`**.
+Default setting: **`sillygibs=auto`** (all presets).
 
 * **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
