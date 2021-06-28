@@ -79,9 +79,15 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.expand
+    - navigation.indexes
+    - navigation.tracking
     - header.autohide
     - toc.integrate
+    - content.tabs.link
+    - search.suggest
+    - search.share
   name: material
   palette:
     - media: "(prefers-color-scheme: dark)"
@@ -119,6 +125,7 @@ plugins:
         'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'
   - search
   - macros
+  - tags
   - minify:
       minify_html: true
   - git-revision-date-localized:
