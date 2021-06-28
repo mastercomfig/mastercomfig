@@ -346,7 +346,7 @@ Default setting: based on which preset you are currently using.
 
 ### Silly Gibs
 
-Default setting: **`sillygibs=auto`**.
+Default setting: **`sillygibs=auto`** (all presets).
 
 * **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
