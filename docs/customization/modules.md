@@ -50,6 +50,19 @@ The modules you choose in `user/modules.cfg` are executed by the `modules_c` ali
 
 This means that you can change this alias in game, and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_user`.
 
+## Language
+
+Controls the language mastercomfig outputs with.
+
+Default setting: **`lang=en`** (all presets).
+
+* **`lang=en`**: English
+* **`lang=pt`**: Português (Portuguese)
+* **`lang=ru`**: Pусский (Russian)
+* **`lang=es`**: Español (Spanish)
+* **`lang=fr`**: Français (French)
+* **`lang=hr`**: Hrvatski (Croatian)
+
 ## Networking modules
 
 ### SourceTV Compatibility
@@ -653,19 +666,6 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 
 * **`logo=off`**: Does not print logo in console on startup.
 * **`logo=on`**: Prints logo in console on startup.
-
-### Language
-
-Controls the language mastercomfig outputs with.
-
-Default setting: **`lang=en`** (all presets).
-
-* **`lang=en`**: English
-* **`lang=pt`**: Português (Portugese)
-* **`lang=ru`**: Pусский (Russian)
-* **`lang=es`**: Español (Spanish)
-* **`lang=fr`**: Français (French)
-* **`lang=hr`**: Hrvatski (Croatian)
 
 ### Movement Binds
 
