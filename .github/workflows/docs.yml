@@ -30,7 +30,7 @@ jobs:
     - name: Install Material for MkDocs Insiders
       run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
       env:
-        GH_TOKEN: ${{secrets.REPO_TOKEN}}
+        GH_TOKEN: ${{secrets.PRIVATE_REPO_TOKEN}}
     - name: Install dependencies
       run: pip install -Ur docs/requirements.txt
     - name: Build docs (latest)
