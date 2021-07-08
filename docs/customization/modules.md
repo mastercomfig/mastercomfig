@@ -656,6 +656,9 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 
 ### Language
 
+!!! warning
+    This module should be set in `pre_comfig.cfg` instead of `modules.cfg`.
+
 Controls the language mastercomfig outputs with.
 
 Default setting: **`lang=en`** (all presets).
@@ -664,15 +667,16 @@ Default setting: **`lang=en`** (all presets).
 * **`lang=pt`**: Português (Portuguese)
 * **`lang=ru`**: Pусский (Russian)
 * **`lang=es`**: Español (Spanish)
-* **`lang=fr`**: Français (French)
+* **`lang=fr`**: Français (French) _(currently not translated)_
 * **`lang=hr`**: Hrvatski (Croatian)
+* **`lang=cs`**: Česká (Czech)
 
 ### Movement Binds
 
 !!! warning
     This module requires the Null-Canceling Movement addon to work.
 
-Changes the keys that are used to move while the Null-canceling Movement addon is installed.
+Changes the keys that are used to move while the Null-Canceling Movement addon is installed.
 If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:
 
 * Forward: `+mf`
@@ -689,7 +693,7 @@ Example:
 
 Default setting: **`move_bind=wasd`** (all presets).
 
-* **`move_bind=wasd`**: Sets movement keys to WASD (default).
+* **`move_bind=wasd`**: Sets movement keys to WASD.
 * **`move_bind=esdf`**: Sets movement keys to ESDF.
 * **`move_bind=zqsd`**: Sets movement keys to ZQSD (default for AZERTY keyboards).
 * **`move_bind=arrows`**: Sets movement keys to the Arrow Keys.
