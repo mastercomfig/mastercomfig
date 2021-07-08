@@ -4,10 +4,16 @@ linter:
 # https://help.sider.review/tools/others/misspell
   misspell:
     locale: US
+    exclude:
+      - config/mastercomfig/cfg/lang/*.cfg
+      - docs/**/*.*.md
 
 # https://help.sider.review/tools/others/languagetool
   languagetool:
     ext: [.md, .cfg, .sh]
+    exclude:
+      - config/mastercomfig/cfg/lang/*.cfg
+      - docs/**/*.*.md
 
 # https://help.sider.review/tools/shellscript/shellcheck
   shellcheck:
