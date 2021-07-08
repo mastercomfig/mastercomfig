@@ -667,7 +667,7 @@ Default setting: **`lang=en`** (all presets).
 * **`lang=pt`**: Português (Portuguese)
 * **`lang=ru`**: Pусский (Russian)
 * **`lang=es`**: Español (Spanish)
-* **`lang=fr`**: Français (French) _(currently not translated)_
+* **`lang=fr`**: Français (French)
 * **`lang=hr`**: Hrvatski (Croatian)
 * **`lang=cs`**: Česká (Czech)
 
