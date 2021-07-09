@@ -1,21 +1,17 @@
 name: Start Release
 
-inputs:
-  version:
-    description: "Version"
-    required: true
-    default: ''
-  highlights:
-    description: "Highlights"
-    required: true
-    default: ''
-  hours:
-    description: "Hours taken"
-    required: true
-    default: ''
-
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: "Version"
+        required: true
+      highlights:
+        description: "Highlights"
+        required: true
+      hours:
+        description: "Hours taken"
+        required: true
 
 jobs:
   build:
