@@ -4,12 +4,15 @@ inputs:
   version:
     description: "Version"
     required: true
+    default: ''
   highlights:
     description: "Highlights"
     required: true
+    default: ''
   hours:
     description: "Hours taken"
     required: true
+    default: ''
 
 on:
   workflow_dispatch:
