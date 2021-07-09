@@ -11,13 +11,13 @@ curl -X POST -H 'Content-type: application/json' \
  --data "{\"content\":\"@everyone **[$1](https://mastercomfig.com/app)** released with $2.\n\n[Changelog](https://github.com/mastercomfig/mastercomfig/releases/tag/$1)\n[Support me](https://docs.mastercomfig.com/page/support_me/)\n\nThis release took $3 hours to produce. If you like the work I do, consider supporting me!\"}" \
  "${DISCORD_WEBHOOK}"
 
-# TODO: Announce on teamfortress.tv and Steam Group
+# TODO: Announce on Steam Group and Chat
 
 post_body="[url=https://mastercomfig.com/app]$1[/url] released with $2.\n\n[url=https://github.com/mastercomfig/mastercomfig/releases/tag/$1]Changelog[/url]\n[url=https://docs.mastercomfig.com/page/support_me/]Support me[/url]\n\nThis release took $3 hours to produce. If you like the work I do, consider supporting me!"
 
 printf "\n"
 
-echo "BBCode announcement for tf.tv and Steam Group:"
+echo "BBCode announcement for Steam Group:"
 printf "${post_body}"
 
 printf "\n"
