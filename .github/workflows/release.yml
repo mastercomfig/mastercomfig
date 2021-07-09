@@ -1,0 +1,41 @@
+name: Start Release
+
+inputs:
+  version:
+    description: "Version"
+    required: true
+  highlights:
+    description: "Highlights"
+    required: true
+  hours:
+    description: "Hours taken"
+    required: true
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Update release info
+      run: |
+        {
+          echo "${{ github.event.inputs.version }}"
+          echo "${{ github.event.inputs.highlights }}"
+          echo "${{ github.event.inputs.hours }}"
+        } > dev/info.txt
+    - name: Commit release info
+      run: git commit -am "release ${{ github.event.inputs.version }}"
+    - name: Switch to release
+      uses: actions/checkout@v2
+      with:
+        ref: 'release'
+    - name: Merge release
+      run: git merge ${{ github.ref }}
+    - name: Tag release
+      run: git tag ${{ github.event.inputs.version }}
+    - name: Push release
+      run: git push --tags
+      
