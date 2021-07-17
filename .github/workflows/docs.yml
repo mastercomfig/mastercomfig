@@ -29,7 +29,7 @@ jobs:
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
     - name: Install Material for MkDocs Insiders
       run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-      if: ${{ github.repository_owner == 'mastercomfig' }}
+      if: ${{ github.repository_owner == 'mastercomfig' && github.event_name != 'pull_request' }}
       env:
         GH_TOKEN: ${{secrets.PRIVATE_REPO_TOKEN}}
     - name: Install dependencies
