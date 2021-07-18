@@ -798,6 +798,32 @@
       }
     ]
   },
+  "bots" : {
+    "modules": [
+      {
+        "name": "bot_skill",
+        "display": "Bot Difficulty",
+        "description": "Determines bot difficulty for bots and sets optimizations relative to that difficulty.",
+        "values": [
+          {
+            "value":"none"
+          },
+          {
+            "value":"easy"
+          },
+          {
+            "value":"normal"
+          },
+          {
+            "value":"hard"
+          },
+          {
+            "value":"expert"
+          }
+        ]
+      }
+    ]
+  },
   "misc": {
     "modules": [
       {

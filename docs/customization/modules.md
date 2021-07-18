@@ -621,6 +621,20 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
+## Bot Modules
+
+### Bot Difficulty
+
+Sets the bot difficulty to the specified level and optimizes bots for that difficulty.
+
+Default setting: **`bot_skill=normal`** (all presets, except Very Low).
+
+* **`bot_skill=none`**: Does not apply any optimization to bots.
+* **`bot_skill=easy`**: Applies easy difficulty and optimizations to bots.
+* **`bot_skill=normal`**: Applies normal difficulty and optimizations to bots.
+* **`bot_skill=hard`**: Applies hard difficulty and optimizations to bots.
+* **`bot_skill=expert`**: Applies expert difficulty and optimizations to bots.
+
 ## Misc modules
 
 ### Mod Support

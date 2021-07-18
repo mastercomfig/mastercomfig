@@ -274,6 +274,10 @@
     "default": "on",
     "very-low": "off"
   },
+  "bot_skill": {
+    "default": "normal",
+    "very-low": "none"
+  },
   "mod_support": {
     "default": "on"
   },

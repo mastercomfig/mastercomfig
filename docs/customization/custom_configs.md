@@ -93,6 +93,9 @@ For example, you can put `alias class_config_heavyweapons"exec user/myheavy.cfg"
 You can change the name of your custom game overrides config using the `game_overrides_c` alias.
 For example, you can put `alias game_overrides_c"exec user/mygameoverrides.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mygameoverrides.cfg`.
 
+You can change the name of your custom game config (normally `game.cfg`) using the `game_config_override_c` alias.
+For example, you can put `alias game_c"exec user/mygameoverrides.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mygameoverrides.cfg`.
+
 You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
 
