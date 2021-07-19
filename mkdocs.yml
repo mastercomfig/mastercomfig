@@ -125,7 +125,6 @@ plugins:
         'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'
   - search
   - macros
-  - tags
   - minify:
       minify_html: true
   - git-revision-date-localized:
