@@ -122,7 +122,6 @@ plugins:
         fr: Français
   - search
   - macros
-  - tags
   - minify:
       minify_html: true
   - git-revision-date-localized:
