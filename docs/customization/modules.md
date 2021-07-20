@@ -158,7 +158,7 @@ Default setting: based on which preset you are currently using.
 
 Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
-Default setting: **`lighting_ex=high`** (all presets, except Medium Low, Low and Very Low).
+Default setting: based on which preset you are currently using.
 
 * **`lighting_ex=low`**: Phong off.
 * **`lighting_ex=high`**: Phong on.
@@ -242,7 +242,7 @@ Default setting: based on which preset you are currently using.
 
 Controls blurring effect from rotation and movement.
 
-Default setting: **`motion_blur=off`** (all presets).
+Default setting: **`motion_blur=off`** (all presets, except None).
 
 * **`motion_blur=off`**: Turns off motion blur.
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
@@ -397,7 +397,7 @@ Default setting: based on which preset you are currently using.
 
 How fast the animation is on the killstreak sheen glow for weapons.
 
-Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
+Default setting: **`sheens_speed=slow`** (all presets, except Very Low and None).
 
 * **`sheens_speed=off`**: Skips updating sheen glow animation.
 * **`sheens_speed=slow`**: Slow speed.
