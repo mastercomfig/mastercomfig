@@ -502,12 +502,13 @@ Default setting: based on which preset you are currently using.
 
 ### Panels
 
-Toggle health/player info panels.
+Toggle health/player info panels and control target ID transparency.
 
-Default setting: **`hud_panels=on`** (all presets, except Very Low).
+Default setting: **`hud_panels=high`** (all presets, except Low and Very Low).
 
-* **`hud_panels=off`**: Disables health/player info panels that appear when looking at a player.
-* **`hud_panels=on`**: Enables health/player info panels that appear when looking at a player.
+* **`hud_panels=off`**: Disables health/player info panels that appear when looking at a player, disables target ID box.
+* **`hud_panels=low`**: Enables health/player info panels that appear when looking at a player, enables opaque target ID box.
+* **`hud_panels=high`**: Enables health/player info panels that appear when looking at a player, enables translucent target ID box.
 
 ### Match HUD
 
@@ -548,7 +549,7 @@ Controls banners that appear at the top center of the screen, notifying you of a
 Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
 * **`killstreaks=off`**: Disables killstreak banner.
-* **`killstreaks=low`**: Enables killstreak text with no banner.
+* **`killstreaks=low`**: Enables killstreak opaque banner.
 * **`killstreaks=high`**: Enables killstreak translucent banner.
 
 ### HUD Achievements
