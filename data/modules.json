@@ -637,13 +637,15 @@
       {
         "name": "hud_panels",
         "display": "Panels",
-        "type": "switch",
         "values": [
           {
             "value": "off"
           },
           {
-            "value": "on"
+            "value": "low"
+          },
+          {
+            "value": "high"
           }
         ]
       },
