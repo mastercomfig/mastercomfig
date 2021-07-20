@@ -156,7 +156,7 @@ Default setting: based on which preset you are currently using.
 
 ### Lighting Ex
 
-Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
+Controls extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
 Default setting: based on which preset you are currently using.
 
@@ -277,7 +277,7 @@ Default setting: based on which preset you are currently using.
 
 ### Characters
 
-Adjust characters details.
+Adjusts characters details.
 
 !!! tip
     Facial animations will only work on `lod=medium` and higher.
@@ -336,6 +336,8 @@ Default setting: based on which preset you are currently using.
 
 ### Gibs
 
+Controls gibs created by explosions.
+
 Default setting: based on which preset you are currently using.
 
 * **`gibs=off`**: Disables gibs.
@@ -345,6 +347,8 @@ Default setting: based on which preset you are currently using.
 * **`gibs=high`**: Default number of gibs, gibs can burn.
 
 ### Silly Gibs
+
+Controls low violence mode.
 
 Default setting: **`sillygibs=auto`** (all presets).
 
@@ -365,7 +369,7 @@ Default setting: based on which preset you are currently using.
 
 ### Ragdolls
 
-Control physics simulation and fading for bodies that spawn on death.
+Controls physics simulation and fading for bodies that spawn on death.
 
 Default setting: based on which preset you are currently using.
 
@@ -395,7 +399,7 @@ Default setting: based on which preset you are currently using.
 
 ### Killstreak Sheens Speed
 
-How fast the animation is on the killstreak sheen glow for weapons.
+Controls how fast the animation is on the killstreak sheen glow for weapons.
 
 Default setting: **`sheens_speed=slow`** (all presets, except Very Low and None).
 
@@ -406,7 +410,7 @@ Default setting: **`sheens_speed=slow`** (all presets, except Very Low and None)
 
 ### Killstreak Sheens Tint Intensity
 
-How intense the color tint is on the killstreak sheen glow for weapons.
+Controls how intense the color tint is on the killstreak sheen glow for weapons.
 
 Default setting: **`sheens_tint=high`** (all presets).
 
@@ -493,7 +497,7 @@ Default setting: **`opengl=default`** (all presets).
 
 ### Player Model
 
-Toggle the live 3D player model in the corner of your screen.
+Toggles the live 3D player model in the corner of your screen.
 
 Default setting: based on which preset you are currently using.
 
@@ -502,7 +506,7 @@ Default setting: based on which preset you are currently using.
 
 ### Panels
 
-Toggle health/player info panels and control target ID transparency.
+Toggles health/player info panels and control target ID transparency.
 
 Default setting: **`hud_panels=high`** (all presets, except Low and Very Low).
 
@@ -512,7 +516,7 @@ Default setting: **`hud_panels=high`** (all presets, except Low and Very Low).
 
 ### Match HUD
 
-Toggle match status HUD at the top of the screen.
+Toggles match status HUD at the top of the screen.
 
 !!! note
     It's highly recommended to use this module, as the built-in console variable
@@ -563,7 +567,7 @@ Default setting: **`hud_achievement=on`** (all presets, except Very Low).
 
 ### Console
 
-Controls console.
+Controls developer console.
 
 Default setting: **`console=on`** (all presets, except Very Low).
 
