@@ -223,8 +223,9 @@
     "none": ""
   },
   "hud_panels": {
-    "default": "on",
-    "very-low": "off"
+    "default": "high",
+    "very-low": "off",
+    "low": "low"
   },
   "match_hud": {
     "default": "on",
