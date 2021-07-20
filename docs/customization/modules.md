@@ -228,15 +228,24 @@ Default setting: based on which preset you are currently using.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
 
-### Pyrovision
+### PyroVision
 
-Controls Pyrovision visual effects.
+Controls PyroVision visual effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`pyrovision=low`**: Disables Pyrovision vignette and skybox SSAO depth of field.
-* **`pyrovision=medium`**: Enables static Pyrovision vignette.
-* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic Pyrovision vignette.
+* **`pyrovision=low`**: Disables PyroVision vignette and skybox SSAO depth of field.
+* **`pyrovision=medium`**: Enables static PyroVision vignette.
+* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic PyroVision vignette.
+
+### RomeVision
+
+Controls RomeVision visual effects. For more info, [click here](https://wiki.teamfortress.com/wiki/Romevision).
+
+Default setting: **`romevision=off`** (all presets, except Ultra, High and None).
+
+* **`romevision=off`**: Disables RomeVision effects.
+* **`romevision=on`**: Enables RomeVision effects.
 
 ### Motion Blur
 
@@ -506,13 +515,23 @@ Default setting: based on which preset you are currently using.
 
 ### Panels
 
-Toggles health/player info panels and control target ID transparency.
+Controls health/player info panels and target ID translucency.
 
 Default setting: **`hud_panels=high`** (all presets, except Low and Very Low).
 
 * **`hud_panels=off`**: Disables health/player info panels that appear when looking at a player, disables target ID box.
 * **`hud_panels=low`**: Enables health/player info panels that appear when looking at a player, enables opaque target ID box.
 * **`hud_panels=high`**: Enables health/player info panels that appear when looking at a player, enables translucent target ID box.
+
+### Avatars
+
+Controls the display of target ID avatars.
+
+Default setting: **`hud_avatars=friends`** (all presets, except Low and Very Low).
+
+* **`hud_avatars=off`**: Disables avatars.
+* **`hud_avatars=everyone`**: Enables the display of everyone's avatars.
+* **`hud_avatars=friends`**: Enables the display of your friends' avatars.
 
 ### Match HUD
 
