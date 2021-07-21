@@ -474,7 +474,7 @@ Setting it higher can reduce input delay.
     a more reliable FPS cap tool, like [Rivatuner](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)
     and set `fpscap=unlimited` to disable the in-game FPS cap.
 
-Default setting: **`fpscap=1000`** (all presets).
+Default setting: **`fpscap=400`** (all presets).
 
 * **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
 * **`fpscap=30`**: Sets FPS cap to 30 FPS.
