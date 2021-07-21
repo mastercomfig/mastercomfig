@@ -345,7 +345,7 @@ Default setting: based on which preset you are currently using.
 
 ### Gibs
 
-Controls gibs created by explosions.
+Controls gibs created by player explosions.
 
 Default setting: based on which preset you are currently using.
 
