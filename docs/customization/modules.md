@@ -99,7 +99,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 !!! note
     This does not increase data usage, only restricts how quickly data can be sent.
 
-Default setting: **`bandwidth=762Kbps`** (all presets).
+Default setting: **`bandwidth=1.5Mbps`** (all presets).
 
 * **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 * **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
