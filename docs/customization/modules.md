@@ -228,24 +228,24 @@ Default setting: based on which preset you are currently using.
 * **`post_processing=medium`**: Enables LDR bloom.
 * **`post_processing=high`**: Enables standard HDR and bloom.
 
-### PyroVision
+### Pyrovision
 
-Controls PyroVision visual effects.
+Controls Pyrovision visual effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`pyrovision=low`**: Disables PyroVision vignette and skybox SSAO depth of field.
-* **`pyrovision=medium`**: Enables static PyroVision vignette.
-* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic PyroVision vignette.
+* **`pyrovision=low`**: Disables Pyrovision vignette and skybox SSAO depth of field.
+* **`pyrovision=medium`**: Enables static Pyrovision vignette.
+* **`pyrovision=high`**: Enables skybox SSAO depth of field and dynamic Pyrovision vignette.
 
-### RomeVision
+### Romevision
 
-Controls RomeVision visual effects. For more info, [click here](https://wiki.teamfortress.com/wiki/Romevision).
+Controls Romevision visual effects. For more info, [click here](https://wiki.teamfortress.com/wiki/Romevision).
 
 Default setting: **`romevision=off`** (all presets, except Ultra, High and None).
 
-* **`romevision=off`**: Disables RomeVision effects.
-* **`romevision=on`**: Enables RomeVision effects.
+* **`romevision=off`**: Disables Romevision effects.
+* **`romevision=on`**: Enables Romevision effects.
 
 ### Motion Blur
 
