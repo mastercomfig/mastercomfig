@@ -1,6 +1,6 @@
 ---
-Description: Политика безопасности mastercomfig. 
----
+description: Политика безопасности mastercomfig. 
+...
 
 # Политика безопасности
 

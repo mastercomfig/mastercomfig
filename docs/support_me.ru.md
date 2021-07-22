@@ -1,6 +1,6 @@
 ---
-Description: Помогите мне в работе и улучшении mastercomfig!
----
+description: Помогите мне в работе и улучшении mastercomfig!
+...
 
 # Поддержка
 
