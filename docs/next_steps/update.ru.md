@@ -1,6 +1,6 @@
 ---
-description: Как обновить mastercomfig до последней версии
-...
+Description: Как обновить mastercomfig до последней версии
+---
 
 # Обновление
 

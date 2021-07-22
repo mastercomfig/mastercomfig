@@ -1,7 +1,6 @@
 ---
-description: Список всех функций mastercomfig.
-...
-
+Description: Список всех функций mastercomfig.
+---
 # Функции
 
 ## Настройка
