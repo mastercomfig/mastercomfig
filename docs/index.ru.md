@@ -20,7 +20,7 @@ mastercomfig постоянно обновляется с доработками
 
 ## Поддержка
 
-Вы можете поддержать проект mastercoms используя [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) деньгами, или вы можете подарить предметы через [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
+Вы можете поддержать проект mastercoms используя [Liberapay](https://liberapay.com/mastercoms/) или [Ko-fi](https://ko-fi.com/mastercoms) деньгами, или вы можете подарить предметы через [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
 <!-- Вы можете использовать [a config commission](https://ko-fi.com/mastercoms/commissions), где лично настрою конфигурацию точно в соответствии с вашими предпочтениями и настройками ПК. Я также могу сделать это при обмене на 3 ключа. Также есть аддон, в котором я могу выполнять расширенные сценарии по вашему запросу (6 ключей при оплате обменом). -->
 
