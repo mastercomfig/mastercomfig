@@ -24,6 +24,13 @@ If there's something you'd like to run for all of your class configs, you can ad
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
 * `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
+### Bot Commands
+These commands are for bots.
+* `bot_add_6s`: Creates bots in the meta class layout and teams of 6s matches.
+* `bot_add_highlander`: Creates bots in the class layout and teams of highlander matches.
+!!! Warning: RED Bots are not supported well and do not work properly in MvM. It is recommended to get a custom mod to improve bot functionality in MvM or play with other players.
+* `bot_mvm_patch`: Creates a RED flag that no player/bot can pick up. This allows RED bots to move, since MvM maps don't contain a RED flag by default.
+
 ## Game Overrides
 
 Some modules set something called game overrides, which apply settings that override map or in-game only settings that can't be applied at launch.
