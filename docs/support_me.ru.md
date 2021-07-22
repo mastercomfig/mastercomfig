@@ -2,7 +2,7 @@
 description: Помогите мне в работе и улучшении mastercomfig!
 ...
 
-## Поддержка
+# Поддержка
 
 Вы можете поддержать проект mastercoms используя [Liberapay](https://liberapay.com/mastercoms/) или [Ko-fi](https://ko-fi.com/mastercoms) деньгами, или вы можете подарить предметы через [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
