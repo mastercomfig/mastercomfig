@@ -32,7 +32,6 @@ These commands are for bots.
 !!! warning
     RED Bots are not supported and do not work properly in MvM. It is recommended to get a custom mod to improve bot functionality in MvM or play with other players.
 
-
 * `bot_mvm_patch`: Creates a RED flag that no player/bot can pick up. This allows RED bots to move, since MvM maps don't contain a RED flag by default.
 
 ## Game Overrides
