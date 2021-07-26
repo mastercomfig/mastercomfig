@@ -8,7 +8,7 @@ Right click Team Fortress 2 in your Steam library and click **Properties...**. I
 anything that's in there and paste
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -hushsteam
 ```
 
 into the box and click ok.
@@ -43,6 +43,7 @@ Read below about optional launch options and choosing your own DXLevel.
 * **-nohltv** : disables SourceTV hosting, less resource usage
 * **-particles 1** : limits beam count to the minimum of 512
 * **-precachefontchars** : precaches font rendering for common characters
+* **-hushsteam** : For security. Prevents local game servers from registering their IP with Steam
 
 ## Extra Launch Options
 
