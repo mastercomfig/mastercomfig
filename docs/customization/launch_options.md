@@ -43,7 +43,7 @@ Read below about optional launch options and choosing your own DXLevel.
 * **-nohltv** : disables SourceTV hosting, less resource usage
 * **-particles 1** : limits beam count to the minimum of 512
 * **-precachefontchars** : precaches font rendering for common characters
-* **-noquicktime** : disables initializing Quicktime. If you use the replay rendering feature, do not use this.
+* **-noquicktime** : disables initializing Quicktime. If you use the replay rendering feature, do not use this. Does not do anything on Linux
 * **-hushsteam** : For security. Prevents local game servers from registering their IP with Steam
 
 ## Extra Launch Options
