@@ -99,7 +99,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 !!! note
     This does not increase data usage, only restricts how quickly data can be sent.
 
-Default setting: **`bandwidth=1.5Mbps`** (all presets).
+Default setting: **`bandwidth=762Kbps`** (all presets).
 
 * **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 * **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
@@ -474,7 +474,7 @@ Setting it higher can reduce input delay.
     a more reliable FPS cap tool, like [Rivatuner](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html)
     and set `fpscap=unlimited` to disable the in-game FPS cap.
 
-Default setting: **`fpscap=400`** (all presets).
+Default setting: **`fpscap=1000`** (all presets).
 
 * **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
 * **`fpscap=30`**: Sets FPS cap to 30 FPS.
