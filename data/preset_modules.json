@@ -13,7 +13,7 @@
     "default": "speed"
   },
   "bandwidth": {
-    "default": "1.5Mbps"
+    "default": "762Kbps"
   },
   "download": {
     "default": "auto"
@@ -217,7 +217,7 @@
     "none": ""
   },
   "fpscap": {
-    "default": "400"
+    "default": "1000"
   },
   "opengl": {
     "default": "default"
