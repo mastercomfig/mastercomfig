@@ -153,6 +153,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `null-canceling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (2GB and lower)
+* `bot-support`: Improve bot functionality based on difficulty.
 
 ##### Modules
 

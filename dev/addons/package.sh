@@ -18,6 +18,7 @@ addon_alias_map[lowmem]="lowmem"
 addon_alias_map[no-tutorial]="no-tutorial"
 addon_alias_map[null-canceling-movement]="null-movement"
 addon_alias_map[transparent-viewmodels]="transparent-vm"
+addon_alias_map[bot-support]="bot-support"
 
 for F in ../../config/cfg/addons/*; do
     if [ -f "${F}" ]; then

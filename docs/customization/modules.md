@@ -621,20 +621,6 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
-## Bot Modules
-
-### Bot Difficulty
-
-Sets the bot difficulty to the specified level and optimizes bots for that difficulty.
-
-Default setting: **`bot_skill=normal`** (all presets, except Very Low).
-
-* **`bot_skill=none`**: Does not apply any optimization to bots.
-* **`bot_skill=easy`**: Applies easy difficulty and optimizations to bots.
-* **`bot_skill=normal`**: Applies normal difficulty and optimizations to bots.
-* **`bot_skill=hard`**: Applies hard difficulty and optimizations to bots.
-* **`bot_skill=expert`**: Applies expert difficulty and optimizations to bots.
-
 ## Misc modules
 
 ### Mod Support
@@ -713,3 +699,18 @@ Default setting: **`move_bind=wasd`** (all presets).
 * **`move_bind=arrows`**: Sets movement keys to the Arrow Keys.
 * **`move_bind=asdf`**: Sets movement keys to ASDF (A/S forward/back, D/F left/right).
 * **`move_bind=vim`**: Sets movement keys to HJKL (K/J forward/back, H/L left/right).
+
+### Bot Difficulty
+
+!!! warning
+    This module requires the Bot-Support addon to work.
+
+Sets the bots difficulty to the specified level and optimizes bots for that difficulty.
+
+Default setting: **`bot_skill=normal`** (all presets).
+
+* **`bot_skill=none`**: Does not apply any optimization to bots.
+* **`bot_skill=easy`**: Applies easy difficulty and optimizations to bots.
+* **`bot_skill=normal`**: Applies normal difficulty and optimizations to bots.
+* **`bot_skill=hard`**: Applies hard difficulty and optimizations to bots.
+* **`bot_skill=expert`**: Applies expert difficulty and optimizations to bots.

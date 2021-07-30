@@ -25,6 +25,9 @@ If there's something you'd like to run for all of your class configs, you can ad
 * `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
 ### Bot Commands
+!!! note
+    You must have the Bot-Support addon to use these commands.
+
 These commands are for bots.
 * `bot_add_6s`: Creates bots in the meta class layout and teams of 6s matches.
 * `bot_add_highlander`: Creates bots in the class layout and teams of highlander matches.

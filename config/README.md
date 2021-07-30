@@ -38,6 +38,10 @@ This is an addon which makes movement commands instantly respond on keypress, ra
 
 This is an addon which sets settings for compatibility with transparent viewmodels.
 
+### mastercomfig-bot-support-addon
+
+This is an addon wihch sets settings and add commands that improve bot functionality.
+
 ## cfg folder
 
 This is where `.cfg` based addons and presets are stored.
