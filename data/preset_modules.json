@@ -93,6 +93,12 @@
     "ultra": "high",
     "none": ""
   },
+    "romevision": {
+    "default": "off",
+    "high": "on",
+    "ultra": "on",
+    "none": ""
+  },
   "motion_blur": {
     "default": "off",
     "none": ""
@@ -223,8 +229,14 @@
     "none": ""
   },
   "hud_panels": {
-    "default": "on",
-    "very-low": "off"
+    "default": "high",
+    "very-low": "off",
+    "low": "low"
+  },
+    "hud_avatars": {
+    "default": "friends",
+    "very-low": "off",
+    "low": "off"
   },
   "match_hud": {
     "default": "on",

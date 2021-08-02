@@ -40,7 +40,7 @@ You can also view selected levels for all modules by entering `module_levels` in
 
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will prevent mastercomfig from running texture commands.
+If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception for this rule is `alias snapshot_buffer`. You will also have to use `alias net_projectiles;alias net_hitscan;alias net_spy` to fully disable the `snapshot_buffer` module.
 
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup by entering `run_modules` into the console.
 
@@ -156,9 +156,9 @@ Default setting: based on which preset you are currently using.
 
 ### Lighting Ex
 
-Control extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
+Controls extended lighting commands which cause a material system reload. Be careful setting them to anything other than high, as it can reduce performance on modern PCs.
 
-Default setting: **`lighting_ex=high`** (all presets, except Medium Low, Low and Very Low).
+Default setting: based on which preset you are currently using.
 
 * **`lighting_ex=low`**: Phong off.
 * **`lighting_ex=high`**: Phong on.
@@ -236,13 +236,22 @@ Default setting: based on which preset you are currently using.
 
 * **`pyrovision=low`**: Disables Pyrovision vignette and skybox SSAO depth of field.
 * **`pyrovision=medium`**: Enables static Pyrovision vignette.
-* **`pyrovision=high`**: Enables skybox SSAO depth of field, dynamic Pyrovision vignette.
+* **`pyrovision=high`**: Enables skybox SSAO depth of field and dynamic Pyrovision vignette.
+
+### Romevision
+
+Controls Romevision visual effects. For more info, [click here](https://wiki.teamfortress.com/wiki/Romevision).
+
+Default setting: **`romevision=off`** (all presets, except Ultra, High and None).
+
+* **`romevision=off`**: Disables Romevision effects.
+* **`romevision=on`**: Enables Romevision effects.
 
 ### Motion Blur
 
 Controls blurring effect from rotation and movement.
 
-Default setting: **`motion_blur=off`** (all presets).
+Default setting: **`motion_blur=off`** (all presets, except None).
 
 * **`motion_blur=off`**: Turns off motion blur.
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
@@ -277,7 +286,7 @@ Default setting: based on which preset you are currently using.
 
 ### Characters
 
-Adjust characters details.
+Adjusts characters details.
 
 !!! tip
     Facial animations will only work on `lod=medium` and higher.
@@ -336,6 +345,8 @@ Default setting: based on which preset you are currently using.
 
 ### Gibs
 
+Controls gibs created by player explosions.
+
 Default setting: based on which preset you are currently using.
 
 * **`gibs=off`**: Disables gibs.
@@ -345,6 +356,8 @@ Default setting: based on which preset you are currently using.
 * **`gibs=high`**: Default number of gibs, gibs can burn.
 
 ### Silly Gibs
+
+Controls low violence mode.
 
 Default setting: **`sillygibs=auto`** (all presets).
 
@@ -365,7 +378,7 @@ Default setting: based on which preset you are currently using.
 
 ### Ragdolls
 
-Control physics simulation and fading for bodies that spawn on death.
+Controls physics simulation and fading for bodies that spawn on death.
 
 Default setting: based on which preset you are currently using.
 
@@ -395,9 +408,9 @@ Default setting: based on which preset you are currently using.
 
 ### Killstreak Sheens Speed
 
-How fast the animation is on the killstreak sheen glow for weapons.
+Controls how fast the animation is on the killstreak sheen glow for weapons.
 
-Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
+Default setting: **`sheens_speed=slow`** (all presets, except Very Low and None).
 
 * **`sheens_speed=off`**: Skips updating sheen glow animation.
 * **`sheens_speed=slow`**: Slow speed.
@@ -406,7 +419,7 @@ Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
 
 ### Killstreak Sheens Tint Intensity
 
-How intense the color tint is on the killstreak sheen glow for weapons.
+Controls how intense the color tint is on the killstreak sheen glow for weapons.
 
 Default setting: **`sheens_tint=high`** (all presets).
 
@@ -493,7 +506,7 @@ Default setting: **`opengl=default`** (all presets).
 
 ### Player Model
 
-Toggle the live 3D player model in the corner of your screen.
+Toggles the live 3D player model in the corner of your screen.
 
 Default setting: based on which preset you are currently using.
 
@@ -502,16 +515,27 @@ Default setting: based on which preset you are currently using.
 
 ### Panels
 
-Toggle health/player info panels.
+Controls health/player info panels and target ID translucency.
 
-Default setting: **`hud_panels=on`** (all presets, except Very Low).
+Default setting: **`hud_panels=high`** (all presets, except Low and Very Low).
 
-* **`hud_panels=off`**: Disables health/player info panels that appear when looking at a player.
-* **`hud_panels=on`**: Enables health/player info panels that appear when looking at a player.
+* **`hud_panels=off`**: Disables health/player info panels that appear when looking at a player, disables target ID box.
+* **`hud_panels=low`**: Enables health/player info panels that appear when looking at a player, enables opaque target ID box.
+* **`hud_panels=high`**: Enables health/player info panels that appear when looking at a player, enables translucent target ID box.
+
+### Avatars
+
+Controls the display of target ID avatars.
+
+Default setting: **`hud_avatars=friends`** (all presets, except Low and Very Low).
+
+* **`hud_avatars=off`**: Disables avatars.
+* **`hud_avatars=everyone`**: Enables the display of everyone's avatars.
+* **`hud_avatars=friends`**: Enables the display of your friends' avatars.
 
 ### Match HUD
 
-Toggle match status HUD at the top of the screen.
+Toggles match status HUD at the top of the screen.
 
 !!! note
     It's highly recommended to use this module, as the built-in console variable
@@ -548,7 +572,7 @@ Controls banners that appear at the top center of the screen, notifying you of a
 Default setting: **`killstreaks=high`** (all presets, except Low and Very Low).
 
 * **`killstreaks=off`**: Disables killstreak banner.
-* **`killstreaks=low`**: Enables killstreak text with no banner.
+* **`killstreaks=low`**: Enables killstreak opaque banner.
 * **`killstreaks=high`**: Enables killstreak translucent banner.
 
 ### HUD Achievements
@@ -562,7 +586,7 @@ Default setting: **`hud_achievement=on`** (all presets, except Very Low).
 
 ### Console
 
-Controls console.
+Controls developer console.
 
 Default setting: **`console=on`** (all presets, except Very Low).
 

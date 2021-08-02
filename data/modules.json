@@ -277,6 +277,18 @@
         ]
       },
       {
+        "name": "romevision",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
         "name": "motion_blur",
         "values": [
           {
@@ -637,13 +649,30 @@
       {
         "name": "hud_panels",
         "display": "Panels",
-        "type": "switch",
         "values": [
           {
             "value": "off"
           },
           {
-            "value": "on"
+            "value": "low"
+          },
+          {
+            "value": "high"
+          }
+        ]
+      },
+      {
+        "name": "hud_avatars",
+        "display": "Avatars",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "everyone"
+          },
+          {
+            "value": "friends"
           }
         ]
       },
