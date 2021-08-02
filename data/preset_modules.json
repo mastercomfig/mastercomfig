@@ -93,7 +93,7 @@
     "ultra": "high",
     "none": ""
   },
-    "romevision": {
+  "romevision": {
     "default": "off",
     "high": "on",
     "ultra": "on",
@@ -233,7 +233,7 @@
     "very-low": "off",
     "low": "low"
   },
-    "hud_avatars": {
+  "hud_avatars": {
     "default": "friends",
     "very-low": "off",
     "low": "off"
