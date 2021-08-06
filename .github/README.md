@@ -41,7 +41,7 @@ If you are not able to support her through the above methods, that's fine too! Y
 * [Chris](https://chrisdown.name/tf2/) for starting it all
 
 * [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) for
-  continuing what Chris started and helping a bit with my config
+  continuing what Chris started and helping a bit with her config
 
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
 
