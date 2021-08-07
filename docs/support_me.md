@@ -6,6 +6,9 @@ description: Help me work on and improve mastercomfig!
 
 You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or you can gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
+If you are not able to directly support me, I have an Epic Support A Creator code: `mastercoms`, which you can specify in Fortnite, Rocket League and other games on the Epic Games Store.
+In connection with Epic Games’ Support-A-Creator Program, I may receive a commission from certain in-game purchases.
+
 <!-- You can use Ko-fi to get [a config commission](https://ko-fi.com/mastercoms/commissions), where I personally tune a config exactly to your preferences and PC setup. I can also do this via a trade for 3 keys. There is also an addon where I can do advanced scripting at your request (6 keys if paying via trade). -->
 
 <!-- Finally, you can buy early access to the config for a month through [Ko-fi](https://ko-fi.com/mastercoms/shop). This will give you access to more frequent updates released throughout the month, rather than the monthly stable releases of the config. -->
