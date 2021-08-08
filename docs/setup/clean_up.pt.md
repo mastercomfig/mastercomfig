@@ -1,4 +1,4 @@
-**---
+---
 description: Como resetar seu TF2 completamente, incluindo a mastercomfig e outras configurações.
 ...
 
