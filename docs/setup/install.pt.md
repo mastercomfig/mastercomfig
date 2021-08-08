@@ -34,6 +34,7 @@ spy.cfg
 2. Arraste esses arquivos para dentro da pasta `user` que acabou de ser criada
 
 !!! tip
+
     Embora não seja requerido, se você mover outros arquivos (exemplo: `binds.cfg`), você terá que atualizar o comando `exec` de `exec binds.cfg` para `exec user/binds.cfg`.
 
 ## Passos Extras
