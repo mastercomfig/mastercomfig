@@ -5,13 +5,14 @@ on:
     branches: [ develop, release ]
     paths-ignore:
       - 'docs/**'
-      - 'data/**'
       - '.github/**'
       - '.remarkrc'
-      - '**/*.md'
-      - '**/*.yml'
-      - '**/*.json'
+      - '.gitignore'
+      - '**.md'
+      - '**.yml'
+      - '**.json'
       - '!.github/workflows/main.yml'
+      - '!data/**'
     tags: ['**']
   pull_request:
 
