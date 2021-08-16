@@ -1,8 +1,5 @@
 name: docs
 
-env:
-  RANDOM_HASH: ${{ github.repository_owner == 'mastercomfig' && github.event_name != 'pull_request' || hashFiles(docs,mkdocs.yml,.github/workflows/docs.yml) }}
-
 on:
   push:
     branches: [ develop, release ]
@@ -11,8 +8,6 @@ on:
       - mkdocs.yml
       - .github/workflows/docs.yml
   pull_request:
-
-concurrency: ${{ github.repository }}-${{ env.RANDOM_HASH }}
 
 jobs:
   deploy:
@@ -37,6 +32,8 @@ jobs:
         GH_TOKEN: ${{secrets.PRIVATE_REPO_TOKEN}}
     - name: Install dependencies
       run: pip install -Ur docs/requirements.txt
+    - name: Git Pull
+      run: git pull
     - name: Build docs (latest)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/release' }}
       run: mike deploy -up $(git describe --tags --abbrev=0) latest page
