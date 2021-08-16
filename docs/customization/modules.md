@@ -177,6 +177,17 @@ Default setting: based on which preset you are currently using.
 * **`shadows=very_high`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 * **`shadows=ultra`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
 
+### Flashlight
+
+Controls flashlight support. Flashlight is not used on the vanilla TF2, and you should maintain it disabled if you do not use it, but this module is here for convenience.
+
+You might need this to play certain community mods, like Slender.
+
+Default setting: **`flashlight=off`** (all presets, except Ultra and None).
+
+* **`flashlight=off`**: Disables flashlight support.
+* **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `very_low` level.
+
 ### Effects
 
 Controls weapon and other miscellaneous effects.
