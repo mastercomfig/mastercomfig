@@ -33,7 +33,7 @@ jobs:
     - name: Install dependencies
       run: pip install -Ur docs/requirements.txt
     - name: Turnstyle
-      uses: softprops/turnstyle@v1
+      uses: vigneshmsft/turnstyle@initial-wait-seconds
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Git Pull
