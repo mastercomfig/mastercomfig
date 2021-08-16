@@ -182,6 +182,18 @@
         ]
       },
       {
+        "name": "flashlight",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
         "name": "effects",
         "values": [
           {
