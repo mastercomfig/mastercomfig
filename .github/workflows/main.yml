@@ -26,7 +26,6 @@ jobs:
       id: cache
       uses: actions/cache@v2
       with:
-        clean: false
         path: |
           ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
           ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/libvstdlib.so
