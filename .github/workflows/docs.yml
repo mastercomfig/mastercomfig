@@ -34,7 +34,7 @@ jobs:
       run: pip install -Ur docs/requirements.txt
     - name: Turnstyle
       uses: beckermr/turnstyle-python@v1
-      env:
+      with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Git Pull
       run: git pull
