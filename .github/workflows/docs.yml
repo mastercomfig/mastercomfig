@@ -32,10 +32,10 @@ jobs:
         GH_TOKEN: ${{secrets.PRIVATE_REPO_TOKEN}}
     - name: Install dependencies
       run: pip install -Ur docs/requirements.txt
-    - name: Turnstyle
-      uses: beckermr/turnstyle-python@v1
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Wait on release docs
+      if: ${{ github.repository_owner == 'mastercomfig' && github.event_name != 'pull_request' && github.ref == 'refs/heads/develop' }}
+      run:
+        sleep 240
     - name: Update from Remote
       run: git fetch
     - name: Build docs (latest)
