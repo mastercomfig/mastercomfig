@@ -1,5 +1,8 @@
 name: docs
 
+env:
+  RANDOM_HASH: ${{ github.repository == 'mastercomfig/mastercomfig' || hashFiles(docs,mkdocs.yml,.github/workflows/docs.yml) }}
+
 on:
   push:
     branches: [ develop, release ]
@@ -9,7 +12,7 @@ on:
       - .github/workflows/docs.yml
   pull_request:
 
-concurrency: ${{ github.repository }}
+concurrency: ${{ github.repository }}-${{ env.RANDOM_HASH }}
 
 jobs:
   deploy:
