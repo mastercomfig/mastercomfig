@@ -1,7 +1,7 @@
 name: docs
 
 env:
-  RANDOM_HASH: ${{ github.repository == 'mastercomfig/mastercomfig' || hashFiles(docs,mkdocs.yml,.github/workflows/docs.yml) }}
+  RANDOM_HASH: ${{ github.repository_owner == 'mastercomfig' && github.event_name != 'pull_request' || hashFiles(docs,mkdocs.yml,.github/workflows/docs.yml) }}
 
 on:
   push:
