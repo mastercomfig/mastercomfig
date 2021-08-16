@@ -36,8 +36,8 @@ jobs:
       uses: beckermr/turnstyle-python@v1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Git Pull
-      run: git pull
+    - name: Update from Remote
+      run: git fetch
     - name: Build docs (latest)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/release' }}
       run: mike deploy -up $(git describe --tags --abbrev=0) latest page
