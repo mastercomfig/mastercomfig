@@ -132,4 +132,4 @@ One other thing to note is that client interp is determined by whichever is the 
 
 ## Scottish Resistance stickybombs have no outline
 
-Due to a bug in the game, the outlines for Scottish Resistance stickybombs only appears when objective outlines are enabled. You can fix this by adding `outlines=medium` to your `modules.cfg`.
+On some Mastercomfig presets, outlines are disabled. While the outline settings include player and objective outlines, it also includes the outlines for Scottish Resistance stickyboms. You can enable outlines by adding `outlines=medium` to your `modules.cfg`.
