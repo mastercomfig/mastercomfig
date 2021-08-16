@@ -179,7 +179,7 @@ Default setting: based on which preset you are currently using.
 
 ### Flashlight
 
-Controls flashlight support. Flashlight is not used on the vanilla TF2, and you should maintain it disabled if you do not use it, but this module is here for convenience.
+Controls flashlight support. Flashlight is not used on the vanilla TF2, and you should keep it disabled if you do not use it, but this module is here for convenience.
 
 You might need this to play certain community mods, like Slender.
 
