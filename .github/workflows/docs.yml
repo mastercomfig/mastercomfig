@@ -33,9 +33,9 @@ jobs:
     - name: Install dependencies
       run: pip install -Ur docs/requirements.txt
     - name: Turnstyle
-      uses: vigneshmsft/turnstyle@initial-wait-seconds
+      uses: beckermr/turnstyle-python@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Git Pull
       run: git pull
     - name: Build docs (latest)
