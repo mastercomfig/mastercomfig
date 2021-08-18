@@ -2,12 +2,12 @@
 description: Вся помощь и вдохновение, которые помогли mastercomfig стать намного лучше.
 ...
 
-# Credits
+# Похвала
 
 * [Chris](https://chrisdown.name/tf2/) за то что всё это начал
 
 * [Comanglia](https://www.teamfortress.tv/25328/comanglias-config-fps-guide) за
-продолжение того, что начал Chris, и оказание мне помощи
+  продолжение того, что начал Chris, и оказание мне помощи
 
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) за обновление Chris' config
 
