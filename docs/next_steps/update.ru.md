@@ -15,5 +15,4 @@ description: Как обновить mastercomfig до последней вер
 mastercomfig часто обновляется, поэтому, чтобы получить последние улучшения,
 убедитесь что вы часто проверяете здесь наличие новых выпусков, или получайте уведомления
 об обновлениях на [Дискорд](https://discord.gg/CuPb2zV),
-[Группа Steam](https://steamcommunity.com/groups/comfig), или
-[Steam чат](https://s.team/chat/IM8fJTnx).
+[Группа Steam](https://steamcommunity.com/groups/comfig), или [Steam чат](https://s.team/chat/IM8fJTnx).

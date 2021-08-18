@@ -6,6 +6,13 @@ description: Помогите мне в работе и улучшении maste
 
 Вы можете поддержать проект mastercoms используя [Liberapay](https://liberapay.com/mastercoms/) или [Ko-fi](https://ko-fi.com/mastercoms) деньгами, или вы можете подарить предметы через [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
+Если вы не можете поддерживать меня напрямую, у меня есть код [Support-A-Creator](https://www.epicgames.com/fortnite/en-US/news/support-a-creator-faq): `mastercoms`,
+которые можно указать в
+[Fortnite](https://www.epicgames.com/fortnite/en-US/news/support-a-creator-faq),
+[Rocket League](https://www.rocketleague.com/support-a-creator/)
+и другие игры в Epic Games Store (включая бесплатные игры!).
+В связи с программой поддержки Epic Games-A-Creator, я могу получить комиссию от определенных внутриигровых покупок.
+
 <!-- Вы можете использовать [a config commission](https://ko-fi.com/mastercoms/commissions), где лично настрою конфигурацию точно в соответствии с вашими предпочтениями и настройками ПК. Я также могу сделать это при обмене на 3 ключа. Также есть аддон, в котором я могу выполнять расширенные скрипты по вашему запросу (6 ключей при оплате обменом). -->
 
 <!-- Наконец, вы можете купить ранний доступ к конфигурации на месяц через [Ko-fi](https://ko-fi.com/mastercoms/shop). Это даст вам доступ к частым обновлениям, выпускаемым в течение месяца, а не к ежемесячным стабильным выпускам конфигурации. -->
