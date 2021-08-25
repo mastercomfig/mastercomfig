@@ -8,7 +8,7 @@ Right click Team Fortress 2 in your Steam library and click **Properties...**. I
 anything that's in there and paste
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime -hushsteam
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime
 ```
 
 into the box and click ok.
@@ -35,7 +35,7 @@ Read below about optional launch options and choosing your own DXLevel.
 
 ## Recommended Launch Options
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime -hushsteam`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime`
 
 * **-novid** : disables Valve startup logo, saves time
 * **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
@@ -44,7 +44,6 @@ Read below about optional launch options and choosing your own DXLevel.
 * **-particles 1** : limits beam count to the minimum of 512
 * **-precachefontchars** : precaches font rendering for common characters
 * **-noquicktime** : disables initializing Quicktime. If you use the replay rendering feature, do not use this. Does not do anything on Linux
-* **-hushsteam** : For security. Prevents local game servers from registering their IP with Steam
 
 ## Extra Launch Options
 
@@ -56,6 +55,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
+    * **-hushsteam** : For security. Prevents local game servers from registering their IP with Steam
 
 === "macOS"
 
@@ -64,6 +64,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
+    * **-hushsteam** : For security. Prevents local game servers from registering their IP with Steam
     * **-glslcontrolflow** : enables support for GLSL control flow. This allows for 4 world lights. :warning: **Experimental** as it may cause rendering issues
     * **-glmenableclipplanes** : used to disable AMD driver workaround which reduces performance :warning: **Experimental** as it may cause crashes
     * **-snd_openal** : uses OpenAL instead of Mac Audio Queue, which can reduce latency and provide improved audio effects. :warning: **Experimental** as it is unsupported by Valve
@@ -74,6 +75,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-nostartupsound** : disables game music on main menu
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
+    * **-hushsteam** : For security. Prevents local game servers from registering their IP with Steam
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
     * **-gl_enablesamplerobjects** : enables OpenGL sampler objects :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete
     * **-gl_amd_pinned_memory** : uses `AMD_pinned_memory` for efficient device memory handling :warning: **Experimental** as its performance impact (negative or positive) is unknown
