@@ -183,7 +183,7 @@ Controls flashlight support. Flashlight is not used on the vanilla TF2, and you 
 
 You might need this to play certain community mods, like Slender.
 
-Default setting: **`flashlight=off`** (all presets, except Ultra and None).
+Default setting: **`flashlight=off`** (all presets, except Ultra, High and None).
 
 * **`flashlight=off`**: Disables flashlight support.
 * **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `very_low` level.
