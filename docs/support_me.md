@@ -10,7 +10,7 @@ If you are not able to directly support me, I have a [Support-A-Creator](https:/
 which you can specify in
 [Fortnite](https://www.epicgames.com/fortnite/en-US/news/support-a-creator-faq),
 [Rocket League](https://www.rocketleague.com/support-a-creator/)
-and other games on the Epic Games Store (including the free games!).
+and other games on the Epic Games Store.
 In connection with Epic Games’ Support-A-Creator Program, I may receive a commission from certain in-game purchases.
 
 <!-- You can use Ko-fi to get [a config commission](https://ko-fi.com/mastercoms/commissions), where I personally tune a config exactly to your preferences and PC setup. I can also do this via a trade for 3 keys. There is also an addon where I can do advanced scripting at your request (6 keys if paying via trade). -->
