@@ -4,7 +4,7 @@ on:
   push:
     branches: [ develop, release ]
     paths:
-      - docs
+      - docs/**
       - mkdocs.yml
       - .github/workflows/docs.yml
   pull_request:
