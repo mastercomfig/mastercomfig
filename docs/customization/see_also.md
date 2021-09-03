@@ -41,7 +41,7 @@ Here are a few awesome TF2 modifications:
     The yttrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. You may delete it if you want, since it is not used and not needed. Use the **`dynamic_background=preload`** module instead.
   
 * [TF2 Bot Detector](https://github.com/PazerOP/tf2_bot_detector)
-  — Detects cheater bots and automatically initiates votekicks against them
+  — Automatically detects and votekicks cheaters/bots in TF2 casual
 
 * [Transparent Viewmodels](https://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
   — Makes viewmodels translucent
