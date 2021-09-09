@@ -713,4 +713,4 @@ Default setting: **`bot_skill=normal`** (all presets).
 * **`bot_skill=easy`**: Applies easy difficulty and optimizations to bots.
 * **`bot_skill=normal`**: Applies normal difficulty and optimizations to bots.
 * **`bot_skill=hard`**: Applies hard difficulty and optimizations to bots.
-* **`bot_skill=expert`**: Applies expert difficulty and optimizations to bots.
+* **`bot_skill=expert`**: Applies hard difficulty and optimizations to bots.
