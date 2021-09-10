@@ -705,12 +705,12 @@ Default setting: **`move_bind=wasd`** (all presets).
 !!! warning
     This module requires the Bot-Support addon to work.
 
-Sets the bots difficulty to the specified level and optimizes bots for that difficulty.
+Sets the bots difficulty to the specified level and improves bots for that difficulty. This module requires cheats in order to run.
 
 Default setting: **`bot_skill=normal`** (all presets).
 
-* **`bot_skill=none`**: Does not apply any optimization to bots.
-* **`bot_skill=easy`**: Applies easy difficulty and optimizations to bots.
-* **`bot_skill=normal`**: Applies normal difficulty and optimizations to bots.
-* **`bot_skill=hard`**: Applies hard difficulty and optimizations to bots.
-* **`bot_skill=expert`**: Applies hard difficulty and optimizations to bots.
+* **`bot_skill=none`**: Applies default bot settings.
+* **`bot_skill=easy`**: Applies bot improvements relative to easy difficulty.
+* **`bot_skill=normal`**: Applies bot improvements relative to normal difficulty.
+* **`bot_skill=hard`**: Applies bot improvements relative to hard difficulty.
+* **`bot_skill=expert`**: Applies bot improvements relative to expert difficulty.
