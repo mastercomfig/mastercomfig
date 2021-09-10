@@ -29,15 +29,13 @@ If there's something you'd like to run for all of your class configs, you can ad
     You must have the Bot-Support addon to use these commands.
 
 These commands are for bots.
-
-* `bot_add_6s`: Creates bots in the meta class layout and teams of 6s matches.
-* `bot_add_highlander`: Creates bots in the class layout and teams of highlander matches.
+* `bot_add_6s`: Add bots in the meta class layout and teams of 6s matches.
+* `bot_add_highlander`: Add bots in the class layout and teams of highlander matches.
 
 !!! warning
     RED Bots are not supported and do not work properly in MvM. It is recommended to get a custom mod to improve bot functionality in MvM or play with other players.
 
 * `bot_mvm_patch`: Creates a RED flag that no player/bot can pick up. This allows RED bots to move, since MvM maps don't contain a RED flag by default.
-
 ## Game Overrides
 
 Some modules set something called game overrides, which apply settings that override map or in-game only settings that can't be applied at launch.
