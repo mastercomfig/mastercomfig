@@ -132,4 +132,7 @@ One other thing to note is that client interp is determined by whichever is the 
 
 ## Scottish Resistance stickybombs have no outline
 
-On some mastercomfig presets, outlines are disabled. The outline settings include player and objective outlines as well as outlines for Scottish Resistance stickybombs. You can enable outlines by adding `outlines=medium` (or higher) to your `modules.cfg`.
+!!! warning
+    Outlines do not work on DX8
+
+On some Mastercomfig presets, outlines are disabled. The outline settings include player and objective outlines as well as outlines for Scottish Resistance stickybombs. You can enable outlines by adding `outlines=medium` (or higher) to your `modules.cfg`.
