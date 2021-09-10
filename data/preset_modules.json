@@ -51,6 +51,12 @@
     "ultra": "ultra",
     "none": ""
   },
+  "flashlight": {
+    "default": "off",
+    "high": "on",
+    "ultra": "on",
+    "none": ""
+  },
   "effects": {
     "default": "low",
     "medium": "medium",
