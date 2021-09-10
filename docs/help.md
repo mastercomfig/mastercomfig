@@ -6,7 +6,7 @@ description: Find out how you can get help with mastercomfig.
 
 !!! danger
 
-    CUSTOM `MASTERCOMFIG-LIKE` SELF MADE CONFIGS ARE NOT SUPPORTED, IF YOU EXTRACT THE VPK FILES AND USE IT AS .CFG FILES, IT IS NOT MASTERCOMFIG AND IS NOT SUPPORTED! IF YOU CHANGE ANYTHING IN VPK AND THEN REPACK IT, IT IS NOT MASTERCOMFIG AND IS NOT SUPPORTED! IF YOU DIDN'T CLEAN UP PROPERLY AND ARE USING SOME MASTERCOMFIG-COMANGLIA-CHRIS CONFIG FRANKENSTEIN MESS THEN IT IS ALSO NOT SUPPORTED! PLEASE FAMILIARIZE YOURSELF WITH THE DOCUMENTATION PRIOR TO REQUESTING HELP! IT WILL SAVE OUR AND YOUR TIME!
+    Please note that we can only provide support for mastercomfig. Any unsupported modifications or overrides of mastercomfig which do not use the VPK as downloaded from the official site, like using an extracted or packaged version of mastercomfig, modifying mastercomfig files directly, or merging mastercomfig with some other config like Comanglia, or Chris config will not be supported. Please make sure you clean up your installation before switching from an old config to mastercomfig. We also appreciate if you familiarize yourself with the abundant documentation available, for installation, quick fixes, modules and other customization features.
     
 Looking for help with mastercomfig?
 
