@@ -710,7 +710,7 @@ Sets the bots difficulty to the specified level and improves bots for that diffi
 Default setting: **`bot_skill=normal`** (all presets).
 
 * **`bot_skill=none`**: Applies default bot settings.
-* **`bot_skill=easy`**: Applies bot improvements similiar to a new player's skill level.
+* **`bot_skill=easy`**: Applies bot improvements similar to a new player's skill level.
 * **`bot_skill=normal`**: Applies bot improvements similar to an experienced player's skill level.
 * **`bot_skill=hard`**: Applies bot improvements similar to an expert player's skill level.
 * **`bot_skill=expert`**: Applies bot improvements similar to a veteran player's skill level.
