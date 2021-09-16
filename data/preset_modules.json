@@ -157,9 +157,6 @@
   },
   "sprays": {
     "default": "off",
-    "medium-high": "on",
-    "high": "on",
-    "ultra": "on",
     "none": ""
   },
   "sillygibs": {
