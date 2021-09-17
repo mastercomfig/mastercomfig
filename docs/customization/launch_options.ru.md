@@ -8,7 +8,7 @@ description: Настройте Team Fortress 2 и Mastercomfig с помощь�
 все что там есть и вставьте следующее
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime -hushsteam
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -enablefakeip -noquicktime
 ```
 
 в поле и нажмите ОК.
@@ -35,7 +35,7 @@ description: Настройте Team Fortress 2 и Mastercomfig с помощь�
 
 ## Рекомендуемые параметры запуска
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime -hushsteam`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -enablefakeip -noquicktime`
 
 * **-novid** : отключает логотип Valve, более быстрый запуск
 * **-nojoy** : отключает джойстик, более быстрый запуск и меньшее использование памяти
@@ -44,7 +44,6 @@ description: Настройте Team Fortress 2 и Mastercomfig с помощь�
 * **-particles 1** : ограничивает количество лучей минимум 512
 * **-precachefontchars** : предварительно кеширует рендеринг шрифтов для общих символов
 * **-noquicktime** : отключает инициализацию Quicktime. Если используется функция воспроизведения, не используйте ее. Ничего не делает в Linux
-* **-hushsteam** : Для безопасности. Запрещает локальным игровым серверам регистрировать свои IP-адреса в Steam
 
 ## Дополнительные параметры запуска
 
