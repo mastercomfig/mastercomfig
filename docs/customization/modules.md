@@ -692,7 +692,7 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 ### Language
 
 !!! warning
-    This module should be set in `pre_comfig.cfg` instead of `modules.cfg`.
+    This module should ideally be set in `pre_comfig.cfg` instead of `modules.cfg`.
 
 Controls the language mastercomfig outputs with.
 
@@ -702,9 +702,10 @@ Default setting: **`lang=en`** (all presets).
 * **`lang=pt`**: Português (Portuguese)
 * **`lang=ru`**: Pусский (Russian)
 * **`lang=es`**: Español (Spanish)
+* **`lang=pl`**: Polskie (Polish)
 * **`lang=fr`**: Français (French)
-* **`lang=hr`**: Hrvatski (Croatian)
 * **`lang=cs`**: Česká (Czech)
+* **`lang=hr`**: Hrvatski (Croatian)
 
 ### Movement Binds
 

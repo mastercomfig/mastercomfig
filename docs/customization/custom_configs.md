@@ -101,6 +101,18 @@ For example, you could have different class configs for Scout in competitive and
 
 If you want to run something only the first time you spawn and never run again while you keep the game open use the `game_overrides_once_c` alias.
 
+
+## Advanced Customization
+
+When diving deep into customization the core of mastercomfig, you may find it useful to run things directly before and after mastercomfig's `comfig.cfg`, which provides core functionality and aliases.
+
+You can use `user/pre_comfig.cfg` to run things before `comfig.cfg`, and `user/post_comfig.cfg` to run things after `comfig.cfg`.
+
+Examples of `user/pre_comfig.cfg` uses can be things like customizing your preset like detailed above, or turning on debugging options to monitor the launch process of mastercomfig itself.
+
+Uses of `user/post_comfig.cfg` are rarer, but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, or customizing the built-in ones, and more!
+
+
 ## Optional User Config Template
 
 !!! warning

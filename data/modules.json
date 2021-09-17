@@ -872,6 +872,44 @@
         ]
       },
       {
+        "name": "lang",
+        "display": "mastercomfig Language",
+        "values": [
+          {
+            "value": "en",
+            "display": "English"
+          },
+          {
+            "value": "pt",
+            "display": "Português (Portuguese)"
+          },
+          {
+            "value": "ru",
+            "display": "Pусский (Russian)"
+          },
+          {
+            "value": "es",
+            "display": "Español (Spanish)"
+          },
+          {
+            "value": "pl",
+            "display": "Polskie (Polish)"
+          },
+          {
+            "value": "fr",
+            "display": "Français (French)"
+          },
+          {
+            "value": "cs",
+            "display": "Česká (Czech)"
+          },
+          {
+            "value": "hr",
+            "display": "Hrvatski (Croatian)"
+          }
+        ]
+      },
+      {
         "name": "logo",
         "type": "switch",
         "values": [
