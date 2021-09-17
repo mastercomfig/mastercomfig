@@ -38,6 +38,7 @@ nav:
       - Quick Fixes: next_steps/quick_fixes.md
       - Update: next_steps/update.md
   - TF2 Documentation:
+      - TF2 Documentation: tf2/README.md
       - Misconceptions: tf2/misconceptions.md
       - Console Variables - Windows: tf2/cvarlist_win.md
       - Console Variables - Linux: tf2/cvarlist_linux.md
@@ -45,7 +46,6 @@ nav:
       - Launch Options - Windows: tf2/launchopts_win.md
       - Launch Options - Linux: tf2/launchopts_linux.md
       - Silly Launch Options: tf2/silly_launch_options.md
-      - Generating TF2 Data: tf2/README.md
 markdown_extensions:
   - abbr
   - admonition

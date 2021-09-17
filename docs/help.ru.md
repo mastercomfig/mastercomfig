@@ -8,8 +8,8 @@ description: Узнайте, как получить помощь с mastercomfi
 
 Ознакомьтесь с этими ресурсами:
 
-* [Руководство по быстрым исправлениям](https://docs.mastercomfig.com/page/next_steps/quick_fixes/)
-* [Инструкции по установке](https://docs.mastercomfig.com/page/setup/clean_up/)
+* [Руководство по быстрым исправлениям](next_steps/quick_fixes.md)
+* [Инструкции по установке](setup/clean_up.md)
 
 Все еще не можете найти ответ и хотите попросить о помощи?
 

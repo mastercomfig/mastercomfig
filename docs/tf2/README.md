@@ -1,14 +1,14 @@
-# TF2 documentation generation
+# TF2 Documentation
 
 ## Premade lists
 
 You can view premade cvarlists, launch options lists and hidden cvarlists.
 
-* [Windows cvarlist](https://docs.mastercomfig.com/page/tf2/cvarlist_win)
-* [Windows Launch option list](https://docs.mastercomfig.com/page/tf2/launchopts_win)
-* [Linux cvarlist](https://docs.mastercomfig.com/page/tf2/cvarlist_linux)
-* [Linux launch option list](https://docs.mastercomfig.com/page/tf2/launchopts_linux)
-* [Hidden cvarlist](https://docs.mastercomfig.com/page/tf2/hiddencvars)
+* [Windows cvarlist](tf2/cvarlist_win.md)
+* [Windows Launch option list](tf2/launchopts_win.md)
+* [Linux cvarlist](tf2/cvarlist_linux.md)
+* [Linux launch option list](tf2/launchopts_linux.md)
+* [Hidden cvarlist](tf2/hiddencvars.md)
 
 ## Making your own cvar list
 
@@ -25,4 +25,4 @@ Use the [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262) So
 
 On Windows you can use the [GetLaunchOptions.bat](https://pastebin.com/bhQrywES) script.
 
-On Linux you can use following commands: `find . -type f \( -name "*.so" -o -name "hl2_linux" \) -print0 | xargs -0 strings | grep "^\-[A-Za-z]" | awk 'NF==1' | sort -u > launch_options.txt`
+On Linux you can use the following commands: `find . -type f \( -name "*.so" -o -name "hl2_linux" \) -print0 | xargs -0 strings | grep "^\-[A-Za-z]" | awk 'NF==1' | sort -u > launch_options.txt`

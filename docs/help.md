@@ -12,8 +12,8 @@ Looking for help with mastercomfig?
 
 Check these resources out:
 
-* [Quick Fixes guide](https://docs.mastercomfig.com/page/next_steps/quick_fixes/)
-* [Setup Instructions](https://docs.mastercomfig.com/page/setup/clean_up/)
+* [Quick Fixes guide](next_steps/quick_fixes.md)
+* [Setup Instructions](setup/clean_up.md)
 
 Still can't find your answer and want to ask for help?
 

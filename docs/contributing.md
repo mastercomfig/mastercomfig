@@ -111,10 +111,10 @@ Put your launch option in the appropriate section and if it's in the
 
 Here's lists of launch options to help you out:
 
-* [Windows](https://docs.mastercomfig.com/page/tf2/launchopts_win/)
-* [Linux](https://docs.mastercomfig.com/page/tf2/launchopts_linux/)
+* [Windows](tf2/launchopts_win.md)
+* [Linux](tf2/launchopts_linux.md)
 
-Information about generating them can be found [here](https://docs.mastercomfig.com/page/tf2/#making-your-own-launch-options-list).
+Information about generating them can be found [here](tf2/README.md#making-your-own-launch-options-list).
 
 #### Comfig and presets
 
@@ -135,10 +135,10 @@ punctuation unless using multiple sentences.
 
 ##### CVarlist
 
-ConVars and commands are found using [these instructions](https://docs.mastercomfig.com/page/tf2/#making-your-own-cvar-list).
+ConVars and commands are found using [these instructions](tf2/README.md#making-your-own-cvar-list).
 
-* [Windows](https://docs.mastercomfig.com/page/tf2/cvarlist_win/)
-* [Linux](https://docs.mastercomfig.com/page/tf2/cvarlist_linux/)
+* [Windows](tf2/cvarlist_win.md)
+* [Linux](tf2/cvarlist_linux.md)
 
 Add your alternatives uncommented in the applicable presets/addons, or use modules.
 
