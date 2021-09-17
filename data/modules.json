@@ -873,7 +873,7 @@
       },
       {
         "name": "lang",
-        "display": "mastercomfig's Language",
+        "display": "mastercomfig Language",
         "values": [
           {
             "value": "en",
