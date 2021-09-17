@@ -4,11 +4,11 @@
 
 You can view premade cvarlists, launch options lists and hidden cvarlists.
 
-* [Windows cvarlist](tf2/cvarlist_win.md)
-* [Windows Launch option list](tf2/launchopts_win.md)
-* [Linux cvarlist](tf2/cvarlist_linux.md)
-* [Linux launch option list](tf2/launchopts_linux.md)
-* [Hidden cvarlist](tf2/hiddencvars.md)
+* [Windows cvarlist](cvarlist_win.md)
+* [Windows Launch option list](launchopts_win.md)
+* [Linux cvarlist](cvarlist_linux.md)
+* [Linux launch option list](launchopts_linux.md)
+* [Hidden cvarlist](hiddencvars.md)
 
 ## Making your own cvar list
 
