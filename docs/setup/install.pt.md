@@ -11,7 +11,7 @@ description: Passo a passo para instalar a mastercomfig e configurar ela correta
 5. Clique em Navegar.
 6. Navegue até a pasta `tf/custom`.
 7. Arraste os arquivos VPK para dentro desta pasta.
-8. Utilize essas opções de arranque: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`. Para mais informações, leia o  [guia de customização de opções de arranque](../customization/launch_options.pt.md).
+8. Utilize essas opções de arranque: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`. Para mais informações, leia o  [guia de customização de opções de arranque](../customization/launch_options.md).
 
 ## Configurações customizadas
 
@@ -47,9 +47,9 @@ Está tendo algum problema? Veja o [Guia de Concertos Rápidos](../next_steps/tr
 
 Quer personalizar o TF2 ainda mais?
 
-* Veja como você pode [customizar opções individuais](../customization/custom_configs.pt.md)
-* Quer customizar um monte de opções facilmente? [Dê uma olhada no sistema de módulos](../customization/modules.pt.md)
-* Ajuste suas [opções de arranque](../customization/launch_options.pt.md) para alcançar uma melhor performace e qualidade no seu sistema
-* Se inspire pelas [configurações customizadas](../customization/custom_configs.pt.md) de outras pessoas.
-* Dê uma olhada em algumas outras [ótimas modificações para o TF2](../customization/see_also.pt.md)
-* [Otimize o seu SO](../os/index.pt.md) Para espremer ainda mais performace
+* Veja como você pode [customizar opções individuais](../customization/custom_configs.md)
+* Quer customizar um monte de opções facilmente? [Dê uma olhada no sistema de módulos](../customization/modules.md)
+* Ajuste suas [opções de arranque](../customization/launch_options.md) para alcançar uma melhor performace e qualidade no seu sistema
+* Se inspire pelas [configurações customizadas](../customization/custom_config_list.md) de outras pessoas.
+* Dê uma olhada em algumas outras [ótimas modificações para o TF2](../customization/see_also.md)
+* [Otimize o seu SO](../os/index.md) Para espremer ainda mais performace
