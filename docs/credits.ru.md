@@ -21,7 +21,7 @@ description: Вся помощь и вдохновение, которые по�
 
 * Ступень для [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262)
 
-* AveYo за [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
+* AveYo за [GetLaunchOptions.bat](https://pastebin.com/bhQrywES)
 
 * Tiagoquix за постоянную поддержку и исправление ошибок
 
