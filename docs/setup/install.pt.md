@@ -41,7 +41,7 @@ spy.cfg
 
 ### Concertos Rápidos
 
-Está tendo algum problema? Veja o [Guia de Concertos Rápidos](../next_steps/troubleshoot.pt.md) para auxilio.
+Está tendo algum problema? Veja o [Guia de Concertos Rápidos](../next_steps/troubleshoot.md) para auxilio.
 
 ### Customização
 
