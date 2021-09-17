@@ -44,7 +44,7 @@ For example, `index.ru.md` or `logo.ru.png`.
 
 When referencing content, like embedding an image or linking another page, you can refer to the base content directly without any language.
 
-For example ![image](logo.png) or [link](./folder/page.md). It will automatically reference the translated version, or fallback to the default if not found.
+For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automatically reference the translated version, or fallback to the default if not found.
 
 ## Support
 
