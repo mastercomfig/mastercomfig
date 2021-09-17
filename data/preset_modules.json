@@ -222,6 +222,9 @@
   "fpscap": {
     "default": "1000"
   },
+  "vsync": {
+    "default": "off"
+  },
   "opengl": {
     "default": "default"
   },

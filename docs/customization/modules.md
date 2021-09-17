@@ -617,6 +617,21 @@ Default setting: **`fpscap=1000`** (all presets).
 * **`fpscap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
 * **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
 
+### VSync
+
+Controls VSync, which removes screen tearing by syncing FPS to your monitor's refresh rate, at the cost of increased input latency.
+
+!!! warning
+    If your FPS does not reach your refresh rate, it will drop to the next lowest divisor (for example, 30FPS with a 60Hz monitor).
+
+!!! tip
+    It's recommended to keep this off, and use NVidia Adaptive VSync, which keeps VSync on only when the framerate is high enough, or NVidia Fast VSync (Enhanced Sync on AMD), which drops frames which would cause tearing, while having a much lower input latency compared to traditional VSync.
+
+Default setting **`vsync=off`** (all presets).
+
+* **`vsync=off`**: Disables VSync.
+* **`vsync=on`**: Enables VSync.
+
 ### OpenGL
 
 Controls whether mastercomfig should apply OpenGL optimizations or not.
@@ -831,19 +846,20 @@ Default setting: **`mod_support=on`** (all presets).
 
 ### Party Join Mode
 
-Controls the privacy of your Casual/Competitive party.
+Controls the privacy of your Casual/Competitive matchmaking party.
 
 !!! warning
-    Leaving your party open can result in lesser known friends to join your party and spam party chat, causing lag, sound spam and other disruptions.
+    The Friends Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID.
+    Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
 
 * **CPU usage:** none
 * **GPU usage:** none
 
 Default setting: **`party_mode=request`** (all presets).
 
-* **`party_mode=open`**: Open party (your friends can join anytime).
-* **`party_mode=request`**: Request-only party (your friends can only join if they request or if you invite them).
-* **`party_mode=invite`**: Invite-only party (your friends can only join if you invite them).
+* **`party_mode=open`**: Open party (people can join anytime).
+* **`party_mode=request`**: Request-only party (people can only join if you accept their request or if you invite them).
+* **`party_mode=invite`**: Invite-only party (people can only join if you invite them).
 
 ### Logo
 

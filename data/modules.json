@@ -629,6 +629,19 @@
         "values": ["powersaver", "30", "60", "75", "120", "144", "160", "165", "180", "200", "240", "300", "360", "400", "1000", "unlimited"]
       },
       {
+        "name": "vsync",
+        "display": "VSync",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
         "name": "opengl",
         "display": "OpenGL",
         "values": [
