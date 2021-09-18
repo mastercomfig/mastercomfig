@@ -899,7 +899,7 @@
       },
       {
         "name": "lang",
-        "display": "mastercomfig Language",
+        "display": "Language",
         "values": [
           {
             "value": "en",
