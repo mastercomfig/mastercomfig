@@ -26,7 +26,7 @@ for F in ../../config/cfg/presets/*; do
         printf "exec comfig/addons.cfg;"
         printf "modules_c;"
         printf "run_modules;"
-        printf "exec comfig/echo.cfg";
+        printf "exec comfig/echo.cfg;"
         printf "exec comfig/addons.cfg;"
         printf "autoexec_c;"
         printf "exec comfig/finalize.cfg"
