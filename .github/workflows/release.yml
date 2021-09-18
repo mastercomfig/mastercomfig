@@ -18,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Switch to release
+      uses: actions/checkout@v2
+      with:
+        ref: 'release'
     - name: Update release info
       run: |
         {
@@ -26,15 +30,13 @@ jobs:
           echo "${{ github.event.inputs.hours }}"
         } > dev/info.txt
     - name: Commit release info
-      run: git commit -am "release ${{ github.event.inputs.version }}"
-    - name: Switch to release
-      uses: actions/checkout@v2
-      with:
-        ref: 'release'
-    - name: Merge release
+      run: |
+        git config user.email "mastercoms@tuta.io"
+        git config user.name "mastercoms"
+        git commit -am "release ${{ github.event.inputs.version }}"
+    - name: Merge ref into release
       run: git merge ${{ github.ref }}
     - name: Tag release
       run: git tag ${{ github.event.inputs.version }}
     - name: Push release
       run: git push --tags
-      
