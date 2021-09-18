@@ -35,7 +35,7 @@ jobs:
         git config user.name "mastercoms"
         git commit -am "release ${{ github.event.inputs.version }}"
     - name: Merge ref into release
-      run: git merge ${GITHUB_REF##*/}
+      run: git merge origin/${GITHUB_REF##*/}
     - name: Tag release
       run: git tag ${{ github.event.inputs.version }}
     - name: Push release
