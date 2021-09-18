@@ -40,6 +40,7 @@ description: A list of all launch options on TF2 for Windows.
 -dumpvidmemstats
 -dxlevel
 -edit
+-enablefakeip
 -endgamevid
 -etwprofile
 -exit
