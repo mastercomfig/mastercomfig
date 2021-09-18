@@ -772,7 +772,7 @@ This module is disabled by default, since server ads can cause lag spikes.
 * **CPU usage:** low
 * **GPU usage:** low
 
-Defualt setting: **`htmlmotd=off`** (all presets).
+Default setting: **`htmlmotd=off`** (all presets).
 
 * **`htmlmotd=off`**: Disables HTML MOTDs.
 * **`htmlmotd=on`**: Enables HTML MOTDs.
