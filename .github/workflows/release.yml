@@ -27,6 +27,7 @@ jobs:
           echo "${{ github.event.inputs.version }}"
           echo "${{ github.event.inputs.highlights }}"
           echo "${{ github.event.inputs.hours }}"
+          echo ""
         } > dev/info.txt
     - name: Commit release info
       run: |
