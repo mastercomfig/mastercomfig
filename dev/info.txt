@@ -1,4 +1,4 @@
-9.6.0
-major improvements and a variety of fixes
-46
+9.6.1
+bug fixes and bloat removal
+5
 
