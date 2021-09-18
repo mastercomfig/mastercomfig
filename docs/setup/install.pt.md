@@ -11,7 +11,7 @@ description: Passo a passo para instalar a mastercomfig e configurar ela correta
 5. Clique em Navegar.
 6. Navegue até a pasta `tf/custom`.
 7. Arraste os arquivos VPK para dentro desta pasta.
-8. Utilize essas opções de arranque: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -enablefakeip -noquicktime`. Para mais informações, leia o  [guia de customização de opções de arranque](../customization/launch_options.md).
+8. Utilize essas opções de arranque: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime`. Para mais informações, leia o  [guia de customização de opções de arranque](../customization/launch_options.md).
 
 ## Configurações customizadas
 
