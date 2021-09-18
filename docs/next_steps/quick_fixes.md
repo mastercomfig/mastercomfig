@@ -139,5 +139,5 @@ On some mastercomfig presets, outlines are disabled. The outline settings includ
 
 ## I switched from Very Low to another preset but some settings persist
 
-Run `very_low_reset` on the console. It will reset the remaining settings that were left saved in your game and reset them to their default values.
+Run `very_low_reset` on the console. It will reset the remaining settings that were left saved in your game.
 Please note that this will change some personal preferences.
