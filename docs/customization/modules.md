@@ -767,6 +767,9 @@ Default setting: **`console=on`** (all presets, except Very Low).
 
 Controls the outlines that appear through walls for players, some objectives (payload cart, CTF briefcase), and the Scottish Resistance's stickybombs.
 
+!!! warning
+    Outlines do not work on DirectX 8.
+
 * **CPU usage:** high
 * **GPU usage:** high
 
