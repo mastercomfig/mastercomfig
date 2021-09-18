@@ -58,7 +58,7 @@ description: A list of all mastercomfig features.
 * Tuned client view smoothing
 * Increased client timeout
 * Increased max file size for extra content
-* Easy templates for customizing network settings per class
+* Templated customization of network settings per class
 * Reduced overall overhead of networking system
 
 ## Sound

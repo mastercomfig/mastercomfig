@@ -632,18 +632,6 @@ Default setting **`vsync=off`** (all presets).
 * **`vsync=off`**: Disables VSync.
 * **`vsync=on`**: Enables VSync.
 
-### OpenGL
-
-Controls whether mastercomfig should apply OpenGL optimizations or not.
-
-* **CPU usage:** none
-* **GPU usage:** none
-
-Default setting: **`opengl=default`** (all presets).
-
-* **`opengl=skip`**: Skips applying OpenGL optimizations. Helpful for users who run on Windows, which does not have OpenGL.
-* **`opengl=default`**: Applies OpenGL optimizations.
-
 ## HUD modules
 
 ### Player Model

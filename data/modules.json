@@ -640,18 +640,6 @@
             "value": "on"
           }
         ]
-      },
-      {
-        "name": "opengl",
-        "display": "OpenGL",
-        "values": [
-          {
-            "value": "skip"
-          },
-          {
-            "value": "default"
-          }
-        ]
       }
     ]
   },

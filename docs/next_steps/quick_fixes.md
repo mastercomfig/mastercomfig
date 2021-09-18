@@ -107,10 +107,6 @@ Grappling hooks use ropes to show in-game. To get them to work, you have to set 
 
 Ignore these, as these happen in a clean TF2 installation and only Valve can fix them.
 
-## "Unknown command gl_\*" errors in console
-
-mastercomfig sets some OpenGL-related cvars, which are only available on Linux and macOS. Thus, these errors appear a few times when using mastercomfig on Windows. These errors are harmless and can be ignored safely. However, you can disable running the commands by putting `opengl=skip` into your `modules.cfg`.
-
 ## I want another interp value
 
 **To summarize:** mastercomfig has the (currently known) best interp values, and you really shouldn't mess with them unless you know _exactly_ what you're doing.
@@ -140,4 +136,6 @@ On some mastercomfig presets, outlines are disabled. The outline settings includ
 ## I switched from Very Low to another preset but some settings persist
 
 Run `very_low_reset` on the console. It will reset the remaining settings that were left saved in your game.
-Please note that this will change some personal preferences.
+
+Please note that running this may reset some personal preferences back to default.
+

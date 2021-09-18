@@ -14,6 +14,10 @@ This is an addon which removes Pyroland map textures. It is used in the `low` an
 
 This is an addon which tweaks mouse settings for stabler and consistent mouse input.
 
+### mastercomfig-opengl-addon
+
+This is an addon which provides additional optimizations for OpenGL (macOS and Linux)
+
 ### mastercomfig-lowmem-addon
 
 This is an addon which aggressively reduces memory usage for low memory systems (2GB and lower).
