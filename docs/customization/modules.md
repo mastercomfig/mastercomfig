@@ -890,27 +890,6 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 * **`logo=off`**: Does not print logo in console on startup.
 * **`logo=on`**: Prints logo in console on startup.
 
-### Language
-
-Controls the language mastercomfig outputs with.
-
-!!! warning
-    This module should ideally be set in `pre_comfig.cfg` instead of `modules.cfg`.
-
-* **CPU usage:** none
-* **GPU usage:** none
-
-Default setting: **`lang=en`** (all presets).
-
-* **`lang=en`**: English
-* **`lang=pt`**: Português (Portuguese)
-* **`lang=ru`**: Pусский (Russian)
-* **`lang=es`**: Español (Spanish)
-* **`lang=pl`**: Polskie (Polish)
-* **`lang=fr`**: Français (French)
-* **`lang=cs`**: Česká (Czech)
-* **`lang=hr`**: Hrvatski (Croatian)
-
 ### Movement Binds
 
 Changes the keys that are used to move while the Null-Canceling Movement addon is installed.
