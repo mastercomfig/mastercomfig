@@ -779,7 +779,7 @@
           }
         ]
       },
-            {
+      {
         "name": "htmlmotd",
         "display": "HTML MOTD",
         "type": "switch",
