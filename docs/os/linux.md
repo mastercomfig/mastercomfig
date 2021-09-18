@@ -43,6 +43,3 @@ on TF2 as the TF2 launcher script shades in some libraries.
 Go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0`, and `libtcmalloc_minimal.so.4`.
 Now, Team Fortress 2 will not be able to load these libraries. The system will have to
 provide them, so make sure you have the 32-bit/multilib versions of `libtcmalloc` and `sdl2`.
-
-It's unknown if you can be VAC banned for this, but it is modifying libraries, which should be
-restricted by VAC. So, do it at your own risk. I am not responsible for any VAC bans you may receive.
