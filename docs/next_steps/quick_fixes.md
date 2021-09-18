@@ -129,3 +129,15 @@ cl_interp x
 ```
 
 One other thing to note is that client interp is determined by whichever is the greater of cl_interp_ratio divided by cl_updaterate, and the value of cl_interp. cl_interp_ratio and cl_interp have no interaction beyond that.
+
+## Scottish Resistance stickybombs have no outline
+
+!!! warning
+    Outlines of any kind do not work on DirectX 8.
+
+On some mastercomfig presets, outlines are disabled. The outline settings include player and objective outlines as well as outlines for Scottish Resistance stickybombs. You can enable outlines by adding `outlines=medium` (or higher) to your `modules.cfg`.
+
+## I switched from Very Low to another preset but some settings persist
+
+Run `very_low_reset` on the console. It will reset the remaining settings that were left saved in your game and reset them to their default values.
+Please note that this will change some personal preferences.

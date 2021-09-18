@@ -7,7 +7,7 @@
     "very-low": "congestion"
   },
   "snapshot_buffer": {
-    "default": "low"
+    "default": "safe"
   },
   "packet_size": {
     "default": "speed"
@@ -51,6 +51,12 @@
     "ultra": "ultra",
     "none": ""
   },
+  "flashlight": {
+    "default": "off",
+    "high": "on",
+    "ultra": "on",
+    "none": ""
+  },
   "effects": {
     "default": "low",
     "medium": "medium",
@@ -91,6 +97,12 @@
     "medium-high": "medium",
     "high": "high",
     "ultra": "high",
+    "none": ""
+  },
+  "romevision": {
+    "default": "off",
+    "high": "on",
+    "ultra": "on",
     "none": ""
   },
   "motion_blur": {
@@ -145,9 +157,6 @@
   },
   "sprays": {
     "default": "off",
-    "medium-high": "on",
-    "high": "on",
-    "ultra": "on",
     "none": ""
   },
   "sillygibs": {
@@ -213,6 +222,9 @@
   "fpscap": {
     "default": "1000"
   },
+  "vsync": {
+    "default": "off"
+  },
   "opengl": {
     "default": "default"
   },
@@ -223,8 +235,14 @@
     "none": ""
   },
   "hud_panels": {
-    "default": "on",
-    "very-low": "off"
+    "default": "high",
+    "very-low": "off",
+    "low": "low"
+  },
+  "hud_avatars": {
+    "default": "friends",
+    "very-low": "off",
+    "low": "off"
   },
   "match_hud": {
     "default": "on",
@@ -250,6 +268,9 @@
   "console": {
     "default": "on",
     "very-low": "off"
+  },
+  "htmlmotd": {
+    "default": "off"
   },
   "outlines": {
     "default": "low",

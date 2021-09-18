@@ -2,15 +2,17 @@ name: CI
 
 on:
   push:
-    branches: [ develop, release ]
+    branches: [ develop ]
     paths-ignore:
       - 'docs/**'
       - '.github/**'
-      - '!.github/workflows/**'
       - '.remarkrc'
-      - '*.md'
-      - '*.yml'
-      - '*.json'
+      - '.gitignore'
+      - '**.md'
+      - '**.yml'
+      - '**.json'
+      - '!.github/workflows/main.yml'
+      - '!data/**'
     tags: ['**']
   pull_request:
 
@@ -26,7 +28,6 @@ jobs:
       id: cache
       uses: actions/cache@v2
       with:
-        clean: false
         path: |
           ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
           ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/libvstdlib.so

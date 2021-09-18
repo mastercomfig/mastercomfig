@@ -40,6 +40,12 @@ Add a `.[lang]` before the file type.
 
 For example, `index.ru.md` or `logo.ru.png`.
 
+### Referencing content in a localized page
+
+When referencing content, like embedding an image or linking another page, you can refer to the base content directly without any language.
+
+For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automatically reference the translated version, or fallback to the default if not found.
+
 ## Support
 
 You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV), [Steam Discussions](https://steamcommunity.com/groups/comfig/discussions) or [teamfortress.tv](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).

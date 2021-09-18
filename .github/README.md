@@ -50,7 +50,7 @@ If you are not able to support me through the above methods, that's fine too! Yo
 
 * step for [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262)
 
-* AveYo for [GetLaunchOptions.bat](https://github.com/AveYo/D-OPTIMIZER/blob/archive/GetLaunchOptions.bat)
+* AveYo for [GetLaunchOptions.bat](https://pastebin.com/bhQrywES)
 
 * Tiagoquix for continued support and bug fixes
 

@@ -46,14 +46,17 @@ a override alias, which is run during game overrides, and an override option, wh
 
 * `lighting`: Uses `lightmaps_override` to control if lighting is blocky or smoothed out
     * `lightmaps_off`: Makes lighting blocky
+
 * `shadows`: Uses `shadowlod_override` to control the model quality shadows render with
     * `shadowlod_low`: Uses the lowest model quality to render shadows
     * `shadowlod_high`: Uses the highest model quality (at root LOD) to render shadows
+
 * `water`: Uses `cheap_water_override` to control the low quality water fade distance
     * `cheap_water_full`: Always uses fully cheap water
     * `cheap_water_partial`: Always uses partially cheap water, uses fully cheap water at a short distance
     * `cheap_water_minimal`: Uses partially cheap water at a short distance, uses fully cheap water at a further distance
     * `cheap_water_never`: Never uses any kind of cheap water
+
 * `props`: Uses `detail_props_override` to control grass/detail prop rendering and its render distance
     * `detail_props_none`: Disables detail props
     * `detail_props_medium`: Enables detail props, at a far distance, with no fade in
@@ -65,7 +68,7 @@ Or, if you are using a lower water module, but do not want to use cheap water, y
 
 ## Network Aliases
 
-These aliases are used by mastercomfig to apply network settings per class.
+These aliases are used by mastercomfig to apply network settings per class (as listed below) when using the `snapshot_buffer=auto` module level.
 
 You can run them manually in your class config if you play a subclass, like Demoknight or Huntsman.
 
@@ -113,6 +116,18 @@ You can also get creative and use the aforementioned aliases to change your clas
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
 
 If you want to run something only the first time you spawn and never run again while you keep the game open use the `game_overrides_once_c` alias.
+
+
+## Advanced Customization
+
+When diving deep into customization the core of mastercomfig, you may find it useful to run things directly before and after mastercomfig's `comfig.cfg`, which provides core functionality and aliases.
+
+You can use `user/pre_comfig.cfg` to run things before `comfig.cfg`, and `user/post_comfig.cfg` to run things after `comfig.cfg`.
+
+Examples of `user/pre_comfig.cfg` uses can be things like customizing your preset like detailed above, or turning on debugging options to monitor the launch process of mastercomfig itself.
+
+Uses of `user/post_comfig.cfg` are rarer, but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, or customizing the built-in ones, and more!
+
 
 ## Optional User Config Template
 

@@ -1,3 +1,4 @@
 9.6.0
-performance optimizations and bug fixes
-5
+major improvements and a variety of fixes
+46
+

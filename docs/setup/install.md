@@ -11,7 +11,7 @@ description: Steps on how to install mastercomfig and get it set up properly.
 5. Click Browse...
 6. Navigate to the `tf/custom` folder.
 7. Drag the VPK files into this folder.
-8. Set these launch options: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`. For more information, read the [launch options customization guide](../customization/launch_options.md).
+8. Set these launch options: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -enablefakeip -noquicktime`. For more information, read the [launch options customization guide](../customization/launch_options.md).
 
 ## Custom configs
 
@@ -49,6 +49,6 @@ Want to personalize your TF2 even further?
 * See how you can [customize individual settings](../customization/custom_configs.md)
 * Want to easily customize a bunch of settings at once? [Check out the modules system](../customization/modules.md)
 * Tune your [launch options](../customization/launch_options.md) to get better performance and quality for your system
-* Get inspired by other people's [custom configs](../customization/custom_configs.md)
+* Get inspired by other people's [custom configs](../customization/custom_config_list.md)
 * Take a look at some other [great TF2 modifications](../customization/see_also.md)
 * [Optimize your OS](../os/index.md) to squeeze out even more performance

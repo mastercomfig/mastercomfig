@@ -44,6 +44,12 @@ Add a `.[lang]` before the file type.
 
 For example, `index.ru.md` or `logo.ru.png`.
 
+### Referencing content in a localized page
+
+When referencing content, like embedding an image or linking another page, you can refer to the base content directly without any language.
+
+For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automatically reference the translated version, or fallback to the default if not found.
+
 ## Support
 
 You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV), [Steam Discussions](https://steamcommunity.com/groups/comfig/discussions) or [teamfortress.tv](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
@@ -105,10 +111,10 @@ Put your launch option in the appropriate section and if it's in the
 
 Here's lists of launch options to help you out:
 
-* [Windows](https://docs.mastercomfig.com/page/tf2/launchopts_win/)
-* [Linux](https://docs.mastercomfig.com/page/tf2/launchopts_linux/)
+* [Windows](tf2/launchopts_win.md)
+* [Linux](tf2/launchopts_linux.md)
 
-Information about generating them can be found [here](https://docs.mastercomfig.com/page/tf2/#making-your-own-launch-options-list).
+Information about generating them can be found [here](tf2/README.md#making-your-own-launch-options-list).
 
 #### Comfig and presets
 
@@ -129,10 +135,10 @@ punctuation unless using multiple sentences.
 
 ##### CVarlist
 
-ConVars and commands are found using [these instructions](https://docs.mastercomfig.com/page/tf2/#making-your-own-cvar-list).
+ConVars and commands are found using [these instructions](tf2/README.md#making-your-own-cvar-list).
 
-* [Windows](https://docs.mastercomfig.com/page/tf2/cvarlist_win/)
-* [Linux](https://docs.mastercomfig.com/page/tf2/cvarlist_linux/)
+* [Windows](tf2/cvarlist_win.md)
+* [Linux](tf2/cvarlist_linux.md)
 
 Add your alternatives uncommented in the applicable presets/addons, or use modules.
 
@@ -161,21 +167,18 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 
 ##### Modules
 
-If your settings affect quality in any way, create a new module or modify
-the existing modules if applicable, then add documentation for it at the
-[modules docs page](https://docs.mastercomfig.com/page/customization/modules/).
+If your settings affect quality in any way, create a new module or modify the existing modules if applicable.
 
-The first part of adding modules is a multi-step process in `config/mastercomfig/cfg/comfig/comfig.cfg`:
+If you want to create a new module, you might need to modify all the following files to add your new module into mastercomfig:
 
-* Add the module level alias(es) (`alias module_level "cvar1 1; cvar2 0`)
-  * For every command in the module, all levels must set that command unless there is no impact at that level.
-* Add the set module level alias(es) (`alias module=level"alias module module_level"`)
-* Possibly adjust presets in  `config/cfg/presets` to use the new module or levels to an existing module
-
-If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg`
-
-You also have to add your new module or levels to `data/modules.json` for download site support
-and to `config/templates/modules/modules.cfg`.
+* `config/mastercomfig/cfg/comfig/comfig.cfg`
+* `config/mastercomfig/cfg/comfig/module_levels.cfg`
+* `config/mastercomfig/cfg/comfig/modules_run.cfg`
+* `config/cfg/presets/*.cfg` (except `none.cfg`)
+* `config/templates/modules/modules.cfg`
+* `data/modules.json`
+* `data/preset_modules.json`
+* `docs/customization/modules.md`
 
 #### Texture preload list
 

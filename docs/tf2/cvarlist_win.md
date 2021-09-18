@@ -153,7 +153,6 @@ banip                                    : cmd      :                  : Add an 
 bench_end                                : cmd      :                  : Ends gathering of info.
 bench_showstatsdialog                    : cmd      :                  : Shows a dialog displaying the most recent benchmark results.
 bench_start                              : cmd      :                  : Starts gathering of info. Arguments: filename to write results into
-bench_upload                             : cmd      :                  : Uploads most recent benchmark stats to the Valve servers.
 benchframe                               : cmd      :                  : Takes a snapshot of a particular frame in a time demo.
 bind                                     : cmd      :                  : Bind a key.
 bind_mac                                 : cmd      :                  : Bind this key but only on Mac, not win32
@@ -436,7 +435,6 @@ cl_pitchdown                             : 89       : , "cheat", "cl"  :
 cl_pitchspeed                            : 225      : , "cl"           : Client pitch speed.
 cl_pitchup                               : 89       : , "cheat", "cl"  :
 cl_playback_screenshots                  : 0        :                  : Allows the client to playback screenshot and jpeg commands in demos.
-cl_playerspraydisable                    : 0        : , "a", "cl"      : Disable player sprays.
 cl_precacheinfo                          : cmd      :                  : Show precache info (client).
 cl_pred_optimize                         : 2        : , "cl"           : Optimize for not copying data if didn't receive a network update (1), and also for not repredicting if there were no errors (2).
 cl_pred_track                            : cmd      :                  : <entindex> <fieldname>:  Track changes to entity index entindex, for field fieldname.
@@ -486,6 +484,7 @@ cl_soundscape_printdebuginfo             : cmd      :                  : print s
 cl_spec_carrieditems                     : 1        : , "a", "cl"      : Show non-standard items being carried by player you're spectating.
 cl_spec_mode                             : 1        : , "a", "user", "server_can_execute", "cl" : spectator mode
 cl_sporeclipdistance                     : 512      : , "cheat", "cl"  :
+cl_spraydisable                          : 1        : , "a", "cl"      : Disable player sprays.
 cl_steamscreenshots                      : 1        : , "a", "cl"      : Enable/disable saving screenshots to Steam
 cl_sun_decay_rate                        : 0        : , "cheat", "cl"  :
 cl_team                                  : 0        : , "a", "user", "cl" : Default team when joining a game
@@ -2171,6 +2170,7 @@ scene_showunlock                         : 0        : , "a", "sv"      : Show wh
 -score                                   : cmd      :                  :
 scr_centertime                           : 5        : , "cl"           :
 screenshot                               : cmd      :                  : Take a screenshot.
+sdr_spew_level                           : 4        :                  : Verbosity level for SteamNetworkingSockets spew.  4=warning, 5=msg, 6=verbose, 7=debug
 sensitivity                              : 3        : , "a", "cl"      : Mouse sensitivity.
 server_game_time                         : cmd      :                  : Gives the game time in seconds (server's curtime)
 servercfgfile                            : 0        : , "sv"           :
@@ -3428,7 +3428,6 @@ voice_menu_3                             : cmd      :                  : Opens v
 voice_modenable                          : 1        : , "a", "clientcmd_can_execute", "cl" : Enable/disable voice in this mod.
 voice_overdrive                          : 2        :                  :
 voice_overdrivefadetime                  : 0        :                  :
-voice_printtalkers                       : cmd      :                  : voice debug.
 voice_profile                            : 0        :                  :
 voice_recordtofile                       : 0        :                  : Record mic data and decompressed voice data into 'voice_micdata.wav' and 'voice_decompressed.wav'
 voice_scale                              : 1        : , "a"            :
@@ -3572,5 +3571,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3564 total convars/concommands
+3563 total convars/concommands
 ```

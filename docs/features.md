@@ -11,6 +11,7 @@ description: A list of all mastercomfig features.
 * Presets to easily fit your use case
 * Extra optional customization settings
 * Modular config system to allow for fast updating
+* Extensive built-in addon system, providing support for null-canceling movement binds, transparent viewmodels, and more
 
 ## Rendering
 
@@ -30,7 +31,6 @@ description: A list of all mastercomfig features.
 * Optimized ropes
 * Optimized OpenGL
 * Optimized outlines
-* Optimized item panel loading
 
 ## Start up
 
@@ -38,6 +38,7 @@ description: A list of all mastercomfig features.
 * Cleaned up client precache
 * Cleaned up console output
 * Increased memory for OpenGL shader cache
+* Optimized OpenGL shader precache
 * Optimized start up time
 
 ## Memory/IO
@@ -49,28 +50,32 @@ description: A list of all mastercomfig features.
 
 ## Networking
 
-* Reduced latency of client commands (opening class menu, switching spectators, kill, status, pause, and more!)
+* Reduced latency of client commands (opening class menu, switching spectators, kill, MvM buyback and more!)
 * Increased data rate
 * Reduced choke
-* Reuses sockets if available
-* Optimizes prediction and interp systems for better hitreg
-* Client view smoothing
+* Reduced packet loss and improved reliability
+* Optimized prediction and interp systems for better hitreg
+* Tuned client view smoothing
 * Increased client timeout
 * Increased max file size for extra content
+* Easy templates for customizing network settings per class
+* Reduced overall overhead of networking system
 
 ## Sound
 
-* Asynchronous sound playback and mixing
+* Asynchronous sound playback
 * Adjusted lip sync
 * Minimized sound delay
 * Improved sound performance
 * Enhanced sound quality and spatialization
+* Enhanced voice chat toggle feature, which acts instantly in a server and reduces bandwidth usage
 
 ## Input
 
-* Optional same sensitivity for scope and other mouse enhancements
+* Optional same sensitivity for scope and other mouse enhancements for consistent input
 
 # Security
 
 * Prevents aimbots from joining local servers
-* Prevents players from joining your party and spamming the party chat, causing lag
+* Prevents players from joining your party without your permission, spamming the party chat, causing lag and sound spam
+* Prevents Steam from leaking your public IP address when in a local server
