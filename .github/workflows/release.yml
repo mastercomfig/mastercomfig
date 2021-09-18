@@ -19,11 +19,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ${{ github.ref }}
-    - name: Switch to release
-      uses: actions/checkout@v2
-      with:
         ref: 'release'
+        fetch-depth: 0
     - name: Update release info
       run: |
         {
