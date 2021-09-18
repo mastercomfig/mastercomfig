@@ -780,6 +780,19 @@
         ]
       },
       {
+        "name": "htmlmotd",
+        "display": "HTML MOTDs",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
         "name": "outlines",
         "values": [
           {

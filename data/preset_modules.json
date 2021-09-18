@@ -269,6 +269,9 @@
     "default": "on",
     "very-low": "off"
   },
+  "htmlmotd": {
+    "default": "off"
+  },
   "outlines": {
     "default": "low",
     "very-low": "off",
