@@ -763,6 +763,20 @@ Default setting: **`console=on`** (all presets, except Very Low).
 * **`console=off`**: Disables developer console.
 * **`console=on`**: Enables developer console.
 
+### HTML MOTD
+
+Controls HyperText Markup Language Message Of The Day (HTML MOTD). This includes ads, music player, rules, fancy server intros, etc.
+
+This module is disabled by default, since server ads can cause lag spikes.
+
+* **CPU usage:** low
+* **GPU usage:** low
+
+Defualt setting: **`htmlmotd=off`** (all presets).
+
+* **`htmlmotd=off`**: Disables HTML MOTDs.
+* **`htmlmotd=on`**: Enables HTML MOTDs.
+
 ### Outlines
 
 Controls the outlines that appear through walls for players, some objectives (payload cart, CTF briefcase), and the Scottish Resistance's stickybombs.
