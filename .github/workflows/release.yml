@@ -40,4 +40,4 @@ jobs:
     - name: Tag release
       run: git tag ${{ github.event.inputs.version }}
     - name: Push release
-      run: git push --tags
+      run: git push --atomic origin release ${{ github.event.inputs.version }}
