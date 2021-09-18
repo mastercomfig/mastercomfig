@@ -765,7 +765,7 @@ Default setting: **`console=on`** (all presets, except Very Low).
 
 ### HTML MOTD
 
-Controls HyperText Markup Language Message Of The Day (HTML MOTD). This includes ads, music player, rules, fancy server intros, etc.
+Controls HTML MOTDs. This includes ads, music player, rules, fancy server intros, etc.
 
 This module is disabled by default, since server ads can cause lag spikes.
 
