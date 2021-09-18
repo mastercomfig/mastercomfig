@@ -2170,6 +2170,7 @@ scene_showunlock                         : 0        : , "a", "sv"      : Show wh
 -score                                   : cmd      :                  :
 scr_centertime                           : 5        : , "cl"           :
 screenshot                               : cmd      :                  : Take a screenshot.
+sdr_spew_level                           : 4        :                  : Verbosity level for SteamNetworkingSockets spew.  4=warning, 5=msg, 6=verbose, 7=debug
 sensitivity                              : 3        : , "a", "cl"      : Mouse sensitivity.
 server_game_time                         : cmd      :                  : Gives the game time in seconds (server's curtime)
 servercfgfile                            : 0        : , "sv"           :
@@ -3570,5 +3571,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3562 total convars/concommands
+3563 total convars/concommands
 ```
