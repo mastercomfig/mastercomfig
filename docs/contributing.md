@@ -197,6 +197,9 @@ is the vertex shader name, the second is the pixel shader name, third is the ver
 static index, fourth is the pixel shader static index, fifth is the vertex shader dynamic index
 and sixth is the pixel shader dynamic index.
 
+These files specify what shaders the game should precache, as a base. It also saves encountered shaders
+to `glshaders.cfg`, which is precached on top of the base.
+
 #### DX support
 
 Edit `dxsupport_override.cfg` and set hidden ConVars and other settings
