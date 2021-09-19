@@ -627,6 +627,9 @@ Controls VSync, which removes screen tearing by syncing FPS to your monitor's re
 !!! tip
     It's recommended to keep this off, and use NVidia Adaptive VSync, which keeps VSync on only when the framerate is high enough, or NVidia Fast VSync (Enhanced Sync on AMD), which drops frames which would cause tearing, while having a much lower input latency compared to traditional VSync.
 
+* **CPU usage:** low
+* **GPU usage:** none
+
 Default setting **`vsync=off`** (all presets).
 
 * **`vsync=off`**: Disables VSync.
