@@ -264,10 +264,10 @@ Default setting: based on which preset you are currently using.
 
 Controls particle effects.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** medium
 * **GPU usage:** medium
+
+Default setting: based on which preset you are currently using.
 
 * **`particles=very_low`**: Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality, disables bullet impact flecks.
 * **`particles=low`**: Disables weather particles, reduces particle density/quality, disables bullet impact flecks.
@@ -279,10 +279,10 @@ Default setting: based on which preset you are currently using.
 
 Controls standard post-processing effects.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** medium
 * **GPU usage:** medium
+
+Default setting: based on which preset you are currently using.
 
 * **`post_processing=off`**: No post-processing.
 * **`post_processing=low`**: Enables basic color correction.
@@ -293,10 +293,10 @@ Default setting: based on which preset you are currently using.
 
 Controls Pyrovision visual effects.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** none
 * **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
 
 * **`pyrovision=low`**: Disables Pyrovision vignette and skybox SSAO depth of field.
 * **`pyrovision=medium`**: Enables static Pyrovision vignette.
@@ -306,10 +306,10 @@ Default setting: based on which preset you are currently using.
 
 Controls Romevision visual effects. For more info, [click here](https://wiki.teamfortress.com/wiki/Romevision).
 
-Default setting: **`romevision=off`** (all presets, except Ultra, High and None).
-
 * **CPU usage:** low
 * **GPU usage:** none
+
+Default setting: **`romevision=off`** (all presets, except Ultra, High and None).
 
 * **`romevision=off`**: Disables Romevision effects.
 * **`romevision=on`**: Enables Romevision effects.
@@ -334,10 +334,10 @@ Controls additional anti-aliasing passes (a.k.a. [alpha to coverage](https://en.
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** none
 * **GPU usage:** medium
+
+Default setting: based on which preset you are currently using.
 
 * **`anti_aliasing=off`**: Turns off all forms of anti-aliasing.
 * **`anti_aliasing=msaa_2x`**: Enables alpha to coverage and MSAA 2x.
@@ -348,10 +348,10 @@ Default setting: based on which preset you are currently using.
 
 Controls texture smoothing/filtering.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** none
 * **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
 
 * **`texture_filter=bilinear`**: Bilinear filtering
 * **`texture_filter=trilinear`**: Trilinear filtering
@@ -367,10 +367,10 @@ Adjusts characters details.
 !!! tip
     Facial animations will only work on `lod=medium` and higher.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** high
 * **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
 
 * **`characters=very_low`**: Disables facial animations, no eyes or teeth.
 * **`characters=low`**: Disables facial animations, enables eyes, disables teeth, disables eye movement and blinking.
@@ -386,10 +386,10 @@ Controls bullet holes and overall decal support.
 !!! note
     In the Very Low preset, decals are forced invisible.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** medium
 * **GPU usage:** medium
+
+Default setting: based on which preset you are currently using.
 
 * **`decals=off`**: Disables decals.
 * **`decals=low`**: 9 max decals.
@@ -401,10 +401,10 @@ Default setting: based on which preset you are currently using.
 
 Controls blood on hurt players and some bullet decals on props.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** medium
 * **GPU usage:** medium
+
+Default setting: based on which preset you are currently using.
 
 * **`decals_models=off`**: Disables model decals.
 * **`decals_models=low`**: Allow up to 9 model decals.
@@ -414,10 +414,10 @@ Default setting: based on which preset you are currently using.
 
 Controls decals placed by the map author.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** none
 * **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
 
 * **`decals_art=off`**: Disables map decals.
 * **`decals_art=on`**: Enables map decals, and blocks full decal clearing done by mastercomfig periodically.
@@ -426,10 +426,10 @@ Default setting: based on which preset you are currently using.
 
 Controls decals sprayed by players.
 
-Default setting: **`sprays=off`** (all presets).
-
 * **CPU usage:** none
 * **GPU usage:** low
+
+Default setting: **`sprays=off`** (all presets).
 
 * **`sprays=off`**: Completely disables downloading, uploading and displaying sprays.
 * **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. If the `decals` module is `off`, this will set it to the `low` level.
@@ -438,10 +438,10 @@ Default setting: **`sprays=off`** (all presets).
 
 Controls gibs created by player explosions.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** low
 * **GPU usage:** medium
+
+Default setting: based on which preset you are currently using.
 
 * **`gibs=off`**: Disables gibs.
 * **`gibs=low`**: Max of 2 gib parts.
@@ -453,10 +453,10 @@ Default setting: based on which preset you are currently using.
 
 Controls low violence mode.
 
-Default setting: **`sillygibs=auto`** (all presets).
-
 * **CPU usage:** low
 * **GPU usage:** low
+
+Default setting: **`sillygibs=auto`** (all presets).
 
 * **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
@@ -466,10 +466,10 @@ Default setting: **`sillygibs=auto`** (all presets).
 
 Controls the rendering of various small objects.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** high
 * **GPU usage:** medium
+
+Default setting: based on which preset you are currently using.
 
 * **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings.
 * **`props=medium`**: Disables client side props, disables foliage, default quality prop models.
@@ -480,10 +480,10 @@ Default setting: based on which preset you are currently using.
 
 Controls physics simulation and fading for bodies that spawn on death.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** high
 * **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
 
 * **`ragdolls=hidden`**: Makes ragdolls invisible, but keeps them in the map, decreasing performance over time.
 * **`ragdolls=off`**: Disables ragdolls by fading them out quickly.
@@ -494,10 +494,10 @@ Default setting: based on which preset you are currently using.
 
 Controls the enhanced 3D skybox that is present in most maps.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** medium
 * **GPU usage:** medium
+
+Default setting: based on which preset you are currently using.
 
 * **`3dsky=off`**: Disables 3D sky.
 * **`3dsky=on`**: Enables 3D sky.
@@ -506,10 +506,10 @@ Default setting: based on which preset you are currently using.
 
 Controls cloth and joint physics on some items like the fish and skull bat.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** low
 * **GPU usage:** none
+
+Default setting: based on which preset you are currently using.
 
 * **`jigglebones=off`**: Always disables jigglebones.
 * **`jigglebones=on`**: Disables jigglebones only if the framerate is below 67FPS.
@@ -519,10 +519,10 @@ Default setting: based on which preset you are currently using.
 
 Controls how fast the animation is on the killstreak sheen glow for weapons.
 
-Default setting: **`sheens_speed=slow`** (all presets, except Very Low and None).
-
 * **CPU usage:** none
 * **GPU usage:** none
+
+Default setting: **`sheens_speed=slow`** (all presets, except Very Low and None).
 
 * **`sheens_speed=off`**: Skips updating sheen glow animation.
 * **`sheens_speed=slow`**: Slow speed.
@@ -533,10 +533,10 @@ Default setting: **`sheens_speed=slow`** (all presets, except Very Low and None)
 
 Controls how intense the color tint is on the killstreak sheen glow for weapons.
 
-Default setting: **`sheens_tint=high`** (all presets).
-
 * **CPU usage:** none
 * **GPU usage:** none
+
+Default setting: **`sheens_tint=high`** (all presets).
 
 * **`sheens_tint=low`**: Base tint.
 * **`sheens_tint=medium`**: Small tint boost.
@@ -547,10 +547,10 @@ Default setting: **`sheens_tint=high`** (all presets).
 
 Controls texture quality.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** low
 * **GPU usage:** medium
+
+Default setting: based on which preset you are currently using.
 
 * **`textures=very_low`**: Low texture quality, blocky textures, disables texture blending.
 * **`textures=low`**: Low texture quality, disables texture blending.
@@ -562,10 +562,10 @@ Default setting: based on which preset you are currently using.
 
 Controls ropes for Mannpower grappling hook and decorations in maps.
 
-Default setting: based on which preset you are currently using.
-
 * **CPU usage:** medium
 * **GPU usage:** low
+
+Default setting: based on which preset you are currently using.
 
 * **`ropes=off`**: Disables ropes.
 * **`ropes=low`**: Basic ropes.
@@ -627,22 +627,13 @@ Controls VSync, which removes screen tearing by syncing FPS to your monitor's re
 !!! tip
     It's recommended to keep this off, and use NVidia Adaptive VSync, which keeps VSync on only when the framerate is high enough, or NVidia Fast VSync (Enhanced Sync on AMD), which drops frames which would cause tearing, while having a much lower input latency compared to traditional VSync.
 
+* **CPU usage:** low
+* **GPU usage:** none
+
 Default setting **`vsync=off`** (all presets).
 
 * **`vsync=off`**: Disables VSync.
 * **`vsync=on`**: Enables VSync.
-
-### OpenGL
-
-Controls whether mastercomfig should apply OpenGL optimizations or not.
-
-* **CPU usage:** none
-* **GPU usage:** none
-
-Default setting: **`opengl=default`** (all presets).
-
-* **`opengl=skip`**: Skips applying OpenGL optimizations. Helpful for users who run on Windows, which does not have OpenGL.
-* **`opengl=default`**: Applies OpenGL optimizations.
 
 ## HUD modules
 
@@ -719,7 +710,6 @@ Controls death and objective notifications in the top right corner.
 
 * **CPU usage:** low
 * **GPU usage:** none
-
 
 Default setting: **`killfeed=on`** (all presets, except Very Low).
 
@@ -889,27 +879,6 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 
 * **`logo=off`**: Does not print logo in console on startup.
 * **`logo=on`**: Prints logo in console on startup.
-
-### Language
-
-Controls the language mastercomfig outputs with.
-
-!!! warning
-    This module should ideally be set in `pre_comfig.cfg` instead of `modules.cfg`.
-
-* **CPU usage:** none
-* **GPU usage:** none
-
-Default setting: **`lang=en`** (all presets).
-
-* **`lang=en`**: English
-* **`lang=pt`**: Português (Portuguese)
-* **`lang=ru`**: Pусский (Russian)
-* **`lang=es`**: Español (Spanish)
-* **`lang=pl`**: Polskie (Polish)
-* **`lang=fr`**: Français (French)
-* **`lang=cs`**: Česká (Czech)
-* **`lang=hr`**: Hrvatski (Croatian)
 
 ### Movement Binds
 

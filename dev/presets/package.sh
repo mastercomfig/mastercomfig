@@ -16,21 +16,18 @@ for F in ../../config/cfg/presets/*; do
       cp -f ../../config/cfg/presets/*.cfg mastercomfig-"${P}"-preset/cfg/presets
       autoexec_file=mastercomfig-"${P}"-preset/cfg/autoexec.cfg
       {
-        printf "exec comfig/define_langs.cfg;"
-        printf "lang=en;"
         printf "exec comfig/define_presets.cfg;"
         printf "preset=%s;" "${P}"
         printf "exec user/pre_comfig.cfg;"
-        printf "lang;"
         printf "exec comfig/comfig.cfg;"
         printf "exec user/post_comfig.cfg;"
         printf "preset;"
         printf "exec comfig/addons_setup.cfg;"
         printf "exec comfig/addons.cfg;"
         printf "modules_c;"
-        printf "echo_lang;"
         printf "run_modules;"
         printf "exec comfig/addons.cfg;"
+        printf "exec comfig/echo.cfg;"
         printf "autoexec_c;"
         printf "exec comfig/finalize.cfg"
       } > "${autoexec_file}"

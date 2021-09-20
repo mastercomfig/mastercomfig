@@ -225,9 +225,6 @@
   "vsync": {
     "default": "off"
   },
-  "opengl": {
-    "default": "default"
-  },
   "hud_player_model": {
     "default": "off",
     "high": "on",

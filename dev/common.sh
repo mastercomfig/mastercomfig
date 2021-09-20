@@ -20,7 +20,7 @@ function cleanItems {
 }
 
 function uploadFileToGitHub {
-  gh release upload ${release_tag} "${1}#${2}" --clobber
+  gh release upload --clobber ${release_tag} "${1}#${2}"
 }
 
 function uploadAssets {

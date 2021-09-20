@@ -54,12 +54,6 @@ For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automati
 
 You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV), [Steam Discussions](https://steamcommunity.com/groups/comfig/discussions) or [teamfortress.tv](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
 
-## Translating the config
-
-You can contribute to config translations by [adding echo definitions to your language](https://github.com/mastercomfig/mastercomfig/tree/develop/config/mastercomfig/cfg/lang). See [the English file](https://github.com/mastercomfig/mastercomfig/tree/develop/config/mastercomfig/cfg/lang/en.cfg) for an example.
-
-You can add a new language to the config by [adding it to the definitions](https://github.com/mastercomfig/mastercomfig/tree/develop/config/mastercomfig/cfg/comfig/define_langs.cfg).
-
 ## Config
 
 Want to contribute to the config itself? Start here!
@@ -160,6 +154,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `no-soundscapes`: Removes soundscapes (ambient map noise) and bird noises
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
+* `opengl`: Provides additional optimizations for OpenGL (macOS and Linux)
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `null-canceling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (2GB and lower)
@@ -202,6 +197,9 @@ This is a value store for each shader program, which is an indexed subkey. The f
 is the vertex shader name, the second is the pixel shader name, third is the vertex shader
 static index, fourth is the pixel shader static index, fifth is the vertex shader dynamic index
 and sixth is the pixel shader dynamic index.
+
+These files specify what shaders the game should precache, as a base. It also saves encountered shaders
+to `glshaders.cfg`, which is precached on top of the base.
 
 #### DX support
 

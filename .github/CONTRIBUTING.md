@@ -156,6 +156,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `no-soundscapes`: Removes soundscapes (ambient map noise) and bird noises
 * `no-tutorial`: Disables tutorial messages and other popups
 * `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
+* `opengl`: Provides additional optimizations for OpenGL (macOS and Linux)
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `null-canceling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (2GB and lower)
@@ -201,6 +202,9 @@ This is a value store for each shader program, which is an indexed subkey. The f
 is the vertex shader name, the second is the pixel shader name, third is the vertex shader
 static index, fourth is the pixel shader static index, fifth is the vertex shader dynamic index
 and sixth is the pixel shader dynamic index.
+
+These files specify what shaders the game should precache, as a base. It also saves encountered shaders
+to `glshaders.cfg`, which is precached on top of the base.
 
 #### DX support
 
