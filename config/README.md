@@ -44,7 +44,7 @@ This is an addon which sets settings for compatibility with transparent viewmode
 
 ### mastercomfig-bot-support-addon
 
-This is an addon wihch sets settings and add commands that improve bot functionality.
+This is an addon which sets settings that improve bot functionality.
 
 ## cfg folder
 
