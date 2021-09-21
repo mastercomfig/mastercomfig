@@ -53,8 +53,6 @@
   },
   "flashlight": {
     "default": "off",
-    "high": "on",
-    "ultra": "on",
     "none": ""
   },
   "effects": {
