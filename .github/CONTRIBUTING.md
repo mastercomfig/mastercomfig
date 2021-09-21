@@ -50,12 +50,6 @@ For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automati
 
 You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV), [Steam Discussions](https://steamcommunity.com/groups/comfig/discussions) or [teamfortress.tv](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
 
-## Translating the config
-
-You can contribute to config translations by [adding echo definitions to your language](https://github.com/mastercomfig/mastercomfig/tree/develop/config/mastercomfig/cfg/lang). See [the English file](https://github.com/mastercomfig/mastercomfig/tree/develop/config/mastercomfig/cfg/lang/en.cfg) for an example.
-
-You can add a new language to the config by [adding it to the definitions](https://github.com/mastercomfig/mastercomfig/tree/develop/config/mastercomfig/cfg/comfig/define_langs.cfg).
-
 ## Config
 
 Want to contribute to the config itself? Start here!
@@ -160,24 +154,22 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `null-canceling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (2GB and lower)
+* `no-explosion-smoke`: Replaces explosions with the small electro-particle seen when a sapper is destroyed
 
 ##### Modules
 
-If your settings affect quality in any way, create a new module or modify
-the existing modules if applicable, then add documentation for it at the
-[modules docs page](https://docs.mastercomfig.com/page/customization/modules/).
+If your settings affect quality in any way, create a new module or modify the existing modules if applicable.
 
-The first part of adding modules is a multi-step process in `config/mastercomfig/cfg/comfig/comfig.cfg`:
+If you want to create a new module, you might need to modify all the following files to add your new module into mastercomfig:
 
-* Add the module level alias(es) (`alias module_level "cvar1 1; cvar2 0`)
-  * For every command in the module, all levels must set that command unless there is no impact at that level.
-* Add the set module level alias(es) (`alias module=level"alias module module_level"`)
-* Possibly adjust presets in  `config/cfg/presets` to use the new module or levels to an existing module
-
-If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg`
-
-You also have to add your new module or levels to `data/modules.json` for download site support
-and to `config/templates/modules/modules.cfg`.
+* `config/mastercomfig/cfg/comfig/comfig.cfg`
+* `config/mastercomfig/cfg/comfig/module_levels.cfg`
+* `config/mastercomfig/cfg/comfig/modules_run.cfg`
+* `config/cfg/presets/*.cfg` (except `none.cfg`)
+* `config/templates/modules/modules.cfg`
+* `data/modules.json`
+* `data/preset_modules.json`
+* `docs/customization/modules.md`
 
 #### Texture preload list
 
