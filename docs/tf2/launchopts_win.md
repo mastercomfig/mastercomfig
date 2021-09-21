@@ -110,7 +110,6 @@ description: A list of all launch options on TF2 for Windows.
 -noforcemaccel
 -noforcemspd
 -nogamedll
--nogamestats
 -noglslcontrolflow
 -nohltv
 -NOINITMEMORY
@@ -145,7 +144,6 @@ description: A list of all launch options on TF2 for Windows.
 -outdir
 -p4
 -particles
--phonehome
 -pidfile
 -pixel_offset_x
 -pixel_offset_y
@@ -159,7 +157,6 @@ description: A list of all launch options on TF2 for Windows.
 -PROCESSHEAP
 -PROCESSHEAPZEROMEM
 -profile
--publicbuild
 -quickswitch
 -quiet
 -raiseonassert
@@ -230,7 +227,6 @@ description: A list of all launch options on TF2 for Windows.
 -usercon
 -usereslistfile
 -UseStandardError
--usetcp
 -vcrplayback
 -vcrrecord
 -vguifocus
