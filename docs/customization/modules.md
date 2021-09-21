@@ -221,7 +221,7 @@ Controls flashlight support. Flashlights are not used in TF2, so you should keep
 * **CPU usage:** low
 * **GPU usage:** medium
 
-Default setting: **`flashlight=off`** (all presets, except Ultra, High and None).
+Default setting: **`flashlight=off`** (all presets, except None).
 
 * **`flashlight=off`**: Disables flashlight support.
 * **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `very_low` level.
