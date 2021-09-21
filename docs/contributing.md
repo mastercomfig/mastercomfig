@@ -158,6 +158,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `null-canceling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
 * `lowmem`: Optimizations that generally do not affect quality for low memory (RAM) systems (2GB and lower)
+* `no-explosion-smoke`: Replaces explosions with the small electro-particle seen when a sapper is destroyed
 
 ##### Modules
 
@@ -168,7 +169,7 @@ If you want to create a new module, you might need to modify all the following f
 * `config/mastercomfig/cfg/comfig/comfig.cfg`
 * `config/mastercomfig/cfg/comfig/module_levels.cfg`
 * `config/mastercomfig/cfg/comfig/modules_run.cfg`
-* `config/cfg/presets/*.cfg` (except `none.cfg`)
+* `config/mastercomfig/cfg/presets/*.cfg` (except `none.cfg`)
 * `config/templates/modules/modules.cfg`
 * `data/modules.json`
 * `data/preset_modules.json`
