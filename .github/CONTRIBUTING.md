@@ -1,7 +1,3 @@
----
-description: Learn how to get involved with mastercomfig and help out!
-...
-
 # Contributing
 
 As an open source project, mastercomfig appreciates the community's help in improving it.
@@ -105,10 +101,10 @@ Put your launch option in the appropriate section and if it's in the
 
 Here's lists of launch options to help you out:
 
-* [Windows](tf2/launchopts_win.md)
-* [Linux](tf2/launchopts_linux.md)
+* [Windows](https://docs.mastercomfig.com/page/tf2/launchopts_win/)
+* [Linux](https://docs.mastercomfig.com/page/tf2/launchopts_linux/)
 
-Information about generating them can be found [here](tf2/README.md#making-your-own-launch-options-list).
+Information about generating them can be found [here](https://docs.mastercomfig.com/page/tf2/#making-your-own-launch-options-list).
 
 #### Comfig and presets
 
@@ -129,10 +125,10 @@ punctuation unless using multiple sentences.
 
 ##### CVarlist
 
-ConVars and commands are found using [these instructions](tf2/README.md#making-your-own-cvar-list).
+ConVars and commands are found using [these instructions](https://docs.mastercomfig.com/page/tf2/#making-your-own-cvar-list).
 
-* [Windows](tf2/cvarlist_win.md)
-* [Linux](tf2/cvarlist_linux.md)
+* [Windows](https://docs.mastercomfig.com/page/tf2/cvarlist_win/)
+* [Linux](https://docs.mastercomfig.com/page/tf2/cvarlist_linux/)
 
 Add your alternatives uncommented in the applicable presets/addons, or use modules.
 
