@@ -31,3 +31,11 @@ venv/
 
 # mkdocs
 site/
+config/addons/mastercomfig-no-explosion-smoke/scripts/objects.txt
+config/addons/mastercomfig-no-explosion-smoke/scripts/tf_weapon_cannon.txt
+config/addons/mastercomfig-no-explosion-smoke/scripts/tf_weapon_grenadelauncher.txt
+config/addons/mastercomfig-no-explosion-smoke/scripts/tf_weapon_particle_cannon.txt
+config/addons/mastercomfig-no-explosion-smoke/scripts/tf_weapon_pipebomblauncher.txt
+config/addons/mastercomfig-no-explosion-smoke/scripts/tf_weapon_rocketlauncher.txt
+config/addons/mastercomfig-no-explosion-smoke/scripts/tf_weapon_rocketlauncher_airstrike.txt
+config/addons/mastercomfig-no-explosion-smoke/scripts/tf_weapon_rocketlauncher_directhit.txt
