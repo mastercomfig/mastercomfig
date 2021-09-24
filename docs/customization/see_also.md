@@ -54,3 +54,6 @@ Here are a few awesome TF2 modifications:
 
 * [Loadouts Script](https://github.com/juniorsgithub/tf2-loadouts-script)
   — An "advanced" TF2 loadouts and resupply script
+
+* [TF2 Domination Remover](https://gamebanana.com/mods/36617)
+  — Removes all things related to domination in TF2, like domination sounds and the revenge icon above the head
