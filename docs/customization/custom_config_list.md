@@ -20,3 +20,4 @@ This is a list of mastercomfig custom configs by members of the community.
 * [m00n](https://github.com/m00n01/LunarConfig)
 * [alekny](https://github.com/alekny/alekny-mastercomfig-preset)
 * [NegativeOnion](https://github.com/NegativeOnion/Team-Fortress-2)
+* [unsubtract's TF2 "dotfiles"](https://github.com/unsubtract/tf2-dotfiles)
