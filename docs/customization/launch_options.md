@@ -7,8 +7,22 @@ description: Tune Team Fortress 2 and mastercomfig further with launch options.
 Right click Team Fortress 2 in your Steam library and click **Properties...**. In the window that appears, under **Launch Options**, remove
 anything that's in there and paste
 
+=== "Windows"
+
 ```c
 -novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime
+```
+
+=== "macOS"
+
+```c
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime
+```
+
+=== "Linux"
+
+```c
+-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars
 ```
 
 into the box and click ok.
@@ -35,6 +49,7 @@ Read below about optional launch options and choosing your own DXLevel.
 
 ## Recommended Launch Options
 
+=== "Windows"
 `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime`
 
 * **-novid** : disables Valve startup logo, saves time
@@ -43,7 +58,27 @@ Read below about optional launch options and choosing your own DXLevel.
 * **-nohltv** : disables SourceTV hosting, less resource usage
 * **-particles 1** : limits beam count to the minimum of 512
 * **-precachefontchars** : precaches font rendering for common characters
-* **-noquicktime** : disables initializing Quicktime. If you use the replay rendering feature, do not use this. Does not do anything on Linux
+* **-noquicktime** : disables initializing Quicktime. If you use the replay rendering feature, do not use this.
+
+=== "macOS"
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime`
+
+* **-novid** : disables Valve startup logo, saves time
+* **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
+* **-nosteamcontroller** : disables Steam controller system, faster startup, less memory usage and less input conflicts
+* **-nohltv** : disables SourceTV hosting, less resource usage
+* **-particles 1** : limits beam count to the minimum of 512
+* **-precachefontchars** : precaches font rendering for common characters
+* **-noquicktime** : disables initializing Quicktime. If you use the replay rendering feature, do not use this.
+
+=== "Linux"
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`
+* **-novid** : disables Valve startup logo, saves time
+* **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
+* **-nosteamcontroller** : disables Steam controller system, faster startup, less memory usage and less input conflicts
+* **-nohltv** : disables SourceTV hosting, less resource usage
+* **-particles 1** : limits beam count to the minimum of 512
+* **-precachefontchars** : precaches font rendering for common characters
 
 ## Extra Launch Options
 
