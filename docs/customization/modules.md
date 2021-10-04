@@ -630,7 +630,7 @@ Controls VSync, which removes screen tearing by syncing FPS to your monitor's re
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting **`vsync=off`** (all presets, *including None*).
+Default setting: **`vsync=off`** (all presets). *Not set in None.*
 
 * **`vsync=off`**: Disables VSync.
 * **`vsync=on`**: Enables VSync.

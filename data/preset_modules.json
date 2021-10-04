@@ -221,7 +221,8 @@
     "default": "1000"
   },
   "vsync": {
-    "default": "off"
+    "default": "off",
+    "none": ""
   },
   "hud_player_model": {
     "default": "off",
