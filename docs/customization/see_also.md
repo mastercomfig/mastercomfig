@@ -57,3 +57,6 @@ Here are a few awesome TF2 modifications:
 
 * [TF2 Domination Remover](https://gamebanana.com/mods/36617)
   — Removes all things related to domination in TF2, like domination sounds and the revenge icon above the head
+
+* [Disable Miss Pauling's Contract Alerts](https://gamebanana.com/mods/325900)
+  — Disables Miss Pauling's annoying alerts and the Incoming message hud panel
