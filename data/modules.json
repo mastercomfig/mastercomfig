@@ -442,13 +442,15 @@
       {
         "name": "sprays",
         "display": "Spray Decals",
-        "type": "switch",
         "values": [
           {
             "value": "off"
           },
           {
             "value": "on"
+          },
+          {
+            "value": "keep"
           }
         ]
       },

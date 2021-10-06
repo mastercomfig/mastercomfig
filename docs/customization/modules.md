@@ -66,7 +66,7 @@ Ensures compatibility with SourceTV spectating.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`sourcetv=on`** (all presets, *including None*).
+Default setting: **`sourcetv=on`** (all presets, _including None_).
 
 * **`sourcetv=off`**: Reduces the latency of changing spectator targets, but breaks compatibility with SourceTV. Cannot be switched off until a game restart.
 * **`sourcetv=on`**: Keeps compatibility with SourceTV.
@@ -78,7 +78,7 @@ Controls how fast you send to and receive from the server.
 * **CPU usage:** medium
 * **GPU usage:** none
 
-Default setting: **`packet_rate=standard`** (all presets, *including None*, except Very Low).
+Default setting: **`packet_rate=standard`** (all presets, _including None_, except Very Low).
 
 * **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad Wi-Fi, or very slow CPUs.
 * **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
@@ -90,7 +90,7 @@ Controls how reliable to consider the snapshots you receive from the server to a
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`snapshot_buffer=safe`** (all presets, *including None*).
+Default setting: **`snapshot_buffer=safe`** (all presets, _including None_).
 
 * **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
@@ -104,7 +104,7 @@ Controls how big packets are and how they are split up/compressed.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`packet_size=speed`** (all presets, *including None*).
+Default setting: **`packet_size=speed`** (all presets, _including None_).
 
 * **`packet_size=small`**: Uses the smallest packet size, that will most likely be processed by even the worst routers.
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that will most likely be processed by most routers, even lower end ones.
@@ -121,7 +121,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`bandwidth=762Kbps`** (all presets, *including None*).
+Default setting: **`bandwidth=762Kbps`** (all presets, _including None_).
 
 * **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 * **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
@@ -144,7 +144,7 @@ Filters what custom content is allowed to be downloaded from the server.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`download=auto`** (all presets, *including None*).
+Default setting: **`download=auto`** (all presets, _including None_).
 
 * **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads all custom files from servers.
 * **`download=all`**: Download all custom files from servers.
@@ -161,7 +161,7 @@ Controls how detailed models are.
 * **CPU usage:** low
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`lod=low`**: Low model detail.
 * **`lod=medium`**: Medium model detail.
@@ -175,7 +175,7 @@ Controls lighting fidelity: dynamic lights, how detailed lighting is, rimlights,
 * **CPU usage:** medium
 * **GPU usage:** high
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
 * **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
@@ -192,7 +192,7 @@ Controls extended lighting commands which cause a material system reload. Be car
 * **CPU usage:** low
 * **GPU usage:** high
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`lighting_ex=low`**: Phong off.
 * **`lighting_ex=high`**: Phong on.
@@ -204,7 +204,7 @@ Controls shadow quality. Shadow limits affect rendered shadows. Shadows above th
 * **CPU usage:** high
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`shadows=off`**: No shadows.
 * **`shadows=very_low`**: Blobby shadows.
@@ -221,7 +221,7 @@ Controls flashlight support. Flashlights are not used in TF2, so you should keep
 * **CPU usage:** low
 * **GPU usage:** medium
 
-Default setting: **`flashlight=off`** (all presets). *Not set in None.*
+Default setting: **`flashlight=off`** (all presets). _Not set in None._
 
 * **`flashlight=off`**: Disables flashlight support.
 * **`flashlight=on`**: Enables flashlight support. If the `shadows` module is `off`, this will set it to the `very_low` level.
@@ -236,7 +236,7 @@ Controls weapon and other miscellaneous effects.
 * **CPU usage:** medium
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision.
 * **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision.
@@ -250,7 +250,7 @@ Controls water reflections.
 * **CPU usage:** high
 * **GPU usage:** high
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`water=very_low`**: Makes water black.
 * **`water=low`**: Makes water solid.
@@ -267,7 +267,7 @@ Controls particle effects.
 * **CPU usage:** medium
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`particles=very_low`**: Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality, disables bullet impact flecks.
 * **`particles=low`**: Disables weather particles, reduces particle density/quality, disables bullet impact flecks.
@@ -282,7 +282,7 @@ Controls standard post-processing effects.
 * **CPU usage:** medium
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`post_processing=off`**: No post-processing.
 * **`post_processing=low`**: Enables basic color correction.
@@ -296,7 +296,7 @@ Controls Pyrovision visual effects.
 * **CPU usage:** none
 * **GPU usage:** low
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`pyrovision=low`**: Disables Pyrovision vignette and skybox SSAO depth of field.
 * **`pyrovision=medium`**: Enables static Pyrovision vignette.
@@ -309,7 +309,7 @@ Controls Romevision visual effects. For more info, [click here](https://wiki.tea
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`romevision=off`** (all presets, except Ultra and High). *Not set in None.*
+Default setting: **`romevision=off`** (all presets, except Ultra and High). _Not set in None._
 
 * **`romevision=off`**: Disables Romevision effects.
 * **`romevision=on`**: Enables Romevision effects.
@@ -321,7 +321,7 @@ Controls blurring effect from rotation and movement.
 * **CPU usage:** low
 * **GPU usage:** low
 
-Default setting: **`motion_blur=off`** (all presets). *Not set in None.*
+Default setting: **`motion_blur=off`** (all presets). _Not set in None._
 
 * **`motion_blur=off`**: Turns off motion blur.
 * **`motion_blur=low`**: Turns on motion blur but reduces it significantly.
@@ -337,7 +337,7 @@ Controls additional anti-aliasing passes (a.k.a. [alpha to coverage](https://en.
 * **CPU usage:** none
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`anti_aliasing=off`**: Turns off all forms of anti-aliasing.
 * **`anti_aliasing=msaa_2x`**: Enables alpha to coverage and MSAA 2x.
@@ -351,7 +351,7 @@ Controls texture smoothing/filtering.
 * **CPU usage:** none
 * **GPU usage:** low
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`texture_filter=bilinear`**: Bilinear filtering
 * **`texture_filter=trilinear`**: Trilinear filtering
@@ -370,7 +370,7 @@ Adjusts characters details.
 * **CPU usage:** high
 * **GPU usage:** low
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`characters=very_low`**: Disables facial animations, no eyes or teeth.
 * **`characters=low`**: Disables facial animations, enables eyes, disables teeth, disables eye movement and blinking.
@@ -389,7 +389,7 @@ Controls bullet holes and overall decal support.
 * **CPU usage:** medium
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`decals=off`**: Disables decals.
 * **`decals=low`**: 9 max decals.
@@ -404,7 +404,7 @@ Controls blood on hurt players and some bullet decals on props.
 * **CPU usage:** medium
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`decals_models=off`**: Disables model decals.
 * **`decals_models=low`**: Allow up to 9 model decals.
@@ -417,7 +417,7 @@ Controls decals placed by the map author.
 * **CPU usage:** none
 * **GPU usage:** low
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`decals_art=off`**: Disables map decals.
 * **`decals_art=on`**: Enables map decals, and blocks full decal clearing done by mastercomfig periodically.
@@ -429,10 +429,11 @@ Controls decals sprayed by players.
 * **CPU usage:** none
 * **GPU usage:** low
 
-Default setting: **`sprays=off`** (all presets). *Not set in None.*
+Default setting: **`sprays=off`** (all presets). _Not set in None._
 
-* **`sprays=off`**: Completely disables downloading, uploading and displaying sprays.
-* **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. If the `decals` module is `off`, this will set it to the `low` level.
+* **`sprays=off`**: Completely disables downloading, uploading and displaying sprays. Deletes temporary spray files on shutdown.
+* **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Deletes temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` level.
+* **`sprays=keep`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Keeps temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` level.
 
 ### Gibs
 
@@ -441,7 +442,7 @@ Controls gibs created by player explosions.
 * **CPU usage:** low
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`gibs=off`**: Disables gibs.
 * **`gibs=low`**: Max of 2 gib parts.
@@ -456,7 +457,7 @@ Controls low violence mode.
 * **CPU usage:** low
 * **GPU usage:** low
 
-Default setting: **`sillygibs=auto`** (all presets, *including None*).
+Default setting: **`sillygibs=auto`** (all presets, _including None_).
 
 * **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
@@ -469,7 +470,7 @@ Controls the rendering of various small objects.
 * **CPU usage:** high
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings.
 * **`props=medium`**: Disables client side props, disables foliage, default quality prop models.
@@ -483,7 +484,7 @@ Controls physics simulation and fading for bodies that spawn on death.
 * **CPU usage:** high
 * **GPU usage:** low
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`ragdolls=hidden`**: Makes ragdolls invisible, but keeps them in the map, decreasing performance over time.
 * **`ragdolls=off`**: Disables ragdolls by fading them out quickly.
@@ -497,7 +498,7 @@ Controls the enhanced 3D skybox that is present in most maps.
 * **CPU usage:** medium
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`3dsky=off`**: Disables 3D sky.
 * **`3dsky=on`**: Enables 3D sky.
@@ -509,7 +510,7 @@ Controls cloth and joint physics on some items like the fish and skull bat.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`jigglebones=off`**: Always disables jigglebones.
 * **`jigglebones=on`**: Disables jigglebones only if the framerate is below 67FPS.
@@ -522,7 +523,7 @@ Controls how fast the animation is on the killstreak sheen glow for weapons.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`sheens_speed=slow`** (all presets, *including None*, except Very Low).
+Default setting: **`sheens_speed=slow`** (all presets, _including None_, except Very Low).
 
 * **`sheens_speed=off`**: Skips updating sheen glow animation.
 * **`sheens_speed=slow`**: Slow speed.
@@ -536,7 +537,7 @@ Controls how intense the color tint is on the killstreak sheen glow for weapons.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`sheens_tint=high`** (all presets, *including None*).
+Default setting: **`sheens_tint=high`** (all presets, _including None_).
 
 * **`sheens_tint=low`**: Base tint.
 * **`sheens_tint=medium`**: Small tint boost.
@@ -550,7 +551,7 @@ Controls texture quality.
 * **CPU usage:** low
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`textures=very_low`**: Low texture quality, blocky textures, disables texture blending.
 * **`textures=low`**: Low texture quality, disables texture blending.
@@ -565,7 +566,7 @@ Controls ropes for Mannpower grappling hook and decorations in maps.
 * **CPU usage:** medium
 * **GPU usage:** low
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`ropes=off`**: Disables ropes.
 * **`ropes=low`**: Basic ropes.
@@ -598,7 +599,7 @@ Setting it higher can reduce input delay.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`fpscap=1000`** (all presets, *including None*).
+Default setting: **`fpscap=1000`** (all presets, _including None_).
 
 * **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
 * **`fpscap=30`**: Sets FPS cap to 30 FPS.
@@ -630,7 +631,7 @@ Controls VSync, which removes screen tearing by syncing FPS to your monitor's re
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`vsync=off`** (all presets). *Not set in None.*
+Default setting: **`vsync=off`** (all presets). _Not set in None._
 
 * **`vsync=off`**: Disables VSync.
 * **`vsync=on`**: Enables VSync.
@@ -644,7 +645,7 @@ Toggles the live 3D player model in the corner of your screen.
 * **CPU usage:** high
 * **GPU usage:** medium
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`hud_player_model=off`**: Disables the player model.
 * **`hud_player_model=on`**: Enables the player model.
@@ -656,7 +657,7 @@ Controls health/player info panels and target ID translucency.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`hud_panels=high`** (all presets, *including None*, except Low and Very Low).
+Default setting: **`hud_panels=high`** (all presets, _including None_, except Low and Very Low).
 
 * **`hud_panels=off`**: Disables health/player info panels that appear when looking at a player, disables target ID box.
 * **`hud_panels=low`**: Enables health/player info panels that appear when looking at a player, enables opaque target ID box.
@@ -669,7 +670,7 @@ Controls the display of target ID avatars.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`hud_avatars=friends`** (all presets, *including None*, except Low and Very Low).
+Default setting: **`hud_avatars=friends`** (all presets, _including None_, except Low and Very Low).
 
 * **`hud_avatars=off`**: Disables avatars.
 * **`hud_avatars=everyone`**: Enables the display of everyone's avatars.
@@ -686,7 +687,7 @@ Toggles match status HUD at the top of the screen.
 * **CPU usage:** high
 * **GPU usage:** none
 
-Default setting: **`match_hud=on`** (all presets, *including None*, except Very Low).
+Default setting: **`match_hud=on`** (all presets, _including None_, except Very Low).
 
 * **`match_hud=off`**: Disables match status HUD.
 * **`match_hud=on`**: Enables match status HUD.
@@ -698,7 +699,7 @@ Controls text chat, which displays player messages and voice messages.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`messages=on`** (all presets, *including None*, except Very Low).
+Default setting: **`messages=on`** (all presets, _including None_, except Very Low).
 
 * **`messages=off`**: Disables text chat.
 * **`messages=hide`**: Hides text chat.
@@ -711,7 +712,7 @@ Controls death and objective notifications in the top right corner.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`killfeed=on`** (all presets, *including None*, except Very Low).
+Default setting: **`killfeed=on`** (all presets, _including None_, except Very Low).
 
 * **`killfeed=off`**: Disables killfeed.
 * **`killfeed=on`**: Enables killfeed.
@@ -723,7 +724,7 @@ Controls banners that appear at the top center of the screen, notifying you of a
 * **CPU usage:** medium
 * **GPU usage:** none
 
-Default setting: **`killstreaks=high`** (all presets, *including None*, except Low and Very Low).
+Default setting: **`killstreaks=high`** (all presets, _including None_, except Low and Very Low).
 
 * **`killstreaks=off`**: Disables killstreak banner.
 * **`killstreaks=low`**: Enables killstreak opaque banner.
@@ -736,7 +737,7 @@ Controls the HUD achievements tracker.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`hud_achievement=on`** (all presets, *including None*, except Very Low).
+Default setting: **`hud_achievement=on`** (all presets, _including None_, except Very Low).
 
 * **`hud_achievement=off`**: Disables achievement tracker panel completely.
 * **`hud_achievement=on`**: Enables support for achievement tracker panel.
@@ -748,7 +749,7 @@ Controls developer console.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`console=on`** (all presets, *including None*, except Very Low).
+Default setting: **`console=on`** (all presets, _including None_, except Very Low).
 
 * **`console=off`**: Disables developer console.
 * **`console=on`**: Enables developer console.
@@ -762,7 +763,7 @@ This module is disabled by default, since server ads can cause lag spikes.
 * **CPU usage:** low
 * **GPU usage:** low
 
-Default setting: **`htmlmotd=off`** (all presets *including None*).
+Default setting: **`htmlmotd=off`** (all presets _including None_).
 
 * **`htmlmotd=off`**: Disables HTML MOTDs.
 * **`htmlmotd=on`**: Enables HTML MOTDs.
@@ -777,7 +778,7 @@ Controls the outlines that appear through walls for players, some objectives (pa
 * **CPU usage:** high
 * **GPU usage:** high
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`outlines=off`**: Disables outlines and nametags.
 * **`outlines=low`**: Enables nametags, disable outlines.
@@ -791,7 +792,7 @@ Controls the live map that appears in the background of the main menu. Some opti
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`dynamic_background=off`** (all presets, *including None*).
+Default setting: **`dynamic_background=off`** (all presets, _including None_).
 
 * **`dynamic_background=off`**: No main menu map background on startup.
 * **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **Warning: use this only for yttrium's preloading. If you want to preload anything else, use the `itemtest` setting. The probability that you don't have the `preload_room` map is big.**
@@ -810,7 +811,7 @@ Controls a variety of sound effects, including spatialization and positional eff
 * **CPU usage:** high
 * **GPU usage:** none
 
-Default setting: based on which preset you are currently using. *Not set in None.*
+Default setting: based on which preset you are currently using. _Not set in None._
 
 * **`sound=low`**: Disables sound volume mixing, very low quality sound spatialization and positional effects, delays spatialization.
 * **`sound=medium`**: Enables sound volume mixing, only basic sound spatialization and positional effects enabled, slightly delays spatialization.
@@ -829,7 +830,7 @@ Controls player voice chat.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`voice_chat=on`** (all presets, *including None*, except Very Low).
+Default setting: **`voice_chat=on`** (all presets, _including None_, except Very Low).
 
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
@@ -846,7 +847,7 @@ Ensures compatibility with animation and model mods.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`mod_support=on`** (all presets, *including None*).
+Default setting: **`mod_support=on`** (all presets, _including None_).
 
 * **`mod_support=off`**: Does not block settings that may cause crashes with animation and model mods.
 * **`mod_support=on`**: Blocks settings that may cause crashes with animation and model mods.
@@ -862,7 +863,7 @@ Controls the privacy of your Casual/Competitive matchmaking party.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`party_mode=request`** (all presets, *including None*).
+Default setting: **`party_mode=request`** (all presets, _including None_).
 
 * **`party_mode=open`**: Open party (people can join anytime).
 * **`party_mode=request`**: Request-only party (people can only join if you accept their request or if you invite them).
@@ -875,7 +876,7 @@ Controls the mastercomfig logo which appears in console on start up.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`logo=on`** (all presets, *including None*, except Very Low).
+Default setting: **`logo=on`** (all presets, _including None_, except Very Low).
 
 * **`logo=off`**: Does not print logo in console on startup.
 * **`logo=on`**: Prints logo in console on startup.
@@ -903,7 +904,7 @@ Example:
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`move_bind=wasd`** (all presets, *including None*).
+Default setting: **`move_bind=wasd`** (all presets, _including None_).
 
 * **`move_bind=wasd`**: Sets movement keys to WASD.
 * **`move_bind=esdf`**: Sets movement keys to ESDF.
