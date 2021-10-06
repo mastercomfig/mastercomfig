@@ -230,6 +230,10 @@
     "ultra": "on",
     "none": ""
   },
+  "hud_contracts": {
+    "default": "all",
+    "very-low": "off"
+  },
   "hud_panels": {
     "default": "high",
     "very-low": "off",

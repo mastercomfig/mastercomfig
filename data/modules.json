@@ -662,6 +662,24 @@
         ]
       },
       {
+        "name": "hud_contracts",
+        "display": "Contracts",
+        "values": [
+          {
+            "value": "off",
+            "display": "Hide the Contracts HUD in-game"
+          },
+          {
+            "value": "all",
+            "display": "Show all Contracts available in-game"
+          },
+          {
+            "value": "active_only",
+            "display": "Only show active Contracts in-game"
+          }
+        ]
+      },
+      {
         "name": "hud_panels",
         "display": "Panels",
         "values": [
