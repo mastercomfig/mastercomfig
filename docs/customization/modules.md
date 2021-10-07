@@ -652,16 +652,16 @@ Default setting: based on which preset you are currently using. _Not set in None
 
 ### Contracts
 
-Controls the Contracts HUD seen at the top right corner of the screen while playing.
+Controls the Contracts HUD seen at the top right corner of the screen during gameplay.
 
 * **CPU usage:** low
 * **GPU usage:** none
 
 Default setting: **`hud_contracts=all`** (all presets, _including None_, except Very Low).
 
-* **`hud_contracts=off`**: Hides the Contracts HUD in-game.
-* **`hud_contracts=all`**: Shows all Contracts available in-game.
-* **`hud_contracts=active_only`**: Only shows active Contracts in-game.
+* **`hud_contracts=hide`**: Hides the Contracts HUD.
+* **`hud_contracts=all`**: Shows all Contracts available.
+* **`hud_contracts=active`**: Only shows active Contracts.
 
 ### Panels
 
