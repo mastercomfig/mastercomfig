@@ -6,8 +6,8 @@ description: Помогите мне в работе и улучшении maste
 
 Вы можете поддержать проект mastercoms используя [Liberapay](https://liberapay.com/mastercoms/) или [Ko-fi](https://ko-fi.com/mastercoms) деньгами, или вы можете подарить предметы через [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
-Если вы не можете поддерживать меня напрямую, у меня есть код [Support-A-Creator](https://www.epicgames.com/fortnite/en-US/news/support-a-creator-faq): `mastercoms`,
-которые можно указать в
+Если вы не можете поддерживать меня напрямую, у меня есть [Support-A-Creator](https://www.epicgames.com/fortnite/en-US/news/support-a-creator-faq) код: `mastercoms`,
+который можно указать в
 [Fortnite](https://www.epicgames.com/fortnite/en-US/news/support-a-creator-faq),
 [Rocket League](https://www.rocketleague.com/support-a-creator/)
 и другие игры в Epic Games Store (включая бесплатные игры!).
