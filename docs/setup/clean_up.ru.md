@@ -22,6 +22,6 @@ description: Как полностью сбросить TF2, включая уд
 иначе Steam Cloud повторно загрузит их. Кроме того, можно
 [отключить Steam Cloud](https://support.steampowered.com/kb_article.php?ref=6736-QEIG-8941#enabling).
 
-Наконец, запустите TF2 только с
-`-novid -autoconfig -default +host_writeconfig config.cfg full +mat_savechanges +quit` параметров
-запуска. Игра запустится и выйдет. После этого удалите эти параметры запуска.
+В завершении, запустите TF2 только с этими
+`-novid -autoconfig -default +host_writeconfig config.cfg full +mat_savechanges +quit` параметрами
+запуска. Игра запустится и выключится. После этого удалите эти параметры запуска.
