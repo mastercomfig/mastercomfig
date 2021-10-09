@@ -47,7 +47,7 @@ You can also view selected levels for all modules by entering `module_levels` in
 
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception for this rule is `alias snapshot_buffer`. You will also have to use `alias net_projectiles;alias net_hitscan;alias net_spy` to fully disable the `snapshot_buffer` module.
+If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception for this rule is the Snapshot Buffer module. You will have to use `alias snapshot_buffer;alias net_projectiles;alias net_hitscan;alias net_spy` to fully disable it.
 
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup by entering `run_modules` into the console.
 
@@ -83,19 +83,21 @@ Default setting: **`packet_rate=standard`** (all presets, *including None*, exce
 * **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad Wi-Fi, or very slow CPUs.
 * **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
 
-### Snapshot Buffer
+### Snapshot Buffer (Interpolation)
 
-Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives. Also known as linear interpolation (lerp or interp).
+**Also known as: lerp, interp or interpolation.**
+
+Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives. **Also known as linear interpolation (lerp or interp).**
 
 * **CPU usage:** low
 * **GPU usage:** none
 
 Default setting: **`snapshot_buffer=safe`** (all presets, *including None*).
 
-* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class.
-* **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against.
-* **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot.
-* **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot.
+* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer=safe`. For projectiles classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer=low`. For Spy, currently, this sets `snapshot_buffer=low`.
+* **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against (**15.2 ms lerp** when using `packet_rate=standard`, or **30.3 ms lerp** when using `packet_rate=congestion`).
+* **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30.3 ms lerp** when using `packet_rate=standard`, or **60.6 ms lerp** when using `packet_rate=congestion`).
+* **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45.5 ms lerp** when using `packet_rate=standard`, or **90.9 ms lerp** when using `packet_rate=congestion`).
 
 ### Packet Size
 
