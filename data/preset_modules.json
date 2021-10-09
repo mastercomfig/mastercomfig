@@ -118,9 +118,9 @@
     "default": "trilinear",
     "very-low": "bilinear",
     "low": "bilinear",
-    "medium-high": "aniso4x",
-    "high": "aniso8x",
-    "ultra": "aniso16x",
+    "medium-high": "aniso_4x",
+    "high": "aniso_8x",
+    "ultra": "aniso_16x",
     "none": ""
   },
   "characters": {

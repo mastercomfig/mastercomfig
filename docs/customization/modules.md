@@ -36,7 +36,7 @@ textures=high
 
 or similar.
 
-You can also view selected levels for all modules by entering `module_levels` into console.
+You can also view selected levels for all modules by entering `modules_levels` into console.
 
 ### Advanced
 
@@ -355,10 +355,10 @@ Default setting: based on which preset you are currently using. _Not set in None
 
 * **`texture_filter=bilinear`**: Bilinear filtering
 * **`texture_filter=trilinear`**: Trilinear filtering
-* **`texture_filter=aniso2x`**: Anisotropic filtering 2x
-* **`texture_filter=aniso4x`**: Anisotropic filtering 4x
-* **`texture_filter=aniso8x`**: Anisotropic filtering 8x
-* **`texture_filter=aniso16x`**: Anisotropic filtering 16x
+* **`texture_filter=aniso_2x`**: Anisotropic filtering 2x
+* **`texture_filter=aniso_4x`**: Anisotropic filtering 4x
+* **`texture_filter=aniso_8x`**: Anisotropic filtering 8x
+* **`texture_filter=aniso_16x`**: Anisotropic filtering 16x
 
 ### Characters
 
@@ -533,6 +533,9 @@ Default setting: **`sheens_speed=slow`** (all presets, _including None_, except 
 ### Killstreak Sheens Tint Intensity
 
 Controls how intense the color tint is on the killstreak sheen glow for weapons.
+
+!!! warning
+    This module will have no effect if you have `sheens_speed` set to `off`.
 
 * **CPU usage:** none
 * **GPU usage:** none

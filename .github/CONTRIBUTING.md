@@ -163,7 +163,7 @@ If your settings affect quality in any way, create a new module or modify the ex
 If you want to create a new module, you might need to modify all the following files to add your new module into mastercomfig:
 
 * `config/mastercomfig/cfg/comfig/comfig.cfg`
-* `config/mastercomfig/cfg/comfig/module_levels.cfg`
+* `config/mastercomfig/cfg/comfig/modules_levels.cfg`
 * `config/mastercomfig/cfg/comfig/modules_run.cfg`
 * `config/cfg/presets/*.cfg` (except `none.cfg`)
 * `config/templates/modules/modules.cfg`
