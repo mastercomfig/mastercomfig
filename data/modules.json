@@ -70,7 +70,7 @@
         "description": "Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).",
         "advanced_display": "This does not increase data usage, only restricts how quickly data can be sent.",
         "type": "slider",
-        "values": ["128Kbps", "192Kbps", "384Kbps", "512Kbps", "762Kbps", "1.0Mbps", "1.5Mbps", "2.0Mbps","2.5Mbps", "3.0Mbps", "4.0Mbps", "6.0Mbps", "8.0Mbps"]
+        "values": ["128Kbps", "192Kbps", "384Kbps", "512Kbps", "762Kbps", "1.0Mbps", "1.5Mbps", "2.0Mbps", "2.5Mbps", "3.0Mbps", "4.0Mbps", "6.0Mbps", "8.0Mbps"]
       },
       {
         "name": "download",
