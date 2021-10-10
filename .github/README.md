@@ -42,7 +42,7 @@ If you are not able to support me through the above methods, that's fine too! Yo
 
 * [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
 
-* povohat for making the null-canceling movement script
+* povohat for [making the null-canceling movement script](https://web.archive.org/web/20191124005113/http://ozfortress.com/showpost.php?p=624355)
 
 * SteamDB for their excellent tools, including [Game Tracking for TF2](https://github.com/SteamDatabase/GameTracking-TF2)
 
