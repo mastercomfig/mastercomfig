@@ -6,9 +6,10 @@ description: Learn how to do advanced customization and scripting with mastercom
 
 You can use user customization files to override specific settings in mastercomfig.
 
-These are `autoexec.cfg`, which runs at game launch, and the 9 class configs
+These are `autoexec.cfg`, which runs at game launch, the 9 class configs
 (`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
-`medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class.
+`medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class, and `listenserver.cfg`,
+which runs when first spawning in a local server.
 All of these files go into a folder called `user` you create in `tf/cfg`.
 
 If you don't have these files, you can download the [mastercomfig template](https://github.com/mastercomfig/mastercomfig/releases/latest/download/template.zip) and move the `user` folder to your `tf/cfg/` folder to customize the config.
@@ -95,6 +96,9 @@ For example, you can put `alias class_config_heavyweapons"exec user/myheavy.cfg"
 
 You can change the name of your custom game overrides config using the `game_overrides_c` alias.
 For example, you can put `alias game_overrides_c"exec user/mygameoverrides.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mygameoverrides.cfg`.
+
+You can change the name of your custom local server config using the `listenserver_c` alias.
+For example, you can put `alias listenserver_c"exec user/mylistenserver.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mylistenserver.cfg`.
 
 You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
