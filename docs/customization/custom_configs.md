@@ -19,6 +19,7 @@ If there's something you'd like to run for all of your class configs, you can ad
 ## Utility Commands
 
 * `run_modules`: Applies modules. Useful for changing module levels in-game, and then applying them all at once.
+* `apply_user`: Runs user modules, applies modules and then runs user autoexec. Useful for changing your user preferences in-game.
 * `restore_preset`: Restores modules back to preset defaults, without using user settings.
 * `restore_config`: Runs all of mastercomfig and user configs again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
