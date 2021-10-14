@@ -19,11 +19,9 @@ If there's something you'd like to run for all of your class configs, you can ad
 ## Utility Commands
 
 * `run_modules`: Applies modules. Useful for changing module levels in-game, and then applying them all at once.
-* `apply_user`: Runs user modules, applies modules and then runs user autoexec. Useful for changing your user preferences in-game.
 * `restore_preset`: Restores modules back to preset defaults, without using user settings.
 * `restore_config`: Runs all of mastercomfig and user configs again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
-* `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
 ## Game Overrides
 
@@ -81,6 +79,10 @@ mastercomfig supports selecting a preset after download. Add a file to your `use
 
 You can check the current selected preset by entering `preset_level` into console.
 
+mastercomfig also supports changing a preset while in-game. Note that, with this method, the Anti-Aliasing module wouldn't be changed since it's blocked by mastercomfig to prevent material system reloads.
+
+You can use `change_preset_NAME` (refer to the list above) in the console to apply all the modules of that preset on your game (takes effect immediately). Note that this ignores your custom settings present in `autoexec.cfg` and `modules.cfg`.
+
 ## Optional Aliases
 
 !!! warning
@@ -126,52 +128,3 @@ To get an idea about what to put in your `user/autoexec.cfg` and select options,
 you can download the autoexec template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
 
 This config is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for granular customization.
-
-## Debug Commands
-
-mastercomfig provides a set of handy debugging commands used during mastercomfig's development to analyze several aspects of the game.
-
-### General
-
-* `debug_output`: Enable developer only output (`debug_output_1`). Shows various warnings about potential issues, and outputs console to the corner of the screen.
-* `debug_output_toggle`: Cycle through all 4 modes (including disabled) for developer only output. Different modes display different amounts of information.
-* `debug_output_display`: Display console output in the corner of the screen without showing additional information.
-* `debug_output_1`: Enable developer only output level 1.
-* `debug_output_2`: Enable developer only output level 2, which displays more information.
-
-### Gameplay Testing
-
-* `debug_instant_respawn`: Turns on fully instant respawn.
-* `debug_invulnerable`: Toggles buddha mode (health cannot go below 1).
-* `debug_bots`: Fills the server with bots with AI.
-* `debug_target`: Adds a target bot, which can be damaged infinitely.
-
-### Rendering
-
-* `debug_occlusion`: Turns on debugging of the occlusion system.
-* `debug_pixelvis`: Turns on debugging of the pixel visibility system.
-* `debug_fillrate`: Shows overdraw from repeated passes.
-* `debug_matsys_reload`: Reloads material system.
-
-### Sound
-
-* `debug_sound_loads`: Dumps the current state of the sound memory pool, and enables debug output for sound loads.
-* `debug_sound_dsp`: Enables debug output of DSP parameters of sounds, and enables visualization for automatic room DSP, if it is enabled.
-
-### Network
-* `debug_network_packets`: Enables spew of each network packet sent and received, including compression information if relevant.
-* `debug_network_drops`: Enables debug output of outdated or duplicate packets.
-* `debug_network_graph`: Enables the full networking graph, which displays information about packet volume, interp timings, and packet rates.
-* `debug_network_pred`: Enables network prediction error logging.
-
-### FPS
-
-* `debug_fps`: Enables the basic networking graph, which is handy for seeing FPS. Note that the graph has a noticeable performance impact.
-* `debug_fps_range`: Enables full FPS counter, which shows absolute FPS mins and maxes. You can re-run this command to reset the mins and maxes.
-
-### Profiling
-
-* `debug_vprof_spikes`: Logs spikes below 100FPS (can be adjusted with `alias debug_vprof_spike"vprof_dump_spikes 100"`) to `tf/vprof_spikes.log` (can be adjusted with `alias debug_vprof_log_spike"con_logfile vprof_spike.log"`).
-* `debug_vprof_dump`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). Can be re-run to reset timings data.
-* `debug_vprof_report`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). Can be re-run to reset timings data.
-* `debug_vprof_off`: Turns off profiling.
