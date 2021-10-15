@@ -120,7 +120,7 @@ Uses of `user/post_comfig.cfg` are rarer, but still valid. With this, you can di
 
 ## Multiple autoexec.cfg and modules.cfg (apply_user)
 
-You can have multiples `autoexec.cfg` and `modules.cfg` files if you alias `modules_c` and `autoexec_c` before running them, and then using `apply_user`.
+You can have multiple `autoexec.cfg` and `modules.cfg` files if you alias `modules_c` and `autoexec_c` before running them, and then using `apply_user`.
 
 `apply_user` is `modules_c;run_modules;autoexec_c` (applies custom modules, runs all modules, and executes custom autoexec).
 
@@ -137,7 +137,7 @@ lighting=ultra
 ragdolls=high
 ```
 
-If you want to use multiples `autoexec.cfg` and `modules.cfg`, you would need to alias `autoexec_c` and `modules_c` for each of them.
+If you want to use multiple `autoexec.cfg` and `modules.cfg`, you would need to alias `autoexec_c` and `modules_c` for each of them.
 So, let's say you want to use your original `autoexec.cfg` and `modules.cfg`, but at the same time, you also want an alternative `autoexec.cfg` and an alternative `modules.cfg` to taunt and say `too easy`, disable ragdolls and use low lighting settings.
 You would create new files, and for example, let's say you want to call them `autoexec_alt.cfg` and `modules_alt.cfg`. You wold grab these new files and put them in the `tf/cfg/user` folder.
 Then, to use your alternative configuration, you would need to do something like this:
