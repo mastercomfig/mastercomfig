@@ -108,7 +108,6 @@ For example, you could have different class configs for Scout in competitive and
 
 If you want to run something only the first time you spawn and never run again while you keep the game open use the `game_overrides_once_c` alias.
 
-
 ## Advanced Customization
 
 When diving deep into customization the core of mastercomfig, you may find it useful to run things directly before and after mastercomfig's `comfig.cfg`, which provides core functionality and aliases.
@@ -119,6 +118,55 @@ Examples of `user/pre_comfig.cfg` uses can be things like customizing your prese
 
 Uses of `user/post_comfig.cfg` are rarer, but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, or customizing the built-in ones, and more!
 
+## Multiple autoexec.cfg and modules.cfg (apply_user)
+
+You can have multiples `autoexec.cfg` and `modules.cfg` files if you alias `modules_c` and `autoexec_c` before running them, and then using `apply_user`.
+
+`apply_user` is `modules_c;run_modules;autoexec_c` (applies custom modules, runs all modules, and executes custom autoexec).
+
+For example, let's say this is what you use:
+
+`autoexec.cfg` (original):
+```
+bind g "taunt;say ez"
+```
+
+`modules.cfg` (original):
+```
+lighting=ultra
+ragdolls=high
+```
+
+If you want to use multiples `autoexec.cfg` and `modules.cfg`, you would need to alias `autoexec_c` and `modules_c` for each of them.
+So, let's say you want to use your original `autoexec.cfg` and `modules.cfg`, but at the same time, you also want an alternative `autoexec.cfg` and an alternative `modules.cfg` to taunt and say `too easy`, disable ragdolls and use low lighting settings.
+You would create new files, and for example, let's say you want to call them `autoexec_alt.cfg` and `modules_alt.cfg`. You wold grab these new files and put them in the `tf/cfg/user` folder.
+Then, to use your alternative configuration, you would need to do something like this:
+
+`autoexec.cfg` (original modified):
+```
+alias autoexec_c"exec user/autoexec_alt.cfg"
+alias modules_c"exec user/modules_alt.cfg"
+
+bind g "taunt;say ez"
+```
+
+`autoexec_alt.cfg` (alternative autoexec):
+```
+alias autoexec_c"exec user/autoexec.cfg"
+alias modules_c"exec user/modules.cfg"
+
+bind g "taunt;say too easy"
+```
+
+`modules_alt.cfg` (alternative modules):
+```
+lighting=low
+ragdolls=off
+```
+
+What you have done here is: you created two new files inside `tf/cfg/user` and aliased `autoexec_c` and `modules_c` to change your settings just by using `apply_user`, since you created a loop: whenever `autoexec.cfg` is executed (at game launch), `autoexec_c` and `modules_c` will be aliased to execute the alternative configuration.
+And, whenever the alternative configuration is executed, it aliases `autoexec_c` and `modules_c` to execute the original configuration. That is, `apply_user` becomes a loop and you can change your configuration at any time.
+You can also use more than two configurations. You can make ten files and even more. The important thing to do is to correct alias `autoexec_c` and `modules_c` in each of them.
 
 ## Optional User Config Template
 
@@ -129,3 +177,51 @@ To get an idea about what to put in your `user/autoexec.cfg` and select options,
 you can download the autoexec template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
 
 This config is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for granular customization.
+
+## Debug Commands
+
+This is a set of handy debugging commands used during mastercomfig's development to analyze several aspects of the game.
+
+### General
+
+* `developer -1`: Display console output in the corner of the screen without showing additional information.
+* `developer 1`: Enable developer only output level 1. Shows various warnings about potential issues, and outputs console to the corner of the screen.
+* `developer 2`: Enable developer only output level 2, which displays more information.
+
+### Gameplay Testing
+
+* `sv_cheats 1;mp_disable_respawn_times 1;spec_freeze_time 0;spec_freeze_traveltime .01;mp_respawnwavetime 0`: Turns on fully instant respawn.
+* `sv_cheats 1;buddha`: Toggles buddha mode (health cannot go below 1).
+* `tf_bot_kick all;tf_bot_quota_mode normal;tf_bot_difficulty 3;tf_bot_quota 32`: Fills the server with bots with AI.
+* `sv_cheats 1;bot -targetdummy`: Adds a target bot, which can be damaged infinitely.
+
+### Rendering
+
+* `sv_cheats 1;r_visocclusion 1;r_occlusionspew 1`: Turns on debugging of the occlusion system.
+* `r_drawpixelvisibility 1;r_pixelvisibility_spew 1`: Turns on debugging of the pixel visibility system.
+* `sv_cheats 1;mat_fillrate 1`: Shows overdraw from repeated passes.
+* `toggle mat_aaquality`: Reloads the material system.
+
+### Sound
+
+* `snd_async_showmem;snd_async_spew 1;snd_async_spew_blocking 2;snd_async_stream_spew 2`: Dumps the current state of the sound memory pool, and enables debug output for sound loads.
+* `sv_cheats 1;snd_showstart 2;adsp_debug 6`: Enables debug output of DSP parameters of sounds, and enables visualization for automatic room DSP, if it is enabled.
+
+### Network
+
+* `net_showudp 1`: Enables spew of each network packet sent and received, including compression information if relevant.
+* `net_showdrop 1`: Enables debug output of outdated or duplicate packets.
+* `net_graph 4`: Enables the full networking graph, which displays information about packet volume, interp timings, and packet rates.
+* `cl_showerror 2`: Enables network prediction error logging.
+
+### FPS
+
+* `net_graph 1`: Enables the basic networking graph, which is handy for seeing FPS. Note that the graph has a noticeable performance impact.
+* `cl_showfps 2`: Enables full FPS counter, which shows absolute FPS mins and maxes. You can disable and enable this command to reset the mins and maxes.
+
+### Profiling
+
+* `vprof_off;vprof_reset;con_logfile vprof_spike.log;vprof_dump_oninterval 0;vprof_report_oninterval 0;vprof_dump_spikes 100;vprof_on`: Logs spikes below 100 FPS (can be adjusted by changing the value of `vprof_dump_spikes`) to `tf/vprof_spikes.log` (can be adjusted by changing the value of `con_logfile`).
+* `vprof_off;vprof_reset;con_logfile vprof.log;vprof_dump_oninterval 10;vprof_report_oninterval 0;vprof_dump_spikes 0;vprof_on`: Logs profiling data to `tf/vprof.log` (can be adjusted by changing the value of `con_logfile`). Can be re-run to reset timings data.
+* `vprof_off;vprof_reset;con_logfile vprof.log;vprof_dump_oninterval 0;vprof_report_oninterval 10;vprof_dump_spikes 0;vprof_on`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted by changing the value of `con_logfile`). Can be re-run to reset timings data.
+* `vprof_off;vprof_reset;con_logfile "";vprof_dump_oninterval 0;vprof_report_oninterval 0;vprof_dump_spikes 0`: Turns off profiling.
