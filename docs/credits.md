@@ -23,8 +23,6 @@ description: All the help and inspiration that has helped mastercomfig be even b
 
 * AveYo for [GetLaunchOptions.bat](https://pastebin.com/bhQrywES)
 
-* Tiagoquix for continued support and bug fixes
-
 * jane for the shrinkKeyValues bash script
 
 * Fraklin for screenshots

@@ -52,8 +52,6 @@ If you are not able to support me through the above methods, that's fine too! Yo
 
 * AveYo for [GetLaunchOptions.bat](https://pastebin.com/bhQrywES)
 
-* Tiagoquix for continued support and bug fixes
-
 * jane for the shrinkKeyValues bash script
 
 * Fraklin for screenshots
