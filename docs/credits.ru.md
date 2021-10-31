@@ -23,8 +23,6 @@ description: Вся помощь и вдохновение, которые по�
 
 * AveYo за [GetLaunchOptions.bat](https://pastebin.com/bhQrywES)
 
-* Tiagoquix за постоянную поддержку и исправление ошибок
-
 * jane за shrinkKeyValues bash скрипт
 
 * Fraklin за скриншоты
