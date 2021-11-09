@@ -910,7 +910,39 @@
         "name": "ping_tolerance",
         "display": "Ping Tolerance (Matchmaking)",
         "type": "slider",
-        "values": ["off", "25", "50", "60", "70", "80", "90", "100"]
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "25",
+            "display": "25 ms"
+          },
+          {
+            "value": "50",
+            "display": "50 ms"
+          },
+          {
+            "value": "60",
+            "display": "60 ms"
+          },
+          {
+            "value": "70",
+            "display": "70 ms"
+          },
+          {
+            "value": "80",
+            "display": "80 ms"
+          },
+          {
+            "value": "90",
+            "display": "90 ms"
+          },
+          {
+            "value": "100",
+            "display": "100 ms"
+          }
+        ]
       },
       {
         "name": "logo",
