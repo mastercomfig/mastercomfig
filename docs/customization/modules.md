@@ -897,13 +897,13 @@ Controls the maximum ping you want to play with when searching for matchmaking s
 Default setting: **`ping_tolerance=50`** (all presets, _including None_).
 
 * **`ping_tolerance=off`**: Disables custom ping tolerance.
-* **`ping_tolerance=25`**: Sets ping tolerance to 25.
-* **`ping_tolerance=50`**: Sets ping tolerance to 50.
-* **`ping_tolerance=60`**: Sets ping tolerance to 60.
-* **`ping_tolerance=70`**: Sets ping tolerance to 70.
-* **`ping_tolerance=80`**: Sets ping tolerance to 80.
-* **`ping_tolerance=90`**: Sets ping tolerance to 90.
-* **`ping_tolerance=100`**: Sets ping tolerance to 100.
+* **`ping_tolerance=25`**: Sets ping tolerance to 25 ms.
+* **`ping_tolerance=50`**: Sets ping tolerance to 50 ms.
+* **`ping_tolerance=60`**: Sets ping tolerance to 60 ms.
+* **`ping_tolerance=70`**: Sets ping tolerance to 70 ms.
+* **`ping_tolerance=80`**: Sets ping tolerance to 80 ms.
+* **`ping_tolerance=90`**: Sets ping tolerance to 90 ms.
+* **`ping_tolerance=100`**: Sets ping tolerance to 100 ms.
 
 ### Logo
 
