@@ -139,3 +139,6 @@ Run `very_low_reset` on the console. It will reset the remaining settings that w
 
 Please note that running this may reset some personal preferences back to default.
 
+## Game resolution keeps resetting.
+
+Check to see if you have `-dxlevel 100` in your TF2 launch options, it should hmay have a different number next to it. You only needed this one time.
