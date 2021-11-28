@@ -37,7 +37,7 @@ jobs:
       env:
         GH_TOKEN: ${{secrets.PRIVATE_REPO_TOKEN}}
     - name: Install dependencies
-      run: pip install -Ur docs/requirements.txt
+      run: pip install -r docs/requirements.txt
     - name: Wait on release docs
       if: ${{ github.repository_owner == 'mastercomfig' && github.event_name != 'pull_request' && github.ref == 'refs/heads/develop' }}
       run:
