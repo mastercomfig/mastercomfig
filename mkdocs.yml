@@ -102,7 +102,7 @@ theme:
     - search.highlight
     - search.share
   name: material
-  custom_dir: overrides
+  custom_dir: docs/overrides
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
