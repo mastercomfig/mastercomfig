@@ -144,3 +144,7 @@ Please note that running this may reset some personal preferences back to defaul
 This is because you have the Transparent Viewmodels addon installed. The Transparent Viewmodels addon overwrites certain modules and commands to make it work correctly.
 
 To solve your problem, just uninstall the addon.
+
+## Game resolution or graphics keep resetting
+
+Check to see if you have `-dxlevel 100` in your TF2 launch options, it may have a different number next to it. You only needed to launch with this launch option one time.
