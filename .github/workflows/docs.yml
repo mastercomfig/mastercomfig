@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - uses: actions/setup-python@v2
       with:
         python-version: 3.x
@@ -41,13 +43,13 @@ jobs:
       run:
         sleep 240
     - name: Update from Remote
-      run: git fetch --tags origin gh-pages --depth=1
+      run: git fetch --tags
     - name: Build docs (latest)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/release' }}
       run: mike deploy --no-redirect -up $(git describe --tags `git rev-list --tags --max-count=1`) latest page
     - name: Build docs (develop)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/develop' }}
-      run: mike deploy --rebase -up dev
+      run: mike deploy --no-redirect -up dev
     - name: Build docs
       if: ${{ github.event_name == 'pull_request' }}
       run: mike deploy -u $(git describe --tags) latest
