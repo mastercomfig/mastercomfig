@@ -118,7 +118,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
-  logo: img/logo.svg
+  logo: img/logo.png
   favicon: img/logo.ico
   icon:
       repo: fontawesome/brands/github
