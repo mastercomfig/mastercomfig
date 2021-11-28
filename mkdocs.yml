@@ -49,6 +49,10 @@ nav:
 markdown_extensions:
   - abbr
   - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
   - pymdownx.details
   - smarty
   - toc:
@@ -57,7 +61,6 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.snippets
-  - meta
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.emoji
@@ -68,27 +71,38 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - footnotes
-  - attr_list
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid-experimental
+            format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
 theme:
   language: en
   features:
-    - navigation.instant
+    #- navigation.instant
     - navigation.sections
     - navigation.top
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.sections
     - navigation.expand
     - navigation.indexes
     - navigation.tracking
-    - header.autohide
     - toc.integrate
+    - header.autohide
     - content.tabs.link
     - search.suggest
+    - search.highlight
     - search.share
   name: material
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -123,8 +137,10 @@ plugins:
   - redirects:
       redirect_maps:
         'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'
-  - search
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - macros
+  - social
   - minify:
       minify_html: true
   - git-revision-date-localized:
@@ -133,7 +149,9 @@ plugins:
 extra_javascript:
   - js/widescreen.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-  - javascripts/tables.js
+  - js/tables.js
+extra_css:
+  - css/extra.css
 extra:
   version:
     provider: mike
