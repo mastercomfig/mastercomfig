@@ -19,12 +19,18 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: 3.x
+    - uses: actions/cache@v2
+      with:
+        key: ${{ github.ref }}
+        path: .cache
     - name: Update pip
       run: python -m pip install -U pip setuptools
     - name: Set Git author
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    - name: Install native dependencies
+      run: apt-get install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
     - name: Install Material for MkDocs Insiders
       run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
       if: ${{ github.repository_owner == 'mastercomfig' && github.event_name != 'pull_request' }}
