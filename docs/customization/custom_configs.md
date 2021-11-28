@@ -6,9 +6,10 @@ description: Learn how to do advanced customization and scripting with mastercom
 
 You can use user customization files to override specific settings in mastercomfig.
 
-These are `autoexec.cfg`, which runs at game launch, and the 9 class configs
+These are `autoexec.cfg`, which runs at game launch, the 9 class configs
 (`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
-`medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class.
+`medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class, and `listenserver.cfg`,
+which runs when first spawning in a local server.
 All of these files go into a folder called `user` you create in `tf/cfg`.
 
 If you don't have these files, you can download the [mastercomfig template](https://github.com/mastercomfig/mastercomfig/releases/latest/download/template.zip) and move the `user` folder to your `tf/cfg/` folder to customize the config.
@@ -22,7 +23,6 @@ If there's something you'd like to run for all of your class configs, you can ad
 * `restore_preset`: Restores modules back to preset defaults, without using user settings.
 * `restore_config`: Runs all of mastercomfig and user configs again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
-* `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
 ## Game Overrides
 
@@ -80,6 +80,10 @@ mastercomfig supports selecting a preset after download. Add a file to your `use
 
 You can check the current selected preset by entering `preset_level` into console.
 
+mastercomfig also supports changing a preset while in-game. Note that, with this method, the Anti-Aliasing module wouldn't be changed since it's blocked by mastercomfig to prevent material system reloads.
+
+You can use `change_preset_NAME` (refer to the list above) in the console to apply all the modules of that preset on your game (takes effect immediately). Note that this ignores your custom settings present in `autoexec.cfg` and `modules.cfg`.
+
 ## Optional Aliases
 
 !!! warning
@@ -96,11 +100,13 @@ For example, you can put `alias class_config_heavyweapons"exec user/myheavy.cfg"
 You can change the name of your custom game overrides config using the `game_overrides_c` alias.
 For example, you can put `alias game_overrides_c"exec user/mygameoverrides.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mygameoverrides.cfg`.
 
+You can change the name of your custom local server config using the `listenserver_c` alias.
+For example, you can put `alias listenserver_c"exec user/mylistenserver.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mylistenserver.cfg`.
+
 You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
 
 If you want to run something only the first time you spawn and never run again while you keep the game open use the `game_overrides_once_c` alias.
-
 
 ## Advanced Customization
 
@@ -112,6 +118,55 @@ Examples of `user/pre_comfig.cfg` uses can be things like customizing your prese
 
 Uses of `user/post_comfig.cfg` are rarer, but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, or customizing the built-in ones, and more!
 
+## Multiple autoexec.cfg and modules.cfg (apply_user)
+
+You can have multiple `autoexec.cfg` and `modules.cfg` files if you alias `modules_c` and `autoexec_c` before running them, and then using `apply_user`.
+
+`apply_user` is `modules_c;run_modules;autoexec_c` (applies custom modules, runs all modules, and executes custom autoexec).
+
+For example, let's say this is what you use:
+
+`autoexec.cfg` (original):
+```
+bind g "taunt;say ez"
+```
+
+`modules.cfg` (original):
+```
+lighting=ultra
+ragdolls=high
+```
+
+If you want to use multiple `autoexec.cfg` and `modules.cfg`, you would need to alias `autoexec_c` and `modules_c` for each of them.
+So, let's say you want to use your original `autoexec.cfg` and `modules.cfg`, but at the same time, you also want an alternative `autoexec.cfg` and an alternative `modules.cfg` to taunt and say `too easy`, disable ragdolls and use low lighting settings.
+You would create new files, and for example, let's say you want to call them `autoexec_alt.cfg` and `modules_alt.cfg`. You wold grab these new files and put them in the `tf/cfg/user` folder.
+Then, to use your alternative configuration, you would need to do something like this:
+
+`autoexec.cfg` (original modified):
+```
+alias autoexec_c"exec user/autoexec_alt.cfg"
+alias modules_c"exec user/modules_alt.cfg"
+
+bind g "taunt;say ez"
+```
+
+`autoexec_alt.cfg` (alternative autoexec):
+```
+alias autoexec_c"exec user/autoexec.cfg"
+alias modules_c"exec user/modules.cfg"
+
+bind g "taunt;say too easy"
+```
+
+`modules_alt.cfg` (alternative modules):
+```
+lighting=low
+ragdolls=off
+```
+
+What you have done here is: you created two new files inside `tf/cfg/user` and aliased `autoexec_c` and `modules_c` to change your settings just by using `apply_user`, since you created a loop: whenever `autoexec.cfg` is executed (at game launch), `autoexec_c` and `modules_c` will be aliased to execute the alternative configuration.
+And, whenever the alternative configuration is executed, it aliases `autoexec_c` and `modules_c` to execute the original configuration. That is, `apply_user` becomes a loop and you can change your configuration at any time.
+You can also use more than two configurations. You can make ten files and even more. The important thing to do is to correct alias `autoexec_c` and `modules_c` in each of them.
 
 ## Optional User Config Template
 
@@ -125,49 +180,48 @@ This config is only for advanced, fine-tuned customization and is completely opt
 
 ## Debug Commands
 
-mastercomfig provides a set of handy debugging commands used during mastercomfig's development to analyze several aspects of the game.
+This is a set of handy debugging commands used during mastercomfig's development to analyze several aspects of the game.
 
 ### General
 
-* `debug_output`: Enable developer only output (`debug_output_1`). Shows various warnings about potential issues, and outputs console to the corner of the screen.
-* `debug_output_toggle`: Cycle through all 4 modes (including disabled) for developer only output. Different modes display different amounts of information.
-* `debug_output_display`: Display console output in the corner of the screen without showing additional information.
-* `debug_output_1`: Enable developer only output level 1.
-* `debug_output_2`: Enable developer only output level 2, which displays more information.
+* `developer -1`: Display console output in the corner of the screen without showing additional information.
+* `developer 1`: Enable developer only output level 1. Shows various warnings about potential issues, and outputs console to the corner of the screen.
+* `developer 2`: Enable developer only output level 2, which displays more information.
 
 ### Gameplay Testing
 
-* `debug_instant_respawn`: Turns on fully instant respawn.
-* `debug_invulnerable`: Toggles buddha mode (health cannot go below 1).
-* `debug_bots`: Fills the server with bots with AI.
-* `debug_target`: Adds a target bot, which can be damaged infinitely.
+* `sv_cheats 1;mp_disable_respawn_times 1;spec_freeze_time 0;spec_freeze_traveltime .01;mp_respawnwavetime 0`: Turns on fully instant respawn.
+* `sv_cheats 1;buddha`: Toggles buddha mode (health cannot go below 1).
+* `tf_bot_kick all;tf_bot_quota_mode normal;tf_bot_difficulty 3;tf_bot_quota 32`: Fills the server with bots with AI.
+* `sv_cheats 1;bot -targetdummy`: Adds a target bot, which can be damaged infinitely.
 
 ### Rendering
 
-* `debug_occlusion`: Turns on debugging of the occlusion system.
-* `debug_pixelvis`: Turns on debugging of the pixel visibility system.
-* `debug_fillrate`: Shows overdraw from repeated passes.
-* `debug_matsys_reload`: Reloads material system.
+* `sv_cheats 1;r_visocclusion 1;r_occlusionspew 1`: Turns on debugging of the occlusion system.
+* `r_drawpixelvisibility 1;r_pixelvisibility_spew 1`: Turns on debugging of the pixel visibility system.
+* `sv_cheats 1;mat_fillrate 1`: Shows overdraw from repeated passes.
+* `toggle mat_aaquality`: Reloads the material system.
 
 ### Sound
 
-* `debug_sound_loads`: Dumps the current state of the sound memory pool, and enables debug output for sound loads.
-* `debug_sound_dsp`: Enables debug output of DSP parameters of sounds, and enables visualization for automatic room DSP, if it is enabled.
+* `snd_async_showmem;snd_async_spew 1;snd_async_spew_blocking 2;snd_async_stream_spew 2`: Dumps the current state of the sound memory pool, and enables debug output for sound loads.
+* `sv_cheats 1;snd_showstart 2;adsp_debug 6`: Enables debug output of DSP parameters of sounds, and enables visualization for automatic room DSP, if it is enabled.
 
 ### Network
-* `debug_network_packets`: Enables spew of each network packet sent and received, including compression information if relevant.
-* `debug_network_drops`: Enables debug output of outdated or duplicate packets.
-* `debug_network_graph`: Enables the full networking graph, which displays information about packet volume, interp timings, and packet rates.
-* `debug_network_pred`: Enables network prediction error logging.
+
+* `net_showudp 1`: Enables spew of each network packet sent and received, including compression information if relevant.
+* `net_showdrop 1`: Enables debug output of outdated or duplicate packets.
+* `net_graph 4`: Enables the full networking graph, which displays information about packet volume, interp timings, and packet rates.
+* `cl_showerror 2`: Enables network prediction error logging.
 
 ### FPS
 
-* `debug_fps`: Enables the basic networking graph, which is handy for seeing FPS. Note that the graph has a noticeable performance impact.
-* `debug_fps_range`: Enables full FPS counter, which shows absolute FPS mins and maxes. You can re-run this command to reset the mins and maxes.
+* `net_graph 1`: Enables the basic networking graph, which is handy for seeing FPS. Note that the graph has a noticeable performance impact.
+* `cl_showfps 2`: Enables full FPS counter, which shows absolute FPS mins and maxes. You can disable and enable this command to reset the mins and maxes.
 
 ### Profiling
 
-* `debug_vprof_spikes`: Logs spikes below 100FPS (can be adjusted with `alias debug_vprof_spike"vprof_dump_spikes 100"`) to `tf/vprof_spikes.log` (can be adjusted with `alias debug_vprof_log_spike"con_logfile vprof_spike.log"`).
-* `debug_vprof_dump`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). Can be re-run to reset timings data.
-* `debug_vprof_report`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). Can be re-run to reset timings data.
-* `debug_vprof_off`: Turns off profiling.
+* `vprof_off;vprof_reset;con_logfile vprof_spike.log;vprof_dump_oninterval 0;vprof_report_oninterval 0;vprof_dump_spikes 100;vprof_on`: Logs spikes below 100 FPS (can be adjusted by changing the value of `vprof_dump_spikes`) to `tf/vprof_spikes.log` (can be adjusted by changing the value of `con_logfile`).
+* `vprof_off;vprof_reset;con_logfile vprof.log;vprof_dump_oninterval 10;vprof_report_oninterval 0;vprof_dump_spikes 0;vprof_on`: Logs profiling data to `tf/vprof.log` (can be adjusted by changing the value of `con_logfile`). Can be re-run to reset timings data.
+* `vprof_off;vprof_reset;con_logfile vprof.log;vprof_dump_oninterval 0;vprof_report_oninterval 10;vprof_dump_spikes 0;vprof_on`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted by changing the value of `con_logfile`). Can be re-run to reset timings data.
+* `vprof_off;vprof_reset;con_logfile "";vprof_dump_oninterval 0;vprof_report_oninterval 0;vprof_dump_spikes 0`: Turns off profiling.

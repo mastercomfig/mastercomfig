@@ -13,12 +13,16 @@ rm -f "${addons_setup_cfg_path}" "${addons_cfg_path}"
 touch "${addons_setup_cfg_path}" "${addons_cfg_path}"
 
 declare -A addon_alias_map
-addon_alias_map[transparent-viewmodels]="transparent-vm"
+addon_alias_map[disable-pyroland]="disable-pyroland"
 addon_alias_map[flat-mouse]="flat-mouse"
+addon_alias_map[lowmem]="lowmem"
+addon_alias_map[no-explosion-smoke]="no-explosion-smoke"
+addon_alias_map[no-footsteps]="no-footsteps"
+addon_alias_map[no-soundscapes]="no-soundscapes"
+addon_alias_map[no-tutorial]="no-tutorial"
 addon_alias_map[null-canceling-movement]="null-movement"
 addon_alias_map[opengl]="opengl"
-addon_alias_map[no-tutorial]="no-tutorial"
-addon_alias_map[lowmem]="lowmem"
+addon_alias_map[transparent-viewmodels]="transparent-vm"
 
 for F in ../../config/cfg/addons/*; do
     if [ -f "${F}" ]; then
