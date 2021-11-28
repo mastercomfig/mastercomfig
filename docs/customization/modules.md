@@ -813,7 +813,7 @@ Controls the live map that appears in the background of the main menu. Some opti
 Default setting: **`dynamic_background=off`** (all presets, _including None_).
 
 * **`dynamic_background=off`**: No main menu map background on startup.
-* **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **You have to install [the map](https://github.com/Yttrium-tYcLief/CompVMInstaller/blob/master/Project/CompVMInstaller/Resources/preload_room.bsp?raw=true), or else this will not function.]
+* **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **You have to install [the map](https://github.com/Yttrium-tYcLief/CompVMInstaller/blob/master/Project/CompVMInstaller/Resources/preload_room.bsp?raw=true), or else this will not function.**
 * **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
 * **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 
