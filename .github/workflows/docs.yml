@@ -41,9 +41,7 @@ jobs:
       run:
         sleep 240
     - name: Update from Remote
-      run: git fetch origin gh-pages --depth=1
-    - name: Fetch Tags
-      run: git fetch --tags
+      run: git fetch --tags origin gh-pages --depth=1
     - name: Build docs (latest)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/release' }}
       run: mike deploy --no-redirect -up $(git describe --tags `git rev-list --tags --max-count=1`) latest page
