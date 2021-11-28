@@ -118,7 +118,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
-  logo: https://mastercomfig.com/img/mastercomfig_logo.svg
+  logo: img/logo.svg
   favicon: img/logo.ico
   icon:
       repo: fontawesome/brands/github
