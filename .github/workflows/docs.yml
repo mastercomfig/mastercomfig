@@ -44,7 +44,7 @@ jobs:
       run: git fetch origin gh-pages --depth=1
     - name: Build docs (latest)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/release' }}
-      run: mike deploy --no-redirect --rebase -up $(git describe --tags --abbrev=0) latest page
+      run: mike deploy --no-redirect --rebase -up $(git describe --tags `git rev-list --tags --max-count=1`) latest page
     - name: Build docs (develop)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/develop' }}
       run: mike deploy --rebase -up dev
