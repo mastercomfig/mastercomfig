@@ -1,6 +1,6 @@
 site_name: mastercomfig docs
 site_author: mastercoms
-site_url: 'https://docs.mastercomfig.com/page/'
+site_url: 'https://docs.mastercomfig.com/'
 site_description: A modern customization framework.
 copyright: >-
   Copyright &copy; 2016-2021 mastercoms<br><br>Valve, the Valve logo, Steam, the
@@ -126,6 +126,8 @@ repo_name: GitHub
 repo_url: 'https://github.com/mastercomfig/mastercomfig/'
 edit_uri: 'edit/release/docs/'
 plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - i18n:
       default_language: en
       languages:
@@ -137,15 +139,15 @@ plugins:
   - redirects:
       redirect_maps:
         'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'
-  - search:
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - macros
   - social
-  - minify:
-      minify_html: true
+  - mike:
+      canonical_version: latest
   - git-revision-date-localized:
       type: date
       fallback_to_build_date: true
+  - minify:
+      minify_html: true
 extra_javascript:
   - js/widescreen.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
