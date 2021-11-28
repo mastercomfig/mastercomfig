@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Redirecting</title>
-  <noscript>
-    <meta http-equiv="refresh" content="1; url=../../dev/overrides/main.html" />
-  </noscript>
-  <script>
-    window.location.replace("../../dev/overrides/main.html" + window.location.hash);
-  </script>
-</head>
-<body>
-  Redirecting to <a href="../../dev/overrides/main.html">../../dev/overrides/main.html</a>...
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block outdated %}
+  You're not viewing the latest version.
+  <a href="{{ '../' ~ base_url }}"> <!-- 
+Given this value for the href attribute, the link will always redirect to the root of your site, which will then redirect to the latest version. This ensures that older versions of your site do not depend on a specific alias, e.g. latest, to allow for changing the alias later on without breaking earlier versions.
+
+ -->
+    <strong>Click here to go to latest.</strong>
+  </a>
+{% endblock %}
