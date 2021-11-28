@@ -31,3 +31,4 @@ venv/
 
 # mkdocs
 site/
+.cache/
