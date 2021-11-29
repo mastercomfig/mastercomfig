@@ -591,7 +591,7 @@ Setting it higher can reduce input delay.
     Although it is common advice to set this based on your display's refresh rate,
     the only thing you need to consider is having the FPS cap greater than or equal to
     your monitor's refresh rate to get the full effect of your monitor. Otherwise, it will
-    solely a determination based on your preference as described above.
+    solely be a determination based on your preference as described above.
 
 !!! warning
 
