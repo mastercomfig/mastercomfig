@@ -123,13 +123,13 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`bandwidth=762Kbps`** (all presets, _including None_).
+Default setting: **`bandwidth=0.8Mbps`** (all presets, _including None_).
 
 * **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 * **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
 * **`bandwidth=384Kbps`**: 384Kbps game traffic bandwidth.
-* **`bandwidth=512Kbps`**: 512Kbps game traffic bandwidth.
-* **`bandwidth=762Kbps`**: 762Kbps game traffic bandwidth.
+* **`bandwidth=0.5Mbps`**: 0.5Mbps game traffic bandwidth.
+* **`bandwidth=0.8Mbps`**: 0.8Mbps game traffic bandwidth.
 * **`bandwidth=1.0Mbps`**: 1.0Mbps game traffic bandwidth.
 * **`bandwidth=1.5Mbps`**: 1.5Mbps game traffic bandwidth.
 * **`bandwidth=2.0Mbps`**: 2.0Mbps game traffic bandwidth.
