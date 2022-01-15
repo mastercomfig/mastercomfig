@@ -15,7 +15,7 @@ If you experience problems or reduced performance from this feature, turn it off
 
 ## Disable Game Mode
 
-Game Mode may reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information and instructions on how to disable it.
+Game Mode _may_ reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information and instructions on how to disable it if you are having issues with it.
 
 ## Disable Fullscreen Optimizations
 
@@ -34,7 +34,7 @@ If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms
 
 ## Use High Performance power plan
 
-Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations. For AMD Ryzen Zen 2 and below users, use a Ryzen specific plan to correctly take advantage of CPPC2. Alternatively, a [custom Ryzen power plan](https://www.techpowerup.com/download/1usmus-custom-power-plan-ryzen-3000-zen-2/) can be used to potentially achieve higher boost clocks.
+Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations.
 
 ## Disable Radeon Chill
 
@@ -57,8 +57,7 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 3. Click Apply Changes.
 
 !!! note
-    This may not do much for TF2, as its optimizations are largely for TCP, which only happens during connection,
-    with a small bit done for UDP, which is used during the actual game session.
+    This may not do much for TF2, as its optimizations are largely for TCP but does have a few UDP options.
 
 ## Disable Overlays
 
@@ -66,7 +65,7 @@ Big idea: disable as many overlays as possible. They interrupt the rendering pro
 
 ### Disabling Nahimic
 
-Nahimic is an audio effects software preinstalled on some gaming laptops and desktops, from manufacturers like Alienware, Dell, MSI, and ASUS ROG. Its overlay is especially inefficient, and causes FPS drops and generally lower FPS even when it is turned off. It is notoriously hard to uninstall, so you will have better luck disabling the driver through the following steps:
+Nahimic is an audio effects software preinstalled on some gaming laptops and desktops, from manufacturers like Alienware, Dell, MSI, and ASUS ROG. Its overlay is especially inefficient, and causes FPS drops and generally lower FPS even when it is turned off. If you have a version which comes with an overlay, you should remove it. It is notoriously hard to uninstall, so you will have better luck disabling the driver through the following steps:
 
 1. Open Device Manager
 2. Expand `Software Components`
