@@ -12,7 +12,7 @@ Thus, it's highly appreciated to benchmark mastercomfig and any changes you make
 
 ## How to benchmark
 
-1. Download [the benchmark file](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k).
+1. Download [the benchmark file](https://mega.nz/file/f8tlhDhR#nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k).
 2. Move it to the `tf/` folder.
 3. Launch the game.
 4. Enter `timedemo benchmark_test`
