@@ -275,7 +275,7 @@ Default setting: based on which preset you are currently using. _Not set in None
 * **`particles=low`**: Disables weather particles, reduces particle density/quality, disables bullet impact flecks.
 * **`particles=medium`**: Disables weather particles, reduces particle density/quality, enables bullet impact flecks.
 * **`particles=high`**: Enables weather particles, uses full particle density/quality, enables bullet impact flecks.
-* **`particles=ultra`**: Enables weather particles, uses full particle density/quality, enables the new bullet impact effects system, enables bullet impact flecks.
+* **`particles=ultra`**: Enables weather particles, uses full particle density/quality, enables bullet impact flecks and forces full simulation for all particles.
 
 ### General Post-Processing
 
