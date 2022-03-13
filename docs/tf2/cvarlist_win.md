@@ -2170,6 +2170,7 @@ scene_showunlock                         : 0        : , "a", "sv"      : Show wh
 -score                                   : cmd      :                  :
 scr_centertime                           : 5        : , "cl"           :
 screenshot                               : cmd      :                  : Take a screenshot.
+sdr                                      : cmd      :                  : View/edit SteamNetworkingSockets configuration variables
 sdr_spew_level                           : 4        :                  : Verbosity level for SteamNetworkingSockets spew.  4=warning, 5=msg, 6=verbose, 7=debug
 sensitivity                              : 3        : , "a", "cl"      : Mouse sensitivity.
 server_game_time                         : cmd      :                  : Gives the game time in seconds (server's curtime)
@@ -2470,7 +2471,7 @@ sv_logsecret                             : 0        :                  : If set 
 sv_lowedict_action                       : 0        :                  : 0 - no action, 1 - warn to log file, 2 - attempt to restart the game, if applicable, 3 - restart the map, 4 - go to the next map in the map cycle, 5 - spew all edicts.
 sv_lowedict_threshold                    : 8        :                  : When only this many edicts are free, take the action specified by sv_lowedict_action.
 sv_massreport                            : 0        : , "sv"           :
-sv_master_share_game_socket              : 1        :                  : Use the game's socket to communicate to the master server. If this is 0, then it will create a socket on -steamport + 1 to communicate to the master server on.
+sv_master_share_game_socket              : 1        :                  : Use the game's socket to communicate to the master server.  This is recommended.If this is 0, then it will create a socket on -steamport to handle server browser traffic
 sv_max_connects_sec                      : 2        :                  : Maximum connections per second to respond to from a single IP address.
 sv_max_connects_sec_global               : 0        :                  : Maximum connections per second to respond to from anywhere.
 sv_max_connects_window                   : 4        :                  : Window over which to average connections per second averages.
@@ -2818,6 +2819,7 @@ tf_debug_damage                          : 0        : , "sv", "cheat"  :
 tf_debug_flamethrower                    : 0        : , "sv", "cheat", "rep" : Visualize the flamethrower damage.
 tf_debug_placement_failure               : 0        : , "sv", "cheat"  :
 tf_decoy_lifetime                        : 5        : , "sv", "cheat"  : The lifetime of a decoy, in seconds
+tf_delete_temp_files                     : 1        : , "a", "cl"      : Delete custom player sprays and other temp files during shutdown
 tf_demoman_charge_frametime_scaling      : 1        : , "sv", "cheat", "rep" : When enabled, scale yaw limiting based on client performance (frametime).
 tf_dingaling_lasthit_pitch_override      : -1       : , "cl"           : If set, pitch for last hit sounds.
 tf_dingaling_lasthit_pitchmaxdmg         : 100      : , "a", "cl"      : Desired pitch of the last hit sound when a maximum damage hit (>= 150 health) is done.
@@ -2868,6 +2870,7 @@ tf_fireball_damage                       : 25       : , "sv", "cheat", "rep" :
 tf_fireball_distance                     : 500      : , "sv", "cheat", "rep" :
 tf_fireball_draw_debug_radius            : 0        : , "sv", "cheat", "rep" :
 tf_fireball_hit_recharge_boost           : 1        : , "sv", "cheat", "rep" :
+tf_fireball_max_lifetime                 : 0        : , "sv", "cheat", "rep" :
 tf_fireball_radius                       : 22       : , "sv", "cheat", "rep" :
 tf_fireball_speed                        : 3000     : , "sv", "cheat", "rep" :
 tf_flag_caps_per_round                   : 3        : , "sv", "rep"    : Number of captures per round on CTF and PASS Time maps. Set to 0 to disable.
@@ -3235,6 +3238,7 @@ tf_stats_nogameplaycheck                 : 0        : , "sv"           : Disable
 tf_steam_workshop_import_icon_path       : 0        : , "a", "cl"      : Default location to load backpack icons from
 tf_steam_workshop_import_material_path   : 0        : , "a", "cl"      : Default location to load materials from
 tf_steam_workshop_import_model_path      : 0        : , "a", "cl"      : Default location to load models from
+tf_steam_workshop_page_skip              : 10       : , "a", "cl"      : Number of pages to skip in the Steam Workshop dialog.
 tf_steam_workshop_query_timeout          : 10       : , "cl"           : Time in seconds to allow communication with the Steam Workshop server.
 tf_taunt_always_show_hint                : 1        : , "cl"           :
 tf_taunt_first_person                    : 0        : , "cl"           : 1 = taunts remain first-person
@@ -3571,5 +3575,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3563 total convars/concommands
+3567 total convars/concommands
 ```

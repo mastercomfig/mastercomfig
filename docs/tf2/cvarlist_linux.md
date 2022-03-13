@@ -2206,6 +2206,7 @@ scr_centertime                           : 5        : , "cl"           :
 screenshot                               : cmd      :                  : Take a screenshot.
 sdl_double_click_size                    : 2        :                  :
 sdl_double_click_time                    : 400      :                  :
+sdr                                      : cmd      :                  : View/edit SteamNetworkingSockets configuration variables
 sdr_spew_level                           : 4        :                  : Verbosity level for SteamNetworkingSockets spew.  4=warning, 5=msg, 6=verbose, 7=debug
 sensitivity                              : 3        : , "a", "cl"      : Mouse sensitivity.
 server_game_time                         : cmd      :                  : Gives the game time in seconds (server's curtime)
@@ -2853,6 +2854,7 @@ tf_debug_damage                          : 0        : , "sv", "cheat"  :
 tf_debug_flamethrower                    : 0        : , "sv", "cheat", "rep" : Visualize the flamethrower damage.
 tf_debug_placement_failure               : 0        : , "sv", "cheat"  :
 tf_decoy_lifetime                        : 5        : , "sv", "cheat"  : The lifetime of a decoy, in seconds
+tf_delete_temp_files                     : 1        : , "a", "cl"      : Delete custom player sprays and other temp files during shutdown
 tf_demoman_charge_frametime_scaling      : 1        : , "sv", "cheat", "rep" : When enabled, scale yaw limiting based on client performance (frametime).
 tf_dingaling_lasthit_pitch_override      : -1       : , "cl"           : If set, pitch for last hit sounds.
 tf_dingaling_lasthit_pitchmaxdmg         : 100      : , "a", "cl"      : Desired pitch of the last hit sound when a maximum damage hit (>= 150 health) is done.
@@ -2903,6 +2905,7 @@ tf_fireball_damage                       : 25       : , "sv", "cheat", "rep" :
 tf_fireball_distance                     : 500      : , "sv", "cheat", "rep" :
 tf_fireball_draw_debug_radius            : 0        : , "sv", "cheat", "rep" :
 tf_fireball_hit_recharge_boost           : 1        : , "sv", "cheat", "rep" :
+tf_fireball_max_lifetime                 : 0        : , "sv", "cheat", "rep" :
 tf_fireball_radius                       : 22       : , "sv", "cheat", "rep" :
 tf_fireball_speed                        : 3000     : , "sv", "cheat", "rep" :
 tf_flag_caps_per_round                   : 3        : , "sv", "rep"    : Number of captures per round on CTF and PASS Time maps. Set to 0 to disable.
@@ -3267,6 +3270,7 @@ tf_spectate_pyrovision                   : 0        : , "a", "cl"      : When on
 tf_spectator_target_location             : 0        : , "a", "cl"      : Determines the location of the spectator targetID panel.
 tf_spells_enabled                        : 0        : , "sv", "nf", "rep" : Enable to Allow Halloween Spells to be dropped and used by players
 tf_stats_nogameplaycheck                 : 0        : , "sv"           : Disable normal check for valid gameplay, send stats regardless.
+tf_steam_workshop_page_skip              : 10       : , "a", "cl"      : Number of pages to skip in the Steam Workshop dialog.
 tf_steam_workshop_query_timeout          : 10       : , "cl"           : Time in seconds to allow communication with the Steam Workshop server.
 tf_taunt_always_show_hint                : 1        : , "cl"           :
 tf_taunt_first_person                    : 0        : , "cl"           : 1 = taunts remain first-person
@@ -3599,5 +3603,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3591 total convars/concommands
+3595 total convars/concommands
 ```
