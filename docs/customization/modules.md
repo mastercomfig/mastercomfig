@@ -85,9 +85,9 @@ Default setting: **`packet_rate=standard`** (all presets, _including None_, exce
 
 ### Snapshot Buffer (Interpolation)
 
-**Also known as linear interpolation (lerp or interp).**
+**Also known as: lerp, interp or interpolation.**
 
-Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.
+Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives. **Also known as linear interpolation (lerp or interp).**
 
 * **CPU usage:** low
 * **GPU usage:** none

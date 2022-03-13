@@ -23,6 +23,7 @@ If there's something you'd like to run for all of your class configs, you can ad
 * `restore_preset`: Restores modules back to preset defaults, without using user settings.
 * `restore_config`: Runs all of mastercomfig and user configs again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
+* `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
 ## Game Overrides
 
@@ -79,10 +80,6 @@ mastercomfig supports selecting a preset after download. Add a file to your `use
 * very-low
 
 You can check the current selected preset by entering `preset_level` into console.
-
-mastercomfig also supports changing a preset while in-game. Note that, with this method, the Anti-Aliasing module wouldn't be changed since it's blocked by mastercomfig to prevent material system reloads.
-
-You can use `change_preset_NAME` (refer to the list above) in the console to apply all the modules of that preset on your game (takes effect immediately). Note that this ignores your custom settings present in `autoexec.cfg` and `modules.cfg`.
 
 ## Optional Aliases
 
@@ -180,48 +177,49 @@ This config is only for advanced, fine-tuned customization and is completely opt
 
 ## Debug Commands
 
-This is a set of handy debugging commands used during mastercomfig's development to analyze several aspects of the game.
+mastercomfig provides a set of handy debugging commands used during mastercomfig's development to analyze several aspects of the game.
 
 ### General
 
-* `developer -1`: Display console output in the corner of the screen without showing additional information.
-* `developer 1`: Enable developer only output level 1. Shows various warnings about potential issues, and outputs console to the corner of the screen.
-* `developer 2`: Enable developer only output level 2, which displays more information.
+* `debug_output`: Enable developer only output (`debug_output_1`). Shows various warnings about potential issues, and outputs console to the corner of the screen.
+* `debug_output_toggle`: Cycle through all 4 modes (including disabled) for developer only output. Different modes display different amounts of information.
+* `debug_output_display`: Display console output in the corner of the screen without showing additional information.
+* `debug_output_1`: Enable developer only output level 1.
+* `debug_output_2`: Enable developer only output level 2, which displays more information.
 
 ### Gameplay Testing
 
-* `sv_cheats 1;mp_disable_respawn_times 1;spec_freeze_time 0;spec_freeze_traveltime .01;mp_respawnwavetime 0`: Turns on fully instant respawn.
-* `sv_cheats 1;buddha`: Toggles buddha mode (health cannot go below 1).
-* `tf_bot_kick all;tf_bot_quota_mode normal;tf_bot_difficulty 3;tf_bot_quota 32`: Fills the server with bots with AI.
-* `sv_cheats 1;bot -targetdummy`: Adds a target bot, which can be damaged infinitely.
+* `debug_instant_respawn`: Turns on fully instant respawn.
+* `debug_invulnerable`: Toggles buddha mode (health cannot go below 1).
+* `debug_bots`: Fills the server with bots with AI.
+* `debug_target`: Adds a target bot, which can be damaged infinitely.
 
 ### Rendering
 
-* `sv_cheats 1;r_visocclusion 1;r_occlusionspew 1`: Turns on debugging of the occlusion system.
-* `r_drawpixelvisibility 1;r_pixelvisibility_spew 1`: Turns on debugging of the pixel visibility system.
-* `sv_cheats 1;mat_fillrate 1`: Shows overdraw from repeated passes.
-* `toggle mat_aaquality`: Reloads the material system.
+* `debug_occlusion`: Turns on debugging of the occlusion system.
+* `debug_pixelvis`: Turns on debugging of the pixel visibility system.
+* `debug_fillrate`: Shows overdraw from repeated passes.
+* `debug_matsys_reload`: Reloads material system.
 
 ### Sound
 
-* `snd_async_showmem;snd_async_spew 1;snd_async_spew_blocking 2;snd_async_stream_spew 2`: Dumps the current state of the sound memory pool, and enables debug output for sound loads.
-* `sv_cheats 1;snd_showstart 2;adsp_debug 6`: Enables debug output of DSP parameters of sounds, and enables visualization for automatic room DSP, if it is enabled.
+* `debug_sound_loads`: Dumps the current state of the sound memory pool, and enables debug output for sound loads.
+* `debug_sound_dsp`: Enables debug output of DSP parameters of sounds, and enables visualization for automatic room DSP, if it is enabled.
 
 ### Network
-
-* `net_showudp 1`: Enables spew of each network packet sent and received, including compression information if relevant.
-* `net_showdrop 1`: Enables debug output of outdated or duplicate packets.
-* `net_graph 4`: Enables the full networking graph, which displays information about packet volume, interp timings, and packet rates.
-* `cl_showerror 2`: Enables network prediction error logging.
+* `debug_network_packets`: Enables spew of each network packet sent and received, including compression information if relevant.
+* `debug_network_drops`: Enables debug output of outdated or duplicate packets.
+* `debug_network_graph`: Enables the full networking graph, which displays information about packet volume, interp timings, and packet rates.
+* `debug_network_pred`: Enables network prediction error logging.
 
 ### FPS
 
-* `net_graph 1`: Enables the basic networking graph, which is handy for seeing FPS. Note that the graph has a noticeable performance impact.
-* `cl_showfps 2`: Enables full FPS counter, which shows absolute FPS mins and maxes. You can disable and enable this command to reset the mins and maxes.
+* `debug_fps`: Enables the basic networking graph, which is handy for seeing FPS. Note that the graph has a noticeable performance impact.
+* `debug_fps_range`: Enables full FPS counter, which shows absolute FPS mins and maxes. You can re-run this command to reset the mins and maxes.
 
 ### Profiling
 
-* `vprof_off;vprof_reset;con_logfile vprof_spike.log;vprof_dump_oninterval 0;vprof_report_oninterval 0;vprof_dump_spikes 100;vprof_on`: Logs spikes below 100 FPS (can be adjusted by changing the value of `vprof_dump_spikes`) to `tf/vprof_spikes.log` (can be adjusted by changing the value of `con_logfile`).
-* `vprof_off;vprof_reset;con_logfile vprof.log;vprof_dump_oninterval 10;vprof_report_oninterval 0;vprof_dump_spikes 0;vprof_on`: Logs profiling data to `tf/vprof.log` (can be adjusted by changing the value of `con_logfile`). Can be re-run to reset timings data.
-* `vprof_off;vprof_reset;con_logfile vprof.log;vprof_dump_oninterval 0;vprof_report_oninterval 10;vprof_dump_spikes 0;vprof_on`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted by changing the value of `con_logfile`). Can be re-run to reset timings data.
-* `vprof_off;vprof_reset;con_logfile "";vprof_dump_oninterval 0;vprof_report_oninterval 0;vprof_dump_spikes 0`: Turns off profiling.
+* `debug_vprof_spikes`: Logs spikes below 100FPS (can be adjusted with `alias debug_vprof_spike"vprof_dump_spikes 100"`) to `tf/vprof_spikes.log` (can be adjusted with `alias debug_vprof_log_spike"con_logfile vprof_spike.log"`).
+* `debug_vprof_dump`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). Can be re-run to reset timings data.
+* `debug_vprof_report`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). Can be re-run to reset timings data.
+* `debug_vprof_off`: Turns off profiling.
