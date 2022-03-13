@@ -1,0 +1,165 @@
+site_name: mastercomfig docs
+site_author: mastercoms
+site_url: 'https://docs.mastercomfig.com/'
+site_description: A modern customization framework.
+copyright: >-
+  Copyright &copy; 2016-2021 mastercoms<br><br>Valve, the Valve logo, Steam, the
+  Steam logo, Team Fortress, the Team Fortress logo, Source, the Source logo are
+  trademarks and/or registered trademarks of Valve Corporation in the U.S.
+  and/or other countries.<br><br>mastercomfig is not sponsored, endorsed,
+  licensed by, or affiliated with Valve Corporation.
+strict: true
+nav:
+  - About:
+      - Home: index.md
+      - FAQ: faq.md
+      - Support Me: support_me.md
+      - Help: help.md
+      - Features: features.md
+      - Screenshots: screenshots.md
+      - Benchmarks: benchmarks.md
+      - Contributing: contributing.md
+      - Security: security.md
+      - Credits: credits.md
+  - Setup:
+      - Clean Up: setup/clean_up.md
+      - Install: setup/install.md
+  - Customization:
+      - Launch Options: customization/launch_options.md
+      - Custom Configs: customization/custom_configs.md
+      - Modules: customization/modules.md
+      - List of Custom Configs: customization/custom_config_list.md
+      - See Also: customization/see_also.md
+  - OS Optimizations:
+      - OS Optimizations: os/index.md
+      - Windows: os/windows.md
+      - Linux: os/linux.md
+  - Next Steps:
+      - Quick Fixes: next_steps/quick_fixes.md
+      - Update: next_steps/update.md
+  - TF2 Documentation:
+      - TF2 Documentation: tf2/README.md
+      - Misconceptions: tf2/misconceptions.md
+      - Console Variables - Windows: tf2/cvarlist_win.md
+      - Console Variables - Linux: tf2/cvarlist_linux.md
+      - Hidden Console Variables: tf2/hiddencvars.md
+      - Launch Options - Windows: tf2/launchopts_win.md
+      - Launch Options - Linux: tf2/launchopts_linux.md
+      - Silly Launch Options: tf2/silly_launch_options.md
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - pymdownx.details
+  - smarty
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji
+  - pymdownx.inlinehilite:
+      style_plain_text: true
+  - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+          - name: mermaid
+            class: mermaid-experimental
+            format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+theme:
+  language: en
+  features:
+    #- navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.tracking
+    - toc.integrate
+    - header.autohide
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+    - search.share
+  name: material
+  custom_dir: docs/overrides
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  logo: img/logo.png
+  favicon: img/logo.ico
+  icon:
+      repo: fontawesome/brands/github
+repo_name: GitHub
+repo_url: 'https://github.com/mastercomfig/mastercomfig/'
+edit_uri: 'edit/release/docs/'
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - i18n:
+      default_language: en
+      languages:
+        en: English
+        pt: Português
+        ru: Pусский
+        es: Español
+        fr: Français
+  - redirects:
+      redirect_maps:
+        'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'
+  - macros
+  - mike:
+      canonical_version: latest
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+  - minify:
+      minify_html: true
+extra_javascript:
+  - js/widescreen.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - js/tables.js
+extra_css:
+  - css/extra.css
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/discord
+      name: Discord
+      link: 'https://discord.gg/CuPb2zV'
+    - icon: fontawesome/brands/steam
+      name: Steam Group
+      link: 'https://steamcommunity.com/groups/comfig'
