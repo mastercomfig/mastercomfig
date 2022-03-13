@@ -52,4 +52,4 @@ jobs:
       run: mike deploy --no-redirect -up dev
     - name: Build docs
       if: ${{ github.event_name == 'pull_request' }}
-      run: mike deploy -u $(git describe --tags) latest --config-file mkdocs-pr.yml
+      run: mike deploy --config-file mkdocs-pr.yml -u $(git describe --tags) latest
