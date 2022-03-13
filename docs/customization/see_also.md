@@ -18,6 +18,9 @@ Here are a few awesome TF2 modifications:
 * [No-Hats-Mod bgum](https://github.com/Fedora31/no-hats-bgum)
   — Removes cosmetics like hats, botkillers, skins, and much more
 
+* [Less distracting explosions](https://gamebanana.com/mods/12444)
+  — Get cleaner particles for explosions
+
 * [No muzzle flashes](https://github.com/ghost-420/no-muzzleflashes)
   — Removes muzzleflash sprites and particles from all weapons, and from sentry guns (if preferred)
 
