@@ -16,7 +16,6 @@ declare -A addon_alias_map
 addon_alias_map[disable-pyroland]="disable-pyroland"
 addon_alias_map[flat-mouse]="flat-mouse"
 addon_alias_map[lowmem]="lowmem"
-addon_alias_map[no-explosion-smoke]="no-explosion-smoke"
 addon_alias_map[no-footsteps]="no-footsteps"
 addon_alias_map[no-soundscapes]="no-soundscapes"
 addon_alias_map[no-tutorial]="no-tutorial"
