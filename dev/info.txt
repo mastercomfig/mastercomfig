@@ -1,3 +1,4 @@
 9.7.0
-bug fixes
+app improvements, an autoexec download, bug fixes and performance improvements
 20
+
