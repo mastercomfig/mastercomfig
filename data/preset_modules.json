@@ -13,7 +13,7 @@
     "default": "speed"
   },
   "bandwidth": {
-    "default": "0.8Mbps"
+    "default": "1.0Mbps"
   },
   "download": {
     "default": "auto"
