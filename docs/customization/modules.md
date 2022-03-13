@@ -83,7 +83,7 @@ Default setting: **`packet_rate=standard`** (all presets, except Very Low).
 * **`packet_rate=congestion`**: A halved (33) packet rate for congested networks, usually bad Wi-Fi, or very slow CPUs.
 * **`packet_rate=standard`**: The standard 66 packet rate which is the maximum for all normal servers.
 
-### Snapshot Buffer (Interpolation)
+### Snapshot Buffer
 
 **Also known as: lerp, interp or interpolation.**
 
@@ -95,9 +95,9 @@ Controls how reliable to consider the snapshots you receive from the server to a
 Default setting: **`snapshot_buffer=safe`** (all presets).
 
 * **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer=safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer=low`. For Spy, currently, this sets `snapshot_buffer=low`.
-* **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against (**15.2 ms lerp** when using `packet_rate=standard`, or **30.3 ms lerp** when using `packet_rate=congestion`).
-* **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30.3 ms lerp** when using `packet_rate=standard`, or **60.6 ms lerp** when using `packet_rate=congestion`).
-* **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45.5 ms lerp** when using `packet_rate=standard`, or **90.9 ms lerp** when using `packet_rate=congestion`).
+* **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against (**15ms lerp** when using `packet_rate=standard`, or **30ms lerp** when using `packet_rate=congestion`).
+* **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
+* **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
 
 ### Packet Size
 
@@ -123,13 +123,13 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`bandwidth=0.8Mbps`** (all presets).
+Default setting: **`bandwidth=1.0Mbps`** (all presets).
 
 * **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 * **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
 * **`bandwidth=384Kbps`**: 384Kbps game traffic bandwidth.
-* **`bandwidth=0.5Mbps`**: 0.5Mbps game traffic bandwidth.
-* **`bandwidth=0.8Mbps`**: 0.8Mbps game traffic bandwidth.
+* **`bandwidth=512Kbps`**: 0.5Mbps game traffic bandwidth.
+* **`bandwidth=762Kbps`**: 0.8Mbps game traffic bandwidth.
 * **`bandwidth=1.0Mbps`**: 1.0Mbps game traffic bandwidth.
 * **`bandwidth=1.5Mbps`**: 1.5Mbps game traffic bandwidth.
 * **`bandwidth=2.0Mbps`**: 2.0Mbps game traffic bandwidth.
@@ -659,7 +659,7 @@ Controls the Contracts HUD seen at the top right corner of the screen during gam
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`hud_contracts=all`** (all presets, except Very Low).
+Default setting: unset (all presets, except Very Low)
 
 * **`hud_contracts=hide`**: Hides the Contracts HUD.
 * **`hud_contracts=all`**: Shows all Contracts available.
@@ -810,7 +810,7 @@ Controls the live map that appears in the background of the main menu. Some opti
 Default setting: **`dynamic_background=off`** (all presets).
 
 * **`dynamic_background=off`**: No main menu map background on startup.
-* **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **You have to install [the map](https://github.com/Yttrium-tYcLief/CompVMInstaller/blob/master/Project/CompVMInstaller/Resources/preload_room.bsp?raw=true), or else this will not function.**
+* **`dynamic_background=preload`**: `preload_room` map background for yttrium's preloading (auto disconnects). **You have to install [the map](https://github.com/Yttrium-tYcLief/CompVMInstaller/blob/master/Project/CompVMInstaller/Resources/preload_room.bsp?raw=true) to `tf/maps`, or else this will not function.**
 * **`dynamic_background=itemtest`**: `itemtest` map background for preloading (auto disconnects).
 * **`dynamic_background=dustbowl`**: Live Dustbowl map main menu background on startup.
 

@@ -27,7 +27,7 @@ Here are a few awesome TF2 modifications:
 * [VTF Crosshair Pack](https://www.teamfortress.tv/35367/vtf-crosshair-pack)
   — New custom crosshairs
 
-* [SteamPriorityLauncher](https://github.com/Leo40Git/SteamPriorityLauncher)
+* [Steam Priority Launcher](https://github.com/Leo40Git/SteamPriorityLauncher)
   — A launcher for launching Steam games, such as TF2, with different priorities
 
 * [yttrium's viewmodels](https://github.com/Yttrium-tYcLief/CompVMInstaller/releases/latest)

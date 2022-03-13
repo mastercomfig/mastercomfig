@@ -19,6 +19,7 @@ If you have any of the following files, you will have to do some extra steps to 
 
 ```txt
 autoexec.cfg
+listenserver.cfg
 scout.cfg
 soldier.cfg
 pyro.cfg

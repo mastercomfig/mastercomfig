@@ -27,7 +27,7 @@ description: Некоторые крутые TF2 модификации, кот�
 * [VTF Crosshair Pack](https://www.teamfortress.tv/35367/vtf-crosshair-pack)
   — Новое пользовательское прицелы
 
-* [SteamPriorityLauncher](https://github.com/Leo40Git/SteamPriorityLauncher)
+* [Steam Priority Launcher](https://github.com/Leo40Git/SteamPriorityLauncher)
   — Лаунчер для запуска игр Steam, таких как TF2, с различными приоритетами
 
 * [yttrium's viewmodels](https://github.com/Yttrium-tYcLief/CompVMInstaller/releases)

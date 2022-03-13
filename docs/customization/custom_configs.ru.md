@@ -8,7 +8,7 @@ description: Узнайте, как выполнять расширенную н
 
 Это можно сделать в `autoexec.cfg`, который исполняется при запуске игры, и для конфигов 9 классов.
 (`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
-`medic.cfg`, `sniper.cfg`, и `spy.cfg`)которые запускаются при переходе на новый класс.
+`medic.cfg`, `sniper.cfg`, и `spy.cfg`) которые запускаются при переходе на новый класс, `listenserver.cfg`.
 Все эти файлы находятся в папке с именем `user` которую вы создадите в `tf/cfg`.
 
 Если у вас нет этих файлов, вы можете загрузить [шаблон mastercomfig](https://github.com/mastercomfig/mastercomfig/releases/latest/download/template.zip) и переместить папку `user` в вашу папку `tf/cfg/`, чтобы кастомизировать конфиг.

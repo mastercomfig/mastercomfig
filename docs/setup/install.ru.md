@@ -19,6 +19,7 @@ description: Пошаговая инструкция как настроить �
 
 ```txt
 autoexec.cfg
+listenserver.cfg
 scout.cfg
 soldier.cfg
 pyro.cfg

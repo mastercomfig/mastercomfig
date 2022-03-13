@@ -19,6 +19,7 @@ Se você tem qualquer um dos seguintes arquivos na sua pasta `tf\cfg`, você pre
 
 ```txt
 autoexec.cfg
+listenserver.cfg
 scout.cfg
 soldier.cfg
 pyro.cfg

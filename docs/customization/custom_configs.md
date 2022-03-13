@@ -8,7 +8,7 @@ You can use user customization files to override specific settings in mastercomf
 
 These are `autoexec.cfg`, which runs at game launch, the 9 class configs
 (`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
-`medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class, and `listenserver.cfg`,
+`medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class, and `listenserver.cfg`
 which runs when first spawning in a local server.
 All of these files go into a folder called `user` you create in `tf/cfg`.
 
@@ -114,56 +114,6 @@ You can use `user/pre_comfig.cfg` to run things before `comfig.cfg`, and `user/p
 Examples of `user/pre_comfig.cfg` uses can be things like customizing your preset like detailed above, or turning on debugging options to monitor the launch process of mastercomfig itself.
 
 Uses of `user/post_comfig.cfg` are rarer, but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, or customizing the built-in ones, and more!
-
-## Multiple autoexec.cfg and modules.cfg (apply_user)
-
-You can have multiple `autoexec.cfg` and `modules.cfg` files if you alias `modules_c` and `autoexec_c` before running them, and then using `apply_user`.
-
-`apply_user` is `modules_c;run_modules;autoexec_c` (applies custom modules, runs all modules, and executes custom autoexec).
-
-For example, let's say this is what you use:
-
-`autoexec.cfg` (original):
-```
-bind g "taunt;say ez"
-```
-
-`modules.cfg` (original):
-```
-lighting=ultra
-ragdolls=high
-```
-
-If you want to use multiple `autoexec.cfg` and `modules.cfg`, you would need to alias `autoexec_c` and `modules_c` for each of them.
-So, let's say you want to use your original `autoexec.cfg` and `modules.cfg`, but at the same time, you also want an alternative `autoexec.cfg` and an alternative `modules.cfg` to taunt and say `too easy`, disable ragdolls and use low lighting settings.
-You would create new files, and for example, let's say you want to call them `autoexec_alt.cfg` and `modules_alt.cfg`. You wold grab these new files and put them in the `tf/cfg/user` folder.
-Then, to use your alternative configuration, you would need to do something like this:
-
-`autoexec.cfg` (original modified):
-```
-alias autoexec_c"exec user/autoexec_alt.cfg"
-alias modules_c"exec user/modules_alt.cfg"
-
-bind g "taunt;say ez"
-```
-
-`autoexec_alt.cfg` (alternative autoexec):
-```
-alias autoexec_c"exec user/autoexec.cfg"
-alias modules_c"exec user/modules.cfg"
-
-bind g "taunt;say too easy"
-```
-
-`modules_alt.cfg` (alternative modules):
-```
-lighting=low
-ragdolls=off
-```
-
-What you have done here is: you created two new files inside `tf/cfg/user` and aliased `autoexec_c` and `modules_c` to change your settings just by using `apply_user`, since you created a loop: whenever `autoexec.cfg` is executed (at game launch), `autoexec_c` and `modules_c` will be aliased to execute the alternative configuration.
-And, whenever the alternative configuration is executed, it aliases `autoexec_c` and `modules_c` to execute the original configuration. That is, `apply_user` becomes a loop and you can change your configuration at any time.
-You can also use more than two configurations. You can make ten files and even more. The important thing to do is to correct alias `autoexec_c` and `modules_c` in each of them.
 
 ## Optional User Config Template
 

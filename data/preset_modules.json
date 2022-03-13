@@ -231,7 +231,7 @@
     "none": ""
   },
   "hud_contracts": {
-    "default": "all",
+    "default": "",
     "very-low": "off"
   },
   "hud_panels": {
