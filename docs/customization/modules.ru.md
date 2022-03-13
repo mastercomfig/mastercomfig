@@ -36,7 +36,7 @@ textures=high
 
 или похожие.
 
-Вы также можете просмотреть выбранные уровни для всех модулей, введя `modules_levels` в консоль.
+Вы также можете просмотреть выбранные уровни для всех модулей, введя `module_levels` в консоль.
 
 ### Продвинутые настройки
 
@@ -355,10 +355,10 @@ textures=high
 
 * **`texture_filter=bilinear`**: Билинейная фильтрация
 * **`texture_filter=trilinear`**: Трилинейная фильтрация
-* **`texture_filter=aniso_2x`**: Анизотропная фильтрация 2x
-* **`texture_filter=aniso_4x`**: Анизотропная фильтрация 4x
-* **`texture_filter=aniso_8x`**: Анизотропная фильтрация 8x
-* **`texture_filter=aniso_16x`**: Анизотропная фильтрация 16x
+* **`texture_filter=aniso2x`**: Анизотропная фильтрация 2x
+* **`texture_filter=aniso4x`**: Анизотропная фильтрация 4x
+* **`texture_filter=aniso8x`**: Анизотропная фильтрация 8x
+* **`texture_filter=aniso16x`**: Анизотропная фильтрация 16x
 
 ### Персонажи
 

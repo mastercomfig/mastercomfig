@@ -351,19 +351,19 @@
             "display": "Trilinear filtering"
           },
           {
-            "value": "aniso_2x",
+            "value": "aniso2x",
             "display": "Anisotropic filtering 2x"
           },
           {
-            "value": "aniso_4x",
+            "value": "aniso4x",
             "display": "Anisotropic filtering 4x"
           },
           {
-            "value": "aniso_8x",
+            "value": "aniso8x",
             "display": "Anisotropic filtering 8x"
           },
           {
-            "value": "aniso_16x",
+            "value": "aniso16x",
             "display": "Anisotropic filtering 16x"
           }
         ]
