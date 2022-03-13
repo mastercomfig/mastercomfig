@@ -40,8 +40,9 @@ function uploadAssets {
 
   uploadFileToGitHub "./template/template.zip" "user template"
   uploadFileToGitHub "./comfig/modules_template.cfg" "modules template"
-  uploadFileToGitHub "./comfig/autoexec_template.cfg" "autoexec template"
+  uploadFileToGitHub "./comfig/autoexec_template.cfg" "user autoexec template"
   uploadFileToGitHub "./comfig/mastercomfig.zip" "mastercomfig zip package"
+  uploadFileToGitHub "./comfig/autoexec.cfg" "full autoexec"
 }
 
 function packageItems {

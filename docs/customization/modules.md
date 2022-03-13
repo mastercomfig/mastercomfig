@@ -61,7 +61,7 @@ This means that you can change this alias in game, and have multiple versions of
 
 ### SourceTV Compatibility
 
-Ensures compatibility with SourceTV spectating.
+Optimizes spectator view, or ensures compatibility with SourceTV.
 
 * **CPU usage:** none
 * **GPU usage:** none
@@ -94,7 +94,7 @@ Controls how reliable to consider the snapshots you receive from the server to a
 
 Default setting: **`snapshot_buffer=safe`** (all presets).
 
-* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer=safe`. For projectiles classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer=low`. For Spy, currently, this sets `snapshot_buffer=low`.
+* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer=safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer=low`. For Spy, currently, this sets `snapshot_buffer=low`.
 * **`snapshot_buffer=low`**: Fastest option with a minimal buffering time to guard against (**15.2 ms lerp** when using `packet_rate=standard`, or **30.3 ms lerp** when using `packet_rate=congestion`).
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30.3 ms lerp** when using `packet_rate=standard`, or **60.6 ms lerp** when using `packet_rate=congestion`).
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45.5 ms lerp** when using `packet_rate=standard`, or **90.9 ms lerp** when using `packet_rate=congestion`).
