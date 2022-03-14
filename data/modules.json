@@ -666,6 +666,9 @@
         "display": "Contracts",
         "values": [
           {
+            "value": "auto"
+          },
+          {
             "value": "hide",
             "display": "Hide Contracts"
           },
