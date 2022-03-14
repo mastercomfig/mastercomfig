@@ -536,7 +536,7 @@ Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
 
 Controls how intense the color tint is on the killstreak sheen glow for weapons.
 
-!!! warning
+!!! note
     This module will have no effect if `sheens_speed` is set to `off`.
 
 * **CPU usage:** none
