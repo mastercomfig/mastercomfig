@@ -13,6 +13,12 @@ description: A list of all mastercomfig features.
 * Modular config system to allow for fast updating
 * Extensive built-in addon system, providing support for null-canceling movement binds, transparent viewmodels, and more
 
+## Bug Fixes
+
+* Fixed blocky lightmaps not working on low quality
+* Fixed match HUD not fully disappearing when disabled
+* Fixed tournament settings lingering into local servers
+
 ## Rendering
 
 * Threaded graphics

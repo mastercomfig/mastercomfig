@@ -58,7 +58,7 @@ Or, if you are using a lower water module, but do not want to use cheap water, y
 
 These aliases are used by mastercomfig to apply network settings per class (as listed below) when using the `snapshot_buffer=auto` module level.
 
-You can run them manually in your class config if you play a subclass, like Demoknight or Huntsman.
+You can run them manually in your class config if you play a subclass, like Demoknight (`net_hitscan`) or Huntsman (`net_projectiles`).
 
 You can also re-alias them to use your own network settings.
 
@@ -111,7 +111,7 @@ When diving deep into customization the core of mastercomfig, you may find it us
 
 You can use `user/pre_comfig.cfg` to run things before `comfig.cfg`, and `user/post_comfig.cfg` to run things after `comfig.cfg`.
 
-Examples of `user/pre_comfig.cfg` uses can be things like customizing your preset like detailed above, or turning on debugging options to monitor the launch process of mastercomfig itself.
+Examples of `user/pre_comfig.cfg` uses can be things like customizing your preset like detailed above, or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
 
 Uses of `user/post_comfig.cfg` are rarer, but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, or customizing the built-in ones, and more!
 
