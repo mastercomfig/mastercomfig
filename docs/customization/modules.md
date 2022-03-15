@@ -148,7 +148,7 @@ Filters what custom content is allowed to be downloaded from the server.
 
 Default setting: **`download=auto`** (all presets).
 
-* **`download=auto`**: Whatever the user set in the game settings. By default, the game downloads all custom files from servers.
+* **`download=auto`**: Whatever the user set in the game settings.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
@@ -536,6 +536,9 @@ Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
 
 Controls how intense the color tint is on the killstreak sheen glow for weapons.
 
+!!! note
+    This module will have no effect if `sheens_speed` is set to `off`.
+
 * **CPU usage:** none
 * **GPU usage:** none
 
@@ -659,8 +662,9 @@ Controls the Contracts HUD seen at the top right corner of the screen during gam
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: unset (all presets, except Very Low)
+Default setting: **`hud_contracts=auto`** (all presets, except Very Low).
 
+* **`hud_contracts=auto`**: Whatever the user set in the game settings.
 * **`hud_contracts=hide`**: Hides the Contracts HUD.
 * **`hud_contracts=all`**: Shows all Contracts available.
 * **`hud_contracts=active`**: Only shows active Contracts.
