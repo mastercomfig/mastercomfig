@@ -20,7 +20,7 @@ Make sure the mastercomfig preset VPK is in the `tf/custom` folder.
 
 Make sure your TF2 configs (`autoexec.cfg`, `modules.cfg`, etc) are in the `cfg/user` folder.
 
-If you moved any custom configs that are not listed [here](../setup/install.md#custom-configs) into your `cfg/user` folder, either update exec calls to those configs or move them back into `cfg`.
+If you moved any of your own configs that are not listed [here](../setup/install.md#custom-configs) into the `cfg/user` folder, either move them back into the `cfg` folder or make sure any of your own configs that contain `exec [your-config-name]` are updated to instead contain `exec user/[your-config-name]`.
 
 ## I am possibly experiencing performance issues due to overheating
 
