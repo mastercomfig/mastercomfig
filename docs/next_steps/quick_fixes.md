@@ -20,6 +20,8 @@ Make sure the mastercomfig preset VPK is in the `tf/custom` folder.
 
 Make sure your TF2 configs (`autoexec.cfg`, `modules.cfg`, etc) are in the `cfg/user` folder.
 
+Make sure any exec calls to custom configs that have been moved to `cfg/user` are updated.
+
 ## I am possibly experiencing performance issues due to overheating
 
 Consider the following instructions from Valve to analyze your overheating issue, if you are on Windows:
