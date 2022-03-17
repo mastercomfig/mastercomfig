@@ -240,9 +240,11 @@
     "low": "low"
   },
   "hud_avatars": {
-    "default": "friends",
+    "default": "everyone",
     "very-low": "off",
-    "low": "off"
+    "low": "off",
+    "medium-low": "friends",
+    "medium": "friends"
   },
   "match_hud": {
     "default": "on",
