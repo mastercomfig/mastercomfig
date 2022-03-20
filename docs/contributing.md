@@ -91,7 +91,7 @@ Launch options are documented on the docs and are formatted like this:
 `**-launchoption** : launch option description`
 
 Make sure the description is not sentence case and starts with a lowercase
-letter.
+letter. Additional notes following the description are sentences.
 
 There are currently 4 categories for launch options:
 
