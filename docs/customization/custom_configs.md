@@ -86,7 +86,7 @@ You can check the current selected preset by entering `preset_level` into consol
 !!! warning
     These steps are entirely optional and are only for advanced customization.
 
-You can change the name of your `user/autoexec` using the `autoexec_c` alias and the name of your `user/modules.cfg` using the `modules_c` alias.
+You can change the name of your `user/modules.cfg` using the `modules_c` alias.
 This means your user preferences can have multiple different options, sort of like presets, but for your own preferences! Change these aliases
 in-game and use the `apply_user` command to apply your new user selections. This can be used for having different quality choices or game configurations for
 different scenarios or mood.
@@ -97,13 +97,8 @@ For example, you can put `alias class_config_heavyweapons"exec user/myheavy.cfg"
 You can change the name of your custom game overrides config using the `game_overrides_c` alias.
 For example, you can put `alias game_overrides_c"exec user/mygameoverrides.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mygameoverrides.cfg`.
 
-You can change the name of your custom local server config using the `listenserver_c` alias.
-For example, you can put `alias listenserver_c"exec user/mylistenserver.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mylistenserver.cfg`.
-
 You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
-
-If you want to run something only the first time you spawn and never run again while you keep the game open use the `game_overrides_once_c` alias.
 
 ## Advanced Customization
 
