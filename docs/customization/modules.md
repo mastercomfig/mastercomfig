@@ -941,9 +941,9 @@ Example:
 
 Default setting: **`move_bind=wasd`** (all presets).
 
-* **`move_bind=wasd`**: Sets movement keys to WASD.
+* **`move_bind=wasd`**: Sets movement keys to WASD (default for QWERTY keyboards).
 * **`move_bind=esdf`**: Sets movement keys to ESDF.
 * **`move_bind=zqsd`**: Sets movement keys to ZQSD (default for AZERTY keyboards).
-* **`move_bind=arrows`**: Sets movement keys to the Arrow Keys.
+* **`move_bind=arrows`**: Sets movement keys to the arrow keys.
 * **`move_bind=asdf`**: Sets movement keys to ASDF (A/S forward/back, D/F left/right).
 * **`move_bind=vim`**: Sets movement keys to HJKL (K/J forward/back, H/L left/right).
