@@ -927,34 +927,6 @@
             "value": "on"
           }
         ]
-      },
-      {
-        "name": "move_bind",
-        "display": "Movement Binds",
-        "values": [
-          {
-            "value": "wasd",
-            "display": "WASD"
-          },
-          {
-            "value": "esdf",
-            "display": "ESDF"
-          },
-          {
-            "value": "zqsd",
-            "display": "ZQSD"
-          },
-          {
-            "value": "arrows"
-          },
-          {
-            "value": "asdf",
-            "display": "ASDF"
-          },
-          {
-            "value": "vim"
-          }
-        ]
       }
     ]
   }

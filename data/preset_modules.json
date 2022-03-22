@@ -309,8 +309,5 @@
   "logo": {
     "default": "on",
     "very-low": "off"
-  },
-  "move_bind": {
-    "default": "wasd"
   }
 }

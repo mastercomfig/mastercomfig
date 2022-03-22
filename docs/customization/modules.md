@@ -915,35 +915,3 @@ Default setting: **`logo=on`** (all presets, except Very Low).
 
 * **`logo=off`**: Does not print logo in console on startup.
 * **`logo=on`**: Prints logo in console on startup.
-
-### Movement Binds
-
-Changes the keys that are used to move while the Null-Canceling Movement addon is installed.
-If your preferred movement keys are not listed here, you can edit them manually by binding these aliases:
-
-!!! warning
-    This module requires the Null-Canceling Movement addon to work.
-
-* Forward: `+mf`
-* Left: `+ml`
-* Backward: `+mb`
-* Right: `+mr`
-
-Example:
-
-* Forward: `bind w +mf`
-* Left: `bind a +ml`
-* Backward: `bind s +mb`
-* Right: `bind d +mr`
-
-* **CPU usage:** none
-* **GPU usage:** none
-
-Default setting: **`move_bind=wasd`** (all presets).
-
-* **`move_bind=wasd`**: Sets movement keys to WASD.
-* **`move_bind=esdf`**: Sets movement keys to ESDF.
-* **`move_bind=zqsd`**: Sets movement keys to ZQSD (default for AZERTY keyboards).
-* **`move_bind=arrows`**: Sets movement keys to the Arrow Keys.
-* **`move_bind=asdf`**: Sets movement keys to ASDF (A/S forward/back, D/F left/right).
-* **`move_bind=vim`**: Sets movement keys to HJKL (K/J forward/back, H/L left/right).
