@@ -8,7 +8,7 @@ Modules are groups of related commands with specific values for a certain use ca
 
 ## How to use
 
-Modules are used in presets to set quality levels and can also be used in your very own `tf/cfg/user/modules.cfg` file to customize your config easily without searching for individual console variable values. You can find out what module levels your preset uses by [viewing their respective cfg file](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets). To set a custom module level, put it in `user/modules.cfg`. For example:
+Modules are used in presets to set quality levels and can also be used in your very own `tf/cfg/overrides/modules.cfg` file to customize your config easily without searching for individual console variable values. You can find out what module levels your preset uses by [viewing their respective cfg file](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets). To set a custom module level, put it in `overrides/modules.cfg`. For example:
 
 ```c
 textures=high
@@ -17,7 +17,7 @@ textures=high
 will set the texture quality to `high`.
 
 !!! note
-    If you do not have `user` folder, create one. The same goes for the `modules.cfg` file.
+    If you do not have `overrides` folder, create one. The same goes for the `modules.cfg` file.
 
 ## Hardware usage levels
 
@@ -47,15 +47,15 @@ You can also view selected levels for all modules by entering `module_levels` in
 
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `user/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception for this rule is the Snapshot Buffer module. You will have to use `alias snapshot_buffer;alias net_projectiles;alias net_hitscan;alias net_spy` to fully disable it.
+If you want to disable running a module entirely, you can put (for example) `alias textures` in `overrides/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception for this rule is the Snapshot Buffer module. You will have to use `alias snapshot_buffer;alias net_projectiles;alias net_hitscan;alias net_spy` to fully disable it.
 
 Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup by entering `run_modules` into the console.
 
 #### Module user layer alias
 
-The modules you choose in `user/modules.cfg` are executed by the `modules_c` alias.
+The modules you choose in `overrides/modules.cfg` are executed by the `modules_c` alias.
 
-This means that you can change this alias in game, and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_user`.
+This means that you can change this alias in game, and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_overrides`.
 
 ## Networking modules
 

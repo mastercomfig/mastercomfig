@@ -4,24 +4,24 @@ description: Learn how to do advanced customization and scripting with mastercom
 
 # Customization
 
-You can use user customization files to override specific settings in mastercomfig.
+You can use user override files to customize specific settings in mastercomfig.
 
 These are `autoexec.cfg`, which runs at game launch, the 9 class configs
 (`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
 `medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class, and `listenserver.cfg`
 which runs when first spawning in a local server.
-All of these files go into a folder called `user` you create in `tf/cfg`.
+All of these files go into a folder called `overrides` you create in `tf/cfg`.
 
-If you don't have these files, you can download the [mastercomfig template](https://github.com/mastercomfig/mastercomfig/releases/latest/download/template.zip) and move the `user` folder to your `tf/cfg/` folder to customize the config.
+If you don't have these files, you can download the [mastercomfig template](https://github.com/mastercomfig/mastercomfig/releases/latest/download/template.zip) and move the `overrides` folder to your `tf/cfg/` folder to customize the config.
 
-If there's something you'd like to run for all of your class configs, you can add it to `tf/cfg/user/game_overrides.cfg`.
+If there's something you'd like to run for all of your class configs, you can add it to `tf/cfg/overrides/game_overrides.cfg`.
 
 ## Utility Commands
 
 * `run_modules`: Applies modules. Useful for changing module levels in-game, and then applying them all at once.
-* `apply_user`: Runs user modules, applies modules and then runs user autoexec. Useful for changing your user preferences in-game.
-* `restore_preset`: Restores modules back to preset defaults, without using user settings.
-* `restore_config`: Runs all of mastercomfig and user configs again, resetting changes made in-game.
+* `apply_overrides`: Runs user modules, applies modules and then runs user autoexec. Useful for changing your user overrides in-game.
+* `restore_preset`: Restores modules back to preset defaults, without using user overrides.
+* `restore_config`: Runs all of mastercomfig and user overrides again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
 * `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
@@ -29,7 +29,7 @@ If there's something you'd like to run for all of your class configs, you can ad
 
 Some modules set something called game overrides, which apply settings that override map or in-game only settings that can't be applied at launch.
 
-If you want to override this part of the module, you will have to use their game override alias in `tf/cfg/user/autoexec.cfg`. This is comprised of
+If you want to override this part of the module, you will have to use their game override alias in `tf/cfg/overrides/autoexec.cfg`. This is comprised of
 a override alias, which is run during game overrides, and an override option, which actually contains the settings which is run by the override alias.
 
 * `lighting`: Uses `lightmaps_override` to control if lighting is blocky or smoothed out
@@ -68,7 +68,7 @@ You can also re-alias them to use your own network settings.
 
 ## Changing your preset
 
-mastercomfig supports selecting a preset after download. Add a file to your `user` folder called `pre_comfig.cfg`. In this file, put your desired preset as `preset=preset-name`. Preset names are:
+mastercomfig supports selecting a preset after download. Add a file to your `overrides` folder called `pre_comfig.cfg`. In this file, put your desired preset as `preset=preset-name`. Preset names are:
 
 * none
 * ultra
@@ -86,16 +86,16 @@ You can check the current selected preset by entering `preset_level` into consol
 !!! warning
     These steps are entirely optional and are only for advanced customization.
 
-You can change the name of your `user/modules.cfg` using the `modules_c` alias.
-This means your user preferences can have multiple different options, sort of like presets, but for your own preferences! Change these aliases
-in-game and use the `apply_user` command to apply your new user selections. This can be used for having different quality choices or game configurations for
+You can change the name of your `overrides/modules.cfg` using the `modules_c` alias.
+This means your override preferences can have multiple different options, sort of like presets, but for your own preferences! Change these aliases
+in-game and use the `apply_overrides` command to apply your new user overrides. This can be used for having different quality choices or game configurations for
 different scenarios or mood.
 
 You can change the name of your custom class configs using the `class_config_classname` alias.
-For example, you can put `alias class_config_heavyweapons"exec user/myheavy.cfg"` in `tf/cfg/user/autoexec.cfg` if you want to use the file `tf/cfg/user/myheavy.cfg` for Heavy.
+For example, you can put `alias class_config_heavyweapons"exec overrides/myheavy.cfg"` in `tf/cfg/overrides/autoexec.cfg` if you want to use the file `tf/cfg/overrides/myheavy.cfg` for Heavy.
 
 You can change the name of your custom game overrides config using the `game_overrides_c` alias.
-For example, you can put `alias game_overrides_c"exec user/mygameoverrides.cfg"` in `user/autoexec.cfg` if you want to use the file `tf/cfg/user/mygameoverrides.cfg`.
+For example, you can put `alias game_overrides_c"exec overrides/mygameoverrides.cfg"` in `overrides/autoexec.cfg` if you want to use the file `tf/cfg/overrides/mygameoverrides.cfg`.
 
 You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
@@ -104,18 +104,18 @@ For example, you could have different class configs for Scout in competitive and
 
 When diving deep into customization the core of mastercomfig, you may find it useful to run things directly before and after mastercomfig's `comfig.cfg`, which provides core functionality and aliases.
 
-You can use `user/pre_comfig.cfg` to run things before `comfig.cfg`, and `user/post_comfig.cfg` to run things after `comfig.cfg`.
+You can use `overrides/pre_comfig.cfg` to run things before `comfig.cfg`, and `overrides/post_comfig.cfg` to run things after `comfig.cfg`.
 
-Examples of `user/pre_comfig.cfg` uses can be things like customizing your preset like detailed above, or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
+Examples of `overrides/pre_comfig.cfg` uses can be things like customizing your preset like detailed above, or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
 
-Uses of `user/post_comfig.cfg` are rarer, but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, or customizing the built-in ones, and more!
+Uses of `overrides/post_comfig.cfg` are rarer, but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, or customizing the built-in ones, and more!
 
 ## Optional User Config Template
 
 !!! warning
     These steps are entirely optional and are only for advanced customization.
 
-To get an idea about what to put in your `user/autoexec.cfg` and select options,
+To get an idea about what to put in your `overrides/autoexec.cfg` and select options,
 you can download the autoexec template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
 
 This config is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for granular customization.

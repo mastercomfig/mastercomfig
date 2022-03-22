@@ -31,12 +31,12 @@ sniper.cfg
 spy.cfg
 ```
 
-1. Crie uma pasta chamada `user` onde esses arquivos estão localizados (provavelmente `tf/cfg`).
-2. Arraste esses arquivos para dentro da pasta `user` que acabou de ser criada
+1. Crie uma pasta chamada `overrides` onde esses arquivos estão localizados (provavelmente `tf/cfg`).
+2. Arraste esses arquivos para dentro da pasta `overrides` que acabou de ser criada
 
 !!! tip
 
-    Embora não seja requerido, se você mover outros arquivos (exemplo: `binds.cfg`), você terá que atualizar o comando `exec` de `exec binds.cfg` para `exec user/binds.cfg`.
+    Embora não seja requerido, se você mover outros arquivos (exemplo: `binds.cfg`), você terá que atualizar o comando `exec` de `exec binds.cfg` para `exec overrides/binds.cfg`.
 
 ## Passos Extras
 

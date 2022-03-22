@@ -80,7 +80,7 @@ Intel Panel Self Refresh can ruin frame latency and timings, especially on hybri
 
 ## Driver latency optimization
 
-Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as frequent stuttering. The user must sniff out exactly which drivers are causing latency.
+Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as frequent stuttering. The user must find out exactly which drivers are causing latency.
 
 [Enabling Message Signaled Interrupts (PCIe MSI)](https://forums.guru3d.com/threads/windows-line-based-vs-message-signaled-based-interrupts-msi-tool.378044/) for all drivers is a great way to lower DPC latency caused by drivers (ring0). If you have an NVIDIA card, you can use [NVCleanstall](https://www.techpowerup.com/download/techpowerup-nvcleanstall/) to enable this, with the added benefit of fully customizing your driver install.
 

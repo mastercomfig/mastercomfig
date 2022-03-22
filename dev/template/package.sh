@@ -3,9 +3,9 @@
 BINDIR=$(dirname "$(readlink -fn "$0")")
 cd "${BINDIR}" || exit 2
 
-rm -rf -- user/
-cp -r "../../config/templates/user" ./user
+rm -rf -- overrides/
+cp -r "../../config/templates/overrides" ./overrides
 
-zip -9r template.zip user/
+zip -9r template.zip overrides/
 
 printf "\n"

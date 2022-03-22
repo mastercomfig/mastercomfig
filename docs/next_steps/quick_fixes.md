@@ -18,9 +18,9 @@ Go over the [installation steps](../setup/install.md) once again.
 
 Make sure the mastercomfig preset VPK is in the `tf/custom` folder.
 
-Make sure your TF2 configs (`autoexec.cfg`, `modules.cfg`, etc) are in the `cfg/user` folder.
+Make sure your TF2 configs (`autoexec.cfg`, `modules.cfg`, etc) are in the `cfg/overrides` folder.
 
-If you moved any of your own configs that are not listed [here](../setup/install.md#custom-configs) into the `cfg/user` folder, either move them back into the `cfg` folder or make sure any of your own configs that contain `exec [your-config-name]` are updated to instead contain `exec user/[your-config-name]`.
+If you moved any of your own configs that are not listed [here](../setup/install.md#custom-configs) into the `cfg/overrides` folder, either move them back into the `cfg` folder or make sure any of your own configs that contain `exec [your-config-name]` are updated to instead contain `exec overrides/[your-config-name]`.
 
 ## I am possibly experiencing performance issues due to overheating
 
@@ -119,7 +119,7 @@ Imagine it like controlling the size of the gray bar in YouTube. If you set it t
 
 If you are worried about the delay being high, rest assured that the tick delay caused by interpolation is compensated for the following: hitscan, melee, backstabs, flamethrower and the Medigun. Projectiles are simulated on the server, and thus are not compensated. Projectile spawns and despawns are not interpolated, which means that you may notice a client-side delay in projectiles exiting your barrel and subsequently impacting the target. In a game like TF2, this is not a huge issue, and you should be more worried about the accuracy of game state rather than a few milliseconds of client-side delay.
 
-Now having said all that, you still have the option to change interp if you really want to and understand what you're doing. The best way to change interp is to use the snapshot buffer module, which has a few preset values for the most common use case of higher than normal packet loss. If you want a specific interp value, the best place to set it is in `game_overrides.cfg` (make sure it is in the `user` folder), like so:
+Now having said all that, you still have the option to change interp if you really want to and understand what you're doing. The best way to change interp is to use the snapshot buffer module, which has a few preset values for the most common use case of higher than normal packet loss. If you want a specific interp value, the best place to set it is in `game_overrides.cfg` (make sure it is in the `overrides` folder), like so:
 
 ```c
 cl_interp_ratio x
