@@ -11,7 +11,7 @@ description: A list of all mastercomfig features.
 * Presets to easily fit your use case
 * Extra optional customization settings
 * Modular config system to allow for fast updating
-* Extensive built-in addon system, providing support for null-canceling movement binds, transparent viewmodels, and more
+* Extensive built-in addon system, providing support for null-canceling movement, transparent viewmodels and more
 
 ## Bug Fixes
 
