@@ -34,7 +34,8 @@
         "tags": ["advanced"],
         "values": [
           {
-            "value": "auto"
+            "value": "auto",
+            "display": "Automatic"
           },
           {
             "value": "low"
@@ -93,7 +94,7 @@
             "display": "Maps only"
           },
           {
-            "value": "none"
+            "value": "nothing"
           }
         ]
       }
@@ -480,7 +481,8 @@
         "display": "Silly Gibs",
         "values": [
           {
-            "value": "auto"
+            "value": "auto",
+            "display": "Automatic (recommended)"
           },
           {
             "value": "off"
