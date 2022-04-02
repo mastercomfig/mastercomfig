@@ -135,6 +135,10 @@ One other thing to note is that client interp is determined by whichever is the 
 
 On some mastercomfig presets, outlines are disabled. The outline settings include player and objective outlines as well as outlines for Scottish Resistance stickybombs. You can enable outlines by adding `outlines=medium` (or higher) to your `modules.cfg`.
 
+## I have red bullet holes on wood
+
+This is caused by a bug in TF2, where wood props do not look up the correct decal texture when prop decals are disabled, and instead display the red ERROR texture. Put `r_decalstaticprops 1` in your `autoexec.cfg` to enable prop decals and avoid this bug, at the cost of some performance.
+
 ## I switched from Very Low to another preset but some settings persist
 
 Run `very_low_reset` on the console. It will reset the remaining settings that were left saved in your game.
