@@ -150,7 +150,7 @@ Default setting: **`download=auto`** (all presets).
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
-* **`download=none`**: Do not download any custom files from servers.
+* **`download=nothing`**: Do not download any custom files from servers.
 
 ## Graphics modules
 

@@ -196,10 +196,12 @@
   },
   "sheens_speed": {
     "default": "slow",
-    "very-low": "off"
+    "very-low": "off",
+    "none": ""
   },
   "sheens_tint": {
-    "default": "high"
+    "default": "high",
+    "none": ""
   },
   "textures": {
     "default": "very_low",
