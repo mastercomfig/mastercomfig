@@ -687,7 +687,7 @@ Controls the display of target ID avatars.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`hud_avatars=everyone`** (all presets, except Low and Very Low).
+Default setting: based on which preset you are currently using.
 
 * **`hud_avatars=off`**: Disables avatars.
 * **`hud_avatars=everyone`**: Enables the display of everyone's avatars.
