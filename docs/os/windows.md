@@ -21,6 +21,11 @@ A known, [Microsoft confirmed](https://docs.microsoft.com/en-us/troubleshoot/win
 
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations.
 
+## Disable Visual Effects
+
+If you are on a slow/old PC, you can disable Windows' visual effects for better performance. Search for "Performance Information and Tools"
+and then select "Adjust for best performance". You can also select options you'd like to keep, but keep in mind that these may reduce performance.
+
 ## Disable Fullscreen Optimizations
 
 Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets equivalent or better than fullscreen performance with the fast alt-tabbing of windowed mode.
