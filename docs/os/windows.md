@@ -13,28 +13,28 @@ If you are curious about what this feature exactly does, you can read [this tech
 
 If you experience problems or reduced performance from this feature, turn it off and [submit feedback](https://aka.ms/submitgameperformancefeedback).
 
-## Disable Game Mode
+## Out of Memory due to Page File growth pressure
 
-Game Mode _may_ reduce performance and cause stutters/freezes. Read [this Guru3D article](https://www.guru3d.com/news-story/windows-10-game-mode-can-impact-fps-negatively-with-stutters-and-freezes.html) for more information and instructions on how to disable it if you are having issues with it.
-
-## Disable Fullscreen Optimizations
-
-Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets near fullscreen performance with the fast alt-tabbing of windowed mode.
-
-Source is known to be worse with fullscreen optimizations on some systems and thus you should disable it if you encounter problems.
-
-Open your game folder through Steam. Then, right click on `hl2.exe`, click Properties, go to the Compatibility tab, and then select the box that says `Disable Fullscreen Optimizations`.
-
-You can find more information on the [DirectX Developer Blog](https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/) and in [this Reddit thread](https://old.reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub/?context=3).
-
-If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
-
-!!! tip
-    If you're using variable refresh rate (VRR) technology, like G-SYNC, disabling Fullscreen Optimizations may break it, depending on your monitor, drivers and graphics card. So, if you experience problems with VRR after this, try reverting the change.
+A known, [Microsoft confirmed](https://docs.microsoft.com/en-us/troubleshoot/windows-client/performance/slow-page-file-growth-memory-allocation-errors) bug in Windows is that the automatic page file growth set up may be too slow for applications which introduce high memory pressure during frequent memory allocations. It is recommended in these cases that you move to a [static page file size](https://docs.microsoft.com/en-us/troubleshoot/windows-client/performance/slow-page-file-growth-memory-allocation-errors#workaround).
 
 ## Use High Performance power plan
 
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations.
+
+## Disable Visual Effects
+
+If you are on a slow/old PC, you can disable Windows' visual effects for better performance. Search for "Performance Information and Tools"
+and then select "Adjust for best performance". You can also select options you'd like to keep, but keep in mind that these may reduce performance.
+
+## Disable Fullscreen Optimizations
+
+Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets equivalent or better than fullscreen performance with the fast alt-tabbing of windowed mode.
+
+You can find more information on the [DirectX Developer Blog](https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/) and in [this Reddit thread](https://old.reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub/?context=3).
+
+You may encounter problems with it enabled, involving brightness, refresh rates or other display issues. If you are encountering these issues, open your game folder through Steam. Then, right click on `hl2.exe`, click Properties, go to the Compatibility tab, and then select the box that says `Disable Fullscreen Optimizations`.
+
+If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
 
 ## Disable Radeon Chill
 
@@ -57,11 +57,11 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 3. Click Apply Changes.
 
 !!! note
-    This may not do much for TF2, as its optimizations are largely for TCP but does have a few UDP options.
+    This may not do much for TF2, as its optimizations are largely for TCP but it does have a few UDP options.
 
 ## Disable Overlays
 
-Big idea: disable as many overlays as possible. They interrupt the rendering process with their own, which can severely affect performance in many causes. Common examples of overlays are: Discord and Nahimic.
+Big idea: disable as many overlays as possible. They interrupt the rendering process with their own, which can severely affect performance in many causes. Common examples of overlays are: Discord and Nahimic. The Steam overlay is largely optimized, but may still cause problems on slow/old PCs.
 
 ### Disabling Nahimic
 
@@ -80,7 +80,7 @@ Intel Panel Self Refresh can ruin frame latency and timings, especially on hybri
 
 ## Driver latency optimization
 
-Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as frequent stuttering. The user must find out exactly which drivers are causing latency.
+Badly programmed kernel-mode device drivers might cause latency issues, which lead to problems such as stuttering. The user must find out exactly which drivers are causing latency.
 
 [Enabling Message Signaled Interrupts (PCIe MSI)](https://forums.guru3d.com/threads/windows-line-based-vs-message-signaled-based-interrupts-msi-tool.378044/) for all drivers is a great way to lower DPC latency caused by drivers (ring0). If you have an NVIDIA card, you can use [NVCleanstall](https://www.techpowerup.com/download/techpowerup-nvcleanstall/) to enable this, with the added benefit of fully customizing your driver install.
 
