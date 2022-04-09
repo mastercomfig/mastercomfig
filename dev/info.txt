@@ -1,4 +1,4 @@
-9.7.1
-app improvements, an autoexec download, bug fixes and performance improvements
-5
+9.8.0
+visibility improvements, crash fixes, new customization features and more
+50
 
