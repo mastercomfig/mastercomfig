@@ -11,3 +11,4 @@ These are launch options that take performance or making the game look bad too f
 * **-mat_softwaretl** : forces software vertex processing, which might be good for very bad GPUs at very low display resolutions, but will greatly decrease FPS otherwise
 * **-insert_search_path** : essentially add new custom folders (MOD+GAME search paths) in a comma separated list. Example: `"C:\tf2_custom,C:\my_stuff.vpk"`
 * **-gamestatslogging -gamestatsloggingtofile** : saves game stats which are sent to Steam as a local `tf_gamestats.dat` file
+* **-disable_d3d9_hacks** : disables using undocumented vendor-specific D3D9 driver options, mostly for AMD
