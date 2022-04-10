@@ -1,4 +1,4 @@
-9.8.0
-visibility improvements, crash fixes, new customization features and more
-50
+9.8.1
+performance improvements
+6
 
