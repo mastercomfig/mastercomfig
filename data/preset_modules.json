@@ -99,8 +99,6 @@
   },
   "romevision": {
     "default": "off",
-    "high": "on",
-    "ultra": "on",
     "none": ""
   },
   "motion_blur": {

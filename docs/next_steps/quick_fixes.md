@@ -43,12 +43,7 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 ## Black artifacts all over the screen on Linux
 
-This is a bug with later versions of Mesa. You can fix it by adding `lighting_ex=high` to your `modules.cfg` and setting the following in your `autoexec.cfg`:
-
-```c
-mat_bumpmap 1
-mat_specular 1
-```
+This is a bug with later versions of Mesa. You can fix it by adding `lighting_ex=high` to your `modules.cfg`.
 
 ## Lighting/shadows are blocky
 

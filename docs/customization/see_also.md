@@ -21,7 +21,7 @@ Here are a few awesome TF2 modifications:
 * [Less distracting explosions](https://gamebanana.com/mods/12444)
   — Get cleaner particles for explosions
 
-* [No muzzle flashes](https://github.com/ghost-420/no-muzzleflashes)
+* [No muzzle flashes](https://github.com/nermur/no-muzzleflashes)
   — Removes muzzleflash sprites and particles from all weapons, and from sentry guns (if preferred)
 
 * [VTF Crosshair Pack](https://www.teamfortress.tv/35367/vtf-crosshair-pack)

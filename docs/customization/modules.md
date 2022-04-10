@@ -187,15 +187,15 @@ Default setting: based on which preset you are currently using.
 
 ### Lighting Ex
 
-Controls extended lighting commands which cause a material system reload. Be careful setting to anything other than high, as it can reduce performance on modern PCs, due to rendering reloads.
+Controls extended lighting commands which cause a material system reload.
 
 * **CPU usage:** low
 * **GPU usage:** high
 
 Default setting: based on which preset you are currently using.
 
-* **`lighting_ex=low`**: Phong off.
-* **`lighting_ex=high`**: Phong on.
+* **`lighting_ex=low`**: Better hints to use the lighting fast path. May reduce performance on modern PCs, due to rendering reloads. Also can cause black rendering artifacts on Linux Mesa graphics drivers.
+* **`lighting_ex=high`**: Uses whatever the material's lighting needs.
 
 ### Shadows
 
@@ -309,7 +309,7 @@ Controls Romevision visual effects. For more info, [click here](https://wiki.tea
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`romevision=off`** (all presets, except Ultra and High).
+Default setting: **`romevision=off`** (all presets).
 
 * **`romevision=off`**: Disables Romevision effects.
 * **`romevision=on`**: Enables Romevision effects.

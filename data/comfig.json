@@ -3,7 +3,6 @@
     "net_maxpacketdrop": 0,
     "cl_timeout": 60,
     "cl_smoothtime": 0.05,
-    "hud_escort_interp": 0.1,
     "net_chokeloop": 1,
     "cl_localnetworkbackdoor": 0,
     "sv_lan": 1,

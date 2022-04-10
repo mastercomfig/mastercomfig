@@ -18,7 +18,7 @@ description: Некоторые крутые TF2 модификации, кот�
 * [No-Hats-Mod bgum](https://github.com/Fedora31/no-hats-bgum)
   — Удаляет косметику, такую как шляпы, боткиллеры, скины и многое другое
 
-* [No muzzle flashes](https://github.com/ghost-420/no-muzzleflashes)
+* [No muzzle flashes](https://github.com/nermur/no-muzzleflashes)
   — Удаляет muzzleflash спрайты и частицы со всего оружия, а также с Турели (если желательно)
 
 * [Particle Limitation Pack](https://www.teamfortress.tv/22586/particle-limitation-pack)
