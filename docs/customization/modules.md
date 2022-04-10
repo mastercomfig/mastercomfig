@@ -177,8 +177,8 @@ Controls lighting fidelity: dynamic lights, how detailed lighting is, rimlights,
 
 Default setting: based on which preset you are currently using.
 
-* **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
-* **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Disables bumpmaps and specular.
+* **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
+* **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
 * **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
 * **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting.
 * **`lighting=high`**: 6 dynamic lights. Detailed lighting.
@@ -194,8 +194,8 @@ Controls extended lighting commands which cause a material system reload.
 
 Default setting: based on which preset you are currently using.
 
-* **`lighting_ex=low`**: Better hints to use the lighting fast path. May reduce performance on modern PCs, due to rendering reloads. Also can cause black rendering artifacts on Linux Mesa graphics drivers.
-* **`lighting_ex=high`**: Uses whatever the material's lighting needs.
+* **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs, due to rendering reloads. Also can cause black rendering artifacts on Linux Mesa graphics drivers.
+* **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
 
 ### Shadows
 
