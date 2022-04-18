@@ -45,6 +45,9 @@
           },
           {
             "value": "high"
+          },
+          {
+            "value": "custom"
           }
         ]
       },
