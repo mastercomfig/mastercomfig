@@ -35,7 +35,7 @@
         "values": [
           {
             "value": "auto",
-            "display": "Automatic"
+            "display": "Automatic (recommended)"
           },
           {
             "value": "low"
