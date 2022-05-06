@@ -264,8 +264,7 @@
     "low": "low"
   },
   "hud_achievement": {
-    "default": "on",
-    "very-low": "off"
+    "default": "off"
   },
   "console": {
     "default": "on",
@@ -302,9 +301,6 @@
   },
   "party_mode": {
     "default": "request"
-  },
-  "ping_tolerance": {
-    "default": "50"
   },
   "logo": {
     "default": "on",

@@ -107,7 +107,7 @@
     "modules": [
       {
         "name": "lod",
-        "display": "Level of Detail",
+        "display": "Model Quality",
         "values": [
           {
             "value": "low"
@@ -914,12 +914,6 @@
             "display": "Invite-only party"
           }
         ]
-      },
-      {
-        "name": "ping_tolerance",
-        "display": "Ping Tolerance (Matchmaking)",
-        "type": "slider",
-        "values": ["off", "25", "50", "60", "70", "80", "90", "100"]
       },
       {
         "name": "logo",

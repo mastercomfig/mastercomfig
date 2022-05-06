@@ -155,7 +155,7 @@ Default setting: **`download=auto`** (all presets).
 
 ## Graphics modules
 
-### Level of Detail
+### Model Quality
 
 Controls how detailed models are.
 
@@ -755,7 +755,7 @@ Controls the HUD achievements tracker.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`hud_achievement=on`** (all presets, except Very Low).
+Default setting: **`hud_achievement=off`** (all presets).
 
 * **`hud_achievement=off`**: Disables achievement tracker panel completely.
 * **`hud_achievement=on`**: Enables support for achievement tracker panel.
