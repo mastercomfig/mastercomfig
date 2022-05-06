@@ -3,17 +3,16 @@
 *.zip
 
 # dev script generated packages
-dev/addons/mastercomfig*
-dev/presets/mastercomfig*
-dev/mastercomfig*
-mastercomfig-vars
+/dev/addons/mastercomfig*
+/dev/presets/mastercomfig*
+/dev/mastercomfig*
 /dev/**/*.cfg
-addons_setup.cfg
-addons.cfg
-dev/template.md
+/dev/template.md
+mastercomfig-vars
+/config/mastercomfig/cfg/comfig/addons.cfg
 
 # node
-node_modules/
+/node_modules/
 
 # OS generated files
 .DS_Store
@@ -24,10 +23,10 @@ node_modules/
 ehthumbs.db
 Thumbs.db
 
-.idea/
-app/
-build/
-venv/
+# ide
+/.idea/
+/build/
+/venv/
 
 # mkdocs
 site/
