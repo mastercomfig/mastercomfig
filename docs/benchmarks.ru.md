@@ -12,7 +12,7 @@ description: Узнайте, как тестировать TF2 и измерят
 
 ## Как провести тестирование
 
-1. Загрузите [файл теста](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k).
+1. Загрузите [файл теста](https://mega.nz/file/f8tlhDhR#nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k).
 2. Переместите его в папку `tf/`.
 3. Запустите игру.
 4. Введите в консоли `timedemo benchmark_test`.
