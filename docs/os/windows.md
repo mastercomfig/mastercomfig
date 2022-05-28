@@ -36,6 +36,12 @@ You may encounter problems with it enabled, involving brightness, refresh rates 
 
 If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
 
+## Disable Nvidia Low Latency Mode
+
+The Source Engine has its own frame syncing method, which is tuned for its material threading system.
+By constraining queued frames in the driver, you can cause unexpected stalls in the frame submission process, which can reduce frame rate and increase input delay.
+Because of this, it is recommended you keep Low Latency Mode in the Nvidia Control Panel to its default value of `Off` for Team Fortress 2.
+
 ## Disable Radeon Chill
 
 Radeon Chill is a power saving feature that introduces a variable framecap. You can disable it in the Radeon Settings app:

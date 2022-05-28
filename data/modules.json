@@ -48,6 +48,9 @@
           },
           {
             "value": "custom"
+          },
+          {
+            "value": "anim"
           }
         ]
       },
