@@ -21,6 +21,12 @@ A known, [Microsoft confirmed](https://docs.microsoft.com/en-us/troubleshoot/win
 
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations.
 
+!!! tip
+    It's recommended that you set Minimum processor state to its default value of 5%, instead of 100% as set in the high performance plans.
+    You can find this in Power Options > Change plan settings > Change advanced power settings > Process power management > Minimum processor state.
+    This is because forcing the processor to 100% power prevents cores from reaching their max boost due to the processor being at this all-core threshold.
+    Giving more room for processor power to scale individually per core allows the OS to better balance power limits across all cores, especially in TF2's case of being a largely single threaded game.
+
 ## Disable Visual Effects
 
 If you are on a slow/old PC, you can disable Windows' visual effects for better performance. Search for "Performance Information and Tools"
@@ -67,7 +73,13 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 
 ## Disable Overlays
 
-Big idea: disable as many overlays as possible. They interrupt the rendering process with their own, which can severely affect performance in many causes. Common examples of overlays are: Discord and Nahimic. The Steam overlay is largely optimized, but may still cause problems on slow/old PCs.
+Big idea: disable as many overlays as possible. They interrupt the rendering process with their own, which can severely affect performance in many cases. Common examples of overlays are: Discord and Nahimic. The Steam overlay is largely optimized, but may still cause problems on slow/old PCs.
+
+### Disabling Discord overlay
+
+1. Open Discord User Settings
+2. Go to Activity Settings > Game Overlay
+3. Turn off "Enable in-game overlay".
 
 ### Disabling Nahimic
 
@@ -79,6 +91,11 @@ Nahimic is an audio effects software preinstalled on some gaming laptops and des
 4. Open Services.
 5. Open Nahimic service.
 6. Select `Startup type:` `Disabled`.
+
+## Image Scaling
+
+Both NVIDIA and AMD provide integrated image scaling technology which can reduce the rendered resolution at very little perceptible image quality reduction.
+If you are looking to squeeze performance out of your games, especially at 1400p or 4k, you can use the Image Scaling in the NVIDIA Control Panel under 3D settings, or Radeon Super Resolution in AMD Software under Graphics settings.
 
 ## Intel Panel Self Refresh
 
