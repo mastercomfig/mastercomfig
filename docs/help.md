@@ -17,5 +17,5 @@ Check these resources out:
 
 Still can't find your answer and want to ask for help?
 
-* [Ask in #comfig-help on Discord](https://discord.gg/CuPb2zV)
+* [Ask in #tf2-help on Discord](https://discord.gg/CuPb2zV)
 * [Create a help thread on Steam](https://steamcommunity.com/groups/comfig/discussions/0/)
