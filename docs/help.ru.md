@@ -17,5 +17,5 @@ description: Узнайте, как получить помощь с mastercomfi
 
 Все еще не можете найти ответ и хотите попросить о помощи?
 
-* [Спросите в #comfig-help на Discord](https://discord.gg/CuPb2zV)
+* [Спросите в #tf2-help на Discord](https://discord.gg/CuPb2zV)
 * [Создать тему помощи в Steam](https://steamcommunity.com/groups/comfig/discussions/0/)
