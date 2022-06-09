@@ -46,10 +46,10 @@ jobs:
       run: git fetch --tags -f
     - name: Build docs (latest)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/release' }}
-      run: mike deploy --no-redirect -up $(git describe --tags --abbrev=0) latest page
+      run: mike deploy --no-redirect -b docs -up $(git describe --tags --abbrev=0) latest page
     - name: Build docs (develop)
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/develop' }}
-      run: mike deploy --no-redirect -up dev
+      run: mike deploy --no-redirect -b docs -up dev
     - name: Build docs
       if: ${{ github.event_name == 'pull_request' }}
       run: mike deploy --config-file mkdocs-pr.yml -u $(git describe --tags) latest
