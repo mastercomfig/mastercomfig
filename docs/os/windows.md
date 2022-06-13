@@ -32,16 +32,6 @@ Open Power Options and select the High Performance power plan, or the Ultimate P
 If you are on a slow/old PC, you can disable Windows' visual effects for better performance. Search for "Performance Information and Tools"
 and then select "Adjust for best performance". You can also select options you'd like to keep, but keep in mind that these may reduce performance.
 
-## Disable Fullscreen Optimizations
-
-Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets equivalent or better than fullscreen performance with the fast alt-tabbing of windowed mode.
-
-You can find more information on the [DirectX Developer Blog](https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/) and in [this Reddit thread](https://old.reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub/?context=3).
-
-You may encounter problems with it enabled, involving brightness, refresh rates or other display issues. If you are encountering these issues, open your game folder through Steam. Then, right click on `hl2.exe`, click Properties, go to the Compatibility tab, and then select the box that says `Disable Fullscreen Optimizations`.
-
-If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
-
 ## Disable Nvidia Low Latency Mode
 
 The Source Engine has its own frame syncing method, which is tuned for its material threading system.
@@ -55,21 +45,6 @@ Radeon Chill is a power saving feature that introduces a variable framecap. You 
 1. Go to the Gaming tab.
 2. Set global settings or only for Team Fortress 2 if you want to use Chill elsewhere.
 3. Turn Chill off.
-
-## Disable Unnecessary Services
-
-You can use the [W10Privacy tool](https://www.winprivacy.de/deutsch-start/download/) to reduce disk load and other workloads to [improve performance](https://www.phoronix.com/scan.php?page=article&item=windows10-w10priv-wsl).
-
-## Networking optimization
-
-Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your internet settings.
-
-1. Choose your connection speed with the slider at the top.
-2. Choose the optimal setting at the bottom.
-3. Click Apply Changes.
-
-!!! note
-    This may not do much for TF2, as its optimizations are largely for TCP but it does have a few UDP options.
 
 ## Disable Overlays
 
@@ -92,6 +67,10 @@ Nahimic is an audio effects software preinstalled on some gaming laptops and des
 5. Open Nahimic service.
 6. Select `Startup type:` `Disabled`.
 
+## Disable Unnecessary Services
+
+You can use the [W10Privacy tool](https://www.winprivacy.de/deutsch-start/download/) to reduce disk load and other workloads to [improve performance](https://www.phoronix.com/scan.php?page=article&item=windows10-w10priv-wsl).
+
 ## Image Scaling
 
 Both NVIDIA and AMD provide integrated image scaling technology which can reduce the rendered resolution at very little perceptible image quality reduction.
@@ -100,6 +79,27 @@ If you are looking to squeeze performance out of your games, especially at 1400p
 ## Intel Panel Self Refresh
 
 Intel Panel Self Refresh can ruin frame latency and timings, especially on hybrid (Optimus) laptops. Disable it in Power options within your Intel graphics settings app.
+
+## Disable Fullscreen Optimizations
+
+Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets equivalent or better than fullscreen performance with the fast alt-tabbing of windowed mode.
+
+You can find more information on the [DirectX Developer Blog](https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/) and in [this Reddit thread](https://old.reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub/?context=3).
+
+You may encounter problems with it enabled, involving brightness, refresh rates or other display issues. If you are encountering these issues, open your game folder through Steam. Then, right click on `hl2.exe`, click Properties, go to the Compatibility tab, and then select the box that says `Disable Fullscreen Optimizations`.
+
+If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
+
+## Networking optimization
+
+Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your internet settings.
+
+1. Choose your connection speed with the slider at the top.
+2. Choose the optimal setting at the bottom.
+3. Click Apply Changes.
+
+!!! note
+    This may not do much for TF2, as its optimizations are largely for TCP but it does have a few UDP options.
 
 ## Driver latency optimization
 
