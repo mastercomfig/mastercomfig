@@ -1,4 +1,4 @@
-9.9.0
-FPS increases, stability improvements and bug fixes
-20
+9.9.1
+FPS increases, Spy hitreg improvements, visibility tweaks
+43
 
