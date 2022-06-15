@@ -21,11 +21,10 @@ A known, [Microsoft confirmed](https://docs.microsoft.com/en-us/troubleshoot/win
 
 Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations.
 
-!!! tip
-    It's recommended that you set Minimum processor state to its default value of 5%, instead of 100% as set in the high performance plans.
-    You can find this in Power Options > Change plan settings > Change advanced power settings > Process power management > Minimum processor state.
-    This is because forcing the processor to 100% power prevents cores from reaching their max boost due to the processor being at this all-core threshold.
-    Giving more room for processor power to scale individually per core allows the OS to better balance power limits across all cores, especially in TF2's case of being a largely single threaded game.
+It's recommended that you set Minimum processor state to its default value of 5%, instead of 100% as set in the high performance plans.
+You can find this in Power Options > Change plan settings > Change advanced power settings > Process power management > Minimum processor state.
+This is because forcing the processor to 100% power prevents cores from reaching their max boost due to the processor being at this all-core threshold.
+Giving more room for processor power to scale individually per core allows the OS to better balance power limits across all cores, especially in TF2's case of being a largely single threaded game.
 
 ## Disable Visual Effects
 
