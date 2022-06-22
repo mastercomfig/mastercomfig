@@ -25,7 +25,7 @@ Balance IRQ interrupts across multiple cores by installing the `irqbalance` pack
 
 ## Ananicy
 
-You can install `schedtool` and [Ananicy](https://github.com/Nefelim4ag/Ananicy) and enable the `ananicy` to get automatically applied ruled based process priority balancing to improve resources allocated to TF2.
+You can install `schedtool` and [Ananicy](https://github.com/Nefelim4ag/Ananicy) and enable the `ananicy` to get automatically applied rule based process priority balancing to improve resources allocated to TF2.
 
 ## Networking optimization
 
