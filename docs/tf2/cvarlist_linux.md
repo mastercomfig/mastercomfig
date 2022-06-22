@@ -156,7 +156,6 @@ bench_start                              : cmd      :                  : Starts 
 benchframe                               : cmd      :                  : Takes a snapshot of a particular frame in a time demo.
 bind                                     : cmd      :                  : Bind a key.
 bind_mac                                 : cmd      :                  : Bind this key but only on Mac, not win32
-binds_per_command                        : 1        : , "cl"           :
 BindToggle                               : cmd      :                  : Performs a bind <key> 'increment var <cvar> 0 1 1'
 blink_duration                           : 0        : , "cl"           : How many seconds an eye blink will last.
 bloodspray                               : cmd      :                  : blood
@@ -501,7 +500,8 @@ cl_upspeed                               : 320      : , "sv", "cheat", "rep" :
 cl_use_tournament_specgui                : 0        : , "a", "cl"      : When in tournament mode, use the advanced tournament spectator UI.
 cl_view                                  : cmd      :                  : Set the view entity index.
 cl_voice_filter                          : 0        :                  : Filter voice by name substring
-cl_vote_ui_active_after_voting           : 0        : , "cl"           :
+cl_vote_non_input_alpha                  : 150      : , "cl"           :
+cl_vote_ui_active_after_voting           : 1        : , "cl"           :
 cl_vote_ui_show_notification             : 0        : , "cl"           :
 cl_winddir                               : 0        : , "cheat", "cl"  : Weather effects wind direction angle
 cl_windspeed                             : 0        : , "cheat", "cl"  : Weather effects wind speed scalar
@@ -1595,6 +1595,7 @@ net_chokeloop                            : 0        :                  : Apply b
 net_compresspackets                      : 1        :                  : Use compression on game packets.
 net_compresspackets_minsize              : 1024     :                  : Don't bother compressing packets below this size.
 net_compressvoice                        : 0        :                  : Attempt to compress out of band voice payloads (360 only).
+net_disconnect_reason                    : 0        :                  : Show client disconnect reason.
 net_drawslider                           : 0        :                  : Draw completion slider during signon
 net_droppackets                          : 0        : , "cheat"        : Drops next n packets on client
 net_fakejitter                           : 0        : , "cheat"        : Jitter fakelag packet time
@@ -2536,6 +2537,7 @@ sv_netspike                              : cmd      :                  : Write n
 sv_netspike_on_reliable_snapshot_overflow : 0        :                  : If nonzero, the server will dump a netspike trace if a client is dropped due to reliable snapshot overflow
 sv_netspike_output                       : 1        :                  : Where the netspike data be written?  Sum of the following values: 1=netspike.txt, 2=ordinary server log
 sv_netspike_sendtime_ms                  : 0        :                  : If nonzero, the server will dump a netspike trace if it takes more than N ms to prepare a snapshot to a single client.  This feature does take some CPU cycles, so it should be left off when not in use.
+sv_no_name_changes                       : 0        :                  :
 sv_noclipaccelerate                      : 5        : , "a", "sv", "nf", "rep" :
 sv_noclipduringpause                     : 0        : , "sv", "cheat", "rep" : If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).
 sv_noclipspeed                           : 5        : , "a", "sv", "nf", "rep" :
@@ -2597,6 +2599,7 @@ sv_visiblemaxplayers                     : -1       :                  : Overrid
 sv_voicecodec                            : 0        :                  : Specifies which voice codec to use. Valid options are: vaudio_speex - Legacy Speex codec (lowest quality) vaudio_celt - Newer CELT codec (22kHz, 22kbps) vaudio_celt_high - Newer CELT codec, higher bitrate (44kHz, 44kbps) steam - Use Steam voice API
 sv_voiceenable                           : 1        : , "a", "nf"      :
 sv_vote_allow_spectators                 : 0        : , "sv"           : Allow spectators to vote?
+sv_vote_bots_allowed                     : 0        : , "sv"           : Allow bots to vote or not.
 sv_vote_creation_timer                   : 150      : , "sv"           : How long before a player can attempt to call another vote (in seconds).
 sv_vote_failure_timer                    : 300      : , "sv"           : A vote that fails cannot be re-submitted for this long
 sv_vote_failure_timer_mvm                : 120      : , "sv"           : A vote that fails in MvM cannot be re-submitted for this long
@@ -2631,6 +2634,8 @@ sv_vote_kick_ban_duration                : 20       : , "sv"           : The num
 sv_vote_late_join_cooldown               : 300      : , "sv"           : Length of the vote-creation cooldown when joining the server after the grace period has expired
 sv_vote_late_join_time                   : 90       : , "sv"           : Grace period after the match starts before players who join the match receive a vote-creation cooldown
 sv_vote_quorum_ratio                     : 0        : , "sv", "nf"     : The minimum ratio of eligible players needed to pass a vote.  Min 0.1, Max 1.0.
+sv_vote_timer_allow_early_finish         : 1        : , "sv"           : If all votes are in, whether to end the vote (for debugging)
+sv_vote_timer_duration                   : 15       : , "sv"           : How long to allow voting on an issue
 sv_vote_ui_hide_disabled_issues          : 1        : , "sv"           : Suppress listing of disabled issues in the vote setup screen.
 sys_minidumpexpandedspew                 : 1        :                  :
 sys_minidumpspewlines                    : 500      :                  : Lines of crash dump console spew to keep.
@@ -3583,11 +3588,6 @@ weapon_showproficiency                   : 0        : , "sv"           :
 wipe_nav_attributes                      : cmd      :                  : Clear all nav attributes of selected area.
 writeid                                  : cmd      :                  : Writes a list of permanently-banned user IDs to banned_user.cfg.
 writeip                                  : cmd      :                  : Save the ban list to banned_ip.cfg.
-x360_audio_english                       : 0        : , "cl"           : Keeps track of whether we're forcing english in a localized language.
-x360_resolution_height                   : 480      : , "cl"           : This is only used for reference. Changing this value does nothing
-x360_resolution_interlaced               : 0        : , "cl"           : This is only used for reference. Changing this value does nothing
-x360_resolution_widescreen_mode          : 0        : , "cl"           : This is only used for reference. Changing this value does nothing
-x360_resolution_width                    : 640      : , "cl"           : This is only used for reference. Changing this value does nothing
 xbox_autothrottle                        : 1        : , "a", "sv"      :
 xbox_steering_deadzone                   : 0        : , "sv"           :
 xbox_throttlebias                        : 100      : , "a", "sv"      :
