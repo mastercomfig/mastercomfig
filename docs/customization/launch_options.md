@@ -51,7 +51,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-nostartupsound** : disables game music on main menu
     * **-r_emulate_gl** : changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
-    * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
+    * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
     * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. May require a few map loads to connect to item servers.
 
@@ -60,7 +60,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
-    * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
+    * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
     * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. May require a few map loads to connect to item servers.
     * **-glslcontrolflow** : enables support for GLSL control flow. This allows for 4 world lights. :warning: **Experimental** as it may cause rendering issues
@@ -72,7 +72,7 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
     * **-displayindex x** : uses the monitor at the specified display index. starts at `1`. `0` is the primary display (and the default)
-    * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system not under video memory pressure.
+    * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
     * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. May require a few map loads to connect to item servers.
     * **-gl_enablesamplerobjects** : enables OpenGL sampler objects :warning: **Experimental** as its performance impact (negative or positive) is unknown and its Source implementation may not be complete
