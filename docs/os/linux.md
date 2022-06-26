@@ -37,9 +37,22 @@ See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_me
 
 ## Native Libraries
 
-The automatic Steam runtime host library pinning is not enough to use native libraries
-on TF2 as the TF2 launcher script shades in some libraries.
+Using native libraries on Linux can have many performance benefits, as well as fix some issues
+such as mouse sensitivity not working as expected. The automatic Steam runtime host library pinning is
+not enough to use some native libraries on TF2 as the TF2 launcher script shades in some of its' own.
 
-Go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0`, and `libtcmalloc_minimal.so.4`.
-Now, Team Fortress 2 will not be able to load these libraries. The system will have to
-provide them, so make sure you have the 32-bit/multilib versions of `libtcmalloc` and `sdl2`.
+Two of the libraries that the game will benefit the most from using their native 
+version are `libSDL2` and `libtcmalloc`. To use your systems versions, go to `TF2_FOLDER/bin` and delete 
+`libSDL2-2.0.so.0`, and `libtcmalloc_minimal.so.4`. Now, Team Fortress 2 will not be able to load these 
+libraries and the system will have to provide them. Make sure you have `libtcmalloc` and `sdl2` installed, 
+as well as add one of the following lines to your launch options - depending on your distribution:
+
+Debian/Ubuntu-based distros:
+```
+LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0:/usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4:$LD_PRELOAD" %command%
+```
+
+Arch/Fedora-based distros:
+```
+LD_PRELOAD="/usr/lib64/libSDL2-2.0.so.0:/usr/lib64/libtcmalloc_minimal.so:$LD_PRELOAD" %command%
+```
