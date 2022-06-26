@@ -48,11 +48,11 @@ libraries and the system will have to provide them. Make sure you have `libtcmal
 as well as add one of the following lines to your launch options - depending on your distribution:
 
 Debian/Ubuntu-based distros:
-```
+```sh
 LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0:/usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4:$LD_PRELOAD" %command%
 ```
 
 Arch/Fedora-based distros:
-```
+```sh
 LD_PRELOAD="/usr/lib64/libSDL2-2.0.so.0:/usr/lib64/libtcmalloc_minimal.so:$LD_PRELOAD" %command%
 ```
