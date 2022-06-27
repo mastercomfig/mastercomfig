@@ -45,14 +45,6 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 This is a bug with later versions of Mesa. You can fix it by adding `lighting_ex=high` to your `modules.cfg`.
 
-## Lighting/shadows are blocky
-
-In an update to mastercomfig, the config was fixed to correctly apply the lightmap filtering setting which controls if baked shadows are smoothed out.
-
-You can re-enable the lightmap filtering and get smooth shadows by adding `alias lightmaps_override` to your `autoexec.cfg`.
-
-View [Game Overrides](../../customization/custom_configs/#game-overrides) for more information.
-
 ## Ragdolls aren't instantly disappearing
 
 There was a bug fix to `ragdolls=off`, to avoid the issue where ragdolls would still be present on the map and accumulate over time, causing performance issues. The cost of this was compared to the very short physics initialization and simulation, and it was determined that it would be better to avoid a leak from ragdolls never getting deleted by enabling physics on ragdolls. You can get the old behavior by using `ragdolls=hidden` in `modules.cfg`, at the cost of this increased overhead, if you prefer the visuals.

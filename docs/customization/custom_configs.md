@@ -32,9 +32,6 @@ Some modules set something called game overrides, which apply settings that over
 If you want to override this part of the module, you will have to use their game override alias in `tf/cfg/overrides/autoexec.cfg`. This is comprised of
 a override alias, which is run during game overrides, and an override option, which actually contains the settings which is run by the override alias.
 
-* `lighting`: Uses `lightmaps_override` to control if lighting is blocky or smoothed out
-    * `lightmaps_off`: Makes lighting blocky
-
 * `shadows`: Uses `shadowlod_override` to control the model quality shadows render with
     * `shadowlod_low`: Uses the lowest model quality to render shadows
     * `shadowlod_high`: Uses the highest model quality (at root LOD) to render shadows
@@ -49,8 +46,6 @@ a override alias, which is run during game overrides, and an override option, wh
     * `detail_props_none`: Disables detail props
     * `detail_props_medium`: Enables detail props, at a far distance, with no fade in
     * `detail_props_full`: Enables detail props, at a far distance, with a gentle fade in
-
-So, for example, if you are using a lower lighting module, and do not want blocky lighting, you can add `alias lightmaps_override` to your `autoexec.cfg`.
 
 Or, if you are using a lower water module, but do not want to use cheap water, you can add `alias cheap_water_override cheap_water_never`.
 
