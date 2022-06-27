@@ -40,9 +40,11 @@ See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_me
 
 ## Native Libraries
 
-The automatic Steam runtime host library pinning is not enough to use native libraries
-on TF2 as the TF2 launcher script shades in some libraries.
+Using native libraries can have performance benefits, as well as fixing issues like mouse sensitivity
+and Wayland support. The automatic Steam runtime host library pinning is not enough to use native libraries
+on TF2 as the TF2 launcher script shades in some libraries by itself.
 
-Go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0`, and `libtcmalloc_minimal.so.4`.
-Now, Team Fortress 2 will not be able to load these libraries. The system will have to
-provide them, so make sure you have the 32-bit/multilib versions of `libtcmalloc` and `sdl2`.
+The two libraries which benefit from this approach are SDL2 and tcmalloc. Go to `TF2_FOLDER/bin` and
+delete `libSDL2-2.0.so.0`, and `libtcmalloc_minimal.so.4`. Now, Team Fortress 2 will not be able
+to load these libraries. The system will have to provide them, so make sure you have the
+32-bit/multilib versions of `libtcmalloc` and `sdl2`.
