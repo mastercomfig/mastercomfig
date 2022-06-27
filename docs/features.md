@@ -15,7 +15,6 @@ description: A list of all mastercomfig features.
 
 ## Bug Fixes
 
-* Fixed blocky lightmaps not working on low quality
 * Fixed match HUD not fully disappearing when disabled
 * Fixed tournament settings lingering into local servers
 
