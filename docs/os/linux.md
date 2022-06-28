@@ -40,24 +40,30 @@ See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_me
 
 ## Native Libraries
 
-Using native libraries can have performance benefits, as well as fixing issues like mouse sensitivity
-and Wayland support. The automatic Steam runtime host library pinning is not enough to use native libraries
-on TF2 as the TF2 launcher script shades in some libraries by itself.
+Using native libraries can have many performance benefits, as well as fix issues like mouse sensitivity
+and (sometimes) Wayland support. The automatic Steam runtime host library pinning is not enough to use native
+libraries on TF2 as the game's launcher script shades in some libraries by itself. In order to force TF2 to
+use a native library, the built-in library must be deleted and the system libraries have to be manually pinned to the runtime.
 
-The two libraries which benefit from this approach are SDL2 and tcmalloc. Go to `TF2_FOLDER/bin` and
-delete `libSDL2-2.0.so.0`, and `libtcmalloc_minimal.so.4`. Now, Team Fortress 2 will not be able
-to load these libraries. The system will have to provide them, so make sure you have the
-32-bit/multilib versions of `libtcmalloc` and `sdl2`. To use them, you will need to pin each library
-to the Steam runtime:
+An example of a library that benefits greatly from this approach is SDL2. To use your systems version of SDL2,
+go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0` (this will cause TF2 to fallback on the Steam Linux Runtime's
+library pinning). Then, install a 32-bit version of SDL2 and pin the library to the runtime using one of these
+commands - depending on your distribution
 
 Debian/Ubuntu-based distributions:
 ```sh
-ln -s /usr/lib/i386-linux-gnu/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/
-ln -s /usr/lib/i386-linux-gnu/libtcmalloc_minimal.so.4 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/
+sudo apt install apt install libsdl2-2.0-0:i386
+ln -s /usr/lib/i386-linux-gnu/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/"
 ```
 
 Arch-based distributions:
 ```sh
-ln -s /usr/lib32/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/
-ln -s /usr/lib32/libtcmalloc_minimal.so.4 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/
+sudo pacman -S lib32-sdl2
+ln -s /usr/lib32/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/"
+```
+
+Fedora:
+```sh
+sudo dnf install SDL2.i686
+ln -s /usr/lib/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/"
 ```
