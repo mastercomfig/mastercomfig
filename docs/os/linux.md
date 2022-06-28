@@ -47,4 +47,17 @@ on TF2 as the TF2 launcher script shades in some libraries by itself.
 The two libraries which benefit from this approach are SDL2 and tcmalloc. Go to `TF2_FOLDER/bin` and
 delete `libSDL2-2.0.so.0`, and `libtcmalloc_minimal.so.4`. Now, Team Fortress 2 will not be able
 to load these libraries. The system will have to provide them, so make sure you have the
-32-bit/multilib versions of `libtcmalloc` and `sdl2`.
+32-bit/multilib versions of `libtcmalloc` and `sdl2`. To use them, you will need to pin each library
+to the Steam runtime:
+
+Debian/Ubuntu-based distributions:
+```sh
+ln -s /usr/lib/i386-linux-gnu/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/
+ln -s /usr/lib/i386-linux-gnu/libtcmalloc_minimal.so.4 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/
+```
+
+Arch-based distributions:
+```sh
+ln -s /usr/lib32/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/
+ln -s /usr/lib32/libtcmalloc_minimal.so.4 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/
+```
