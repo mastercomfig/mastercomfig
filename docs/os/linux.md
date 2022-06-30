@@ -19,10 +19,12 @@ Use either the `performance`, `schedutil` or `ondemand` governors when playing T
 
 [GameMode](https://github.com/FeralInteractive/gamemode) is a handy utility released by Feral Interactive, which will change the CPU Governor from the default CPU governor to `performance`. Recent updates allow it to change a games' "nice priority", which will give the game more resources to work with.
 
-To run TF2 using GameMode through Steam, open Steam, then...
-Library -> right-click Team Fortress 2 -> Properties -> in the General tab, insert the following into your Launch Options: `gamemoderun %command% -your -tf2 -launch -options -go -here`
+To run TF2 using GameMode through Steam, open Steam, then:
+* Library -> right-click Team Fortress 2 -> Properties -> General -> Launch Options: \
+`gamemoderun %command% -your -tf2 -launch -options -go -here`
 
-If launching TF2 from Lutris, "Enable Feral GameMode" is likely enabled by default, hence the Launch Options additions aren't used.
+If launching TF2 from Lutris, "Enable Feral GameMode" is likely enabled by default, hence the Launch Options additions aren't used. You can check in Lutris via:
+* Games -> right-click Team Fortress 2 -> Configure -> System options
 
 ## irqbalance
 
