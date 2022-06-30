@@ -7,7 +7,7 @@ description: Возникли проблемы с mastercomfig? Вот к чем
 Это список распространенных вопросов, которые пользователи испытывают с mastercomfig, и как их решить.
 
 Если вы обнаружите, что вам нужна дополнительная помощь, свяжитесь с нашим сообществом в
-[Discord](https://discord.gg/CuPb2zV) или [Steam](https://steamcommunity.com/groups/comfig).
+[Discord](https://discord.gg/CuPb2zV).
 
 ## mastercomfig не загружается! / Мои пользовательские конфиги не загружаются
 

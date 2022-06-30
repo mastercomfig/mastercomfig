@@ -14,13 +14,13 @@ description: Как полностью сбросить TF2, включая уд
 
 Если вы хотите удалить свой конфиг, удалите любые
 конфигурационные элементы, которые находятся в вашей папке
-После чего [проверьте свои игровые файлы](https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335)
+После чего [проверьте свои игровые файлы](https://help.steampowered.com/ru/faqs/view/0C48-FCBD-DA71-93EB)
 используя Steam.
 
 Далее, если включена синхронизация Steam Cloud, сделайте все файлы находящиеся в
 `STEAM_FOLDER/userdata/USER_ID/440/remote/cfg` пустыми. Не удаляйте их
 иначе Steam Cloud повторно загрузит их. Кроме того, можно
-[отключить Steam Cloud](https://support.steampowered.com/kb_article.php?ref=6736-QEIG-8941#enabling).
+[отключить Steam Cloud](https://help.steampowered.com/ru/faqs/view/68D2-35AB-09A9-7678#enabling).
 
 В завершении, запустите TF2 только с этими
 `-novid -autoconfig -default +host_writeconfig config.cfg full +mat_savechanges +quit` параметрами

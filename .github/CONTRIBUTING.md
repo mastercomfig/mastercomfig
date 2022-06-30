@@ -48,7 +48,7 @@ For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automati
 
 ## Support
 
-You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV), [Steam Discussions](https://steamcommunity.com/groups/comfig/discussions) or [teamfortress.tv](https://www.teamfortress.tv/42867/mastercomfig-fps-customization-config).
+You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV).
 
 ## Config
 
