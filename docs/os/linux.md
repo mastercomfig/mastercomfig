@@ -67,11 +67,3 @@ Fedora:
 sudo dnf install SDL2.i686
 ln -s /usr/lib/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/"
 ```
-
-### Force SDL2 Wayland
-After using the native 32-bit SDL2 library, it's possible to run TF2 using its Wayland video driver. This could increase performance on GPUs where this works correctly (if any as of 29 Jun 2022), or rather when this is mature enough to use.
-
-Steam's "Library" -> Right-click "Team Fortress 2" -> "Properties..." -> Under "General" insert the following into "Launch Options": `SDL_VIDEODRIVER=wayland  %command% -your -tf2 -launch -options -go -here`
-
-NOTE: `SDL_VIDEODRIVER=wayland gamemoderun %command%` will also work.
-`%command%` specifies to set launch options for the Steam game; what comes before that is  Linux commands and environment variables.
