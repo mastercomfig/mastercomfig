@@ -26,6 +26,10 @@ You can find this in Power Options > Change plan settings > Change advanced powe
 This is because forcing the processor to 100% power prevents cores from reaching their max boost due to the processor being at this all-core threshold.
 Giving more room for processor power to scale individually per core allows the OS to better balance power limits across all cores, especially in TF2's case of being a largely single threaded game.
 
+## Fix Windows Defender performance bug on Intel CPUs
+
+Currently, there is a bug with Windows Defender where it will spam an Intel CPU feature until another program has used it. This can significantly reduce performance, up to 6%. You can use [Control Counter](https://www.techpowerup.com/download/counter-control/)'s Reset button to mark this feature as used and stop the spam from Defender. [Read more here](https://www.pcmag.com/news/intel-cpu-performance-takes-a-big-hit-due-to-windows-defender-bug).
+
 ## Disable Visual Effects
 
 If you are on a slow/old PC, you can disable Windows' visual effects for better performance. Search for "Performance Information and Tools"
