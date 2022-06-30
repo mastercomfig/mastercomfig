@@ -53,8 +53,8 @@ See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_me
 Using native libraries can benefit performance, alongside fixing mouse sensitivity issues and providing better Wayland support.
 The automatic Steam runtime host library pinning is not enough to use native libraries on TF2 as the game's launcher script shades in some libraries by itself. In order to force TF2 to use a native library, the built-in library must be deleted and the system libraries have to be manually pinned to the runtime.
 
-An example of a library that benefits greatly from this approach is SDL2. To use your systems version of SDL2, go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0` (this will cause TF2 to fallback on the Steam Linux Runtime's library pinning).
-Then, install a 32-bit version of SDL2 and pin the library to the runtime using one of these commands - depending on your distribution
+An example of a library that benefits greatly from this approach is SDL2. To use a native version of SDL2, go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0` (this will cause TF2 to fallback to the Steam Linux Runtime).
+Then, install a 32-bit version of SDL2 and pin the library to the runtime using one of these commands, depending on your distribution:
 
 Debian/Ubuntu-based distributions:
 ```sh
