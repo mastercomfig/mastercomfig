@@ -19,17 +19,19 @@ Use either the `performance`, `schedutil` or `ondemand` governors when playing T
 
 [GameMode](https://github.com/FeralInteractive/gamemode) is a handy utility released by Feral Interactive, which will change the CPU Governor from the default CPU governor to `performance`. Recent updates allow it to change a games' "nice priority", which will give the game more resources to work with.
 
-To run Team Fortress 2 using GameMode:
-Steam's "Library" -> Right-click "Team Fortress 2" -> "Properties..." -> Under "General" insert the following into "Launch Options": `gamemoderun %command% -your -tf2 -launch -options -go -here`
+To run Team Fortress 2 using GameMode, open Steam, then...
+Library -> right-click Team Fortress 2 -> Properties -> in the General tab, insert the following into your Launch Options: `gamemoderun %command% -your -tf2 -launch -options -go -here`
 
 ## irqbalance
 
-Balance IRQ interrupts across multiple cores by installing the `irqbalance` package on your distro and enabling the `irqbalance` service; likely: `sudo systemctl enable --now irqbalance.service`. 
-This package is installed on most debian-based OS's by default, like Ubuntu and Linux Mint.
+Balance IRQ interrupts across multiple cores by installing the `irqbalance` package on your distro then enabling the `irqbalance.service`, likely by `sudo systemctl enable --now irqbalance.service`. 
+This package is installed on most Debian-based OS's by default, like Ubuntu and Linux Mint.
 
 ## Ananicy Cpp
 
-You can install `schedtool` and [Ananicy Cpp](https://gitlab.com/ananicy-cpp/ananicy-cpp), then enable `ananicy-cpp.service` to get automatically applied rule based process priority balancing to improve resources allocated to TF2.
+You can install `schedtool` and [Ananicy Cpp](https://gitlab.com/ananicy-cpp/ananicy-cpp), then enable `ananicy-cpp.service` to automatically apply rule based process priority balancing, improving resources allocated to TF2.
+
+This however requires a [profile for TF2](https://github.com/Nefelim4ag/Ananicy/blob/master/ananicy.d/00-default/_steam.rules). Follow Ananicy Cpp's [profile import instructions](https://gitlab.com/ananicy-cpp/ananicy-cpp#community-rules) to use community profiles from the original Ananicy software, which can be downloaded [here](https://github.com/Nefelim4ag/Ananicy) or by installing the original Ananicy.
 
 ## Networking optimization
 
