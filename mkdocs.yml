@@ -11,41 +11,43 @@ copyright: >-
 strict: true
 nav:
   - About:
-      - Home: index.md
-      - FAQ: faq.md
-      - Support Me: support_me.md
-      - Help: help.md
-      - Features: features.md
-      - Screenshots: screenshots.md
-      - Benchmarks: benchmarks.md
-      - Contributing: contributing.md
-      - Security: security.md
-      - Credits: credits.md
+    - Home: index.md
+    - FAQ: faq.md
+    - Support Me: support_me.md
+    - Help: help.md
+    - Features: features.md
+    - Screenshots: screenshots.md
+    - Benchmarks: benchmarks.md
+    - Contributing: contributing.md
+    - Security: security.md
+    - Credits: credits.md
   - Setup:
-      - Clean Up: setup/clean_up.md
-      - Install: setup/install.md
+    - Clean Up: setup/clean_up.md
+    - Install: setup/install.md
   - Customization:
-      - Launch Options: customization/launch_options.md
-      - Custom Configs: customization/custom_configs.md
-      - Modules: customization/modules.md
-      - List of Custom Configs: customization/custom_config_list.md
-      - See Also: customization/see_also.md
+    - Launch Options: customization/launch_options.md
+    - Custom Configs: customization/custom_configs.md
+    - Modules: customization/modules.md
+    - List of Custom Configs: customization/custom_config_list.md
+    - See Also: customization/see_also.md
   - OS Optimizations:
-      - OS Optimizations: os/index.md
-      - Windows: os/windows.md
-      - Linux: os/linux.md
+    - OS Optimizations: os/index.md
+    - Windows: os/windows.md
+    - Linux: os/linux.md
   - Next Steps:
-      - Quick Fixes: next_steps/quick_fixes.md
-      - Update: next_steps/update.md
+    - Quick Fixes: next_steps/quick_fixes.md
+    - Update: next_steps/update.md
   - TF2 Documentation:
-      - TF2 Documentation: tf2/README.md
-      - Misconceptions: tf2/misconceptions.md
-      - Console Variables - Windows: tf2/cvarlist_win.md
-      - Console Variables - Linux: tf2/cvarlist_linux.md
-      - Hidden Console Variables: tf2/hiddencvars.md
-      - Launch Options - Windows: tf2/launchopts_win.md
-      - Launch Options - Linux: tf2/launchopts_linux.md
-      - Silly Launch Options: tf2/silly_launch_options.md
+    - TF2 Documentation: tf2/README.md
+    - Misconceptions: tf2/misconceptions.md
+    - Console Variables - Windows: tf2/cvarlist_win.md
+    - Console Variables - Linux: tf2/cvarlist_linux.md
+    - Hidden Console Variables: tf2/hiddencvars.md
+    - Launch Options - Windows: tf2/launchopts_win.md
+    - Launch Options - Linux: tf2/launchopts_linux.md
+    - Silly Launch Options: tf2/silly_launch_options.md
+  - Other Games:
+    - Other Games: other/README.md
 markdown_extensions:
   - abbr
   - admonition
