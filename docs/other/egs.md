@@ -51,15 +51,30 @@ ChunkDownloads=32
 ChunkDownloadsDisableConnectionScaling=True
 ; These settings determine how much memory is used for downloading and installing chunks.
 ; These can only go up to a combined 2048 and are each limited to a max of 1000.
-; In my case, I prioritized more download chunks over disk chunks.
-ChunkDbSourcePreFetchMinimum=768
-ChunkDbSourcePreFetchMaximum=768
+; In my case, I prioritized more download/load chunks over install chunks.
 CloudSourcePreFetchMinimum=768
 CloudSourcePreFetchMaximum=768
+ChunkDbSourcePreFetchMinimum=768
+ChunkDbSourcePreFetchMaximum=768
 InstallSourceBatchFetchMinimum=512
 InstallSourceBatchFetchMaximum=512
+; Increase memory limit for chunks
+ChunkStoreMemorySize=2048
 ; Makes the speed displayed update at the maximum of 1 second, instead of over 10 seconds.
 DownloadSpeedAverageTime=1
+; Try for 500ms retry times more
+RetryTimes=0.5
++RetryTimes=0.5
++RetryTimes=0.5
++RetryTimes=1.0
++RetryTimes=1.0
++RetryTimes=3.0
++RetryTimes=3.0
++RetryTimes=10.0
++RetryTimes=10.0
++RetryTimes=20.0
++RetryTimes=20.0
++RetryTimes=30.0
 ```
 
 For more information, Epic Games Launcher uses the same ChunkDownloader and HTTP systems as in Unreal Engine, so its [source code](https://github.com/EpicGames/UnrealEngine/tree/ue5-main/Engine/Source/Runtime/Online/BuildPatchServices) and [documentation](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/Patching/ChunkDownloader/Quickstart/) is available for everyone.
