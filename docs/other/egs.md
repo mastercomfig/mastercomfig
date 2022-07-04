@@ -19,6 +19,9 @@ HttpThreadActiveFrameTimeInSeconds=0.00001
 
 For many on stable and fast Internet connections, although EGS has decent speeds compared to other launchers, it does not reach the peaks we would like. For this guide, I will provide some settings to max out your download/install speeds on EGS, for gigabit fiber ethernet connections. Other connections may suffer with these settings, but the documentation provided may help you to better understand the available settings and tweak on your own. Feel free to contribute settings which work for your Internet!
 
+!!! note
+    This also includes the above "Fixing performance bug on EGS" tweak, as it also improves download speeds.
+
 1. Open Epic Games Store.
 2. Click your Profile Icon and click Settings.
 3. Enable Throttle Downloads.
