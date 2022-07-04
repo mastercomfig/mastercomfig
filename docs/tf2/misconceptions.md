@@ -20,7 +20,7 @@ description: Common misconceptions with TF2 that mastercomfig corrects.
 * **-disable_d3d9_hacks** : these "hacks" are basically extra stuff allowed within DX9 with no current standard function, so instead they are used to communicate directly with drivers to let them know of certain features to adjust. It's only useful to use for compatibility testing or development, and there's nothing to suggest that this would ever be helpful.
 * **-limitvsconst** : limits the hardware vertex shader constants to 256, possibly below hardware capabilities, which does save a bit of resources. But, with more constants available, faster shader modes can be used
 * **+map_background** : Team Fortress 2 has a much more advanced preload system now, so map backgrounds are not needed. If you are using them to preload mods, or just for looks, that's fine
-* **-glslcontrolflow -arbmode** : this cancels itself out, as is clear since ARB and GLSL are two different OpenGL shading modes, and ARB does not support control flow.
+* **-glslcontrolflow -arbmode** : this is a typo of **-noglslcontrolflow -arbmode**.
 
 ## Unused launch options
 
