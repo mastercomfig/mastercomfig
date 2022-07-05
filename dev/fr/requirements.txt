@@ -1,4 +1,4 @@
-mike
+git+https://github.com/jimporter/mike.git@master#egg=mike
 mkdocs-static-i18n
 mkdocs-material
 mkdocs-minify-plugin
