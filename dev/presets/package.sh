@@ -18,15 +18,15 @@ for F in ../../config/cfg/presets/*; do
       {
         printf "exec comfig/define_presets.cfg;"
         printf "preset=%s;" "${P}"
-        printf "exec overrides/pre_comfig.cfg;exec user/pre_comfig.cfg;"
+        printf "exec overrides/pre_comfig.cfg;"
         printf "exec comfig/comfig.cfg;"
-        printf "exec overrides/post_comfig.cfg;exec user/post_comfig.cfg;"
+        printf "exec overrides/post_comfig.cfg;"
         printf "preset;"
         printf "exec comfig/addons.cfg;"
         printf "modules_c;"
         printf "run_modules;"
         printf "exec comfig/echo.cfg;"
-        printf "exec overrides/autoexec.cfg;exec user/autoexec.cfg;exec app/autoexec.cfg;"
+        printf "exec overrides/autoexec.cfg;exec app/autoexec.cfg;"
         printf "exec comfig/finalize.cfg"
       } > "${autoexec_file}"
     fi
