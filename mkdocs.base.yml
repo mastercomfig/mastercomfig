@@ -98,9 +98,11 @@ theme:
     - navigation.expand
     - navigation.indexes
     - navigation.tracking
+    - navigation.prune
     - toc.integrate
     - header.autohide
     - content.tabs.link
+    - content.tooltips
     - search.suggest
     - search.highlight
     - search.share
@@ -142,7 +144,7 @@ plugins:
   - redirects:
       redirect_maps:
         'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'
-  - macros
+  - macros: {}
   - mike:
       canonical_version: latest
   - git-revision-date-localized:
