@@ -20,13 +20,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         clean: false
     - name: Cache
       id: cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: |
           ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
