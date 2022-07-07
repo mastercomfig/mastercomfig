@@ -207,7 +207,7 @@
     "medium": "medium",
     "medium-high": "high",
     "high": "very_high",
-    "ultra": "very_high",
+    "ultra": "ultra",
     "none": ""
   },
   "ropes": {

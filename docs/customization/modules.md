@@ -349,6 +349,9 @@ Default setting: based on which preset you are currently using.
 
 Controls texture smoothing/filtering.
 
+!!! warning
+    Texture filtering will only work on `textures=low` and higher.
+
 * **CPU usage:** none
 * **GPU usage:** low
 
@@ -562,6 +565,7 @@ Default setting: based on which preset you are currently using.
 * **`textures=medium`**: Medium texture quality.
 * **`textures=high`**: High texture quality.
 * **`textures=very_high`**: Very High texture quality.
+* **`textures=ultra`**: Maximum texture quality.
 
 ### Ropes
 

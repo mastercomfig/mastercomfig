@@ -610,6 +610,9 @@
           },
           {
             "value": "very_high"
+          },
+          {
+            "value": "ultra"
           }
         ]
       },
