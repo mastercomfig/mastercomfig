@@ -387,9 +387,6 @@ cl_interp                                : 0        : , "a", "user", "cl" : Sets
 cl_interp_all                            : 0        : , "cl"           : Disable interpolation list optimizations.
 cl_interp_npcs                           : 0        : , "user", "cl"   : Interpolate NPC positions starting this many seconds in past (or cl_interp, if greater)
 cl_interp_ratio                          : 2        : , "a", "user", "cl" : Sets the interpolation amount (final amount is cl_interp_ratio / cl_updaterate).
-cl_jiggle_bone_debug                     : 0        : , "cheat", "cl"  : Display physics-based 'jiggle bone' debugging information
-cl_jiggle_bone_debug_pitch_constraints   : 0        : , "cheat", "cl"  : Display physics-based 'jiggle bone' debugging information
-cl_jiggle_bone_debug_yaw_constraints     : 0        : , "cheat", "cl"  : Display physics-based 'jiggle bone' debugging information
 cl_jiggle_bone_framerate_cutoff          : 20       : , "cl"           : Skip jiggle bone simulation if framerate drops below this value (frames/second)
 cl_lagcompensation                       : 1        : , "user", "cl"   : Perform server side lag compensation of weapon firing events.
 cl_language                              : 0        : , "user"         : Language (from HKCU\Software\Valve\Steam\Language)
@@ -1556,13 +1553,18 @@ nb_update_frequency                      : 0        : , "sv", "cheat"  :
 nb_update_maxslide                       : 2        : , "sv", "cheat"  :
 nb_warp_selected_here                    : cmd      :                  : Teleport the selected bot to your cursor position
 net_blockmsg                             : 0        : , "cheat"        : Discards incoming message: <0|1|name>
+net_chan_limit_msec                      : 0        :                  : Netchannel processing is limited to so many milliseconds, abort connection if exceeding budget
+net_chan_stats_dump                      : 0        :                  : Netchannel statistics will dump in the logs upon request
+net_chan_stats_dump_top_msgs             : 5        :                  : Netchannel statistics will dump so many top messages in each category
+net_chan_stats_lru                       : 3        :                  : Netchannel statistics LRU accumulation buffer size
 net_channels                             : cmd      :                  : Shows net channel info
 net_chokeloop                            : 0        :                  : Apply bandwidth choke to loopback packets
 net_compresspackets                      : 1        :                  : Use compression on game packets.
 net_compresspackets_minsize              : 1024     :                  : Don't bother compressing packets below this size.
 net_compressvoice                        : 0        :                  : Attempt to compress out of band voice payloads (360 only).
-net_disconnect_reason                    : 0        :                  : Show client disconnect reason.
+net_disconnect_reason                    : 0        :                  : Whether the server should relay the disconnect reason to clients.
 net_drawslider                           : 0        :                  : Draw completion slider during signon
+net_droponsendoverflow                   : 0        :                  : If enabled, channel will drop client when sending too much data causes buffer overrun
 net_droppackets                          : 0        : , "cheat"        : Drops next n packets on client
 net_fakejitter                           : 0        : , "cheat"        : Jitter fakelag packet time
 net_fakelag                              : 0        : , "cheat"        : Lag all incoming network data (including loopback) by this many milliseconds.
@@ -2568,7 +2570,7 @@ sv_vote_bots_allowed                     : 0        : , "sv"           : Allow b
 sv_vote_creation_timer                   : 150      : , "sv"           : How long before a player can attempt to call another vote (in seconds).
 sv_vote_failure_timer                    : 300      : , "sv"           : A vote that fails cannot be re-submitted for this long
 sv_vote_failure_timer_mvm                : 120      : , "sv"           : A vote that fails in MvM cannot be re-submitted for this long
-sv_vote_holder_may_vote_no               : 0        : , "sv"           : 1 = Vote caller is not forced to vote yes on yes/no votes.
+sv_vote_holder_may_vote_no               : 0        : , "sv", "rep"    : 1 = Vote caller is not forced to vote yes on yes/no votes.
 sv_vote_issue_autobalance_allowed        : 0        : , "sv"           : Can players call votes to enable or disable auto team balance?
 sv_vote_issue_autobalance_cooldown       : 300      : , "sv"           : Minimum time before another auto team balance vote can occur (in seconds).
 sv_vote_issue_changelevel_allowed        : 0        : , "sv"           : Can players call votes to change levels?
@@ -2867,6 +2869,7 @@ tf_eyeball_boss_lifetime                 : 120      : , "sv", "cheat"  :
 tf_eyeball_boss_lifetime_spell           : 8        : , "sv", "cheat"  :
 tf_eyeball_boss_speed                    : 250      : , "sv", "cheat"  :
 tf_eyeball_boss_vert_damping             : 1        : , "sv", "cheat"  :
+tf_fall_damage_disablespread             : 0        : , "sv"           :
 tf_find_a_match_hint_viewed              : 0        : , "a", "cl"      :
 tf_fireball_airblast_recharge_penalty    : 0        : , "sv", "cheat", "rep" :
 tf_fireball_burn_duration                : 2        : , "sv", "cheat", "rep" :
@@ -3575,5 +3578,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3567 total convars/concommands
+3570 total convars/concommands
 ```
