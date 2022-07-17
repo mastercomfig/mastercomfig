@@ -12,3 +12,7 @@
 *.jpg -text
 *.png -text
 *.ico -text
+
+# define .res as vdf
+*.res linguist-language=vdf
+**/*.res linguist-detectable=true
