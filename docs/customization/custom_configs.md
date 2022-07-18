@@ -47,7 +47,7 @@ a override alias, which is run during game overrides, and an override option, wh
     * `detail_props_medium`: Enables detail props, at a far distance, with no fade in
     * `detail_props_full`: Enables detail props, at a far distance, with a gentle fade in
 
-Or, if you are using a lower water module, but do not want to use cheap water, you can add `alias cheap_water_override cheap_water_never`.
+As an example, if you are using a lower water module, but do not want to use cheap water, you can add `alias cheap_water_override cheap_water_never`.
 
 ## Network Aliases
 
