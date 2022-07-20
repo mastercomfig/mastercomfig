@@ -18,7 +18,7 @@
         
       
       <link rel="icon" href="../img/logo.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9+insiders-4.21.0">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9+insiders-4.21.0">
     
     
       
@@ -1122,7 +1122,7 @@ The automatic Steam runtime host library pinning is not enough to use native lib
 <p>An example of a library that benefits greatly from this approach is SDL2. To use a native version of SDL2, go to <code class="highlight">TF2_FOLDER/bin</code> and delete <code class="highlight">libSDL2-2.0.so.0</code> (this will cause TF2 to fallback to the Steam Linux Runtime).
 Then, install a 32-bit version of SDL2 and pin the library to the runtime using one of these commands, depending on your distribution:</p>
 <p>Debian/Ubuntu-based distributions:
-<div class="highlight"><pre><span></span><code>sudo apt install apt install libsdl2-2.0-0:i386
+<div class="highlight"><pre><span></span><code>sudo apt install libsdl2-2.0-0:i386
 ln -s /usr/lib/i386-linux-gnu/libSDL2-2.0.so.0 <span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/&quot;</span>
 </code></pre></div></p>
 <p>Arch-based distributions:
@@ -1150,6 +1150,10 @@ ln -s /usr/lib/libSDL2-2.0.so.0 <span class="s2">&quot;</span><span class="nv">$
         <span>GitHub</span>
         <nav>
           
+            <a href="https://github.com/micwoj92" class="md-author" title="@micwoj92">
+              <img src="../assets/externals/github.com/micwoj92.png" alt="GitHub user">
+            </a>
+          
             <a href="https://github.com/nermur" class="md-author" title="@nermur">
               <img src="../assets/externals/github.com/nermur.png" alt="GitHub user">
             </a>
@@ -1160,10 +1164,6 @@ ln -s /usr/lib/libSDL2-2.0.so.0 <span class="s2">&quot;</span><span class="nv">$
           
             <a href="https://github.com/mastercoms" class="md-author" title="@mastercoms">
               <img src="../assets/externals/github.com/mastercoms.png" alt="mcoms">
-            </a>
-          
-            <a href="https://github.com/micwoj92" class="md-author" title="@micwoj92">
-              <img src="../assets/externals/github.com/micwoj92.png" alt="GitHub user">
             </a>
           
           
@@ -1274,7 +1274,7 @@ ln -s /usr/lib/libSDL2-2.0.so.0 <span class="s2">&quot;</span><span class="nv">$
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.prune", "toc.integrate", "header.autohide", "content.tabs.link", "content.tooltips", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.720157f5.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5e3df397.min.js"></script>
+      <script src="../assets/javascripts/bundle.15234abc.min.js"></script>
       
         <script src="../js/widescreen.js"></script>
       
