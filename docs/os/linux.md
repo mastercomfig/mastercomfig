@@ -58,7 +58,7 @@ Then, install a 32-bit version of SDL2 and pin the library to the runtime using 
 
 Debian/Ubuntu-based distributions:
 ```sh
-sudo apt install apt install libsdl2-2.0-0:i386
+sudo apt install libsdl2-2.0-0:i386
 ln -s /usr/lib/i386-linux-gnu/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/"
 ```
 
