@@ -76,11 +76,7 @@ precache
 	"scriptsound" "Player.Spy_UnCloak"
 	"scriptsound" "Player.Spy_UnCloakFeignDeath"
 
-	"scriptsound" "physics/flesh/flesh_impact_bullet1.wav"
-	"scriptsound" "physics/flesh/flesh_impact_bullet2.wav"
-	"scriptsound" "physics/flesh/flesh_impact_bullet3.wav"
-	"scriptsound" "physics/flesh/flesh_impact_bullet4.wav"
-	"scriptsound" "physics/flesh/flesh_impact_bullet5.wav"
+	"scriptsound" "Flesh.BulletImpact"
 
 	"model"	"sprites/white.vmt"
 	"model"	"sprites/physbeam.vmt"
