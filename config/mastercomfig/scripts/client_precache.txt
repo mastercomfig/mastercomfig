@@ -76,6 +76,8 @@ precache
 	"scriptsound" "Player.Spy_UnCloak"
 	"scriptsound" "Player.Spy_UnCloakFeignDeath"
 
+	"scriptsound" "Flesh.BulletImpact"
+
 	"model"	"sprites/white.vmt"
 	"model"	"sprites/physbeam.vmt"
 
