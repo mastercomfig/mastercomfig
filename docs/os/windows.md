@@ -28,7 +28,7 @@ Giving more room for processor power to scale individually per core allows the O
 
 ## Fix Windows Defender performance bug on Intel CPUs
 
-Currently, there is a bug with Windows Defender where it will spam an Intel CPU feature until another program has used it. This can significantly reduce performance, up to 6%. You can use [Control Counter](https://www.techpowerup.com/download/counter-control/)'s Reset button to mark this feature as used and stop the spam from Defender. [Read more here](https://www.pcmag.com/news/intel-cpu-performance-takes-a-big-hit-due-to-windows-defender-bug).
+Currently, there is a bug with Windows Defender where it will spam an Intel CPU feature until another program has used it. This can significantly reduce performance, up to 6%. You can use [Counter Control](https://www.techpowerup.com/download/counter-control/)'s Reset button to mark this feature as used and stop the spam from Defender. [Read more here](https://www.pcmag.com/news/intel-cpu-performance-takes-a-big-hit-due-to-windows-defender-bug).
 
 ## Disable Visual Effects
 
