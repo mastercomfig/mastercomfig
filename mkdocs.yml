@@ -138,6 +138,7 @@ plugins:
         ru: Pусский
         es: Español
         fr: Français
+        tr: Türkçe
   - redirects:
       redirect_maps:
         'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'
