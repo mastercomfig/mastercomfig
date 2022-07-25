@@ -1012,7 +1012,7 @@ lookstrafe                               : 0        : , "a", "cl"      :
 -lookup                                  : cmd      :                  :
 lservercfgfile                           : 0        : , "sv"           :
 lzma_persistent_buffer                   : 0        :                  : If set, attempt to keep a persistent buffer for the LZMA decoder dictionary. This avoids re-allocating a ~16-64meg buffer for each operation, at the expensive of keeping extra memory around when it is not in-use.
-m_customaccel                            : 0        : , "a", "cl"      : Custom mouse acceleration: 0: custom accelaration disabled 1: mouse_acceleration = min(m_customaccel_max, pow(raw_mouse_delta, m_customaccel_exponent) * m_customaccel_scale + sensitivity) 2: Same as 1, with but x and y sensitivity are scaled by m_pitch and m_yaw respectively. 3: mouse_acceleration = pow(raw_mouse_delta, m_customaccel_exponent - 1) * sensitivity
+m_customaccel                            : 0        : , "a", "cl"      : Custom mouse acceleration: 0: custom acceleration disabled 1: mouse_acceleration = min(m_customaccel_max, pow(raw_mouse_delta, m_customaccel_exponent) * m_customaccel_scale + sensitivity) 2: Same as 1, with but x and y sensitivity are scaled by m_pitch and m_yaw respectively. 3: mouse_acceleration = pow(raw_mouse_delta, m_customaccel_exponent - 1) * sensitivity
 m_customaccel_exponent                   : 1        : , "a", "cl"      : Mouse move is raised to this power before being scaled by scale factor.
 m_customaccel_max                        : 0        : , "a", "cl"      : Max mouse move scale factor, 0 for no limit
 m_customaccel_scale                      : 0        : , "a", "cl"      : Custom mouse acceleration value.
