@@ -275,7 +275,7 @@ cc_captiontrace                          : 1        : , "cl"           : Show mi
 cc_emit                                  : cmd      :                  : Emits a closed caption
 cc_findsound                             : cmd      :                  : Searches for soundname which emits specified text.
 cc_flush                                 : cmd      :                  : Flushes async'd captions.
-cc_lang                                  : 0        : , "a", "cl"      : Current close caption language (emtpy = use game UI language)
+cc_lang                                  : 0        : , "a", "cl"      : Current close caption language (empty = use game UI language)
 cc_linger_time                           : 1        : , "a", "cl"      : Close caption linger time.
 cc_minvisibleitems                       : 1        : , "cl"           : Minimum number of caption items to show.
 cc_predisplay_time                       : 0        : , "a", "cl"      : Close caption delay before showing caption.
@@ -1060,7 +1060,7 @@ mat_crosshair_printmaterial              : cmd      :                  : print t
 mat_crosshair_reloadmaterial             : cmd      :                  : reload the material under the crosshair
 mat_debug_autoexposure                   : 0        : , "cheat", "cl"  :
 mat_debug_bloom                          : 0        : , "cheat", "cl"  :
-mat_debug_postprocessing_effects         : 0        : , "cl"           : 0 = off, 1 = show post-processing passes in quadrants of the screen, 2 = only apply post-processing to the centre of the screen
+mat_debug_postprocessing_effects         : 0        : , "cl"           : 0 = off, 1 = show post-processing passes in quadrants of the screen, 2 = only apply post-processing to the center of the screen
 mat_debug_process_halfscreen             : 0        : , "cheat", "cl"  :
 mat_debugalttab                          : 0        : , "cheat"        :
 mat_debugdepth                           : 0        :                  :
@@ -1184,7 +1184,7 @@ mat_slopescaledepthbias_decal            : 0        : , "cheat"        :
 mat_slopescaledepthbias_normal           : 0        : , "cheat"        :
 mat_slopescaledepthbias_shadowmap        : 16       : , "cheat"        :
 mat_software_aa_blur_one_pixel_lines     : 0        : , "a", "cl"      : How much software AA should blur one-pixel thick lines: (0.0 - none), (1.0 - lots)
-mat_software_aa_debug                    : 0        : , "cl"           : Software AA debug mode: (0 - off), (1 - show number of 'unlike' samples: 0->black, 1->red, 2->green, 3->blue), (2 - show anti-alias blend strength), (3 - show averaged 'unlike' colour)
+mat_software_aa_debug                    : 0        : , "cl"           : Software AA debug mode: (0 - off), (1 - show number of 'unlike' samples: 0->black, 1->red, 2->green, 3->blue), (2 - show anti-alias blend strength), (3 - show averaged 'unlike' color)
 mat_software_aa_edge_threshold           : 1        : , "a", "cl"      : Software AA - adjusts the sensitivity of the software AA shader's edge detection (default 1.0 - a lower value will soften more edges, a higher value will soften fewer)
 mat_software_aa_quality                  : 0        : , "a", "cl"      : Software AA quality mode: (0 - 5-tap filter), (1 - 9-tap filter)
 mat_software_aa_strength                 : -1       : , "a", "cl"      : Software AA - perform a software anti-aliasing post-process (an alternative/supplement to MSAA). This value sets the strength of the effect: (0.0 - off), (1.0 - full)
@@ -1464,7 +1464,7 @@ nav_select_radius                        : cmd      :                  : Adds al
 nav_select_stairs                        : cmd      :                  : Adds all stairway areas to the selected set
 nav_selected_set_border_color            : 100      : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
 nav_selected_set_color                   : 255      : , "sv", "cheat"  : Color used to draw the selected set background while editing.
-nav_set_place_mode                       : cmd      :                  : Sets the editor into or out of Place mode. Place mode allows labelling of Area with Place names.
+nav_set_place_mode                       : cmd      :                  : Sets the editor into or out of Place mode. Place mode allows labeling of Area with Place names.
 nav_shift                                : cmd      :                  : Shifts the selected areas by the specified amount
 nav_show_approach_points                 : 0        : , "sv", "cheat"  : Show Approach Points in the Navigation Mesh.
 nav_show_area_info                       : 0        : , "sv", "cheat"  : Duration in seconds to show nav area ID and attributes while editing
@@ -1500,7 +1500,7 @@ nav_test_node_crouch_dir                 : 4        : , "sv", "cheat"  :
 nav_test_stairs                          : cmd      :                  : Test the selected set for being on stairs
 nav_toggle_deselecting                   : cmd      :                  : Start or stop continuously removing from the selected set.
 nav_toggle_in_selected_set               : cmd      :                  : Remove current area from the selected set.
-nav_toggle_place_mode                    : cmd      :                  : Toggle the editor into and out of Place mode. Place mode allows labelling of Area with Place names.
+nav_toggle_place_mode                    : cmd      :                  : Toggle the editor into and out of Place mode. Place mode allows labeling of Area with Place names.
 nav_toggle_place_painting                : cmd      :                  : Toggles Place Painting mode. When Place Painting, pointing at an Area will 'paint' it with the current Place.
 nav_toggle_selected_set                  : cmd      :                  : Toggles all areas into/out of the selected set.
 nav_toggle_selecting                     : cmd      :                  : Start or stop continuously adding to the selected set.
@@ -2440,7 +2440,7 @@ sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdr
 sv_client_max_interp_ratio               : 5        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_interp_ratio is -1, then this cvar has no effect.
 sv_client_min_interp_ratio               : 1        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).               -1 = let clients set cl_interp_ratio to anything  any other value = set minimum value for cl_interp_ratio
 sv_client_predict                        : -1       : , "rep"          : This can be used to force the value of cl_predict for connected clients (only while they are connected).    -1 = let clients set cl_predict to anything     0 = force cl_predict to 0     1 = force cl_predict to 1
-sv_clockcorrection_msecs                 : 60       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
+sv_clockcorrection_msecs                 : 60       : , "sv"           : The server tries to keep each player's m_nTickBase within this many msecs of the server absolute tickcount
 sv_compressstringtablebaselines_threshold : 2048     :                  : Minimum size (in bytes) for stringtablebaseline buffer to be compressed.
 sv_consistency                           : 1        : , "rep"          : Legacy variable with no effect!  This was deleted and then added as a temporary kludge to prevent players from being banned by servers running old versions of SMAC
 sv_contact                               : 0        : , "nf"           : Contact email for server sysop
