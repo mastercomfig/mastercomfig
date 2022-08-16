@@ -1,5 +1,7 @@
 name: docs
 
+concurrency: docs
+
 on:
   push:
     branches: [ develop, release ]
@@ -42,10 +44,6 @@ jobs:
         GH_TOKEN: ${{secrets.PRIVATE_REPO_TOKEN}}
     - name: Install dependencies
       run: pip install -r docs/requirements.txt
-    - name: Wait on release docs
-      if: ${{ github.repository_owner == 'mastercomfig' && github.event_name != 'pull_request' && github.ref == 'refs/heads/develop' }}
-      run:
-        sleep 240
     - name: Update from Remote
       run: git fetch --tags -f
     - name: Build docs (latest)
