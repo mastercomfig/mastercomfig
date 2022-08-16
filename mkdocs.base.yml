@@ -3,7 +3,7 @@ site_author: mastercoms
 site_url: 'https://docs.mastercomfig.com/'
 site_description: A modern customization framework.
 copyright: >-
-  Copyright &copy; 2016-2021 mastercoms<br><br>Valve, the Valve logo, Steam, the
+  Copyright &copy; 2016-2022 mastercoms<br><br>Valve, the Valve logo, Steam, the
   Steam logo, Team Fortress, the Team Fortress logo, Source, the Source logo are
   trademarks and/or registered trademarks of Valve Corporation in the U.S.
   and/or other countries.<br><br>mastercomfig is not sponsored, endorsed,
@@ -89,7 +89,7 @@ markdown_extensions:
 theme:
   language: en
   features:
-    #- navigation.instant
+    - navigation.instant
     - navigation.sections
     - navigation.top
     - navigation.tabs
@@ -133,8 +133,8 @@ repo_url: 'https://github.com/mastercomfig/mastercomfig/'
 edit_uri: 'edit/release/docs/'
 plugins:
   - redirects: {redirect_maps: {'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'}}
+  - i18n: {default_language: en, search_reconfigure: false, languages: {en: English, pt: Português, ru: Pусский, es: Español, fr: Français}}
   - search: {separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'}
-  - i18n: {default_language: en, languages: {en: English, pt: Português, ru: Pусский, es: Español, fr: Français}}
   - macros: {}
   - mike: {canonical_version: latest}
   - git-revision-date-localized: {type: timeago, enable_creation_date: true, fallback_to_build_date: true}
