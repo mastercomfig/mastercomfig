@@ -1,5 +1,5 @@
 ---
-description: Настройте Team Fortress 2 и Mastercomfig с помощью параметров запуска.
+description: Настройте Team Fortress 2 и mastercomfig с помощью параметров запуска.
 ...
 
 # Параметры запуска

@@ -1,5 +1,5 @@
 ---
-description: Mastercomfig'in ve diğer configlerin kaldırılması dahil olmak üzere TF2 nasıl tamamen sıfırlanır.
+description: mastercomfig'in ve diğer configlerin kaldırılması dahil olmak üzere TF2 nasıl tamamen sıfırlanır.
 ...
 
 # Temizleme
