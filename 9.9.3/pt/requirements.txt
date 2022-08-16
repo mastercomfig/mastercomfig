@@ -1,0 +1,8 @@
+git+https://github.com/jimporter/mike.git@master#egg=mike
+mkdocs-static-i18n
+mkdocs-material
+mkdocs-minify-plugin
+mkdocs-redirects
+mkdocs-macros-plugin
+mkdocs-git-committers-plugin-2
+mkdocs-git-revision-date-localized-plugin
