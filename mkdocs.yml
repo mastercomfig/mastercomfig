@@ -1,8 +1,6 @@
 INHERIT: mkdocs.base.yml
 plugins:
   - social: {}
-  - offline: {}
   - privacy: {}
-  - git-committers:
-      repository: mastercomfig/mastercomfig
-      token: !ENV GH_TOKEN
+  - git-committers: {repository: mastercomfig/mastercomfig, token: !ENV GH_TOKEN}
+  - offline: {}

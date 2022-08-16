@@ -100,6 +100,7 @@ theme:
     - navigation.tracking
     - navigation.prune
     - toc.integrate
+    - toc.follow
     - header.autohide
     - content.tabs.link
     - content.tooltips
@@ -131,27 +132,13 @@ repo_name: GitHub
 repo_url: 'https://github.com/mastercomfig/mastercomfig/'
 edit_uri: 'edit/release/docs/'
 plugins:
-  - search:
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - i18n:
-      default_language: en
-      languages:
-        en: English
-        pt: Português
-        ru: Pусский
-        es: Español
-        fr: Français
-  - redirects:
-      redirect_maps:
-        'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'
+  - search: {separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'}
+  - i18n: {default_language: en, languages: {en: English, pt: Português, ru: Pусский, es: Español, fr: Français}}
+  - redirects: {redirect_maps: {'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'}}
   - macros: {}
-  - mike:
-      canonical_version: latest
-  - git-revision-date-localized:
-      type: date
-      fallback_to_build_date: true
-  - minify:
-      minify_html: true
+  - mike: {canonical_version: latest}
+  - git-revision-date-localized: {type: timeago, enable_creation_date: true, fallback_to_build_date: true}
+  - minify: {minify_html: true}
 extra_javascript:
   - js/widescreen.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
