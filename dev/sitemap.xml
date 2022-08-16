@@ -1,303 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-         <loc>https://docs.mastercomfig.com/dev/index.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/index.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/index.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/index.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/index.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/index.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/index.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/benchmarks.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/benchmarks.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/benchmarks.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/benchmarks.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/benchmarks.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/benchmarks.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/benchmarks.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/benchmarks.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/contributing.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/contributing.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/contributing.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/contributing.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/contributing.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/contributing.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/contributing.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/credits.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/credits.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/credits.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/credits.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/credits.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/credits.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/credits.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/faq.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/faq.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/faq.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/faq.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/faq.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/faq.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/credits.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/features.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/features.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/features.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/features.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/features.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/features.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/faq.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/help.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/help.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/help.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/help.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/help.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/help.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/faq.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/screenshots.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/screenshots.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/screenshots.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/screenshots.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/screenshots.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/screenshots.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/features.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/security.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/security.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/security.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/security.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/security.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/security.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/features.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/support_me.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/support_me.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/support_me.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/support_me.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/support_me.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/support_me.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/help.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/customization/custom_config_list.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/custom_config_list.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/custom_config_list.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/customization/custom_config_list.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/customization/custom_config_list.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/customization/custom_config_list.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/help.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/customization/custom_configs.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/custom_configs.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/custom_configs.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/customization/custom_configs.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/customization/custom_configs.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/customization/custom_configs.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/index.es.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/customization/launch_options.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/launch_options.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/launch_options.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/customization/launch_options.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/customization/launch_options.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/customization/launch_options.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/index.fr.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/customization/modules.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/modules.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/modules.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/customization/modules.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/customization/modules.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/customization/modules.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/index.pt.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/customization/see_also.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/see_also.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/see_also.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/customization/see_also.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/customization/see_also.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/customization/see_also.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/index.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/next_steps/quick_fixes.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/next_steps/quick_fixes.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/next_steps/quick_fixes.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/next_steps/quick_fixes.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/next_steps/quick_fixes.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/next_steps/quick_fixes.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/screenshots.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/next_steps/update.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/next_steps/update.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/next_steps/update.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/next_steps/update.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/next_steps/update.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/next_steps/update.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/security.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/os/index.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/os/index.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/os/index.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/os/index.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/os/index.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/os/index.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/security.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/os/linux.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/os/linux.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/os/linux.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/os/linux.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/os/linux.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/os/linux.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/support_me.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/os/windows.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/os/windows.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/os/windows.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/os/windows.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/os/windows.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/os/windows.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/support_me.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/other/index.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/other/index.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/other/index.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/other/index.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/other/index.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/other/index.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/custom_config_list.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/other/egs.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/other/egs.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/other/egs.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/other/egs.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/other/egs.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/other/egs.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/custom_config_list.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/setup/clean_up.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/setup/clean_up.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/setup/clean_up.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/setup/clean_up.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/setup/clean_up.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/setup/clean_up.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/custom_configs.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/setup/install.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/setup/install.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/setup/install.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/setup/install.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/setup/install.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/setup/install.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/custom_configs.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/tf2/index.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/index.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/index.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/index.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/index.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/index.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/launch_options.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/tf2/cvarlist_linux.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/cvarlist_linux.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/cvarlist_linux.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/cvarlist_linux.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/cvarlist_linux.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/cvarlist_linux.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/launch_options.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/tf2/cvarlist_win.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/cvarlist_win.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/cvarlist_win.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/cvarlist_win.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/cvarlist_win.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/cvarlist_win.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/modules.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/tf2/hiddencvars.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/hiddencvars.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/hiddencvars.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/hiddencvars.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/hiddencvars.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/hiddencvars.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/modules.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/tf2/launchopts_linux.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/launchopts_linux.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/launchopts_linux.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/launchopts_linux.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/launchopts_linux.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/launchopts_linux.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/see_also.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/tf2/launchopts_win.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/launchopts_win.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/launchopts_win.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/launchopts_win.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/launchopts_win.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/launchopts_win.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/customization/see_also.ru.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/tf2/misconceptions.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/misconceptions.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/misconceptions.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/misconceptions.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/misconceptions.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/misconceptions.html"/>
+         
     </url>
     <url>
-         <loc>https://docs.mastercomfig.com/dev/next_steps/quick_fixes.html</loc>
+         <loc>https://docs.mastercomfig.com/latest/tf2/silly_launch_options.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/next_steps/quick_fixes.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/next_steps/update.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/next_steps/update.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/os/index.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/os/index.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/os/linux.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/os/linux.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/os/windows.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/os/windows.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/other/index.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/other/egs.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/setup/clean_up.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/setup/clean_up.pt.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/setup/clean_up.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/setup/install.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/setup/install.pt.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/setup/install.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/index.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/README.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/cvarlist_linux.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/cvarlist_win.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/hiddencvars.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/launchopts_linux.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/launchopts_win.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/misconceptions.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/misconceptions.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/silly_launch_options.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.mastercomfig.com/dev/tf2/silly_launch_options.ru.html</loc>
-         <lastmod>2022-08-16</lastmod>
-         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/silly_launch_options.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/silly_launch_options.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/silly_launch_options.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/silly_launch_options.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/silly_launch_options.html"/>
+         
     </url>
 </urlset>
