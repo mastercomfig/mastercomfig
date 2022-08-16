@@ -254,6 +254,17 @@
          
     </url>
     <url>
+         <loc>https://docs.mastercomfig.com/latest/setup/clean_up.tr.html</loc>
+         <lastmod>2022-08-16</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/setup/clean_up.tr.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/setup/clean_up.tr.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/setup/clean_up.tr.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/setup/clean_up.tr.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/setup/clean_up.tr.html"/>
+         
+    </url>
+    <url>
          <loc>https://docs.mastercomfig.com/latest/setup/install.html</loc>
          <lastmod>2022-08-16</lastmod>
          <changefreq>daily</changefreq>
