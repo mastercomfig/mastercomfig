@@ -1,9 +1,9 @@
 INHERIT: mkdocs.base.yml
 plugins:
-  - social: {}
   - redirects: {redirect_maps: {'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'}}
-  - i18n: {default_language: en, languages: {en: English, pt: Português, ru: Pусский, es: Español, fr: Français}}
+  - social: {}
   - search: {separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'}
+  - i18n: {default_language: en, languages: {en: English, pt: Português, ru: Pусский, es: Español, fr: Français}}
   - macros: {}
   - mike: {canonical_version: latest}
   - git-revision-date-localized: {type: timeago, enable_creation_date: true, fallback_to_build_date: true}
