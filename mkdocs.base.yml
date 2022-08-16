@@ -89,7 +89,7 @@ markdown_extensions:
 theme:
   language: en
   features:
-    - navigation.instant
+    #- navigation.instant # language switcher contextual link is not compatible
     - navigation.sections
     - navigation.top
     - navigation.tabs
