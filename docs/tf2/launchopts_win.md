@@ -1,5 +1,7 @@
 ---
 description: A list of all launch options on TF2 for Windows.
+search:
+  exclude: true
 ...
 
 # Launch Options - Windows

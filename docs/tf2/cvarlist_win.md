@@ -1,5 +1,7 @@
 ---
 description: A list of all console variables and commands on TF2 for Windows.
+search:
+  exclude: true
 ...
 
 # Console Variables - Windows

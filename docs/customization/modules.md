@@ -1,5 +1,7 @@
 ---
 description: Easily customize mastercomfig to get the exact stuff you want without memorizing tons of commands!
+search:
+  boost: 2
 ...
 
 # Modules

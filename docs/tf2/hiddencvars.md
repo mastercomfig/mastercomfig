@@ -1,5 +1,7 @@
 ---
 description: A list of all hidden console variables and commands in TF2.
+search:
+  exclude: true
 ...
 
 # Hidden console variables

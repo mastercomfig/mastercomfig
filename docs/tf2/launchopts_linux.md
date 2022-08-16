@@ -1,5 +1,7 @@
 ---
 description: A list of all launch options on TF2 for Linux.
+search:
+  exclude: true
 ...
 
 # Launch Options - Linux

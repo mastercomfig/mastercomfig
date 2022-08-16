@@ -1,5 +1,7 @@
 ---
 description: A list of all console variables and commands on TF2 for Linux.
+search:
+  exclude: true
 ...
 
 # Console Variables - Linux

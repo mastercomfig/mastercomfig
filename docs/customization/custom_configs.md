@@ -1,5 +1,7 @@
 ---
 description: Learn how to do advanced customization and scripting with mastercomfig.
+search:
+  boost: 1
 ...
 
 # Customization
