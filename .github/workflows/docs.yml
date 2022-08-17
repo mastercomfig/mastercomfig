@@ -30,9 +30,10 @@ jobs:
     - uses: pnpm/action-setup@v2.2.2
       with:
         version: 7
-        run_install: true
     - name: Lint Docs
-      run: pnpm lint
+      run: |
+        pnpm i
+        pnpm lint
     - name: Update pip
       run: python -m pip install -U pip setuptools
     - name: Set Git author
