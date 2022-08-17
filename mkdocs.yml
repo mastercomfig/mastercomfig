@@ -14,7 +14,31 @@ plugins:
         tr: Türkçe
       nav_translations:
         ru:
+          FAQ: Часто задаваемые вопросы
+          Support Me: Поддержка
+          Help: Помощь
+          Features: Функции
           Benchmarks: Тест
+          Security: Политика безопасности
+          Credits: Благодарность
+          Clean Up: Очистка
+          Install: установить
+          Launch Options: Параметры запуска
+          Custom Configs: Кастомизация
+          Modules: Модули
+          List of Custom Configs: Список пользовательских конфигов
+          See Also: Посмотрите также
+          OS Optimizations: Оптимизация операционной системы
+          Quick Fixes: Быстрые исправления
+          Update: Обновление
+          TF2 Documentation: Документация по тф2
+          Misconceptions: Заблуждения
+          Silly Launch Options: Незначительные Параметры Запуска
+        pt:
+          Clean Up: Limpeza Completa
+          Install: Instalar
+        tr:
+          Clean Up: Temizleme
   - search: {separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'}
   - macros: {}
   - mike: {canonical_version: latest}

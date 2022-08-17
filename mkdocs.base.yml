@@ -153,7 +153,7 @@ plugins:
           Security: Политика безопасности
           Credits: Благодарность
           Clean Up: Очистка
-          Install: Как установить mastercomfig
+          Install: установить
           Launch Options: Параметры запуска
           Custom Configs: Кастомизация
           Modules: Модули
@@ -165,6 +165,11 @@ plugins:
           TF2 Documentation: Документация по тф2
           Misconceptions: Заблуждения
           Silly Launch Options: Незначительные Параметры Запуска
+        pt:
+          Clean Up: Limpeza Completa
+          Install: Instalar
+        tr:
+          Clean Up: Temizleme
   - search: {separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'}
   - macros: {}
   - mike: {canonical_version: latest}
