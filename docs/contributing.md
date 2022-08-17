@@ -50,6 +50,18 @@ When referencing content, like embedding an image or linking another page, you c
 
 For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automatically reference the translated version, or fallback to the default if not found.
 
+### Localizing page titles
+
+Translated page titles must be added to `mkdocs.yml` and `mkdocs.base.yml` under `nav_translations`.
+
+### Remark checking
+
+Documentation is checked with `remark` automatically through GitHub Actions for linting errors, using `pnpm lint`.
+
+From time to time, link validity may also be checked using `pnpm checklinks`. This is not run automatically due to false positives.
+
+Also, quality of English prose may be checked with `pnpm prose`. This is not run automatically due to the subjective nature of writing.
+
 ## Support
 
 You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV).
@@ -64,7 +76,7 @@ The config has a certain standard of quality for references and will not accept
 changes based on simple hearsay or assumptions.
 
 Every setting and change must be based on information
-found in Team Fortress 2 [blog posts/patch notes](https://www.teamfortress.com/),
+found in Team Fortress 2 [blog posts/patch notes](https://www.teamfortress.com),
 the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/SDK_Docs),
 the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013),
 so make sure those are available to you before you start contributing.
@@ -259,10 +271,14 @@ learn more about the dev scripts in
 To successfully package presets and addons you need:
 
 * Installed TF2 and Steam with all dependencies
+
 * bash and basic UNIX tools
+
 * [VPK](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
-* [gh](https://cli.github.com/)
+
+* [gh](https://cli.github.com)
   * You must authenticate beforehand, for example using [gh auth login](https://cli.github.com/manual/gh_auth_login), or the `GH_TOKEN` env var
+
 * GNU parallel (optional)
 
 Additionally, to generate No Tutorial addon, you will need to create a new file

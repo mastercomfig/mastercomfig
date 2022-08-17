@@ -85,4 +85,4 @@ Nahimic это рограммное обеспечение для аудиоэф
 
 [Включение прерываний, сигнализируемых сообщениями (PCIe MSI)](https://forums.guru3d.com/threads/windows-line-based-vs-message-signaled-based-interrupts-msi-tool.378044/) для всех драйверов - отличный способ снизить задержку DPC, вызванную драйверами (ring0). При наличии карты NVIDIA можно использовать [NVCleanstall](https://www.techpowerup.com/download/techpowerup-nvcleanstall/) чтобы включить это, с дополнительным преимуществом полной настройки установки драйвера.
 
-Используйте [LatencyMon](https://www.resplendence.com/latencymon) и [DPC Latency Checker](https://www.thesycon.de/eng/latency_check.shtml) для анализа проблем с задержкой, вызванных драйверами устройств в режиме ядра. Если они сообщают о проблемах, попробуйте обновить или установить альтернативные драйверы.
+Используйте [LatencyMon](https://www.resplendence.com/latencymon) для анализа проблем с задержкой, вызванных драйверами устройств в режиме ядра. Если они сообщают о проблемах, попробуйте обновить или установить альтернативные драйверы.

@@ -11,7 +11,7 @@
 
 # mastercomfig
 
-Welcome to [mastercomfig](https://mastercomfig.com/), a modern customization framework.
+Welcome to [mastercomfig](https://mastercomfig.com), a modern customization framework.
 
 mastercomfig is a modern customization framework, and aims to disable heavily unoptimized features and adjust other settings where it does not affect behavior or visuals noticeably. mastercomfig is documented extensively and also has advanced customization features so that you may adjust settings to your needs/preferences.
 

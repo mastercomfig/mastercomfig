@@ -46,6 +46,18 @@ When referencing content, like embedding an image or linking another page, you c
 
 For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automatically reference the translated version, or fallback to the default if not found.
 
+### Localizing page titles
+
+Translated page titles must be added to `mkdocs.yml` and `mkdocs.base.yml` under `nav_translations`.
+
+### Remark checking
+
+Documentation is checked with `remark` automatically through GitHub Actions for linting errors, using `pnpm lint`.
+
+From time to time, link validity may also be checked using `pnpm checklinks`. This is not run automatically due to false positives.
+
+Also, quality of English prose may be checked with `pnpm prose`. This is not run automatically due to the subjective nature of writing.
+
 ## Support
 
 You can help users who ask questions on [Discord](https://discord.gg/CuPb2zV).

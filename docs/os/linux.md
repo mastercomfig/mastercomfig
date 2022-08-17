@@ -9,7 +9,7 @@ description: Learn how to optimize your Linux OS for better performance.
 
 ## Kernel
 
-Try a desktop oriented kernel like [Xanmod](https://xanmod.org/).
+Try a desktop oriented kernel like [XanMod](https://xanmod.org).
 
 ## cpupower
 
