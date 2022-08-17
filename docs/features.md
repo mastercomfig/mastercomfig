@@ -79,7 +79,7 @@ description: A list of all mastercomfig features.
 
 * Optional same sensitivity for scope and other mouse enhancements for consistent input
 
-# Security
+## Security
 
 * Prevents aimbots from joining local servers
 * Prevents players from joining your party without your permission, spamming the party chat, causing lag and sound spam
