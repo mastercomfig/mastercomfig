@@ -30,7 +30,7 @@ You can also take a look at [the full source folder](https://github.com/masterco
 
 ### Adding a new language
 
-You can view currently supported languages [here](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#built-in-search).
+You can view currently supported languages [here](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#built-in-search-plugin).
 
 Add your language plus its native name to `plugins.i18n.languages` in `mkdocs.yml`.
 
