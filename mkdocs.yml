@@ -3,7 +3,7 @@ plugins:
   - redirects: {redirect_maps: {'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'}}
   - social: {}
   - i18n:
-      default_language: en,
+      default_language: en
       search_reconfigure: false
       languages:
         en: English
