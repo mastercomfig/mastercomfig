@@ -23,15 +23,15 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: 3.x
-    - uses: pnpm/action-setup@v2.2.2
     - uses: actions/cache@v3
       with:
         key: ${{ github.ref }}
         path: .cache
+    - uses: pnpm/action-setup@v2.2.2
+      with:
+        version: 7
     - name: Lint Docs
-      run: |
-        pnpm i
-        pnpm lint
+      run: pnpm lint
     - name: Update pip
       run: python -m pip install -U pip setuptools
     - name: Set Git author
