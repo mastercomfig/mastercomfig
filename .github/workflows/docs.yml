@@ -30,6 +30,7 @@ jobs:
     - uses: pnpm/action-setup@v2.2.2
       with:
         version: 7
+        run_install: true
     - name: Lint Docs
       run: pnpm lint
     - name: Update pip
