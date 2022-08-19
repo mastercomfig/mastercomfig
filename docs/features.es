@@ -11,7 +11,7 @@ description: Una lista de todas las características de mastercomfig.
 * Opciones preestablecidas que se adecúan a su caso de uso
 * Configuraciones de personalización opcional adicionales
 * Sistema de config modular que permite una rápida actualización
-* Sistema de complementos integrado extensivo, el cual provee soporte para no cancelamiento de movimiento/*null-canceling movement */, modelos de vista transparentes y más
+* Sistema de complementos integrado extensivo, el cual provee soporte para la no cancelación de movimiento/*null-canceling movement */, modelos de vista transparentes y más
 
 ## Correcciones de errores
 
