@@ -11,7 +11,7 @@
 
 # mastercomfig
 
-Bienvenido a [mastercomfig](https://mastercomfig.com), un entorno de trabajo de personalización.
+Bienvenido a [mastercomfig](https://mastercomfig.com), un moderno entorno de trabajo de personalización.
 
 mastercomfig es un entorno de trabajo de personalización, y tiene como objetivo desactivar características muy mal optimizadas y ajustar otras configuraciones que no afectan el comportamiento o los visuales de manera notable. mastercomfig está documentado extensivamente y también tiene características de personalización avanzadas para que pueda ajustar las configuraciones a tus necesidades o preferencias.
 
