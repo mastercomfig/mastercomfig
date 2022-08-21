@@ -343,9 +343,9 @@ Controls the main hardware based multisample anti-aliasing (MSAA) and additional
 Default setting: based on which preset you are currently using.
 
 * **`anti_aliasing=off`**: Turns off all forms of anti-aliasing.
-* **`anti_aliasing=msaa_2x`**: Enables alpha to coverage and MSAA 2x.
-* **`anti_aliasing=msaa_4x`**: Enables alpha to coverage and MSAA 4x.
-* **`anti_aliasing=msaa_8x`**: Enables alpha to coverage and MSAA 8x.
+* **`anti_aliasing=msaa_2x`**: Enables MSAA 2x and alpha to coverage.
+* **`anti_aliasing=msaa_4x`**: Enables MSAA 4x and alpha to coverage.
+* **`anti_aliasing=msaa_8x`**: Enables MSAA 8x and alpha to coverage.
 
 ### Texture Filtering
 
