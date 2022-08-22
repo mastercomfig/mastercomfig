@@ -108,12 +108,11 @@ Controls how big packets are and how they are split up/compressed.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`packet_size=speed`** (all presets).
+Default setting: **`packet_size=large`** (all presets).
 
 * **`packet_size=small`**: Uses the smallest packet size, that will most likely be processed by even the worst routers.
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that will most likely be processed by most routers, even lower end ones.
-* **`packet_size=saver`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
-* **`packet_size=speed`**: This prioritizes less CPU usage over data usage by disabling packet compression and avoiding split packets.
+* **`packet_size=large`**: Uses the max recommended packet size by Steeam to avoid split packets.
 
 ### Bandwidth
 
@@ -185,8 +184,8 @@ Default setting: based on which preset you are currently using.
 * **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
 * **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting.
 * **`lighting=high`**: 6 dynamic lights. Detailed lighting.
-* **`lighting=very_high`**: 12 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
-* **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
+* **`lighting=very_high`**: 12 dynamic lights. Detailed lighting.
+* **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting.
 
 ### Lighting Ex
 
