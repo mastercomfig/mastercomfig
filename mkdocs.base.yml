@@ -170,6 +170,7 @@ plugins:
           Install: Instalar
         tr:
           Clean Up: Temizleme
+          Install: Nasıl Kurulur
   - search: {separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'}
   - macros: {}
   - mike: {canonical_version: latest}
