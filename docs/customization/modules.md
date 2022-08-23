@@ -332,20 +332,23 @@ Default setting: **`motion_blur=off`** (all presets).
 
 ### Anti-Aliasing
 
-Controls additional anti-aliasing passes (a.k.a. [alpha to coverage](https://en.wikipedia.org/wiki/Alpha_to_coverage)) and the main hardware based MSAA anti-aliasing.
+Controls MSAA anti-aliasing.
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
+
+!!! warning
+    On Windows, enabling MSAA may increase input latency on non-exclusive fullscreen modes.
 
 * **CPU usage:** none
 * **GPU usage:** medium
 
 Default setting: based on which preset you are currently using.
 
-* **`anti_aliasing=off`**: Turns off all forms of anti-aliasing.
-* **`anti_aliasing=msaa_2x`**: Enables alpha to coverage and MSAA 2x.
-* **`anti_aliasing=msaa_4x`**: Enables alpha to coverage and MSAA 4x.
-* **`anti_aliasing=msaa_8x`**: Enables alpha to coverage and MSAA 8x.
+* **`anti_aliasing=off`**: Turns off anti-aliasing.
+* **`anti_aliasing=msaa_2x`**: Enables MSAA 2x.
+* **`anti_aliasing=msaa_4x`**: Enables MSAA 4x.
+* **`anti_aliasing=msaa_8x`**: Enables MSAA 8x.
 
 ### Texture Filtering
 
