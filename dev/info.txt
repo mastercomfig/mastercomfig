@@ -1,4 +1,4 @@
-9.9.3
-bug fixes and ultra textures support
-10
+9.10.0
+app weapons customization and class binds, minor optimizations
+95
 
