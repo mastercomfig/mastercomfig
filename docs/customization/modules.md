@@ -618,6 +618,7 @@ Default setting: **`fpscap=1000`** (all presets).
 * **`fpscap=60`**: Sets FPS cap to 60 FPS.
 * **`fpscap=75`**: Sets FPS cap to 75 FPS.
 * **`fpscap=120`**: Sets FPS cap to 120 FPS.
+* **`fpscap=142`**: Sets FPS cap to 142 FPS.
 * **`fpscap=144`**: Sets FPS cap to 144 FPS.
 * **`fpscap=160`**: Sets FPS cap to 160 FPS.
 * **`fpscap=165`**: Sets FPS cap to 165 FPS.
