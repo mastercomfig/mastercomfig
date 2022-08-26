@@ -40,7 +40,7 @@ seçeneklerini kutuya yapıştırın.
 * **-nohltv** : SourceTV barındırmayı devre dışı bırakır; daha az kaynak kullanımı.
 * **-particles 1** : Işın sayısını minimum 512 ile sınırlar.
 * **-precachefontchars** : Ortak karakterler için yazı tipi oluşturmayı önbelleğe alır.
-* **-noquicktime** : Quicktime'ı başlatmayı devre dışı bırakır. Yeniden oynatma özelliğini kullanıyorsanız, bunu kullanmayın. Linux'ta hiçbir şey yapmaz.
+* **-noquicktime** : Quicktime'ı başlatmayı devre dışı bırakır. Yeniden oynatma özelliğini kullanıyorsanız, bu seçeneği kullanmayın. Linux'ta hiçbir şey yapmaz.
 
 ## Ek Başlatma Seçenekleri
 
