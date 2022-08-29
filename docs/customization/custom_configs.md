@@ -53,7 +53,7 @@ As an example, if you are using a lower water module, but do not want to use che
 
 ## Network Aliases
 
-These aliases are used by mastercomfig to apply network settings per class (as listed below) when using the `snapshot_buffer=auto` module level.
+These aliases are used by mastercomfig to apply network settings per class (as listed below) when using the `snapshot_buffer=automatic` module level.
 
 You can run them manually in your class config if you play a subclass, like Demoknight (`net_hitscan`) or Huntsman (`net_projectiles`).
 
