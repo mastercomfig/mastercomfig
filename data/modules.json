@@ -34,8 +34,8 @@
         "tags": ["advanced"],
         "values": [
           {
-            "value": "auto",
-            "display": "Automatic"
+            "value": "automatic",
+            "display": "Automatic (recommended)"
           },
           {
             "value": "safe"
@@ -44,10 +44,12 @@
             "value": "high"
           },
           {
-            "value": "custom"
+            "value": "anim",
+            "display": "Animations (LAN servers)"
           },
           {
-            "value": "anim"
+            "value": "custom",
+            "display": "Custom (personal values)"
           }
         ]
       },
@@ -79,8 +81,8 @@
         "description": "Filters what custom content is allowed to be downloaded from the server.",
         "values": [
           {
-            "value": "auto",
-            "display": "Use game settings"
+            "value": "custom",
+            "display": "Custom (use game settings)"
           },
           {
             "value": "all"
@@ -481,7 +483,7 @@
         "display": "Silly Gibs",
         "values": [
           {
-            "value": "auto",
+            "value": "automatic",
             "display": "Automatic (recommended)"
           },
           {
@@ -672,8 +674,8 @@
         "display": "Contracts",
         "values": [
           {
-            "value": "auto",
-            "display": "Use game settings"
+            "value": "custom",
+            "display": "Custom (use game settings)"
           },
           {
             "value": "hide",

@@ -92,14 +92,14 @@ Controls how reliable to consider the snapshots you receive from the server to a
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`snapshot_buffer=auto`** (all presets).
+Default setting: **`snapshot_buffer=automatic`** (all presets).
 
-* **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`.
-* **`alias snapshot_buffer snapshot_buffer_low`**: A dangerously minimal buffering time which does not have room for any networking or server delays or drops (**15ms lerp** when using `packet_rate=standard`, or **30ms lerp** when using `packet_rate=congestion`). There is almost no reason to use this option, except in LAN scenarios, as `snapshot_buffer=auto` will optimize lag compensation for each class.
+* **`snapshot_buffer=automatic`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`.
+* **`alias snapshot_buffer snapshot_buffer_low`**: A dangerously minimal buffering time which does not have room for any networking or server delays or drops (**15ms lerp** when using `packet_rate=standard`, or **30ms lerp** when using `packet_rate=congestion`). There is almost no reason to use this option, except in LAN scenarios, as `snapshot_buffer=automatic` will optimize lag compensation for each class.
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
-* **`snapshot_buffer=custom`**: Prevents mastercomfig from messing with interp.
 * **`snapshot_buffer=anim`**: Adjusts the smoothing to be more ideal for animations and NPCs, rather than for gameplay. You can use this for smoother offline recordings, singleplayer, etc.
+* **`snapshot_buffer=custom`**: Prevents mastercomfig from chaging interpolation-related commands, to allow the use of custom values.
 
 ### Packet Size
 
@@ -146,9 +146,9 @@ Filters what custom content is allowed to be downloaded from the server.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`download=auto`** (all presets).
+Default setting: **`download=custom`** (all presets).
 
-* **`download=auto`**: Whatever the user set in the game settings.
+* **`download=custom`**: Whatever the user set in the game settings.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
@@ -331,7 +331,7 @@ Default setting: **`motion_blur=off`** (all presets).
 
 ### Anti-Aliasing
 
-Controls MSAA anti-aliasing.
+Controls multisample anti-aliasing (MSAA).
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
@@ -465,9 +465,9 @@ Controls low violence mode.
 * **CPU usage:** low
 * **GPU usage:** low
 
-Default setting: **`sillygibs=auto`** (all presets).
+Default setting: **`sillygibs=automatic`** (all presets).
 
-* **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
+* **`sillygibs=automatic`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
 * **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
 
@@ -669,9 +669,9 @@ Controls the Contracts HUD seen at the top right corner of the screen during gam
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`hud_contracts=auto`** (all presets, except Very Low).
+Default setting: **`hud_contracts=custom`** (all presets, except Very Low).
 
-* **`hud_contracts=auto`**: Whatever the user set in the game settings.
+* **`hud_contracts=custom`**: Whatever the user set in the game settings.
 * **`hud_contracts=hide`**: Hides the Contracts HUD.
 * **`hud_contracts=all`**: Shows all Contracts available.
 * **`hud_contracts=active`**: Only shows active Contracts.
@@ -782,7 +782,7 @@ Default setting: **`console=on`** (all presets, except Very Low).
 
 ### HTML MOTD
 
-Controls HTML MOTDs. This includes ads, music player, rules, fancy server intros, etc.
+Controls HTML MOTDs. This includes advertisements, music player, rules, fancy server intros, etc.
 
 This module is disabled by default, since server ads can cause lag spikes.
 

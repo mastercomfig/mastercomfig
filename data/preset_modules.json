@@ -7,7 +7,7 @@
     "very-low": "congestion"
   },
   "snapshot_buffer": {
-    "default": "auto"
+    "default": "automatic"
   },
   "packet_size": {
     "default": "large"
@@ -16,7 +16,7 @@
     "default": "1.0Mbps"
   },
   "download": {
-    "default": "auto"
+    "default": "custom"
   },
   "lod": {
     "default": "low",
@@ -155,7 +155,7 @@
     "none": ""
   },
   "sillygibs": {
-    "default": "auto"
+    "default": "automatic"
   },
   "gibs": {
     "default": "off",
@@ -230,7 +230,7 @@
     "none": ""
   },
   "hud_contracts": {
-    "default": "auto",
+    "default": "custom",
     "very-low": "off"
   },
   "hud_panels": {
