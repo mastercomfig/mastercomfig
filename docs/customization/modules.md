@@ -99,7 +99,7 @@ Default setting: **`snapshot_buffer=automatic`** (all presets).
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
 * **`snapshot_buffer=anim`**: Adjusts the smoothing to be more ideal for animations and NPCs, rather than for gameplay. You can use this for smoother offline recordings, singleplayer, etc.
-* **`snapshot_buffer=custom`**: Prevents mastercomfig from chaging interpolation-related commands, to allow the use of custom values.
+* **`snapshot_buffer=custom`**: Prevents mastercomfig from chaging commands related to interpolation (to allow the use of custom settings).
 
 ### Packet Size
 
