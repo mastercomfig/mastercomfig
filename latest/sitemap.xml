@@ -384,4 +384,16 @@
          <xhtml:link rel="alternate" hreflang="tr" href="https://docs.mastercomfig.com/tr/tf2/silly_launch_options.html"/>
          
     </url>
+    <url>
+         <loc>https://docs.mastercomfig.com/latest/tf2/strcmds.html</loc>
+         <lastmod>2022-09-01</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/strcmds.html"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/strcmds.html"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/strcmds.html"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/strcmds.html"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/strcmds.html"/>
+         <xhtml:link rel="alternate" hreflang="tr" href="https://docs.mastercomfig.com/tr/tf2/strcmds.html"/>
+         
+    </url>
 </urlset>

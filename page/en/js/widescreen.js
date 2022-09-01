@@ -1,6 +1,7 @@
 if (
   window.location.pathname.indexOf("cvar") !== -1 ||
-  window.location.pathname.indexOf("launchopts") !== -1
+  window.location.pathname.indexOf("launchopts") !== -1 ||
+  window.location.pathname.indexOf("cmd") !== -1
 ) {
   // https://github.com/squidfunk/mkdocs-material/issues/619#issuecomment-348610715
   var styles = `
