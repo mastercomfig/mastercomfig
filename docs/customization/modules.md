@@ -112,7 +112,7 @@ Default setting: **`packet_size=large`** (all presets).
 
 * **`packet_size=small`**: Uses the smallest packet size, that will most likely be processed by even the worst routers.
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that will most likely be processed by most routers, even lower end ones.
-* **`packet_size=large`**: Uses the max recommended packet size by Steeam to avoid split packets.
+* **`packet_size=large`**: Uses the max recommended packet size by Steam to avoid split packets.
 
 ### Bandwidth
 
