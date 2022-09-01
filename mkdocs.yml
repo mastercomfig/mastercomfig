@@ -45,5 +45,5 @@ plugins:
   - git-revision-date-localized: {type: timeago, enable_creation_date: true, fallback_to_build_date: true}
   - minify: {minify_html: true}
   - privacy: {}
-  - git-committers: {repository: mastercomfig/mastercomfig, token: !ENV GH_TOKEN}
+  - git-committers: {repository: mastercomfig/mastercomfig, branch: "develop"}
   - offline: {}
