@@ -19,6 +19,7 @@ There are a few types of string commands:
 * Dispatch client commands: these are console commands only registered on the server (flagged as GAMEDLL), but are accepted to be run by the client
 * Client commands: these are all other commands, which are parsed manually by handlers through their string command and arguments
 
+* `demorestart`
 * `voicemenu`
 * `vban`
 * `VModEnable`
@@ -28,6 +29,7 @@ There are a few types of string commands:
 * `objcmd`
 * `nextmap`
 * `timeleft`
+* `ignoremsg`
 * `addcond`
 * `removecond`
 * `jointeam`
@@ -68,8 +70,3 @@ There are a few types of string commands:
 * `next_map_vote`
 * `room_type`
 * `dsp_player`
-* `status` engine
-* `pause` engine
-* `setpause` engine
-* `unpause` engine
-* `ping` engine
