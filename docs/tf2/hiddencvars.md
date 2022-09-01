@@ -13,6 +13,7 @@ __screenshot_internal                    : cmd      : , "norecord", "matsys" : I
 achievement_notification_test            : cmd      : , "cheat", "cl", "launcher" : Test the hud notification UI
 anim_showstate                           : -1       : , "sv", "cheat", "rep", "launcher" : Show the (client) animation state for the specified entity (-1 for none).
 anim_showstatelog                        : 0        : , "sv", "cheat", "rep", "launcher" : 1 to output anim_showstate to Msg(). 2 to store in AnimState.log. 3 for both.
+cfgver                                   :          : , "a", "matsys"  :
 cl_boss_show_stun                        : 0        : , "cl", "launcher" :
 cl_chatfilter_version                    : 0        : , "a", "cl", "matsys" : Stores the chat filter version
 cl_clanid                                : 0        : , "a", "user", "matsys" : Current clan ID for name decoration
@@ -177,7 +178,6 @@ sv_vote_issue_kick_limit_mvm             : 0        : , "sv", "matsys" : The max
 sv_vote_issue_pause_game_allowed         : 0        : , "sv", "matsys" : Can players call votes to pause the game?
 sv_vote_issue_pause_game_cooldown        : 1200     : , "sv", "matsys" : Minimum time before another pause vote can occur (in seconds).
 sv_vote_issue_pause_game_timer           : 120      : , "sv", "matsys" : How long to pause the game for when this vote passes (in seconds).
-sv_vote_timer_duration                   : 15       : , "sv", "launcher" : How long to allow voting on an issue
 sv_wateraccelerate                       : 10       : , "sv", "nf", "rep", "launcher" :
 sv_waterdist                             : 12       : , "sv", "rep", "launcher" : Vertical view fixup when eyes are near water plane.
 sv_waterfriction                         : 1        : , "sv", "nf", "rep", "launcher" :
@@ -267,7 +267,7 @@ tf_grenade_forcefrom_bullet              : 2.0      : , "sv", "cheat", "launcher
 tf_grenadelauncher_chargescale           : 1.0      : , "sv", "cheat", "rep", "launcher" :
 tf_grenadelauncher_livetime              : 0.8      : , "sv", "cheat", "rep", "launcher" :
 tf_grenadelauncher_min_contact_speed     : 100      : , "sv", "launcher" :
-tf_hat_effect_offset                     : 0        : , "cl", "launcher" : Adjust the position of the unusual effect for your hat.
+tf_hat_effect_offset                     : 0        : , "cl", "matsys" : Adjust the position of the unusual effect for your hat.
 tf_helpme_range                          : 150      : , "sv", "launcher" :
 tf_highfive_height_tolerance             : 12       : , "sv", "cheat", "launcher" : The maximum height difference allowed for two high-fivers.
 tf_highfive_max_range                    : 150      : , "sv", "cheat", "launcher" : The farthest away a high five partner can be
@@ -289,8 +289,8 @@ tf_maxhealth_drain_deploy_cost           : 20       : , "sv", "launcher" :
 tf_maxhealth_drain_hp_min                : 100      : , "sv", "launcher" :
 tf_medigun_lagcomp                       : 1        : , "sv", "launcher" :
 tf_meleeattackforcescale                 : 80.0     : , "sv", "cheat", "launcher" :
-tf_misc1_effect_offset                   : 0        : , "cl", "launcher" : Adjust the position of the unusual effect for your hat.
-tf_misc2_effect_offset                   : 0        : , "cl", "launcher" : Adjust the position of the unusual effect for your hat.
+tf_misc1_effect_offset                   : 0        : , "cl", "matsys" : Adjust the position of the unusual effect for your hat.
+tf_misc2_effect_offset                   : 0        : , "cl", "matsys" : Adjust the position of the unusual effect for your hat.
 tf_mm_abandoned_players_per_team_max     : 1        : , "sv", "launcher" :
 tf_mm_party_send_criteria_delay          : 1.0      : , "cl", "launcher" :
 tf_mm_party_send_criteria_delay_minimum  : 0.5      : , "cl", "launcher" :
@@ -433,6 +433,7 @@ weapon_medigun_chargerelease_rate        : 8        : , "sv", "cheat", "rep", "l
 weapon_medigun_construction_rate         : 10       : , "sv", "cheat", "rep", "launcher" : Constructing object health healed per second by the medigun.
 weapon_medigun_damage_modifier           : 1.5      : , "sv", "cheat", "rep", "launcher" : Scales the damage a player does while being healed with the medigun.
 weapon_medigun_resist_num_chunks         : 4        : , "sv", "cheat", "rep", "launcher" : How many uber bar chunks the vaccinator has.
+weapon_vaccinator_resist_duration        : 3        : , "sv", "cheat", "rep", "launcher" : Amount of time it takes the a full charge of the vaccinator to be released.
 --------------
-424 total convars/concommands
+425 total convars/concommands
 ```
