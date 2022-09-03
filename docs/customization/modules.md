@@ -108,12 +108,11 @@ Controls how big packets are and how they are split up/compressed.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`packet_size=speed`** (all presets).
+Default setting: **`packet_size=large`** (all presets).
 
 * **`packet_size=small`**: Uses the smallest packet size, that will most likely be processed by even the worst routers.
 * **`packet_size=conservative`**: Uses a smaller, safe packet size that will most likely be processed by most routers, even lower end ones.
-* **`packet_size=saver`**: This minimizes data usage by aggressively compressing packets and avoiding splitting packets (which have more data size overhead than a single packet).
-* **`packet_size=speed`**: This prioritizes less CPU usage over data usage by disabling packet compression and avoiding split packets.
+* **`packet_size=large`**: Uses the max recommended packet size by Steam to avoid split packets.
 
 ### Bandwidth
 
@@ -185,8 +184,8 @@ Default setting: based on which preset you are currently using.
 * **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
 * **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting.
 * **`lighting=high`**: 6 dynamic lights. Detailed lighting.
-* **`lighting=very_high`**: 12 dynamic lights. Detailed lighting. Slight extra lighting brightness boost.
-* **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting. Extra lighting brightness boost.
+* **`lighting=very_high`**: 12 dynamic lights. Detailed lighting.
+* **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting.
 
 ### Lighting Ex
 
@@ -332,20 +331,23 @@ Default setting: **`motion_blur=off`** (all presets).
 
 ### Anti-Aliasing
 
-Controls additional anti-aliasing passes (a.k.a. [alpha to coverage](https://en.wikipedia.org/wiki/Alpha_to_coverage)) and the main hardware based MSAA anti-aliasing.
+Controls MSAA anti-aliasing.
 
 !!! warning
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
+
+!!! warning
+    On Windows, enabling MSAA may increase input latency on non-exclusive fullscreen modes.
 
 * **CPU usage:** none
 * **GPU usage:** medium
 
 Default setting: based on which preset you are currently using.
 
-* **`anti_aliasing=off`**: Turns off all forms of anti-aliasing.
-* **`anti_aliasing=msaa_2x`**: Enables alpha to coverage and MSAA 2x.
-* **`anti_aliasing=msaa_4x`**: Enables alpha to coverage and MSAA 4x.
-* **`anti_aliasing=msaa_8x`**: Enables alpha to coverage and MSAA 8x.
+* **`anti_aliasing=off`**: Turns off anti-aliasing.
+* **`anti_aliasing=msaa_2x`**: Enables MSAA 2x.
+* **`anti_aliasing=msaa_4x`**: Enables MSAA 4x.
+* **`anti_aliasing=msaa_8x`**: Enables MSAA 8x.
 
 ### Texture Filtering
 

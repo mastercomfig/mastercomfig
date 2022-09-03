@@ -10,7 +10,7 @@
     "default": "auto"
   },
   "packet_size": {
-    "default": "speed"
+    "default": "large"
   },
   "bandwidth": {
     "default": "1.0Mbps"
@@ -115,7 +115,6 @@
   "texture_filter": {
     "default": "trilinear",
     "very-low": "bilinear",
-    "low": "bilinear",
     "medium-high": "aniso4x",
     "high": "aniso8x",
     "ultra": "aniso16x",
@@ -202,8 +201,8 @@
     "none": ""
   },
   "textures": {
-    "default": "very_low",
-    "medium-low": "low",
+    "default": "low",
+    "very-low": "very_low",
     "medium": "medium",
     "medium-high": "high",
     "high": "very_high",

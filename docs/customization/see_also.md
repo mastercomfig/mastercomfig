@@ -18,15 +18,6 @@ Here are a few awesome TF2 modifications:
 * [No-Hats-Mod bgum](https://github.com/Fedora31/no-hats-bgum)
   — Removes cosmetics like hats, botkillers, skins, and much more
 
-* [Less distracting explosions](https://gamebanana.com/mods/12444)
-  — Get cleaner particles for explosions
-
-* [No muzzle flashes](https://github.com/nermur/no-muzzleflashes)
-  — Removes muzzleflash sprites and particles from all weapons, and from sentry guns (if preferred)
-
-* [VTF Crosshair Pack](https://www.teamfortress.tv/35367/vtf-crosshair-pack)
-  — New custom crosshairs
-
 * [Steam Priority Launcher](https://github.com/Leo40Git/SteamPriorityLauncher)
   — A launcher for launching Steam games, such as TF2, with different priorities
 
@@ -44,13 +35,13 @@ Here are a few awesome TF2 modifications:
   — Makes viewmodels translucent
 
 * [Common scripts/binds](https://www.reddit.com/r/tf2scripthelp/wiki/commonscripts)
-  — Some common and useful scripts/binds, like the null-canceling movement script
+  — Some common and useful scripts/binds
 
 * [Static Ambassador Crosshair](https://github.com/juniorsgithub/tf2-static-ambassador-crosshair)
   — Replaces the dynamic crosshair resize of the Ambassador inaccuracy indicator with a static crosshair
 
 * [Loadouts Script](https://github.com/juniorsgithub/tf2-loadouts-script)
-  — An "advanced" TF2 loadouts and resupply script
+  — An advanced TF2 loadouts and resupply script
 
 * [TF2 Domination Remover](https://gamebanana.com/mods/36617)
   — Removes all things related to Domination in TF2, like Domination sounds and the Revenge icon above the head
