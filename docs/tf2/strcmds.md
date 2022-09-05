@@ -23,22 +23,24 @@ There are a few types of client string commands:
 
 ## List of client string commands
 
-* `killtarget`
-* `demorestart`
-* `fade`
-* `te`
-* `voicemenu`
-* `vban`
-* `VModEnable`
-* `tournament_readystate`
-* `tournament_teamname`
-* `tournament_player_readystate`
-* `objcmd`
-* `nextmap`
-* `timeleft`
-* `ignoremsg`
-* `addcond`
-* `removecond`
+* `killtarget`: destroys an entity target by name/classname or uses picker. Only works with `developer 1` and `sv_cheats 1` and when executed as the server host.
+* `demorestart`: requests a full update packet from the server
+* `fade`: fades the screen to a black tint
+* `te`: spawns a test temp ent. Requires `sv_cheats 1`.
+* `voicemenu`: plays a voice command by menu and item index
+* `vban`: an internal command for sending a mask for telling the server what voice data from players to ignore due to muted status.
+* `VModEnable`: tells the server to not send voice data (`0`) or to send voice data (`1`). Used to communicate the status of `voice_modenable`.
+* `vehicleRole`: switches vehicle role index while in a vehicle.
+* `Vote`: internal command for casting votes.
+* `playerperf`
+* `tournament_readystate`: set a team as ready.
+* `tournament_teamname`: set the team name.
+* `tournament_player_readystate`: set yourself as ready.
+* `nextmap`: tells you the next map.
+* `timeleft`: tells you the time left for the map.
+* `ignoremsg`: says what chat messages to ignore. cycles between ignore none, ignore all and ignore team.
+* `addcond`: adds player condition by ID.
+* `removecond`: removes player condition by ID.
 * `jointeam`
 * `jointeam_nomenus`
 * `closedwelcomemenu`
@@ -66,23 +68,19 @@ There are a few types of client string commands:
 * `spec_next`
 * `spec_prev`
 * `spec_mode`
+* `spec_goto`
+* `spectate`: enters spectator mode
 * `showroundinfo`
 * `autoteam`
 * `coach_command`
 * `boo`
-* `loot_response`
-* `done_viewing_loot`
-* `spectate`
+* `loot_response`: plays voice line for getting loot in MvM game end. args: `common`, `rare`, `ultra_rare`.
+* `done_viewing_loot`: finishes viewing loot in MvM
 * `team_ui_setup`
 * `next_map_vote`
 
 ## Server string commands
 
-This process occurs when the server wants to control the client through some process.
+This process occurs when the server wants the client to run a command which is flagged by `server_can_execute`.
 
-You can use the `clientcmd` command to send these commands
-
-## List of server string commands
-
-* `room_type`
-* `dsp_player`
+You can use the `clientcmd` command or a `point_clientcommand` entity to send these commands.
