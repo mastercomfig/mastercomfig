@@ -8,36 +8,36 @@ description: Obtén respuestas a preguntas frecuentes sobre mastercomfig.
 
 Algunas personas a menudo se frustan al inicio con mastercomfig, ya que no funciona como una config tradicional, y cuando intentas usarlo como uno, encontrarás algunos problemas.
 
-En general, piensa en mastercomfig como «capas» en lugar de cosas que debes editar directamenter. Editas cosas sustituyendo cosas en tu «capa» <!-- user overrides "layer". --> Tu capa de usuario consiste de una capa de módulos de usuario, capa de autoexec, capa de Your user layer consists of a user modules layer, autoexec layer, game overrides layer, and class config layer. Modules override mastercomfig/preset modules layer. Autoexec layer overrides mastercomfig/addons layer. Game overrides layer overrides mastercomfig game overrides (run on game join/every time you change class), and per-class networking settings, for all classes. Class config layer overrides mastercomfig game overrides (class configs run after game overrides) and per-class networking settings, for a single class.
+En general, piensa en mastercomfig como «capas» en lugar de cosas que debes editar directamenter. Editas cosas sustituyendo cosas en tu «capa» de sobreescritura (o «override») de usuario. Tu capa de usuario consiste de una capa de módulos de usuario, capa de autoexec, capa de override del juego y capa de config de clase. Los módulos sobreescriben la capa de módulos de mastercomfig/preset. La capa de autoexec sobreescribe la capa de mastercomfig/addons. La capa de override  del juego sobreescribe los overrides de juego de mastercomfig (se ejecutan al unirse a una partida/cada vez que cambias de clase) y las configuraciones de red por clase, para todas las clases. La capa de config de clase sobreescribe los overrides del juego de mastercomfig (los configs de clase se ejecutan luego de los overrides del juego) y las configuraciones de red por clase, para una sola clase.
 
 This layered approach means that the config's settings are more managed (that is most things are done for you, with you changing a few things based on your own preference, so that settings don't conflict for best possible stability and performance), and contained (you can easily drop in a new version of mastercomfig, and your layers will remain in your overrides folder, so you don't have to re-edit anything whenever you change a version). See the next few questions for more details.
 
 With this approach, you'll find yourself reading documentation more rather than digging through config files, checking to see how you can do something or change a setting when you encounter something you'd like changed. However, the GitHub source is a good reference for some things. For example, you can see the many comments within the main [comfig.cfg](https://github.com/mastercomfig/mastercomfig/blob/release/config/mastercomfig/cfg/comfig/comfig.cfg) for information about settings within mastercomfig, as well as how to override individual things at a finer level than with modules. But be careful about compatibility conflicts between different console variables in this case! You can see what modules are used [in your preset](https://github.com/mastercomfig/mastercomfig/tree/release/config/cfg/presets) so you only override modules that you need.
 
-## Why does mastercomfig use a VPK?
+## ¿Porqué mastercomfig usa un VPK?
 
-mastercomfig is not just a configuration file like older FPS configs which only use autoexec.cfg.
-It is a complete performance and customization scripting mod which requires many custom files to work.
+mastercomfig no es solo un archivo de configuración como configs de FPS antiguos los cuales solo usan autoexec.cfg.
+Es un mod de scripting de rendimiento y personalización completo el cual requiere varios archivos personalizados para funcionar.
 
-**Here are some of the features that mastercomfig gains, by being a mod rather a configuration file:**
+**Aquí hay algunos de las características que mastercomfig obtiene al ser un mod en lugar de un archivo de configuración:**
 
-* dxsupport overrides, which unlocks `r_drawropes`, `fx_drawimpactdebris`, `fx_drawimpactdust`, `fx_drawimpactspark`, `tf_impactwatertimeenable`, `dsp_off`, `cl_particle_retire_cost` and `mat_slopescaledepthbias_decal`
+* Sobreescritura de dxsupport, lo cual desbloquea `r_drawropes`, `fx_drawimpactdebris`, `fx_drawimpactdust`, `fx_drawimpactspark`, `tf_impactwatertimeenable`, `dsp_off`, `cl_particle_retire_cost` y `mat_slopescaledepthbias_decal`
 
-  * These allow for performance improvements for ropes, particles, sound, and fixing a bug where 1 decal still appears even if decals are disabled
+  * Estos permiten mejoras de rendimiento para cuerdas, partículas, sonido, y corregir un error donde 1 calco<!-- nombre oficial en el juego --> aún aparece incluso si los calcos están desactivados.
 
-* [Class spawn scripts](#why-does-mastercomfig-override-my-class-configs), which allow for scripts to be run periodically during a match
+* [Scripts de regeneración de clase](#why-does-mastercomfig-override-my-class-configs), los cuales permiten que se ejecuten scripts periódicamente durante una partida.
 
-* Modular design which allows for an extensive user overrides system (modules, addons, configs), rather than having to redo edits every time mastercomfig updates and not know what edits you made from the base config
+* Diseño modular, el cual permite un sistema de overrides de usuario extensivo (módulos, addons, configs), en lugar de tener que rehacer cambios cada vez que mastercomfig se actualizad y no saber qué cambios hiciste al config base.
 
-* `mm_override` script, which fixes crashes while loading for Competitive matchmaking
+* Script `mm_override`, el cual permite corregir cuelgues al cargar para matchmaking de Competitivo.
 
-* Optimized preload configuration, which improves memory usage and load times
+* Configuración de precarga optimizado, el cual mejora el uso de memoria y tiempos de carga
 
-* No messy cloud sync or config saving propagation which happens in the `cfg` folder
+* No sincronización desordenada con la nube o propagación de guardado de config los cuales ocurren en la carpeta `cfg`.
 
-Now, this only explains why mastercomfig is a mod, which can also be a folder, rather than explaining why mastercomfig is a VPK.
+Ahora, esto solo explica porqué mastercomfig es un mod, el cual también puede ser una carpeta, en lugar de porqué mastercomfig es un VPK.
 
-**mastercomfig is specifically a VPK because:**
+**mastercomfig es específicamente un VPK porque:**
 
 * Encourages people to use the modular customization system in mastercomfig, which does not require manual intervention every update to redo custom settings
 * Easy distribution, and drag and drop into the custom folder, and recommended by Valve:
