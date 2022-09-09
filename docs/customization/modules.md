@@ -337,6 +337,9 @@ Controls MSAA anti-aliasing.
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
 
 !!! warning
+    On Linux, enabling may cause rendering errors with Wayland.
+
+!!! warning
     On Windows, enabling MSAA may increase input latency on non-exclusive fullscreen modes.
 
 * **CPU usage:** none
