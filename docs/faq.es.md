@@ -31,7 +31,7 @@ Es un mod de scripting de rendimiento y personalización completo el cual requie
 
 * Script `mm_override`, el cual permite corregir cuelgues al cargar para matchmaking de Competitivo.
 
-* Configuración de precarga optimizado, el cual mejora el uso de memoria y tiempos de carga
+* Configuración de precarga optimizado, el cual mejora el uso de memoria y tiempos de carga.
 
 * No sincronización desordenada con la nube o propagación de guardado de config los cuales ocurren en la carpeta `cfg`.
 
@@ -77,30 +77,30 @@ Ahora, esto solo explica porqué mastercomfig es un mod, el cual también puede 
 
 ## ¿Porqué mastercomfig sobreescribe mis configs de clase?
 
-You can easily move your class configs by creating a new overrides folder next to your class configs, and then dragging them all into that new overrides folder.
+Puedes mover fácilmente tus configs de clase creando una nueva carpeta llamada «overrides» junto a tus configs de clase, y luego arrastrarlos a dicha nueva carpeta.
 
-mastercomfig has class configs due to a bug/missing feature in Team Fortress 2, which does not allow for `game.cfg` to be executed on clients upon joining a game.
+mastercomfig tiene configs de clase debido a un error o característica faltante en Team Fortress 2, el cual no permite que `game.cfg` se ejecute en clientes al iniciar un juego.
 
-Class configs are also a reliable way to periodically run some commands during a match, which can be used to fix memory leaks.
+Los configs de clase son también una manera confiable de ejecutar periódicamente algunos comandos durante una partida, lo cual se puede usar para corregir fugas de memoria.
 
 **En lugar de ello, mastercomfig usa los configs de clase para:**
 
-* Class specific network setting aliases (`net_hitscan`, `net_projectiles`, `net_spy`) for customization
-* `overrides/game_overrides.cfg` script for global class settings
-* `game_overrides_once_c` alias for running a script only once per game session
-* Fixing [a networking issue](https://github.com/ValveSoftware/Source-1-Games/issues/2618) with bumper cars
-* Overriding map specific detail prop, water fade distances, and sound channel mode
-* Fixing the freezecam sound effect getting stuck sometimes
-* Clearing all decals, including permanent ones inaccessible by other commands
-* Fixing client desync bugs periodically without interrupting demos
-* Improving load times after first map load
-* Fixing cases where animation and model mods can stop working after many server loads
-* Fixing issues where animation and models mods could be reset
+* Aliases de configuración de red específica de clase (`net_hitscan`, `net_projectiles`, `net_spy`) para personalización.
+* Script `overrides/game_overrides.cfg` para configuraciones de clase globales.
+* Alias `game_overrides_once_c` para ejecutar un script solo una vez por sesión de juego.
+* Corregir [un problema de red](https://github.com/ValveSoftware/Source-1-Games/issues/2618) con autos de choque.
+* Sobreescribir prop de detalle específico de mapa, distancias de desvanecimiento de agua, y modo de canal de sonido.
+* Corregir el efecto de sonido de la cámara de muerte que se congela<!-- chequear esto --> a veces.
+* Limpiar todos los calcos, incluyendo los permanentes, inaccesibles mediante otros comandos.
+* Corregir errores de desincronización del cliente periódicamente sin interrumpir demos.
+* Mejorar los tiempos de carga luego de la carga de la primera carga de mapa.
+* Corregir casos donde mods de animaciones y modelos pueden parar de funcionar luego de varias cargas de servidores.
+* Corregir problemas donde mods de animaciones y modelos podrían reiniciarse.
 
 **mastercomfig sobreescribe los configs de clase porque:**
 
-* Every path in the game can only have one file associated with it, due to how Source handles mods
-* Drag and drop installation, especially for those who do not want to mess with configs
+* Cada ruta en el juego solo puede tener un archivo asociado a él, debido a cómo Source maneja los mods.
+* Instalación de arrastrar y soltar, especialmente para aquellos que no quieren meterse con configs.
 
 ## ¿Cómo puedo ayudar con mastercomfig?
 
