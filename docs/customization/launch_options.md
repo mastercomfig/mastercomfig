@@ -86,3 +86,13 @@ These launch options do not need to be used by the vast majority of users, but t
 * **-nouserclip** : uses software clipping instead of hardware user clip planes, FPS increase or decrease depends on your CPU+GPU and graphics API
 * **-nosound** : disables sound
 * **-small** : allows for resolutions smaller than 640x480
+
+In conjunction with `-small`, or for setting custom resolution options in general which are not available in the Resolution Video Options, you can use the following options:
+
+* **-w** : Sets the width of the game
+* **-h** : Sets the height of the game
+
+Some good values include:
+
+* `-w 1024 -h 576` : Next lowest 16:9 resolution beyond available resolution options
+* `-w 896 -h 504` : Lowest possible 16:9 resolution while preserving all HUD elements
