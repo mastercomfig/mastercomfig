@@ -56,6 +56,9 @@ The automatic Steam runtime host library pinning is not enough to use native lib
 An example of a library that benefits greatly from this approach is SDL2. To use a native version of SDL2, go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0` (this will cause TF2 to fallback to the Steam Linux Runtime).
 Then, install a 32-bit version of SDL2 and pin the library to the runtime using one of these commands, depending on your distribution:
 
+!!! warning
+    When using Wayland, ```SDL_VIDEODRIVER=x11 %command%``` will need to be prepended to your launch options to avoid rendering issues
+
 Debian/Ubuntu-based distributions:
 ```sh
 sudo apt install libsdl2-2.0-0:i386
