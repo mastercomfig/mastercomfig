@@ -1,5 +1,5 @@
 git+https://github.com/jimporter/mike.git@master#egg=mike
-mkdocs-static-i18n
+git+https://github.com/ultrabug/mkdocs-static-i18n.git@optimzed_search_dedup#egg=mkdocs-static-i18n
 mkdocs-material
 mkdocs-minify-plugin
 mkdocs-redirects
