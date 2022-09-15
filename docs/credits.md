@@ -9,7 +9,7 @@ description: All the help and inspiration that has helped mastercomfig be even b
 mastercomfig could not be where it is today without the use of many valuable community projects:
 
 * [Game Tracking for TF2](https://github.com/SteamDatabase/GameTracking-TF2) and other tools by SteamDB, which the app uses to source various TF2 data
-* Null-canceling movement script by povohat, which is used in respective mastercomfig addon
+* Null-canceling movement script by povohat, which is used in the respective mastercomfig addon
 * [SourceMod](https://www.sourcemod.net/credits.php), for providing access into game internals used for research
 * [sm_cvarlist](https://forums.alliedmods.net/showthread.php?p=1298262) by step, for finding hidden console variables
 * [GetLaunchOptions.bat](https://pastebin.com/bhQrywES) by AveYo, for facilitating research into Windows launch options

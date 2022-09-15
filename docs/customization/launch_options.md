@@ -86,3 +86,18 @@ These launch options do not need to be used by the vast majority of users, but t
 * **-nouserclip** : uses software clipping instead of hardware user clip planes, FPS increase or decrease depends on your CPU+GPU and graphics API
 * **-nosound** : disables sound
 * **-small** : allows for resolutions smaller than 640x480
+
+In conjunction with `-small`, or for setting custom resolution options in general which are not available in the Resolution Video Options, you can use the following options:
+
+* **-w** : Sets the width of the game
+* **-h** : Sets the height of the game
+
+It's generally recommended that you use the video options instead of these launch options, but some smaller resolutions are not available when greater performance is needed. This is often required for extremely lowend computers with extremely old graphics cards or integrated graphics. Some good values include:
+
+* `-w 1024 -h 576` : Next lowest 16:9 resolution beyond available resolution options
+* `-w 896 -h 504` : Lowest possible 16:9 resolution while preserving all HUD elements
+* `-small -w 768 -h 432` : Small resolution, hides chat messages
+* `-small -w 640 -h 360` : Smaller resolution, hides chat messages
+* `-small -w 384 -h 216` : Lowest possible resolution, hides chat messages
+
+You can still use chat even while it is hidden at smaller resolutions, so you may want to use the `messages=off` module level for it to work optimally.

@@ -337,6 +337,9 @@ Controls MSAA anti-aliasing.
     On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
 
 !!! warning
+    On Linux, enabling may cause rendering errors with Wayland.
+
+!!! warning
     On Windows, enabling MSAA may increase input latency on non-exclusive fullscreen modes.
 
 * **CPU usage:** none
@@ -894,24 +897,6 @@ Default setting: **`party_mode=request`** (all presets).
 * **`party_mode=open`**: Open party (people can join anytime).
 * **`party_mode=request`**: Request-only party (people can only join if you accept their request or if you invite them).
 * **`party_mode=invite`**: Invite-only party (people can only join if you invite them).
-
-### Ping Tolerance (Matchmaking)
-
-Controls the maximum ping you want to play with when searching for matchmaking servers (Casual/Competitive).
-
-* **CPU usage:** none
-* **GPU usage:** none
-
-Default setting: **`ping_tolerance=50`** (all presets).
-
-* **`ping_tolerance=off`**: Disables custom ping tolerance.
-* **`ping_tolerance=25`**: Sets ping tolerance to 25.
-* **`ping_tolerance=50`**: Sets ping tolerance to 50.
-* **`ping_tolerance=60`**: Sets ping tolerance to 60.
-* **`ping_tolerance=70`**: Sets ping tolerance to 70.
-* **`ping_tolerance=80`**: Sets ping tolerance to 80.
-* **`ping_tolerance=90`**: Sets ping tolerance to 90.
-* **`ping_tolerance=100`**: Sets ping tolerance to 100.
 
 ### Logo
 

@@ -20,7 +20,7 @@ for F in ../../config/cfg/presets/*; do
         printf "preset=%s;" "${P}"
         printf "exec overrides/pre_comfig.cfg;"
         printf "exec comfig/comfig.cfg;"
-        printf "exec overrides/post_comfig.cfg;"
+        printf "exec overrides/setup_hook.cfg;"
         printf "preset;"
         printf "exec comfig/addons.cfg;"
         printf "modules_c;"
