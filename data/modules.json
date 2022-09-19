@@ -81,10 +81,6 @@
         "description": "Filters what custom content is allowed to be downloaded from the server.",
         "values": [
           {
-            "value": "custom",
-            "display": "Custom (use game settings)"
-          },
-          {
             "value": "all"
           },
           {
@@ -97,6 +93,10 @@
           },
           {
             "value": "nothing"
+          },
+          {
+            "value": "custom",
+            "display": "Custom (use game settings)"
           }
         ]
       }
@@ -674,10 +674,6 @@
         "display": "Contracts",
         "values": [
           {
-            "value": "custom",
-            "display": "Custom (use game settings)"
-          },
-          {
             "value": "hide",
             "display": "Hide contracts"
           },
@@ -688,6 +684,10 @@
           {
             "value": "active",
             "display": "Only show active contracts"
+          },
+          {
+            "value": "custom",
+            "display": "Custom (use game settings)"
           }
         ]
       },
