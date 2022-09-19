@@ -45,6 +45,7 @@ nav:
     - Hidden Console Variables: tf2/hiddencvars.md
     - Launch Options - Windows: tf2/launchopts_win.md
     - Launch Options - Linux: tf2/launchopts_linux.md
+    - String Commands: tf2/strcmds.md
     - Silly Launch Options: tf2/silly_launch_options.md
   - Other Games:
     - Other Games: other/README.md
