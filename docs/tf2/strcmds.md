@@ -74,7 +74,7 @@ There are a few types of client string commands:
 * `loot_response`: plays voice line for getting loot in MvM game end. args: `common`, `rare`, `ultra_rare`.
 * `done_viewing_loot`: finishes viewing loot in MvM
 * `team_ui_setup`: shows team select
-* `next_map_vote`: internal command for choosing between map selections.
+* `next_map_vote`: command for choosing between map selections in Casual, 0, 1 or 2.
 
 ## Server string commands
 
