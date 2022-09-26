@@ -87,6 +87,8 @@ These launch options do not need to be used by the vast majority of users, but t
 * **-nosound** : disables sound
 * **-small** : allows for resolutions smaller than 640x480
 
+### Small resolutions
+
 In conjunction with `-small`, or for setting custom resolution options in general which are not available in the Resolution Video Options, you can use the following options:
 
 * **-w** : Sets the width of the game
