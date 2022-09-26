@@ -6,3 +6,5 @@ mkdocs-redirects
 mkdocs-macros-plugin
 mkdocs-git-committers-plugin-2
 mkdocs-git-revision-date-localized-plugin
+pillow
+cairosvg
