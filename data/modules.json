@@ -79,7 +79,7 @@
         "description": "Filters what custom content is allowed to be downloaded from the server.",
         "values": [
           {
-            "value": "auto",
+            "value": "custom",
             "display": "Use game settings"
           },
           {
@@ -672,7 +672,7 @@
         "display": "Contracts",
         "values": [
           {
-            "value": "auto",
+            "value": "custom",
             "display": "Use game settings"
           },
           {
