@@ -1,0 +1,16 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: document-domain=()
+  Content-Security-Policy: script-src 'unsafe-inline' 'self' https://static.cloudflareinsights.com; frame-ancestors 'none';
+  Cache-Control: public, no-cache
+
+/:version/assets/stylesheets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/:version/assets/javascripts/bundle*
+  Cache-Control: public, max-age=31536000, immutable
+
+/:version/assets/javascripts/workers/*
+  Cache-Control: public, max-age=31536000, immutable
