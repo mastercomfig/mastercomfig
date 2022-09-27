@@ -14,3 +14,12 @@
 
 /:version/assets/javascripts/workers/*
   Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: max-age=2419200, must-revalidate, stale-while-revalidate=86400
+
+/*.jpg
+  Cache-Control: max-age=2419200, must-revalidate, stale-while-revalidate=86400
+
+/*.ico
+  Cache-Control: max-age=2419200, must-revalidate, stale-while-revalidate=86400
