@@ -1,15 +1,15 @@
 {
-  "name": "mastercomfig-tools",
+  "name": "mastercomfig-docs-tools",
   "version": "1.0.0",
-  "description": "mastercomfig JS tooling",
+  "description": "mastercomfig JS tooling for docs",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "lint": "remark .",
-    "checklinks": "remark . --use remark-lint-no-dead-urls",
-    "prose": "remark . --use remark-lint-write-good"
+    "lint": "cd .. && remark .",
+    "checklinks": "cd .. && remark . --use remark-lint-no-dead-urls",
+    "prose": "cd .. && remark . --use remark-lint-write-good"
   },
   "repository": {
     "type": "git",
