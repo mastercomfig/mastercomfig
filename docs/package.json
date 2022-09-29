@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "lint": "cd .. && remark .",
-    "checklinks": "cd .. && remark . --use remark-lint-no-dead-urls",
-    "prose": "cd .. && remark . --use remark-lint-write-good"
+    "lint": "remark ..",
+    "checklinks": "remark .. --use remark-lint-no-dead-urls",
+    "prose": "remark .. --use remark-lint-write-good"
   },
   "repository": {
     "type": "git",
