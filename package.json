@@ -1,5 +1,5 @@
-{
-  "name": "mastercomfig-docs-tools",
+                                                {
+  "name": "mastercomfig-docs",
   "version": "1.0.0",
   "description": "mastercomfig JS tooling for docs",
   "main": "index.js",
@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "lint": "remark ..",
-    "checklinks": "remark .. --use remark-lint-no-dead-urls",
-    "prose": "remark .. --use remark-lint-write-good"
+    "lint": "remark .",
+    "checklinks": "remark . --use remark-lint-no-dead-urls",
+    "prose": "remark . --use remark-lint-write-good"
   },
   "repository": {
     "type": "git",

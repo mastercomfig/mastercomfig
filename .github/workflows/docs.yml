@@ -32,7 +32,6 @@ jobs:
         version: 7
     - name: Lint Docs
       run: |
-        cd docs
         pnpm i
         pnpm lint
     - name: Update pip
