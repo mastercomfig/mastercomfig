@@ -31,7 +31,7 @@ jobs:
         } > dev/info.txt
     - name: Commit release info
       run: |
-        git config user.email "mastercoms@tuta.io"
+        git config user.email "support@mastercomfig.com"
         git config user.name "mastercoms"
         git commit -am "release ${{ github.event.inputs.version }}" || true
     - name: Switch to release

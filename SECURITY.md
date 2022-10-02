@@ -10,7 +10,7 @@
 ## Reporting a Vulnerability
 
 If you find a security vulnerability in the mastercomfig app, execution of mastercomfig,
-or something else, contact mastercoms through email directly: [mastercoms@tuta.io](mailto:mastercoms@tuta.io).
+or something else, contact mastercoms through email directly: [support@mastercomfig.com](mailto:support@mastercomfig.com).
 
 If you have a solution for the issue, attach it as a patch file to the email.
 

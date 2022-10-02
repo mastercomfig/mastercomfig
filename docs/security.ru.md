@@ -14,7 +14,7 @@ description: Политика безопасности mastercomfig.
 ## Сообщение об уязвимости
 
 Если вы обнаружите уязвимость безопасности в приложении mastercomfig, при выполнении mastercomfig,
-или что-то еще, свяжитесь с mastercoms по электронной почте напрямую: [mastercoms@tuta.io](mailto:mastercoms@tuta.io).
+или что-то еще, свяжитесь с mastercoms по электронной почте напрямую: [support@mastercomfig.com](mailto:support@mastercomfig.com).
 
 Если у вас есть решение проблемы, прикрепите его в виде файла исправления к электронному письму.
 

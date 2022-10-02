@@ -19,7 +19,7 @@ to suit your needs and improve mastercomfig for everyone!
 mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
 [Reddit](https://www.reddit.com/user/mastercoms) or by email at
-[mastercoms@tuta.io](mailto:mastercoms@tuta.io). I'd be happy to chat about any problems or
+[support@mastercomfig.com](mailto:support@mastercomfig.com). I'd be happy to chat about any problems or
 suggestions you have for mastercomfig.
 
 ## Docs
