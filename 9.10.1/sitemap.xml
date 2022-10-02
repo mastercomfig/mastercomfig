@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
          <loc>https://docs.mastercomfig.com/latest/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/"/>
@@ -14,7 +14,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/benchmarks/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/benchmarks/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/benchmarks/"/>
@@ -26,7 +26,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/contributing/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/contributing/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/contributing/"/>
@@ -38,7 +38,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/credits/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/credits/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/credits/"/>
@@ -50,7 +50,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/faq/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/faq/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/faq/"/>
@@ -62,7 +62,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/features/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/features/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/features/"/>
@@ -74,7 +74,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/help/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/help/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/help/"/>
@@ -86,7 +86,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/screenshots/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/screenshots/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/screenshots/"/>
@@ -98,7 +98,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/security/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/security/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/security/"/>
@@ -110,7 +110,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/support_me/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/support_me/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/support_me/"/>
@@ -122,7 +122,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/customization/custom_config_list/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/custom_config_list/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/custom_config_list/"/>
@@ -134,7 +134,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/customization/custom_configs/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/custom_configs/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/custom_configs/"/>
@@ -146,7 +146,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/customization/launch_options/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/launch_options/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/launch_options/"/>
@@ -158,7 +158,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/customization/modules/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/modules/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/modules/"/>
@@ -170,7 +170,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/customization/see_also/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/customization/see_also/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/customization/see_also/"/>
@@ -182,7 +182,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/next_steps/quick_fixes/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/next_steps/quick_fixes/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/next_steps/quick_fixes/"/>
@@ -194,7 +194,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/next_steps/update/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/next_steps/update/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/next_steps/update/"/>
@@ -206,7 +206,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/os/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/os/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/os/"/>
@@ -218,7 +218,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/os/linux/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/os/linux/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/os/linux/"/>
@@ -230,7 +230,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/os/windows/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/os/windows/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/os/windows/"/>
@@ -242,7 +242,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/other/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/other/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/other/"/>
@@ -254,7 +254,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/other/egs/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/other/egs/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/other/egs/"/>
@@ -266,7 +266,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/setup/clean_up/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/setup/clean_up/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/setup/clean_up/"/>
@@ -278,7 +278,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/setup/install/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/setup/install/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/setup/install/"/>
@@ -290,7 +290,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/"/>
@@ -302,7 +302,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/cvarlist_linux/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/cvarlist_linux/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/cvarlist_linux/"/>
@@ -314,7 +314,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/cvarlist_win/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/cvarlist_win/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/cvarlist_win/"/>
@@ -326,7 +326,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/hiddencvars/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/hiddencvars/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/hiddencvars/"/>
@@ -338,7 +338,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/launchopts_linux/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/launchopts_linux/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/launchopts_linux/"/>
@@ -350,7 +350,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/launchopts_win/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/launchopts_win/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/launchopts_win/"/>
@@ -362,7 +362,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/misconceptions/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/misconceptions/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/misconceptions/"/>
@@ -374,7 +374,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/silly_launch_options/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/silly_launch_options/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/silly_launch_options/"/>
@@ -386,7 +386,7 @@
     </url>
     <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/strcmds/</loc>
-         <lastmod>2022-09-27</lastmod>
+         <lastmod>2022-10-02</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/strcmds/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/strcmds/"/>
