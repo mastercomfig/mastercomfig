@@ -13,7 +13,7 @@ Here are a few awesome TF2 modifications:
   — First person animation mods which greatly enhance the animations
     
     - [Kilul Animation packs](https://gamebanana.com/members/1655507)
-      — An another set of great first-person animation mods. Can be paired well with other Paysus Animation Overhauls for other classes.
+      — Another set of great first-person animation mods. Can be paired well with other Paysus Animation Overhauls for other classes.
       
 * [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases/latest)
   — Fixes issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons
@@ -35,7 +35,7 @@ Here are a few awesome TF2 modifications:
   — Automatically detects and votekicks cheaters/bots in TF2 casual
     
     - [TF2 Bot kicker gui](https://github.com/Bash-09/tf2-bot-kicker-gui)
-      — An alternative program, written in Rush, cross-platform. Suitable for Linux users.
+      — A cross-platform alternative, written in Rust (suitable for Linux users)
 
 * [Transparent Viewmodels](https://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
   — Makes viewmodels translucent
