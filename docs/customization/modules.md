@@ -146,9 +146,9 @@ Filters what custom content is allowed to be downloaded from the server.
 * **CPU usage:** none
 * **GPU usage:** none
 
-Default setting: **`download=auto`** (all presets).
+Default setting: **`download=custom`** (all presets).
 
-* **`download=auto`**: Whatever the user set in the game settings.
+* **`download=custom`**: Whatever the user set in the game settings.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
@@ -672,9 +672,9 @@ Controls the Contracts HUD seen at the top right corner of the screen during gam
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`hud_contracts=auto`** (all presets, except Very Low).
+Default setting: **`hud_contracts=custom`** (all presets, except Very Low).
 
-* **`hud_contracts=auto`**: Whatever the user set in the game settings.
+* **`hud_contracts=custom`**: Whatever the user set in the game settings.
 * **`hud_contracts=hide`**: Hides the Contracts HUD.
 * **`hud_contracts=all`**: Shows all Contracts available.
 * **`hud_contracts=active`**: Only shows active Contracts.

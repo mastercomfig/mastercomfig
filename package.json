@@ -1,7 +1,7 @@
-{
-  "name": "mastercomfig-tools",
+                                                {
+  "name": "mastercomfig-docs",
   "version": "1.0.0",
-  "description": "mastercomfig JS tooling",
+  "description": "mastercomfig JS tooling for docs",
   "main": "index.js",
   "directories": {
     "doc": "docs"

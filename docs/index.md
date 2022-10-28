@@ -13,7 +13,7 @@
 
 Welcome to [mastercomfig](https://mastercomfig.com), a modern customization framework.
 
-mastercomfig is a modern customization framework, and aims to disable heavily unoptimized features and adjust other settings where it does not affect behavior or visuals noticeably. mastercomfig is documented extensively and also has advanced customization features so that you may adjust settings to your needs/preferences.
+mastercomfig aims to disable heavily unoptimized features and adjust other settings where it does not affect behavior or visuals noticeably. mastercomfig is documented extensively and also has advanced customization features so that you may adjust settings to your needs/preferences.
 
 You may find that mastercomfig makes TF2 a lot smoother, eliminates stuttering, reduces load times and increases FPS. This is because mastercomfig is heavily tuned and the commands and values are based on TF2's source code, rather than experiments, guesswork and trying to understand the vague/non-existent documentation.
 

@@ -16,7 +16,7 @@
     "default": "1.0Mbps"
   },
   "download": {
-    "default": "auto"
+    "default": "custom"
   },
   "lod": {
     "default": "low",
@@ -230,7 +230,7 @@
     "none": ""
   },
   "hud_contracts": {
-    "default": "auto",
+    "default": "custom",
     "very-low": "off"
   },
   "hud_panels": {
