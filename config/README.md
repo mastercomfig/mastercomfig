@@ -52,4 +52,4 @@ These are the main files that get executed and read by the engine for every pres
 
 ## templates folder
 
-This is where `.cfg` user override templates files are located. For instance, `modules.cfg` is there.
+This is where `.cfg` user override templates files are located.

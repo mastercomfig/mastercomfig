@@ -185,8 +185,7 @@ The first part of adding modules is a multi-step process in `config/mastercomfig
 
 If you are adding a new module, you will also need to add a new `module` entry in `config/mastercomfig/cfg/comfig/modules_run.cfg`
 
-You also have to add your new module or levels to `data/modules.json` for download site support
-and to `config/templates/modules/modules.cfg`.
+You also have to add your new module or levels to `data/modules.json` for app support.
 
 #### Texture preload list
 

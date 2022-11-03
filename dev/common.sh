@@ -39,7 +39,6 @@ function uploadAssets {
   done <   <(find . -name '*.vpk' -print0)
 
   uploadFileToGitHub "./template/template.zip" "overrides template"
-  uploadFileToGitHub "./comfig/modules_template.cfg" "modules template"
   uploadFileToGitHub "./comfig/autoexec_template.cfg" "overrides autoexec template"
   uploadFileToGitHub "./comfig/mastercomfig.zip" "mastercomfig zip package"
   uploadFileToGitHub "./comfig/autoexec.cfg" "full autoexec"
