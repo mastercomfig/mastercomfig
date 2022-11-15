@@ -28,6 +28,7 @@ nav:
     - Launch Options: customization/launch_options.md
     - Custom Configs: customization/custom_configs.md
     - Modules: customization/modules.md
+    - Addons: customization/addons.md
     - List of Custom Configs: customization/custom_config_list.md
     - See Also: customization/see_also.md
   - OS Optimizations:
