@@ -532,7 +532,7 @@ Default setting: based on which preset you are currently using.
 Controls how fast the animation is on the killstreak sheen glow for weapons.
 
 !!! note
-    Killstreak Sheens do not work in DirectX 8.
+    Killstreak Sheens do not work on DirectX 8.
 
 * **CPU usage:** none
 * **GPU usage:** none
