@@ -666,6 +666,7 @@ ent_absbox                               : cmd      :                  : Display
 ent_attachments                          : cmd      :                  : Displays the attachment points on an entity.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_autoaim                              : cmd      :                  : Displays the entity's autoaim radius.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_bbox                                 : cmd      :                  : Displays the movement bounding box for the given entity(ies) in orange.  Some entites will also display entity specific overlays.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
+ent_call                                 : cmd      :                  : ent_call <funcname> <option:entname> calls function on current look target or filtername, checks on ent, then root, then mode, then map scope
 ent_cancelpendingentfires                : cmd      :                  : Cancels all ent_fire created outputs that are currently waiting for their delay to expire.
 ent_create                               : cmd      :                  : Creates an entity of the given type where the player is looking.  Additional parameters can be passed in in the form: ent_create <entity name> <param 1 name> <param 1> <param 2 name> <param 2>...<param N name> <param N>
 ent_debugkeys                            : 0        : , "sv"           :
@@ -683,6 +684,7 @@ ent_rbox                                 : cmd      :                  : Display
 ent_remove                               : cmd      :                  : Removes the given entity(s)  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_remove_all                           : cmd      :                  : Removes all entities of the specified type  Arguments:    {entity_name} / {class_name}
 ent_rotate                               : cmd      :                  : Rotates an entity by a specified # of degrees
+ent_script_dump                          : cmd      :                  : Dumps the names and values of this entity's script scope to the console  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_setname                              : cmd      :                  : Sets the targetname of the given entity(s)  Arguments:    {new entity name} {entity_name} / {class_name} / no argument picks what player is looking at
 ent_show_response_criteria               : cmd      :                  : Print, to the console, an entity's current criteria set used to select responses.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_step                                 : cmd      :                  : When 'ent_pause' is set this will step through one waiting input / output message at a time.
@@ -1694,6 +1696,8 @@ plugin_print                             : cmd      :                  : Prints 
 plugin_unload                            : cmd      :                  : plugin_unload <index> : unloads a plugin
 plugin_unpause                           : cmd      :                  : plugin_unpause <index> : unpauses a disabled plugin
 plugin_unpause_all                       : cmd      :                  : unpauses all disabled plugins
+pointworldtext_rainbowspeed_char         : 15       : , "cl"           :
+pointworldtext_rainbowspeed_time         : 100      : , "cl"           :
 +posedebug                               : cmd      :                  : Turn on pose debugger or add ents to pose debugger UI
 -posedebug                               : cmd      :                  : Turn off pose debugger or hide ents from pose debugger UI
 print_colorcorrection                    : cmd      :                  : Display the color correction layer information.
@@ -2175,6 +2179,33 @@ scene_showunlock                         : 0        : , "a", "sv"      : Show wh
 -score                                   : cmd      :                  :
 scr_centertime                           : 5        : , "cl"           :
 screenshot                               : cmd      :                  : Take a screenshot.
+script                                   : cmd      :                  : Run the text as a script
+script_add_debug_filter                  : cmd      :                  : Add a filter to the game debug overlay
+script_add_watch                         : cmd      :                  : Add a watch to the game debug overlay
+script_add_watch_pattern                 : cmd      :                  : Add a watch to the game debug overlay
+script_attach_debugger                   : cmd      :                  : Connect the vscript VM to the script debugger
+script_attach_debugger_at_startup        : 0        : , "sv"           :
+script_break_in_native_debugger_on_error : 0        : , "sv"           :
+script_clear_watches                     : cmd      :                  : Clear all watches from the game debug overlay
+script_connect_debugger_on_mapspawn      : 0        : , "sv"           :
+script_debug                             : cmd      :                  : Toggle the in-game script debug features
+script_debug                             : cmd      :                  : Connect the vscript VM to the script debugger
+script_dump_all                          : cmd      :                  : Dump the state of the VM to the console
+script_execute                           : cmd      :                  : Run a vscript file
+script_find                              : cmd      :                  : Find a key in the VM
+script_help                              : cmd      :                  : Output help for script functions, optionally with a search string
+script_reload_code                       : cmd      :                  : Execute a vscript file, replacing existing functions with the functions in the run script
+script_reload_entity_code                : cmd      :                  : Execute all of this entity's VScripts, replacing existing functions with the functions in the run scripts
+script_reload_think                      : cmd      :                  : Execute an activation script, replacing existing functions with the functions in the run script
+script_remove_debug_filter               : cmd      :                  : Remove a filter from the game debug overlay
+script_remove_watch                      : cmd      :                  : Remove a watch from the game debug overlay
+script_remove_watch_pattern              : cmd      :                  : Remove a watch from the game debug overlay
+script_trace_disable                     : cmd      :                  : Turn off a particular trace output by file or function name
+script_trace_disable_all                 : cmd      :                  : Turn off all trace output
+script_trace_disable_key                 : cmd      :                  : Turn off a particular trace output by table/instance
+script_trace_enable                      : cmd      :                  : Turn on a particular trace output by file or function name
+script_trace_enable_all                  : cmd      :                  : Turn on all trace output
+script_trace_enable_key                  : cmd      :                  : Turn on a particular trace output by table/instance
 sdr                                      : cmd      :                  : View/edit SteamNetworkingSockets configuration variables
 sdr_spew_level                           : 4        :                  : Verbosity level for SteamNetworkingSockets spew.  4=warning, 5=msg, 6=verbose, 7=debug
 sensitivity                              : 3        : , "a", "cl"      : Mouse sensitivity.
@@ -2413,6 +2444,8 @@ studio_queue_mode                        : 1        :                  :
 stuffcmds                                : cmd      :                  : Parses and stuffs command line + commands to command buffer.
 suitvolume                               : 0        : , "a", "sv"      :
 surfaceprop                              : cmd      :                  : Reports the surface properties at the cursor
+sv_accelerate                            : 10       : , "sv", "nf", "rep" :
+sv_airaccelerate                         : 10       : , "sv", "nf", "rep" :
 sv_allow_color_correction                : 1        : , "rep"          : Allow or disallow clients to use color correction on this server.
 sv_allow_point_servercommand             : 0        : , "sv"           : Allow use of point_servercommand entities in map. Potentially dangerous for untrusted maps.   disallow : Always disallow   official : Allowed for valve maps only   always   : Allow for all maps
 sv_allow_voice_from_file                 : 1        : , "rep"          : Allow or disallow clients from using voice_inputfromfile on this server.
@@ -2423,6 +2456,7 @@ sv_allowupload                           : 1        :                  : Allow c
 sv_alltalk                               : 0        : , "sv", "nf", "rep" : Players can hear all other players, no team restrictions
 sv_alternateticks                        : 0        : , "sp"           : If set, server only simulates entities on even numbered ticks.
 sv_autosave                              : 1        :                  : Set to 1 to autosave game on level transition. Does not affect autosave triggers.
+sv_backspeed                             : 0        : , "a", "sv", "rep" : How much to slow down backwards motion
 sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.vprof.
 sv_benchmark_force_start                 : cmd      :                  : Force start the benchmark. This is only for debugging. It's better to set sv_benchmark to 1 and restart the level.
 sv_benchmark_freeroam                    : 0        : , "sv"           : Allow the local player to move freely in the benchmark. Only used for debugging. Don't use for real benchmarks because it will make the timing inconsistent.
@@ -2431,6 +2465,7 @@ sv_bonus_challenge                       : 0        : , "sv", "rep"    : Set to 
 sv_bonus_map_challenge_update            : cmd      :                  : Updates a bonus map challenge score.
 sv_bonus_map_complete                    : cmd      :                  : Completes a bonus map.
 sv_bonus_map_unlock                      : cmd      :                  : Locks a bonus map.
+sv_bounce                                : 0        : , "sv", "nf", "rep" : Bounce multiplier for when physically simulated objects collide with other objects.
 sv_cacheencodedents                      : 1        :                  : If set to 1, does an optimization to prevent extra SendTable_Encode calls.
 sv_chat_bucket_size_tier1                : 4        : , "sv"           : The maxmimum size of the short term chat msg bucket.
 sv_chat_bucket_size_tier2                : 30       : , "sv"           : The maxmimum size of the long term chat msg bucket.
@@ -2458,7 +2493,9 @@ sv_dump_edicts                           : cmd      :                  : Display
 sv_dumpstringtables                      : 0        : , "cheat"        :
 sv_enableoldqueries                      : 0        :                  : Enable support for old style (HL1) server queries
 sv_filterban                             : 1        :                  : Set packet filtering by IP mode
+sv_footsteps                             : 1        : , "sv", "nf", "rep" : Play footstep sound for players
 sv_forcepreload                          : 0        : , "a"            : Force server side preloading.
+sv_friction                              : 4        : , "sv", "nf", "rep" : World friction.
 sv_gravity                               : 800      : , "sv", "nf", "rep" : World gravity.
 sv_hudhint_sound                         : 1        : , "sv", "rep"    :
 sv_lan                                   : 0        :                  : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )
@@ -2489,11 +2526,13 @@ sv_maxcmdrate                            : 66       : , "rep"          : (If sv_
 sv_maxrate                               : 0        : , "rep"          : Max bandwidth rate allowed on server, 0 == unlimited
 sv_maxreplay                             : 0        :                  : Maximum replay time in seconds
 sv_maxroutable                           : 1260     :                  : Server upper bound on net_maxroutable that a client can use.
+sv_maxspeed                              : 320      : , "sv", "nf", "rep" :
 sv_maxupdaterate                         : 66       : , "rep"          : Maximum updates per second that the server will allow
 sv_maxuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime exceeds this number of hours, the server will exit.
 sv_maxusrcmdprocessticks                 : 24       : , "sv", "nf"     : Maximum number of client-issued usrcmd ticks that can be replayed in packet loss conditions, 0 to allow no restrictions
 sv_maxusrcmdprocessticks_holdaim         : 1        : , "sv", "cheat"  : Hold client aim for multiple server sim ticks when client-issued usrcmd contains multiple actions (0: off; 1: hold this server tick; 2+: hold multiple ticks)
 sv_maxusrcmdprocessticks_warning         : -1       : , "sv"           : Print a warning when user commands get dropped due to insufficient usrcmd ticks allocated, number of seconds to throttle, negative disabled
+sv_maxvelocity                           : 3500     : , "sv", "rep"    : Maximum speed any ballistically moving object is allowed to attain per axis.
 sv_memlimit                              : 0        :                  : If set, whenever a game ends, if the total memory used by the server is greater than this # of megabytes, the server will exit.
 sv_mincmdrate                            : 10       : , "rep"          : This sets the minimum value for cl_cmdrate. 0 == unlimited.
 sv_minrate                               : 3500     : , "rep"          : Min bandwidth rate allowed on server, 0 == unlimited
@@ -2537,7 +2576,10 @@ sv_rcon_minfailuretime                   : 30       :                  : Number 
 sv_rcon_whitelist_address                : 0        :                  : When set, rcon failed authentications will never ban this address, e.g. '127.0.0.1'
 sv_region                                : -1       :                  : The region of the world to report this server in.
 sv_restrict_aspect_ratio_fov             : 1        : , "rep"          : This can be used to limit the effective FOV of users using wide-screen resolutions with aspect ratios wider than 1.85:1 (slightly wider than 16:9).     0 = do not cap effective FOV     1 = limit the effective FOV on windowed mode users using resolutions         greater than 1.85:1     2 = limit the effective FOV on both windowed mode and full-screen users
+sv_rollangle                             : 0        : , "sv", "nf", "rep" : Max view roll angle
+sv_rollspeed                             : 200      : , "sv", "nf", "rep" :
 sv_runcmds                               : 1        : , "sv"           :
+sv_script_think_interval                 : 0        : , "sv"           :
 sv_setsteamaccount                       : cmd      :                  : token Set game server account token to use for logging in to a persistent game server account
 sv_showladders                           : 0        : , "sv"           : Show bbox and dismount points for all ladders (must be set before level load.)
 sv_showlagcompensation                   : 0        : , "sv", "cheat"  : Show lag compensated hitboxes whenever a player is lag compensated.
@@ -2553,7 +2595,9 @@ sv_specspeed                             : 3        : , "a", "sv", "nf", "rep" :
 sv_stats                                 : 1        :                  : Collect CPU usage stats
 sv_steamblockingcheck                    : 0        :                  : Check each new player for Steam blocking compatibility, 1 = message only, 2 >= drop if any member of owning clan blocks,3 >= drop if any player has blocked, 4 >= drop if player has blocked anyone on server
 sv_steamgroup                            : 0        : , "nf"           : The ID of the steam group that this server belongs to. You can find your group's ID on the admin profile page in the steam community.
+sv_stepsize                              : 18       : , "sv", "nf", "rep" :
 sv_stickysprint_default                  : 0        : , "cl"           :
+sv_stopspeed                             : 100      : , "sv", "nf", "rep" : Minimum stopping speed when on ground.
 sv_strict_notarget                       : 0        : , "sv"           : If set, notarget will cause entities to never think they are in the pvs
 sv_tags                                  : 0        : , "nf"           : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
 sv_test_scripted_sequences               : 0        : , "sv"           : Tests for scripted sequences that are embedded in the world. Run through your map with this set to check for NPCs falling through the world.
@@ -2606,6 +2650,9 @@ sv_vote_quorum_ratio                     : 0        : , "sv", "nf"     : The min
 sv_vote_timer_allow_early_finish         : 1        : , "sv"           : If all votes are in, whether to end the vote (for debugging)
 sv_vote_timer_duration                   : 15       : , "sv"           : How long to allow voting on an issue
 sv_vote_ui_hide_disabled_issues          : 1        : , "sv"           : Suppress listing of disabled issues in the vote setup screen.
+sv_wateraccelerate                       : 10       : , "sv", "nf", "rep" :
+sv_waterdist                             : 12       : , "sv", "rep"    : Vertical view fixup when eyes are near water plane.
+sv_waterfriction                         : 1        : , "sv", "nf", "rep" :
 sys_minidumpexpandedspew                 : 1        :                  :
 sys_minidumpspewlines                    : 500      :                  : Lines of crash dump console spew to keep.
 systemlinkport                           : 27030    :                  : System Link port
@@ -3052,6 +3099,7 @@ tf_mm_next_map_vote_time                 : 30       : , "sv", "rep"    :
 tf_mm_partyclient_debug                  : 0        : , "cl"           :
 tf_mm_servermode                         : 0        : , "sv", "nf"     : Activates / deactivates Lobby-based hosting mode.    0 = not active    1 = Put in matchmaking pool (Lobby will control current map)
 tf_mm_strict                             : 0        : , "sv", "nf"     :    0 = Show in server browser, and allow ad-hoc joins    1 = Hide from server browser and only allow joins coordinated through GC matchmaking    2 = Hide from server browser, but allow ad-hoc joins
+tf_monitor_resolution                    : 1024     : , "cl"           : Needs to be set at game launch time to override.
 tf_movement_aircurrent_aircontrol_mult   : 0        : , "sv", "cheat", "rep" : Multiplier on air control when player is in an air current (such as airblast)
 tf_movement_aircurrent_friction_mult     : 0        : , "sv", "cheat", "rep" : Friction multiplier when sliding against surfaces while trapped in an air current
 tf_movement_lost_footing_friction        : 0        : , "sv", "cheat", "rep" : Ground friction for players who have lost their footing
@@ -3062,6 +3110,7 @@ tf_mvm_bot_flag_carrier_interval_to_1st_upgrade : 5        : , "sv", "cheat"  :
 tf_mvm_bot_flag_carrier_interval_to_2nd_upgrade : 15       : , "sv", "cheat"  :
 tf_mvm_bot_flag_carrier_interval_to_3rd_upgrade : 15       : , "sv", "cheat"  :
 tf_mvm_bot_flag_carrier_movement_penalty : 0        : , "sv", "cheat", "rep" :
+tf_mvm_bot_sniper_target_by_dps          : 1        : , "sv", "cheat"  : If set, Snipers in MvM mode target the victim that has the highest DPS
 tf_mvm_checkpoint                        : cmd      :                  : Save a checkpoint snapshot
 tf_mvm_checkpoint_clear                  : cmd      :                  : Clear the saved checkpoint
 tf_mvm_debugstats                        : cmd      :                  : Dumpout MvM Data
@@ -3283,6 +3332,7 @@ tf_use_match_hud                         : 1        : , "a", "cl"      :
 tf_use_min_viewmodels                    : 0        : , "a", "cl"      : Use minimized viewmodels.
 tf_viewmodels_offset_override            : 0        : , "cheat", "cl"  : If set, this will override the position of all viewmodels. Usage 'x y z'
 tf_warpaint_explanation_viewed           : 0        : , "a", "cl"      :
+tf_water_resolution                      : 1024     : , "cl"           : Needs to be set at game launch time to override.
 tf_weapon_criticals                      : 1        : , "sv", "nf", "rep" : Whether or not random crits are enabled
 tf_weapon_criticals_bucket_bottom        : -250     : , "sv", "cheat", "rep" :
 tf_weapon_criticals_bucket_cap           : 1000     : , "sv", "cheat", "rep" :
@@ -3442,6 +3492,7 @@ voice_menu_3                             : cmd      :                  : Opens v
 voice_modenable                          : 1        : , "a", "clientcmd_can_execute", "cl" : Enable/disable voice in this mod.
 voice_overdrive                          : 2        :                  :
 voice_overdrivefadetime                  : 0        :                  :
+voice_player_speaking_delay_threshold    : 0        : , "sv", "cheat"  :
 voice_profile                            : 0        :                  :
 voice_recordtofile                       : 0        :                  : Record mic data and decompressed voice data into 'voice_micdata.wav' and 'voice_decompressed.wav'
 voice_scale                              : 1        : , "a"            :
@@ -3550,6 +3601,8 @@ vr_viewmodel_offset_forward_large        : -15      : , "cl"           :
 vr_viewmodel_translate_with_head         : 0        : , "cl"           : 1=translate the viewmodel with the head motion.
 vr_zoom_multiplier                       : 2        : , "a", "cl"      : When zoomed, how big is the scope on your HUD?
 vr_zoom_scope_scale                      : 6        : , "cl"           : Something to do with the default scope HUD overlay size.
+vscript_perf_warning_spew_ms             : 1        :                  :
+vscript_script_hooks                     : 1        : , "sv"           :
 vtune                                    : cmd      :                  : Controls VTune's sampling.
 +walk                                    : cmd      :                  :
 -walk                                    : cmd      :                  :
@@ -3580,5 +3633,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3570 total convars/concommands
+3623 total convars/concommands
 ```
