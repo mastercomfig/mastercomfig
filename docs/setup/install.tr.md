@@ -52,4 +52,4 @@ TF2'yi daha da kişiselleştirmek ister misiniz?
 * Sisteminizden daha iyi performans ve kalite elde etmek için [başlatma seçeneklerini](../customization/launch_options.md) düzenleyin
 * Diğer insanların [özel configlerinden](../customization/custom_config_list.md) ilham alın
 * Diğer [mükemmel TF2 modifikasyonlarına](../customization/see_also.md) bir göz atın
-* Daha da fazla performans elde etmek için [işletim sisteminizi optimize edin](../os/os.md)
+* Daha da fazla performans elde etmek için [işletim sisteminizi optimize edin](../os/index.md)
