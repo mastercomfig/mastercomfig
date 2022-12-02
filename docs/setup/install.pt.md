@@ -53,4 +53,4 @@ Quer personalizar o TF2 ainda mais?
 * Ajuste suas [opções de arranque](../customization/launch_options.md) para alcançar uma melhor performace e qualidade no seu sistema
 * Se inspire pelas [configurações customizadas](../customization/custom_config_list.md) de outras pessoas.
 * Dê uma olhada em algumas outras [ótimas modificações para o TF2](../customization/see_also.md)
-* [Otimize o seu SO](../os/index.md) Para espremer ainda mais performace
+* [Otimize o seu SO](../os/os.md) Para espremer ainda mais performace
