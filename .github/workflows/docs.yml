@@ -27,7 +27,7 @@ jobs:
       with:
         key: ${{ github.ref }}
         path: .cache
-    - uses: pnpm/action-setup@v2.2.2
+    - uses: pnpm/action-setup@v2.2.4
       with:
         version: 7
     - name: Lint Docs
