@@ -4,7 +4,7 @@
 [![Ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B.svg?logo=ko-fi&style=flat-square)](https://ko-fi.com/mastercoms)
 [![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay&style=flat-square)](https://liberapay.com/mastercoms/)
 [![Steam donate](https://img.shields.io/badge/Donate%20via-Steam-00adee.svg?style=flat-square&logo=steam)](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N)
-[![Join the Discord chat](https://img.shields.io/badge/Discord-mastercomfig-5865F2.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
+[![Join the Discord chat](https://img.shields.io/badge/Discord-mastercomfig-5865F2.svg?style=flat-square&logo=discord)](https://discord.gg/mastercomfig-389089828249010188)
 [![Join the Steam Group](https://img.shields.io/badge/Steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
 
 <img align="right" alt="mastercomfig logo" width="100" src="https://mastercomfig.com/img/mastercomfig_logo.svg">

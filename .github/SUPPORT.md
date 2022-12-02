@@ -7,4 +7,4 @@ Check these resources out:
 
 Still can't find your answer and want to ask for help?
 
-* [Ask in #tf2-help on Discord](https://discord.gg/CuPb2zV)
+* [Ask in #tf2-help on Discord](https://discord.gg/mastercomfig-389089828249010188)
