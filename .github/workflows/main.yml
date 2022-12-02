@@ -65,7 +65,7 @@ jobs:
       if: ${{ github.event_name == 'push' }}
       run: |
         if [[ ${{ github.event.ref }} == refs/tags/* ]]; then
-          echo ::set-output name=release::true
+          echo "release=true" >> $GITHUB_OUTPUT
         fi
     - name: Build mastercomfig (prerelease)
       run: dev/release.sh
