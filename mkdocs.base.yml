@@ -31,7 +31,7 @@ nav:
     - List of Custom Configs: customization/custom_config_list.md
     - See Also: customization/see_also.md
   - OS Optimizations:
-    - OS Optimizations: os/index.md
+    - OS Optimizations: os/os.md
     - Windows: os/windows.md
     - Linux: os/linux.md
   - Next Steps:
