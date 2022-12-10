@@ -1,7 +1,7 @@
 git+https://github.com/jimporter/mike.git@master#egg=mike
 mkdocs-static-i18n
 mkdocs-material
-mkdocs-minify-plugin<0.6.0
+mkdocs-minify-plugin
 mkdocs-redirects
 mkdocs-macros-plugin
 mkdocs-git-committers-plugin-2
