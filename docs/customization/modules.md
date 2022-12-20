@@ -531,6 +531,9 @@ Default setting: based on which preset you are currently using.
 
 Controls how fast the animation is on the killstreak sheen glow for weapons.
 
+!!! warning
+    Killstreak sheens do not work on DirectX 8.
+
 * **CPU usage:** none
 * **GPU usage:** none
 
@@ -547,6 +550,9 @@ Controls how intense the color tint is on the killstreak sheen glow for weapons.
 
 !!! note
     This module will have no effect if `sheens_speed` is set to `off`.
+
+!!! warning
+    Killstreak sheens do not work on DirectX 8.
 
 * **CPU usage:** none
 * **GPU usage:** none
