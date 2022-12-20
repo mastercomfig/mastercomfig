@@ -1,5 +1,5 @@
-[![Build Status](https://img.shields.io/github/workflow/status/mastercomfig/mastercomfig/CI?style=flat-square&logo=mastercomfig)](https://github.com/mastercomfig/mastercomfig/actions?query=workflow%3ACI)
-[![Docs](https://img.shields.io/github/workflow/status/mastercomfig/mastercomfig/docs?label=docs&style=flat-square)](https://docs.mastercomfig.com/)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/mastercomfig/mastercomfig/main.yml?branch=release&style=flat-square&logo=mastercomfig)](https://github.com/mastercomfig/mastercomfig/actions/workflows/main.yml)
+[![Docs](https://img.shields.io/github/actions/workflow/status/mastercomfig/mastercomfig/docs.yml?branch=release&label=docs&style=flat-square)](https://docs.mastercomfig.com/)
 [![Downloads](https://img.shields.io/github/downloads/mastercomfig/mastercomfig/latest/total.svg?style=flat-square&logo=mastercomfig)](https://mastercomfig.com/app)
 [![Ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B.svg?logo=ko-fi&style=flat-square)](https://ko-fi.com/mastercoms)
 [![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay&style=flat-square)](https://liberapay.com/mastercoms/)
