@@ -790,7 +790,7 @@ Default setting: **`console=on`** (all presets, except Very Low).
 
 * **`console=off`**: Disables developer console.
 * **`console=on`**: Enables developer console.
-* **`console=custom`**: Uses the in game setting.
+* **`console=custom`**: Uses the in game settings.
 
 ### HTML MOTD
 
@@ -805,7 +805,7 @@ Default setting: **`htmlmotd=off`** (all presets).
 
 * **`htmlmotd=off`**: Disables HTML MOTDs.
 * **`htmlmotd=on`**: Enables HTML MOTDs.
-* **`htmlmotd=custom`**: Uses the in game setting.
+* **`htmlmotd=custom`**: Uses the in game settings.
 
 ### Outlines
 
@@ -873,7 +873,7 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
-* **`voice_chat=custom`**: Uses the in game setting.
+* **`voice_chat=custom`**: Uses the in game settings.
 
 ## Misc modules
 
@@ -908,7 +908,7 @@ Default setting: **`party_mode=request`** (all presets).
 * **`party_mode=open`**: Open party (people can join anytime).
 * **`party_mode=request`**: Request-only party (people can only join if you accept their request or if you invite them).
 * **`party_mode=invite`**: Invite-only party (people can only join if you invite them).
-* **`party_mode=custom`**: Uses the in game setting.
+* **`party_mode=custom`**: Uses the in game settings.
 
 ### Logo
 
