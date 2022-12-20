@@ -670,6 +670,7 @@ Default setting: based on which preset you are currently using.
 
 * **`hud_player_model=off`**: Disables the player model.
 * **`hud_player_model=on`**: Enables the player model.
+* **`hud_player_model=custom`**: Uses the in game settings.
 
 ### Contracts
 
@@ -739,6 +740,7 @@ Default setting: **`messages=on`** (all presets, except Very Low).
 * **`messages=off`**: Disables text chat.
 * **`messages=hide`**: Hides text chat.
 * **`messages=on`**: Enables text chat.
+* **`messages=custom`**: Uses the in game settings.
 
 ### Killfeed
 
@@ -788,6 +790,7 @@ Default setting: **`console=on`** (all presets, except Very Low).
 
 * **`console=off`**: Disables developer console.
 * **`console=on`**: Enables developer console.
+* **`console=custom`**: Uses the in game setting.
 
 ### HTML MOTD
 
@@ -802,6 +805,7 @@ Default setting: **`htmlmotd=off`** (all presets).
 
 * **`htmlmotd=off`**: Disables HTML MOTDs.
 * **`htmlmotd=on`**: Enables HTML MOTDs.
+* **`htmlmotd=custom`**: Uses the in game setting.
 
 ### Outlines
 
@@ -869,6 +873,7 @@ Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
 * **`voice_chat=off`**: Disables the in-game voice chat system.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
+* **`voice_chat=custom`**: Uses the in game setting.
 
 ## Misc modules
 
@@ -903,6 +908,7 @@ Default setting: **`party_mode=request`** (all presets).
 * **`party_mode=open`**: Open party (people can join anytime).
 * **`party_mode=request`**: Request-only party (people can only join if you accept their request or if you invite them).
 * **`party_mode=invite`**: Invite-only party (people can only join if you invite them).
+* **`party_mode=custom`**: Uses the in game setting.
 
 ### Logo
 
