@@ -657,13 +657,15 @@
       {
         "name": "hud_player_model",
         "display": "Player Model",
-        "type": "switch",
         "values": [
           {
             "value": "off"
           },
           {
             "value": "on"
+          },
+          {
+            "value": "custom"
           }
         ]
       },
@@ -743,6 +745,9 @@
           },
           {
             "value": "on"
+          },
+          {
+            "value": "custom"
           }
         ]
       },
@@ -787,26 +792,30 @@
       },
       {
         "name": "console",
-        "type": "switch",
         "values": [
           {
             "value": "off"
           },
           {
             "value": "on"
+          },
+          {
+            "value": "custom"
           }
         ]
       },
       {
         "name": "htmlmotd",
         "display": "HTML MOTD",
-        "type": "switch",
         "values": [
           {
             "value": "off"
           },
           {
             "value": "on"
+          },
+          {
+            "value": "custom"
           }
         ]
       },
@@ -871,13 +880,15 @@
       },
       {
         "name": "voice_chat",
-        "type": "switch",
         "values": [
           {
             "value": "off"
           },
           {
             "value": "on"
+          },
+          {
+            "value": "custom"
           }
         ]
       }
@@ -912,6 +923,9 @@
           {
             "value": "invite",
             "display": "Invite-only party"
+          },
+          {
+            "value": "custom"
           }
         ]
       },
