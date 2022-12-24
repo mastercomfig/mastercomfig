@@ -35,7 +35,7 @@ This package is installed on most Debian-based OS's by default, like Ubuntu and 
 
 You can install `schedtool` and [Ananicy Cpp](https://gitlab.com/ananicy-cpp/ananicy-cpp), then enable `ananicy-cpp.service` to automatically apply rule based process priority balancing, improving resources allocated to TF2.
 
-This however requires a [profile for TF2](https://github.com/Nefelim4ag/Ananicy/blob/master/ananicy.d/00-default/_steam.rules). Follow Ananicy Cpp's [profile import instructions](https://gitlab.com/ananicy-cpp/ananicy-cpp#community-rules) to use community profiles from the original Ananicy software, which can be downloaded [here](https://github.com/Nefelim4ag/Ananicy) or by installing the original Ananicy.
+This however requires a [profile for TF2](https://github.com/Nefelim4ag/Ananicy/blob/master/ananicy.d/00-default/games/_steam.rules). Follow Ananicy Cpp's [profile import instructions](https://gitlab.com/ananicy-cpp/ananicy-cpp#community-rules) to use community profiles from the original Ananicy software, which can be downloaded [here](https://github.com/Nefelim4ag/Ananicy) or by installing the original Ananicy.
 
 ## Networking optimization
 
@@ -58,6 +58,10 @@ Then, install a 32-bit version of SDL2 and pin the library to the runtime using 
 
 !!! warning
     When using Wayland, ```SDL_VIDEODRIVER=x11 %command%``` will need to be prepended to your launch options to avoid rendering issues
+    
+!!! warning
+    Users of the Flatpak version of Steam will have to grant Steam access to the directory in which SDL2 is located. This can be done by setting the ```--filesystem``` Flatpak parameter which Steam uses to the relevant path.
+    
 
 Debian/Ubuntu-based distributions:
 ```sh
