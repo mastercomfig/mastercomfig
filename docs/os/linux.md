@@ -59,8 +59,8 @@ Then, install a 32-bit version of SDL2 and pin the library to the runtime using 
 !!! warning
     When using Wayland, ```SDL_VIDEODRIVER=x11 %command%``` will need to be prepended to your launch options to avoid rendering issues
     
-!!! warning
-    Users of the Flatpak version of Steam will have to grant Steam access to the directory in which SDL2 is located. This can be done by setting the ```--filesystem``` Flatpak parameter which Steam uses to the relevant path.
+!!! note
+    Users of the Flatpak version of Steam will not have to install a 32-bit version of SDL2 as the runtime already has a sufficient version pinned. Only removing the built-in version of SDL2 is required.
     
 
 Debian/Ubuntu-based distributions:
