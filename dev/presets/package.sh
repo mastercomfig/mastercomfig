@@ -12,15 +12,15 @@ cp -f ../../config/cfg/presets/*.cfg mastercomfig-base/cfg/presets
 autoexec_file=mastercomfig-base/cfg/autoexec.cfg
 {
   printf "exec comfig/define_presets.cfg;"
-  printf "exec app/pre_comfig.cfg;exec overrides/pre_comfig.cfg"
+  printf "exec app/pre_comfig.cfg;exec overrides/pre_comfig.cfg;"
   printf "exec comfig/comfig.cfg;"
-  printf "exec app/setup_hook.cfg;exec overrides/setup_hook.cfg"
+  printf "exec app/setup_hook.cfg;exec overrides/setup_hook.cfg;"
   printf "preset;"
   printf "exec comfig/addons.cfg;"
   printf "modules_c;"
   printf "run_modules;"
   printf "exec comfig/echo.cfg;"
-  printf "exec overrides/autoexec.cfg;exec app/autoexec.cfg;"
+  printf "exec app/autoexec.cfg;exec overrides/autoexec.cfg;"
   printf "exec comfig/finalize.cfg"
 } > "${autoexec_file}"
 
