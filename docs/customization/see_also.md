@@ -31,21 +31,39 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 
 !!! info
 
-    The yttrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. You may delete it if you want, since it is not used and not needed. Use the **`dynamic_background=preload`** module instead.
+    yttrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. You may delete it if you want, since it is not used and not needed. Use the **`dynamic_background=preload`** module instead.
+
+* [Horsie's Viewmodel Editor](https://github.com/a-horsey/horsies-viewmodel-editor)
+  — Edit your viewmodels however you want
+
+!!! info
+
+    Horsie's Viewmodel Editor will add an `valve.rc` inside of your `tf/cfg` folder. You may delete it if you want, since it is not used and not needed. Use the **`dynamic_background=preload`** module instead.
 
 * [Transparent Viewmodels](https://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
-  — Makes viewmodels translucent
+  — Makes viewmodels transparent
 
-## Graphics
-
-* [CleanTF2+](https://github.com/JarateKing/CleanTF2plus)
-  — Makes TF2 a lot cleaner and simpler, includes NoHats
+## Graphics enhancement
 
 * [Ultimate TF2 Visual Fix Pack](https://github.com/agrastiOs/Ultimate-TF2-Visual-Fix-Pack/releases/latest)
   — Fixes issues with cosmetics, weapons, particles, visual effects, including Dragon’s Fury lag, opaque and glitchy Flamethrower flames, and worse looking stock weapons
 
+* [Altered Projectile Trails](https://gamebanana.com/mods/12420)
+  — Enhances the quality of various projectiles' trails
+
+* [ Altered Short Circuit Effects](https://gamebanana.com/mods/11900)
+  — Enhances the quality of the Short Circuit's effects
+
+## Graphics simplification
+
+* [CleanTF2+](https://github.com/JarateKing/CleanTF2plus)
+  — Makes TF2 a lot cleaner and simpler, includes NoHats
+
 * [No-Hats-Mod bgum](https://github.com/Fedora31/no-hats-bgum)
   — Removes cosmetics like hats, botkillers, skins, and much more
+
+* [Transparent Flamethrower Fire](https://gamebanana.com/mods/348622)
+  — Makes flamethrower fire and Dragon's Fury fireballs more transparent
 
 ## Scripts
 
@@ -73,3 +91,6 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 
 * [TF2 Bot Detector](https://github.com/PazerOP/tf2_bot_detector)
   — Automatically detects and votekicks cheaters/bots in TF2 casual
+
+* [Vote HUD Custom Font](https://github.com/andy013/votehud_custom_font)
+  — Uses a custom font on the Vote HUD to show the invisible characters that bots use in their name
