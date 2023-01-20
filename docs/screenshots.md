@@ -32,7 +32,7 @@ description: mastercomfig screenshots for all presets.
 
 ![sawmill very low](https://mastercomfig.com/img/presets/very-low.png){ loading=lazy }
 
-## Screenshot Config
+## Preset Screenshot Config
 
 ```c
 // Designed to take screenshots on the map koth_sawmill
@@ -63,4 +63,12 @@ wait 200; bot_teleport bot5 241 -1246 -31 6 -94 0
 
 wait 200; spec_player bot1
 wait 1000; kill bot3; explode bot4
+```
+
+## Explosions Screenshot Config
+
+```c
+// Designed to take screenshots on the map itemtest
+sv_cheats 1
+bot;wait 9000;host_timescale 0.02;cl_drawhud 0;r_drawviewmodel 0;bot_changeclass bot01 pyro;bot_teleport bot01 990 -426 -174 90 180 0;wait 10000;r_cleardecals;setang 6 0 0;setpos 623 -405 -240
 ```

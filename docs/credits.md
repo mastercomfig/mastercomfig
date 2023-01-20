@@ -35,7 +35,9 @@ Many people and organizations have helped or inspired mastercomfig in some way:
 
 * jane for the shrinkKeyValues bash script
 
-* Fraklin for screenshots and accompanying cfg script
+* Fraklin for preset screenshots and accompanying cfg script
+
+* Lucy for explosion screenshots and accompanying cfg script
 
 * The [Valve Developer Community](https://developer.valvesoftware.com/wiki/Main_Page)
   for their documentation of the Source Engine
