@@ -36,10 +36,6 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 * [Horsie's Viewmodel Editor](https://github.com/a-horsey/horsies-viewmodel-editor)
   — Edit your viewmodels however you want
 
-!!! info
-
-    Horsie's Viewmodel Editor will add an `valve.rc` inside of your `tf/cfg` folder. You may delete it if you want, since it is not used and not needed. Use the **`dynamic_background=preload`** module instead.
-
 * [Transparent Viewmodels](https://www.teamfortress.tv/21928/transparent-viewmodels-in-any-hud)
   — Makes viewmodels transparent
 
