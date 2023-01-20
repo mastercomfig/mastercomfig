@@ -8,18 +8,18 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 
 ## HUD
 
-* [HUDS.TF](https://huds.tf/site/d-HUD)
+* [HUDS.tf](https://huds.tf/site/d-HUD)
   — Customize the entire UI and in-game HUD with a large selection of community-created HUDs
+
+!!! note
+
+    HUDS.tf also provides [hitsounds and killsounds](https://huds.tf/site/d-Hitsound) for customizing the sounds that play when you deal damage or kill someone.
 
 * [Static Ambassador Crosshair](https://github.com/juniorsgithub/tf2-static-ambassador-crosshair)
   — Replaces the dynamic crosshair resize of the Ambassador inaccuracy indicator with a static crosshair
 
 * [HUD Merger](https://github.com/cooolbros/hud-merger)
   — Merge HUDs together by picking and choosing elements from each!
-
-!!! note
-
-    HUDS.tf also provides [hitsounds and killsounds](https://huds.tf/site/d-Hitsound) for customizing the sounds that play when you deal damage or kill someone.
 
 ## Viewmodels
 
