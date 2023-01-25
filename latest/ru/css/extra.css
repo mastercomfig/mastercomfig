@@ -1,3 +1,7 @@
 .md-header__title {
   margin-left: .4rem !important;
 }
+
+.md-typeset h5 {
+  text-transform: unset !important;
+}
