@@ -2,6 +2,9 @@
 *.vpk
 *.zip
 
+# doc downloads
+!docs/assets/files/tf2/huds/custom_intro_vid/Custom\ Intro\ for\ TF2.zip
+
 # dev script generated packages
 /dev/addons/mastercomfig*
 /dev/presets/mastercomfig*
