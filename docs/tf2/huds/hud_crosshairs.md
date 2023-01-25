@@ -6,17 +6,17 @@ This guide has been ported over from the old HUDS.TF Guides section. Credit for 
 
 ## Introduction
 
-This part of the tutorial is a basic overview of what exactly a HUD crosshair is. More advanced users should skip ahead to [Implementation](#Implementation).
+This part of the tutorial is a basic overview of what exactly a HUD crosshair is. More advanced users should skip ahead to [Implementation](#implementation).
 
 Team Fortress 2's heads up display, or HUD as it is colloquially known, is a user interface, also known as a UI. It displays information relevant to the user while in-game, such as health, ammo, the scoreboard, and much more. It is controlled by text documents that determine positioning, size, visibility, color, and everything else about all of its moving bits and pieces. These documents, saved as `.res` files, can be edited by the user to change existing bits and pieces, which will henceforth referred to as controls, or, more interestingly, at least for our purposes, add new controls. One technique users have been using since as early as 2009 is to place a control into their HUDs to serve as a crosshair. That is, something that will tell them where the center of their screen is. There are two main methods of doing this: text crosshairs and image crosshairs.
 
 ### Text Crosshairs
 
-The first method is to simply insert a text box into the HUD and then load a custom font which contains the crosshair of your choice. This method's advantages are that the crosshair’s color can be changed easily and it can be animated to change color upon damage (whenever you hit someone), a feature found in many of the Quake games, precursors to the TF series in several ways. For users searching for a more in-depth explanation of the custom font or who are interested in creating their own font, skip ahead to Creating Your Own Crosshairs.
+The first method is to simply insert a text box into the HUD and then load a custom font which contains the crosshair of your choice. This method's advantages are that the crosshair’s color can be changed easily and it can be animated to change color upon damage (whenever you hit someone), a feature found in many of the Quake games, precursors to the TF series in several ways. For users searching for a more in-depth explanation of the custom font or who are interested in creating their own font, skip ahead to [Creating Your Own Crosshairs](#creating-your-own-crosshairs).
 
 ### Image Crosshairs
 
-The second method is to simply insert an image file into the HUD. The advantages this method brings are that the size of the crosshair can be changed easily and it can be toggled (turned on or off at will) in a couple ways that text crosshairs can't be. If you are fairly experienced with these crosshairs you might know about the method of implementing them as in game crosshairs, in which case you would want to skip ahead to In-Game Image Crosshair.
+The second method is to simply insert an image file into the HUD. The advantages this method brings are that the size of the crosshair can be changed easily and it can be toggled (turned on or off at will) in a couple ways that text crosshairs can't be. If you are fairly experienced with these crosshairs you might know about the method of implementing them as in game crosshairs, in which case you would want to skip ahead to [In-Game Image Crosshair](#in-game-image-crosshair).
 
 ## Implementation
 
@@ -148,7 +148,7 @@ Example:
 
 3. Create a copy of both files and move the copies into `custom/<any name>/materials/vgui/replay/thumbnails`.
 
-4. Either create the control in `HudLayout.res` if you want to use the crosshair that way or reference it in console as an in-game crosshair. If you wish to pursue the second option then skip ahead to In-Game Image Crosshair.
+4. Either create the control in `HudLayout.res` if you want to use the crosshair that way or reference it in console as an in-game crosshair. If you wish to pursue the second option then skip ahead to [In-Game Image Crosshair](#in-game-image-crosshair).
 
 Example:
 
@@ -193,11 +193,11 @@ Back to resizing. Something a lot of HUD makers do to make things easier is to c
 
 ### Changing Color
 
-This time, the roles are reversed. Text crosshairs are easy, and image crosshairs are hard. To change the color of a text crosshair all you have to do is change the value of `fgcolor`. I elaborate on how exactly to change `fgcolor` below under Specific Parameters. For image crosshairs, it is significantly more difficult: you need to actually edit the `.vtf` file itself and change the color in an image editor. This requires VTFEdit to convert your `.vtf` to a `.png` or any other editable file type, then editing it in Photoshop or something similar. More information on this can be found in the section below entitled Creating Your Own Crosshairs.
+This time, the roles are reversed. Text crosshairs are easy, and image crosshairs are hard. To change the color of a text crosshair all you have to do is change the value of `fgcolor`. I elaborate on how exactly to change `fgcolor` below under Specific Parameters. For image crosshairs, it is significantly more difficult: you need to actually edit the `.vtf` file itself and change the color in an image editor. This requires VTFEdit to convert your `.vtf` to a `.png` or any other editable file type, then editing it in Photoshop or something similar. More information on this can be found in the section below entitled [Creating Your Own Crosshairs](#creating-your-own-crosshairs).
 
 ### Changing Position
 
-Shifting the position is as simple as changing the `xpos`, `ypos`, and `zpos` under the control in `HudLayout.res`. This includes if you want to put your crosshair underneath something else, like an outline for the in-game ones. More information on these parameters below under Basic Parameters.
+Shifting the position is as simple as changing the `xpos`, `ypos`, and `zpos` under the control in `HudLayout.res`. This includes if you want to put your crosshair underneath something else, like an outline for the in-game ones. More information on these parameters below [under Basic Parameters](#xpos).
 
 ### Fixing Cut Off Issues
 
@@ -209,7 +209,7 @@ So, increasing the `wide` and `tall` values might fix your problem. The third po
 
 ## Parameters
 
-Below I will give an explanation of what each parameter under the control does. More experienced users might want to jump to Specific Parameters to skip the basic parameters.
+Below I will give an explanation of what each parameter under the control does. More experienced users might want to jump to [Specific Parameters](#specific-parameters) to skip the basic parameters.
 
 ### Basic Parameters
 
@@ -235,7 +235,7 @@ This determines whether the control is drawn. As one would expect, `1` means vis
 
 #### Enabled
 
-This determines whether the control is even loaded. The difference between this and visible is that some elements are turned on or off by the game. Disabling these elements means they're never going to be seen. Making them invisible might mean that they're seen part of the time. For HUD crosshairs the distinction doesn't matter. Turn either to `0` to make it invisible and `1` to make it visible. There is one notable exception which will be discussed later in the 3D playermodel background section.
+This determines whether the control is even loaded. The difference between this and visible is that some elements are turned on or off by the game. Disabling these elements means they're never going to be seen. Making them invisible might mean that they're seen part of the time. For HUD crosshairs the distinction doesn't matter. Turn either to `0` to make it invisible and `1` to make it visible. There is one notable exception which will be discussed later in the [3D Player Model Background section](#3d-player-model-background).
 
 #### Xpos
 
@@ -253,7 +253,7 @@ This parameter determines the position of the control in the z-direction, also k
 
 #### Wide/Tall
 
-The width and height of the control. Text will need to be completely contained within the control or parts of it may be cut off. For images, this simply resizes the image. You cannot resize a text crosshair this way, you need to change the font definition in `ClientScheme.res` or reference a different font, more on that available in Resizing. If your crosshair is half-visible, this could be the reason. Putting `f0` gives you the full screen size.
+The width and height of the control. Text will need to be completely contained within the control or parts of it may be cut off. For images, this simply resizes the image. You cannot resize a text crosshair this way, you need to change the font definition in `ClientScheme.res` or reference a different font, more on that available in [Resizing](#resizing). If your crosshair is half-visible, this could be the reason. Putting `f0` gives you the full screen size.
 
 ### Specific Parameters
 
@@ -263,7 +263,7 @@ As you can see, this is where more differences start to arise in the implementat
 
 ##### Font
 
-This is the name of the font file that you wish to use. The font file should be defined in `ClientScheme.res`. You check out more about installing fonts by reading our Font Installation guide.
+This is the name of the font file that you wish to use. The font file should be defined in `ClientScheme.res`. You check out more about installing fonts by reading our [Font Installation guide](font_crosshairs.md).
 
 ##### LabelText
 
