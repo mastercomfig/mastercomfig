@@ -421,6 +421,18 @@
          
     </url>
     <url>
+         <loc>https://docs.mastercomfig.com/latest/tf2/huds/font_crosshairs/</loc>
+         <lastmod>2023-01-25</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/huds/font_crosshairs/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/huds/font_crosshairs/"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/huds/font_crosshairs/"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/huds/font_crosshairs/"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/huds/font_crosshairs/"/>
+         <xhtml:link rel="alternate" hreflang="tr" href="https://docs.mastercomfig.com/tr/tf2/huds/font_crosshairs/"/>
+         
+    </url>
+    <url>
          <loc>https://docs.mastercomfig.com/latest/tf2/huds/hud_animations/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
@@ -442,6 +454,18 @@
          <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/huds/hud_crosshairs/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/huds/hud_crosshairs/"/>
          <xhtml:link rel="alternate" hreflang="tr" href="https://docs.mastercomfig.com/tr/tf2/huds/hud_crosshairs/"/>
+         
+    </url>
+    <url>
+         <loc>https://docs.mastercomfig.com/latest/tf2/huds/particle_effects/</loc>
+         <lastmod>2023-01-25</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.mastercomfig.com/en/tf2/huds/particle_effects/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="https://docs.mastercomfig.com/pt/tf2/huds/particle_effects/"/>
+         <xhtml:link rel="alternate" hreflang="ru" href="https://docs.mastercomfig.com/ru/tf2/huds/particle_effects/"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://docs.mastercomfig.com/es/tf2/huds/particle_effects/"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.mastercomfig.com/fr/tf2/huds/particle_effects/"/>
+         <xhtml:link rel="alternate" hreflang="tr" href="https://docs.mastercomfig.com/tr/tf2/huds/particle_effects/"/>
          
     </url>
 </urlset>
