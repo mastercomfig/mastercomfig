@@ -8,18 +8,14 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 
 ## HUD
 
-* [HUDS.tf](https://huds.tf/site/d-HUD)
-  — Customize the entire UI and in-game HUD with a large selection of community-created HUDs
-
-!!! note
-
-    HUDS.tf also provides [hitsounds and killsounds](https://huds.tf/site/d-Hitsound) for customizing the sounds that play when you deal damage or kill someone.
-
-* [Static Ambassador Crosshair](https://github.com/juniorsgithub/tf2-static-ambassador-crosshair)
-  — Replaces the dynamic crosshair resize of the Ambassador inaccuracy indicator with a static crosshair
+* [HUD Editor](https://www.criticalflaw.ca/TF2HUD.Editor/)
+  — A tool for editing HUDs
 
 * [HUD Merger](https://github.com/cooolbros/hud-merger)
   — Merge HUDs together by picking and choosing elements from each!
+
+* [Static Ambassador Crosshair](https://github.com/juniorsgithub/tf2-static-ambassador-crosshair)
+  — Replaces the dynamic crosshair resize of the Ambassador inaccuracy indicator with a static crosshair
 
 ## Viewmodels
 
@@ -90,3 +86,15 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 
 * [Vote HUD Custom Font](https://github.com/andy013/votehud_custom_font)
   — Uses a custom font on the Vote HUD to show the invisible characters that bots use in their name
+
+* [serveme.tf](https://serveme.tf/)
+  — The easiest way to get a TF2 server
+
+* [Loadout.tf](https://loadout.tf/)
+  — Preview cosmetic loadouts
+
+* [Weapons.tf](https://weapons.tf/)
+  — Preview decorated weapons
+
+* [MvM.tf](https://mvm.tf/)
+  — MvM wave generator
