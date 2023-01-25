@@ -1,4 +1,4 @@
-# Keeping your HUD Animations up to date using hudanimations_manifest.txt
+# Using the HUD Animations Manifest
 
 _Originally posted by omnibombulator on huds.tf_
 

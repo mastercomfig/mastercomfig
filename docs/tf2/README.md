@@ -1,3 +1,7 @@
+---
+description: Learn more about various technical details in TF2 itself.
+...
+
 # TF2 Documentation
 
 mastercomfig is a project based upon learning more about the game, and using that knowledge to empower the community with an enhanced experience.
