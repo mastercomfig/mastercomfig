@@ -42,4 +42,4 @@ Another popular aspect of customization for TF2 is custom HUDs, which enable com
 
 The HUD uses a vast system called VGUI2, and it is documented by many HUD authors:
 
-[Visit the HUD documentation hub for more information](hud/index.md)
+[Visit the HUD documentation hub for more information](huds/index.md)
