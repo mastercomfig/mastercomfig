@@ -47,6 +47,11 @@ nav:
     - Launch Options - Linux: tf2/launchopts_linux.md
     - String Commands: tf2/strcmds.md
     - Silly Launch Options: tf2/silly_launch_options.md
+    - HUD Documentation:
+      - HUD Documentation: tf2/huds/index.md
+      - HUD Animations: tf2/huds/hud_animations.md
+      - HUD Crosshairs: tf2/huds/hud_crosshairs.md
+      - Custom Intro Video: tf2/huds/custom_intro_vid.md
   - Other Games:
     - Other Games: other/README.md
     - Epic Games Store: other/egs.md
