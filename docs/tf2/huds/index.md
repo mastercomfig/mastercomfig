@@ -35,6 +35,7 @@ The HUD uses a vast system called VGUI2, and it is documented by many HUD author
 * [clovervidia's captions tutorial](https://steamcommunity.com/sharedfiles/filedetails/?id=167785751#291466) - Get started with modifying the closed captions HUD
 * [Hypnotize's TF2 HUD Crosshairs](https://github.com/Hypnootize/TF2-Hud-Crosshairs) - A font-based HUD crosshairs pack which is easy to integrate into a HUD
 * [Hypnotize's TF2 HUD Icons](https://github.com/Hypnootize/TF2-HUD-Icons) - An icon font, easily integrated into a HUD for various UI elements
+* [Jakadak's TF2 extended fonts](https://github.com/jakadak/TF2-extended-fonts) - Extended vanilla TF2 fonts
 
 ## File repositories
 
@@ -52,12 +53,13 @@ To get started with your own HUD, you'll need to base your HUD off of the game's
 * [VTFEdit](https://developer.valvesoftware.com/wiki/VTFEdit)
 * [VTF Plugins for Photoshop and Paint.NET](https://gamebanana.com/tools/6791)
 * [VTF Plugin for GIMP](https://github.com/Artfunkel/gimp-vtf)
-* [CriticalFlaw's HUD Editor](https://www.criticalflaw.ca/TF2HUD.Editor/)
+* [TF2 HUD Editor](https://www.criticalflaw.ca/TF2HUD.Editor/)
 * [Revan's HUD Merger](https://github.com/cooolbros/hud-merger)
 
 ### Text editors
 
 * [Visual Studio Code](https://code.visualstudio.com/)
+  * [Revan's VDF extension](https://marketplace.visualstudio.com/items?itemName=pfwobcke.vscode-vdf)
 * [Notepad++](https://notepad-plus-plus.org/)
 * [Sublime Text](https://www.sublimetext.com/)
 
