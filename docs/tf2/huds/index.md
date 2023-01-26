@@ -15,6 +15,7 @@ The HUD uses a vast system called VGUI2, and it is documented by many HUD author
 * [Flame's Guide to HUDs](https://issuu.com/stefanbunduc/docs/flamehud) - A PDF guide that goes over common HUD elements
 * Boen's Guide to HUDs - [Part 1](https://mods.fightingamphibians.org/hud1.png) and [Part 2](https://mods.fightingamphibians.org/hud2.jpg)
 * [Revan's resource file list](https://github.com/cooolbros/tf2-res-file-list) - A list of HUD elements with images and how to edit them
+* [Whisker's SourceScheme Documentation](https://imgur.com/a/kRyiWE2) - A step by step visualizataion on to customize Source Scheme (the game UI in menus like the server browser)
 * [HUD Animations](hud_animations.md) - How to use the manifest to easily modify HUD animations
 * [HUD Crosshair Guide](hud_crosshairs.md) - Everything about custom crosshairs
 * [Installing Font Crosshairs](font_crosshairs.md) - How to install a font crosshair into an existing HUD
@@ -33,6 +34,7 @@ The HUD uses a vast system called VGUI2, and it is documented by many HUD author
 * [Hypnotize's TF2 HUD Updating Guide](https://github.com/Hypnootize/Huds-Update-Guide) - Learn how to quickly get your HUD up to date with the game as it updates
 * [clovervidia's captions tutorial](https://steamcommunity.com/sharedfiles/filedetails/?id=167785751#291466) - Get started with modifying the closed captions HUD
 * [Hypnotize's TF2 HUD Crosshairs](https://github.com/Hypnootize/TF2-Hud-Crosshairs) - A font-based HUD crosshairs pack which is easy to integrate into a HUD
+* [Hypnotize's TF2 HUD Icons](https://github.com/Hypnootize/TF2-HUD-Icons) - An icon font, easily integrated into a HUD for various UI elements
 
 ## File repositories
 
@@ -44,12 +46,14 @@ To get started with your own HUD, you'll need to base your HUD off of the game's
 
 ## Helpful Development Tools
 
-### Modding tools
+### Editing tools
 
 * [GCFScape](https://developer.valvesoftware.com/wiki/GCFScape)
 * [VTFEdit](https://developer.valvesoftware.com/wiki/VTFEdit)
 * [VTF Plugins for Photoshop and Paint.NET](https://gamebanana.com/tools/6791)
 * [VTF Plugin for GIMP](https://github.com/Artfunkel/gimp-vtf)
+* [CriticalFlaw's HUD Editor](https://www.criticalflaw.ca/TF2HUD.Editor/)
+* [Revan's HUD Merger](https://github.com/cooolbros/hud-merger)
 
 ### Text editors
 
