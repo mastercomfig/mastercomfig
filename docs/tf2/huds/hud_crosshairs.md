@@ -366,34 +366,25 @@ As a side note, all of what I'm saying below about VTFEdit is applicable to all 
 
 ##### Import Settings
 
-**Normal Format:** DXT5
-**Alpha Format:** DXT5
+**Normal Format:** DXT5  
+**Alpha Format:** DXT5  
 **Texture Type:** shouldn't really matter for most, use "Environment Map" just in case.
-
 
 Resizing is interesting. VTF files need to have specific dimensions. They need to be a square power of 2. Remember above, when I said to create the new file to have a square power of 2? 1024x1024 or 512x512? This was why. The ideal scenario is that you did as I suggested, in which case your crosshair will not be distorted at all.
 
-**Resize:** un-tick
-
-**Resize Filter:** n/a
-
-**Sharpen Filter:** n/a
-
+**Resize:** un-tick  
+**Resize Filter:** n/a  
+**Sharpen Filter:** n/a  
 
 If you used someone else's image, or for whatever reason the dimensions are wrong/not a square power of 2, then you will want to use these settings below.
 
-**Resize:** Nearest power of 2
+**Resize:** Nearest power of 2  
+**Resize Filter:** Box  
+**Sharpen Filter:** None  
 
-**Resize Filter:** Box
-
-**Sharpen Filter:** None
-
-
-**Clamp:** un-tick
-
-**Mipmaps:** un-tick
-
-**Normal Maps:** un-tick
+**Clamp:** un-tick  
+**Mipmaps:** un-tick  
+**Normal Maps:** un-tick  
 
 To confirm, it should look like this:
 
@@ -403,19 +394,13 @@ Now you are done with Import Settings and can hit "OK". The next thing you need 
 
 ##### Flag Settings
 
-**point-sample**
-
-**SRGB**
-
-**Clamp-s**
-
-**Clamp-t**
-
-**no mipmaps**
-
-**no level of detail**
-
-**8-bit alpha**
+**point-sample**  
+**SRGB**  
+**Clamp-s**  
+**Clamp-t**  
+**no mipmaps**  
+**no level of detail**  
+**8-bit alpha**  
 
 Then click on "save as" and name it whatever you wish. The `.vtf` will eventually need to be placed in `custom/<any folder name>/materials/vgui/replay/thumbnails` (this is because for whatever reason that file directory is not checked by `sv_pure` so it will work on any server, so you can save it there now if you wish. Now you're done with the `.vtf`!
 
