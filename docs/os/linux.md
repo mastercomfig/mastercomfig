@@ -48,13 +48,11 @@ The Linux kernel supports multiple I/O scheduler algorithms for storage devices 
 
 See the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Sysctl#Virtual_memory) for information about improving virtual memory parameters.
 
-## Native Libraries
+## Fixing bugs with newer SDL2
 
-Using native libraries can benefit performance, alongside fixing mouse sensitivity issues and providing better Wayland support.
-The automatic Steam runtime host library pinning is not enough to use native libraries on TF2 as the game's launcher script shades in some libraries by itself. In order to force TF2 to use a native library, the built-in library must be deleted and the system libraries have to be manually pinned to the runtime.
+Using a newer version of libSDL2 can help fix issues with things such as mouse sensitivity, rendering, and support for newer display servers. The automatic Steam runtime host library pinning is not enough to use native libraries on TF2 as the game’s launcher script shades in some libraries by itself. In order to force TF2 to use the newer library, the built-in library must be deleted and the system library has to be manually pinned to the runtime.
 
-An example of a library that benefits greatly from this approach is SDL2. To use a native version of SDL2, go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0` (this will cause TF2 to fallback to the Steam Linux Runtime).
-Then, install a 32-bit version of SDL2 and pin the library to the runtime using one of these commands, depending on your distribution:
+To do this, go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0` (this will cause TF2 to fallback to the Steam Linux Runtime). Then, install a 32-bit version of SDL2 and pin the library to the runtime using one of these commands, depending on your distribution:
 
 !!! warning
     When using Wayland, ```SDL_VIDEODRIVER=x11 %command%``` will need to be prepended to your launch options to avoid rendering issues
