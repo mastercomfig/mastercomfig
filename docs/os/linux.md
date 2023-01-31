@@ -54,8 +54,8 @@ Using a newer version of libSDL2 can help fix issues with things such as mouse s
 
 To do this, go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0` (this will cause TF2 to fallback to the Steam Linux Runtime). Then, install a 32-bit version of SDL2 and pin the library to the runtime using one of these commands, depending on your distribution:
 
-!!! warning
-    When using Wayland, ```SDL_VIDEODRIVER=x11 %command%``` will need to be prepended to your launch options to avoid rendering issues
+!!! note
+    If you encounter any rendering issues or crashing when running under wayland, prepending ```SDL_VIDEODRIVER=x11 %command``` to your launch options may help
     
 !!! note
     Users of the Flatpak version of Steam will not have to install a 32-bit version of SDL2 as the runtime already has a sufficient version pinned. Only removing the built-in version of SDL2 is required.
