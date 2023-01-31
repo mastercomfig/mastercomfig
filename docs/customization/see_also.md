@@ -8,6 +8,9 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 
 ## HUD
 
+* [comfig huds](https://comfig.app/huds)
+ — An alternative HUDs directory after huds.tf shut down
+
 * [HUD Editor](https://www.criticalflaw.ca/TF2HUD.Editor/)
   — A tool for editing HUDs
 
