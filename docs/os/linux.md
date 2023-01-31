@@ -78,3 +78,7 @@ Fedora:
 sudo dnf install SDL2.i686
 ln -s /usr/lib/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/"
 ```
+
+## Game crashes when using a NVIDIA card
+
+There have been [issues](https://github.com/ValveSoftware/Source-1-Games/issues/4553) with NVIDIA driver version >= 525.60.11 reported by users that causes the game to crash on startup. It is unknown what causes this, and until then it is recommended to downgrade the NVIDIA driver to 520.56.60 or lower to prevent this from occuring.
