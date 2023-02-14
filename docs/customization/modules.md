@@ -700,7 +700,7 @@ Default setting: **`hud_panels=high`** (all presets, except Low and Very Low).
 
 ### Avatars
 
-Controls the display of target ID avatars.
+Controls the display of target ID avatars when floating health bars are enabled.
 
 * **CPU usage:** low
 * **GPU usage:** none
