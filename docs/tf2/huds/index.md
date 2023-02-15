@@ -11,7 +11,7 @@ The HUD uses a vast system called VGUI2, and it is documented by many HUD author
 ## Text guides
 
 * [JarateKing HUD reference](https://github.com/JarateKing/TF2-Hud-Reference) - A great reference for all sorts of HUD editing, both from the basics to clever advanced and technical aspects
-* [DoodleStuff TF2 HUD Editing Guide](http://doodlesstuff.com/?p=tf2hud&page=preface) - A well known, easy to use guide that goes over how to get familiar with most of HUD editing
+* [DoodleStuff TF2 HUD Editing Guide](http://doodlesstuff.com/?p=tf2hud) - A well known, easy to use guide that goes over how to get familiar with most of HUD editing
 * [Flame's Guide to HUDs](https://issuu.com/stefanbunduc/docs/flamehud) - A PDF guide that goes over common HUD elements
 * Boen's Guide to HUDs - [Part 1](https://mods.fightingamphibians.org/hud1.png) and [Part 2](https://mods.fightingamphibians.org/hud2.jpg)
 * [Revan's resource file list](https://github.com/cooolbros/tf2-res-file-list) - A list of HUD elements with images and how to edit them
@@ -29,28 +29,31 @@ The HUD uses a vast system called VGUI2, and it is documented by many HUD author
 * [kermit's HudPlayerHealth.res tutorial](https://www.youtube.com/watch?v=w2NHpSC-0cw)
 * [kermit's Updating HUDs tutorial](https://www.youtube.com/watch?v=9dGTcZ1apeI)
 
-## Other resources
+## Other guides
 
 * [Hypnotize's TF2 HUD Updating Guide](https://github.com/Hypnootize/Huds-Update-Guide) - Learn how to quickly get your HUD up to date with the game as it updates
 * [clovervidia's captions tutorial](https://steamcommunity.com/sharedfiles/filedetails/?id=167785751#291466) - Get started with modifying the closed captions HUD
-* [Hypnotize's TF2 HUD Crosshairs](https://github.com/Hypnootize/TF2-Hud-Crosshairs) - A font-based HUD crosshairs pack which is easy to integrate into a HUD
-* [Hypnotize's TF2 HUD Icons](https://github.com/Hypnootize/TF2-HUD-Icons) - An icon font, easily integrated into a HUD for various UI elements
-* [Jakadak's TF2 extended fonts](https://github.com/jakadak/TF2-extended-fonts) - Extended vanilla TF2 fonts
+* [Whisker's Guide on Finding HUD Elements](https://github.com/rbjaxter/budhud/wiki/Finding-Elements)
+* [Whisker's Guide on HUD Elements Positioning](https://github.com/rbjaxter/budhud/wiki/Element-Positioning)
+* [Whisker's Guide on Adding and Replacing Fonts](https://github.com/rbjaxter/budhud/wiki/Adding---Replacing-Custom-Fonts)
 
-## File repositories
+## File resources
 
-To get started with your own HUD, you'll need to base your HUD off of the game's files, or use another HUD (with appropriate permission).
+To get started with your own HUD, you'll need to base your HUD off of the game's files, use another HUD (with appropriate permission), or you can use some helpful utilities from the community.
 
 * [SteamDatabase Default TF2 Files](https://github.com/SteamDatabase/GameTracking-TF2) - Raw, automatically updated files extracted straight from the game
 * [JarateKing BaseHud](https://github.com/JarateKing/BaseHud) - A set up starting point for creating custom HUDs
 * [Default TF2 HUD files](https://github.com/Hypnootize/TF2-Default-Hud) - Default HUD files for TF2 collected from the game
+* [Hypnotize's TF2 HUD Crosshairs](https://github.com/Hypnootize/TF2-Hud-Crosshairs) - A font-based HUD crosshairs pack which is easy to integrate into a HUD
+* [Hypnotize's TF2 HUD Icons](https://github.com/Hypnootize/TF2-HUD-Icons) - An icon font, easily integrated into a HUD for various UI elements
+* [Jakadak's TF2 extended fonts](https://github.com/jakadak/TF2-extended-fonts) - Extended vanilla TF2 fonts
 
 ## Helpful Development Tools
 
 ### Editing tools
 
 * [GCFScape](https://developer.valvesoftware.com/wiki/GCFScape)
-* [VTFEdit](https://developer.valvesoftware.com/wiki/VTFEdit)
+* [VTFEdit Reloaded](https://gamebanana.com/tools/10059)
 * [VTF Plugins for Photoshop and Paint.NET](https://gamebanana.com/tools/6791)
 * [VTF Plugin for GIMP](https://github.com/Artfunkel/gimp-vtf)
 * [TF2 HUD Editor](https://www.criticalflaw.ca/TF2HUD.Editor/)
