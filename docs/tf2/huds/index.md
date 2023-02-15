@@ -22,6 +22,12 @@ The HUD uses a vast system called VGUI2, and it is documented by many HUD author
 * [Custom video intro](custom_intro_vid.md) - How to add a custom intro video for game launches
 * [Particle Effects on Main Menu](particle_effects.md) - How to add any particle effect to the main menu
 
+## Installation guides
+
+* [Windows](https://github.com/Hypnootize/TF2-Hud-Installation-Guides/blob/master/Hud%20Installation%20For%20Windows.md)
+* [Linux](https://github.com/Hypnootize/TF2-HUD-Installation-Guides/blob/master/Hud%20Installation%20For%20Linux.md)
+* [macOS](https://github.com/Hypnootize/TF2-HUD-Installation-Guides/blob/master/Hud%20Installation%20For%20Mac.md)
+
 ## Video tutorials
 
 * [Rays' TF2 HUD From Scratch Tutorials](https://www.youtube.com/playlist?list=PL5eNrB8RrXXuV3P1nv6NnwF-tCL_KnJIs)
