@@ -334,7 +334,7 @@ Default setting: **`motion_blur=off`** (all presets).
 Controls MSAA anti-aliasing.
 
 !!! warning
-    On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
+    On Linux and macOS, enabling causes TF2 to do a slow full clear on AMD cards!
 
 !!! warning
     On Linux, enabling may cause rendering errors with Wayland.
