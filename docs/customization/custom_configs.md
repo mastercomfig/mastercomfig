@@ -125,8 +125,8 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 
 ### General
 
-* `debug_output`: Enable developer-only output (`debug_output_1`). Shows various warnings about potential issues and outputs console output to the corner of the screen.
-* `debug_output_toggle`: Cycle through all 4 modes (including disabled) for developer only output. Different modes display different amounts of information.
+* `debug_output`: Enable developer-only output (`debug_output_1`). It shows various warnings about potential issues and outputs console output to the corner of the screen.
+* `debug_output_toggle`: Cycle through all four modes (including disabled) for developer only output. Different modes display different amounts of information.
 * `debug_output_display`: Display console output in the corner of the screen without showing additional information.
 * `debug_output_1`: Enable developer-only output level 1.
 * `debug_output_2`: Enable developer-only output level 2, which displays more information.
@@ -147,8 +147,8 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 
 ### Sound
 
-* `debug_sound_loads`: Dumps the current state of the sound memory pool, and enables debug output for sound loads.
-* `debug_sound_dsp`: Enables debug output of DSP parameters of sounds, and enables visualization for automatic room DSP, if it is enabled.
+* `debug_sound_loads`: Dumps the current state of the sound memory pool and enables debug output for sound loads.
+* `debug_sound_dsp`: Enables debug output of DSP parameters of sounds and enables visualization for automatic room DSP.
 
 ### Network
 * `debug_network_packets`: Enables spew of each network packet sent and received, including compression information if relevant.
@@ -164,6 +164,6 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 ### Profiling
 
 * `debug_vprof_spikes`: Logs spikes below 100FPS (can be adjusted with `alias debug_vprof_spike"vprof_dump_spikes 100"`) to `tf/vprof_spikes.log` (can be adjusted with `alias debug_vprof_log_spike"con_logfile vprof_spike.log"`).
-* `debug_vprof_dump`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). Can be re-run to reset timings data.
-* `debug_vprof_report`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). Can be re-run to reset timings data.
+* `debug_vprof_dump`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). It can be re-run to reset timings data.
+* `debug_vprof_report`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). It can be re-run to reset timings data.
 * `debug_vprof_off`: Turns off profiling.
