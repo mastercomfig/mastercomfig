@@ -54,8 +54,8 @@ Using a newer version of libSDL2 can help fix issues with things such as mouse s
 
 To do this, go to `TF2_FOLDER/bin` and delete `libSDL2-2.0.so.0` (this will cause TF2 to fallback to the Steam Linux Runtime). Then, install a 32-bit version of SDL2 and pin the library to the runtime using one of these commands, depending on your distribution:
 
-!!! warning
-    When using Wayland, ```SDL_VIDEODRIVER=x11 %command%``` will need to be prepended to your launch options to avoid rendering issues
+!!! note
+    If you encounter any rendering issues or crashing when running under Wayland, prepending ```SDL_VIDEODRIVER=x11 %command%``` to your launch options may help
     
 !!! note
     Users of the Flatpak version of Steam will not have to install a 32-bit version of SDL2 as the runtime already has a sufficient version pinned. Only removing the built-in version of SDL2 is required.
@@ -78,3 +78,7 @@ Fedora:
 sudo dnf install SDL2.i686
 ln -s /usr/lib/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pinned_libs_32/"
 ```
+
+## Game crashes when using a NVIDIA card
+
+There have been [issues](https://github.com/ValveSoftware/Source-1-Games/issues/4553) with NVIDIA driver version >= 525.60.11 reported by users that causes the game to crash on startup. It is unknown what causes this, and until then it is recommended to downgrade the NVIDIA driver to 520.56.60 or lower to prevent this from occuring.

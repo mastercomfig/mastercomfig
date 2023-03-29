@@ -276,7 +276,7 @@ To successfully package presets and addons you need:
 * [VPK](https://developer.valvesoftware.com/wiki/VPK#Linux_.2F_Unix)
 
 * [gh](https://cli.github.com)
-  * You must authenticate beforehand, for example using [gh auth login](https://cli.github.com/manual/gh_auth_login), or the `GH_TOKEN` env var
+    * You must authenticate beforehand, for example using [gh auth login](https://cli.github.com/manual/gh_auth_login), or the `GH_TOKEN` env var
 
 * GNU parallel (optional)
 
