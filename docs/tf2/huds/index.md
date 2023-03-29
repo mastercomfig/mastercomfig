@@ -68,7 +68,7 @@ To get started with your own HUD, you'll need to base your HUD off of the game's
 ### Text editors
 
 * [Visual Studio Code](https://code.visualstudio.com/)
-  * [Revan's VDF extension](https://marketplace.visualstudio.com/items?itemName=pfwobcke.vscode-vdf)
+    * [Revan's VDF extension](https://marketplace.visualstudio.com/items?itemName=pfwobcke.vscode-vdf)
 * [Notepad++](https://notepad-plus-plus.org/)
 * [Sublime Text](https://www.sublimetext.com/)
 
