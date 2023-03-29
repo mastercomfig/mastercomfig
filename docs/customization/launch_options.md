@@ -4,8 +4,9 @@ description: Tune Team Fortress 2 and mastercomfig further with launch options.
 
 # Launch Options
 
-Right-click Team Fortress 2 in your Steam library and click **Properties...**. In the window that appears, under **Launch Options**, remove
-anything that's in there and paste
+Right-click Team Fortress 2 in your Steam library and click **Properties...**. 
+In the window that appears, under **Launch Options**, remove anything that's in
+there and paste
 
 ```c
 -novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime

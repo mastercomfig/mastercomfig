@@ -23,14 +23,14 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 ## Viewmodels
 
 * [Paysus Animation Overhauls](https://steamcommunity.com/groups/PaysusSkins)
-  — First person animation mods which greatly enhance the animations
+  — First-person animation mods which greatly enhance the animations
 
 * [yttrium's viewmodels](https://github.com/Yttrium-tYcLief/CompVMInstaller/releases/latest)
   — Customize hiding individual viewmodels
 
 !!! info
 
-    yttrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. You may delete it if you want, since it is not used and not needed. Use the **`dynamic_background=preload`** module instead.
+    yttrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. You may delete it if you want since it is not used and not needed. Use the **`dynamic_background=preload`** module instead.
 
 * [Horsie's Viewmodel Editor](https://github.com/a-horsey/horsies-viewmodel-editor)
   — Edit your viewmodels however you want
@@ -63,7 +63,7 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 ## Scripts
 
 * [Scripting reference](https://wiki.teamfortress.com/wiki/Scripting)
-  — Scripting documentation and reference for binds and other information for making your own scripts
+  — Scripting documentation and reference for binds and other information for making your scripts
 
 * [Common scripts/binds](https://www.reddit.com/r/tf2scripthelp/wiki/commonscripts) and [Innovative scripts](https://www.reddit.com/r/tf2scripthelp/wiki/innovativescripts/)
   — Some common and useful scripts/binds from the TF2 Script Help subreddit

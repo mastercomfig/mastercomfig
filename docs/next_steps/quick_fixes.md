@@ -75,7 +75,7 @@ Optionally, you may delete any `autoexec.cfg` files created automatically in TF2
 
 ## TF2 crashing on a custom map
 
-If TF2 is crashing to desktop after a custom map loading or after picking a class on a custom map, add `lighting_ex=high` to your `modules.cfg`.
+If TF2 crashes to desktop after a custom map loading or after picking a class on a custom map, add `lighting_ex=high` to your `modules.cfg`.
 
 The crashes are caused by lightmapped props and phong must be enabled to allow the map to load properly. No Valve map uses lightmapped props, excluding `rd_asteroid`.  
 More information at [TF2Maps](https://tf2maps.net/threads/guide-prop-lightmaps.24682/).
@@ -100,26 +100,26 @@ Ignore these, as these happen in a clean TF2 installation and only Valve can fix
 
 **To summarize:** mastercomfig has the (currently known) best interp values, and you really shouldn't mess with them unless you know _exactly_ what you're doing.
 
-mastercomfig sets optimal interp values. Interp is a low-level networking setting which controls how incoming packets are used by the client. Packets have an inherent delay, and may not come at all due to issues along your route, low server framerate, server framerate variance, and ping fluctuations. Interp is a very sensitive networking setting which tunes your buffer for incoming packets. If you set it too low, you will get networking errors, resulting in worse hitreg, because of trying to use game packets which have not come in yet.
+mastercomfig sets optimal interp values. Interp is a low-level networking setting that controls how incoming packets are used by the client. Packets have an inherent delay and may not come at all due to issues along your route, low server framerate, server framerate variance, and ping fluctuations. Interp is a very sensitive networking setting that tunes your buffer for incoming packets. If you set it too low, you will get networking errors, resulting in worse hitreg because of trying to use game packets that have not come in yet.
 
-Imagine it like controlling the size of the gray bar in YouTube. If you set it too high, your video playback will be delayed. If you set it too low, then you will be constantly encountering freezing in video playback as the video download tries to keep up with playback. In the case of TF2, when the client needs to use a new server game packet when there is not one, it will instead extrapolate movement based on previous data, assuming that everything is continuing on its same path, which can be wildly inaccurate.
+Imagine it like controlling the size of the gray bar on YouTube. If you set it too high, your video playback will be delayed. If you set it too low, then you will constantly encounter freezing in video playback as the video download tries to keep up with playback. In the case of TF2, when the client needs to use a new server game packet when there is not one, it will instead extrapolate movement based on previous data, assuming that everything is continuing on its same path, which can be wildly inaccurate.
 
-If you are worried about the delay being high, rest assured that the tick delay caused by interpolation is compensated for the following: hitscan, melee, backstabs, flamethrower and the Medigun. Projectiles are simulated on the server, and thus are not compensated. Projectile spawns and despawns are not interpolated, which means that you may notice a client-side delay in projectiles exiting your barrel and subsequently impacting the target. In a game like TF2, this is not a huge issue, and you should be more worried about the accuracy of game state rather than a few milliseconds of client-side delay.
+If you are worried about the high delay, rest assured that the tick delay caused by interpolation is compensated for the following: hitscan, melee, backstabs, and the Medi Gun. Projectiles are simulated on the server and thus are not compensated. Projectile spawns and despawns are not interpolated, which means you may notice a client-side visual delay in projectiles exiting your barrel and subsequently impacting the target. In a game like TF2, this is not a huge issue, and you should be more worried about the accuracy of the game state rather than a few milliseconds of client-side delay.
 
-Now having said all that, you still have the option to change interp if you really want to and understand what you're doing. The best way to change interp is to use the snapshot buffer module, which has a few preset values for the most common use case of higher than normal packet loss. If you want a specific interp value, the best place to set it is in `autoexec.cfg` (make sure it is in the `overrides` folder), like so:
+Now having said all that, you still have the option to change interp if you want to and understand what you're doing. The best way to change interp is to use the snapshot buffer module, which has a few preset values for the most common use case of higher-than-normal packet loss. If you want a specific interp value, the best place to set it is in `autoexec.cfg` (make sure it is in the `overrides` folder), like so:
 
 ```c
 cl_interp_ratio x
 cl_interp x
 ```
 
-And then put this in `modules.cfg`:
+Then put this in `modules.cfg`:
 
 ```c
 snapshot_buffer=custom
 ```
 
-One other thing to note is that client interp is determined by whichever is the greater of cl_interp_ratio divided by cl_updaterate, and the value of cl_interp. cl_interp_ratio and cl_interp have no interaction beyond that.
+One other thing to note is that client interp is determined by whichever is the greater of `cl_interp_ratio` divided by `cl_updaterate`, and the value of `cl_interp`. `cl_interp_ratio` and `cl_interp` have no interaction beyond that.
 
 ## Scottish Resistance stickybombs have no outline
 
@@ -130,11 +130,11 @@ On some mastercomfig presets, outlines are disabled. The outline settings includ
 
 ## I have red bullet holes on wood
 
-This is caused by a bug in TF2, where wood props do not look up the correct decal texture when prop decals are disabled, and instead display the red ERROR texture. Put `r_decalstaticprops 1` in your `autoexec.cfg` to enable prop decals and avoid this bug, at the cost of some performance.
+This is caused by a bug in TF2, where wood props do not look up the correct decal texture when prop decals are disabled and instead display the red ERROR texture. Put `r_decalstaticprops 1` in your `autoexec.cfg` to enable prop decals and avoid this bug at the cost of some performance.
 
 ## I switched from Very Low to another preset but some settings persist
 
-Run `very_low_reset` on the console. It will reset the remaining settings that were left saved in your game.
+Enter `very_low_reset` into the console. It will reset the remaining settings that were left saved in your game.
 
 Please note that running this may reset some personal preferences back to default.
 

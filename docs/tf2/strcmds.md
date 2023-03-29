@@ -20,7 +20,7 @@ There are a few types of client string commands:
 
 ## List of client string commands
 
-* `killtarget`: destroys an entity target by name/classname or uses picker. Only works with `developer 1` and `sv_cheats 1` and when executed as the server host.
+* `killtarget`: destroys an entity target by name/classname or uses picker. Only works with `developer 1` and `sv_cheats 1` when executed as the server host.
 * `demorestart`: requests a full update packet from the server
 * `fade`: fades the screen to a black tint
 * `te`: spawns a test temp ent. Requires `sv_cheats 1`.
@@ -35,7 +35,7 @@ There are a few types of client string commands:
 * `tournament_player_readystate`: set yourself as ready.
 * `nextmap`: tells you the next map.
 * `timeleft`: tells you the time left for the map.
-* `ignoremsg`: says what chat messages to ignore. cycles between ignore none, ignore all and ignore team.
+* `ignoremsg`: says what chat messages to ignore. cycles between ignore none, ignore all, and ignore team.
 * `addcond`: adds player condition [by ID](https://wiki.teamfortress.com/wiki/Cheats#addcond)
 * `removecond`: removes player condition by ID.
 * `jointeam`: specify the team to change to, limited to every 2 seconds
