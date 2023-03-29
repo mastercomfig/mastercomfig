@@ -20,10 +20,10 @@ If there's something you'd like to run for all of your class configs, you can ad
 
 ## Utility Commands
 
-* `run_modules`: Applies modules. Useful for changing module levels in-game, and then applying them all at once.
-* `apply_overrides`: Runs user modules, applies modules and then runs user autoexec. Useful for changing your user overrides in-game.
-* `restore_preset`: Restores modules back to preset defaults, without using user overrides.
-* `restore_config`: Runs all of mastercomfig and user overrides again, resetting changes made in-game.
+* `run_modules`: Applies modules. Useful for changing module levels in-game and then applying them all at once.
+* `apply_overrides`: Runs user modules, applies modules, and then runs user autoexec. Useful for changing your user overrides in-game.
+* `restore_preset`: Restores modules to preset defaults without using user overrides.
+* `restore_config`: Runs all of mastercomfig, and user overrides again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
 * `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
 
@@ -32,7 +32,7 @@ If there's something you'd like to run for all of your class configs, you can ad
 Some modules set something called game overrides, which apply settings that override map or in-game only settings that can't be applied at launch.
 
 If you want to override this part of the module, you will have to use their game override alias in `tf/cfg/overrides/autoexec.cfg`. This is comprised of
-a override alias, which is run during game overrides, and an override option, which actually contains the settings which is run by the override alias.
+an override alias, which is run during game overrides, and an override option, which contains the settings which are run by the override alias.
 
 * `shadows`: Uses `shadowlod_override` to control the model quality shadows render with
     * `shadowlod_low`: Uses the lowest model quality to render shadows
@@ -57,7 +57,7 @@ These aliases are used by mastercomfig to apply network settings per class (as l
 
 You can run them manually in your class config if you play a subclass, like Demoknight (`net_hitscan`) or Huntsman (`net_projectiles`).
 
-You can also re-alias them to use your own network settings.
+You can also re-alias them to use entirely custom network settings.
 
 * `net_projectiles`: Alias for network settings on projectile classes (Soldier, Pyro, Demoman, Medic) (`snapshot_buffer_low`).
 * `net_hitscan`: Alias for network settings on hitscan classes (Scout, Heavy, Engineer, Sniper) (`snapshot_buffer_safe`).
@@ -76,7 +76,7 @@ mastercomfig supports selecting a preset after download. Add a file to your `ove
 * low
 * very-low
 
-You can check the current selected preset by entering `preset_level` into console.
+You can check the current selected preset by entering `preset_level` into the console.
 
 ## Optional Aliases
 
@@ -86,7 +86,7 @@ You can check the current selected preset by entering `preset_level` into consol
 You can change the name of your `overrides/modules.cfg` using the `modules_c` alias.
 This means your override preferences can have multiple different options, sort of like presets, but for your own preferences! Change these aliases
 in-game and use the `apply_overrides` command to apply your new user overrides. This can be used for having different quality choices or game configurations for
-different scenarios or mood.
+different scenarios or moods.
 
 You can change the name of your custom class configs using the `class_config_classname` alias.
 For example, you can put `alias class_config_heavyweapons"exec overrides/myheavy.cfg"` in `tf/cfg/overrides/autoexec.cfg` if you want to use the file `tf/cfg/overrides/myheavy.cfg` for Heavy.
@@ -97,17 +97,17 @@ For example, you can put `alias game_overrides_c"exec overrides/mygameoverrides.
 You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
 
-If you want to run something only the first time you spawn and never run again while you keep the game open use the `game_overrides_once_c` alias.
+If you want to run something only the first time you spawn and never run again while you keep the game open, use the `game_overrides_once_c` alias.
 
 ## Advanced Customization
 
-When diving deep into customization the core of mastercomfig, you may find it useful to run things directly before and after mastercomfig's `comfig.cfg`, which provides core functionality and aliases.
+When diving deep into customization of the core of mastercomfig, you may find it useful to run things directly before and after mastercomfig's `comfig.cfg`, which provides core functionality and aliases.
 
 You can use `overrides/pre_comfig.cfg` to run things before `comfig.cfg`, and `overrides/setup_hook.cfg` to run things after `comfig.cfg`.
 
-Examples of `overrides/pre_comfig.cfg` uses can be things like customizing your preset like detailed above, or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
+Examples of `overrides/pre_comfig.cfg` uses can be things like customizing your preset detailed above or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
 
-Uses of `overrides/setup_hook.cfg` are rarer, but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, or customizing the built-in ones, and more!
+Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, customizing the built-in ones, and more!
 
 ## Optional User Config Template
 
@@ -125,11 +125,11 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 
 ### General
 
-* `debug_output`: Enable developer only output (`debug_output_1`). Shows various warnings about potential issues, and outputs console to the corner of the screen.
+* `debug_output`: Enable developer-only output (`debug_output_1`). Shows various warnings about potential issues and outputs console output to the corner of the screen.
 * `debug_output_toggle`: Cycle through all 4 modes (including disabled) for developer only output. Different modes display different amounts of information.
 * `debug_output_display`: Display console output in the corner of the screen without showing additional information.
-* `debug_output_1`: Enable developer only output level 1.
-* `debug_output_2`: Enable developer only output level 2, which displays more information.
+* `debug_output_1`: Enable developer-only output level 1.
+* `debug_output_2`: Enable developer-only output level 2, which displays more information.
 
 ### Gameplay Testing
 
