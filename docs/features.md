@@ -4,6 +4,8 @@ description: A list of all mastercomfig features.
 
 # Features
 
+This is a list of features that come out of the box with mastercomfig, so you can get an idea of what it can manage for you.
+
 ## Customization
 
 * Fully compatible with custom scripts and configs

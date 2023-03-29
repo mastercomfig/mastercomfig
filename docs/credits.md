@@ -31,7 +31,7 @@ Many people and organizations have helped or inspired mastercomfig in some way:
 
 * [Rhapsody](https://rhapsodysl.github.io/perfconfig/) for updating Chris' config
 
-* [JarateKing](https://github.com/JarateKing) for all their amazing work on TF2 modding and configuration
+* [JarateKing](https://github.com/JarateKing) for all their fantastic work on TF2 modding and configuration
 
 * jane for the shrinkKeyValues bash script
 

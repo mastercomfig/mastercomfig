@@ -4,9 +4,9 @@ description: Learn how to benchmark TF2 and measure FPS scientifically.
 
 # Benchmarks
 
-Benchmarking is the process through which you can scientifically measure the impact of changes to your system.
+Benchmarking is the process through which you can scientifically measure the impact of changes on your system.
 
-A large amount of benchmark data is crucial to ensuring that mastercomfig works on a wide variety of systems.
+A large amount of benchmark data is crucial to ensuring that mastercomfig works on various systems.
 
 Thus, it's highly appreciated to benchmark mastercomfig and any changes you make to it or your system, so we can better understand the impact of these.
 
