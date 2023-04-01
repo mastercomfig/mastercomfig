@@ -188,6 +188,7 @@ extra_javascript:
   - js/widescreen.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - js/tables.js
+  - js/third_party.js
 extra_css:
   - css/extra.css
 extra:
