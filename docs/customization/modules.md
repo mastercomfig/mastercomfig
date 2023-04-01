@@ -23,14 +23,14 @@ will set the texture quality to `high`.
 
 ## Hardware usage levels
 
-Each module comes listed with its usage intensity of the related feature, for both CPU (processor) and GPU (graphics card), ranging through none, low, medium, and high.
+Each module comes listed with its usage intensity of the related feature for both CPU (processor) and GPU (graphics card), ranging from none, low, medium, and high.
 
-This will give you a rough idea about which settings you can balance for your specific setup, and which settings adjustments can provide the highest impact.
-These usage levels are merely a relative estimate, and not a precise indicator of the performance impact.
+These estimates will give you a rough idea about which settings you can balance for your specific setup and which settings adjustments can provide the highest impact.
+These usage levels are merely a relative estimate, not a precise indicator of the performance impact.
 
 ## Check Module Level Selection
 
-You can check what module level you have selected for a module by entering `module_level` into console. For example, `textures_level` will output:
+You can check what module level you have selected for a module by entering `module_level` into the console. For example, `textures_level` will output:
 
 ```c
 textures=high
@@ -38,7 +38,7 @@ textures=high
 
 or similar.
 
-You can also view selected levels for all modules by entering `module_levels` into console.
+You can also view selected levels for all modules by entering `module_levels` into the console.
 
 ### Advanced
 
@@ -49,21 +49,21 @@ You can also view selected levels for all modules by entering `module_levels` in
 
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `overrides/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception for this rule is the Snapshot Buffer module. You will have to use `alias snapshot_buffer;alias net_projectiles;alias net_hitscan;alias net_spy` to fully disable it.
+If you want to disable running a module entirely, you can put (for example) `alias textures` in `overrides/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception to this rule is the Snapshot Buffer module. To fully disabled it, you must use `snapshot_buffer=custom`.
 
-Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup by entering `run_modules` into the console.
+Since module aliases act like normal commands, you can use them in the console to change game settings easily. For example, enter `textures_high` into the console to temporarily set your texture quality to high for that game session. You can reset your modules to what they were on startup by entering `run_modules` into the console.
 
 #### Module user layer alias
 
 The modules you choose in `overrides/modules.cfg` are executed by the `modules_c` alias.
 
-This means that you can change this alias in game, and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_overrides`.
+This means that you can change this alias in the game and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_overrides`.
 
 ## Networking modules
 
 ### SourceTV Compatibility
 
-Optimizes spectator view, or ensures compatibility with SourceTV.
+Optimizes spectator view or ensures compatibility with SourceTV.
 
 * **CPU usage:** none
 * **GPU usage:** none
@@ -99,19 +99,19 @@ Default setting: **`snapshot_buffer=auto`** (all presets).
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
 * **`snapshot_buffer=custom`**: Prevents mastercomfig from messing with interp.
-* **`snapshot_buffer=anim`**: Adjusts the smoothing to be more ideal for animations and NPCs, rather than for gameplay. You can use this for smoother offline recordings, singleplayer, etc.
+* **`snapshot_buffer=anim`**: Adjusts the smoothing to be ideal for animations and NPCs rather than gameplay. You can use this for smoother offline recordings, single-player, etc.
 
 ### Packet Size
 
-Controls how big packets are and how they are split up/compressed.
+Controls how big packets are and how they are split up/compressed. It's unlikely that you will ever need to change this setting.
 
 * **CPU usage:** low
 * **GPU usage:** none
 
 Default setting: **`packet_size=large`** (all presets).
 
-* **`packet_size=small`**: Uses the smallest packet size, that will most likely be processed by even the worst routers.
-* **`packet_size=conservative`**: Uses a smaller, safe packet size that will most likely be processed by most routers, even lower end ones.
+* **`packet_size=small`**: Uses the smallest packet size that even the worst routers will process.
+* **`packet_size=conservative`**: Uses a smaller, safe packet size that most routers will process.
 * **`packet_size=large`**: Uses the max recommended packet size by Steam to avoid split packets.
 
 ### Bandwidth
@@ -119,7 +119,7 @@ Default setting: **`packet_size=large`** (all presets).
 Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).
 
 !!! note
-    This does not increase data usage, only restricts how quickly data can be sent.
+    This does not increase data usage. It only restricts how quickly the game can send data.
 
 * **CPU usage:** low
 * **GPU usage:** none
@@ -148,7 +148,7 @@ Filters what custom content is allowed to be downloaded from the server.
 
 Default setting: **`download=auto`** (all presets).
 
-* **`download=auto`**: Whatever the user set in the game settings.
+* **`download=auto`**: Whatever the user sets in the game settings.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
@@ -172,7 +172,7 @@ Default setting: based on which preset you are currently using.
 
 ### Lighting
 
-Controls lighting fidelity: dynamic lights, how detailed lighting is, rimlights, light averaging, lightwarps, and ambient boost.
+Controls lighting fidelity: dynamic lights, detailed lighting, rimlights, light averaging, lightwarps, and ambient boost.
 
 * **CPU usage:** medium
 * **GPU usage:** high
