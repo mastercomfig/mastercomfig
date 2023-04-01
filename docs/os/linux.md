@@ -86,4 +86,4 @@ ln -s /usr/lib/libSDL2-2.0.so.0 "$HOME/.steam/root/ubuntu12_32/steam-runtime/pin
 
 ## Game crashes when using a NVIDIA card
 
-There have been [issues](https://github.com/ValveSoftware/Source-1-Games/issues/4553) with NVIDIA driver version >= 525.60.11 reported by users that cause the game to crash on startup. It is unknown what causes this, and until then, it is recommended to downgrade the NVIDIA driver to 520.56.60 or lower to prevent this from occurring.
+There have been [issues](https://github.com/ValveSoftware/Source-1-Games/issues/4553) reported by users with NVIDIA driver versions between 525.60.11 and 525.89.02-1 that cause the game to crash on startup. This was the result of a bug in NVIDIA's driver, which was fixed in 530.41.03. If unable to upgrade to this version, downgrading to 520.56.60 or lower is also an option.
