@@ -1,7 +1,11 @@
 const sidebar = document.querySelector(".md-sidebar");
 const sidebarScroll = document.querySelector(".md-sidebar__scrollwrap");
 if (sidebar) {
-  sidebarScroll.style.height = "70vh";
+  function updateScrollHeight() {
+    sidebarScroll.style.height = "70vh";
+    window.requestAnimationFrame(updateScrollHeight);
+  }
+  window.requestAnimationFrame(updateScrollHeight);
   const thirdPartyContainer = document.createElement("div");
   thirdPartyContainer.innerHTML = `
   <br/><br/>
