@@ -4,7 +4,7 @@ description: Learn how to get involved with mastercomfig and help out!
 
 # Contributing
 
-As an open source project, mastercomfig appreciates the community's help in improving it.
+As an open-source project, mastercomfig appreciates the community's help in improving it.
 
 We welcome contributions of any type or size, from anyone!
 
@@ -18,15 +18,15 @@ to suit your needs and improve mastercomfig for everyone!
 
 mastercomfig is currently maintained by mastercoms. You can contact me on
 [Steam](https://steamcommunity.com/id/mastercoms),
-[Reddit](https://www.reddit.com/user/mastercoms) or by email at
+[Reddit](https://www.reddit.com/user/mastercoms), or by email at
 [support@mastercomfig.com](mailto:support@mastercomfig.com). I'd be happy to chat about any problems or
 suggestions you have for mastercomfig.
 
 ## Docs
 
-Have a screenshot, workaround or anything else interesting you'd like to share?
+Have a screenshot, workaround, or anything else interesting you'd like to share?
 
-Are you a translator who wishes to add or improve content in your own language?
+Are you a translator who wishes to add or improve the documentation in your own language?
 
 Contribute to the docs by clicking the edit button on any page you'd like to change!
 
@@ -44,11 +44,11 @@ Add a `.[lang]` before the file type.
 
 For example, `index.ru.md` or `logo.ru.png`.
 
-### Referencing content in a localized page
+### Referencing content on a localized page
 
 When referencing content, like embedding an image or linking another page, you can refer to the base content directly without any language.
 
-For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automatically reference the translated version, or fallback to the default if not found.
+For example `![image](logo.png)` or `[link](./folder/page.md)`. It will automatically reference the translated version, or fall back to the default if not found.
 
 ### Localizing page titles
 
@@ -60,7 +60,7 @@ Documentation is checked with `remark` automatically through GitHub Actions for 
 
 From time to time, link validity may also be checked using `pnpm checklinks`. This is not run automatically due to false positives.
 
-Also, quality of English prose may be checked with `pnpm prose`. This is not run automatically due to the subjective nature of writing.
+Also, the quality of English prose may be checked with `pnpm prose`. This is not run automatically due to the subjective nature of writing.
 
 ## Support
 
@@ -78,16 +78,16 @@ changes based on simple hearsay or assumptions.
 Every setting and change must be based on information
 found in Team Fortress 2 [blog posts/patch notes](https://www.teamfortress.com),
 the [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/SDK_Docs),
-the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013),
+and the [Source SDK](https://github.com/ValveSoftware/source-sdk-2013),
 so make sure those are available to you before you start contributing.
-File overrides like DX support, shader cache, texture preload and client precache
+File overrides like DX support, shader cache, texture preload, and client precache
 must be updated according to changes [tracked by Steam Database](https://github.com/SteamDatabase/GameTracking-TF2).
 
 ### Find a task
 
 There might be TODOs within the files that need to be completed, issues that
-need to be closed or maybe something new you came up with. For any of these,
-make sure you communicate that you're going contribute to resolve that issue or
+need to be closed, or maybe something new you came up with. For any of these,
+make sure you communicate that you're going contribute to resolving that issue or
 implement that feature so that there isn't any duplicated work going on.
 
 ### Making changes
@@ -102,7 +102,7 @@ Launch options are documented on the docs and are formatted like this:
 
 `**-launchoption** : launch option description`
 
-Make sure the description is not sentence case and starts with a lowercase
+Make sure the description is not in sentence case and starts with a lowercase
 letter. Additional notes following the description are sentences.
 
 There are currently 4 categories for launch options:
@@ -115,7 +115,7 @@ There are currently 4 categories for launch options:
 Put your launch option in the appropriate section and if it's in the
 `Recommended` section, add it to the launch options line for copying.
 
-Here's lists of launch options to help you out:
+Here are lists of launch options to help you out:
 
 * [Windows](tf2/launchopts_win.md)
 * [Linux](tf2/launchopts_linux.md)
@@ -146,7 +146,7 @@ ConVars and commands are found using [these instructions](tf2/README.md#making-y
 * [Windows](tf2/cvarlist_win.md)
 * [Linux](tf2/cvarlist_linux.md)
 
-Add your alternatives uncommented in the applicable presets/addons, or use modules.
+Add your alternatives uncommented in the applicable presets/addons or use modules.
 
 ##### Presets
 
@@ -165,7 +165,7 @@ Add your alternatives uncommented in the applicable presets/addons, or use modul
 * `disable-pyroland`: Removes Pyroland map textures
 * `no-soundscapes`: Removes soundscapes (ambient map noise) and bird noises
 * `no-tutorial`: Disables tutorial messages and other popups
-* `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration and 1:1 zoom sensitivity
+* `flat-mouse`: Makes mouse input "flat" with stable input, no acceleration, and 1:1 zoom sensitivity
 * `opengl`: Provides additional optimizations for OpenGL (macOS and Linux)
 * `transparent-viewmodels`: Enables support for transparent viewmodels
 * `null-canceling-movement`: Prevents you from pressing two opposing directions, which causes you to stop moving
@@ -208,7 +208,7 @@ common enough to warrant the extra startup time and memory usage.
 The OpenGL shader pair cache is located at `glbaseshaders.cfg` and `glbaseshaders_osx.cfg`.
 This is a value store for each shader program, which is an indexed subkey. The first value
 is the vertex shader name, the second is the pixel shader name, third is the vertex shader
-static index, fourth is the pixel shader static index, fifth is the vertex shader dynamic index
+static index, fourth is the pixel shader static index, fifth is the vertex shader dynamic index,
 and sixth is the pixel shader dynamic index.
 
 These files specify what shaders the game should precache, as a base. It also saves encountered shaders
@@ -248,13 +248,13 @@ matches.
 
 #### Benchmarking
 
-Use [mastercoms' new test benchmark](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k)
+Use the [new test benchmark](https://mega.nz/#!f8tlhDhR!nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k)
 to do basic testing on options.
 
 #### Bot match
 
 After the results are positive with the benchmark, measure your average FPS in a
-local 32 player bot match on `pl_upward`. (use `+maxplayers 32` in launch options).
+local 32-player bot match on `pl_upward`. (use `+maxplayers 32` in launch options).
 
 #### Casual match
 
@@ -294,7 +294,7 @@ This variable can also come from your system environment.
 ## Release and announce scripts
 
 If you want to test the scripts that upload to GitHub and/or announce in Discord,
-append following to your `mastercomfig-vars` file:
+append the following to your `mastercomfig-vars` file:
 
 ```bash
 export DISCORD_WEBHOOK="Discord webhook for release notifications"
