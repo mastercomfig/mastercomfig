@@ -6,12 +6,13 @@ search:
 
 # Customization
 
-You can use user override files to customize specific settings in mastercomfig.
+You can use user override files to customize specific settings in mastercomfig:
 
-These are `autoexec.cfg`, which runs at game launch, the 9 class configs
-(`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
-`medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class, and `listenserver.cfg`
-which runs when first spawning in a local server.
+* `autoexec.cfg`, which runs at game launch
+* Class configs (`scout.cfg`, `soldier.cfg`, `pyro.cfg`, `demoman.cfg`, `heavyweapons.cfg`, `engineer.cfg`,
+`medic.cfg`, `sniper.cfg`, and `spy.cfg`) which run on switching to a new class
+* `listenserver.cfg` which runs when first spawning in a local server
+
 All of these files go into a folder called `overrides` you create in `tf/cfg`.
 
 If you don't have these files, you can download the [mastercomfig template](https://github.com/mastercomfig/mastercomfig/releases/latest/download/template.zip) and move the `overrides` folder to your `tf/cfg/` folder to customize the config.
@@ -25,14 +26,13 @@ If there's something you'd like to run for all of your class configs, you can ad
 * `restore_preset`: Restores modules to preset defaults without using user overrides.
 * `restore_config`: Runs all of mastercomfig, and user overrides again, resetting changes made in-game.
 * `version_comfig`: Outputs the version of mastercomfig currently being used.
-* `switchconsole`: Command for toggling console and console output. This is able to reduce the performance impact of console logging when the console is not toggled on.
+* `switchconsole`: Command for toggling console and console output, reducing the performance impact of the console when toggled off.
 
 ## Game Overrides
 
-Some modules set something called game overrides, which apply settings that override map or in-game only settings that can't be applied at launch.
+Some modules set something called game overrides, which apply settings that override map or in-game only settings that the config can't apply at launch.
 
-If you want to override this part of the module, you will have to use their game override alias in `tf/cfg/overrides/autoexec.cfg`. This is comprised of
-an override alias, which is run during game overrides, and an override option, which contains the settings which are run by the override alias.
+If you want to override this part of the module, you must use their game override alias in `tf/cfg/overrides/autoexec.cfg`. This comprises of an override alias, ran during game overrides, and an override option, which has the settings ran by the override alias.
 
 * `shadows`: Uses `shadowlod_override` to control the model quality shadows render with
     * `shadowlod_low`: Uses the lowest model quality to render shadows
@@ -53,7 +53,7 @@ As an example, if you are using a lower water module, but do not want to use che
 
 ## Network Aliases
 
-These aliases are used by mastercomfig to apply network settings per class (as listed below) when using the `snapshot_buffer=auto` module level.
+mastercomfig uses these aliases to apply network settings per class (as listed below) when using the `snapshot_buffer=auto` module level.
 
 You can run them manually in your class config if you play a subclass, like Demoknight (`net_hitscan`) or Huntsman (`net_projectiles`).
 
@@ -76,17 +76,16 @@ mastercomfig supports selecting a preset after download. Add a file to your `ove
 * low
 * very-low
 
-You can check the current selected preset by entering `preset_level` into the console.
+You can check the currently selected preset by entering `preset_level` into the console.
 
 ## Optional Aliases
 
 !!! warning
-    These steps are entirely optional and are only for advanced customization.
+    Optional aliases are **entirely optional** and are **only** for **advanced** customization.
 
-You can change the name of your `overrides/modules.cfg` using the `modules_c` alias.
-This means your override preferences can have multiple different options, sort of like presets, but for your own preferences! Change these aliases
-in-game and use the `apply_overrides` command to apply your new user overrides. This can be used for having different quality choices or game configurations for
-different scenarios or moods.
+Your override preferences can have multiple options, sort of like presets! You can use this to have different quality choices or game configurations for different scenarios or moods.
+
+You can change the name of your `overrides/modules.cfg` using the `modules_c` alias. Change these aliases in-game and use the `apply_overrides` command to apply your new user overrides.
 
 You can change the name of your custom class configs using the `class_config_classname` alias.
 For example, you can put `alias class_config_heavyweapons"exec overrides/myheavy.cfg"` in `tf/cfg/overrides/autoexec.cfg` if you want to use the file `tf/cfg/overrides/myheavy.cfg` for Heavy.
@@ -94,7 +93,7 @@ For example, you can put `alias class_config_heavyweapons"exec overrides/myheavy
 You can change the name of your custom game overrides config using the `game_overrides_c` alias.
 For example, you can put `alias game_overrides_c"exec overrides/mygameoverrides.cfg"` in `overrides/autoexec.cfg` if you want to use the file `tf/cfg/overrides/mygameoverrides.cfg`.
 
-You can also get creative and use the aforementioned aliases to change your class config on the fly using binds or the console.
+You can also get creative and use the aliases above to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
 
 If you want to run something only the first time you spawn and never run again while you keep the game open, use the `game_overrides_once_c` alias.
@@ -107,7 +106,7 @@ You can use `overrides/pre_comfig.cfg` to run things before `comfig.cfg`, and `o
 
 Examples of `overrides/pre_comfig.cfg` uses can be things like customizing your preset detailed above or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
 
-Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can directly override all aliases defined in mastercomfig's core. This can be used for changing the default modules file, making your own modules or module levels, customizing the built-in ones, and more!
+Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can directly override all aliases defined in mastercomfig's core. You can use this to change the default modules file, make your own modules or module levels, customize the built-in ones, and more!
 
 ## Optional User Config Template
 
@@ -117,7 +116,7 @@ Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can
 To get an idea about what to put in your `overrides/autoexec.cfg` and select options,
 you can download the autoexec template from the [latest release](https://github.com/mastercomfig/mastercomfig/releases/latest).
 
-This config is only for advanced, fine-tuned customization and is completely optional. Modules are recommended to be used for granular customization.
+This config is only for advanced, fine-tuned customization and is completely optional. You should use modules for granular customization.
 
 ## Debug Commands
 
@@ -126,7 +125,7 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 ### General
 
 * `debug_output`: Enable developer-only output (`debug_output_1`). It shows various warnings about potential issues and outputs console output to the corner of the screen.
-* `debug_output_toggle`: Cycle through all four modes (including disabled) for developer only output. Different modes display different amounts of information.
+* `debug_output_toggle`: Cycle through all four modes (including disabled) for developer-only output. Different modes display different amounts of information.
 * `debug_output_display`: Display console output in the corner of the screen without showing additional information.
 * `debug_output_1`: Enable developer-only output level 1.
 * `debug_output_2`: Enable developer-only output level 2, which displays more information.
