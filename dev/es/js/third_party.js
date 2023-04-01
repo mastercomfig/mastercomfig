@@ -1,6 +1,6 @@
 const sidebar = document.querySelector(".md-sidebar");
 const sidebarScroll = document.querySelector(".md-sidebar__scrollwrap");
-if (sidebar) {
+if (false && sidebar) {
   function updateScrollHeight() {
     sidebarScroll.style.height = "70vh";
     window.requestAnimationFrame(updateScrollHeight);
