@@ -35,6 +35,16 @@ If you cannot support me through the above methods, that’s fine too! Your than
 
 View the documentation for a [full list of credits](https://docs.mastercomfig.com/latest/credits/).
 
+## Sponsors
+
+### tradeit.gg
+
+![tradeit.gg](https://mastercomfig.com/img/third_party/tradeit.webp)
+
+**Trade, buy or sell items**  
+Trade items instantly for real money with the lowest fees.  
+Fully automated. Over 45 million successful trades.
+
 ## Legal
 
 Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress
