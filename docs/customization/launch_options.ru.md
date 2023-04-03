@@ -2,15 +2,15 @@
 description: Настройте Team Fortress 2 и mastercomfig с помощью параметров запуска.
 ...
 
-<div style="background: linear-gradient(135deg, rgba(33,37,41, 0.01), rgba(33,37,41, 1) 60%),radial-gradient(ellipse at top left, rgba(255,255,255, 0.5), transparent 50%),radial-gradient(ellipse at top right, rgba(255,228,132, 0.5), transparent 50%),radial-gradient(ellipse at center right, rgba(112.520718,44.062154,249.437846, 0.5), transparent 50%),radial-gradient(ellipse at center left, rgba(13,110,253, 0.5), transparent 50%);padding:0.5rem 1rem;display: flex;align-items: center;margin-bottom: 1rem" class="md-typeset">
-    <div>
+<div style="background:linear-gradient(135deg, rgba(33,37,41, 0.01), rgba(33,37,41, 1) 60%),radial-gradient(ellipse at top left, rgba(255,255,255, 0.5), transparent 50%),radial-gradient(ellipse at top right, rgba(255,228,132, 0.5), transparent 50%),radial-gradient(ellipse at center right, rgba(112.520718,44.062154,249.437846, 0.5), transparent 50%),radial-gradient(ellipse at center left, rgba(13,110,253, 0.5), transparent 50%);padding:0.5rem;display:flex;align-items:center" class="md-typeset">
+    <div style="font-size: 0;">
         <a href="https://tradeit.gg/?aff=comfig">
-            <img style="height:8rem;width:8rem;aspect-ratio:1/1;display: inline-block;" alt="tradeit.gg logo" src="https://mastercomfig.com/img/third_party/tradeit.webp" width="128" height="128">
+            <img style="height:4rem;width:4rem;aspect-ratio:1/1;" alt="tradeit.gg logo" src="https://mastercomfig.com/img/third_party/tradeit.webp" width="96" height="96" />
         </a>
     </div>
     <div style="margin-left: 0.5rem;">
         <a href="https://tradeit.gg/?aff=comfig">
-            <p style="color:#fff">
+            <p style="color:#fff;margin:0">
                 <strong>Trade, buy or sell items</strong><br>
                 Trade items instantly for real money with the lowest fees.<br>
                 Fully automated. Over 45 million successful trades.
@@ -18,7 +18,6 @@ description: Настройте Team Fortress 2 и mastercomfig с помощь�
         </a>
     </div>
 </div>
-
 # Параметры запуска
 
 Щелкните правой кнопкой мыши по Team Fortress 2 в списке своей библиотеки Steam и выберите **Свойства...**. В появившемся окне в разделе **Параметры запуска** удалите
