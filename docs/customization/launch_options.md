@@ -35,6 +35,9 @@ Read below about optional launch options and choosing your own DXLevel.
 ## DXLevel Launch Options
 
 === "Windows"
+    
+    !!! info
+        Add these launch options to your first launch, and then remove them.
 
      * **-dxlevel 80** : DirectX 8, Pixel Shader 1.1. Uses outdated rendering methods which do not take full advantage of the hardware.
      * **-dxlevel 90** : DirectX 9, Pixel Shader 2.0b. Lower graphical quality while still using semi-modern rendering methods.
