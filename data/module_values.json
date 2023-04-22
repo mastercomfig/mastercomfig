@@ -1,5 +1,5 @@
 {
-  "shadows": {
+  "graphics.shadows": {
     "off": {
       "r_shadows": 0,
       "cl_blobbyshadows": 1,
@@ -24,7 +24,7 @@
       "r_shadowlod": 0
     }
   },
-  "water": {
+  "graphics.water": {
     "off": {
       "r_WaterDrawRefraction": 0,
       "r_WaterDrawReflection": 0,
@@ -44,7 +44,7 @@
       "r_waterforcereflectentities": 1
     }
   },
-  "post_processing": {
+  "post_processing.bloom": {
     "off": {
       "mat_hdr_level": 0,
       "mat_colorcorrection": 0,
@@ -52,21 +52,50 @@
       "r_bloomtintr": 0.2126,
       "r_bloomtintg": 0.7152,
       "r_bloomtintb": 0.0722,
-      "r_bloomtintexponent": 0.45,
-      "mat_bloom_scalefactor_scalar": 0.25,
-      "pyro_dof": 0,
-      "pyro_vignette": 0
+      "r_bloomtintexponent": 1,
+      "mat_bloom_scalefactor_scalar": 1,
+      "r_shader_srgb": 0
     },
-    "on": {
+    "default": {
       "mat_hdr_level": 2,
       "mat_colorcorrection": 1,
       "mat_colcorrect_disableentities": 0,
-      "pyro_dof": 1,
-      "pyro_vignette": 2,
-      "pyro_vignette_distortion": 1
+      "r_bloomtintexponent": 2.2
+    },
+    "calm": {
+      "mat_bloom_scalefactor_scalar": 0.25
+    },
+    "vivid": {
+      "r_bloomtintexponent": 0.45
+    },
+    "washed": {
+      "r_bloomtintexponent": 0,
+      "mat_bloom_scalefactor_scalar": 1.25
+    },
+    "dreamy": {
+      "r_bloomtintexponent": 0,
+      "mat_bloom_scalefactor_scalar": 1,
+      "r_shader_srgb": 1
     }
   },
-  "effects": {
+  "post_processing.color_filter": {
+    "off": {
+      "mat_color_projection": 0
+    },
+    "grayscale": {
+      "mat_color_projection": 4
+    },
+    "desaturated": {
+      "mat_color_projection": 8
+    },
+    "warm": {
+      "mat_color_projection": 2
+    },
+    "cool": {
+      "mat_color_projection": 3
+    }
+  }
+  "graphics.effects": {
     "low": {
       "cl_drawmonitors": 0,
       "tf_impactwatertimeenable": 1,
@@ -92,7 +121,7 @@
       "mat_reduceparticles": 0
     }
   },
-  "particles": {
+  "graphics.particles": {
     "low": {
       "cl_ejectbrass": 0,
       "muzzleflash_light": 0,
