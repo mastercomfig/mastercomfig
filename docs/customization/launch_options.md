@@ -41,7 +41,7 @@ Read below about optional launch options and choosing your own DXLevel.
 
      * **-dxlevel 80** : DirectX 8, Pixel Shader 1.1. Uses outdated rendering methods which do not take full advantage of the hardware.
      * **-dxlevel 90** : DirectX 9, Pixel Shader 2.0b. Lower graphical quality while still using semi-modern rendering methods.
-     * **-dxlevel 100** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality. Uses hardware to determine graphics capabilities. (recommended)
+     * **-dxlevel 95** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality.
 
 === "macOS"
 
