@@ -1,0 +1,118 @@
+{
+  "shadows": {
+    "off": {
+      "r_shadows": 0,
+      "cl_blobbyshadows": 1,
+      "r_shadowrendertotexture": 0,
+      "r_shadowmaxrendered": 0,
+      "nb_shadow_dist": -1,
+      "r_shadowlod": -2
+    },
+    "low": {
+      "r_shadows": 1,
+      "cl_blobbyshadows": 1
+    },
+    "medium": {
+      "r_shadowrendertotexture": 1,
+      "cl_blobbyshadows": 0,
+      "r_shadowmaxrendered": 11,
+      "nb_shadow_dist": 400
+    },
+    "high": {
+      "r_shadowmaxrendered": 160,
+      "nb_shadow_dist": 3000,
+      "r_shadowlod": 0
+    }
+  },
+  "water": {
+    "off": {
+      "r_WaterDrawRefraction": 0,
+      "r_WaterDrawReflection": 0,
+      "r_waterforceexpensive": 0,
+      "r_waterforcereflectentities": 0,
+      "r_cheapwaterstart": 8191,
+      "r_cheapwaterend": 8192
+    },
+    "low": {
+      "r_WaterDrawRefraction": 1
+    },
+    "medium": {
+      "r_WaterDrawReflection": 1
+    },
+    "high": {
+      "r_waterforceexpensive": 1,
+      "r_waterforcereflectentities": 1
+    }
+  },
+  "post_processing": {
+    "off": {
+      "mat_hdr_level": 0,
+      "mat_colorcorrection": 0,
+      "mat_colcorrect_disableentities": 1,
+      "r_bloomtintr": 0.2126,
+      "r_bloomtintg": 0.7152,
+      "r_bloomtintb": 0.0722,
+      "r_bloomtintexponent": 0.45,
+      "mat_bloom_scalefactor_scalar": 0.25,
+      "pyro_dof": 0,
+      "pyro_vignette": 0
+    },
+    "on": {
+      "mat_hdr_level": 2,
+      "mat_colorcorrection": 1,
+      "mat_colcorrect_disableentities": 0,
+      "pyro_dof": 1,
+      "pyro_vignette": 2,
+      "pyro_vignette_distortion": 1
+    }
+  },
+  "effects": {
+    "low": {
+      "cl_drawmonitors": 0,
+      "tf_impactwatertimeenable": 1,
+      "cl_show_splashes": 0,
+      "fx_drawimpactdebris": 0,
+      "fx_drawimpactdust": 0,
+      "fx_drawmetalspark": 0,
+      "r_drawflecks": 0,
+      "tf_particles_disable_weather": 1,
+      "mat_reduceparticles": 1
+    },
+    "medium": {
+      "cl_drawmonitors": 1,
+      "cl_show_splashes": 1,
+      "fx_drawimpactdebris": 1,
+      "fx_drawimpactdust": 1,
+      "fx_drawmetalspark": 1
+    },
+    "high": {
+      "tf_impactwatertimeenable": 0,
+      "r_drawflecks": 1,
+      "tf_particles_disable_weather": 0,
+      "mat_reduceparticles": 0
+    }
+  },
+  "particles": {
+    "low": {
+      "cl_ejectbrass": 0,
+      "muzzleflash_light": 0,
+      "tracer_extra": 0,
+      "r_drawtracers_firstperson": 0,
+      "cl_fasttempentcollision": 1000000,
+      "cl_particle_batch_mode": 2,
+      "cl_particle_retire_cost": 0.0000001
+    },
+    "medium": {
+      "r_drawtracers_firstperson": 1,
+      "cl_particle_batch_mode": 1,
+      "cl_particle_retire_cost": 0
+    },
+    "high": {
+      "cl_ejectbrass": 1,
+      "muzzleflash_light": 1,
+      "tracer_extra": 1,
+      "cl_fasttempentcollision": 0,
+      "cl_particle_batch_mode": 0
+    }
+  }
+}
