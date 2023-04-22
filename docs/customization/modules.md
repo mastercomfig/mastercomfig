@@ -636,7 +636,7 @@ Setting it higher can reduce input delay.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`fpscap=1000`** (all presets).
+Default setting: **`fpscap=400`** (all presets).
 
 * **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
 * **`fpscap=30`**: Sets FPS cap to 30 FPS.
