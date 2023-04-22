@@ -53,7 +53,7 @@ nav:
       - HUD Crosshairs: tf2/huds/hud_crosshairs.md
       - Installing Font Crosshairs: tf2/huds/font_crosshairs.md
       - Custom Intro Video: tf2/huds/custom_intro_vid.md
-      - Particle Effects: tf2/huds/particle_effects.md
+      - Particle Panels: tf2/huds/particle_effects.md
   - Other Games:
     - Other Games: other/README.md
     - Epic Games Store: other/egs.md
