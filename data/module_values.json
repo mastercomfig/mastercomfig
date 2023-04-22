@@ -1,4 +1,42 @@
 {
+  "graphics.lighting": {
+    "low": {
+      "r_lightaverage": 0,
+      "r_worldlightmin": 0.0002,
+      "r_worldlights": 0,
+      "mat_disable_lightwarp": 1,
+      "r_pixelvisibility_partial": 0,
+      "r_dynamic": 0,
+      "r_maxdlights": 0
+    },
+    "medium": {
+      "r_lightaverage": 1,
+      "r_worldlights": 2,
+      "mat_disable_lightwarp": 0,
+      "r_pixelvisibility_partial": 1
+    },
+    "high": {
+      "r_worldlights": 4,
+      "r_dynamic": 1,
+      "r_maxdlights": 32
+    }
+  },
+  "graphics.shading": {
+    "low": {
+      "mat_bumpmap": 0,
+      "mat_specular": 0,
+      "mat_phong": 0,
+      "r_rimlight": 0,
+      "mat_reducefillrate": 1
+    },
+    "high": {
+      "mat_bumpmap": 1,
+      "mat_specular": 1,
+      "mat_phong": 1,
+      "r_rimlight": 1,
+      "mat_reducefillrate": 0
+    }
+  },
   "graphics.shadows": {
     "off": {
       "r_shadows": 0,
@@ -20,12 +58,12 @@
     },
     "high": {
       "r_shadowmaxrendered": 160,
-      "nb_shadow_dist": 3000,
+      "nb_shadow_dist": 8192,
       "r_shadowlod": 0
     }
   },
   "graphics.water": {
-    "off": {
+    "low": {
       "r_WaterDrawRefraction": 0,
       "r_WaterDrawReflection": 0,
       "r_waterforceexpensive": 0,
@@ -33,13 +71,13 @@
       "r_cheapwaterstart": 8191,
       "r_cheapwaterend": 8192
     },
-    "low": {
+    "medium": {
       "r_WaterDrawRefraction": 1
     },
-    "medium": {
+    "high": {
       "r_WaterDrawReflection": 1
     },
-    "high": {
+    "ultra": {
       "r_waterforceexpensive": 1,
       "r_waterforcereflectentities": 1
     }
@@ -94,7 +132,7 @@
     "cool": {
       "mat_color_projection": 3
     }
-  }
+  },
   "graphics.effects": {
     "low": {
       "cl_drawmonitors": 0,
