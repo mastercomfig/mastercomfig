@@ -1,40 +1,30 @@
 {
-  "graphics.lighting": {
+  "graphics.textures": {
+    "very_low": {
+      "mat_picmip": 2,
+      "mat_disable_fancy_blending": 1
+    },
     "low": {
-      "r_lightaverage": 0,
-      "r_worldlightmin": 0.0002,
-      "r_worldlights": 0,
-      "mat_disable_lightwarp": 1,
-      "r_pixelvisibility_partial": 0,
-      "r_dynamic": 0,
-      "r_maxdlights": 0
+      "mat_disable_fancy_blending": 0
     },
     "medium": {
-      "r_lightaverage": 1,
-      "r_worldlights": 2,
-      "mat_disable_lightwarp": 0,
-      "r_pixelvisibility_partial": 1
+      "mat_picmip": 0
     },
     "high": {
-      "r_worldlights": 4,
-      "r_dynamic": 1,
-      "r_maxdlights": 32
+      "mat_picmip": -10
     }
   },
-  "graphics.shading": {
+  "graphics.model_quality": {
     "low": {
-      "mat_bumpmap": 0,
-      "mat_specular": 0,
-      "mat_phong": 0,
-      "r_rimlight": 0,
-      "mat_reducefillrate": 1
+      "r_rootlod": 2,
+      "r_lod": -1
+    },
+    "medium": {
+      "r_rootlod": 1
     },
     "high": {
-      "mat_bumpmap": 1,
-      "mat_specular": 1,
-      "mat_phong": 1,
-      "r_rimlight": 1,
-      "mat_reducefillrate": 0
+      "r_rootlod": 0,
+      "r_lod": 0
     }
   },
   "graphics.shadows": {
@@ -62,6 +52,142 @@
       "r_shadowlod": 0
     }
   },
+  "graphics.lighting": {
+    "low": {
+      "r_lightaverage": 0,
+      "r_worldlights": 0,
+      "mat_disable_lightwarp": 1,
+      "r_pixelvisibility_partial": 0,
+      "r_dynamic": 0,
+      "r_maxdlights": 0,
+      "mat_use_compressed_hdr_textures": 0
+    },
+    "medium": {
+      "r_lightaverage": 1,
+      "r_worldlights": 2,
+      "mat_disable_lightwarp": 0,
+      "r_pixelvisibility_partial": 1,
+      "mat_use_compressed_hdr_textures": 1
+    },
+    "high": {
+      "r_worldlights": 4,
+      "r_dynamic": 1,
+      "r_maxdlights": 32
+    }
+  },
+  "graphics.shading": {
+    "low": {
+      "mat_bumpmap": 0,
+      "mat_specular": 0,
+      "mat_phong": 0,
+      "r_rimlight": 0,
+      "mat_reducefillrate": 1
+    },
+    "high": {
+      "mat_bumpmap": 1,
+      "mat_specular": 1,
+      "mat_phong": 1,
+      "r_rimlight": 1,
+      "mat_reducefillrate": 0
+    }
+  },
+  "graphics.decals": {
+    "off": {
+      "mp_decals": 0,
+      "r_drawbatchdecals": 0,
+      "r_decalstaticprops": 0,
+      "r_drawmodeldecals": 0
+    },
+    "low": {
+      "mp_decals": 9,
+      "r_drawbatchdecals": 1
+    },
+    "medium": {
+      "mp_decals": 80,
+      "r_decalstaticprops": 1,
+      "r_drawmodeldecals": 1,
+      "r_maxmodeldecal": 9
+    },
+    "high": {
+      "mp_decals": 2048,
+      "r_maxmodeldecal": 50
+    }
+  },
+  "graphics.map_art": {
+  },
+  "graphics.world_detail": {
+    "low": {
+      "r_3dsky": 0,
+      "cl_phys_props_enable": 0,
+      "lod_TransitionDist": -1,
+      "r_propsmaxdist": 0,
+      "r_drawdetailprops": 0,
+      "cl_detaildist": 1,
+      "cl_detailfade": 0,
+      "r_staticprop_lod": -1
+    },
+    "medium": {
+      "r_3dsky": 1
+    },
+    "high": {
+      "cl_phys_props_enable": 1,
+      "lod_TransitionDist": 3592,
+      "r_propsmaxdist": 8192,
+      "r_drawdetailprops": 1,
+      "cl_detaildist": 8592,
+      "cl_detailfade": 400,
+      "r_staticprop_lod": 0
+    }
+  },
+  "graphics.effects": {
+    "low": {
+      "cl_drawmonitors": 0,
+      "tf_impactwatertimeenable": 1,
+      "cl_show_splashes": 0,
+      "fx_drawimpactdebris": 0,
+      "fx_drawimpactdust": 0,
+      "fx_drawmetalspark": 0,
+      "r_drawflecks": 0,
+      "tf_particles_disable_weather": 1,
+      "mat_reduceparticles": 1
+    },
+    "medium": {
+      "cl_drawmonitors": 1,
+      "cl_show_splashes": 1,
+      "fx_drawimpactdebris": 1,
+      "fx_drawimpactdust": 1,
+      "fx_drawmetalspark": 1
+    },
+    "high": {
+      "tf_impactwatertimeenable": 0,
+      "r_drawflecks": 1,
+      "tf_particles_disable_weather": 0,
+      "mat_reduceparticles": 0
+    }
+  },
+  "graphics.particles": {
+    "low": {
+      "cl_ejectbrass": 0,
+      "muzzleflash_light": 0,
+      "tracer_extra": 0,
+      "r_drawtracers_firstperson": 0,
+      "cl_fasttempentcollision": 1000000,
+      "cl_particle_batch_mode": 2,
+      "cl_particle_retire_cost": 0.0000001
+    },
+    "medium": {
+      "r_drawtracers_firstperson": 1,
+      "cl_particle_batch_mode": 1,
+      "cl_particle_retire_cost": 0
+    },
+    "high": {
+      "cl_ejectbrass": 1,
+      "muzzleflash_light": 1,
+      "tracer_extra": 1,
+      "cl_fasttempentcollision": 0,
+      "cl_particle_batch_mode": 0
+    }
+  },
   "graphics.water": {
     "low": {
       "r_WaterDrawRefraction": 0,
@@ -80,6 +206,94 @@
     "ultra": {
       "r_waterforceexpensive": 1,
       "r_waterforcereflectentities": 1
+    }
+  },
+  "graphics.characters": {
+    "low": {
+      "r_flex": 0,
+      "flex_rules": 0,
+      "flex_smooth": 0,
+      "phonemefilter": 1,
+      "phonemedelay": -30,
+      "phonemesnap": 0,
+      "r_teeth": 0,
+      "r_eyes": 0,
+      "r_eyemove": 0,
+      "tf_clientsideeye_lookats": 0,
+      "blink_duration": 0,
+      "cl_jiggle_bone_framerate_cutoff": 0
+    },
+    "medium": {
+      "r_eyes": 1
+    },
+    "high": {
+      "r_flex": 1,
+      "flex_rules": 1,
+      "flex_smooth": 1,
+      "phonemefilter": 0.007,
+      "phonemedelay": 0,
+      "phonemesnap": 4,
+      "r_teeth": 1,
+      "r_eyemove": 1,
+      "tf_clientsideeye_lookats": 1,
+      "blink_duration": 0.2,
+      "cl_jiggle_bone_framerate_cutoff": 67
+    }
+  },
+  "graphics.ropes": {
+    "off": {
+      "r_drawropes": 0,
+      "rope_rendersolid": 0,
+      "r_ropetranslucent": 0,
+      "rope_smooth": 0,
+      "rope_subdiv": 0,
+      "rope_collide": 0,
+      "rope_wind_dist": 0
+    },
+    "on": {
+      "r_drawropes": 1,
+      "rope_rendersolid": 1,
+      "r_ropetranslucent": 1,
+      "rope_smooth": 1,
+      "rope_subdiv": 7,
+      "rope_collide": 1,
+      "rope_wind_dist": 8192
+    }
+  },
+  "graphics.ragdolls": {
+    "off": {
+      "cl_ragdoll_fade_time": 0,
+      "cl_ragdoll_forcefade": 1,
+      "cl_ragdoll_physics_enable": 0,
+      "ragdoll_sleepaftertime": 0
+    },
+    "on": {
+      "cl_ragdoll_fade_time": 15,
+      "cl_ragdoll_forcefade": 0,
+      "cl_ragdoll_physics_enable": 1,
+      "ragdoll_sleepaftertime": 5
+    }
+  },
+  "graphics.gibs": {
+    "off": {
+      "cl_burninggibs": 0,
+      "props_break_max_pieces": 0,
+      "tf_playergib": 0,
+      "violence_hgibs": 0,
+      "violence_hblood": 0,
+      "violence_agibs": 0,
+      "violence_ablood": 0
+    },
+    "silly": {
+      "props_break_max_pieces": -1,
+      "tf_playergib": 1
+    },
+    "bloody": {
+      "cl_burninggibs": 1,
+      "violence_hgibs": 0,
+      "violence_hblood": 0,
+      "violence_agibs": 0,
+      "violence_ablood": 0
     }
   },
   "post_processing.bloom": {
@@ -133,53 +347,15 @@
       "mat_color_projection": 3
     }
   },
-  "graphics.effects": {
-    "low": {
-      "cl_drawmonitors": 0,
-      "tf_impactwatertimeenable": 1,
-      "cl_show_splashes": 0,
-      "fx_drawimpactdebris": 0,
-      "fx_drawimpactdust": 0,
-      "fx_drawmetalspark": 0,
-      "r_drawflecks": 0,
-      "tf_particles_disable_weather": 1,
-      "mat_reduceparticles": 1
-    },
-    "medium": {
-      "cl_drawmonitors": 1,
-      "cl_show_splashes": 1,
-      "fx_drawimpactdebris": 1,
-      "fx_drawimpactdust": 1,
-      "fx_drawmetalspark": 1
-    },
-    "high": {
-      "tf_impactwatertimeenable": 0,
-      "r_drawflecks": 1,
-      "tf_particles_disable_weather": 0,
-      "mat_reduceparticles": 0
+  "post_processing.pyrovision": {
+    "off": {
+      "pyro_vignette_distortion": 0
     }
   },
-  "graphics.particles": {
-    "low": {
-      "cl_ejectbrass": 0,
-      "muzzleflash_light": 0,
-      "tracer_extra": 0,
-      "r_drawtracers_firstperson": 0,
-      "cl_fasttempentcollision": 1000000,
-      "cl_particle_batch_mode": 2,
-      "cl_particle_retire_cost": 0.0000001
-    },
-    "medium": {
-      "r_drawtracers_firstperson": 1,
-      "cl_particle_batch_mode": 1,
-      "cl_particle_retire_cost": 0
-    },
-    "high": {
-      "cl_ejectbrass": 1,
-      "muzzleflash_light": 1,
-      "tracer_extra": 1,
-      "cl_fasttempentcollision": 0,
-      "cl_particle_batch_mode": 0
-    }
+  "sound.quality": {
+
+  },
+  "sound.voice": {
+
   }
 }
