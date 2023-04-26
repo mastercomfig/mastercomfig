@@ -141,3 +141,7 @@ Please note that running this may reset some personal preferences back to defaul
 ## Game resolution or graphics keep resetting
 
 Check to see if you have `-dxlevel 100` in your TF2 launch options, it may have a different number next to it. You only needed to launch with this launch option one time.
+
+## I got banned from the Discord server
+
+You can submit a single [ban appeal](https://dyno.gg/form/dae64461) after 2 days of receiving your ban.
