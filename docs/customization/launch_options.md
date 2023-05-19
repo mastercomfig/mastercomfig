@@ -39,7 +39,6 @@ Read below about optional launch options and choosing your own DXLevel.
     !!! info
         Add these launch options to your first launch, and then remove them.
 
-     * **-dxlevel 80** : DirectX 8, Pixel Shader 1.1. Uses outdated rendering methods which do not take full advantage of the hardware.
      * **-dxlevel 90** : DirectX 9, Pixel Shader 2.0b. Lower graphical quality while still using semi-modern rendering methods.
      * **-dxlevel 95** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality.
 
@@ -122,3 +121,13 @@ It's generally recommended that you use the video options instead of these launc
 * `-small -w 640 -h 360` : Smaller resolution, hides chat messages
 
 You can still use chat even while it is hidden at smaller resolutions, so you may want to use the `messages=off` module level for it to work optimally.
+
+### DirectX 8
+
+You can use the following console variable to use DirectX 8 level graphics. DirectX 8 is a very old system for graphics released over 2 decades ago.
+It does not manage modern GPU resources properly, it works poorly with the DWM, and it is implemented using an inefficient wrapper in modern versions of Windows.
+You may experience increased input lag, reduced FPS, crashes, rendering bugs, and more if you use DirectX 8.
+DirectX 8 also does not properly support many features of the game, including water, various gameplay visual indicators, and skins.
+
+For these reasons and more, it is recommended that you use the DirectX versions listed above. But for those who are wondering, mastercomfig is still compatible
+with your current DirectX 8 configurations. It does not override or change DirectX level.
