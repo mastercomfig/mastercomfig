@@ -95,6 +95,13 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 * [Disable Miss Pauling's Contract Alerts](https://gamebanana.com/mods/325900)
   — Disables Miss Pauling's alerts and the Incoming message hud panel
 
+## Competitive Leagues
+
+* [RGL](https://rgl.gg/)
+  — The Largest NA TF2 League
+* [ETF2L](https://etf2l.org/)
+  — European Team Fortress 2 League
+
 ## Utilities
 
 * [Steam Priority Launcher](https://github.com/Leo40Git/SteamPriorityLauncher)
