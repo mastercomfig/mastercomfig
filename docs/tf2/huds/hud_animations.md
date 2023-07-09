@@ -7,7 +7,7 @@ Having a `hudanimations_tf.txt` file in your custom HUD has proved somewhat of a
 But there's a way to avoid this headache, so allow me to guide you through it.
 
 `hudanimations_manifest.txt`, the magic file
-When you extract the HUD from TF2 using GCFScape or this [handy GitHub](https://github.com/SteamDatabase/GameTracking-TF2/tree/master/tf/tf2_misc_dir), you'll find the file `hudanimations_manifest.txt` inside the `scripts` folder. This is the primary file we'll be using to get around avoiding HUD animation related crashes and having to update your `hudanimations_tf` file constantly to new updates.
+When you extract the HUD from TF2 using GCFScape or this [handy GitHub](https://github.com/Hypnootize/TF2-Default-HUD/tree/master/%23TF2 Files), you'll find the file `hudanimations_manifest.txt` inside the `scripts` folder. This is the primary file we'll be using to get around avoiding HUD animation related crashes and having to update your `hudanimations_tf` file constantly to new updates.
 
 The file is extremely simple, including no more than 6 lines of code:
 
