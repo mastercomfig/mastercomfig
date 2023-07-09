@@ -874,16 +874,13 @@ Default setting: based on which preset you are currently using.
 
 Controls player voice chat.
 
-!!! warning
-    Turning on the voice chat system while in a server will
-    require a reconnect.
-
 * **CPU usage:** none
 * **GPU usage:** none
 
 Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
-* **`voice_chat=off`**: Disables the in-game voice chat system.
+* **`voice_chat=off`**: Fully disables the in-game voice chat system, does not receive audio and cannot be re-enabled until reconnect.
+* **`voice_chat=hidden`**: Disables the in-game voice chat system by blocking audio from playing.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
 ## Misc modules
