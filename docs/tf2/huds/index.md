@@ -47,7 +47,6 @@ The HUD uses a vast system called VGUI2, and it is documented by many HUD author
 
 To get started with your own HUD, you'll need to base your HUD off of the game's files, use another HUD (with appropriate permission), or you can use some helpful utilities from the community.
 
-* [SteamDatabase Default TF2 Files](https://github.com/SteamDatabase/GameTracking-TF2) - Raw, automatically updated files extracted straight from the game
 * [JarateKing BaseHud](https://github.com/JarateKing/BaseHud) - A set up starting point for creating custom HUDs
 * [Default TF2 HUD files](https://github.com/Hypnootize/TF2-Default-Hud) - Default HUD files for TF2 collected from the game
 * [Hypnotize's TF2 HUD Crosshairs](https://github.com/Hypnootize/TF2-Hud-Crosshairs) - A font-based HUD crosshairs pack which is easy to integrate into a HUD

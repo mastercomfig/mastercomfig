@@ -148,6 +148,7 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 
 ### Gameplay Testing
 
+* `debug_skipwaiting`: Skips the waiting for players time.
 * `debug_instant_respawn`: Turns on fully instant respawn.
 * `debug_invulnerable`: Toggles buddha mode (health cannot go below 1).
 * `debug_bots`: Fills the server with bots with AI.
@@ -159,6 +160,7 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 * `debug_pixelvis`: Turns on debugging of the pixel visibility system.
 * `debug_fillrate`: Shows overdraw from repeated passes.
 * `debug_matsys_reload`: Reloads material system.
+* `debug_lookdev`: Hides the HUD and viewmodel, useful for visual comparisons.
 
 ### Sound
 
