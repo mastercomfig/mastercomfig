@@ -1,4 +1,4 @@
-9.10.1
-performance improvements and new app customization features
-60
+9.10.2
+performance optimizations and various adjustments
+30
 
