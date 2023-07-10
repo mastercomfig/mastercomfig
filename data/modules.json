@@ -770,10 +770,12 @@
       },
       {
         "name": "voice_chat",
-        "type": "switch",
         "values": [
           {
             "value": "off"
+          },
+          {
+            "value": "hidden"
           },
           {
             "value": "on"
