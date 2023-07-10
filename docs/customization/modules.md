@@ -230,7 +230,7 @@ Default setting: based on which preset you are currently using.
 * **`shadows=medium`**: Up to 7 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 * **`shadows=high`**: Up to 11 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 * **`shadows=very_high`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-* **`shadows=ultra`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
+* **`shadows=ultra`**: Up to 160 high quality shadows, and unlimited robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
 
 ### Flashlight
 
@@ -256,10 +256,10 @@ Controls weapon and other miscellaneous effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision.
-* **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision.
-* **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes.
-* **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes.
+* **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables monitors.
+* **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision. 512x render resolution for monitors.
+* **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors.
+* **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 4K render resolution for monitors.
 
 ### Water
 
@@ -270,13 +270,13 @@ Controls water reflections.
 
 Default setting: based on which preset you are currently using.
 
-* **`water=very_low`**: Makes water black.
-* **`water=low`**: Makes water solid.
-* **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges.
-* **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges.
-* **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges.
-* **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges.
-* **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water.
+* **`water=very_low`**: Makes water black. 32x water render resolution.
+* **`water=low`**: Makes water solid. 256x water render resolution.
+* **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges. 512x water render resolution.
+* **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
+* **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
+* **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 2K water render resolution.
+* **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water. 4K water render resolution.
 
 ### Particles
 
@@ -404,7 +404,7 @@ Default setting: based on which preset you are currently using.
 * **`characters=medium`**: Enables facial animations, enables eyes and teeth, disables eye movement and blinking, disables enhanced lip sync.
 * **`characters=medium_high`**: Enables facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at short range.
 * **`characters=high`**: Enables smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at a slightly increased range.
-* **`characters=ultra`**: Enables smooth facial animations, high quality models, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at all ranges.
+* **`characters=ultra`**: Enables extra smooth facial animations, high quality models, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at all ranges.
 
 ### General Decals
 
@@ -422,7 +422,7 @@ Default setting: based on which preset you are currently using.
 * **`decals=low`**: 9 max decals.
 * **`decals=medium`** 32 max decals.
 * **`decals=high`**: 80 max decals.
-* **`decals=ultra`**: 256 max decals.
+* **`decals=ultra`**: 2048 max decals.
 
 ### Model Decals
 
@@ -435,7 +435,7 @@ Default setting: based on which preset you are currently using.
 
 * **`decals_models=off`**: Disables model decals.
 * **`decals_models=low`**: Allow up to 9 model decals.
-* **`decals_models=high`**: Allow up to 32 model decals.
+* **`decals_models=high`**: Allow up to 50 model decals.
 
 ### Map Decals
 
@@ -502,7 +502,7 @@ Default setting: based on which preset you are currently using.
 * **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings.
 * **`props=medium`**: Disables client side props, disables foliage, default quality prop models.
 * **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models.
-* **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at a very high distance with fade in, max quality prop models regardless of distance.
+* **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at practically any distance, max quality prop models regardless of distance.
 
 ### Ragdolls
 
