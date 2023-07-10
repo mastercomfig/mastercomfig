@@ -33,6 +33,6 @@ else {
     sConCommands += "gamestartup" + iRandomNumber + ".mp3";
 }
 
-SendToServerConsole(sConCommands)
+SendToServerConsole(sConCommands);
 
-SendToServerConsole("sv_allow_point_servercommand " + sPointServerCommandValue)
+SendToServerConsole("sv_allow_point_servercommand " + sPointServerCommandValue);
