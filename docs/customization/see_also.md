@@ -95,12 +95,14 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 * [Disable Miss Pauling's Contract Alerts](https://gamebanana.com/mods/325900)
   — Disables Miss Pauling's alerts and the Incoming message hud panel
 
-## Competitive Leagues
+## Competitive
 
 * [RGL](https://rgl.gg/)
-  — The Largest NA TF2 League
+  — The Largest NA TF2 Competitive League
 * [ETF2L](https://etf2l.org/)
-  — European Team Fortress 2 League
+  — European Team Fortress 2 Competitive League
+* [TF2 Coaching Central](https://discord.com/invite/tf2-coaching-central-tf2cc-727627956058325052)
+  — TF2CC is a hub for coaches and new players to provide guides, mentoring, demo reviews, pugs and a Newcomer's Cup!
 
 ## Utilities
 
