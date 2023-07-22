@@ -124,10 +124,11 @@ You can still use chat even while it is hidden at smaller resolutions, so you ma
 
 ### DirectX 8
 
-You can use the following console variable to use DirectX 8 level graphics. DirectX 8 is a very old system for graphics released over 2 decades ago.
+DirectX 8 level graphics can also be used by setting a launch option. However, DirectX 8 is a very old system for graphics released over 2 decades ago.
 It does not manage modern GPU resources properly, it works poorly with the DWM, and it is implemented using an inefficient wrapper in modern versions of Windows.
 You may experience increased input lag, reduced FPS, crashes, rendering bugs, and more if you use DirectX 8.
 DirectX 8 also does not properly support many features of the game, including water, various gameplay visual indicators, and skins.
 
 For these reasons and more, it is recommended that you use the DirectX versions listed above. But for those who are wondering, mastercomfig is still compatible
 with your current DirectX 8 configurations. It does not override or change DirectX level.
+So if you use a DirectX 8 launch option, you can continue to use it keeping the above in mind.
