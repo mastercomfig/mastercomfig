@@ -217,7 +217,7 @@
     "none": ""
   },
   "fpscap": {
-    "default": "1000"
+    "default": "400"
   },
   "vsync": {
     "default": "off",
