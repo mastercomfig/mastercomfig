@@ -30,11 +30,6 @@ Giving more room for processor power to scale individually per core allows the O
 
 Currently, there is a bug with Windows Defender where it will spam an Intel CPU feature until another program has used it. This can significantly reduce performance by up to 6%. You can use [Counter Control](https://www.techpowerup.com/download/counter-control/)'s Reset button to mark this feature as used and stop the spam from Defender. [Read more here](https://www.pcmag.com/news/intel-cpu-performance-takes-a-big-hit-due-to-windows-defender-bug).
 
-## Disable Visual Effects
-
-If you are on a slow/old PC, you can disable Windows' visual effects for better performance. Search for "Performance Information and Tools"
-and then select "Adjust for best performance". You can also select options you'd like to keep, but keep in mind that these may reduce performance.
-
 ## Disable Nvidia Low Latency Mode
 
 The Source Engine has a frame syncing method that is tuned for its material threading system.
