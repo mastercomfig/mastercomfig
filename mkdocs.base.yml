@@ -146,62 +146,62 @@ plugins:
           { "next_steps/troubleshoot.md": "next_steps/quick_fixes.md" },
       }
   - i18n:
-    docs_structure: suffix
-    fallback_to_default: true
-    languages:
-      - build: true
-        default: true
-        locale: en
-        name: English
-      - build: true
-        default: false
-        locale: pt
-        name: Português
-        nav_translations:
-          Clean Up: Limpeza Completa
-          Install: Instalar
-      - build: true
-        default: false
-        locale: ru
-        name: Pусский
-        nav_translations:
-          Benchmarks: Тест
-          Clean Up: Очистка
-          Credits: Благодарность
-          Custom Configs: Кастомизация
-          FAQ: Часто задаваемые вопросы
-          Features: Функции
-          Help: Помощь
-          Install: установить
-          Launch Options: Параметры запуска
-          List of Custom Configs: Список пользовательских конфигов
-          Misconceptions: Заблуждения
-          Modules: Модули
-          OS Optimizations: Оптимизация операционной системы
-          Quick Fixes: Быстрые исправления
-          Security: Политика безопасности
-          See Also: Посмотрите также
-          Silly Launch Options: Незначительные Параметры Запуска
-          Support Me: Поддержка
-          TF2 Documentation: Документация по тф2
-          Update: Обновление
-      - build: true
-        default: false
-        locale: es
-        name: Español
-      - build: true
-        default: false
-        locale: fr
-        name: Français
-      - build: true
-        default: false
-        locale: tr
-        name: Türkçe
-        nav_translations:
-          Clean Up: Temizleme
-          Install: Nasıl Kurulur
-    reconfigure_material: true
-    reconfigure_search: false
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - build: true
+          default: true
+          locale: en
+          name: English
+        - build: true
+          default: false
+          locale: pt
+          name: Português
+          nav_translations:
+            Clean Up: Limpeza Completa
+            Install: Instalar
+        - build: true
+          default: false
+          locale: ru
+          name: Pусский
+          nav_translations:
+            Benchmarks: Тест
+            Clean Up: Очистка
+            Credits: Благодарность
+            Custom Configs: Кастомизация
+            FAQ: Часто задаваемые вопросы
+            Features: Функции
+            Help: Помощь
+            Install: установить
+            Launch Options: Параметры запуска
+            List of Custom Configs: Список пользовательских конфигов
+            Misconceptions: Заблуждения
+            Modules: Модули
+            OS Optimizations: Оптимизация операционной системы
+            Quick Fixes: Быстрые исправления
+            Security: Политика безопасности
+            See Also: Посмотрите также
+            Silly Launch Options: Незначительные Параметры Запуска
+            Support Me: Поддержка
+            TF2 Documentation: Документация по тф2
+            Update: Обновление
+        - build: true
+          default: false
+          locale: es
+          name: Español
+        - build: true
+          default: false
+          locale: fr
+          name: Français
+        - build: true
+          default: false
+          locale: tr
+          name: Türkçe
+          nav_translations:
+            Clean Up: Temizleme
+            Install: Nasıl Kurulur
+      reconfigure_material: true
+      reconfigure_search: false
   - search:
       { separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;' }
   - macros: {}
