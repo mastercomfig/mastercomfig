@@ -104,10 +104,10 @@ Your override preferences can have multiple options, sort of like presets! You c
 You can change the name of your `overrides/modules.cfg` using the `modules_c` alias. Change these aliases in-game and use the `apply_overrides` command to apply your new user overrides.
 
 You can change the name of your custom class configs using the `class_config_classname` alias.
-For example, you can put `alias class_config_heavyweapons"exec overrides/myheavy.cfg"` in `tf/cfg/overrides/autoexec.cfg` if you want to use the file `tf/cfg/overrides/myheavy.cfg` for Heavy.
+For example, you can put `alias class_config_heavyweapons "exec overrides/myheavy.cfg"` in `tf/cfg/overrides/autoexec.cfg` if you want to use the file `tf/cfg/overrides/myheavy.cfg` for Heavy.
 
 You can change the name of your custom game overrides config using the `game_overrides_c` alias.
-For example, you can put `alias game_overrides_c"exec overrides/mygameoverrides.cfg"` in `overrides/autoexec.cfg` if you want to use the file `tf/cfg/overrides/mygameoverrides.cfg`.
+For example, you can put `alias game_overrides_c "exec overrides/mygameoverrides.cfg"` in `overrides/autoexec.cfg` if you want to use the file `tf/cfg/overrides/mygameoverrides.cfg`.
 
 You can also get creative and use the aliases above to change your class config on the fly using binds or the console.
 For example, you could have different class configs for Scout in competitive and casual and then change your `class_config_scout` alias to run your preferred class config when you want.
@@ -180,7 +180,7 @@ mastercomfig provides a set of handy debugging commands used during mastercomfig
 
 ### Profiling
 
-* `debug_vprof_spikes`: Logs spikes below 100FPS (can be adjusted with `alias debug_vprof_spike"vprof_dump_spikes 100"`) to `tf/vprof_spikes.log` (can be adjusted with `alias debug_vprof_log_spike"con_logfile vprof_spike.log"`).
-* `debug_vprof_dump`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). It can be re-run to reset timings data.
-* `debug_vprof_report`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log"con_logfile vprof.log"`). It can be re-run to reset timings data.
+* `debug_vprof_spikes`: Logs spikes below 100FPS (can be adjusted with `alias debug_vprof_spike "vprof_dump_spikes 100"`) to `tf/vprof_spikes.log` (can be adjusted with `alias debug_vprof_log_spike "con_logfile vprof_spike.log"`).
+* `debug_vprof_dump`: Logs profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log "con_logfile vprof.log"`). It can be re-run to reset timings data.
+* `debug_vprof_report`: Logs a longer set of inclusive profiling data to `tf/vprof.log` (can be adjusted with `alias debug_vprof_log "con_logfile vprof.log"`). It can be re-run to reset timings data.
 * `debug_vprof_off`: Turns off profiling.
