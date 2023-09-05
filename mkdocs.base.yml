@@ -1,6 +1,6 @@
 site_name: mastercomfig docs
 site_author: mastercoms
-site_url: 'https://docs.mastercomfig.com/'
+site_url: "https://docs.mastercomfig.com/"
 site_description: A modern customization framework.
 copyright: >-
   Copyright &copy; 2016-2023 mastercoms<br><br>Valve, the Valve logo, Steam, the
@@ -11,52 +11,52 @@ copyright: >-
 strict: true
 nav:
   - About:
-    - Home: index.md
-    - FAQ: faq.md
-    - Support Me: support_me.md
-    - Help: help.md
-    - Features: features.md
-    - Screenshots: screenshots.md
-    - Benchmarks: benchmarks.md
-    - Contributing: contributing.md
-    - Security: security.md
-    - Credits: credits.md
+      - Home: index.md
+      - FAQ: faq.md
+      - Support Me: support_me.md
+      - Help: help.md
+      - Features: features.md
+      - Screenshots: screenshots.md
+      - Benchmarks: benchmarks.md
+      - Contributing: contributing.md
+      - Security: security.md
+      - Credits: credits.md
   - Setup:
-    - Clean Up: setup/clean_up.md
-    - Install: setup/install.md
+      - Clean Up: setup/clean_up.md
+      - Install: setup/install.md
   - Customization:
-    - Launch Options: customization/launch_options.md
-    - Custom Configs: customization/custom_configs.md
-    - Modules: customization/modules.md
-    - List of Custom Configs: customization/custom_config_list.md
-    - See Also: customization/see_also.md
+      - Launch Options: customization/launch_options.md
+      - Custom Configs: customization/custom_configs.md
+      - Modules: customization/modules.md
+      - List of Custom Configs: customization/custom_config_list.md
+      - See Also: customization/see_also.md
   - OS Optimizations:
-    - OS Optimizations: os/index.md
-    - Windows: os/windows.md
-    - Linux: os/linux.md
+      - OS Optimizations: os/index.md
+      - Windows: os/windows.md
+      - Linux: os/linux.md
   - Next Steps:
-    - Quick Fixes: next_steps/quick_fixes.md
-    - Update: next_steps/update.md
+      - Quick Fixes: next_steps/quick_fixes.md
+      - Update: next_steps/update.md
   - TF2 Documentation:
-    - TF2 Documentation: tf2/README.md
-    - Misconceptions: tf2/misconceptions.md
-    - Console Variables - Windows: tf2/cvarlist_win.md
-    - Console Variables - Linux: tf2/cvarlist_linux.md
-    - Hidden Console Variables: tf2/hiddencvars.md
-    - Launch Options - Windows: tf2/launchopts_win.md
-    - Launch Options - Linux: tf2/launchopts_linux.md
-    - String Commands: tf2/strcmds.md
-    - Silly Launch Options: tf2/silly_launch_options.md
-    - HUD Documentation:
-      - HUD Documentation: tf2/huds/index.md
-      - HUD Animations: tf2/huds/hud_animations.md
-      - HUD Crosshairs: tf2/huds/hud_crosshairs.md
-      - Installing Font Crosshairs: tf2/huds/font_crosshairs.md
-      - Custom Intro Video: tf2/huds/custom_intro_vid.md
-      - Particle Panels: tf2/huds/particle_effects.md
+      - TF2 Documentation: tf2/README.md
+      - Misconceptions: tf2/misconceptions.md
+      - Console Variables - Windows: tf2/cvarlist_win.md
+      - Console Variables - Linux: tf2/cvarlist_linux.md
+      - Hidden Console Variables: tf2/hiddencvars.md
+      - Launch Options - Windows: tf2/launchopts_win.md
+      - Launch Options - Linux: tf2/launchopts_linux.md
+      - String Commands: tf2/strcmds.md
+      - Silly Launch Options: tf2/silly_launch_options.md
+      - HUD Documentation:
+          - HUD Documentation: tf2/huds/index.md
+          - HUD Animations: tf2/huds/hud_animations.md
+          - HUD Crosshairs: tf2/huds/hud_crosshairs.md
+          - Installing Font Crosshairs: tf2/huds/font_crosshairs.md
+          - Custom Intro Video: tf2/huds/custom_intro_vid.md
+          - Particle Panels: tf2/huds/particle_effects.md
   - Other Games:
-    - Other Games: other/README.md
-    - Epic Games Store: other/egs.md
+      - Other Games: other/README.md
+      - Epic Games Store: other/egs.md
 markdown_extensions:
   - abbr
   - admonition
@@ -84,11 +84,11 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.superfences:
       custom_fences:
-          - name: mermaid
-            class: mermaid-experimental
-            format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -135,55 +135,84 @@ theme:
   logo: img/logo.png
   favicon: img/logo.ico
   icon:
-      repo: fontawesome/brands/github
+    repo: fontawesome/brands/github
 repo_name: GitHub
-repo_url: 'https://github.com/mastercomfig/mastercomfig/'
-edit_uri: 'edit/release/docs/'
+repo_url: "https://github.com/mastercomfig/mastercomfig/"
+edit_uri: "edit/release/docs/"
 plugins:
-  - redirects: {redirect_maps: {'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'}}
+  - redirects:
+      {
+        redirect_maps:
+          { "next_steps/troubleshoot.md": "next_steps/quick_fixes.md" },
+      }
   - i18n:
-      default_language: en
-      search_reconfigure: false
-      languages:
-        en: English
-        pt: Português
-        ru: Pусский
-        es: Español
-        fr: Français
-        tr: Türkçe
-      nav_translations:
-        ru:
-          FAQ: Часто задаваемые вопросы
-          Support Me: Поддержка
-          Help: Помощь
-          Features: Функции
-          Benchmarks: Тест
-          Security: Политика безопасности
-          Credits: Благодарность
-          Clean Up: Очистка
-          Install: установить
-          Launch Options: Параметры запуска
-          Custom Configs: Кастомизация
-          Modules: Модули
-          List of Custom Configs: Список пользовательских конфигов
-          See Also: Посмотрите также
-          OS Optimizations: Оптимизация операционной системы
-          Quick Fixes: Быстрые исправления
-          Update: Обновление
-          TF2 Documentation: Документация по тф2
-          Misconceptions: Заблуждения
-          Silly Launch Options: Незначительные Параметры Запуска
-        pt:
+    docs_structure: suffix
+    fallback_to_default: true
+    languages:
+      - build: true
+        default: true
+        locale: en
+        name: English
+      - build: true
+        default: false
+        locale: pt
+        name: Português
+        nav_translations:
           Clean Up: Limpeza Completa
           Install: Instalar
-        tr:
+      - build: true
+        default: false
+        locale: ru
+        name: Pусский
+        nav_translations:
+          Benchmarks: Тест
+          Clean Up: Очистка
+          Credits: Благодарность
+          Custom Configs: Кастомизация
+          FAQ: Часто задаваемые вопросы
+          Features: Функции
+          Help: Помощь
+          Install: установить
+          Launch Options: Параметры запуска
+          List of Custom Configs: Список пользовательских конфигов
+          Misconceptions: Заблуждения
+          Modules: Модули
+          OS Optimizations: Оптимизация операционной системы
+          Quick Fixes: Быстрые исправления
+          Security: Политика безопасности
+          See Also: Посмотрите также
+          Silly Launch Options: Незначительные Параметры Запуска
+          Support Me: Поддержка
+          TF2 Documentation: Документация по тф2
+          Update: Обновление
+      - build: true
+        default: false
+        locale: es
+        name: Español
+      - build: true
+        default: false
+        locale: fr
+        name: Français
+      - build: true
+        default: false
+        locale: tr
+        name: Türkçe
+        nav_translations:
           Clean Up: Temizleme
           Install: Nasıl Kurulur
-  - search: {separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'}
+    reconfigure_material: true
+    reconfigure_search: false
+  - search:
+      { separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;' }
   - macros: {}
-  - mike: {canonical_version: latest}
-  - git-revision-date-localized: {type: timeago, enable_creation_date: true, fallback_to_build_date: true}
-  - minify: {minify_html: true}
+  - mike: { canonical_version: latest }
+  - git-revision-date-localized:
+      {
+        type: timeago,
+        enable_creation_date: true,
+        fallback_to_build_date: true,
+      }
+  - minify: { minify_html: true }
 extra_javascript:
   - js/widescreen.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
@@ -197,7 +226,7 @@ extra:
   social:
     - icon: fontawesome/brands/discord
       name: Discord
-      link: 'https://discord.gg/mastercomfig-389089828249010188'
+      link: "https://discord.gg/mastercomfig-389089828249010188"
     - icon: fontawesome/brands/steam
       name: Steam Group
-      link: 'https://steamcommunity.com/groups/comfig'
+      link: "https://steamcommunity.com/groups/comfig"

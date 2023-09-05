@@ -1,47 +1,77 @@
 INHERIT: mkdocs.base.yml
 plugins:
-  - redirects: {redirect_maps: {'next_steps/troubleshoot.md': 'next_steps/quick_fixes.md'}}
+  - redirects:
+      {
+        redirect_maps:
+          { "next_steps/troubleshoot.md": "next_steps/quick_fixes.md" },
+      }
   - social: {}
   - i18n:
-      default_language: en
-      search_reconfigure: false
-      languages:
-        en: English
-        pt: Português
-        ru: Pусский
-        es: Español
-        fr: Français
-        tr: Türkçe
-      nav_translations:
-        ru:
-          FAQ: Часто задаваемые вопросы
-          Support Me: Поддержка
-          Help: Помощь
-          Features: Функции
-          Benchmarks: Тест
-          Security: Политика безопасности
-          Credits: Благодарность
-          Clean Up: Очистка
-          Install: установить
-          Launch Options: Параметры запуска
-          Custom Configs: Кастомизация
-          Modules: Модули
-          List of Custom Configs: Список пользовательских конфигов
-          See Also: Посмотрите также
-          OS Optimizations: Оптимизация операционной системы
-          Quick Fixes: Быстрые исправления
-          Update: Обновление
-          TF2 Documentation: Документация по тф2
-          Misconceptions: Заблуждения
-          Silly Launch Options: Незначительные Параметры Запуска
-        pt:
+    docs_structure: suffix
+    fallback_to_default: true
+    languages:
+      - build: true
+        default: true
+        locale: en
+        name: English
+      - build: true
+        default: false
+        locale: pt
+        name: Português
+        nav_translations:
           Clean Up: Limpeza Completa
           Install: Instalar
-        tr:
+      - build: true
+        default: false
+        locale: ru
+        name: Pусский
+        nav_translations:
+          Benchmarks: Тест
+          Clean Up: Очистка
+          Credits: Благодарность
+          Custom Configs: Кастомизация
+          FAQ: Часто задаваемые вопросы
+          Features: Функции
+          Help: Помощь
+          Install: установить
+          Launch Options: Параметры запуска
+          List of Custom Configs: Список пользовательских конфигов
+          Misconceptions: Заблуждения
+          Modules: Модули
+          OS Optimizations: Оптимизация операционной системы
+          Quick Fixes: Быстрые исправления
+          Security: Политика безопасности
+          See Also: Посмотрите также
+          Silly Launch Options: Незначительные Параметры Запуска
+          Support Me: Поддержка
+          TF2 Documentation: Документация по тф2
+          Update: Обновление
+      - build: true
+        default: false
+        locale: es
+        name: Español
+      - build: true
+        default: false
+        locale: fr
+        name: Français
+      - build: true
+        default: false
+        locale: tr
+        name: Türkçe
+        nav_translations:
           Clean Up: Temizleme
-  - search: {separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'}
+          Install: Nasıl Kurulur
+    reconfigure_material: true
+    reconfigure_search: false
+  - search:
+      { separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;' }
   - macros: {}
-  - mike: {canonical_version: latest}
-  - git-revision-date-localized: {type: timeago, enable_creation_date: true, fallback_to_build_date: true}
-  - minify: {minify_html: true}
-  - git-committers: {repository: mastercomfig/mastercomfig, branch: "develop"}
+  - mike: { canonical_version: latest }
+  - git-revision-date-localized:
+      {
+        type: timeago,
+        enable_creation_date: true,
+        fallback_to_build_date: true,
+      }
+  - minify: { minify_html: true }
+  - git-committers: { repository: mastercomfig/mastercomfig, branch: "develop" }
