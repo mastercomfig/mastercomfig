@@ -109,7 +109,7 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 * [Steam Priority Launcher](https://github.com/Leo40Git/SteamPriorityLauncher)
   — A launcher for launching Steam games, such as TF2, with different priorities
 
-* [TF2 Bot Detector](https://github.com/PazerOP/tf2_bot_detector)
+* [TF2 Bot Detector](https://github.com/surepy/tf2_bot_detector) (updated fork)
   — Automatically detects and votekicks cheaters/bots in TF2 casual
 
 * [Vote HUD Custom Font](https://github.com/andy013/votehud_custom_font)
