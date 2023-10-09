@@ -4,7 +4,7 @@ description: Help me work on and improve mastercomfig!
 
 # Support me
 
-You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N). There's also a $2.99 supporter subscription on the [Discord server](https://discord.com/servers/mastercomfig-389089828249010188).
+You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
 
 If you cannot directly support me, I have a [Support-A-Creator](https://www.epicgames.com/fortnite/en-US/news/support-a-creator-faq) code: `mastercoms`,
 which you can set in
