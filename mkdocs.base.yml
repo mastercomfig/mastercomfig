@@ -1,6 +1,6 @@
 site_name: mastercomfig docs
 site_author: mastercoms
-site_url: "https://docs.mastercomfig.com/"
+site_url: "https://docs.comfig.app/"
 site_description: A modern customization framework.
 copyright: >-
   Copyright &copy; 2016-2023 mastercoms<br><br>Valve, the Valve logo, Steam, the
@@ -217,7 +217,6 @@ extra_javascript:
   - js/widescreen.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - js/tables.js
-  - js/third_party.js
 extra_css:
   - css/extra.css
 extra:

@@ -5,7 +5,7 @@ description: How to update mastercomfig to the latest version
 # Update
 
 When a new release comes out, use the
-[app](https://mastercomfig.com/app) to download 
+[app](https://comfig.app/app) to download 
 the latest files and drag them into your `tf/custom` folder,
 replacing the old files.
 

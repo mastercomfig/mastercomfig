@@ -175,7 +175,7 @@ Add your alternatives uncommented in the applicable presets/addons or use module
 
 If your settings affect quality in any way, create a new module or modify
 the existing modules if applicable, then add documentation for it at the
-[modules docs page](https://docs.mastercomfig.com/page/customization/modules/).
+[modules docs page](https://docs.comfig.app/page/customization/modules/).
 
 The first part of adding modules is a multi-step process in `config/mastercomfig/cfg/comfig/comfig.cfg`:
 
