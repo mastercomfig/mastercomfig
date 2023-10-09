@@ -4,7 +4,7 @@
   Referrer-Policy: no-referrer
   Permissions-Policy: document-domain=()
   Content-Security-Policy: script-src 'unsafe-inline' 'self' https://static.cloudflareinsights.com https://cdnjs.cloudflare.com; frame-ancestors 'none';
-  Cache-Control: public, no-cache
+  Cache-Control: public, max-age=2419200, stale-while-revalidate=86400
 
 /:version/assets/stylesheets*
   ! Cache-Control
