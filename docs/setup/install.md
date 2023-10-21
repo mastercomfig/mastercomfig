@@ -1,26 +1,9 @@
 ---
 description: Steps on how to install mastercomfig and get it set up properly.
 ...
-
-<div style="background:linear-gradient(135deg, rgba(33,37,41, 0.01), rgba(33,37,41, 1) 60%),radial-gradient(ellipse at top left, rgba(255,255,255, 0.5), transparent 50%),radial-gradient(ellipse at top right, rgba(255,228,132, 0.5), transparent 50%),radial-gradient(ellipse at center right, rgba(112.520718,44.062154,249.437846, 0.5), transparent 50%),radial-gradient(ellipse at center left, rgba(13,110,253, 0.5), transparent 50%);padding:0.5rem;display:flex;align-items:center" class="md-typeset">
-    <div style="font-size: 0;">
-        <a href="https://tradeit.gg/?aff=comfig">
-            <img style="height:4rem;width:4rem;aspect-ratio:1/1;" alt="tradeit.gg logo" src="https://mastercomfig.com/img/third_party/tradeit.webp" width="96" height="96" />
-        </a>
-    </div>
-    <div style="margin-left: 0.5rem;">
-        <a href="https://tradeit.gg/?aff=comfig">
-            <p style="color:#fff;margin:0">
-                <strong>Trade, buy or sell items</strong><br>
-                Trade items instantly for real money with the lowest fees.<br>
-                Fully automated. Over 45 million successful trades.
-            </p>
-        </a>
-    </div>
-</div>
 # How to install mastercomfig
 
-1. [Use the app to generate](https://mastercomfig.com/app) a mastercomfig package of your choosing.
+1. [Use the app to generate](https://comfig.app/app) a mastercomfig package of your choosing.
 2. Go to your Steam library and right-click on Team Fortress 2.
 3. Click Properties...
 4. Set these launch options: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars -noquicktime`. For more information, read the [launch options customization guide](../customization/launch_options.md).

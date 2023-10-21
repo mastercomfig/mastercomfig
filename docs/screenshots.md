@@ -6,31 +6,31 @@ description: mastercomfig screenshots for all presets.
 
 ## Ultra
 
-![sawmill ultra](https://mastercomfig.com/img/presets/ultra-hq.webp){ loading=lazy }
+![sawmill ultra](https://comfig.app/img/presets/ultra-hq.webp){ loading=lazy }
 
 ## High
 
-![sawmill high](https://mastercomfig.com/img/presets/high-hq.webp){ loading=lazy }
+![sawmill high](https://comfig.app/img/presets/high-hq.webp){ loading=lazy }
 
 ## Medium High
 
-![sawmill medium high](https://mastercomfig.com/img/presets/medium-high-hq.webp){ loading=lazy }
+![sawmill medium high](https://comfig.app/img/presets/medium-high-hq.webp){ loading=lazy }
 
 ## Medium
 
-![sawmill medium](https://mastercomfig.com/img/presets/medium-hq.webp){ loading=lazy }
+![sawmill medium](https://comfig.app/img/presets/medium-hq.webp){ loading=lazy }
 
 ## Medium Low
 
-![sawmill medium low](https://mastercomfig.com/img/presets/medium-low-hq.webp){ loading=lazy }
+![sawmill medium low](https://comfig.app/img/presets/medium-low-hq.webp){ loading=lazy }
 
 ## Low
 
-![sawmill low](https://mastercomfig.com/img/presets/low-hq.webp){ loading=lazy }
+![sawmill low](https://comfig.app/img/presets/low-hq.webp){ loading=lazy }
 
 ## Very Low
 
-![sawmill very low](https://mastercomfig.com/img/presets/very-low-hq.webp){ loading=lazy }
+![sawmill very low](https://comfig.app/img/presets/very-low-hq.webp){ loading=lazy }
 
 ## Preset Screenshot Config
 
