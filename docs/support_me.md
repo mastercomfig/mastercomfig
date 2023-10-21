@@ -13,7 +13,7 @@ which you can set in
 and other games on the Epic Games Store, as well as purchasing games and DLC on the store itself.
 In connection with Epic Games’ Support-A-Creator Program, I receive a commission from these purchases.
 
-You can also support my other projects, like playing on my 8v8 Team Deathmatch map for Fortnite. Island code: `7761-6157-7902`
+You can also support my other projects, like playing on my [8v8 Team Deathmatch map for Fortnite](https://www.fortnite.com/@mastercoms/7761-6157-7902). Island code: `7761-6157-7902`
 
 ![Fortnite map with 2 forts across a bridge](https://pbs.twimg.com/media/F8XdcVlWcAAR4c7?format=jpg&name=4096x4096)
 
