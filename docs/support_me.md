@@ -4,7 +4,7 @@ description: Help me work on and improve mastercomfig!
 
 # Support me
 
-You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N).
+You can support mastercoms using [Liberapay](https://liberapay.com/mastercoms/) or [Ko-fi](https://ko-fi.com/mastercoms) with money, or gift items through [trade offers](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N). There's also a $2.99 supporter subscription on the [Discord server](https://discord.com/servers/mastercomfig-389089828249010188).
 
 If you cannot directly support me, I have a [Support-A-Creator](https://www.epicgames.com/fortnite/en-US/news/support-a-creator-faq) code: `mastercoms`,
 which you can set in
@@ -12,6 +12,11 @@ which you can set in
 [Rocket League](https://www.rocketleague.com/support-a-creator/),
 and other games on the Epic Games Store, as well as purchasing games and DLC on the store itself.
 In connection with Epic Games’ Support-A-Creator Program, I receive a commission from these purchases.
+
+You can also support my other projects, like playing on my 8v8 Team Deathmatch map for Fortnite. Island code: `7761-6157-7902`
+
+![Fortnite map with 2 forts across a bridge](https://pbs.twimg.com/media/F8XdcVlWcAAR4c7?format=jpg&name=4096x4096)
+
 
 <!-- You can use Ko-fi to get [a config commission](https://ko-fi.com/mastercoms/commissions), where I personally tune a config exactly to your preferences and PC setup. I can also do this via a trade for 3 keys. There is also an addon where I can do advanced scripting at your request (6 keys if paying via trade). -->
 
