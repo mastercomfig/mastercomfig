@@ -8,6 +8,7 @@ on:
     paths:
       - docs/**
       - mkdocs.yml
+      - mkdocs.base.yml
       - .github/workflows/docs.yml
   pull_request:
 
