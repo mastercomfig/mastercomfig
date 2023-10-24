@@ -2,8 +2,8 @@ Looking for help with mastercomfig?
 
 Check these resources out:
 
-* [Quick Fixes guide](https://docs.comfig.app/page/next_steps/quick_fixes/)
-* [Setup Instructions](https://docs.comfig.app/page/setup/clean_up/)
+* [Quick Fixes guide](https://docs.comfig.app/latest/next_steps/quick_fixes/)
+* [Setup Instructions](https://docs.comfig.app/latest/setup/clean_up/)
 
 Still can't find your answer and want to ask for help?
 
