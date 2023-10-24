@@ -2,83 +2,83 @@ name: CI
 
 on:
   push:
-    branches: [ develop ]
+    branches: [develop]
     paths-ignore:
-      - 'docs/**'
-      - '.github/**'
-      - '.remarkrc'
-      - '.gitignore'
-      - '**.md'
-      - '**.yml'
-      - '**.json'
-      - '!.github/workflows/main.yml'
-      - '!data/**'
-    tags: ['**']
+      - "docs/**"
+      - ".github/**"
+      - ".remarkrc"
+      - ".gitignore"
+      - "**.md"
+      - "**.yml"
+      - "**.json"
+      - "!.github/workflows/main.yml"
+      - "!data/**"
+    tags: ["**"]
   pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v3
-      with:
-        clean: false
-    - name: Cache
-      id: cache
-      uses: actions/cache@v3
-      with:
-        path: |
-          ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
-          ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/libvstdlib.so
-          ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/libtier0.so
-          ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/filesystem_stdio.so
-          ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/libtcmalloc_minimal.so.4
-        key: ${{ runner.os }}-cache-2
-    - name: Install dependencies (with Steam)
-      if: ${{ steps.cache.outputs.cache-hit != 'true' }}
-      run: |
-        sudo dpkg --add-architecture i386
-        sudo apt-get update
-        echo steam steam/question select "I AGREE" | sudo debconf-set-selections
-        echo steam steam/license note '' | sudo debconf-set-selections
-        sudo DEBIAN_FRONTEND=noninteractive apt-get -yq --no-install-recommends install steamcmd
-        /usr/games/steamcmd +login anonymous +download_depot 232250 232256 +quit
-        sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
-        #!/bin/bash
-        VPK_LINUX=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
-        VALVE_LIB_DIR=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin
-        LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
-        EOF'
-        sudo chmod +x /usr/local/bin/vpk
-    - name: Install dependencies
-      if: ${{ steps.cache.outputs.cache-hit == 'true' }}
-      run: |
-        sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
-        #!/bin/bash
-        VPK_LINUX=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
-        VALVE_LIB_DIR=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin
-        LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
-        EOF'
-        sudo chmod +x /usr/local/bin/vpk
-    - name: Check tag
-      id: check-tag
-      if: ${{ github.event_name == 'push' }}
-      run: |
-        if [[ ${{ github.event.ref }} == refs/tags/* ]]; then
-          echo "release=true" >> $GITHUB_OUTPUT
-        fi
-    - name: Build mastercomfig (prerelease)
-      run: dev/release.sh
-      if: ${{ github.event_name == 'push' && steps.check-tag.outputs.release != 'true' }}
-      env:
-        prerelease: true
-        GH_TOKEN: ${{secrets.REPO_TOKEN}}
-    - name: Build mastercomfig (release)
-      run: dev/release.sh
-      if: ${{ github.event_name == 'push' && steps.check-tag.outputs.release == 'true' }}
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        GH_TOKEN: ${{secrets.REPO_TOKEN}}
-    - name: Build mastercomfig
-      run: dev/package.sh
-      if: ${{ github.event_name == 'pull_request' }}
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+      - name: Cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
+            ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/libvstdlib.so
+            ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/libtier0.so
+            ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/filesystem_stdio.so
+            ~/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/libtcmalloc_minimal.so.4
+          key: ${{ runner.os }}-cache-2
+      - name: Install dependencies (with Steam)
+        if: ${{ steps.cache.outputs.cache-hit != 'true' }}
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt-get update
+          echo steam steam/question select "I AGREE" | sudo debconf-set-selections
+          echo steam steam/license note '' | sudo debconf-set-selections
+          sudo DEBIAN_FRONTEND=noninteractive apt-get -yq --no-install-recommends install steamcmd
+          /usr/games/steamcmd +login anonymous +download_depot 232250 232256 +quit
+          sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
+          #!/bin/bash
+          VPK_LINUX=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
+          VALVE_LIB_DIR=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin
+          LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
+          EOF'
+          sudo chmod +x /usr/local/bin/vpk
+      - name: Install dependencies
+        if: ${{ steps.cache.outputs.cache-hit == 'true' }}
+        run: |
+          sudo bash -c 'cat <<\EOF > /usr/local/bin/vpk
+          #!/bin/bash
+          VPK_LINUX=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin/vpk_linux32
+          VALVE_LIB_DIR=/home/runner/.steam/steamcmd/linux32/steamapps/content/app_232250/depot_232256/bin
+          LD_LIBRARY_PATH="${VALVE_LIB_DIR}:${LD_LIBRARY_PATH}" "${VPK_LINUX}" "${@}"
+          EOF'
+          sudo chmod +x /usr/local/bin/vpk
+      - name: Check tag
+        id: check-tag
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          if [[ ${{ github.event.ref }} == refs/tags/* ]]; then
+            echo "release=true" >> $GITHUB_OUTPUT
+          fi
+      - name: Build mastercomfig (prerelease)
+        run: dev/release.sh
+        if: ${{ github.event_name == 'push' && steps.check-tag.outputs.release != 'true' }}
+        env:
+          prerelease: true
+          GH_TOKEN: ${{secrets.REPO_TOKEN}}
+      - name: Build mastercomfig (release)
+        run: dev/release.sh
+        if: ${{ github.event_name == 'push' && steps.check-tag.outputs.release == 'true' }}
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          GH_TOKEN: ${{secrets.REPO_TOKEN}}
+      - name: Build mastercomfig
+        run: dev/package.sh
+        if: ${{ github.event_name == 'pull_request' }}
