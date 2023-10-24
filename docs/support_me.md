@@ -15,9 +15,6 @@ In connection with Epic Games’ Support-A-Creator Program, I receive a commissi
 
 You can also support my other projects, like playing on my [8v8 Team Deathmatch map for Fortnite](https://www.fortnite.com/@mastercoms/7761-6157-7902). Island code: `7761-6157-7902`
 
-![Fortnite map with 2 forts across a bridge](https://pbs.twimg.com/media/F8XdcVlWcAAR4c7?format=jpg&name=4096x4096)
-
-
 <!-- You can use Ko-fi to get [a config commission](https://ko-fi.com/mastercoms/commissions), where I personally tune a config exactly to your preferences and PC setup. I can also do this via a trade for 3 keys. There is also an addon where I can do advanced scripting at your request (6 keys if paying via trade). -->
 
 <!-- Finally, you can buy early access to the config for a month through [Ko-fi](https://ko-fi.com/mastercoms/shop). This will give you access to more frequent updates released throughout the month, rather than the monthly stable releases of the config. -->
