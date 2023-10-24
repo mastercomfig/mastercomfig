@@ -17,28 +17,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.REPO_TOKEN }}
-        fetch-depth: 0
-    - name: Update release info
-      run: |
-        {
-          echo "${{ github.event.inputs.version }}"
-          echo "${{ github.event.inputs.highlights }}"
-          echo "${{ github.event.inputs.hours }}"
-          echo ""
-        } > dev/info.txt
-    - name: Commit release info
-      run: |
-        git config user.email "support@mastercomfig.com"
-        git config user.name "mastercoms"
-        git commit -am "release ${{ github.event.inputs.version }}" || true
-    - name: Switch to release
-      run: git checkout release
-    - name: Merge ref into release
-      run: git merge ${GITHUB_REF##*/}
-    - name: Tag release
-      run: git tag ${{ github.event.inputs.version }}
-    - name: Push release
-      run: git push --atomic origin release ${{ github.event.inputs.version }}
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.REPO_TOKEN }}
+          fetch-depth: 0
+      - name: Update release info
+        run: |
+          {
+            echo "${{ github.event.inputs.version }}"
+            echo "${{ github.event.inputs.highlights }}"
+            echo "${{ github.event.inputs.hours }}"
+            echo ""
+          } > dev/info.txt
+      - name: Commit release info
+        run: |
+          git config user.email "support@mastercomfig.com"
+          git config user.name "mastercoms"
+          git commit -am "release ${{ github.event.inputs.version }}" || true
+      - name: Switch to release
+        run: git checkout release
+      - name: Merge ref into release
+        run: git merge ${GITHUB_REF##*/}
+      - name: Tag release
+        run: git tag ${{ github.event.inputs.version }}
+      - name: Push release
+        run: git push --atomic origin release ${{ github.event.inputs.version }}

@@ -16,7 +16,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Track Docs Branch
@@ -28,9 +28,9 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - uses: pnpm/action-setup@v2.2.4
+      - uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Lint Docs
         run: |
           pnpm i

@@ -2,15 +2,15 @@ name: Merge release -> develop
 
 on:
   push:
-    branches: [ release ]
+    branches: [release]
 
 jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Merge release -> develop
-      uses: everlytic/branch-merge@master
-      with:
-        target_branch: develop
-        github_token: ${{ secrets.REPO_TOKEN }}
+      - uses: actions/checkout@v4
+      - name: Merge release -> develop
+        uses: everlytic/branch-merge@master
+        with:
+          target_branch: develop
+          github_token: ${{ secrets.REPO_TOKEN }}
