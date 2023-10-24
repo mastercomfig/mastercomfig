@@ -21,7 +21,7 @@ mastercomfig is constantly updated with tweaks, new features, and documentation 
 
 ## Docs
 
-For more information, including installation steps, check out [the docs](https://docs.comfig.app/page/).
+For more information, including installation steps, check out [the docs](https://docs.comfig.app/).
 
 ## Support me
 
