@@ -165,26 +165,36 @@ plugins:
           locale: ru
           name: Pусский
           nav_translations:
-            Benchmarks: Тест
-            Clean Up: Очистка
-            Credits: Благодарность
-            Custom Configs: Кастомизация
+            About: О конфиге
             FAQ: Часто задаваемые вопросы
-            Features: Функции
+            Support Me: Поддержка проекта
             Help: Помощь
-            Install: установить
-            Launch Options: Параметры запуска
-            List of Custom Configs: Список пользовательских конфигов
-            Misconceptions: Заблуждения
-            Modules: Модули
-            OS Optimizations: Оптимизация операционной системы
-            Quick Fixes: Быстрые исправления
+            Features: Особенности
+            Screenshots: Скриншоты
+            Benchmarks: Тесты
+            Contributing: Участие в проекте
             Security: Политика безопасности
+            Credits: Благодарности
+            Setup: Инструкция по установке
+            Clean Up: Очистка конфига
+            Install: Установка конфига
+            Customization: Модификация
+            Launch Options: Параметры запуска
+            Custom Configs: Персонализация
+            Modules: Модули
+            List of Custom Configs: Список пользовательских конфигов
             See Also: Посмотрите также
-            Silly Launch Options: Незначительные Параметры Запуска
-            Support Me: Поддержка
-            TF2 Documentation: Документация по тф2
+            OS Optimizations: Оптимизация операционной системы
+            Windows: Для Windows
+            Linux: Для Linux
+            Next Steps: Следующие шаги
+            Quick Fixes: Быстрые исправления
             Update: Обновление
+            TF2 Documentation: Документация по тф2
+            Misconceptions: Заблуждения
+            Silly Launch Options: Незначительные Параметры Запуска
+            Other Games: Другие игры
+            Epic Games Store: Игровой магазин EGS
         - build: true
           default: false
           locale: es
