@@ -45,6 +45,8 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 This is a bug with later versions of Mesa. You can fix it by adding `lighting_ex=high` to your `modules.cfg`.
 
+You can also configure the drirc file (optionally using the adriconf GUI) to set `disable_uniform_array_resize` to `true` for Team Fortress 2.
+
 ## Ragdolls aren't instantly disappearing
 
 There was a bug fix to `ragdolls=off`, to avoid the issue where ragdolls would still be present on the map and accumulate over time, causing performance issues. The cost of this was compared to the very short physics initialization and simulation, and it was determined that it would be better to avoid a leak from ragdolls never getting deleted by enabling physics on ragdolls. You can get the old behavior by using `ragdolls=hidden` in `modules.cfg`, at the cost of this increased overhead, if you prefer the visuals.
@@ -144,4 +146,4 @@ Check to see if you have `-dxlevel 100` in your TF2 launch options, it may have 
 
 ## I got banned from the Discord server
 
-You can submit a single [ban appeal](https://dyno.gg/form/dae64461) after 2 days of receiving your ban.
+You can submit a single [ban appeal](https://dyno.gg/form/dae64461) a few days after receiving your ban.
