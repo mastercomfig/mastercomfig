@@ -46,7 +46,7 @@ mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve C
 
 ### tradeit.gg
 
-![tradeit.gg](https://mastercomfig.com/img/third_party/tradeit.webp)
+<img width="256" src="https://mastercomfig.com/img/third_party/tradeit.webp" alt="tradeit.gg" />
 
 **Trade, buy or sell items**  
 Trade items instantly for real money with the lowest fees.  
