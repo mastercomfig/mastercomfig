@@ -57,7 +57,10 @@ Read below about optional launch options and choosing your own DXLevel.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after the first launch.
     * **-freq x** : forces your refresh rate for when TF2 does not automatically detect it. For example, if you have a 144Hz monitor, x would be 144, for `-freq 144`.
     * **-r_emulate_gl** : changes rendering pipeline to accommodate OpenGL quirks and support levels, still runs using DirectX
-
+    * **-audiolanguage** : changes the audio (spoken) language. Due to the way it works, only `-audiolanguage english` works, and you need to set the game language to your language. 
+    !!! info
+        Due to a bug, the "Audio (spoken) language" option in-game changes the whole game language, not only audio language.
+    
 === "macOS"
 
     * **-console** : displays console on startup
