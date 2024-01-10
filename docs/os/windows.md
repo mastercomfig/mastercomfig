@@ -15,35 +15,30 @@ If you experience problems or reduced performance from this feature, turn it off
 
 ## Out of Memory due to Page File growth pressure
 
-A known, [Microsoft confirmed](https://docs.microsoft.com/en-us/troubleshoot/windows-client/performance/slow-page-file-growth-memory-allocation-errors) bug in Windows is that the automatic page file growth set up may be too slow for applications which introduce high memory pressure during frequent memory allocations. It is recommended in these cases that you move to a [static page file size](https://docs.microsoft.com/en-us/troubleshoot/windows-client/performance/slow-page-file-growth-memory-allocation-errors#workaround).
+A known [Microsoft confirmed](https://docs.microsoft.com/en-us/troubleshoot/windows-client/performance/slow-page-file-growth-memory-allocation-errors) bug in Windows is that the automatic page file growth setup may be too slow for applications that introduce high memory pressure during frequent memory allocations. It is recommended in these cases that you move to a [static page file size](https://docs.microsoft.com/en-us/troubleshoot/windows-client/performance/slow-page-file-growth-memory-allocation-errors#workaround).
 
 ## Use High Performance power plan
 
-Open Power Options and select the High Performance power plan, or the Ultimate Performance plan if you have Windows 10 Pro for Workstations.
+Open Power Options and select the High Performance power plan or the Ultimate Performance plan if you have Windows 10 Pro for Workstations.
 
 It's recommended that you set Minimum processor state to its default value of 5%, instead of 100% as set in the high performance plans.
 You can find this in Power Options > Change plan settings > Change advanced power settings > Process power management > Minimum processor state.
 This is because forcing the processor to 100% power prevents cores from reaching their max boost due to the processor being at this all-core threshold.
-Giving more room for processor power to scale individually per core allows the OS to better balance power limits across all cores, especially in TF2's case of being a largely single threaded game.
+Giving more room for processor power to scale individually per core allows the OS to better balance power limits across all cores, especially in TF2's case, being a largely single-threaded game.
 
 ## Fix Windows Defender performance bug on Intel CPUs
 
-Currently, there is a bug with Windows Defender where it will spam an Intel CPU feature until another program has used it. This can significantly reduce performance, up to 6%. You can use [Counter Control](https://www.techpowerup.com/download/counter-control/)'s Reset button to mark this feature as used and stop the spam from Defender. [Read more here](https://www.pcmag.com/news/intel-cpu-performance-takes-a-big-hit-due-to-windows-defender-bug).
-
-## Disable Visual Effects
-
-If you are on a slow/old PC, you can disable Windows' visual effects for better performance. Search for "Performance Information and Tools"
-and then select "Adjust for best performance". You can also select options you'd like to keep, but keep in mind that these may reduce performance.
+Currently, there is a bug with Windows Defender where it will spam an Intel CPU feature until another program has used it. This can significantly reduce performance by up to 6%. You can use [Counter Control](https://www.techpowerup.com/download/counter-control/)'s Reset button to mark this feature as used and stop the spam from Defender. [Read more here](https://www.pcmag.com/news/intel-cpu-performance-takes-a-big-hit-due-to-windows-defender-bug).
 
 ## Disable Nvidia Low Latency Mode
 
-The Source Engine has its own frame syncing method, which is tuned for its material threading system.
+The Source Engine has a frame syncing method that is tuned for its material threading system.
 By constraining queued frames in the driver, you can cause unexpected stalls in the frame submission process, which can reduce frame rate and increase input delay.
 Because of this, it is recommended you keep Low Latency Mode in the Nvidia Control Panel to its default value of `Off` for Team Fortress 2.
 
 ## Disable Radeon Chill
 
-Radeon Chill is a power saving feature that introduces a variable framecap. You can disable it in the Radeon Settings app:
+Radeon Chill is a power-saving feature that introduces a variable frame cap. Disable it in the Radeon Settings app:
 
 1. Go to the Gaming tab.
 2. Set global settings or only for Team Fortress 2 if you want to use Chill elsewhere.
@@ -51,7 +46,7 @@ Radeon Chill is a power saving feature that introduces a variable framecap. You 
 
 ## Disable Overlays
 
-Big idea: disable as many overlays as possible. They interrupt the rendering process with their own, which can severely affect performance in many cases. Common examples of overlays are: Discord and Nahimic. The Steam overlay is largely optimized, but may still cause problems on slow/old PCs.
+Big idea: disable as many overlays as possible. They interrupt the rendering process on their own, which can severely affect performance in many cases. Common examples of overlays are Discord and Nahimic. The Steam overlay is largely optimized but may still cause problems on slow/old PCs.
 
 ### Disabling Discord overlay
 
@@ -61,11 +56,11 @@ Big idea: disable as many overlays as possible. They interrupt the rendering pro
 
 ### Disabling Nahimic
 
-Nahimic is an audio effects software preinstalled on some gaming laptops and desktops, from manufacturers like Alienware, Dell, MSI, and ASUS ROG. Its overlay is especially inefficient, and causes FPS drops and generally lower FPS even when it is turned off. If you have a version which comes with an overlay, you should remove it. It is notoriously hard to uninstall, so you will have better luck disabling the driver through the following steps:
+Nahimic is an audio effects software preinstalled on some gaming laptops and desktops from manufacturers like Alienware, Dell, MSI, and ASUS ROG. Its overlay is especially inefficient and causes FPS drops and generally lower FPS even when it is turned off. If you have a version that comes with an overlay, you should remove it. It is notoriously hard to uninstall, so you will have better luck disabling the driver through the following steps:
 
 1. Open Device Manager
 2. Expand `Software Components`
-3. Right click and disable anything along the lines of `A-Volute Audio Effects Component`.
+3. Right-click and disable anything along the lines of `A-Volute Audio Effects Component`.
 4. Open Services.
 5. Open Nahimic service.
 6. Select `Startup type:` `Disabled`.
@@ -77,7 +72,7 @@ You can use the [W10Privacy tool](https://www.winprivacy.de/deutsch-start/downlo
 ## Image Scaling
 
 Both NVIDIA and AMD provide integrated image scaling technology which can reduce the rendered resolution at very little perceptible image quality reduction.
-If you are looking to squeeze performance out of your games, especially at 1400p or 4k, you can use the Image Scaling in the NVIDIA Control Panel under 3D settings, or Radeon Super Resolution in AMD Software under Graphics settings.
+If you are looking to squeeze performance out of your games, especially at 1400p or 4k, you can use the Image Scaling in the NVIDIA Control Panel under 3D setting, or Radeon Super Resolution in AMD Software under Graphics settings.
 
 ## Intel Panel Self Refresh
 
@@ -85,11 +80,11 @@ Intel Panel Self Refresh can ruin frame latency and timings, especially on hybri
 
 ## Disable Fullscreen Optimizations
 
-Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low level borderless window, which gets equivalent or better than fullscreen performance with the fast alt-tabbing of windowed mode.
+Fullscreen optimizations is a feature in Windows 10 where fullscreen windows are instead made to be a low-level borderless window, which gets equivalent or better than fullscreen performance with the fast alt-tabbing of windowed mode.
 
 You can find more information on the [DirectX Developer Blog](https://devblogs.microsoft.com/directx/demystifying-full-screen-optimizations/) and in [this Reddit thread](https://old.reddit.com/r/Windows10/comments/645ukf/windows_10_cu_fullscreen_optimizations/dg330ub/?context=3).
 
-You may encounter problems with it enabled, involving brightness, refresh rates or other display issues. If you are encountering these issues, open your game folder through Steam. Then, right click on `hl2.exe`, click Properties, go to the Compatibility tab, and then select the box that says `Disable Fullscreen Optimizations`.
+You may encounter problems with it enabled, involving brightness, refresh rates, or other display issues. If you are encountering these issues, open your game folder through Steam. Then, right-click on `hl2.exe`, click Properties, go to the Compatibility tab, and then select the box that says `Disable Fullscreen Optimizations`.
 
 If disabling fullscreen optimizations helps, [let Microsoft know](https://aka.ms/fullscreenoptimizationsfeedback), so they can improve it in the future.
 
@@ -102,7 +97,7 @@ Use [TCP Optimizer](https://www.speedguide.net/downloads.php) to optimize your i
 3. Click Apply Changes.
 
 !!! note
-    This may not do much for TF2, as its optimizations are largely for TCP but it does have a few UDP options.
+    This may not do much for TF2, as its optimizations are largely for TCP, but it does have a few UDP options.
 
 ## Driver latency optimization
 

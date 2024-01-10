@@ -1,7 +1,6 @@
 ---
 description: How to completely reset TF2, including uninstalling mastercomfig or other configs.
 ...
-
 # Clean Up
 
 !!! danger
@@ -10,7 +9,7 @@ description: How to completely reset TF2, including uninstalling mastercomfig or
 
 !!! info
 
-    These steps are no longer required to install mastercomfig, but is kept here to document how to completely reset TF2.
+    These steps are not required to install mastercomfig but document how to reset TF2 completely.
 
 If you want to remove your config, delete any
 configs you may have in `tf/custom` and delete the `tf/cfg` folder.
@@ -24,4 +23,4 @@ else Steam Cloud will redownload them. Alternatively, you can
 
 Finally, launch TF2 with only the
 `-novid -autoconfig -default +host_writeconfig config.cfg full +mat_savechanges +quit` launch
-options. The game will launch and exit. Afterwards, remove these launch options.
+options. The game will launch and exit. Afterward, remove these launch options.

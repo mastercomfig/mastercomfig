@@ -5,7 +5,7 @@ description: Как обновить mastercomfig до последней вер
 # Обновление
 
 Когда выйдет новая версия, используйте
-[приложение](https://mastercomfig.com/app) для загрузки
+[приложение](https://comfig.app/app) для загрузки
 последние файлов и переместите их в папку `tf/custom`,
 с заменой старых файлов.
 
@@ -14,5 +14,5 @@ description: Как обновить mastercomfig до последней вер
 
 mastercomfig часто обновляется, поэтому, чтобы получить последние улучшения,
 убедитесь что вы часто проверяете здесь наличие новых выпусков, или получайте уведомления
-об обновлениях на [Дискорд](https://discord.gg/CuPb2zV),
+об обновлениях на [Дискорд](https://discord.gg/mastercomfig-389089828249010188),
 [Группа Steam](https://steamcommunity.com/groups/comfig), или [Steam чат](https://s.team/chat/IM8fJTnx).

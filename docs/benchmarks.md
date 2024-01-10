@@ -4,13 +4,17 @@ description: Learn how to benchmark TF2 and measure FPS scientifically.
 
 # Benchmarks
 
-Benchmarking is the process through which you can scientifically measure the impact of changes to your system.
+Benchmarking is the process through which you can scientifically measure the impact of changes on your system.
 
-A large amount of benchmark data is crucial to ensuring that mastercomfig works on a wide variety of systems.
+A large amount of benchmark data is crucial to ensuring that mastercomfig works on various systems.
 
 Thus, it's highly appreciated to benchmark mastercomfig and any changes you make to it or your system, so we can better understand the impact of these.
 
 ## How to benchmark
+
+!!! note
+    The benchmark was made incompatible with the July 25, 2023 update.
+    You will need to switch to the Pre-07-25-23 Demo Playback beta in order to play the file. A new benchmark is being worked on.
 
 1. Download [the benchmark file](https://mega.nz/file/f8tlhDhR#nYgghqybOK15ObUykEczewB3242XHb_bJ4JP0rv1q6k).
 2. Move it to the `tf/` folder.

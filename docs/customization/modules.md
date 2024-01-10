@@ -23,14 +23,14 @@ will set the texture quality to `high`.
 
 ## Hardware usage levels
 
-Each module comes listed with its usage intensity of the related feature, for both CPU (processor) and GPU (graphics card), ranging through none, low, medium, and high.
+Each module comes listed with its usage intensity of the related feature for both CPU (processor) and GPU (graphics card), ranging from none, low, medium, and high.
 
-This will give you a rough idea about which settings you can balance for your specific setup, and which settings adjustments can provide the highest impact.
-These usage levels are merely a relative estimate, and not a precise indicator of the performance impact.
+These estimates will give you a rough idea about which settings you can balance for your specific setup and which settings adjustments can provide the highest impact.
+These usage levels are merely a relative estimate, not a precise indicator of the performance impact.
 
 ## Check Module Level Selection
 
-You can check what module level you have selected for a module by entering `module_level` into console. For example, `textures_level` will output:
+You can check what module level you have selected for a module by entering `module_level` into the console. For example, `textures_level` will output:
 
 ```c
 textures=high
@@ -38,7 +38,7 @@ textures=high
 
 or similar.
 
-You can also view selected levels for all modules by entering `module_levels` into console.
+You can also view selected levels for all modules by entering `module_levels` into the console.
 
 ### Advanced
 
@@ -49,21 +49,21 @@ You can also view selected levels for all modules by entering `module_levels` in
 
 Modules are backed with aliases, so you can easily use them in advanced customization and scripting.
 
-If you want to disable running a module entirely, you can put (for example) `alias textures` in `overrides/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception for this rule is the Snapshot Buffer module. You will have to use `alias snapshot_buffer;alias net_projectiles;alias net_hitscan;alias net_spy` to fully disable it.
+If you want to disable running a module entirely, you can put (for example) `alias textures` in `overrides/modules.cfg`. This will prevent mastercomfig from running texture commands. An exception to this rule is the Snapshot Buffer module. To fully disabled it, you must use `snapshot_buffer=custom`.
 
-Since modules aliases act like normal commands, they can also be used in console to easily change game settings. So you could enter `textures_high` into console to temporarily set your texture quality to high for that game session. You can reset your modules back to what they were on startup by entering `run_modules` into the console.
+Since module aliases act like normal commands, you can use them in the console to change game settings easily. For example, enter `textures_high` into the console to temporarily set your texture quality to high for that game session. You can reset your modules to what they were on startup by entering `run_modules` into the console.
 
 #### Module user layer alias
 
 The modules you choose in `overrides/modules.cfg` are executed by the `modules_c` alias.
 
-This means that you can change this alias in game, and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_overrides`.
+This means that you can change this alias in the game and have multiple versions of your modules for different quality preferences you may have. You can apply these new modules using `apply_overrides`.
 
 ## Networking modules
 
 ### SourceTV Compatibility
 
-Optimizes spectator view, or ensures compatibility with SourceTV.
+Optimizes spectator view or ensures compatibility with SourceTV.
 
 * **CPU usage:** none
 * **GPU usage:** none
@@ -99,19 +99,19 @@ Default setting: **`snapshot_buffer=auto`** (all presets).
 * **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
 * **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
 * **`snapshot_buffer=custom`**: Prevents mastercomfig from messing with interp.
-* **`snapshot_buffer=anim`**: Adjusts the smoothing to be more ideal for animations and NPCs, rather than for gameplay. You can use this for smoother offline recordings, singleplayer, etc.
+* **`snapshot_buffer=anim`**: Adjusts the smoothing to be ideal for animations and NPCs rather than gameplay. You can use this for smoother offline recordings, single-player, etc.
 
 ### Packet Size
 
-Controls how big packets are and how they are split up/compressed.
+Controls how big packets are and how they are split up/compressed. It's unlikely that you will ever need to change this setting.
 
 * **CPU usage:** low
 * **GPU usage:** none
 
 Default setting: **`packet_size=large`** (all presets).
 
-* **`packet_size=small`**: Uses the smallest packet size, that will most likely be processed by even the worst routers.
-* **`packet_size=conservative`**: Uses a smaller, safe packet size that will most likely be processed by most routers, even lower end ones.
+* **`packet_size=small`**: Uses the smallest packet size that even the worst routers will process.
+* **`packet_size=conservative`**: Uses a smaller, safe packet size that most routers will process.
 * **`packet_size=large`**: Uses the max recommended packet size by Steam to avoid split packets.
 
 ### Bandwidth
@@ -119,7 +119,7 @@ Default setting: **`packet_size=large`** (all presets).
 Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).
 
 !!! note
-    This does not increase data usage, only restricts how quickly data can be sent.
+    This does not increase data usage. It only restricts how quickly the game can send data.
 
 * **CPU usage:** low
 * **GPU usage:** none
@@ -148,7 +148,7 @@ Filters what custom content is allowed to be downloaded from the server.
 
 Default setting: **`download=custom`** (all presets).
 
-* **`download=custom`**: Whatever the user set in the game settings.
+* **`download=custom`**: Whatever the user sets in the game settings.
 * **`download=all`**: Download all custom files from servers.
 * **`download=nosounds`**: Download everything but sounds from servers.
 * **`download=mapsonly`**: Download only maps from servers.
@@ -172,7 +172,7 @@ Default setting: based on which preset you are currently using.
 
 ### Lighting
 
-Controls lighting fidelity: dynamic lights, how detailed lighting is, rimlights, light averaging, lightwarps, and ambient boost.
+Controls lighting fidelity: dynamic lights, detailed lighting, rimlights, light averaging, lightwarps, and ambient boost.
 
 * **CPU usage:** medium
 * **GPU usage:** high
@@ -214,7 +214,7 @@ Default setting: based on which preset you are currently using.
 * **`shadows=medium`**: Up to 7 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 * **`shadows=high`**: Up to 11 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 * **`shadows=very_high`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-* **`shadows=ultra`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
+* **`shadows=ultra`**: Up to 160 high quality shadows, and unlimited robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
 
 ### Flashlight
 
@@ -240,10 +240,10 @@ Controls weapon and other miscellaneous effects.
 
 Default setting: based on which preset you are currently using.
 
-* **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision.
-* **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision.
-* **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes.
-* **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes.
+* **`effects=low`**: Disables shell casing ejection, disables muzzle flashes, disables first person tracers, disables water splashes, disables temp ent (syringe) collision. Disables monitors.
+* **`effects=medium`**: Disables shell casing ejection, disables muzzle flashes, shows first person tracers, enables water splashes, disables temp ent (syringe) collision. 512x render resolution for monitors.
+* **`effects=high`**: Disables shell casing ejection, disables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 1K render resolution for monitors.
+* **`effects=ultra`**: Enables shell casing ejection, enables muzzle flashes, shows first person bullet tracers and makes bullet tracers thicker, enables water splashes. 4K render resolution for monitors.
 
 ### Water
 
@@ -254,13 +254,13 @@ Controls water reflections.
 
 Default setting: based on which preset you are currently using.
 
-* **`water=very_low`**: Makes water black.
-* **`water=low`**: Makes water solid.
-* **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges.
-* **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges.
-* **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges.
-* **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges.
-* **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water.
+* **`water=very_low`**: Makes water black. 32x water render resolution.
+* **`water=low`**: Makes water solid. 256x water render resolution.
+* **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges. 512x water render resolution.
+* **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
+* **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
+* **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 2K water render resolution.
+* **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water. 4K water render resolution.
 
 ### Particles
 
@@ -334,7 +334,7 @@ Default setting: **`motion_blur=off`** (all presets).
 Controls MSAA anti-aliasing.
 
 !!! warning
-    On Linux and macOS, AMD cards will do a slow full clear when anti-aliasing is enabled!
+    On Linux and macOS, enabling causes TF2 to do a slow full clear on AMD cards!
 
 !!! warning
     On Linux, enabling may cause rendering errors with Wayland.
@@ -388,7 +388,7 @@ Default setting: based on which preset you are currently using.
 * **`characters=medium`**: Enables facial animations, enables eyes and teeth, disables eye movement and blinking, disables enhanced lip sync.
 * **`characters=medium_high`**: Enables facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at short range.
 * **`characters=high`**: Enables smooth facial animations, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at a slightly increased range.
-* **`characters=ultra`**: Enables smooth facial animations, high quality models, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at all ranges.
+* **`characters=ultra`**: Enables extra smooth facial animations, high quality models, enables eyes and teeth, enables eye movement and blinking, enables enhanced lip sync at all ranges.
 
 ### General Decals
 
@@ -406,7 +406,7 @@ Default setting: based on which preset you are currently using.
 * **`decals=low`**: 9 max decals.
 * **`decals=medium`** 32 max decals.
 * **`decals=high`**: 80 max decals.
-* **`decals=ultra`**: 256 max decals.
+* **`decals=ultra`**: 2048 max decals.
 
 ### Model Decals
 
@@ -419,7 +419,7 @@ Default setting: based on which preset you are currently using.
 
 * **`decals_models=off`**: Disables model decals.
 * **`decals_models=low`**: Allow up to 9 model decals.
-* **`decals_models=high`**: Allow up to 32 model decals.
+* **`decals_models=high`**: Allow up to 50 model decals.
 
 ### Map Decals
 
@@ -472,7 +472,7 @@ Default setting: **`sillygibs=auto`** (all presets).
 
 * **`sillygibs=auto`**: Automatically chooses the best silly gibs setting for performance (`on` if gibs are off, `off` if gibs are on).
 * **`sillygibs=off`**: Normal gibs and blood.
-* **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, and no blood spawned upon gibbing.
+* **`sillygibs=on`**: Turns on silly gibs mode. This means birthday style gibs, sparks instead of blood upon flesh bullet impact, some low violence assets (like blood on the Half-Zatoichi) and no blood spawned upon gibbing.
 
 ### Props
 
@@ -486,7 +486,7 @@ Default setting: based on which preset you are currently using.
 * **`props=low`**: Disables client side props like bottles, disables foliage, low quality prop models and invisible railings.
 * **`props=medium`**: Disables client side props, disables foliage, default quality prop models.
 * **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client side props, enables foliage at a reasonable distance with instant pop in, default quality prop models.
-* **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at a very high distance with fade in, max quality prop models regardless of distance.
+* **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client side props, enables foliage at practically any distance, max quality prop models regardless of distance.
 
 ### Ragdolls
 
@@ -531,6 +531,9 @@ Default setting: based on which preset you are currently using.
 
 Controls how fast the animation is on the killstreak sheen glow for weapons.
 
+!!! warning
+    Killstreak sheens do not work on DirectX 8.
+
 * **CPU usage:** none
 * **GPU usage:** none
 
@@ -547,6 +550,9 @@ Controls how intense the color tint is on the killstreak sheen glow for weapons.
 
 !!! note
     This module will have no effect if `sheens_speed` is set to `off`.
+
+!!! warning
+    Killstreak sheens do not work on DirectX 8.
 
 * **CPU usage:** none
 * **GPU usage:** none
@@ -614,7 +620,7 @@ Setting it higher can reduce input delay.
 * **CPU usage:** low
 * **GPU usage:** none
 
-Default setting: **`fpscap=1000`** (all presets).
+Default setting: **`fpscap=400`** (all presets).
 
 * **`fpscap=powersaver`**: Sets FPS cap to half of your display's refresh rate.
 * **`fpscap=30`**: Sets FPS cap to 30 FPS.
@@ -852,16 +858,13 @@ Default setting: based on which preset you are currently using.
 
 Controls player voice chat.
 
-!!! warning
-    Turning on the voice chat system while in a server will
-    require a reconnect.
-
 * **CPU usage:** none
 * **GPU usage:** none
 
 Default setting: **`voice_chat=on`** (all presets, except Very Low).
 
-* **`voice_chat=off`**: Disables the in-game voice chat system.
+* **`voice_chat=off`**: Fully disables the in-game voice chat system, does not receive audio and cannot be re-enabled until reconnect.
+* **`voice_chat=hidden`**: Disables the in-game voice chat system by blocking audio from playing.
 * **`voice_chat=on`**: Enables the in-game voice chat system.
 
 ## Misc modules

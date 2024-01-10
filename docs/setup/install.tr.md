@@ -1,10 +1,9 @@
 ---
 description: mastercomfig'in nasıl düzgünce kurulacağına dair adımlar.
 ...
-
 # mastercomfig nasıl kurulur
 
-1. Seçtiğiniz mastercomfig VPK dosyalarını [indirin](https://mastercomfig.com/app).
+1. Seçtiğiniz mastercomfig VPK dosyalarını [indirin](https://comfig.app/app).
 2. Steam kütüphanenize gidin ve Team Fortress'a sağ tıklayın.
 3. Özelliklere tıklayın.
 4. Yerel Dosyalar sekmesine tıklayın.

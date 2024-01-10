@@ -1,10 +1,9 @@
 ---
 description: Passo a passo para instalar a mastercomfig e configurar ela corretamente.
 ...
-
 # Como instalar a mastercomfig
 
-1. [Baixe](https://mastercomfig.com/app) os arquivos VPK da mastercomfig de sua escolha.
+1. [Baixe](https://comfig.app/app) os arquivos VPK da mastercomfig de sua escolha.
 2. Vá para a sua biblioteca Steam e clique em Team Fortress 2 com o botão direito.
 3. Clique em Propriedades.
 4. Clique na aba Arquivos Locais.

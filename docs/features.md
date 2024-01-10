@@ -4,6 +4,8 @@ description: A list of all mastercomfig features.
 
 # Features
 
+This is a list of features that come out of the box with mastercomfig, so you can get an idea of what it can manage for you.
+
 ## Customization
 
 * Fully compatible with custom scripts and configs
@@ -12,6 +14,13 @@ description: A list of all mastercomfig features.
 * Extra optional customization settings
 * Modular config system to allow for fast updating
 * Extensive built-in addon system, providing support for null-canceling movement, transparent viewmodels and more
+
+## App features
+
+* Easy customization of settings
+* One click install package
+* Customize keybinds including advanced class config setups
+* Customize various aspects of weapons like crosshairs, firing effects and explosions
 
 ## Bug Fixes
 

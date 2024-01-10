@@ -1,105 +1,4 @@
 {
-  "networking": {
-    "modules": [
-      {
-        "name": "sourcetv",
-        "display": "SourceTV Compatibility",
-        "description": "Ensures compatibility with SourceTV spectating.",
-        "type": "switch",
-        "values": [
-          {
-            "value": "off"
-          },
-          {
-            "value": "on"
-          }
-        ]
-      },
-      {
-        "name": "packet_rate",
-        "description": "Controls how fast you send to and receive from the server.",
-        "values": [
-          {
-            "value": "congestion"
-          },
-          {
-            "value": "standard"
-          }
-        ]
-      },
-      {
-        "name": "snapshot_buffer",
-        "description": "Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.",
-        "advanced_display": "Also known as linear interpolation (lerp or interp).",
-        "tags": ["advanced"],
-        "values": [
-          {
-            "value": "auto",
-            "display": "Automatic"
-          },
-          {
-            "value": "safe"
-          },
-          {
-            "value": "high"
-          },
-          {
-            "value": "custom"
-          },
-          {
-            "value": "anim"
-          }
-        ]
-      },
-      {
-        "name": "packet_size",
-        "description": "Controls how big packets are and how they are split up/compressed.",
-        "values": [
-          {
-            "value": "small"
-          },
-          {
-            "value": "conservative"
-          },
-          {
-            "value": "large"
-          }
-        ]
-      },
-      {
-        "name": "bandwidth",
-        "description": "Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).",
-        "advanced_display": "This does not increase data usage, only restricts how quickly data can be sent.",
-        "type": "slider",
-        "values": ["128Kbps", "192Kbps", "384Kbps", "512Kbps", "762Kbps", "1.0Mbps", "1.5Mbps", "2.0Mbps", "2.5Mbps", "3.0Mbps", "4.0Mbps", "6.0Mbps"]
-      },
-      {
-        "name": "download",
-        "display": "Downloads",
-        "description": "Filters what custom content is allowed to be downloaded from the server.",
-        "values": [
-          {
-            "value": "custom",
-            "display": "Use game settings"
-          },
-          {
-            "value": "all"
-          },
-          {
-            "value": "nosounds",
-            "display": "No sounds"
-          },
-          {
-            "value": "mapsonly",
-            "display": "Maps only"
-          },
-          {
-            "value": "nothing"
-          }
-        ]
-      }
-    ]
-  },
   "graphics": {
     "modules": [
       {
@@ -871,10 +770,12 @@
       },
       {
         "name": "voice_chat",
-        "type": "switch",
         "values": [
           {
             "value": "off"
+          },
+          {
+            "value": "hidden"
           },
           {
             "value": "on"
@@ -924,6 +825,107 @@
           },
           {
             "value": "on"
+          }
+        ]
+      }
+    ]
+  },
+  "networking": {
+    "modules": [
+      {
+        "name": "sourcetv",
+        "display": "SourceTV Compatibility",
+        "description": "Ensures compatibility with SourceTV spectating.",
+        "type": "switch",
+        "values": [
+          {
+            "value": "off"
+          },
+          {
+            "value": "on"
+          }
+        ]
+      },
+      {
+        "name": "packet_rate",
+        "description": "Controls how fast you send to and receive from the server.",
+        "values": [
+          {
+            "value": "congestion"
+          },
+          {
+            "value": "standard"
+          }
+        ]
+      },
+      {
+        "name": "snapshot_buffer",
+        "description": "Controls how reliable to consider the snapshots you receive from the server to apply client-side buffering/smoothing between snapshot receives.",
+        "advanced_display": "Also known as linear interpolation (lerp or interp).",
+        "tags": ["advanced"],
+        "values": [
+          {
+            "value": "auto",
+            "display": "Automatic"
+          },
+          {
+            "value": "safe"
+          },
+          {
+            "value": "high"
+          },
+          {
+            "value": "custom"
+          },
+          {
+            "value": "anim"
+          }
+        ]
+      },
+      {
+        "name": "packet_size",
+        "description": "Controls how big packets are and how they are split up/compressed.",
+        "values": [
+          {
+            "value": "small"
+          },
+          {
+            "value": "conservative"
+          },
+          {
+            "value": "large"
+          }
+        ]
+      },
+      {
+        "name": "bandwidth",
+        "description": "Controls the max speed of packet sending to restrict it to your internet speed to prevent packet overflow. Values in bits (Kilobits or Megabits per second).",
+        "advanced_display": "This does not increase data usage, only restricts how quickly data can be sent.",
+        "type": "slider",
+        "values": ["128Kbps", "192Kbps", "384Kbps", "512Kbps", "762Kbps", "1.0Mbps", "1.5Mbps", "2.0Mbps", "2.5Mbps", "3.0Mbps", "4.0Mbps", "6.0Mbps"]
+      },
+      {
+        "name": "download",
+        "display": "Downloads",
+        "description": "Filters what custom content is allowed to be downloaded from the server.",
+        "values": [
+          {
+            "value": "custom",
+            "display": "Use game settings"
+          },
+          {
+            "value": "all"
+          },
+          {
+            "value": "nosounds",
+            "display": "No sounds"
+          },
+          {
+            "value": "mapsonly",
+            "display": "Maps only"
+          },
+          {
+            "value": "nothing"
           }
         ]
       }

@@ -1,17 +1,17 @@
-[![Build Status](https://img.shields.io/github/workflow/status/mastercomfig/mastercomfig/CI?style=flat-square&logo=mastercomfig)](https://github.com/mastercomfig/mastercomfig/actions?query=workflow%3ACI)
-[![Docs](https://img.shields.io/github/workflow/status/mastercomfig/mastercomfig/docs?label=docs&style=flat-square)](index.md)
-[![Downloads](https://img.shields.io/github/downloads/mastercomfig/mastercomfig/latest/total.svg?style=flat-square&logo=mastercomfig)](https://mastercomfig.com/app)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/mastercomfig/mastercomfig/main.yml?branch=release&style=flat-square&logo=mastercomfig)](https://github.com/mastercomfig/mastercomfig/actions/workflows/main.yml)
+[![Docs](https://img.shields.io/github/actions/workflow/status/mastercomfig/mastercomfig/docs.yml?branch=release&label=docs&style=flat-square)](index.md)
+[![Downloads](https://img.shields.io/github/downloads/mastercomfig/mastercomfig/latest/total.svg?style=flat-square&logo=mastercomfig)](https://comfig.app/app)
 [![Ko-fi](https://img.shields.io/badge/Support%20me%20on-Ko--fi-FF5E5B.svg?logo=ko-fi&style=flat-square)](https://ko-fi.com/mastercoms)
 [![Liberapay](https://img.shields.io/liberapay/receives/mastercoms.svg?logo=liberapay&style=flat-square)](https://liberapay.com/mastercoms/)
 [![Steam donate](https://img.shields.io/badge/Donate%20via-Steam-00adee.svg?style=flat-square&logo=steam)](https://steamcommunity.com/tradeoffer/new/?partner=85845165&token=M9cQHh8N)
-[![Join the Discord chat](https://img.shields.io/badge/Discord-mastercomfig-5865F2.svg?style=flat-square&logo=discord)](https://discord.gg/CuPb2zV)
+[![Join the Discord chat](https://img.shields.io/badge/Discord-mastercomfig-5865F2.svg?style=flat-square&logo=discord)](https://discord.gg/mastercomfig-389089828249010188)
 [![Join the Steam Group](https://img.shields.io/badge/Steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
 
-![mastercomfig logo](https://mastercomfig.com/img/mastercomfig_logo.svg){ width=100 align=right }
+![mastercomfig logo](https://comfig.app/img/mastercomfig_logo.svg){ width=100 align=right }
 
 # mastercomfig
 
-Welcome to [mastercomfig](https://mastercomfig.com), a modern customization framework.
+Welcome to [mastercomfig](https://comfig.app), a modern customization framework.
 
 mastercomfig aims to disable heavily unoptimized features and adjust other settings where it does not affect behavior or visuals noticeably. mastercomfig is documented extensively and also has advanced customization features so that you may adjust settings to your needs/preferences.
 
