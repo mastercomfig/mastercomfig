@@ -41,3 +41,13 @@ Valve, the Valve logo, Steam, the Steam logo, Team Fortress, the Team Fortress
 logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.
 
 mastercomfig is not sponsored, endorsed, licensed by, or affiliated with Valve Corporation.
+
+## Sponsors
+
+### tradeit.gg
+
+<img width="256" src="https://mastercomfig.com/img/third_party/tradeit.webp" alt="tradeit.gg" />
+
+**Trade, buy or sell items**  
+Trade items instantly for real money with the lowest fees.  
+Fully automated. Over 45 million successful trades.

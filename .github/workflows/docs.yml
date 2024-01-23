@@ -59,11 +59,13 @@ jobs:
         run: mike deploy --alias-type copy -b docs -up $(git describe --tags --abbrev=0) latest page
         env:
           GH_TOKEN: ${{secrets.PRIVATE_REPO_TOKEN}}
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{secrets.PRIVATE_REPO_TOKEN}}
       - name: Build docs (develop)
         if: ${{ github.repository_owner == 'mastercomfig' && github.event_name == 'push' && github.ref == 'refs/heads/develop' }}
         run: mike deploy --alias-type copy -b docs -p dev
         env:
           GH_TOKEN: ${{secrets.PRIVATE_REPO_TOKEN}}
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{secrets.PRIVATE_REPO_TOKEN}}
       - name: Build docs
         if: ${{ github.event_name == 'pull_request' }}
         run: mike deploy --config-file mkdocs.base.yml -u $(git describe --tags) latest
