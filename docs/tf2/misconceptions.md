@@ -37,7 +37,7 @@ description: Common misconceptions with TF2 that mastercomfig corrects.
 
 * **-fullscreen -w -h -full -sw -window -windowed -width -height**
 
-These launch options may be creating an improper video mode, which is not preferred by the material system and can reduce performance. Try settings these options through the settings window instead.
+These launch options may be creating an improper video mode, which is not preferred by the material system and can reduce performance. Try changing these options through the settings window instead.
 
 ## Bad CVars
 
