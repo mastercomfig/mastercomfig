@@ -35,6 +35,9 @@ This package is installed on most Debian-based OS by default, like Ubuntu and Li
 
 ## Ananicy Cpp
 
+!!! warning
+    Ananicy Cpp and Gamemode each modify the nice level of processes. Using both simultaneously could lead to potential instability issues.
+
 You can install `schedtool` and [Ananicy Cpp](https://gitlab.com/ananicy-cpp/ananicy-cpp), then enable `ananicy-cpp.service` to automatically apply rule-based process priority balancing, improving resources allocated to TF2.
 
 This, however, requires a [profile for TF2](https://github.com/Nefelim4ag/Ananicy/blob/master/ananicy.d/00-default/games/_steam.rules). Follow Ananicy Cpp's [profile import instructions](https://gitlab.com/ananicy-cpp/ananicy-cpp#community-rules) to use community profiles from the original Ananicy software, which can be downloaded [here](https://github.com/Nefelim4ag/Ananicy) or by installing the original Ananicy.
