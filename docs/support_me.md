@@ -15,13 +15,25 @@ which you can set in
 and other games on the [Epic Games Store](https://store.epicgames.com/), as well as purchasing games and DLC on the store itself.
 In connection with Epic Games’ Support-A-Creator Program, I receive a commission from these purchases.
 
-You can also support my other projects, like playing on my [8v8 Team Deathmatch map for Fortnite](https://www.fortnite.com/@mastercoms/7761-6157-7902). Island code: `7761-6157-7902`
-
 Lastly, you can [give me a Steam Award](https://steamcommunity.com/id/mastercoms?award=17).
+
+## Fortnite Maps
+
+You can also play on my Fortnite maps, which give me money based on engagement:
+
+[![staredown preview](assets/images/staredown.webp)](https://www.fortnite.com/@mastercoms/7761-6157-7902)  
+**[Staredown - 8v8 TDM](https://www.fortnite.com/@mastercoms/7761-6157-7902)**  
+Island code: `7761-6157-7902`
+
+[![orange combat sandbox preview](assets/images/combatlab.webp)](https://www.fortnite.com/@mastercoms/4173-4839-7557)  
+**[Orange Combat Sandbox - 16v16 arena](https://www.fortnite.com/@mastercoms/4173-4839-7557)**  
+Island code: `4173-4839-7557`
 
 <!-- You can use Ko-fi to get [a config commission](https://ko-fi.com/mastercoms/commissions), where I personally tune a config exactly to your preferences and PC setup. I can also do this via a trade for 3 keys. There is also an addon where I can do advanced scripting at your request (6 keys if paying via trade). -->
 
 <!-- Finally, you can buy early access to the config for a month through [Ko-fi](https://ko-fi.com/mastercoms/shop). This will give you access to more frequent updates released throughout the month, rather than the monthly stable releases of the config. -->
+
+## Thank You!
 
 You have my endless gratitude if you support me with money or gift items, and this support encourages me so much!
 
