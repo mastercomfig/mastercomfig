@@ -192,7 +192,7 @@
     "none": ""
   },
   "sheens_speed": {
-    "default": "slow",
+    "default": "medium",
     "very-low": "off",
     "none": ""
   },
