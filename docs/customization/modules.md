@@ -537,7 +537,7 @@ Controls how fast the animation is on the killstreak sheen glow for weapons.
 - **CPU usage:** none
 - **GPU usage:** none
 
-Default setting: **`sheens_speed=medium`** (all presets, except Very Low).
+Default setting: **`sheens_speed=slow`** (all presets, except Very Low).
 
 - **`sheens_speed=off`**: Skips updating sheen glow animation.
 - **`sheens_speed=slow`**: Slow speed.
