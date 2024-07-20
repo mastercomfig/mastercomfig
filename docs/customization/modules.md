@@ -402,18 +402,20 @@ Default setting: based on which preset you are currently using.
 - **`decals_art=off`**: Disables map decals.
 - **`decals_art=on`**: Enables map decals, and blocks full decal clearing done by mastercomfig periodically.
 
-### Spray Decals
+### User-Generated Decals
 
-Controls decals sprayed by players.
+Controls user-generated decals — [custom decal images](https://wiki.teamfortress.com/wiki/Decal_Tool) and spraypaint images.
 
 - **CPU usage:** none
 - **GPU usage:** low
 
-Default setting: **`sprays=off`** (all presets).
+Default setting: **`decals_user=low`** (all presets).
 
-- **`sprays=off`**: Completely disables downloading, uploading and displaying sprays. Deletes temporary spray files on shutdown.
-- **`sprays=on`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Deletes temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` level.
-- **`sprays=keep`**: Allows sprays, and blocks full decal clearing done by mastercomfig periodically. Keeps temporary spray files on shutdown. If the `decals` module is `off`, this will set it to the `low` level.
+- **`decals_user=off`**: Completely disables downloading, uploading and displaying spraypaint images. Deletes temporary spraypaint images files on shutdown. Disables custom decal images.
+- **`decals_user=low`**: Completely disables downloading, uploading and displaying spraypaint images. Deletes temporary spraypaint images files on shutdown. Enables custom decal images.
+- **`decals_user=medium`**: Allows spraypaint images, and blocks full decal clearing done by mastercomfig periodically. Deletes temporary spraypaint images files on shutdown. Disables custom decal images. If the `decals` module is `off`, this will set it to the `low` level.
+- **`decals_user=high`**: Allows spraypaint images, and blocks full decal clearing done by mastercomfig periodically. Deletes temporary spraypaint images files on shutdown. Enables custom decal images. If the `decals` module is `off`, this will set it to the `low` level. **(Recommended level if you want to enable all user-generated decals.)**
+- **`decals_user=keep`**: Allows spraypaint images, and blocks full decal clearing done by mastercomfig periodically. Keeps temporary spraypaint images files on shutdown. Enables custom decal images. If the `decals` module is `off`, this will set it to the `low` level.
 
 ### Gibs
 

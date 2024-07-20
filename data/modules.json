@@ -310,8 +310,8 @@
         ]
       },
       {
-        "name": "sprays",
-        "display": "Spray Decals",
+        "name": "decals_user",
+        "display": "User-Generated Decals",
         "values": [
           {
             "value": "off"

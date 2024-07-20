@@ -139,8 +139,8 @@
     "medium-low": "off",
     "none": ""
   },
-  "sprays": {
-    "default": "off",
+  "decals_user": {
+    "default": "low",
     "none": ""
   },
   "sillygibs": {
