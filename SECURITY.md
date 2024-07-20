@@ -1,13 +1,9 @@
-# Security Policy
+# Security policy
 
-## Supported Versions
+## Supported versions
+Only the [latest version](https://github.com/mastercomfig/mastercomfig/releases/latest) is supported.
 
-| Version   | Supported          |
-| --------- | ------------------ |
-| 9.10.x     | :white_check_mark: |
-| < 9.10.x   | :x:                |
-
-## Reporting a Vulnerability
+## Reporting a vulnerability
 
 If you find a security vulnerability in the mastercomfig app, execution of mastercomfig,
 or something else, contact mastercoms through email directly: [support@mastercomfig.com](mailto:support@mastercomfig.com).
