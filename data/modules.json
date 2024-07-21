@@ -317,7 +317,13 @@
             "value": "off"
           },
           {
-            "value": "on"
+            "value": "low"
+          },
+          {
+            "value": "medium"
+          },
+          {
+            "value": "high"
           },
           {
             "value": "keep"

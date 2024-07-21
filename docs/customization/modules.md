@@ -409,7 +409,7 @@ Controls user-generated decals — [custom decal images](https://wiki.teamfortre
 - **CPU usage:** none
 - **GPU usage:** low
 
-Default setting: **`decals_user=low`** (all presets).
+Default setting: **`decals_user=low`** (all presets, except Low and Very Low).
 
 - **`decals_user=off`**: Completely disables downloading, uploading and displaying spraypaint images. Deletes temporary spraypaint images files on shutdown. Disables custom decal images.
 - **`decals_user=low`**: Completely disables downloading, uploading and displaying spraypaint images. Deletes temporary spraypaint images files on shutdown. Enables custom decal images.

@@ -141,6 +141,8 @@
   },
   "decals_user": {
     "default": "low",
+    "very-low": "off",
+    "low": "off",
     "none": ""
   },
   "sillygibs": {
