@@ -94,7 +94,7 @@ Controls how reliable to consider the snapshots you receive from the server to a
 
 Default setting: **`snapshot_buffer=auto`** (all presets).
 
-- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`.
+- **`snapshot_buffer=auto`**: Automatically sets the best interpolation value per class. For hitscan classes (Scout, Heavy, Engineer and Sniper), this sets `snapshot_buffer_safe`. For projectile classes (Soldier, Pyro, Demoman and Medic), this sets `snapshot_buffer_low`. For Spy this sets `snapshot_buffer_safe`. **This is the recommended setting.**
 - **`alias snapshot_buffer snapshot_buffer_low`**: A dangerously minimal buffering time which does not have room for any networking or server delays or drops (**15ms lerp** when using `packet_rate=standard`, or **30ms lerp** when using `packet_rate=congestion`). There is almost no reason to use this option, except in LAN scenarios, as `snapshot_buffer=auto` will optimize lag compensation for each class.
 - **`snapshot_buffer=safe`**: Safest option with minimal snapshot delay by using every other snapshot (**30ms lerp** when using `packet_rate=standard`, or **60ms lerp** when using `packet_rate=congestion`).
 - **`snapshot_buffer=high`**: Heavily protects against packet loss by using every 3rd snapshot (**45ms lerp** when using `packet_rate=standard`, or **90ms lerp** when using `packet_rate=congestion`).
