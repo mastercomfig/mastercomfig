@@ -465,9 +465,6 @@
         "display": "Texture Quality",
         "values": [
           {
-            "value": "very_low"
-          },
-          {
             "value": "low"
           },
           {
@@ -490,7 +487,12 @@
         "type": "slider",
         "values": [
           {
-            "value": "blocky"
+            "value": "blocky",
+            "display": "Blocky textures and world lighting"
+          },
+          {
+            "value": "bilinear",
+            "display": "Bilinear filtering"
           },
           {
             "value": "trilinear",
