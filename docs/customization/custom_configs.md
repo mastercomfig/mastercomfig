@@ -107,11 +107,11 @@ If you want to run something only the first time you spawn and never run again w
 
 When diving deep into customization of the core of mastercomfig, you may find it useful to run things directly before and after mastercomfig's `comfig.cfg`, which provides core functionality and aliases.
 
-You can use `overrides/pre_comfig.cfg` to run things before `comfig.cfg`, and `overrides/setup_hook.cfg` to run things after `comfig.cfg`.
+You can use `overrides/pre_comfig.cfg` to run things before `comfig.cfg`, and `overrides/post_comfig.cfg` to run things after `comfig.cfg`.
 
 Examples of `overrides/pre_comfig.cfg` uses can be things like customizing your preset detailed above or turning on debugging options to monitor the launch process of mastercomfig itself (ex: `sv_cheats 1;mat_debugalttab 1`).
 
-Uses of `overrides/setup_hook.cfg` are rarer but still valid. With this, you can directly override all aliases defined in mastercomfig's core. You can use this to change the default modules file, make your own modules or module levels, customize the built-in ones, and more!
+Uses of `overrides/post_comfig.cfg` are rarer but still valid. With this, you can directly override all aliases defined in mastercomfig's core. You can use this to change the default modules file, make your own modules or module levels, customize the built-in ones, and more!
 
 ## Optional User Config Template
 
