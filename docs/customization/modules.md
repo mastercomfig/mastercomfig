@@ -889,7 +889,7 @@ Default setting: **`mod_support=on`** (all presets).
 Controls the privacy of your Casual/Competitive matchmaking party.
 
 !!! warning
-    The Friends Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID. Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
+    The Friends-Only restriction for parties can be bypassed, which means anyone can join your party if they have your Steam ID. Leaving your party open can result in anyone to join your party and spam party chat, causing lag, sound spam and other disruptions.
 
 - **CPU usage:** none
 - **GPU usage:** none
