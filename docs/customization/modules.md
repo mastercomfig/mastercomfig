@@ -124,7 +124,7 @@ Controls the max speed of packet sending to restrict it to your internet speed t
 - **CPU usage:** low
 - **GPU usage:** none
 
-Default setting: **`bandwidth=1.0Mbps`** (all presets).
+Default setting: **`bandwidth=2.0Mbps`** (all presets).
 
 - **`bandwidth=128Kbps`**: 128Kbps game traffic bandwidth.
 - **`bandwidth=192Kbps`**: 192Kbps game traffic bandwidth.
