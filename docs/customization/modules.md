@@ -70,8 +70,8 @@ Whether to allow remote connections to your local server.
 
 Default setting: **`local_server=deny`** (all presets).
 
-- **`local_server=deny`**: Block remote connections.
-- **`local_server=allow`**: Allow remote connections (still needs port forwarding and/or firewall access, unless you use Steam Networking).
+- **`local_server=deny`**: Blocks remote connections. Disables Steam Networking for the server.
+- **`local_server=allow`**: Allows remote connections (still needs port forwarding and/or firewall access, unless you use Steam Networking). Enables Steam Networking for the server.
 
 ### Packet Rate
 
