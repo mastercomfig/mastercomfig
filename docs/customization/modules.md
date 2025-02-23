@@ -191,14 +191,17 @@ Default setting: based on which preset you are currently using.
 
 Controls extended lighting commands which cause a material system reload.
 
+!!! warning
+    Using any other level than **`lighting_ex=high`** can cause visual glitches in items and props. Mainly, this affects weapon warpaints and Australium weapons.
+
 - **CPU usage:** low
 - **GPU usage:** high
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs, due to rendering reloads.
-- **`lighting_ex=medium`**: Disables phong, but keeps material paths for specular and bumpmaps, as disabling these can cause glitches on DirectX 9. May reduce performance on modern PCs due to rendering reloads.
-- **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
+- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables phong, bumpmaps and specular). May reduce performance on modern PCs due to rendering reloads.
+- **`lighting_ex=medium`**: Disables phong, but keeps material paths for bumpmaps and specular, as disabling these can cause glitches on Direct3D 9. May reduce performance on modern PCs due to rendering reloads.
+- **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables phong, bumpmaps and specular).
 
 ### Shadows
 
