@@ -384,9 +384,6 @@
         "name": "ragdolls",
         "values": [
           {
-            "value": "hidden"
-          },
-          {
             "value": "off"
           },
           {

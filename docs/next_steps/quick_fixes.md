@@ -41,15 +41,17 @@ r_drawviewmodel 1
 
 Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
+## What happened to the OpenGL addon?
+
+OpenGL was replaced with Vulkan by default in the April 18, 2024 update. It's highly recommended that you use Vulkan. However, if you are not able to find a supported driver for your system and must use the legacy ToGL renderer, you can use the `apply_opengl_opts` command in your `cfg/overrides/post_comfig.cfg` file to apply the OpenGL optimizations like the addon used to.
+
+Note that the OpenGL optimizations will set `lighting_ex=high` to avoid lighting issues exclusive to the ToGL renderer. This overrides your preset's setting, but respects any user-defined override for the module.
+
 ## Black artifacts all over the screen on Linux
 
-This is a bug with TF2's legacy ToGL renderer and an interaction with the Mesa drivers. You can fix it by adding `lighting_ex=high` to your `modules.cfg`, or by using the Vulkan version of the game.
+This is a bug with TF2's legacy ToGL renderer and an interaction with the Mesa drivers. You can fix it by adding `lighting_ex=high` to your `modules.cfg`, or by using the Vulkan version of the game. If you apply OpenGL optimizations (see previous section), they will automatically set `lighting_ex=high`.
 
 You can also configure the drirc file (optionally using the adriconf GUI) to set `disable_uniform_array_resize` to `true` for Team Fortress 2.
-
-## Ragdolls aren't instantly disappearing
-
-There was a bug fix to `ragdolls=off`, to avoid the issue where ragdolls would still be present on the map and accumulate over time, causing performance issues. The cost of this was compared to the very short physics initialization and simulation, and it was determined that it would be better to avoid a leak from ragdolls never getting deleted by enabling physics on ragdolls. You can get the old behavior by using `ragdolls=hidden` in `modules.cfg`, at the cost of this increased overhead, if you prefer the visuals.
 
 ## My chat is disabled
 
@@ -147,9 +149,3 @@ Check to see if you have `-dxlevel 100` in your TF2 launch options, it may have 
 ## I got banned from the Discord server
 
 You can submit a single [ban appeal](https://dyno.gg/form/dae64461) a few days after receiving your ban.
-
-## What happened to the OpenGL addon?
-
-OpenGL was replaced with Vulkan by default in the April 18, 2024 update. It's highly recommended that you use Vulkan. However, if you are not able to find a supported driver for your system and must use the legacy ToGL renderer, you can use the `apply_opengl_opts` command in your `cfg/overrides/post_comfig.cfg` to apply the OpenGL optimizations like the addon used to.
-
-Note that the OpenGL optimizations will set `lighting_ex=high` to avoid lighting issues exclusive to the ToGL renderer. This overrides your preset's setting, but respects any user-defined override for the module.
