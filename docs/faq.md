@@ -21,7 +21,7 @@ It is a complete performance and customization scripting mod that requires many 
 
 **Here are some of the features that mastercomfig gains, by being a mod rather than a configuration file:**
 
-* dxsupport overrides, which unlocks `r_drawropes`, `fx_drawimpactdebris`, `fx_drawimpactdust`, `fx_drawimpactspark`, `tf_impactwatertimeenable`, `dsp_off`, `cl_particle_retire_cost` and `mat_slopescaledepthbias_decal`
+* dxsupport overrides, which unlocks `r_drawropes`, `fx_drawimpactdebris`, `fx_drawimpactdust`, `fx_drawmetalspark`, `tf_impactwatertimeenable`, `dsp_off`, `cl_particle_retire_cost` and `mat_slopescaledepthbias_decal`
 
     * These allow for performance improvements for ropes, particles, and sound, and fixing a bug where one decal still appears even if decals are disabled
 
