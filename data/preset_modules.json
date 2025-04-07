@@ -132,7 +132,8 @@
   },
   "decals_models": {
     "default": "off",
-    "high": "low",
+    "medium-high": "low",
+    "high": "medium",
     "ultra": "high",
     "none": ""
   },
@@ -194,9 +195,7 @@
     "none": ""
   },
   "texture_quality": {
-    "default": "low",
-    "medium": "medium",
-    "medium-high": "high",
+    "default": "high",
     "high": "very_high",
     "ultra": "ultra",
     "none": ""
@@ -204,7 +203,6 @@
   "texture_filter": {
     "default": "trilinear",
     "very-low": "blocky",
-    "low": "bilinear",
     "medium": "aniso2x",
     "medium-high": "aniso4x",
     "high": "aniso8x",

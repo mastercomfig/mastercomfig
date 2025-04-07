@@ -488,10 +488,6 @@
             "display": "Blocky textures and world lighting"
           },
           {
-            "value": "bilinear",
-            "display": "Bilinear filtering"
-          },
-          {
             "value": "trilinear",
             "display": "Trilinear filtering"
           },

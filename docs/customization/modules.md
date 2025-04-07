@@ -70,8 +70,8 @@ Whether to allow remote connections to your local server.
 
 Default setting: **`local_server=deny`** (all presets).
 
-- **`local_server=deny`**: Blocks remote connections. Disables Steam Networking for the server.
-- **`local_server=allow`**: Allows remote connections (still needs port forwarding and/or firewall access, unless you use Steam Networking). Enables Steam Networking for the server.
+- **`local_server=deny`**: Blocks remote connections.
+- **`local_server=allow`**: Allows remote connections (still needs port forwarding and/or firewall access, unless you use Steam Networking).
 
 ### Packet Rate
 
@@ -199,9 +199,9 @@ Controls extended lighting commands which cause a material system reload.
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables phong, bumpmaps and specular). May reduce performance on modern PCs due to rendering reloads.
-- **`lighting_ex=medium`**: Disables phong, but keeps material paths for bumpmaps and specular, as disabling these can cause glitches on Direct3D 9. May reduce performance on modern PCs due to rendering reloads.
-- **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables phong, bumpmaps and specular).
+- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs due to rendering reloads.
+- **`lighting_ex=medium`**: Disables phong, but keeps material paths for specular and bumpmaps, as disabling these can cause glitches on DirectX 9. May reduce performance on modern PCs due to rendering reloads.
+- **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
 
 ### Shadows
 
@@ -406,8 +406,9 @@ Controls blood on hurt players and some bullet decals on props.
 Default setting: based on which preset you are currently using.
 
 - **`decals_models=off`**: Disables model decals.
-- **`decals_models=low`**: Allow up to 9 model decals.
-- **`decals_models=high`**: Allow up to 50 model decals.
+- **`decals_models=low`**: Allows up to 1 model decal.
+- **`decals_models=medium`**: Allows up to 9 model decals.
+- **`decals_models=high`**: Allows up to 50 model decals.
 
 ### Map Decals
 
@@ -485,6 +486,7 @@ Controls physics simulation and fading for bodies that spawn on death.
 
 Default setting: based on which preset you are currently using.
 
+- **`ragdolls=hidden`** and **`ragdolls=low`**: Deprecated settings. They are the same as `ragdolls=off`.
 - **`ragdolls=off`**: Disables ragdolls by fading them out quickly.
 - **`ragdolls=medium`**: Enables standard physics ragdolls.
 - **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
@@ -575,8 +577,7 @@ Controls texture smoothing/filtering.
 
 Default setting: based on which preset you are currently using.
 
-- **`texture_filter=blocky`**: Blocky textures and world lighting
-- **`texture_filter=bilinear`**: Bilinear filtering
+- **`texture_filter=blocky`**: Blocky textures and world lighting with bilinear filtering
 - **`texture_filter=trilinear`**: Trilinear filtering
 - **`texture_filter=aniso2x`**: Anisotropic filtering 2x
 - **`texture_filter=aniso4x`**: Anisotropic filtering 4x
@@ -640,7 +641,7 @@ Default setting: **`fpscap=400`** (all presets).
 - **`fpscap=360`**: Sets FPS cap to 360 FPS.
 - **`fpscap=400`**: Sets FPS cap to 400 FPS.
 - **`fpscap=1000`**: Sets FPS cap to 1000 FPS (maximum safe value).
-- **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000FPS in meaningful game scenarios.
+- **`fpscap=unlimited`**: FPS is not capped. Removes small overhead from capping FPS, but ensure that you never surpass 1000 FPS in meaningful game scenarios.
 
 ### VSync
 

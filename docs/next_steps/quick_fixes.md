@@ -43,7 +43,7 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 ## What happened to the OpenGL addon?
 
-OpenGL was replaced with Vulkan by default in the April 18, 2024 update. It's highly recommended that you use Vulkan. However, if you are not able to find a supported driver for your system and must use the legacy ToGL renderer, you can use the `apply_opengl_opts` command in your `cfg/overrides/post_comfig.cfg` file to apply the OpenGL optimizations like the addon used to.
+OpenGL was replaced with Vulkan by default in the April 18, 2024 update. It's highly recommended that you use Vulkan. However, if you are not able to find a supported driver for your system and must use the legacy ToGL renderer, you can use the `apply_opengl_opts` command in your `cfg/overrides/setup_hook.cfg` file to apply the OpenGL optimizations like the addon used to.
 
 Note that the OpenGL optimizations will set `lighting_ex=high` to avoid lighting issues exclusive to the ToGL renderer. This overrides your preset's setting, but respects any user-defined override for the module.
 
