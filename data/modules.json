@@ -485,7 +485,7 @@
         "values": [
           {
             "value": "blocky",
-            "display": "Blocky textures and world lighting"
+            "display": "Blocky textures and world lighting with bilinear filtering"
           },
           {
             "value": "trilinear",
