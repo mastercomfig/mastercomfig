@@ -29,7 +29,7 @@ description: Некоторые крутые TF2 модификации, кот�
   
 !!! Информация
 
-    Лаунчер yttrium's viewmodels добавит файл `autoexec.cfg` в папку `tf/cfg`. При необходимости его можно удалить, так как он не используется и не нужен. Вместо этого используйте модуль **`dynamic_background=preload`**.
+    Лаунчер yttrium's viewmodels добавит файл `autoexec.cfg` в папку `tf/cfg`. При необходимости его можно удалить, так как он не используется и не нужен.
 
 * [Horsie's Viewmodel Editor](https://github.com/a-horsey/horsies-viewmodel-editor)
   — Редактируйте свои вью-модели, как вам захочется

@@ -8,7 +8,7 @@ Steam kütüphanenizde Team Fortress 2'ye sağ tıklayın ve **Özellikler...** 
 her şeyi silin ve
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars
+-novid -nojoy -nosteamcontroller -nohltv -particles 1
 ```
 
 seçeneklerini kutuya yapıştırın.
@@ -35,14 +35,13 @@ seçeneklerini kutuya yapıştırın.
 
 ## Önerilen Başlatma Seçenekleri
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1`
 
 - **-novid** : Valve başlangıç logosunu devre dışı bırakır, zaman kazandırır.
 - **-nojoy** : Joystick sisteminin başlatılmasını durdurur; daha hızlı başlangıç ve daha az bellek kullanımı.
 - **-nosteamcontroller** : Steam kontrolcüsünü devre dışı bırakır; daha hızlı başlangıç, daha az bellek kullanımı ve daha az girdi çakışması.
 - **-nohltv** : SourceTV barındırmayı devre dışı bırakır; daha az kaynak kullanımı.
 - **-particles 1** : Işın sayısını minimum 512 ile sınırlar.
-- **-precachefontchars** : Ortak karakterler için yazı tipi oluşturmayı önbelleğe alır.
 
 ## Ek Başlatma Seçenekleri
 
@@ -50,7 +49,6 @@ seçeneklerini kutuya yapıştırın.
 
     * **-console** : Başlangıçta konsolu gösterir.
     * **-nostartupsound** : Ana menüde oyun müziğini kapatır.
-    * **-enablefakeip** : Güvenlik içindir. Yerel sunucunuzun genel IP'sini Steam'e kaydetmesini bunun yerine Steam Datagram kullanarak önler. Eşya sunucularına bağlanmak için birkaç gönderim yüklemesi gerektirebilir.
     * **-no_texture_stream** : Doku akışını devre dışı bırakır. Hızlı doku erişimi olan ve görüntü belleğinin baskısında olmayan güçlü bir sisteminiz varsa kullanışlıdır.
     * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. None Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
     * **-audiolanguage english** : Oyun seslendirmesini İngilizce yapar. Bu seçenek, farklı bir oyun dili kullandığınız ancak İngilizce seslendirme istediğiniz zaman işe yarayabilir.
@@ -60,7 +58,6 @@ seçeneklerini kutuya yapıştırın.
 
     * **-console** : Başlangıçta konsolu gösterir.
     * **-nostartupsound** : Ana menüde oyun müziğini kapatır.
-    * **-enablefakeip** : Güvenlik içindir. Yerel sunucunuzun genel IP'sini Steam'e kaydetmesini bunun yerine Steam Datagram kullanarak önler. Eşya sunucularına bağlanmak için birkaç gönderim yüklemesi gerektirebilir.
     * **-no_texture_stream** : Doku akışını devre dışı bırakır. Hızlı doku erişimi olan ve görüntü belleği baskısında olmayan güçlü bir sisteminiz varsa kullanışlıdır.
     * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. None Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
     * **-audiolanguage english** : Oyun seslendirmesini İngilizce yapar. Bu seçenek, farklı bir oyun dili kullandığınız ancak İngilizce seslendirme istediğiniz zaman işe yarayabilir.
@@ -73,7 +70,6 @@ seçeneklerini kutuya yapıştırın.
 
     * **-console** : Başlangıçta konsolu gösterir.
     * **-nostartupsound** : Ana menüde oyun müziğini kapatır.
-    * **-enablefakeip** : Güvenlik içindir. Yerel sunucunuzun genel IP'sini Steam'e kaydetmesini bunun yerine Steam Datagram kullanarak önler. Eşya sunucularına bağlanmak için birkaç gönderim yüklemesi gerektirebilir.
     * **-no_texture_stream** : Doku akışını devre dışı bırakır. Hızlı doku erişimi olan ve görüntü belleği baskısında olmayan güçlü bir sisteminiz varsa kullanışlıdır.
     * **-autoconfig** : Grafik kalitesini donanımınız için önerilene sıfırlar. None Ön Ayarı ile kullanışlı olarak çalışır. İlk başlatmadan sonra kaldırın.
      * **-audiolanguage english** : Oyun seslendirmesini İngilizce yapar. Bu seçenek, farklı bir oyun dili kullandığınız ancak İngilizce seslendirme istediğiniz zaman işe yarayabilir.

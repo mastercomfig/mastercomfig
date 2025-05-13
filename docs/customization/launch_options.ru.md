@@ -9,7 +9,7 @@ description: Настройте Team Fortress 2 и mastercomfig с помощь�
 все что там есть и вставьте следующее
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars
+-novid -nojoy -nosteamcontroller -nohltv -particles 1
 ```
 
 в поле и нажмите ОК.
@@ -36,14 +36,13 @@ description: Настройте Team Fortress 2 и mastercomfig с помощь�
 
 ## Рекомендуемые параметры запуска
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1`
 
 - **-novid** : отключает логотип Valve, более быстрый запуск
 - **-nojoy** : отключает джойстик, более быстрый запуск и меньшее использование памяти
 - **-nosteamcontroller** : отключает контроллер Steam, более быстрый запуск, меньшее использование памяти и меньшее количество конфликтов ввода
 - **-nohltv** : отключает хостинг SourceTV, снижает потребление ресурсов
 - **-particles 1** : ограничивает количество лучей минимум 512
-- **-precachefontchars** : предварительно кеширует рендеринг шрифтов для общих символов
 
 ## Дополнительные параметры запуска
 

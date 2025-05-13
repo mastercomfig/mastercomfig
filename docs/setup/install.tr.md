@@ -11,7 +11,7 @@ description: mastercomfig'in nasıl düzgünce kurulacağına dair adımlar.
 5. Göz At yazısına tıklayın.
 6. `tf/custom` klasörüne girin.
 7. VPK dosyalarını bu klasöre sürükleyin.
-8. Bu başlatma seçeneklerini ayarlayın: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`. Daha fazla bilgi için [başlatma seçenekleri özelleştirme rehberini](../customization/launch_options.md) okuyun.
+8. Bu başlatma seçeneklerini ayarlayın: `-novid -nojoy -nosteamcontroller -nohltv -particles 1`. Daha fazla bilgi için [başlatma seçenekleri özelleştirme rehberini](../customization/launch_options.md) okuyun.
 
 ## Özel configler
 

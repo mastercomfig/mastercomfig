@@ -1,7 +1,4 @@
 {
-  "local_server": {
-    "default": "deny"
-  },
   "packet_rate": {
     "default": "standard",
     "very-low": "congestion"
@@ -296,9 +293,6 @@
   "voice_chat": {
     "default": "on",
     "very-low": "off"
-  },
-  "mod_support": {
-    "default": "on"
   },
   "party_mode": {
     "default": "invite"

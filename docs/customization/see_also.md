@@ -29,7 +29,7 @@ Wanting to get more out of TF2? Look no further for a comprehensive list of comm
 
 !!! info
 
-    yttrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. You may delete it if you want since it is not used and not needed. Use the **`dynamic_background=preload`** module instead.
+    yttrium's viewmodels installer will add an `autoexec.cfg` inside of your `tf/cfg` folder. You may delete it if you want since it is not used and not needed.
 
 * [Horsie's Viewmodel Editor](https://github.com/a-horsey/horsies-viewmodel-editor)
   — Edit your viewmodels however you want

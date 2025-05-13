@@ -748,12 +748,6 @@
             "value": "off"
           },
           {
-            "value": "preload"
-          },
-          {
-            "value": "itemtest"
-          },
-          {
             "value": "dustbowl"
           }
         ]
@@ -801,18 +795,6 @@
   "misc": {
     "modules": [
       {
-        "name": "mod_support",
-        "type": "switch",
-        "values": [
-          {
-            "value": "off"
-          },
-          {
-            "value": "on"
-          }
-        ]
-      },
-      {
         "name": "party_mode",
         "display": "Party Join Mode",
         "values": [
@@ -846,18 +828,6 @@
   },
   "networking": {
     "modules": [
-      {
-        "name": "local_server",
-        "description": "Whether to allow remote connections to your local server.",
-        "values": [
-          {
-            "value": "deny"
-          },
-          {
-            "value": "allow"
-          }
-        ]
-      },
       {
         "name": "packet_rate",
         "description": "Controls how fast you send to and receive from the server.",

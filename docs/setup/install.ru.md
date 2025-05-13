@@ -11,7 +11,7 @@ description: Пошаговая инструкция как настроить �
 5. Нажмите Обзор...
 6. Перейдите в папку `tf/custom`.
 7. Перетащите файлы VPK в папку custom.
-8. Установите эти параметры запуска: `-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`. Для получения дополнительной информации прочтите руководство [параметры запуска](../customization/launch_options.ru.md).
+8. Установите эти параметры запуска: `-novid -nojoy -nosteamcontroller -nohltv -particles 1`. Для получения дополнительной информации прочтите руководство [параметры запуска](../customization/launch_options.ru.md).
 
 ## Кастомные конфиги
 

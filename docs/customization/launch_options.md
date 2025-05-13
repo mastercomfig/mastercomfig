@@ -9,7 +9,7 @@ In the window that appears, under **Launch Options**, remove anything that's in
 there and paste
 
 ```c
--novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars
+-novid -nojoy -nosteamcontroller -nohltv -particles 1
 ```
 
 into the box and click ok.
@@ -37,14 +37,13 @@ Read below about optional launch options and choosing your own DXLevel.
 
 ## Recommended Launch Options
 
-`-novid -nojoy -nosteamcontroller -nohltv -particles 1 -precachefontchars`
+`-novid -nojoy -nosteamcontroller -nohltv -particles 1`
 
 - **-novid** : disables Valve startup logo, saves time
 - **-nojoy** : stops Joystick system from starting up, faster startup and less memory usage
 - **-nosteamcontroller** : disables Steam controller system, faster startup, less memory usage and less input conflicts
 - **-nohltv** : disables SourceTV hosting, less resource usage
 - **-particles 1** : limits beam count to the minimum of 512
-- **-precachefontchars** : precaches font rendering for common characters
 
 ## Extra Launch Options
 
@@ -52,7 +51,6 @@ Read below about optional launch options and choosing your own DXLevel.
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
-    * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. It may require a few map loads to connect to item servers.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after the first launch.
     * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
@@ -62,7 +60,6 @@ Read below about optional launch options and choosing your own DXLevel.
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
-    * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. May require a few map loads to connect to item servers.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
     * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.
@@ -75,7 +72,6 @@ Read below about optional launch options and choosing your own DXLevel.
 
     * **-console** : displays console on startup
     * **-nostartupsound** : disables game music on main menu
-    * **-enablefakeip** : for security. Prevents your local server from registering its public IP with Steam, by using Steam Datagram instead. May require a few map loads to connect to item servers.
     * **-no_texture_stream** : disables texture streaming. Useful if you are on a powerful system with fast texture access and not under video memory pressure.
     * **-autoconfig** : resets graphics quality to recommended for your hardware. Useful with the None Preset. Remove after first launch.
     * **-audiolanguage english** : Forces the game voiceline audio to English. This can be useful for when you use a different game language but would like the English audio.

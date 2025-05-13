@@ -402,6 +402,9 @@ cl_meathook_neck_pivot_ingame_fwd        : 3        : , "cl"           :
 cl_meathook_neck_pivot_ingame_up         : 7        : , "cl"           :
 cl_mouseenable                           : 1        : , "cl"           :
 cl_mouselook                             : 1        : , "a", "cl"      : Set to 1 to use mouse for look, 0 for keyboard look. Cannot be set while connected to a server.
+cl_movehelper_process                    : 1        : , "cl"           :
+cl_movehelper_process_imp                : 1        : , "cl"           :
+cl_movehelper_process_vel                : 1        : , "cl"           :
 cl_mute_all_comms                        : 1        : , "a", "cl"      : If 1, then all communications from a player will be blocked when that player is muted, including chat messages.
 cl_muzzleflash_dlight_1st                : 1        : , "cl"           :
 cl_mvm_wave_status_visible_during_wave   : 0        : , "a", "cl"      : Display full wave contents while a wave is active in MvM.
@@ -434,6 +437,7 @@ cl_pitchspeed                            : 225      : , "cl"           : Client 
 cl_pitchup                               : 89       : , "cheat", "cl"  :
 cl_playback_screenshots                  : 0        :                  : Allows the client to playback screenshot and jpeg commands in demos.
 cl_precacheinfo                          : cmd      :                  : Show precache info (client).
+cl_pred_doresetlatch                     : 1        : , "cl"           :
 cl_pred_optimize                         : 2        : , "cl"           : Optimize for not copying data if didn't receive a network update (1), and also for not repredicting if there were no errors (2).
 cl_pred_track                            : cmd      :                  : <entindex> <fieldname>:  Track changes to entity index entindex, for field fieldname.
 cl_predict                               : 1        : , "user", "cl"   : Perform client side prediction.
@@ -737,14 +741,16 @@ flush                                    : cmd      :                  : Flush u
 flush_locked                             : cmd      :                  : Flush unlocked and locked cache memory.
 fog_color                                : -1       : , "cheat", "cl"  :
 fog_colorskybox                          : -1       : , "cheat", "cl"  :
-fog_enable                               : 1        : , "cheat", "cl"  :
+fog_enable                               : -1       : , "cheat", "cl"  :
 fog_enable_water_fog                     : 1        : , "cheat"        :
-fog_enableskybox                         : 1        : , "cheat", "cl"  :
+fog_enableskybox                         : -1       : , "cheat", "cl"  :
 fog_end                                  : -1       : , "cheat", "cl"  :
 fog_endskybox                            : -1       : , "cheat", "cl"  :
 fog_maxdensity                           : -1       : , "cheat", "cl"  :
 fog_maxdensityskybox                     : -1       : , "cheat", "cl"  :
 fog_override                             : 0        : , "cheat", "cl"  :
+fog_radial                               : -1       : , "cheat", "cl"  :
+fog_radialskybox                         : -1       : , "cheat", "cl"  :
 fog_start                                : -1       : , "cheat", "cl"  :
 fog_startskybox                          : -1       : , "cheat", "cl"  :
 fogui                                    : cmd      :                  : Show/hide fog control UI.
@@ -1700,6 +1706,12 @@ pointworldtext_rainbowspeed_time         : 100      : , "cl"           :
 +posedebug                               : cmd      :                  : Turn on pose debugger or add ents to pose debugger UI
 -posedebug                               : cmd      :                  : Turn off pose debugger or hide ents from pose debugger UI
 print_colorcorrection                    : cmd      :                  : Display the color correction layer information.
+print_froggy                             : cmd      :                  : Prints my best friend
+print_froggy                             : cmd      :                  : Prints my best friend
+print_sparkles                           : cmd      :                  : Prints some sparkles
+print_sparkles                           : cmd      :                  : Prints some sparkles
+print_sparklyfroggy                      : cmd      :                  : A magical prince
+print_sparklyfroggy                      : cmd      :                  : A magical prince
 progress_enable                          : cmd      :                  :
 prop_active_gib_limit                    : 999999   : , "sv"           :
 prop_active_gib_max_fade_time            : 999999   : , "sv"           :
@@ -1825,7 +1837,7 @@ r_flashlightambient                      : 0        : , "cheat", "cl"  :
 r_flashlightclip                         : 0        : , "cheat"        :
 r_flashlightconstant                     : 0        : , "cheat", "cl"  :
 r_flashlightculldepth                    : 1        :                  :
-r_flashlightdepthres                     : 512      : , "cl"           :
+r_flashlightdepthres                     : 1024     : , "cl"           :
 r_flashlightdepthtexture                 : 1        :                  :
 r_flashlightdrawclip                     : 0        : , "cheat"        :
 r_flashlightdrawdepth                    : 0        :                  :
@@ -1875,6 +1887,7 @@ r_lightcachecenter                       : 1        : , "cheat"        :
 r_lightcachemodel                        : -1       : , "cheat"        :
 r_lightinterp                            : 5        : , "cheat"        : Controls the speed of light interpolation, 0 turns off interpolation
 r_lightmap                               : -1       : , "cheat"        :
+r_lightmap_bicubic                       : 1        :                  : Enable bi-cubic (high quality) lightmap sampling.
 r_lightstyle                             : -1       : , "cheat"        :
 r_lightwarpidentity                      : 0        : , "cheat"        :
 r_lockpvs                                : 0        : , "cheat"        : Lock the PVS so you can fly around and inspect what is being drawn.
@@ -1918,6 +1931,7 @@ r_propsmaxdist                           : 1200     : , "cl"           : Maximum
 r_queued_decals                          : 0        :                  : Offloads a bit of decal rendering setup work to the material system queue when enabled.
 r_queued_post_processing                 : 0        : , "cl"           :
 r_queued_ropes                           : 1        : , "cl"           :
+r_radialfog_force                        : -1       :                  : Force-on toggle for testing radial fog on/off. -1 = default. 0 = force off. 1 = force on. This is not a cheat for the joy of playing with this set on if a player wants the new behaviour on old maps.
 r_radiosity                              : 4        : , "cheat"        : 0: no radiosity 1: radiosity with ambient cube (6 samples) 2: radiosity with 162 samples 3: 162 samples for static props, 6 samples for everything else
 r_rainalpha                              : 0        : , "cheat", "cl"  :
 r_rainalphapow                           : 0        : , "cheat", "cl"  :
@@ -2020,6 +2034,7 @@ rcon_password                            : 0        : , "norecord"     : remote 
 recompute_speed                          : cmd      :                  : Recomputes clock speed (for debugging purposes).
 record                                   : cmd      :                  : Record a demo.
 redirect                                 : cmd      :                  : Redirect client to specified server.
+refresh_gameui_dialogs_modeset           : cmd      :                  : Refresh ALL GameUI Dialogs
 refresh_options_dialog                   : cmd      :                  : Refresh the options dialog.
 +reload                                  : cmd      :                  :
 -reload                                  : cmd      :                  :
@@ -2410,7 +2425,7 @@ snd_stereo_speaker_pan_exponent          : cmd      :                  : Specifi
 snd_stereo_speaker_pan_radial_weight     : cmd      :                  : Apply cos(angle) * weight before pan law
 snd_surround_speaker_pan_exponent        : cmd      :                  : Specifies the exponent for the pan xfade from speaker to speaker if the 'exp' pan law is being used.
 snd_surround_speaker_pan_radial_weight   : cmd      :                  : Apply cos(angle) * weight before pan law
-snd_surround_speakers                    : -1       :                  :
+snd_surround_speakers                    : -1       : , "a"            :
 snd_visualize                            : 0        : , "cheat"        : Show sounds location in world
 snd_vox_captiontrace                     : 0        :                  : Shows sentence name for sentences which are set not to show captions.
 snd_vox_globaltimeout                    : 300      :                  :
@@ -2623,8 +2638,10 @@ sv_thinktimecheck                        : 0        : , "sv"           : Check f
 sv_timeout                               : 65       :                  : After this many seconds without a message from a client, the client is dropped
 sv_turbophysics                          : 0        : , "sv", "rep"    : Turns on turbo physics
 sv_unlockedchapters                      : 99       : , "a"            : Highest unlocked game chapter.
+sv_use_steam_networking                  : 1        :                  :
 sv_usercmd_custom_random_seed            : 1        : , "sv", "cheat"  : When enabled server will populate an additional random seed independent of the client
 sv_vehicle_autoaim_scale                 : 8        : , "sv"           :
+sv_viewmodel_lag_do_angles               : 1        : , "sv", "cheat", "rep" :
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
 sv_voicecodec                            : 0        :                  : Specifies which voice codec to use. Valid options are: vaudio_speex - Legacy Speex codec (lowest quality) vaudio_celt - Newer CELT codec (22kHz, 22kbps) vaudio_celt_high - Newer CELT codec, higher bitrate (44kHz, 44kbps) steam - Use Steam voice API
 sv_voiceenable                           : 1        : , "a", "nf"      :
@@ -2645,7 +2662,7 @@ sv_vote_issue_classlimits_max            : 4        : , "sv"           : Maximum
 sv_vote_issue_classlimits_max_mvm        : 2        : , "sv"           : Maximum number of players (per-team) that can be any one class.
 sv_vote_issue_extendlevel_allowed        : 1        : , "sv"           : Can players call votes to set the next level?
 sv_vote_issue_extendlevel_quorum         : 0        : , "sv"           : What is the ratio of voters needed to reach quorum?
-sv_vote_issue_kick_allowed               : 0        : , "sv"           : Can players call votes to kick players from the server?
+sv_vote_issue_kick_allowed               : 0        : , "sv", "rep"    : Can players call votes to kick players from the server?
 sv_vote_issue_kick_allowed_mvm           : 1        : , "sv"           : Can players call votes to kick players from the server in MvM?
 sv_vote_issue_kick_min_connect_time_mvm  : 300      : , "sv"           : How long a player must be connected before they can be kicked (in seconds).
 sv_vote_issue_kick_namelock_duration     : 120      : , "sv"           : How long to prevent kick targets from changing their name (in seconds).
@@ -3047,6 +3064,7 @@ tf_halloween_zombie_mob_enabled          : 0        : , "sv", "cheat"  : If set 
 tf_halloween_zombie_mob_spawn_count      : 20       : , "sv", "cheat"  : How many zombies to spawn
 tf_halloween_zombie_mob_spawn_interval   : 180      : , "sv", "cheat"  : Average interval between zombie mob spawns, in seconds
 tf_healthicon_height_offset              : 10       : , "a", "cl"      : Offset of the health icon away from the top of the target.
+tf_hide_custom_decals                    : 0        : , "a", "cl"      :
 tf_highfive_debug                        : 0        : , "sv"           : Turns on some console spew for debugging high five issues.
 tf_highfive_hintcount                    : 0        : , "a", "norecord", "cl" : Counts the number of times the high five hint has been displayed
 tf_hud_no_crosshair_on_scope_zoom        : 0        : , "a", "cl"      :
@@ -3265,7 +3283,7 @@ tf_respawn_on_loadoutchanges             : 1        : , "a", "cl"      : When se
 tf_romevision_opt_in                     : 0        : , "a", "cl"      : Enable Romevision in Mann vs. Machine mode when available.
 tf_romevision_skip_prompt                : 0        : , "a", "cl"      : If nonzero, skip the prompt about sharing Romevision.
 tf_scoreboard_alt_class_icons            : 0        : , "a", "cl"      : Show alternate class icons in the scoreboard.
-tf_scoreboard_mouse_mode                 : 0        : , "a", "cl"      :
+tf_scoreboard_mouse_mode                 : 2        : , "a", "cl"      :
 tf_scoreboard_ping_as_text               : 0        : , "a", "cl"      : Show ping values as text in the scoreboard.
 tf_select_ambush_areas                   : cmd      :                  : Add good ambush spots to the selected set. For debugging.
 tf_select_ambush_areas_close_range       : 300      : , "sv", "cheat"  :
@@ -3477,9 +3495,14 @@ vgui_drawtree_panelptr                   : 0        :                  : Show th
 vgui_drawtree_popupsonly                 : 0        :                  : Draws the vgui popup list in hierarchy(1) or most recently used(2) order.
 vgui_drawtree_render_order               : 0        :                  : List the vgui_drawtree panels in render order.
 vgui_drawtree_visible                    : 1        :                  : Draw the visible panels.
+vgui_font_reload                         : cmd      :                  :
 vgui_message_dialog_modal                : 1        : , "a", "cl"      :
 vgui_spew_fonts                          : cmd      :                  :
 vgui_togglepanel                         : cmd      :                  : show/hide vgui panel by name.
+vgui_ui_scale_factor                     : 1        :                  :
+vgui_ui_scale_factor_deck_additional     : 1        :                  :
+vgui_ui_scale_height                     : 1080     :                  :
+vgui_ui_scale_width                      : 1920     :                  :
 viewanim_addkeyframe                     : cmd      :                  :
 viewanim_create                          : cmd      :                  : viewanim_create
 viewanim_load                            : cmd      :                  : load animation from file
@@ -3492,6 +3515,7 @@ violence_ablood                          : 1        :                  : Draw al
 violence_agibs                           : 1        :                  : Show alien gib entities
 violence_hblood                          : 1        :                  : Draw human blood
 violence_hgibs                           : 1        :                  : Show human gib entities
+vmodule_resetparents                     : cmd      :                  :
 voice_avggain                            : 0        :                  :
 voice_buffer_ms                          : 100      :                  : How many milliseconds of voice to buffer to avoid dropouts due to jitter and frame time differences.
 voice_clientdebug                        : 0        : , "cl"           :
@@ -3642,5 +3666,5 @@ youtube_username                         : 0        : , "a", "cl"      : Usernam
 -zoom                                    : cmd      :                  :
 zoom_sensitivity_ratio                   : 1        : , "a", "cl"      : Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 --------------
-3632 total convars/concommands
+3656 total convars/concommands
 ```
