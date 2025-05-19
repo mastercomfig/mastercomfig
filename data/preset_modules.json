@@ -164,7 +164,7 @@
   },
   "ragdolls": {
     "default": "off",
-    "medium-high": "medium",
+    "medium-high": "low",
     "high": "high",
     "ultra": "high",
     "none": ""
