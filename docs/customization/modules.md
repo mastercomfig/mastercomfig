@@ -475,8 +475,8 @@ Controls physics simulation and fading for bodies that spawn on death.
 Default setting: based on which preset you are currently using.
 
 - **`ragdolls=off`**: Disables ragdolls by fading them out quickly.
-- **`ragdolls=low`**: Enables standard ragdoll physics.
-- **`ragdolls=high`**: Enables ragdolls with collisions with a high fade out time, as well as special animations like decapitation.
+- **`ragdolls=low`**: Enables standard ragdolls with physics.
+- **`ragdolls=high`**: Enables ragdolls with collisions, high fade-out time, and special animations such as decapitations.
 
 ### 3D Sky
 
