@@ -2,15 +2,15 @@
   {
     "version": "dev",
     "title": "dev",
-    "aliases": []
-  },
-  {
-    "version": "9.10.3",
-    "title": "9.10.3",
     "aliases": [
       "page",
       "latest"
     ]
+  },
+  {
+    "version": "9.10.3",
+    "title": "9.10.3",
+    "aliases": []
   },
   {
     "version": "9.10.2",
