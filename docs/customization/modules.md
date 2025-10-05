@@ -292,7 +292,7 @@ Default setting: based on which preset you are currently using.
 
 - **`post_processing=off`**: No post-processing.
 - **`post_processing=low`**: Enables bloom in Valve's default style.
-- **`post_processing=default`**: Enables HDR and bloom in Valve's default style.
+- **`post_processing=valve`**: Enables HDR and bloom in Valve's default style.
 - **`post_processing=calm`**: Enables HDR and bloom with reduced "blow out" of bright lighting (recommended).
 - **`post_processing=vivid`**: Enables HDR and bloom with glowing highlights.
 - **`post_processing=washed`**: Enables HDR and bloom with an overall bright look.

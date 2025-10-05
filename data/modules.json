@@ -215,7 +215,8 @@
             "display": "Bloom only"
           },
           {
-            "value": "default"
+            "value": "Valve",
+            "display": "Valve (TF2's default style)"
           },
           {
             "value": "calm",
