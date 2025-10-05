@@ -217,12 +217,12 @@ Default setting: based on which preset you are currently using.
 - **`shadows=off`**: No dynamic shadows.
 - **`shadows=low`**: Blobby shadows.
 - **`shadows=medium`**: Up to 11 high quality shadows.
-- **`shadows=high`**: Up to 23 high quality shadows and limited NPC shadow distance
-- **`shadows=ultra`**: Up to 160 ultra quality movable shadows and unlimited NPC shadow distance
+- **`shadows=high`**: Up to 23 high quality shadows and limited NPC shadow distance.
+- **`shadows=ultra`**: Up to 160 ultra quality movable shadows and unlimited NPC shadow distance.
 
 ### Flashlight
 
-Controls flashlight support. Flashlights are not used in TF2, so you should keep it disabled unless you need it for a certain community server mod, like Slender, or some Deathrun servers.
+Controls flashlight support. Flashlights are not used in TF2, so you should keep it disabled unless you need it for a certain community server mod such as Slender or some Deathrun servers.
 
 !!! warning
     Turning on flashlight support will cause rendering artifacts on some maps, especially when Pyroland is enabled!
@@ -307,11 +307,11 @@ Controls post-processing color filters.
 
 Default setting: **`color_filter=off`** (all presets).
 
-- **`color_filter=off`**: No color filter
-- **`color_filter=grayscale`**: Grayscale, no color
-- **`color_filter=desaturated`**: Reduced saturation
-- **`color_filter=warm`**: Warmer feeling colors
-- **`color_filter=cool`**: Cooler feeling colors
+- **`color_filter=off`**: No color filter.
+- **`color_filter=grayscale`**: Grayscale, no color.
+- **`color_filter=desaturated`**: Reduced saturation.
+- **`color_filter=warm`**: Warmer feeling colors.
+- **`color_filter=cool`**: Cooler feeling colors.
 
 ### Pyrovision
 
@@ -481,7 +481,7 @@ Controls the rendering of various small objects.
 Default setting: based on which preset you are currently using.
 
 - **`props=low`**: Disables client-side props, disables foliage.
-- **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client-side props, enables foliage at a reasonable distance with instant pop in.
+- **`props=high`**: Enables ambient lighting and decals on static props, enables a small number of client-side props, enables foliage at a reasonable distance with instant pop-in.
 - **`props=ultra`** Enables ambient lighting and decals on static props, enables a high number of client-side props, enables foliage at practically any distance.
 
 ### Ragdolls
@@ -586,8 +586,8 @@ Controls texture smoothing/filtering.
 
 Default setting: based on which preset you are currently using.
 
-- **`texture_filter=blocky`**: Blocky textures and world lighting
-- **`texture_filter=trilinear`**: Trilinear filtering
+- **`texture_filter=blocky`**: Blocky textures and world lighting.
+- **`texture_filter=trilinear`**: Trilinear filtering.
 - **`texture_filter=aniso2x`**: Anisotropic filtering 2x
 - **`texture_filter=aniso4x`**: Anisotropic filtering 4x
 - **`texture_filter=aniso8x`**: Anisotropic filtering 8x
