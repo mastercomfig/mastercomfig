@@ -9,6 +9,8 @@ description: Learn how to optimize your Windows OS for better performance.
 A new feature in Windows 10 May 2020 Update (version 2004), called hardware-accelerated GPU scheduling, lets the GPU handle its own task scheduling instead of Windows,
 thereby reducing latency and improving performance. You can learn how to enable it with [this guide](https://www.neowin.net/news/how-to-enable-hardware-accelerated-gpu-scheduling-on-windows-10-may-2020-update/).
 
+Disable Hardware-Accelerated GPU Scheduling (HAGS) if utilizing a dual-GPU configuration to prevent memory allocation conflicts.
+
 If you are curious about what this feature exactly does, you can read [this tech blog](https://devblogs.microsoft.com/directx/hardware-accelerated-gpu-scheduling/) from Microsoft for more details.
 
 If you experience problems or reduced performance from this feature, turn it off and [submit feedback](https://aka.ms/submitgameperformancefeedback).
@@ -25,6 +27,8 @@ It's recommended that you set Minimum processor state to its default value of 5%
 You can find this in Power Options > Change plan settings > Change advanced power settings > Process power management > Minimum processor state.
 This is because forcing the processor to 100% power prevents cores from reaching their max boost due to the processor being at this all-core threshold.
 Giving more room for processor power to scale individually per core allows the OS to better balance power limits across all cores, especially in TF2's case, being a largely single-threaded game.
+
+Maintain the "Balanced" Power Plan on laptops to allow correct ACPI (Advanced Configuration and Power Interface) hardware idle states. Disable power-saving features in Device Manager for WLAN, LAN adapters, USB Hubs, USB Controllers, and Bluetooth modules to prevent device suspension during active use and reduce system latency.
 
 ## Fix Windows Defender performance bug on Intel CPUs
 
@@ -95,3 +99,23 @@ Badly programmed kernel-mode device drivers might cause latency issues, which le
 [Enabling Message Signaled Interrupts (PCIe MSI)](https://forums.guru3d.com/threads/windows-line-based-vs-message-signaled-based-interrupts-msi-tool.378044/) for all drivers is a great way to lower DPC latency caused by drivers (ring0). If you have an NVIDIA card, you can use [NVCleanstall](https://www.techpowerup.com/download/techpowerup-nvcleanstall/) to enable this, with the added benefit of fully customizing your driver install.
 
 Use [LatencyMon](https://www.resplendence.com/latencymon) to analyze latency issues caused by kernel-mode device drivers. If they report issues, try updating your drivers or installing alternate drivers.
+
+# Mitigating InteliPark for Western Digital disks
+
+Some HDD manufacturers (e.g., certain Western Digital "Green" or "Blue" series) hard-code the APM timer in the firmware, making it impossible to override via software commands (APM settings will revert instantly). Western Digital disks ship with a [feature](https://majic.rs/2010/11/22/western-digital-green-series-and-intellipark/) that might reduce the lifetime of your disks (original idea being to reduce power consumption), because parking happens every 8 seconds of idleness, which can cause lags while gaming or even while simply using OS and the disc itself wears out faster because of Load/Unload Cycle Count increases drastically.
+
+To fix this, you can use [KeepAliveHD](https://github.com/stsrki/KeepAliveHD). It creates small file with time interval that prevents disk from parking, alternatively you can try wdidle3 utility that can modify drive's firmware settings, but it is more complicated option and KeepAliveHD is more easier solution to this.
+
+# Preventing audio glitches
+
+There is additional audio drivers like Intel Smart Sound Technology (SST) that can interfer with audio chips (like Realtek), which is can cause audio channel swapping, sound disapperance.
+
+You can fix it by editing audio devices settings:
+1. Right-click Speaker icon → Sounds → Playback → Properties → Advanced.
+2. Uncheck "Allow applications to take exclusive control of this device."
+
+This prevents applications from hijacking the hardware's sample rate and bypassing the Windows Audio Engine's clock, ensuring that the hardware remains synchronized even after periods of system inactivity or transitions from low-power idle states.
+
+# Turn off Bitlocker 
+
+On Windows 11, BitLocker turned on by default, so you should disable it. If you are using local account on Windows instead Microsoft one, because your disk can be locked if there is a chance if system is compromised and you will be unable unlock it without codes that store on cloud and linked with microsoft account.
