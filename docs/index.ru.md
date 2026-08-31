@@ -7,7 +7,7 @@
 [![Join the Discord chat](https://img.shields.io/badge/Discord-mastercomfig-5865F2.svg?style=flat-square&logo=discord)](https://comfig.app/discord)
 [![Join the Steam Group](https://img.shields.io/badge/Steam-mastercomfig-00adee.svg?logo=steam&style=flat-square)](https://steamcommunity.com/groups/comfig)
 
-![mastercomfig logo](../img/logo.svg){ width=100 align=right }
+![mastercomfig logo](img/logo.svg){ width=100 align=right }
 
 # mastercomfig
 
