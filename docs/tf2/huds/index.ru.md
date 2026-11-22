@@ -70,6 +70,6 @@ HUD использует обширную систему под название
 * [Notepad++](https://notepad-plus-plus.org/)
 * [Sublime Text](https://www.sublimetext.com/)
 
-## Сообщества HUD
+## Сообщество HUD
 
 * [huds.tf Discord](https://discord.com/invite/pc9ekye)
